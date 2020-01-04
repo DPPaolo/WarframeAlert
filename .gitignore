@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# my ignore
+/warframe/images/
+/warframe/data/
+/warframe/qt.conf
