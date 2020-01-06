@@ -1,5 +1,6 @@
 import datetime
 import time
+from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 
 
@@ -13,8 +14,8 @@ def get_date_time(times):
 
 
 def get_alert_time(timer):
-    if (timer == "Scaduta"):
-        return "Scaduta"
+    if (timer == translate("timeUtils", "Timed Out")):
+        return translate("timeUtils", "Timed Out")
     timer = int(timer)
     day = hour = minute = sec = 0
     date = ""
@@ -41,9 +42,9 @@ def get_alert_time(timer):
             sec = timer
             timer = 0
     if (day != 0 and day == 1):
-        date = date + "1 Giorno "
+        date = date + "1 " + translate("timeUtils", "Day") + " "
     elif (day != 0):
-        date = date + str(day) + " Giorni "
+        date = date + str(day) + " " + translate("timeUtils", "Days") + " "
     if (hour != 0):
         date = date + str(hour) + "h "
     if (minute != 0):
@@ -79,7 +80,7 @@ def get_cetus_time(bounty_end_time):
 
         return cycle_remaining_sec, day
     except Exception as err:
-        commonUtils.print_traceback("Errore nel calcolare tempo di Cetus:\n  " + str(err))
+        commonUtils.print_traceback(translate("timeUtils", "error_get_cetus_time") + ":\n  " + str(err))
         return int(time.time()), False
 
 
@@ -99,5 +100,5 @@ def get_fortuna_time():
 
         return cycle_sec, heat_moment
     except Exception as err:
-        commonUtils.print_traceback("Errore nel calcolare tempo di Fortuna:\n  " + str(err))
+        commonUtils.print_traceback(translate("timeUtils", "error_get_fortuna_time") + ":\n  " + str(err))
         return int(time.time()), False

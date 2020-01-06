@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6044fb25-8781-4e2e-b883-ae22c1507d6e" name="Default Changelist" comment="initial commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Warframe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Warframe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Paolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Paolo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_commonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_commonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_stringUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_stringUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_timeUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_timeUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/commonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/commonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/stringUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/stringUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/timeUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/timeUtils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vu7vO2EQLhnRImRAIiQHY6wH4A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="myPyQtBackend" value="PyQt5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in test">
+    <configuration name="Warframe Alert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warframe" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warframe/Warframe Alert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Warframe Alert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warframeAlert" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warframeAlert/Warframe Alert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_commonUtils.TestCommonUtils" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_commonUtils.TestCommonUtils&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_timeUtils.TestTimeUtils" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_timeUtils.TestTimeUtils&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Warframe Alert" />
+      <item itemvalue="Python tests.Unittests for test_commonUtils.TestCommonUtils" />
+      <item itemvalue="Python tests.Unittests for test_timeUtils.TestTimeUtils" />
+      <item itemvalue="Python tests.Unittests in test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in test" />
+        <item itemvalue="Python.Warframe Alert" />
+        <item itemvalue="Python tests.Unittests for test_commonUtils.TestCommonUtils" />
+        <item itemvalue="Python.Warframe Alert" />
+        <item itemvalue="Python tests.Unittests for test_timeUtils.TestTimeUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6044fb25-8781-4e2e-b883-ae22c1507d6e" name="Default Changelist" comment="" />
+      <created>1578091356442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578091356442</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit with test class">
+      <created>1578160003519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578160003519</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/WarframeAlert" />
+    </ignored-roots>
+    <MESSAGE value="initial commit with test class" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial commit with test class" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Inspections" timestamp="1578159843825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1578159843825" />
+    <state x="275" y="23" key="#Notifications" timestamp="1578091766559">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1578091766559" />
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578159320958">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578159320958" />
+    <state x="213" y="0" key="CommitChangelistDialog2" timestamp="1578221020756">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="202" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578165114864" />
+    <state x="213" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578221020756" />
+    <state x="129" y="61" key="DiffContextDialog" timestamp="1578165111692">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="61" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1578165111692" />
+    <state x="375" y="158" key="FileChooserDialogImpl" timestamp="1578155442071">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="375" y="158" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578155442071" />
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom" timestamp="1578160557825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578160557825" />
+    <state width="1345" height="179" key="GridCell.Tab.0.center" timestamp="1578160557825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578160557825" />
+    <state width="1345" height="179" key="GridCell.Tab.0.left" timestamp="1578160557825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578160557825" />
+    <state width="1345" height="179" key="GridCell.Tab.0.right" timestamp="1578160557825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578160557825" />
+    <state x="119" y="9" key="SettingsEditor" timestamp="1578175400050">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="113" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578155807120" />
+    <state x="119" y="9" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578175400050" />
+    <state x="275" y="86" key="Vcs.Push.Dialog.v2" timestamp="1578160178096">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578160178096" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1578220763227">
+      <screen x="0" y="23" width="1440" height="812" />
+    </state>
+    <state x="384" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578155157341" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1578175322061" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog/0.23.1440.812@0.23.1440.812" timestamp="1578220763227" />
+  </component>
+</project>
