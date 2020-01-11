@@ -106,6 +106,7 @@ celerybeat.pid
 .venv
 env/
 venv/
+venvMac/
 ENV/
 env.bak/
 venv.bak/
@@ -129,6 +130,6 @@ dmypy.json
 .pyre/
 
 # my ignore
-/warframe/images/
-/warframe/data/
-/warframe/qt.conf
+/warframeAlert/images/
+/warframeAlert/data/
+/warframeAlert/qt.conf
