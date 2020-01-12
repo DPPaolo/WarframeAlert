@@ -1,4 +1,5 @@
 import os
+import platform
 import sys
 import traceback
 
@@ -19,6 +20,18 @@ def get_cur_dir():
     return os.path.dirname(abspath(os.curdir))
 
 
+def get_os_type():
+    return platform.system()
+
+
+def get_separator():
+    sep = "\\"  # Windos default separator
+    if (get_os_type() == "Darwin"):  # the OS is a MacOs
+        sep = "/"
+    return sep
+
+
 def check_file(name):
     d = get_cur_dir()
-    return os.path.exists(d + "\\" + name)
+    path = d + get_separator() + name
+    return os.path.exists(path)
