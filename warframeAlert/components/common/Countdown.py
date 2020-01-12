@@ -1,28 +1,34 @@
 import time
 
 from PyQt5 import QtCore, QtWidgets
+from PyQt5.QtCore import QThread
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils, commonUtils
 from warframeAlert.utils.logUtils import LogHandler
 
 
-class Countdown(QtCore.QRunnable):
+class Countdown(QThread):
     TimeOut = QtCore.pyqtSignal()
     time = 0
     stop = 0
 
     def __init__(self, *name):
-        super().__init__()
-        if (name):
+        QThread.__init__(self)
+        self.deleted = 0
+        if name:
             self.name = name[0]
         else:
             self.name = ""
         self.TimeLab = QtWidgets.QLabel(self.name)
 
+    def __del__(self):
+        self.deleted = 1
+        self.wait()
+
     def run(self):
-        while(True):
-            if (not self.stop):
+        while(not self.deleted):
+            if not self.stop:
                 end_time = int(self.time) - int(timeUtils.get_local_time())
                 self.stop = 0
                 try:
