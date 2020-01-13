@@ -15,6 +15,14 @@
     </message>
 </context>
 <context>
+    <name>gameTranslation</name>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="12"/>
+        <source>unknownNode</source>
+        <translation>Nodo Sconosciuto</translation>
+    </message>
+</context>
+<context>
     <name>generalWidget</name>
     <message>
         <location filename="../components/widget/GeneralInfoWidget.py" line="19"/>
@@ -220,12 +228,12 @@
         <translation>secondi</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="116"/>
+        <location filename="../components/common/HubEvent.py" line="115"/>
         <source>none</source>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="124"/>
+        <location filename="../components/widget/HubWidget.py" line="43"/>
         <source>eventNoName</source>
         <translation>Evento senza Nome</translation>
     </message>
@@ -233,7 +241,7 @@
 <context>
     <name>hubWidget</name>
     <message>
-        <location filename="../components/widget/HubWidget.py" line="17"/>
+        <location filename="../components/widget/HubWidget.py" line="19"/>
         <source>no_hub_event</source>
         <translation>Non è attivo nessun evento Hub</translation>
     </message>
