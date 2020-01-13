@@ -11,11 +11,11 @@ from warframeAlert.utils.logUtils import LogHandler
 class Countdown(QThread):
     TimeOut = QtCore.pyqtSignal()
     time = 0
-    stop = 0
 
     def __init__(self, *name):
         QThread.__init__(self)
         self.deleted = 0
+        self.stop = 0
         if name:
             self.name = name[0]
         else:
@@ -39,7 +39,7 @@ class Countdown(QThread):
                     LogHandler.err(str(er))
                     end_time = translate("countdown", "Error")
                     self.TimeLab.setText(self.name + str(end_time))
-            time.sleep(995)
+            time.sleep(1)
 
     def get_time(self):
         return self.time

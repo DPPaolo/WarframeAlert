@@ -35,3 +35,14 @@ def check_file(name):
     d = get_cur_dir()
     path = d + get_separator() + name
     return os.path.exists(path)
+
+
+def remove_widget(layout):
+    for i in reversed(range(layout.count())):
+        if (layout.itemAt(i) is not None):
+            widget_to_remove = layout.itemAt(i).widget()
+            # remouve the layout from the layout's list
+            layout.removeWidget(widget_to_remove)
+            # without parent, the layout will be deleted automatically
+            if (widget_to_remove is not None):
+                widget_to_remove.setParent(None)

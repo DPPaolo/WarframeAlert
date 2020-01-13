@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>countdown</name>
     <message>
@@ -21,12 +22,12 @@
         <translation>Time on Earth</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="69"/>
         <source>fileVersion</source>
         <translation>File Version</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="71"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
         <source>mobileFileVersion</source>
         <translation>Mobile File Version</translation>
     </message>
@@ -51,90 +52,188 @@
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="60"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="59"/>
         <source>earthTimeDay</source>
         <translation>Time on Earth : Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="61"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="60"/>
         <source>timeToNight</source>
-        <translation>Time until Night: </translation>
+        <translation>Time until Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="63"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="62"/>
         <source>earthTimeNight</source>
         <translation>Time on Earth : Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="64"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="63"/>
         <source>timeToDay</source>
-        <translation>Time until Day: </translation>
+        <translation>Time until Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="96"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="95"/>
         <source>tier1</source>
         <translation>Ghost Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="97"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="96"/>
         <source>tier2</source>
         <translation>Shadow Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="98"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="97"/>
         <source>tier3</source>
         <translation>Storm Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="98"/>
         <source>tier4</source>
         <translation>Mountain Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="100"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
         <source>tier5</source>
         <translation>Moon Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="89"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="88"/>
         <source>noAlliance</source>
         <translation>no alliance</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="101"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="100"/>
         <source>tier1Id</source>
         <translation>Ghost Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="110"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
         <source>guildAllianceId</source>
         <translation>Alliance ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="102"/>
         <source>tier2Id</source>
         <translation>Shadow Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="104"/>
         <source>tier3Id</source>
         <translation>Storm Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="106"/>
         <source>tier4Id</source>
         <translation>Mountain Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="108"/>
         <source>tier5Id</source>
         <translation>Moon Clan ID</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
+        <source>primeState1</source>
+        <translation>Women</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
+        <source>primeState2</source>
+        <translation>Man</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="125"/>
+        <source>primeStateUnknown</source>
+        <translation>Unknown Prime State</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="128"/>
+        <source>morePrimeVault</source>
+        <translation>There are more Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="129"/>
+        <source>vault0</source>
+        <translation>Mag Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
+        <source>vault1</source>
+        <translation>Frost and Ember Vault</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="131"/>
+        <source>vault2</source>
+        <translation>Rhino and Mag Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="132"/>
+        <source>vault3</source>
+        <translation>Ember, Frost and Loki Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
+        <source>vault4</source>
+        <translation>Nyx e Rhino Prime Vault</translation>
+    </message>
+</context>
+<context>
+    <name>hubEvent</name>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="15"/>
+        <source>start</source>
+        <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="17"/>
+        <source>end</source>
+        <translation>Expires in</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="19"/>
+        <source>node</source>
+        <translation>Node</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="21"/>
+        <source>cinematic</source>
+        <translation>Cinematic Name</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="23"/>
+        <source>cycle</source>
+        <translation>Cycle</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="25"/>
+        <source>repeatCycle</source>
+        <translation>Repeat Cycle</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="27"/>
+        <source>transmission</source>
+        <translation>Transmission</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="72"/>
+        <source>seconds</source>
+        <translation>seconds</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="116"/>
+        <source>none</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="124"/>
+        <source>eventNoName</source>
+        <translation>No Name Event</translation>
     </message>
 </context>
 <context>
     <name>hubWidget</name>
     <message>
-        <location filename="../components/widget/HubWidget.py" line="14"/>
+        <location filename="../components/widget/HubWidget.py" line="17"/>
         <source>no_hub_event</source>
         <translation>No Hub event active</translation>
     </message>
@@ -142,34 +241,39 @@
 <context>
     <name>otherWidgetTab</name>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="22"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="25"/>
         <source>general</source>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="23"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="26"/>
         <source>relay</source>
         <translation>Relay Station</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="24"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="42"/>
         <source>hub</source>
         <translation>Hub Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="25"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="43"/>
         <source>twitchPromo</source>
         <translation>Twitch Promo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="46"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="57"/>
         <source>primeAccessUpdateError</source>
-        <translation type="unfinished"></translation>
+        <translation>Error on Prime Access datas</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="55"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="65"/>
         <source>featureDojoUpdateError</source>
-        <translation type="unfinished"></translation>
+        <translation>Error on Featured Dojo datas</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="73"/>
+        <source>hubEventUpdateError</source>
+        <translation>Error on Hub Events</translation>
     </message>
 </context>
 <context>

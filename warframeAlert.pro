@@ -1,5 +1,6 @@
 SOURCES      = test/test_translationService.py \
                warframeAlert/components/common/Countdown.py \
+               warframeAlert/components/common/HubEvent.py \
                warframeAlert/components/common/TwitchBox.py \
                warframeAlert/components/widget/GeneralInfoWidget.py \
                warframeAlert/components/widget/HubWidget.py \
