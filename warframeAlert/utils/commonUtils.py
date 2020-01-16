@@ -37,11 +37,16 @@ def check_file(name):
     return os.path.exists(path)
 
 
+def get_last_item_with_backslash(text):
+    text = text.split("/")
+    return text[len(text)-1]
+
+
 def remove_widget(layout):
     for i in reversed(range(layout.count())):
         if (layout.itemAt(i) is not None):
             widget_to_remove = layout.itemAt(i).widget()
-            # remouve the layout from the layout's list
+            # remove the layout from the layout's list
             layout.removeWidget(widget_to_remove)
             # without parent, the layout will be deleted automatically
             if (widget_to_remove is not None):

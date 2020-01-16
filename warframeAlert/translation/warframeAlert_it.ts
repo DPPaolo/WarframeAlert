@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>countdown</name>
     <message>
@@ -17,9 +16,14 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="12"/>
+        <location filename="../utils/gameTranslationUtils.py" line="13"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="22"/>
+        <source>unknownEnemy</source>
+        <translation>Nemico Sconosciuto</translation>
     </message>
 </context>
 <context>
@@ -188,47 +192,47 @@
 <context>
     <name>hubEvent</name>
     <message>
-        <location filename="../components/common/HubEvent.py" line="15"/>
+        <location filename="../components/common/HubEvent.py" line="16"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="17"/>
+        <location filename="../components/common/HubEvent.py" line="18"/>
         <source>end</source>
         <translation>Termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="19"/>
+        <location filename="../components/common/HubEvent.py" line="20"/>
         <source>node</source>
         <translation>Nodo</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="21"/>
+        <location filename="../components/common/HubEvent.py" line="22"/>
         <source>cinematic</source>
         <translation>Nome Filmato</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="23"/>
+        <location filename="../components/common/HubEvent.py" line="24"/>
         <source>cycle</source>
         <translation>Ciclo</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="25"/>
+        <location filename="../components/common/HubEvent.py" line="26"/>
         <source>repeatCycle</source>
         <translation>Intervallo Ripetizione</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="27"/>
+        <location filename="../components/common/HubEvent.py" line="28"/>
         <source>transmission</source>
         <translation>Trasmissione</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="72"/>
+        <location filename="../components/common/HubEvent.py" line="73"/>
         <source>seconds</source>
         <translation>secondi</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="115"/>
+        <location filename="../components/common/HubEvent.py" line="116"/>
         <source>none</source>
         <translation>Nessuno</translation>
     </message>
@@ -274,14 +278,19 @@
         <translation>Errore nel Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="65"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="73"/>
         <source>featureDojoUpdateError</source>
         <translation>Errore nei Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="73"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="81"/>
         <source>hubEventUpdateError</source>
         <translation>Errore negli Eventi Hub</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="65"/>
+        <source>twitchPromoUpdateError</source>
+        <translation>Errore nelle Promo di Twitch</translation>
     </message>
 </context>
 <context>
@@ -315,7 +324,7 @@
 <context>
     <name>twitchBox</name>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="14"/>
+        <location filename="../components/common/TwitchBox.py" line="45"/>
         <source>init</source>
         <translation>Inizio</translation>
     </message>
@@ -329,16 +338,51 @@
         <source>promo_type</source>
         <translation>Ottenibile tramite</translation>
     </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="17"/>
+        <source>streamer</source>
+        <translation>Streamers validi</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="47"/>
+        <source>achievement</source>
+        <translation>Ottenibile tramite achievement specifico</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="49"/>
+        <source>vision</source>
+        <translation>Ottenibile tramite ore cumulative di visione</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="54"/>
+        <source>kill</source>
+        <translation>Ottenibile uccidendo</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="55"/>
+        <source>spawn</source>
+        <translation>Appare al</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="56"/>
+        <source>perc_spawn</source>
+        <translation>% con cooldown</translation>
+    </message>
+    <message>
+        <location filename="../components/common/TwitchBox.py" line="60"/>
+        <source>unknown</source>
+        <translation>Metodo di ottenimento sconosciuto</translation>
+    </message>
 </context>
 <context>
     <name>twitchPromoWidget</name>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="15"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="20"/>
         <source>no_Twich_Promo</source>
         <translation>Non é attiva nessuna Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="34"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="80"/>
         <source>active_twich_promo</source>
         <translation>Twitch Promo Presente</translation>
     </message>

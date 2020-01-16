@@ -47,12 +47,12 @@ class Countdown(QThread):
     def calculate_time(self, end_time):
         if (end_time < 0):
             calculated_end_timer = translate("timeUtils", "Timed Out")
-            self.TimeLab.setText(self.name + str(calculated_end_timer))
+            self.TimeLab.setText(self.name + " " + str(calculated_end_timer))
             self.stop = 1
             self.TimeOut.emit()
         else:
             calculated_end_timer = timeUtils.get_alert_time(end_time)
-            self.TimeLab.setText(self.name + calculated_end_timer)
+            self.TimeLab.setText(self.name + " " + calculated_end_timer)
 
     def set_name(self, name):
         self.name = name

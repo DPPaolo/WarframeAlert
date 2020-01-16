@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6044fb25-8781-4e2e-b883-ae22c1507d6e" name="Default Changelist" comment="add translation logic to test">
+      <change afterPath="$PROJECT_DIR$/warframeAlert/components/widget/TwitchPromoWidget.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Warframe.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Warframe.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Paolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Paolo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace-MacBook Pro di Paolo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace-MacBook Pro di Paolo.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script/update_translation.sh" beforeDir="false" afterPath="$PROJECT_DIR$/script/update_translation.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_commonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_commonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_stringUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_stringUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_timeUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_timeUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert.pro" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/components/common/Countdown.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/components/common/Countdown.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/services/translationService.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/services/translationService.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/translation/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/translation/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/commonUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/commonUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/logUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/logUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/stringUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/stringUtils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/warframeAlert/utils/timeUtils.py" beforeDir="false" afterPath="$PROJECT_DIR$/warframeAlert/utils/timeUtils.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Vu7vO2EQLhnRImRAIiQHY6wH4A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/warframeAlert/Warframe Alert.py" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyDebuggerOptionsProvider">
+    <option name="myPyQtBackend" value="PyQt5" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\warframeAlert\components" />
+      <recent name="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\warframeAlert\components\widget" />
+      <recent name="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert" />
+      <recent name="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\warframeAlert\translation" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Paolo\OneDrive\Miei Tool\WarframeAlert\warframeAlert\services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.Warframe Alert">
+    <configuration name="Warframe Alert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warframeAlert" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warframeAlert/Warframe Alert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Warframe Alert" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/warframeAlert" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/warframeAlert/Warframe Alert.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="update_translation.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/script/update_translation.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$/script" />
+      <option name="INTERPRETER_PATH" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="Warframe" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Warframe Alert" />
+      <item itemvalue="Shell Script.update_translation.sh" />
+      <item itemvalue="Python tests.Unittests in test" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Warframe Alert" />
+        <item itemvalue="Shell Script.update_translation.sh" />
+        <item itemvalue="Python tests.Unittests in test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6044fb25-8781-4e2e-b883-ae22c1507d6e" name="Default Changelist" comment="" />
+      <created>1578091356442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578091356442</updated>
+    </task>
+    <task id="LOCAL-00001" summary="initial commit with test class">
+      <created>1578160003519</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578160003519</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add translation logic to test">
+      <created>1578350013794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578350013794</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add logUtils and Countdown class">
+      <created>1578742346101</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578742346101</updated>
+    </task>
+    <task id="LOCAL-00004" summary="use QThread instead of QRunnable for Countdown">
+      <created>1578787215168</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578787215168</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update translation, fix test for mac os">
+      <created>1578787272070</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578787272070</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix countdown, updated translation">
+      <created>1578874020149</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1578874020149</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.ts" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/WarframeAlert" />
+    </ignored-roots>
+    <MESSAGE value="initial commit with test class" />
+    <MESSAGE value="add translation logic to test" />
+    <MESSAGE value="add logUtils and Countdown class" />
+    <MESSAGE value="use QThread instead of QRunnable for Countdown" />
+    <MESSAGE value="update translation, fix test for mac os" />
+    <MESSAGE value="fix countdown, updated translation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix countdown, updated translation" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="275" y="23" key="#Inspections" timestamp="1578159843825">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1578159843825" />
+    <state x="275" y="23" key="#Notifications" timestamp="1578091766559">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="23" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1578091766559" />
+    <state x="144" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578781041282">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578263351979" />
+    <state x="144" y="25" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1578781041282" />
+    <state x="420" y="168" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578307619856">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="420" y="168" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1578307619856" />
+    <state x="202" y="0" key="CommitChangelistDialog2" timestamp="1578874019224">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="202" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1578874019224" />
+    <state x="213" y="0" key="CommitChangelistDialog2/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578644563998" />
+    <state x="213" y="0" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1578778296316" />
+    <state x="129" y="61" key="DiffContextDialog" timestamp="1578165111692">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="61" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1578165111692" />
+    <state x="375" y="158" key="FileChooserDialogImpl" timestamp="1578263348795">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="375" y="158" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578263348795" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1578907653246">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578873945436" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578559062277" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578907653246" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1578907653245">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578873945436" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578559062275" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1578907653245" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1578907653245">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578873945436" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578559062275" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1578907653245" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1578907653246">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1345" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578873945436" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578559062276" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1578907653246" />
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1578873859985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578873859985" />
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1578784019919" />
+    <state width="1345" height="223" key="GridCell.Tab.1.center" timestamp="1578873859985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1578873859985" />
+    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1578784019918" />
+    <state width="1345" height="223" key="GridCell.Tab.1.left" timestamp="1578873859985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1578873859985" />
+    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1578784019917" />
+    <state width="1345" height="223" key="GridCell.Tab.1.right" timestamp="1578873859985">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1578873859985" />
+    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1578784019918" />
+    <state x="119" y="9" key="SettingsEditor" timestamp="1578558039473">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="113" y="7" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578264118804" />
+    <state x="119" y="9" key="SettingsEditor/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578558039473" />
+    <state x="119" y="9" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578175400050" />
+    <state x="275" y="86" key="Vcs.Push.Dialog.v2" timestamp="1578874022250">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="86" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1578874022250" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog" timestamp="1578989812330">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="384" y="189" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1578155157341" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578903335568" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1578989812330" />
+    <state x="405" y="234" key="com.intellij.ide.util.TipDialog/0.23.1440.812@0.23.1440.812" timestamp="1578220763227" />
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578644509916">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="503" y="374" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.0.1600.900@0.0.1440.900" timestamp="1578644509916" />
+    <state x="254" y="101" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1578873834595">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="254" y="101" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1366.728@0.0.1366.728" timestamp="1578873834595" />
+    <state x="359" y="69" width="648" height="590" key="find.popup" timestamp="1578787138515">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="359" y="69" width="648" height="590" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1578787138515" />
+    <state x="378" y="85" width="683" height="729" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1578783252986" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1578787119743">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1578787119743" />
+    <state x="365" y="61" width="709" height="839" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578783246490" />
+  </component>
+</project>

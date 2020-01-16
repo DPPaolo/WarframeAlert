@@ -57,6 +57,14 @@ class OtherWidgetTab():
             commonUtils.print_traceback(translate("otherWidgetTab", "primeAccessUpdateError") + ": " + str(er))
             self.generalWidget.reset_prime_access()
 
+    def update_twitch_promo(self, data):
+        try:
+            self.twitchPromoWidget.parse_twitch_promo(data)
+        except Exception as er:
+            LogHandler.err(translate("otherWidgetTab", "twitchPromoUpdateError") + ": " + str(er))
+            commonUtils.print_traceback(translate("otherWidgetTab", "twitchPromoUpdateError") + ": " + str(er))
+            self.twitchPromoWidget.reset_twitch_promo()
+
     def update_featured_dojo(self, data):
         try:
             self.generalWidget.parse_featured_dojo(data)
