@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>countdown</name>
     <message>
@@ -14,16 +15,64 @@
     </message>
 </context>
 <context>
+    <name>dailyDeals</name>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="16"/>
+        <source>dailyDeals</source>
+        <translation>Daily Deals of Darvo</translation>
+    </message>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="49"/>
+        <source>sold</source>
+        <translation>Sold</translation>
+    </message>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="50"/>
+        <source>price</source>
+        <translation>Price</translation>
+    </message>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="51"/>
+        <source>sale</source>
+        <translation>Discounted by</translation>
+    </message>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="18"/>
+        <source>end</source>
+        <translation>Expires in</translation>
+    </message>
+    <message>
+        <location filename="../components/common/DailyDeals.py" line="44"/>
+        <source>start</source>
+        <translation>Started at</translation>
+    </message>
+</context>
+<context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="13"/>
+        <location filename="../utils/gameTranslationUtils.py" line="17"/>
         <source>unknownNode</source>
         <translation>Unknown Node</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="22"/>
+        <location filename="../utils/gameTranslationUtils.py" line="61"/>
         <source>unknownEnemy</source>
         <translation>Unknown Enemy</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="70"/>
+        <source>unknownSimarisTarget</source>
+        <translation>Unknown Simaris Target</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="33"/>
+        <source>unknownItemName</source>
+        <translation>Unknown Name</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="44"/>
+        <source>errorFileLanguage</source>
+        <translation>Error duting reading Language.json file</translation>
     </message>
 </context>
 <context>
@@ -253,44 +302,80 @@
 <context>
     <name>otherWidgetTab</name>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="25"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="23"/>
         <source>general</source>
         <translation>General</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="26"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="24"/>
         <source>relay</source>
         <translation>Relay Station</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="42"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="40"/>
         <source>hub</source>
         <translation>Hub Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="43"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="41"/>
         <source>twitchPromo</source>
         <translation>Twitch Promo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="57"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="55"/>
         <source>primeAccessUpdateError</source>
         <translation>Error on Prime Access datas</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="73"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="85"/>
         <source>featureDojoUpdateError</source>
         <translation>Error on Featured Dojo datas</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="81"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="93"/>
         <source>hubEventUpdateError</source>
         <translation>Error on Hub Events</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="65"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="77"/>
         <source>twitchPromoUpdateError</source>
         <translation>Errore on Twitch Promos</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="63"/>
+        <source>simarisUpdateError</source>
+        <translation>Error on Simaris Target</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="70"/>
+        <source>dailyDealsUpdateError</source>
+        <translation>Error on Daily Deals</translation>
+    </message>
+</context>
+<context>
+    <name>relayStationWidget</name>
+    <message>
+        <location filename="../components/widget/RelayStationWidget.py" line="23"/>
+        <source>destroyedStation</source>
+        <translation>Destroyed Station</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelayStationWidget.py" line="24"/>
+        <source>specialNode</source>
+        <translation>Other Special Node</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelayStationWidget.py" line="26"/>
+        <source>None</source>
+        <translation>None</translation>
+    </message>
+</context>
+<context>
+    <name>simarisTarget</name>
+    <message>
+        <location filename="../components/common/SimarisTarget.py" line="12"/>
+        <source>actualSimarisTarget</source>
+        <translation>Actual Simaris Target</translation>
     </message>
 </context>
 <context>
@@ -324,52 +409,52 @@
 <context>
     <name>twitchBox</name>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="45"/>
+        <location filename="../components/common/TwitchBox.py" line="39"/>
         <source>init</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="15"/>
+        <location filename="../components/common/TwitchBox.py" line="16"/>
         <source>countdown_label</source>
         <translation>Expires in</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="16"/>
+        <location filename="../components/common/TwitchBox.py" line="17"/>
         <source>promo_type</source>
         <translation>Obtainable through</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="17"/>
+        <location filename="../components/common/TwitchBox.py" line="44"/>
         <source>streamer</source>
         <translation>Valid streamers</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="47"/>
+        <location filename="../components/common/TwitchBox.py" line="46"/>
         <source>achievement</source>
         <translation>Get through specific achievement</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="49"/>
+        <location filename="../components/common/TwitchBox.py" line="48"/>
         <source>vision</source>
         <translation>Get through comulative hours of twitch video</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="54"/>
+        <location filename="../components/common/TwitchBox.py" line="53"/>
         <source>kill</source>
         <translation>Get through killing</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="55"/>
+        <location filename="../components/common/TwitchBox.py" line="54"/>
         <source>spawn</source>
         <translation>Spawn at</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="56"/>
+        <location filename="../components/common/TwitchBox.py" line="55"/>
         <source>perc_spawn</source>
         <translation>% with cooldown</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="60"/>
+        <location filename="../components/common/TwitchBox.py" line="59"/>
         <source>unknown</source>
         <translation>Method to get twitch promo unknown</translation>
     </message>
@@ -382,7 +467,7 @@
         <translation>No active Twitch Promo</translation>
     </message>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="80"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="77"/>
         <source>active_twich_promo</source>
         <translation>Active Twitch Promo</translation>
     </message>

@@ -12,3 +12,7 @@ def divide_for_n(message, num, divide = "\n"):
         i += 1
     data[-1] = data[-1][:-1]
     return data
+
+
+def set_barred(text):
+    return '\u0336'.join(text) + '\u0336'
