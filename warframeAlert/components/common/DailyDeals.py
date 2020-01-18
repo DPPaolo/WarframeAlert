@@ -38,7 +38,7 @@ class DailyDeals:
         self.DealsBox.addLayout(self.Dealshbox1)
         self.DealsBox.addLayout(self.Dealshbox2)
 
-    def set_deals_data(self, init, end, item, q_sold, q_total, sales, price_sales, original_price):
+    def set_deals_data(self, init, end, item, q_sold, q_total, original_price, sales, price_sales):
         self.DealsEnd.set_countdown(end[:10])
         self.DealsEnd.start()
 
@@ -48,5 +48,5 @@ class DailyDeals:
 
         self.Deals.setText(item)
         self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
-        self.DealsPrice.setText(translate("dailyDeals", "price") + ": " + price + " Platinum")
+        self.DealsPrice.setText(translate("dailyDeals", "price") + ": " + str(price) + " Platinum")
         self.DealsSales.setText(translate("dailyDeals", "sale") + " " + str(sales) + "%")

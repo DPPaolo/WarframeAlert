@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
 <context>
     <name>countdown</name>
     <message>
@@ -17,32 +16,32 @@
 <context>
     <name>dailyDeals</name>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="16"/>
+        <location filename="../components/common/DailyDeals.py" line="17"/>
         <source>dailyDeals</source>
         <translation>Daily Deals of Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="49"/>
+        <location filename="../components/common/DailyDeals.py" line="50"/>
         <source>sold</source>
         <translation>Sold</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="50"/>
+        <location filename="../components/common/DailyDeals.py" line="51"/>
         <source>price</source>
         <translation>Price</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="51"/>
+        <location filename="../components/common/DailyDeals.py" line="52"/>
         <source>sale</source>
         <translation>Discounted by</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="18"/>
+        <location filename="../components/common/DailyDeals.py" line="19"/>
         <source>end</source>
         <translation>Expires in</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="44"/>
+        <location filename="../components/common/DailyDeals.py" line="45"/>
         <source>start</source>
         <translation>Started at</translation>
     </message>
@@ -55,22 +54,22 @@
         <translation>Unknown Node</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="61"/>
+        <location filename="../utils/gameTranslationUtils.py" line="62"/>
         <source>unknownEnemy</source>
         <translation>Unknown Enemy</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="70"/>
+        <location filename="../utils/gameTranslationUtils.py" line="71"/>
         <source>unknownSimarisTarget</source>
         <translation>Unknown Simaris Target</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="33"/>
+        <location filename="../utils/gameTranslationUtils.py" line="34"/>
         <source>unknownItemName</source>
         <translation>Unknown Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="44"/>
+        <location filename="../utils/gameTranslationUtils.py" line="45"/>
         <source>errorFileLanguage</source>
         <translation>Error duting reading Language.json file</translation>
     </message>
@@ -281,7 +280,7 @@
         <translation>seconds</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="116"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="88"/>
         <source>none</source>
         <translation>None</translation>
     </message>
@@ -289,6 +288,11 @@
         <location filename="../components/widget/HubWidget.py" line="43"/>
         <source>eventNoName</source>
         <translation>No Name Event</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelayStationWidget.py" line="81"/>
+        <source>event</source>
+        <translation>Event on</translation>
     </message>
 </context>
 <context>
@@ -327,17 +331,17 @@
         <translation>Error on Prime Access datas</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="85"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="92"/>
         <source>featureDojoUpdateError</source>
         <translation>Error on Featured Dojo datas</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="93"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="100"/>
         <source>hubEventUpdateError</source>
         <translation>Error on Hub Events</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="77"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="84"/>
         <source>twitchPromoUpdateError</source>
         <translation>Errore on Twitch Promos</translation>
     </message>
@@ -350,6 +354,11 @@
         <location filename="../components/tab/OtherWidgetTab.py" line="70"/>
         <source>dailyDealsUpdateError</source>
         <translation>Error on Daily Deals</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="77"/>
+        <source>relayStationUpdateError</source>
+        <translation>Error on Relay Station</translation>
     </message>
 </context>
 <context>

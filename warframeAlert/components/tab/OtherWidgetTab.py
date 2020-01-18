@@ -69,6 +69,13 @@ class OtherWidgetTab():
             LogHandler.err(translate("otherWidgetTab", "dailyDealsUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "dailyDealsUpdateError") + ": " + str(er))
 
+    def update_relay_station(self, data):
+        try:
+            self.relayStationWidget.parse_relay_station(data)
+        except Exception as er:
+            LogHandler.err(translate("otherWidgetTab", "relayStationUpdateError") + ": " + str(er))
+            commonUtils.print_traceback(translate("otherWidgetTab", "relayStationUpdateError") + ": " + str(er))
+
     def update_twitch_promo(self, data):
         try:
             self.twitchPromoWidget.parse_twitch_promo(data)
