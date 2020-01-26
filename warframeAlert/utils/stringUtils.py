@@ -1,5 +1,4 @@
-
-def divide_for_n(message, num, divide = "\n"):
+def divide_for_n(message, num, divide="\n"):
     if (divide == ""):
         return None
     data = []
@@ -15,4 +14,4 @@ def divide_for_n(message, num, divide = "\n"):
 
 
 def set_barred(text):
-    return '\u0336'.join(text) + '\u0336'
+    return ''.join([u'\u0336{}'.format(c) for c in text])

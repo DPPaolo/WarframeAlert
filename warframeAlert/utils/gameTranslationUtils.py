@@ -3,7 +3,7 @@ import json
 from warframeAlert import warframeData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_cur_dir, get_separator
+from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -19,7 +19,6 @@ def get_node(name):
 
 
 def get_item_name(name):
-    print(get_cur_dir())
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_item_name_it(name)
     else:
