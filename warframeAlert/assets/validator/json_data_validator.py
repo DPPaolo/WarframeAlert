@@ -55,6 +55,342 @@ all_json_schema = {
     },
 }
 
+daily_deals_schema = {
+    "type": "object",
+    "properties": {
+        "DailyDeals": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/dailyDeals"}
+        }
+    },
+    "required": ["DailyDeals"],
+    "definitions": {
+        "dailyDeals": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "StoreItem": {
+                    "type": "string"
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Discount": {
+                    "type": "integer"
+                },
+                "OriginalPrice": {
+                    "type": "integer"
+                },
+                "SalePrice": {
+                    "type": "integer"
+                },
+                "AmountTotal": {
+                    "type": "integer"
+                },
+                "AmountSold": {
+                    "type": "integer"
+                }
+            },
+            "required": ["Activation", "StoreItem", "Expiry", "Discount", "OriginalPrice",
+                         "SalePrice", "AmountTotal", "AmountSold"]
+        }
+    }
+}
+
+featured_guilds_schema = {
+    "type": "object",
+    "properties": {
+        "FeaturedGuilds": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/featuredGuilds"}
+        }
+    },
+    "required": ["FeaturedGuilds"],
+    "definitions": {
+        "featuredGuilds": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Name": {
+                    "type": "string"
+                },
+                "Tier": {
+                    "type": "integer"
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "AllianceId": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                }
+            },
+            "required": ["_id", "Name", "Tier"]
+        }
+    }
+}
+
+hub_events_schema = {
+    "type": "object",
+    "properties": {
+        "HubEvents": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/HubEvents"}
+        }
+    },
+    "required": ["HubEvents"],
+    "definitions": {
+        "dailyDeals": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Tag": {
+                    "type": "string"
+                },
+                "Node": {
+                    "type": "string"
+                },
+                "CinematicTag": {
+                    "type": "string"
+                },
+                "CycleFrequency": {
+                    "type": "integer"
+                },
+                "RepeatInterval": {
+                    "type": "integer"
+                },
+                "Transmissions": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                }
+            },
+            "required": ["Expiry", "Activation", "RepeatInterval", "Transmissions"]
+        }
+    }
+}
+
+node_overrides_schema = {
+    "type": "object",
+    "properties": {
+        "NodeOverrides": {
+            "type": "array",
+            "items": {
+                "oneOf": [{"$ref": "#/definitions/HidedNode"}, {"$ref": "#/definitions/newRelay"},
+                          {"$ref": "#/definitions/occupedNode"}, {"$ref": "#/definitions/customNodes"},
+                          {"$ref": "#/definitions/otherNode"}]
+            }
+        }
+    },
+    "definitions": {
+        "HidedNode": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "Node": {
+                    "type": "string",
+                },
+                "Hide": {
+                    "type": "boolean",
+                },
+            },
+            "required": ["_id", "Node", "Hide"]
+        },
+        "otherNode": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "Node": {
+                    "type": "string",
+                },
+                "Seed": {
+                    "type": "integer",
+                },
+            },
+            "required": ["_id", "Node", "Seed"]
+        },
+        "newRelay": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "Node": {
+                    "type": "string",
+                },
+                "Hide": {
+                    "type": "boolean",
+                },
+                "LevelOverride": {
+                    "type": "string",
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                }
+            },
+            "required": ["_id", "Node", "Hide", "Activation"]
+        },
+        "occupedNode": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "Node": {
+                    "type": "string",
+                },
+                "ExtraEnemySpec": {
+                    "type": "string",
+                },
+                "EnemySpec": {
+                    "type": "string",
+                },
+                "Faction": {
+                    "type": "string",
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+            },
+            "required": ["_id", "Node", "ExtraEnemySpec", "Faction", "Expiry", "EnemySpec"]
+        },
+        "customNodes": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "Node": {
+                    "type": "string",
+                },
+                "ExtraEnemySpec": {
+                    "type": "string",
+                },
+                "CustomNpcEncounters": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                }
+            },
+            "required": ["_id", "Node", "ExtraEnemySpec", "Expiry", "Activation", "CustomNpcEncounters"]
+        }
+    }
+}
+
 twitch_promos_schema = {
     "type": "object",
     "properties": {

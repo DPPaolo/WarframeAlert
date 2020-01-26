@@ -4,6 +4,7 @@ from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.gameTranslationUtils import get_enemy_name
+from warframeAlert.utils.stringUtils import divide_for_n
 
 
 class TwitchBox:
@@ -15,7 +16,6 @@ class TwitchBox:
         self.TwitchInit = QtWidgets.QLabel(translate("twitchBox", "init") + ": N/D")
         self.TwitchEnd = Countdown(translate("twitchBox", "countdown_label"))
         self.TwitchType = QtWidgets.QLabel(translate("twitchBox", "promo_type") + " N/D")
-        self.TwitchStreamers = QtWidgets.QLabel(translate("twitchBox", "streamer") + " N/D")
 
         self.TwitchType.setFont(font)
         self.TwitchType.setAlignment(QtCore.Qt.AlignCenter)
@@ -29,7 +29,6 @@ class TwitchBox:
 
         self.TwitchBox.addLayout(twitchbox)
         self.TwitchBox.addWidget(self.TwitchType)
-        self.TwitchBox.addWidget(self.TwitchStreamers)
 
         self.TwitchEnd.TimeOut.connect(self.hide)
 
@@ -41,7 +40,11 @@ class TwitchBox:
             streamers_ids = ""
             for stream in streamers:
                 streamers_ids += stream + " "
-            self.TwitchStreamers.setText(translate("twitchBox", "streamer") + ": " + streamers_ids)
+            streamer_divided = divide_for_n(streamers_ids, 30, " ")
+            streamers_ids = ""
+            for stream in streamer_divided:
+                streamers_ids += stream + "\n"
+            self.TwitchType.setToolTip(translate("twitchBox", "streamer") + ": " + streamers_ids)
         if (twitch_type == 'SpecificAchievement'):
             self.TwitchType.setText(translate("twitchBox", "achievement") + ": " + achievement)
         elif (twitch_type == 'Cumulative'):

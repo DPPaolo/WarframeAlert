@@ -72,10 +72,9 @@ class RelayStationWidget:
         self.reset_relay_node()
         spec = 0
         for nod in data:
-            print(nod)
             node = get_node(nod['Node'])
             if ('Hide' in nod):
-                if (nod['Hide']):
+                if (nod['Hide'] and 'Activation' not in nod):
                     self.set_relay_text(self.get_relay_text() + node[0] + " " + node[1] + "\n")
             elif ('CustomNpcEncounters' in nod):
                 self.set_other_text(self.get_other_text() + translate("hubEvent", "event") + " " + node[0] + " " + node[1] + "\n")
