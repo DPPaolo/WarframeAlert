@@ -71,4 +71,3 @@ class TwitchBox:
         self.TwitchInit.hide()
         self.TwitchEnd.hide()
         self.TwitchType.hide()
-        self.TwitchStreamers.hide()
