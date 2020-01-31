@@ -26,7 +26,7 @@ def get_separator():
 
 def get_last_item_with_backslash(text):
     text = text.split("/")
-    return text[len(text)-1]
+    return text[len(text) - 1]
 
 
 def remove_widget(layout):

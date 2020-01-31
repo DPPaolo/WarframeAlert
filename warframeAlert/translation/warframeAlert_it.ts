@@ -16,32 +16,32 @@
 <context>
     <name>dailyDeals</name>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="17"/>
+        <location filename="../components/common/DailyDeals.py" line="16"/>
         <source>dailyDeals</source>
         <translation>Oggetto Scontato da Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="50"/>
+        <location filename="../components/common/DailyDeals.py" line="69"/>
         <source>sold</source>
         <translation>Venduti</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="51"/>
+        <location filename="../components/common/DailyDeals.py" line="70"/>
         <source>price</source>
         <translation>Costo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="52"/>
+        <location filename="../components/common/DailyDeals.py" line="60"/>
         <source>sale</source>
         <translation>Scontato del</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="19"/>
+        <location filename="../components/common/DailyDeals.py" line="18"/>
         <source>end</source>
         <translation>Termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="45"/>
+        <location filename="../components/common/DailyDeals.py" line="56"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
@@ -54,22 +54,22 @@
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="62"/>
+        <location filename="../utils/gameTranslationUtils.py" line="61"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="71"/>
+        <location filename="../utils/gameTranslationUtils.py" line="70"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="34"/>
+        <location filename="../utils/gameTranslationUtils.py" line="33"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="45"/>
+        <location filename="../utils/gameTranslationUtils.py" line="44"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
@@ -280,7 +280,7 @@
         <translation>secondi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="88"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="87"/>
         <source>none</source>
         <translation>Nessuno</translation>
     </message>
@@ -290,7 +290,7 @@
         <translation>Evento senza Nome</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="81"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="80"/>
         <source>event</source>
         <translation>Evento su</translation>
     </message>
@@ -301,6 +301,87 @@
         <location filename="../components/widget/HubWidget.py" line="19"/>
         <source>no_hub_event</source>
         <translation>Non è attivo nessun evento Hub</translation>
+    </message>
+</context>
+<context>
+    <name>invasionWidget</name>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="34"/>
+        <source>NoGrineerInvasion</source>
+        <translation>Non è presente nessuna invasione Grineer al momento</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="35"/>
+        <source>NoCorpusInvasion</source>
+        <translation>Non è presente nessuna invasione Corpus al momento</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="36"/>
+        <source>NoInfestedInvasion</source>
+        <translation>Non è presente nessuna invasione Infested al momento</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="37"/>
+        <source>NoNodeOccuped</source>
+        <translation>Nessun nodo è occupato da una fazione al momento</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="44"/>
+        <source>fomorian</source>
+        <translation>Fomorian</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="45"/>
+        <source>razorback</source>
+        <translation>Armata Razorback</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="80"/>
+        <source>GrineerInvasion</source>
+        <translation>Offensive Grineer</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="81"/>
+        <source>CorpusInvasion</source>
+        <translation>Assedi Corpus</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="82"/>
+        <source>InfestedInvasion</source>
+        <translation>Invasioni Infested</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="104"/>
+        <source>OccupedNode</source>
+        <translation>Nodi Occupati</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="115"/>
+        <source>invasionUpdateError</source>
+        <translation>Errore nelle Invasioni</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="171"/>
+        <source>nodeOverrideUpdateError</source>
+        <translation>Errore nei Nodi Occupati</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="200"/>
+        <source>invasionProjectUpdateError</source>
+        <translation>Errore nei Progetti Invasione</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="209"/>
+        <source>unknownInvasionProject</source>
+        <translation>Valore sconosciuto nei Progetti Invasioni</translation>
+    </message>
+</context>
+<context>
+    <name>notificationService</name>
+    <message>
+        <location filename="../services/notificationService.py" line="40"/>
+        <source>sendNotifError</source>
+        <translation>Errore inviando la notifica</translation>
     </message>
 </context>
 <context>
@@ -416,54 +497,72 @@
     </message>
 </context>
 <context>
+    <name>trayService</name>
+    <message>
+        <location filename="../services/trayBarService.py" line="22"/>
+        <source>open</source>
+        <translation>Apri</translation>
+    </message>
+    <message>
+        <location filename="../services/trayBarService.py" line="25"/>
+        <source>hide</source>
+        <translation>Nascondi</translation>
+    </message>
+    <message>
+        <location filename="../services/trayBarService.py" line="28"/>
+        <source>exit</source>
+        <translation>Esci</translation>
+    </message>
+</context>
+<context>
     <name>twitchBox</name>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="39"/>
+        <location filename="../components/common/TwitchBox.py" line="38"/>
         <source>init</source>
         <translation>Inizio</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="16"/>
+        <location filename="../components/common/TwitchBox.py" line="17"/>
         <source>countdown_label</source>
         <translation>Scade tra</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="17"/>
+        <location filename="../components/common/TwitchBox.py" line="18"/>
         <source>promo_type</source>
         <translation>Ottenibile tramite</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="44"/>
+        <location filename="../components/common/TwitchBox.py" line="47"/>
         <source>streamer</source>
         <translation>Streamers validi</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="46"/>
+        <location filename="../components/common/TwitchBox.py" line="49"/>
         <source>achievement</source>
         <translation>Ottenibile tramite achievement specifico</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="48"/>
+        <location filename="../components/common/TwitchBox.py" line="51"/>
         <source>vision</source>
         <translation>Ottenibile tramite ore cumulative di visione</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="53"/>
+        <location filename="../components/common/TwitchBox.py" line="56"/>
         <source>kill</source>
         <translation>Ottenibile uccidendo</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="54"/>
+        <location filename="../components/common/TwitchBox.py" line="57"/>
         <source>spawn</source>
         <translation>Appare al</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="55"/>
+        <location filename="../components/common/TwitchBox.py" line="58"/>
         <source>perc_spawn</source>
         <translation>% con cooldown</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="59"/>
+        <location filename="../components/common/TwitchBox.py" line="62"/>
         <source>unknown</source>
         <translation>Metodo di ottenimento sconosciuto</translation>
     </message>

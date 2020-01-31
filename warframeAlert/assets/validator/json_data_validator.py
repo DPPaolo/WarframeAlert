@@ -55,6 +55,131 @@ all_json_schema = {
     },
 }
 
+invasion_schema = {
+    "type": "object",
+    "properties": {
+        "Invasions": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/invasion"},
+        }
+    },
+    "required": ["Invasions"],
+    "definitions": {
+        "invasion": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "ChainID": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"},
+                    },
+                },
+                "AttackerMissionInfo": {
+                    "type": "object",
+                    "properties": {
+                        "faction": {"type": "string"},
+                        "seed": {"type": "integer"}
+                    }
+                },
+                "DefenderMissionInfo": {
+                    "type": "object",
+                    "properties": {
+                        "faction": {"type": "string"},
+                        "seed": {"type": "integer"}
+                    }
+                },
+                "Completed": {
+                    "type": "boolean"
+                },
+                "Count": {
+                    "type": "integer"
+                },
+                "DefenderFaction": {
+                    "type": "string"
+                },
+                "Faction": {
+                    "type": "string"
+                },
+                "Goal": {
+                    "type": "integer"
+                },
+                "LocTag": {
+                    "type": "string"
+                },
+                "Node": {
+                    "type": "string"
+                },
+                "AttackerReward": {
+                    "type": ["object", "array"],
+                    "properties": {
+                        "additionalProperties": False,
+                        "countedItems": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": False,
+                                "properties": {
+                                    "ItemCount": {"type": "integer"},
+                                    "ItemType": {"type": "string"}
+                                }
+                            }
+                        }
+                    }
+                },
+                "DefenderReward": {
+                    "type": "object",
+                    "properties": {
+                        "additionalProperties": False,
+                        "countedItems": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "additionalProperties": False,
+                                "properties": {
+                                    "ItemCount": {"type": "integer"},
+                                    "ItemType": {"type": "string"}
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "required": ["Activation", "_id", "ChainID", "AttackerMissionInfo", "Completed", "Count",
+                         "DefenderFaction", "DefenderMissionInfo", "Goal", "LocTag", "Node",
+                         "Faction", "AttackerReward", "DefenderReward"]
+        }
+    }
+}
+
+invasion_project_schema = {
+    "type": "object",
+    "properties": {
+        "ProjectPct": {
+            "type": "array",
+            "items": {"type": "number"}
+        }
+    }
+}
+
 daily_deals_schema = {
     "type": "object",
     "properties": {
@@ -361,6 +486,9 @@ node_overrides_schema = {
                     "type": "array",
                     "items": {"type": "string"}
                 },
+                "Faction": {
+                    "type": "string",
+                },
                 "Expiry": {
                     "type": "object",
                     "properties": {
@@ -386,7 +514,7 @@ node_overrides_schema = {
                     }
                 }
             },
-            "required": ["_id", "Node", "ExtraEnemySpec", "Expiry", "Activation", "CustomNpcEncounters"]
+            "required": ["_id", "Node", "Expiry", "Activation", "CustomNpcEncounters"]
         }
     }
 }

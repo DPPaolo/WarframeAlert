@@ -13,6 +13,10 @@ def get_cur_dir():
     return os.path.dirname(abspath(os.curdir))
 
 
+def get_asset_path():
+    return get_cur_dir() + get_separator() + "assets" + get_separator()
+
+
 def check_file(name):
     d = get_cur_dir()
     path = d + get_separator() + name
