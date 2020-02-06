@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>countdown</name>
     <message>
@@ -54,24 +55,34 @@
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="61"/>
+        <location filename="../utils/gameTranslationUtils.py" line="71"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="70"/>
+        <location filename="../utils/gameTranslationUtils.py" line="80"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="33"/>
+        <location filename="../utils/gameTranslationUtils.py" line="43"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="44"/>
+        <location filename="../utils/gameTranslationUtils.py" line="54"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="27"/>
+        <source>unknownFaction</source>
+        <translation>Fazione non Trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="91"/>
+        <source>unknownInvasionLocTag</source>
+        <translation>Location Tag Invasione non trovata</translation>
     </message>
 </context>
 <context>
@@ -304,74 +315,100 @@
     </message>
 </context>
 <context>
+    <name>invasion</name>
+    <message>
+        <location filename="../components/common/Invasion.py" line="97"/>
+        <source>invasionInit</source>
+        <translation>Apparsa il</translation>
+    </message>
+</context>
+<context>
+    <name>invasionNode</name>
+    <message>
+        <location filename="../components/common/InvasionNode.py" line="12"/>
+        <source>occupationDesc</source>
+        <translation>Occupazione</translation>
+    </message>
+    <message>
+        <location filename="../components/common/InvasionNode.py" line="14"/>
+        <source>occupationNode</source>
+        <translation>Nodo Occupato</translation>
+    </message>
+    <message>
+        <location filename="../components/common/InvasionNode.py" line="16"/>
+        <source>occupationTimer</source>
+        <translation>Liberato tra</translation>
+    </message>
+</context>
+<context>
     <name>invasionWidget</name>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="34"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="35"/>
         <source>NoGrineerInvasion</source>
         <translation>Non è presente nessuna invasione Grineer al momento</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="35"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="36"/>
         <source>NoCorpusInvasion</source>
         <translation>Non è presente nessuna invasione Corpus al momento</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="36"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="37"/>
         <source>NoInfestedInvasion</source>
         <translation>Non è presente nessuna invasione Infested al momento</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="37"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="38"/>
         <source>NoNodeOccuped</source>
         <translation>Nessun nodo è occupato da una fazione al momento</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="44"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="45"/>
         <source>fomorian</source>
         <translation>Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="45"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="46"/>
         <source>razorback</source>
         <translation>Armata Razorback</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="80"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="81"/>
         <source>GrineerInvasion</source>
         <translation>Offensive Grineer</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="81"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="82"/>
         <source>CorpusInvasion</source>
         <translation>Assedi Corpus</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="82"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="83"/>
         <source>InfestedInvasion</source>
         <translation>Invasioni Infested</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="104"/>
-        <source>OccupedNode</source>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="105"/>
+        <source>OccupiedNode</source>
         <translation>Nodi Occupati</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="115"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="116"/>
         <source>invasionUpdateError</source>
         <translation>Errore nelle Invasioni</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="171"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="236"/>
         <source>nodeOverrideUpdateError</source>
         <translation>Errore nei Nodi Occupati</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="200"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="297"/>
         <source>invasionProjectUpdateError</source>
         <translation>Errore nei Progetti Invasione</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="209"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="306"/>
         <source>unknownInvasionProject</source>
         <translation>Valore sconosciuto nei Progetti Invasioni</translation>
     </message>
@@ -379,7 +416,7 @@
 <context>
     <name>notificationService</name>
     <message>
-        <location filename="../services/notificationService.py" line="40"/>
+        <location filename="../services/notificationService.py" line="37"/>
         <source>sendNotifError</source>
         <translation>Errore inviando la notifica</translation>
     </message>
@@ -499,17 +536,17 @@
 <context>
     <name>trayService</name>
     <message>
-        <location filename="../services/trayBarService.py" line="22"/>
+        <location filename="../services/trayService.py" line="18"/>
         <source>open</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="../services/trayBarService.py" line="25"/>
+        <location filename="../services/trayService.py" line="21"/>
         <source>hide</source>
         <translation>Nascondi</translation>
     </message>
     <message>
-        <location filename="../services/trayBarService.py" line="28"/>
+        <location filename="../services/trayService.py" line="24"/>
         <source>exit</source>
         <translation>Esci</translation>
     </message>
@@ -578,6 +615,24 @@
         <location filename="../components/widget/TwitchPromoWidget.py" line="77"/>
         <source>active_twich_promo</source>
         <translation>Twitch Promo Presente</translation>
+    </message>
+</context>
+<context>
+    <name>warframeUtils</name>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="8"/>
+        <source>randomItem</source>
+        <translation>Item casuale da</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="32"/>
+        <source>affinity</source>
+        <translation>affinità</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="38"/>
+        <source>credits</source>
+        <translation>crediti</translation>
     </message>
 </context>
 </TS>

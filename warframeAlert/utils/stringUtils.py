@@ -1,3 +1,4 @@
+# coding=utf-8
 def divide_for_n(message, num, divide="\n"):
     if (divide == ""):
         return None

@@ -1,3 +1,4 @@
+# coding=utf-8
 import unittest
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 

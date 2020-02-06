@@ -1,3 +1,4 @@
+# coding=utf-8
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.widget.GeneralInfoWidget import GeneralInfoWidget

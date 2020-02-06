@@ -1,3 +1,4 @@
+# coding=utf-8
 import unittest
 
 from warframeAlert.utils.fileUtils import check_file, check_folder

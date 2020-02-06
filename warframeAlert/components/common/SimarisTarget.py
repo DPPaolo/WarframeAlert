@@ -1,3 +1,4 @@
+# coding=utf-8
 from PyQt5 import QtWidgets, QtGui
 
 from warframeAlert.services.translationService import translate

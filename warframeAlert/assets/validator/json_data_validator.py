@@ -1,3 +1,5 @@
+# coding=utf-8
+
 all_json_schema = {
     "type": "object",
     "required": ['json_data'],

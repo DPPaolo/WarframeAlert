@@ -1,3 +1,4 @@
+# coding=utf-8
 from PyQt5 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.services.translationService import translate
@@ -29,6 +30,7 @@ class TrayService():
         tray_menu.addAction(quit_app)
         self.tray_icon.setContextMenu(tray_menu)
         self.tray_icon.show()
+        # noinspection PyUnresolvedReferences
         self.tray_icon.activated[QtWidgets.QSystemTrayIcon.ActivationReason].connect(self.show_tray)
 
     def show_tray(self, event):
@@ -37,4 +39,3 @@ class TrayService():
 
     def get_tray_icon(self):
         return self.tray_icon
-

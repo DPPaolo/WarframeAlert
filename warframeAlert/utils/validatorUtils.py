@@ -1,3 +1,4 @@
+# coding=utf-8
 from jsonschema import validate
 from warframeAlert.assets.validator.json_data_validator import *
 
