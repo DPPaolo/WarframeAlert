@@ -9,7 +9,8 @@ from warframeAlert.utils.gameTranslationUtils import get_node, get_enemy_name, g
 class TestGameTranslationsUtils(unittest.TestCase):
     NODE = "SolNode145"
     NODE_NOT_EXISTING = "SolNode789453"
-    NODE_TRANSLATED = ("Egera", "(Cerere)")
+    NODE_TRANSLATED_IT = ("Egeria", "(Cerere)")
+    NODE_TRANSLATED_EN = ("Egeria", "(Ceres)")
     NODE_NOT_FOUND = (NODE_NOT_EXISTING), "(????)"
     ENEMY_NAME = "/Lotus/Types/Enemies/Grineer/AIWeek/ShieldLancer"
     ENEMY_NAME_UNKNOWN = "/Lotus/Types/Enemies/Grineer/AIWeek/RandomEnemy"
@@ -36,13 +37,25 @@ class TestGameTranslationsUtils(unittest.TestCase):
     LOC_TAG_NAME_UNKNOWN = "/Lotus/Language/Menu/SentientsInvasion"
     LOC_TAG_NAME_NOT_FOUND = "SentientsInvasion"
 
-    def test_get_node_found(self):
+    def test_get_node_it_found(self):
         res = get_node(self.NODE)
-        self.assertEqual(self.NODE_TRANSLATED, res)
+        self.assertEqual(self.NODE_TRANSLATED_IT, res)
 
-    def test_get_node_not_found(self):
+    def test_get_node_it_not_found(self):
         res = get_node(self.NODE_NOT_EXISTING)
         self.assertEqual(self.NODE_NOT_FOUND, res)
+
+    def test_get_node_en_found(self):
+        OptionsHandler.set_option("Language", "en")
+        res = get_node(self.NODE)
+        self.assertEqual(self.NODE_TRANSLATED_EN, res)
+        OptionsHandler.set_option("Language", "it")
+
+    def test_get_node_en_not_found(self):
+        OptionsHandler.set_option("Language", "en")
+        res = get_node(self.NODE_NOT_EXISTING)
+        self.assertEqual(self.NODE_NOT_FOUND, res)
+        OptionsHandler.set_option("Language", "it")
 
     def test_get_enemy_name_found(self):
         res = get_enemy_name(self.ENEMY_NAME)

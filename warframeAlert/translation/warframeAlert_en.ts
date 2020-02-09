@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
 <context>
     <name>countdown</name>
     <message>
@@ -50,39 +49,44 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="18"/>
+        <location filename="../utils/gameTranslationUtils.py" line="24"/>
         <source>unknownNode</source>
         <translation>Unknown Node</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="72"/>
+        <location filename="../utils/gameTranslationUtils.py" line="96"/>
         <source>unknownEnemy</source>
         <translation>Unknown Enemy</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="81"/>
+        <location filename="../utils/gameTranslationUtils.py" line="105"/>
         <source>unknownSimarisTarget</source>
         <translation>Unknown Simaris Target</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="44"/>
+        <location filename="../utils/gameTranslationUtils.py" line="68"/>
         <source>unknownItemName</source>
         <translation>Unknown Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="55"/>
+        <location filename="../utils/gameTranslationUtils.py" line="79"/>
         <source>errorFileLanguage</source>
-        <translation>Error duting reading Language.json file</translation>
+        <translation>Error during reading Language.json file</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="28"/>
+        <location filename="../utils/gameTranslationUtils.py" line="52"/>
         <source>unknownFaction</source>
         <translation>Unknown Faction</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="90"/>
+        <location filename="../utils/gameTranslationUtils.py" line="114"/>
         <source>unknownInvasionLocTag</source>
         <translation>Unknown Invasion Location Tag</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="34"/>
+        <source>errorFileSolNodes</source>
+        <translation>Error during reading SolNodes.json file</translation>
     </message>
 </context>
 <context>

@@ -7,8 +7,15 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
-#TODO: edit to include english translation
+
 def get_node(name):
+    if (OptionsHandler.get_option("Language", str) == "it"):
+        return get_node_it(name)
+    else:
+        return get_node_en(name)
+
+
+def get_node_it(name):
     if (name in warframeData.NODE_NAME_IT):
         return warframeData.NODE_NAME_IT[name][0], "(" + warframeData.NODE_NAME_IT[name][1] + ")"
     elif (name == ""):
@@ -16,6 +23,25 @@ def get_node(name):
     else:
         print(translate("gameTranslation", "unknownNode") + ": " + name)
         LogHandler.err(translate("gameTranslation", "unknownNode") + ": " + name)
+        return name, "(????)"
+
+
+def get_node_en(name):
+    translation_path = "data" + get_separator() + "SolNodes.json"
+    try:
+        fp = open(translation_path)
+        data = fp.read()
+    except KeyError:
+        print(translate("gameTranslation", "errorFileSolNodes"))
+        LogHandler.err(translate("gameTranslation", "errorFileSolNodes"))
+        return name, "(????)"
+    fp.close()
+    json_data = json.loads(data)
+    found = 0
+    if (name in json_data):
+        data = json_data[name]['value'].replace("\n", "").split(" ")
+        return data[0], data[1]
+    if (found == 0):
         return name, "(????)"
 
 
@@ -48,7 +74,7 @@ def get_item_name_it(name):
 def get_item_name_en(name):
     translation_path = "data" + get_separator() + "Language.json"
     try:
-        fp = open(translation_path, "r")
+        fp = open(translation_path)
         data = fp.read()
     except KeyError:
         print(translate("gameTranslation", "errorFileLanguage"))
@@ -57,10 +83,10 @@ def get_item_name_en(name):
     fp.close()
     json_data = json.loads(data)
     name_lower = name.lower()
-    trovato = 0
+    found = 0
     if (name_lower in json_data):
         return json_data[name_lower]['value'].replace("\n", "")
-    if (trovato == 0):
+    if (found == 0):
         return get_last_item_with_backslash(name)
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>countdown</name>
     <message>
@@ -50,39 +49,44 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="18"/>
+        <location filename="../utils/gameTranslationUtils.py" line="24"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="72"/>
+        <location filename="../utils/gameTranslationUtils.py" line="96"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="81"/>
+        <location filename="../utils/gameTranslationUtils.py" line="105"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="44"/>
+        <location filename="../utils/gameTranslationUtils.py" line="68"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="55"/>
+        <location filename="../utils/gameTranslationUtils.py" line="79"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="28"/>
+        <location filename="../utils/gameTranslationUtils.py" line="52"/>
         <source>unknownFaction</source>
         <translation>Fazione non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="90"/>
+        <location filename="../utils/gameTranslationUtils.py" line="114"/>
         <source>unknownInvasionLocTag</source>
         <translation>Location Tag Invasione non trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="34"/>
+        <source>errorFileSolNodes</source>
+        <translation>Errore nella lettura del file SolNodes.json</translation>
     </message>
 </context>
 <context>
