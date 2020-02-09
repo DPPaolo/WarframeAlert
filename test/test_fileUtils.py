@@ -14,6 +14,14 @@ class TestFileUtils(unittest.TestCase):
         exist = check_file("test_commonUtils.py")
         self.assertTrue(exist)
 
+    def test_check_file_data_not_exist(self):
+        exist = check_file("test2_commonUtils.py")
+        self.assertFalse(exist)
+
+    def test_check_file_data_exist(self):
+        exist = check_file("Language.json")
+        self.assertTrue(exist)
+
     def test_check_folder_not_exist(self):
         exist = check_folder("datas")
         self.assertFalse(exist)

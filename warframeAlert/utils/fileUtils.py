@@ -21,7 +21,9 @@ def get_asset_path():
 def check_file(name):
     d = get_cur_dir()
     path = d + get_separator() + name
-    return os.path.exists(path)
+    images_path = d + get_separator() + "images" + get_separator() + name
+    files_path = d + get_separator() + "data" + get_separator() + name
+    return os.path.exists(path) or os.path.exists(images_path) or os.path.exists(files_path)
 
 
 def check_folder(name):

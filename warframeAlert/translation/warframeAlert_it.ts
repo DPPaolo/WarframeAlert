@@ -4,12 +4,12 @@
 <context>
     <name>countdown</name>
     <message>
-        <location filename="../components/common/Countdown.py" line="38"/>
+        <location filename="../components/common/Countdown.py" line="39"/>
         <source>countdown_error</source>
         <translation>Errore nel calcolo del tempo del countdown</translation>
     </message>
     <message>
-        <location filename="../components/common/Countdown.py" line="40"/>
+        <location filename="../components/common/Countdown.py" line="41"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
@@ -17,32 +17,32 @@
 <context>
     <name>dailyDeals</name>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="16"/>
+        <location filename="../components/common/DailyDeals.py" line="17"/>
         <source>dailyDeals</source>
         <translation>Oggetto Scontato da Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="69"/>
+        <location filename="../components/common/DailyDeals.py" line="70"/>
         <source>sold</source>
         <translation>Venduti</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="70"/>
+        <location filename="../components/common/DailyDeals.py" line="71"/>
         <source>price</source>
         <translation>Costo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="60"/>
+        <location filename="../components/common/DailyDeals.py" line="61"/>
         <source>sale</source>
         <translation>Scontato del</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="18"/>
+        <location filename="../components/common/DailyDeals.py" line="19"/>
         <source>end</source>
         <translation>Termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="56"/>
+        <location filename="../components/common/DailyDeals.py" line="57"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
@@ -50,37 +50,37 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="17"/>
+        <location filename="../utils/gameTranslationUtils.py" line="18"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="71"/>
+        <location filename="../utils/gameTranslationUtils.py" line="72"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="80"/>
+        <location filename="../utils/gameTranslationUtils.py" line="81"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="43"/>
+        <location filename="../utils/gameTranslationUtils.py" line="44"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="54"/>
+        <location filename="../utils/gameTranslationUtils.py" line="55"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="27"/>
+        <location filename="../utils/gameTranslationUtils.py" line="28"/>
         <source>unknownFaction</source>
         <translation>Fazione non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="91"/>
+        <location filename="../utils/gameTranslationUtils.py" line="90"/>
         <source>unknownInvasionLocTag</source>
         <translation>Location Tag Invasione non trovata</translation>
     </message>
@@ -88,162 +88,162 @@
 <context>
     <name>generalWidget</name>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="19"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="20"/>
         <source>earthTime</source>
         <translation>Ora sulla Terra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="69"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
         <source>fileVersion</source>
         <translation>Versione File</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="71"/>
         <source>mobileFileVersion</source>
         <translation>Versione File Mobile</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="22"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="23"/>
         <source>worldSeed</source>
         <translation>World Seed</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="24"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="25"/>
         <source>primeAccessState</source>
         <translation>Stato Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="26"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="27"/>
         <source>primeVaultState</source>
         <translation>Stato Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="29"/>
         <source>featuredDojo</source>
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="59"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="60"/>
         <source>earthTimeDay</source>
         <translation>Ora sulla Terra : Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="60"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="61"/>
         <source>timeToNight</source>
         <translation>Tempo per la Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="62"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="63"/>
         <source>earthTimeNight</source>
         <translation>Ora sulla Terra : Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="63"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="64"/>
         <source>timeToDay</source>
         <translation>Tempo per il Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="95"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="96"/>
         <source>tier1</source>
         <translation>Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="96"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="97"/>
         <source>tier2</source>
         <translation>Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="97"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="98"/>
         <source>tier3</source>
         <translation>Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="98"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
         <source>tier4</source>
         <translation>Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="100"/>
         <source>tier5</source>
         <translation>Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="88"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="89"/>
         <source>noAlliance</source>
         <translation>senza alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="100"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="101"/>
         <source>tier1Id</source>
         <translation>ID Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="110"/>
         <source>guildAllianceId</source>
         <translation>ID Alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="102"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
         <source>tier2Id</source>
         <translation>ID Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="104"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
         <source>tier3Id</source>
         <translation>ID Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="106"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
         <source>tier4Id</source>
         <translation>ID Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="108"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
         <source>tier5Id</source>
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="125"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="126"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="128"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="129"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="129"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="131"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="131"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="132"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="132"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
@@ -251,57 +251,57 @@
 <context>
     <name>hubEvent</name>
     <message>
-        <location filename="../components/common/HubEvent.py" line="16"/>
+        <location filename="../components/common/HubEvent.py" line="17"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="18"/>
+        <location filename="../components/common/HubEvent.py" line="19"/>
         <source>end</source>
         <translation>Termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="20"/>
+        <location filename="../components/common/HubEvent.py" line="21"/>
         <source>node</source>
         <translation>Nodo</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="22"/>
+        <location filename="../components/common/HubEvent.py" line="23"/>
         <source>cinematic</source>
         <translation>Nome Filmato</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="24"/>
+        <location filename="../components/common/HubEvent.py" line="25"/>
         <source>cycle</source>
         <translation>Ciclo</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="26"/>
+        <location filename="../components/common/HubEvent.py" line="27"/>
         <source>repeatCycle</source>
         <translation>Intervallo Ripetizione</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="28"/>
+        <location filename="../components/common/HubEvent.py" line="29"/>
         <source>transmission</source>
         <translation>Trasmissione</translation>
     </message>
     <message>
-        <location filename="../components/common/HubEvent.py" line="73"/>
+        <location filename="../components/common/HubEvent.py" line="74"/>
         <source>seconds</source>
         <translation>secondi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="87"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="88"/>
         <source>none</source>
         <translation>Nessuno</translation>
     </message>
     <message>
-        <location filename="../components/widget/HubWidget.py" line="43"/>
+        <location filename="../components/widget/HubWidget.py" line="44"/>
         <source>eventNoName</source>
         <translation>Evento senza Nome</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="80"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="81"/>
         <source>event</source>
         <translation>Evento su</translation>
     </message>
@@ -309,7 +309,7 @@
 <context>
     <name>hubWidget</name>
     <message>
-        <location filename="../components/widget/HubWidget.py" line="19"/>
+        <location filename="../components/widget/HubWidget.py" line="20"/>
         <source>no_hub_event</source>
         <translation>Non è attivo nessun evento Hub</translation>
     </message>
@@ -317,7 +317,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="97"/>
+        <location filename="../components/common/Invasion.py" line="111"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -416,7 +416,7 @@
 <context>
     <name>notificationService</name>
     <message>
-        <location filename="../services/notificationService.py" line="37"/>
+        <location filename="../services/notificationService.py" line="38"/>
         <source>sendNotifError</source>
         <translation>Errore inviando la notifica</translation>
     </message>
@@ -424,57 +424,57 @@
 <context>
     <name>otherWidgetTab</name>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="23"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="24"/>
         <source>general</source>
         <translation>Generale</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="24"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="25"/>
         <source>relay</source>
         <translation>Stazioni</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="40"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="41"/>
         <source>hub</source>
         <translation>Eventi Hub</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="41"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="42"/>
         <source>twitchPromo</source>
         <translation>Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="55"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="56"/>
         <source>primeAccessUpdateError</source>
         <translation>Errore nel Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="92"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="93"/>
         <source>featureDojoUpdateError</source>
         <translation>Errore nei Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="100"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="101"/>
         <source>hubEventUpdateError</source>
         <translation>Errore negli Eventi Hub</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="84"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="85"/>
         <source>twitchPromoUpdateError</source>
         <translation>Errore nelle Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="63"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="64"/>
         <source>simarisUpdateError</source>
         <translation>Errore nei Bersagli di Simaris</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="70"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="71"/>
         <source>dailyDealsUpdateError</source>
         <translation>Errore negli Sconti Giornalieri</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="77"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="78"/>
         <source>relayStationUpdateError</source>
         <translation>Errore nelle Stazioni</translation>
     </message>
@@ -482,17 +482,17 @@
 <context>
     <name>relayStationWidget</name>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="23"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="24"/>
         <source>destroyedStation</source>
         <translation>Stazioni Distrutte</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="24"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="25"/>
         <source>specialNode</source>
         <translation>Atri Nodi Speciali</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="26"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="27"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
@@ -500,7 +500,7 @@
 <context>
     <name>simarisTarget</name>
     <message>
-        <location filename="../components/common/SimarisTarget.py" line="12"/>
+        <location filename="../components/common/SimarisTarget.py" line="13"/>
         <source>actualSimarisTarget</source>
         <translation>Bersaglio Simaris Attuale</translation>
     </message>
@@ -554,52 +554,52 @@
 <context>
     <name>twitchBox</name>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="38"/>
+        <location filename="../components/common/TwitchBox.py" line="39"/>
         <source>init</source>
         <translation>Inizio</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="17"/>
+        <location filename="../components/common/TwitchBox.py" line="18"/>
         <source>countdown_label</source>
         <translation>Scade tra</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="18"/>
+        <location filename="../components/common/TwitchBox.py" line="19"/>
         <source>promo_type</source>
         <translation>Ottenibile tramite</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="47"/>
+        <location filename="../components/common/TwitchBox.py" line="48"/>
         <source>streamer</source>
         <translation>Streamers validi</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="49"/>
+        <location filename="../components/common/TwitchBox.py" line="50"/>
         <source>achievement</source>
         <translation>Ottenibile tramite achievement specifico</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="51"/>
+        <location filename="../components/common/TwitchBox.py" line="52"/>
         <source>vision</source>
         <translation>Ottenibile tramite ore cumulative di visione</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="56"/>
+        <location filename="../components/common/TwitchBox.py" line="57"/>
         <source>kill</source>
         <translation>Ottenibile uccidendo</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="57"/>
+        <location filename="../components/common/TwitchBox.py" line="58"/>
         <source>spawn</source>
         <translation>Appare al</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="58"/>
+        <location filename="../components/common/TwitchBox.py" line="59"/>
         <source>perc_spawn</source>
         <translation>% con cooldown</translation>
     </message>
     <message>
-        <location filename="../components/common/TwitchBox.py" line="62"/>
+        <location filename="../components/common/TwitchBox.py" line="63"/>
         <source>unknown</source>
         <translation>Metodo di ottenimento sconosciuto</translation>
     </message>
@@ -607,12 +607,12 @@
 <context>
     <name>twitchPromoWidget</name>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="20"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="21"/>
         <source>no_Twich_Promo</source>
         <translation>Non é attiva nessuna Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="77"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="78"/>
         <source>active_twich_promo</source>
         <translation>Twitch Promo Presente</translation>
     </message>
@@ -620,19 +620,34 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="8"/>
+        <location filename="../utils/warframeUtils.py" line="15"/>
         <source>randomItem</source>
         <translation>Item casuale da</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="32"/>
+        <location filename="../utils/warframeUtils.py" line="39"/>
         <source>affinity</source>
         <translation>affinità</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="38"/>
+        <location filename="../utils/warframeUtils.py" line="45"/>
         <source>credits</source>
         <translation>crediti</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="88"/>
+        <source>weaponPartsNotFound</source>
+        <translation>Parte Arma non Trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="112"/>
+        <source>weaponTypeNotFound</source>
+        <translation>Tipo Arma non Trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="129"/>
+        <source>ExportManifestNotFound</source>
+        <translation>ExportManifest.json non trovato</translation>
     </message>
 </context>
 </TS>

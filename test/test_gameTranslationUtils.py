@@ -1,7 +1,9 @@
+# coding=utf-8
 import unittest
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
-from warframeAlert.utils.gameTranslationUtils import get_node, get_enemy_name, get_simaris_target, get_item_name
+from warframeAlert.utils.gameTranslationUtils import get_node, get_enemy_name, get_simaris_target, get_item_name, \
+    get_faction, get_invasion_loctag
 
 
 class TestGameTranslationsUtils(unittest.TestCase):
@@ -23,6 +25,16 @@ class TestGameTranslationsUtils(unittest.TestCase):
     ITEM_NAME_NOT_FOUND = "FormaSpecial"
     ITEM_NAME_EN = "/Lotus/StoreItems/Upgrades/Focus/PowerLensGreater"
     ITEM_NAME_TRANSLATED_EN = "Greater Zenurik Lens"
+    FACTION_NAME = "FC_INFESTATION"
+    FACTION_NAME_TRANSLATED = "Infested"
+    FACTION_NAME_UNKNOWN = "FC_GRINIIER"
+    FACTION_NAME_NOT_FOUND = "FC_GRINIIER"
+    LOC_TAG_NAME_IT = "/Lotus/Language/Menu/GrineerInvasionGeneric"
+    LOC_TAG_NAME_IT_TRANSLATED = "Offensiva Grineer"
+    LOC_TAG_NAME_EN = "/Lotus/Language/Menu/CorpusInvasionGeneric"
+    LOC_TAG_NAME_EN_TRANSLATED = "Corpus Siege"
+    LOC_TAG_NAME_UNKNOWN = "/Lotus/Language/Menu/SentientsInvasion"
+    LOC_TAG_NAME_NOT_FOUND = "SentientsInvasion"
 
     def test_get_node_found(self):
         res = get_node(self.NODE)
@@ -66,5 +78,33 @@ class TestGameTranslationsUtils(unittest.TestCase):
         OptionsHandler.set_option("Language", "en")
         res = get_item_name(self.ITEM_NAME_UNKNOWN)
         self.assertEqual(self.ITEM_NAME_NOT_FOUND, res)
+        OptionsHandler.set_option("Language", "it")
+
+    def test_get_faction_found(self):
+        res = get_faction(self.FACTION_NAME)
+        self.assertEqual(self.FACTION_NAME_TRANSLATED, res)
+
+    def test_get_faction_not_found(self):
+        res = get_faction(self.FACTION_NAME_UNKNOWN)
+        self.assertEqual(self.FACTION_NAME_NOT_FOUND, res)
+
+    def test_get_loc_tag_it_found(self):
+        res = get_invasion_loctag(self.LOC_TAG_NAME_IT)
+        self.assertEqual(self.LOC_TAG_NAME_IT_TRANSLATED, res)
+
+    def test_get_loc_tag_it_not_found(self):
+        res = get_invasion_loctag(self.LOC_TAG_NAME_UNKNOWN)
+        self.assertEqual(self.LOC_TAG_NAME_NOT_FOUND, res)
+
+    def test_get_loc_tag_en_found(self):
+        OptionsHandler.set_option("Language", "en")
+        res = get_invasion_loctag(self.LOC_TAG_NAME_EN)
+        self.assertEqual(self.LOC_TAG_NAME_EN_TRANSLATED, res)
+        OptionsHandler.set_option("Language", "it")
+
+    def test_get_loc_tag_en_not_found(self):
+        OptionsHandler.set_option("Language", "en")
+        res = get_invasion_loctag(self.LOC_TAG_NAME_UNKNOWN)
+        self.assertEqual(self.LOC_TAG_NAME_NOT_FOUND, res)
         OptionsHandler.set_option("Language", "it")
 

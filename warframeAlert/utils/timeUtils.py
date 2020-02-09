@@ -9,7 +9,6 @@ def get_time(times):
     return datetime.datetime.fromtimestamp(int(times[:10])).strftime("%d/%m/%Y %H:%M")
 
 
-# not used
 def get_date_time(times):
     return datetime.datetime.fromtimestamp(int(times[:10])).strftime("%d/%m/%Y")
 

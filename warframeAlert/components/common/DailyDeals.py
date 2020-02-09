@@ -22,7 +22,7 @@ class DailyDeals:
         self.DealsAmount = QtWidgets.QLabel("N/D")
         self.DealsOriginalPriceLab = QtWidgets.QLabel(translate("dailyDeals", "price") + ": ")
         self.DealsOriginalPrice = QtWidgets.QLabel("N/D")
-        self.DealsPrice = CommonLabelWithImage("/assets/icon/platinum.png", "N/D")
+        self.DealsPrice = CommonLabelWithImage("assets/icon/platinum.png", "N/D")
         self.DealsSales = QtWidgets.QLabel("N/D")
 
         font_barred = self.DealsOriginalPrice.font()

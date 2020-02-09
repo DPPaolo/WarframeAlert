@@ -1,3 +1,4 @@
+# coding=utf-8
 import json
 
 from warframeAlert import warframeData
@@ -6,7 +7,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
-
+#TODO: edit to include english translation
 def get_node(name):
     if (name in warframeData.NODE_NAME_IT):
         return warframeData.NODE_NAME_IT[name][0], "(" + warframeData.NODE_NAME_IT[name][1] + ")"
@@ -16,6 +17,16 @@ def get_node(name):
         print(translate("gameTranslation", "unknownNode") + ": " + name)
         LogHandler.err(translate("gameTranslation", "unknownNode") + ": " + name)
         return name, "(????)"
+
+
+def get_faction(name):
+    faction = name.replace("\n", "")
+    if (faction in warframeData.FACTION):
+        return warframeData.FACTION[faction]
+    else:
+        print(translate("gameTranslation", "unknownFaction") + ": " + faction)
+        LogHandler.err(translate("gameTranslation", "unknownFaction") + ": " + faction)
+        return faction
 
 
 def get_item_name(name):
@@ -69,3 +80,12 @@ def get_simaris_target(simaris_target):
         print(translate("gameTranslation", "unknownSimarisTarget") + ": " + simaris_target)
         LogHandler.err(translate("gameTranslation", "unknownSimarisTarget") + ": " + simaris_target)
         return get_last_item_with_backslash(simaris_target)
+
+
+def get_invasion_loctag(loctag):
+    if (loctag in warframeData.INVASION_LOCTAG):
+        return warframeData.INVASION_LOCTAG[loctag][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
+        LogHandler.err(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
+        return get_last_item_with_backslash(loctag)
