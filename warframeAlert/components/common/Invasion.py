@@ -4,7 +4,8 @@ from PyQt5.QtCore import Qt
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_separator
+from warframeAlert.utils.commonUtils import get_last_item_with_backslash
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.timeUtils import get_date_time
 from warframeAlert.utils.warframeUtils import get_weapon_part, get_weapon_type, get_image_path_from_name, \
     get_image_path_from_export_manifest

@@ -1,4 +1,5 @@
 SOURCES      = test/test_translationService.py \
+               warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/Countdown.py \
                warframeAlert/components/common/DailyDeals.py \
                warframeAlert/components/common/HubEvent.py \
@@ -10,6 +11,7 @@ SOURCES      = test/test_translationService.py \
                warframeAlert/components/widget/HubWidget.py \
                warframeAlert/components/widget/RelayStationWidget.py \
                warframeAlert/components/widget/TwitchPromoWidget.py \
+               warframeAlert/components/tab/AccolyteWidgetTab.py \
                warframeAlert/components/tab/OtherWidgetTab.py \
                warframeAlert/components/tab/InvasionWidgetTab.py \
                warframeAlert/services/notificationService.py \

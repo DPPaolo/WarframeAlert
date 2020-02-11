@@ -1,7 +1,21 @@
 # coding=utf-8
 import os
+import platform
 
-from warframeAlert.utils.commonUtils import get_separator
+
+def get_os_type():
+    return platform.system()
+
+
+def is_mac_os():
+    return get_os_type() == "Darwin"
+
+
+def get_separator():
+    sep = "\\"  # Windows default separator
+    if (is_mac_os()):  # the OS is a MacOs
+        sep = "/"
+    return sep
 
 
 def abspath(path):

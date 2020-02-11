@@ -1,5 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
+<context>
+    <name>accolyt</name>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="71"/>
+        <source>level</source>
+        <translation>Livello</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="72"/>
+        <source>damageFlee</source>
+        <translation>Danno prima che scappi</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="78"/>
+        <source>init</source>
+        <translation>Apparso il</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="88"/>
+        <source>found?</source>
+        <translation>Scoperto?</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="94"/>
+        <source>founded</source>
+        <translation>Trovato su</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="96"/>
+        <source>positionUnknown</source>
+        <translation>Posizione Sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="129"/>
+        <source>accolytDead</source>
+        <translation>Accolito Morto</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="132"/>
+        <source>health</source>
+        <translation>Vita Rimanente</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="70"/>
+        <source>inGameName</source>
+        <translation>Codice Nome</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="73"/>
+        <source>useTicket?</source>
+        <translation>Serve un biglietto per accedere?</translation>
+    </message>
+</context>
+<context>
+    <name>accolyteWidgetTab</name>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="53"/>
+        <source>noRegion</source>
+        <translation>Nessuna</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="38"/>
+        <source>accolyteParsingError</source>
+        <translation>Errore negli Accoliti</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="55"/>
+        <source>noDiscovered</source>
+        <translation>Non ancora scoperto</translation>
+    </message>
+</context>
+<context>
+    <name>commonUtils</name>
+    <message>
+        <location filename="../utils/commonUtils.py" line="21"/>
+        <source>yes</source>
+        <translation>Si</translation>
+    </message>
+    <message>
+        <location filename="../utils/commonUtils.py" line="23"/>
+        <source>no</source>
+        <translation>No</translation>
+    </message>
+</context>
 <context>
     <name>countdown</name>
     <message>
@@ -49,44 +134,64 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="24"/>
+        <location filename="../utils/gameTranslationUtils.py" line="26"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="96"/>
+        <location filename="../utils/gameTranslationUtils.py" line="99"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="105"/>
+        <location filename="../utils/gameTranslationUtils.py" line="108"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="68"/>
+        <location filename="../utils/gameTranslationUtils.py" line="71"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="79"/>
+        <location filename="../utils/gameTranslationUtils.py" line="82"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="52"/>
+        <location filename="../utils/gameTranslationUtils.py" line="55"/>
         <source>unknownFaction</source>
         <translation>Fazione non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="114"/>
+        <location filename="../utils/gameTranslationUtils.py" line="117"/>
         <source>unknownInvasionLocTag</source>
         <translation>Location Tag Invasione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="34"/>
+        <location filename="../utils/gameTranslationUtils.py" line="186"/>
         <source>errorFileSolNodes</source>
         <translation>Errore nella lettura del file SolNodes.json</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="126"/>
+        <source>unknownAccolyte</source>
+        <translation>Accolito Non Trovato</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="135"/>
+        <source>unknownRegion</source>
+        <translation>Regione non trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="152"/>
+        <source>errorFileStarchart</source>
+        <translation>Impossibile aprire il file starchart.txt</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="175"/>
+        <source>noStarchartNode</source>
+        <translation>Tipo Missione non trovata per il Nodo</translation>
     </message>
 </context>
 <context>
@@ -321,7 +426,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="111"/>
+        <location filename="../components/common/Invasion.py" line="112"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -540,17 +645,17 @@
 <context>
     <name>trayService</name>
     <message>
-        <location filename="../services/trayService.py" line="18"/>
+        <location filename="../services/trayService.py" line="17"/>
         <source>open</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="../services/trayService.py" line="21"/>
+        <location filename="../services/trayService.py" line="20"/>
         <source>hide</source>
         <translation>Nascondi</translation>
     </message>
     <message>
-        <location filename="../services/trayService.py" line="24"/>
+        <location filename="../services/trayService.py" line="23"/>
         <source>exit</source>
         <translation>Esci</translation>
     </message>

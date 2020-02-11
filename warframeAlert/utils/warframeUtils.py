@@ -3,8 +3,8 @@ import json
 
 from warframeAlert import warframeData
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils import commonUtils
-from warframeAlert.utils.commonUtils import get_separator
+from warframeAlert.utils.commonUtils import print_traceback
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_item_name
 from warframeAlert.utils.logUtils import LogHandler
 
@@ -126,7 +126,7 @@ def get_image_path_from_export_manifest(name):
         fp = open("data" + get_separator() + "ExportManifest.json")
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n " + str(err))
-        commonUtils.print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n  " + str(err))
+        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n  " + str(err))
         return warframeData.DEFAULT_ALERT_IMAGE
     data = fp.readlines()
     fp.close()

@@ -2,8 +2,7 @@
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 
-from warframeAlert.utils.commonUtils import get_separator
-from warframeAlert.utils.fileUtils import get_cur_dir
+from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
 
 
 class CommonImages():

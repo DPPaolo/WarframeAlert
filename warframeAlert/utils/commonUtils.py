@@ -1,7 +1,8 @@
 # coding=utf-8
-import platform
 import sys
 import traceback
+
+from warframeAlert.services.translationService import translate
 
 
 def print_traceback(mess):
@@ -10,24 +11,16 @@ def print_traceback(mess):
     traceback.print_exception(exc_type, exc_value, exc_traceback)
 
 
-def get_os_type():
-    return platform.system()
-
-
-def is_mac_os():
-    return get_os_type() == "Darwin"
-
-
-def get_separator():
-    sep = "\\"  # Windows default separator
-    if (is_mac_os()):  # the OS is a MacOs
-        sep = "/"
-    return sep
-
-
 def get_last_item_with_backslash(text):
     text = text.split("/")
     return text[len(text) - 1]
+
+
+def bool_to_yes_no(boolean):
+    if (boolean):
+        return translate("commonUtils", "yes")
+    else:
+        return translate("commonUtils", "no")
 
 
 def remove_widget(layout):

@@ -2,8 +2,7 @@
 from PyQt5 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import get_separator
-from warframeAlert.utils.fileUtils import get_asset_path
+from warframeAlert.utils.fileUtils import get_asset_path, get_separator
 
 
 class TrayService():

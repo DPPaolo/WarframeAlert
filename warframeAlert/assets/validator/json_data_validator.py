@@ -57,6 +57,55 @@ all_json_schema = {
     },
 }
 
+persistent_enemies_schema = {
+    "type": "object",
+    "properties": {
+        "PersistentEnemies": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/persistent_enemy"},
+        }
+    },
+    "required": ["PersistentEnemies"],
+    "definitions": {
+        "persistent_enemy": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Discovered": {"type": "boolean"},
+                "AgentType": {"type": "string"},
+                "Icon": {"type": "string"},
+                "LastDiscoveredLocation": {"type": "string"},
+                "LocTag": {"type": "string"},
+                "FleeDamage": {"type": "number"},
+                "HealthPercent": {"type": "number"},
+                "Rank": {"type": "number"},
+                "UseTicketing": {"type": "boolean"},
+                "Region": {"type": "number"},
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "LastDiscoveredTime": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                }
+            },
+            "required": ["_id", "Discovered", "AgentType", "Icon", "LastDiscoveredLocation", "LocTag", "FleeDamage",
+                         "HealthPercent", "Rank", "UseTicketing", "LastDiscoveredTime"]
+        }
+    }
+}
+
 invasion_schema = {
     "type": "object",
     "properties": {

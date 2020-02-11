@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets, QtGui
 from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWithImage
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import is_mac_os
+from warframeAlert.utils.fileUtils import is_mac_os
 from warframeAlert.utils.stringUtils import set_barred
 from warframeAlert.utils.timeUtils import get_time
 

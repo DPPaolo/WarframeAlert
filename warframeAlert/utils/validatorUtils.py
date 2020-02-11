@@ -14,6 +14,7 @@ def check_json_data(json_data):
     validate_invasions(json_data['Invasions'])
     validate_library_info(json_data['LibraryInfo'])
     validate_node_overrides(json_data['NodeOverrides'])
+    validate_persistent_enemies(json_data['PersistentEnemies'])
     validate_prime_access_availabilities(json_data['PrimeAccessAvailability'])
     validate_prime_vault_availabilities(json_data['PrimeVaultAvailabilities'])
     validate_invasion_project(json_data['ProjectPct'])
@@ -49,6 +50,10 @@ def validate_library_info(json_data):
 
 def validate_node_overrides(json_data):
     validate(instance={'NodeOverrides': json_data}, schema=node_overrides_schema)
+
+
+def validate_persistent_enemies(json_data):
+    validate(instance={'PersistentEnemies': json_data}, schema=persistent_enemies_schema)
 
 
 def validate_prime_access_availabilities(json_data):

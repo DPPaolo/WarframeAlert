@@ -16,9 +16,9 @@ class NotificationService(QtCore.QThread):
         self.tray_icon = tray_icon
 
     @classmethod
-    def send_notification(cls, title, message, icona):
+    def send_notification(cls, title, message, icon):
         if (not OptionsHandler.get_first_init() and OptionsHandler.get_option("Update/Notify")):
-            cls.notif_queue.append((title, message, icona))
+            cls.notif_queue.append((title, message, icon))
 
     def show_notif(self, title, message, icon):
         if (icon is None):

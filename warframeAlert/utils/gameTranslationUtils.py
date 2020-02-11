@@ -4,7 +4,8 @@ import json
 from warframeAlert import warframeData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import get_last_item_with_backslash, get_separator
+from warframeAlert.utils.commonUtils import get_last_item_with_backslash, print_traceback
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -115,3 +116,79 @@ def get_invasion_loctag(loctag):
         print(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
         LogHandler.err(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
         return get_last_item_with_backslash(loctag)
+
+
+def get_accolyte_name(name):
+    if (name in warframeData.ACCOLYTE_NAME):
+        return warframeData.ACCOLYTE_NAME[name]
+    else:
+        print(translate("gameTranslation", "unknownAccolyte") + ": " + name)
+        LogHandler.err(translate("gameTranslation", "unknownAccolyte") + ": " + name)
+        return get_last_item_with_backslash(name)
+
+
+def get_region(region):
+    if (region in warframeData.REGION_MAP):
+        return warframeData.REGION_MAP[int(region)][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownRegion") + ": " + str(region))
+        LogHandler.err(translate("gameTranslation", "unknownRegion") + ": " + str(region))
+        return str(region)
+
+
+def get_mission_from_starchart(node, planet):
+    if (OptionsHandler.get_option("Language", str) == "it"):
+        return get_mission_from_starchart_it(node, planet)
+    else:
+        return get_mission_from_starchart_en(node + " (" + planet + ")")
+
+
+def get_mission_from_starchart_it(node, planet):
+    file_path = "data" + get_separator() + "starchart.txt"
+    try:
+        fp = open(file_path)
+    except Exception as er:
+        LogHandler.err(str(er))
+        print_traceback(translate("gameTranslation", "errorFileStarchart") + str(er))
+        return ""
+    found = 0
+    for line in fp.readlines():
+        line = line.replace("\n", "")
+        if ("[" in line):
+            line = line.replace("]", "")
+            data = line.split("[Pianeta ")
+            if (data[1] == planet[1:-1]):
+                found = 1
+        elif (found == 1):
+            line = line.split(":")
+            if (line[0] == "Nome Nodo"):
+                if (line[1] == " " + node):
+                    found = 2
+        elif (found == 2):
+            line = line.split(":")
+            if (line[0] == "Tipo Missione"):
+                fp.close()
+                return line[1][1:]
+    fp.close()
+    if (found == 0):
+        print(translate("gameTranslation", "noStarchartNode") + ": " + node)
+        LogHandler.err(translate("gameTranslation", "noStarchartNode") + ": " + node)
+        return ""
+
+
+def get_mission_from_starchart_en(node):
+    translation_path = "data" + get_separator() + "SolNodes.json"
+    try:
+        fp = open(translation_path)
+        data = fp.read()
+    except KeyError:
+        print(translate("gameTranslation", "errorFileSolNodes"))
+        LogHandler.err(translate("gameTranslation", "errorFileSolNodes"))
+        return ""
+    fp.close()
+    json_data = json.loads(data)
+    for elem in json_data:
+        name = json_data[elem]['value']
+        if (name == node):
+            return json_data[elem]['type']
+    return ""

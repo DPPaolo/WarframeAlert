@@ -1,11 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
+<context>
+    <name>accolyt</name>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="71"/>
+        <source>level</source>
+        <translation>Level</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="72"/>
+        <source>damageFlee</source>
+        <translation>Damage before flee</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="78"/>
+        <source>init</source>
+        <translation>Spawned on</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="88"/>
+        <source>found?</source>
+        <translation>Found?</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="94"/>
+        <source>founded</source>
+        <translation>Founded on</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="96"/>
+        <source>positionUnknown</source>
+        <translation>Position Unknown</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="129"/>
+        <source>accolytDead</source>
+        <translation>Accolyt Dead</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="132"/>
+        <source>health</source>
+        <translation>Remaining Health</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="70"/>
+        <source>inGameName</source>
+        <translation>In Game code name</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Accolyte.py" line="73"/>
+        <source>useTicket?</source>
+        <translation>Need ticket to access?</translation>
+    </message>
+</context>
+<context>
+    <name>accolyteWidgetTab</name>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="53"/>
+        <source>noRegion</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="38"/>
+        <source>accolyteParsingError</source>
+        <translation>Error during parsing accolytes</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="55"/>
+        <source>noDiscovered</source>
+        <translation>Not discovered yet</translation>
+    </message>
+</context>
+<context>
+    <name>commonUtils</name>
+    <message>
+        <location filename="../utils/commonUtils.py" line="21"/>
+        <source>yes</source>
+        <translation>Yes</translation>
+    </message>
+    <message>
+        <location filename="../utils/commonUtils.py" line="23"/>
+        <source>no</source>
+        <translation>No</translation>
+    </message>
+</context>
 <context>
     <name>countdown</name>
     <message>
         <location filename="../components/common/Countdown.py" line="39"/>
         <source>countdown_error</source>
-        <translation>Error duting calculation of countdown timer</translation>
+        <translation>Error during calculation of countdown timer</translation>
     </message>
     <message>
         <location filename="../components/common/Countdown.py" line="41"/>
@@ -49,44 +134,64 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="24"/>
+        <location filename="../utils/gameTranslationUtils.py" line="26"/>
         <source>unknownNode</source>
         <translation>Unknown Node</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="96"/>
+        <location filename="../utils/gameTranslationUtils.py" line="99"/>
         <source>unknownEnemy</source>
         <translation>Unknown Enemy</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="105"/>
+        <location filename="../utils/gameTranslationUtils.py" line="108"/>
         <source>unknownSimarisTarget</source>
         <translation>Unknown Simaris Target</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="68"/>
+        <location filename="../utils/gameTranslationUtils.py" line="71"/>
         <source>unknownItemName</source>
         <translation>Unknown Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="79"/>
+        <location filename="../utils/gameTranslationUtils.py" line="82"/>
         <source>errorFileLanguage</source>
         <translation>Error during reading Language.json file</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="52"/>
+        <location filename="../utils/gameTranslationUtils.py" line="55"/>
         <source>unknownFaction</source>
         <translation>Unknown Faction</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="114"/>
+        <location filename="../utils/gameTranslationUtils.py" line="117"/>
         <source>unknownInvasionLocTag</source>
         <translation>Unknown Invasion Location Tag</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="34"/>
+        <location filename="../utils/gameTranslationUtils.py" line="186"/>
         <source>errorFileSolNodes</source>
         <translation>Error during reading SolNodes.json file</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="126"/>
+        <source>unknownAccolyte</source>
+        <translation>Unkown Accolyte Name</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="135"/>
+        <source>unknownRegion</source>
+        <translation>Unknown Region</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="152"/>
+        <source>errorFileStarchart</source>
+        <translation>Error during reading starchart.txt file</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="175"/>
+        <source>noStarchartNode</source>
+        <translation>No Mission Type found for node</translation>
     </message>
 </context>
 <context>
@@ -321,7 +426,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="111"/>
+        <location filename="../components/common/Invasion.py" line="112"/>
         <source>invasionInit</source>
         <translation>Started on</translation>
     </message>
@@ -529,7 +634,7 @@
     <message>
         <location filename="../utils/timeUtils.py" line="83"/>
         <source>error_get_cetus_time</source>
-        <translation>Error duting calculation of time for Cetus</translation>
+        <translation>Error during calculation of time for Cetus</translation>
     </message>
     <message>
         <location filename="../utils/timeUtils.py" line="103"/>
@@ -540,17 +645,17 @@
 <context>
     <name>trayService</name>
     <message>
-        <location filename="../services/trayService.py" line="18"/>
+        <location filename="../services/trayService.py" line="17"/>
         <source>open</source>
         <translation>Open</translation>
     </message>
     <message>
-        <location filename="../services/trayService.py" line="21"/>
+        <location filename="../services/trayService.py" line="20"/>
         <source>hide</source>
         <translation>Hide</translation>
     </message>
     <message>
-        <location filename="../services/trayService.py" line="24"/>
+        <location filename="../services/trayService.py" line="23"/>
         <source>exit</source>
         <translation>Exit</translation>
     </message>
