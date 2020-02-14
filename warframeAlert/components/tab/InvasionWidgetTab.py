@@ -7,7 +7,7 @@ from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils, timeUtils
-from warframeAlert.utils.commonUtils import remove_widget
+from warframeAlert.utils.commonUtils import remove_widget, create_pixmap
 from warframeAlert.utils.gameTranslationUtils import get_node, get_faction, get_invasion_loctag
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.warframeUtils import parse_reward
@@ -188,21 +188,21 @@ class InvasionWidgetTab():
                 NotificationService.send_notification(
                     self.alerts['Invasions']['Grineer'][i].get_title(),
                     self.alerts['Invasions']['Grineer'][i].to_string(),
-                    None)
+                    create_pixmap(self.alerts['Invasions']['Grineer'][i].get_image()))
         for i in range(n_inv_c, len(self.alerts['Invasions']['Corpus'])):
             if (not self.alerts['Invasions']['Corpus'][i].is_completed()):
                 self.gridCInv.addLayout(self.alerts['Invasions']['Corpus'][i].InvasionBox, self.gridCInv.count(), 0)
                 NotificationService.send_notification(
                     self.alerts['Invasions']['Corpus'][i].get_title(),
                     self.alerts['Invasions']['Corpus'][i].to_string(),
-                    None)
+                    create_pixmap(self.alerts['Invasions']['Corpus'][i].get_image()))
         for i in range(n_inv_i, len(self.alerts['Invasions']['Infested'])):
             if (not self.alerts['Invasions']['Infested'][i].is_completed()):
                 self.gridIInv.addLayout(self.alerts['Invasions']['Infested'][i].InvasionBox, self.gridIInv.count(), 0)
                 NotificationService.send_notification(
                     self.alerts['Invasions']['Infested'][i].get_title(),
                     self.alerts['Invasions']['Infested'][i].to_string(),
-                    None)
+                    create_pixmap(self.alerts['Invasions']['Infested'][i].get_image()))
         if (len(self.alerts['Invasions']['Grineer']) > 0):
             self.NoInvG.hide()
         if (len(self.alerts['Invasions']['Corpus']) > 0):

@@ -2,7 +2,10 @@
 import sys
 import traceback
 
+from PyQt5 import QtGui
+
 from warframeAlert.services.translationService import translate
+from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
 
 
 def print_traceback(mess):
@@ -16,11 +19,24 @@ def get_last_item_with_backslash(text):
     return text[len(text) - 1]
 
 
+def create_pixmap(image_name):
+    image = QtGui.QPixmap()
+    image.load(get_cur_dir() + get_separator() + image_name)
+    return image
+
+
 def bool_to_yes_no(boolean):
     if (boolean):
         return translate("commonUtils", "yes")
     else:
         return translate("commonUtils", "no")
+
+
+def bool_to_int(boolean):
+    if (boolean):
+        return 1
+    else:
+        return 0
 
 
 def remove_widget(layout):

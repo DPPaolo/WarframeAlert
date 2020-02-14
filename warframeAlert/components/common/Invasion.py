@@ -24,6 +24,7 @@ class Invasion():
 
     def __init__(self, invasion_id, chain_id):
         self.completed = False
+        self.image = None
         self.invasion_id = invasion_id
         self.invasion_chain_id = chain_id
         self.InvDesc = QtWidgets.QLabel("N/D")
@@ -90,7 +91,7 @@ class Invasion():
         return self.invasion_id
 
     def get_title(self):
-        return self.InvDesc.text() + " " + self.InvStart.text() + " " + self.InvNode.text()
+        return self.InvDesc.text() + " " + self.InvNode.text()
 
     def to_string(self):
         name = self.InvAttacker.text() + " vs " + self.InvDefender.text() + "\n"
@@ -100,6 +101,9 @@ class Invasion():
             reward = self.InvRewardAtt.text() + " vs " + self.InvRewardDef.text()
 
         return name + reward
+
+    def get_image(self):
+        return self.image
 
     def set_invasion_data(self, mission, node, attacker_faction, defender_faction):
         self.InvNode.setText(mission + " " + node)
@@ -160,6 +164,7 @@ class Invasion():
                 img = get_image_path_from_export_manifest(attacker_reward_item)
             image_name = "images" + get_separator() + get_last_item_with_backslash(img)
             self.InvAttackerImg.set_image(image_name)
+            self.image = image_name
             self.InvAttackerImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
         else:
             self.InvAttackerImg.hide()
@@ -178,6 +183,8 @@ class Invasion():
             img = get_image_path_from_export_manifest(defender_reward_item)
         image_name = "images" + get_separator() + get_last_item_with_backslash(img)
         self.InvDefenderImg.set_image(image_name)
+        if (not self.image):
+            self.image = image_name
         self.InvDefenderImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
 
     def hide(self):

@@ -1,7 +1,7 @@
 # coding=utf-8
 import time
 
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -30,8 +30,8 @@ class NotificationService(QtCore.QThread):
             if (not len(self.notif_queue) == 0):
                 notify = self.notif_queue.pop(0)
                 try:
-                    if (not notify[2]):
-                        self.show_notif(notify[0], notify[1], notify[2])
+                    if (notify[2]):
+                        self.show_notif(notify[0], notify[1], QtGui.QIcon(notify[2]))
                     else:
                         self.show_notif(notify[0], notify[1], None)
                 except Exception as er:
