@@ -6,7 +6,7 @@ from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
-from warframeAlert.utils.commonUtils import remove_widget, print_traceback, bool_to_yes_no
+from warframeAlert.utils.commonUtils import remove_widget, print_traceback, bool_to_yes_no, create_pixmap
 from warframeAlert.utils.gameTranslationUtils import get_accolyte_name, get_node, get_region
 from warframeAlert.utils.logUtils import LogHandler
 
@@ -89,7 +89,7 @@ class AccolyteWidgetTab():
                 NotificationService.send_notification(
                     self.alerts['PersistentEnemies'][i].get_title(),
                     self.alerts['PersistentEnemies'][i].to_string(),
-                    None)
+                    create_pixmap(self.alerts['PersistentEnemies'][i].get_image()))
 
     def accolyte_not_available(self):
         for i in reversed(range(0, len(self.alerts['PersistentEnemies']))):

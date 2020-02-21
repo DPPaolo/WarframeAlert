@@ -82,11 +82,11 @@ class Accolyte():
             self.AccPer.setValue(0)
             self.AccPer.setToolTip(str(0) + "%")
         else:
-            self.AccPer.setValue(per*100)
-            self.AccPer.setToolTip(str(per*100) + "%")
+            self.AccPer.setValue(per * 100)
+            self.AccPer.setToolTip(str(per * 100) + "%")
         old_found_node = self.AccFound.text()
         self.AccFound.setText(translate("accolyt", "found?") + " " + discoved)
-        if (old_found_node != self.AccFound.text()):
+        if (old_found_node != "N/D" and old_found_node != self.AccFound.text()):
             change_detected = 1
         old_found_node = self.AccNode.text()
         if (discoved == translate("commonUtils", "no")):
@@ -101,9 +101,10 @@ class Accolyte():
                 self.AccMis.setText("")
             else:
                 self.AccMis.setText(get_mission_from_starchart(node, planet))
-        if (old_found_node != self.AccNode.text()):
+        if (old_found_node != "N/D" and old_found_node != self.AccNode.text()):
             change_detected = 1
         if (change_detected):
+
             NotificationService.send_notification(
                 self.get_title(),
                 self.to_string(),
@@ -131,6 +132,9 @@ class Accolyte():
             text = self.AccNode.text() + " " + self.AccMis.text() + "\n"
             text += translate("accolyt", "health") + ": " + str(self.AccPer.value()) + "%"
             return text
+
+    def get_image(self):
+        return self.acc_image
 
     def hide(self):
         self.AccImg.hide()

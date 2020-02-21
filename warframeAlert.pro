@@ -12,6 +12,7 @@ SOURCES      = test/test_translationService.py \
                warframeAlert/components/widget/RelayStationWidget.py \
                warframeAlert/components/widget/TwitchPromoWidget.py \
                warframeAlert/components/tab/AccolyteWidgetTab.py \
+               warframeAlert/components/tab/NewsWidgetTab.py \
                warframeAlert/components/tab/OtherWidgetTab.py \
                warframeAlert/components/tab/InvasionWidgetTab.py \
                warframeAlert/services/notificationService.py \

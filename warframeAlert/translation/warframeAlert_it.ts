@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -34,12 +33,12 @@
         <translation>Posizione Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="129"/>
+        <location filename="../components/common/Accolyte.py" line="130"/>
         <source>accolytDead</source>
         <translation>Accolito Morto</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="132"/>
+        <location filename="../components/common/Accolyte.py" line="133"/>
         <source>health</source>
         <translation>Vita Rimanente</translation>
     </message>
@@ -75,12 +74,12 @@
 <context>
     <name>commonUtils</name>
     <message>
-        <location filename="../utils/commonUtils.py" line="21"/>
+        <location filename="../utils/commonUtils.py" line="30"/>
         <source>yes</source>
         <translation>Si</translation>
     </message>
     <message>
-        <location filename="../utils/commonUtils.py" line="23"/>
+        <location filename="../utils/commonUtils.py" line="32"/>
         <source>no</source>
         <translation>No</translation>
     </message>
@@ -426,7 +425,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="112"/>
+        <location filename="../components/common/Invasion.py" line="116"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -523,6 +522,99 @@
     </message>
 </context>
 <context>
+    <name>newsWidgetTab</name>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="44"/>
+        <source>newsLabel</source>
+        <translation>News Gioco</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="45"/>
+        <source>contestLabel</source>
+        <translation>Contest e Altro</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="49"/>
+        <source>noNews</source>
+        <translation>Nessuna News Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="50"/>
+        <source>noContest</source>
+        <translation>Nessuna News Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="77"/>
+        <source>newsError</source>
+        <translation>Errore nelle News</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="190"/>
+        <source>version</source>
+        <translation>Versione</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="191"/>
+        <source>build</source>
+        <translation>Build</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="218"/>
+        <source>globalUpgradeError</source>
+        <translation>Errore nei global upgrade</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="252"/>
+        <source>globalUpgradeOperationUnknown</source>
+        <translation>Operazione Global Upgrade sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="287"/>
+        <source>newBooster!</source>
+        <translation>Nuovo Booster Attivato!</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="192"/>
+        <source>time</source>
+        <translation>Ultimo Aggiornamento</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="207"/>
+        <source>newNews!</source>
+        <translation>Nuova News Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="123"/>
+        <source>newsInit</source>
+        <translation>Apparso il</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="139"/>
+        <source>eventInit</source>
+        <translation>Evento inizia il</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="145"/>
+        <source>eventEnd</source>
+        <translation>Finisce il</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="147"/>
+        <source>newsSite</source>
+        <translation>Sito della News</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="151"/>
+        <source>priority</source>
+        <translation>Con Priorità</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="152"/>
+        <source>onlyMobile</source>
+        <translation>Solo per Mobile</translation>
+    </message>
+</context>
+<context>
     <name>notificationService</name>
     <message>
         <location filename="../services/notificationService.py" line="38"/>
@@ -553,37 +645,37 @@
         <translation>Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="56"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="57"/>
         <source>primeAccessUpdateError</source>
         <translation>Errore nel Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="93"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="94"/>
         <source>featureDojoUpdateError</source>
         <translation>Errore nei Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="101"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="102"/>
         <source>hubEventUpdateError</source>
         <translation>Errore negli Eventi Hub</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="85"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="86"/>
         <source>twitchPromoUpdateError</source>
         <translation>Errore nelle Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="64"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="65"/>
         <source>simarisUpdateError</source>
         <translation>Errore nei Bersagli di Simaris</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="71"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="72"/>
         <source>dailyDealsUpdateError</source>
         <translation>Errore negli Sconti Giornalieri</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="78"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="79"/>
         <source>relayStationUpdateError</source>
         <translation>Errore nelle Stazioni</translation>
     </message>

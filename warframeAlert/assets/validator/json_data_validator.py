@@ -57,6 +57,103 @@ all_json_schema = {
     },
 }
 
+default_schema = {
+    "type": "object",
+    "properties": {
+        "Default": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/???"},
+        }
+    },
+    "required": ["Default"],
+    "definitions": {
+        "????": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+            },
+            "required": [],
+        }
+    }
+}
+
+events_schema = {
+    "type": "object",
+    "properties": {
+        "Events": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/event"},
+        }
+    },
+    "required": ["Events"],
+    "definitions": {
+        "event": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Date": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EventStartDate": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EventEndDate": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EventLiveUrl": {"type": "string"},
+                "Prop": {"type": "string"},
+                "Priority": {"type": "boolean"},
+                "MobileOnly": {"type": "boolean"},
+                "ImageUrl": {"type": "string"},
+                "Messages": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "LanguageCode": {"type": "string"},
+                            "Message": {"type": "string"}
+                        }
+                    }
+                }
+            },
+            "required": ["_id", "Date", "Prop", "Priority", "MobileOnly", "Messages"],
+        }
+    }
+}
+
 persistent_enemies_schema = {
     "type": "object",
     "properties": {
