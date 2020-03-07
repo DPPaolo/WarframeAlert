@@ -18,12 +18,14 @@ def parse_reward(data):
         len_data = len(data['items'])
         for i in range(0, len_data):
             temp_rew += get_item_name(data['items'][i])
-            if (i+1 < len_data or len(data['countedItems']) > 0):
+            if (i+1 < len_data):
                 temp_rew += " + "
 
     if ('countedItems' in data):
         len_data = len(data['countedItems'])
         if (len_data > 0):
+            if ("items" in data and len(data['items']) > 0):
+                temp_rew += " + "
             for i in range(0, len_data):
                 temp_rew += str(data['countedItems'][i]['ItemCount']) + " x "
                 temp_rew += get_item_name(data['countedItems'][i]['ItemType'])
@@ -36,13 +38,16 @@ def parse_reward(data):
                 temp_rew += get_item_name(data['countedStoreItems'][i]['StoreItem'])
 
     if ('xp' in data):
-        temp_rew += " + " + str(data['xp']) + " " + translate("warframeUtils", "affinity")
+        if (data['xp'] != 0):
+            temp_rew += " + " + str(data['xp']) + " " + translate("warframeUtils", "affinity")
 
     if ('credits' in data):
-        if (temp_rew == ""):
-            temp_rew += str(data['credits']) + " " + translate("warframeUtils", "credits")
-        else:
-            temp_rew += " + " + str(data['credits']) + " " + translate("warframeUtils", "credits")
+        if (data['xp'] != 0):
+            if (temp_rew == ""):
+                temp_rew += str(data['credits']) + " " + translate("warframeUtils", "credits")
+            else:
+                temp_rew += " + " + str(data['credits']) + " " + translate("warframeUtils", "credits")
+
     return temp_rew
 
 

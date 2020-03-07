@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>accolyt</name>
     <message>
@@ -524,94 +525,99 @@
 <context>
     <name>newsWidgetTab</name>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="44"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="59"/>
         <source>newsLabel</source>
         <translation>News Gioco</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="45"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="60"/>
         <source>contestLabel</source>
         <translation>Contest e Altro</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="49"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
         <source>noNews</source>
         <translation>Nessuna News Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="50"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="65"/>
         <source>noContest</source>
         <translation>Nessuna News Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="77"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="92"/>
         <source>newsError</source>
         <translation>Errore nelle News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="190"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="198"/>
         <source>version</source>
         <translation>Versione</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="191"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="199"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="218"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="227"/>
         <source>globalUpgradeError</source>
         <translation>Errore nei global upgrade</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="252"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="260"/>
         <source>globalUpgradeOperationUnknown</source>
         <translation>Operazione Global Upgrade sconosciuta</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="287"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="294"/>
         <source>newBooster!</source>
         <translation>Nuovo Booster Attivato!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="192"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="200"/>
         <source>time</source>
         <translation>Ultimo Aggiornamento</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="207"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="216"/>
         <source>newNews!</source>
-        <translation>Nuova News Disponibile</translation>
+        <translation>Nuova News Disponibile!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="123"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="136"/>
         <source>newsInit</source>
         <translation>Apparso il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="139"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="152"/>
         <source>eventInit</source>
         <translation>Evento inizia il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="145"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="158"/>
         <source>eventEnd</source>
         <translation>Finisce il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="147"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="160"/>
         <source>newsSite</source>
         <translation>Sito della News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="151"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="163"/>
         <source>priority</source>
         <translation>Con Priorità</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="152"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
         <source>onlyMobile</source>
         <translation>Solo per Mobile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="202"/>
+        <source>resetServer</source>
+        <translation>Reset del server alle</translation>
     </message>
 </context>
 <context>

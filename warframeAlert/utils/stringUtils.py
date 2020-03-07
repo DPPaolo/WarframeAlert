@@ -14,5 +14,21 @@ def divide_for_n(message, num, divide="\n"):
     return data
 
 
+def divide_message(mess, dim_line=50):
+    space = -1
+    if (len(mess) > dim_line):
+        for i in range(0, len(mess)):
+            if (mess[i] == " "):
+                space = i
+            if (i >= dim_line):
+                if (space == -1):
+                    return mess[:dim_line] + "\n" + divide_message(mess[dim_line:], dim_line)
+                else:
+                    return mess[:space] + "\n" + divide_message(mess[space + 1:], dim_line)
+        return mess
+    else:
+        return mess
+
+
 def set_barred(text):
     return ''.join([u'\u0336{}'.format(c) for c in text])

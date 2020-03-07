@@ -11,9 +11,13 @@ def is_mac_os():
     return get_os_type() == "Darwin"
 
 
+def is_linux_os():
+    return get_os_type() == "Linux"
+
+
 def get_separator():
     sep = "\\"  # Windows default separator
-    if (is_mac_os()):  # the OS is a MacOs
+    if (is_mac_os() or is_linux_os()):  # the OS is a MacOs or Linux
         sep = "/"
     return sep
 

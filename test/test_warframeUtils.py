@@ -22,15 +22,45 @@ class TestWarframeUtils(unittest.TestCase):
     IMAGE_EXPORT_MANIFEST_FOUND = "/Lotus/Interface/Cards/Images/Stances/WhipCombo1a.jpeg"
     IMAGE_EXPORT_MANIFEST_UNKNOWN = "/Lotus/Tenno/Melee/MeleeTrees/WhipCmbOneMeleeTree"
     IMAGE_EXPORT_MANIFEST_NOT_FOUND = "/Lotus/Interface/Icons/Store/CorpusCreditCardHigh.png"
-    COUNTED_ITEMS = {"credits": 0,
-                     "xp": 0,
-                     "items": ["/Lotus/StoreItems/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG"],
-                     "countedItems": [{"ItemType": "/Lotus/Types/Items/Research/EnergyComponent", "ItemCount": 3}]}
-    COUNTED_ITEMS_TRANSLATED = "Opticor Vandal + 3 x Fieldron + 0 affinity + 0 credits"
+    REWARDS_COUNTED_ITEMS_ONLY = {'countedItems': [{'ItemType': '/Lotus/Types/Items/Research/EnergyComponent',
+                                                    'ItemCount': 3}]}
+    REWARDS_CREDITS_ONLY = {'credits': 3000}
+    REWARDS_ITEMS_ONLY = {'items': ['/Lotus/StoreItems/Weapons/Tenno/Pistols/DexFuris/DexFuris']}
+    REWARDS_ALMOUST_COMPLETE = {'credits': 0,
+                                'xp': 0,
+                                'items': ['/Lotus/StoreItems/Upgrades/Mods/DualSource/Shotgun/ShotgunMedicMod',
+                                          '/Lotus/StoreItems/Upgrades/Mods/DualSource/Rifle/SerratedRushMod'],
+                                'countedItems': []}
+    REWARDS_COMPLETE = {
+                    "credits": 0,
+                    "xp": 0,
+                    "items": ["/Lotus/StoreItems/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG"],
+                    "countedItems": [{"ItemType": "/Lotus/Types/Items/Research/EnergyComponent", "ItemCount": 3}]}
+    REWARDS_COUNTED_ITEMS_ONLY_TRANSLATED = "3 x Fieldron"
+    REWARDS_CREDITS_ONLY_TRANSLATED = "3000 credits"
+    REWARDS_ITEMS_ONLY_TRANSLATED = "Dex Furis"
+    REWARDS_ALMOUST_COMPLETE_TRANSLATED = "Amalgam Shotgun Spazz + Amalgam Serration"
+    REWARDS_COMPLETE_TRANSLATED = "Opticor Vandal + 3 x Fieldron"
 
-    def test_parse_reward(self):
-        res = parse_reward(self.COUNTED_ITEMS)
-        self.assertEqual(self.COUNTED_ITEMS_TRANSLATED, res)
+    def test_parse_reward_only_counted_complete(self):
+        res = parse_reward(self.REWARDS_COUNTED_ITEMS_ONLY)
+        self.assertEqual(self.REWARDS_COUNTED_ITEMS_ONLY_TRANSLATED, res)
+
+    def test_parse_reward_only_credits(self):
+        res = parse_reward(self.REWARDS_CREDITS_ONLY)
+        self.assertEqual(self.REWARDS_CREDITS_ONLY_TRANSLATED, res)
+
+    def test_parse_reward_only_items(self):
+        res = parse_reward(self.REWARDS_ITEMS_ONLY)
+        self.assertEqual(self.REWARDS_ITEMS_ONLY_TRANSLATED, res)
+
+    def test_parse_reward_almoust_complete(self):
+        res = parse_reward(self.REWARDS_ALMOUST_COMPLETE)
+        self.assertEqual(self.REWARDS_ALMOUST_COMPLETE_TRANSLATED, res)
+
+    def test_parse_reward_complete(self):
+        res = parse_reward(self.REWARDS_COMPLETE)
+        self.assertEqual(self.REWARDS_COMPLETE_TRANSLATED, res)
 
     def test_get_image_path_from_name_found(self):
         res = get_image_path_from_name(self.IMAGE_NAME)
