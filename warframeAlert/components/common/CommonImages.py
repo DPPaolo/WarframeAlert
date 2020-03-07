@@ -25,5 +25,8 @@ class CommonImages():
     def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, trasform=Qt.SmoothTransformation):
         self.image.setPixmap(self.pixmap.scaled(width, height, aspect_ratio, trasform))
 
+    def set_tooltip(self, tooltip):
+        self.image.setToolTip(tooltip)
+
     def hide(self):
         self.image.hide()

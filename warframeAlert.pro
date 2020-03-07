@@ -2,6 +2,7 @@ SOURCES      = test/test_translationService.py \
                warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/Countdown.py \
                warframeAlert/components/common/DailyDeals.py \
+               warframeAlert/components/common/GlobalUpgrade.py \
                warframeAlert/components/common/HubEvent.py \
                warframeAlert/components/common/Invasion.py \
                warframeAlert/components/common/InvasionNode.py \

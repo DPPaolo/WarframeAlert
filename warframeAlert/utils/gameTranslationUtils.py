@@ -127,6 +127,15 @@ def get_accolyte_name(name):
         return get_last_item_with_backslash(name)
 
 
+def get_upgrade_type(upgrade):
+    if (upgrade in warframeData.UPGRADE_TYPE):
+        return warframeData.UPGRADE_TYPE[upgrade][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
+        LogHandler.err(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
+        return upgrade
+
+
 def get_region(region):
     if (region in warframeData.REGION_MAP):
         return warframeData.REGION_MAP[int(region)][OptionsHandler.get_option("Language", str)]

@@ -3,7 +3,7 @@ import unittest
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.utils.gameTranslationUtils import get_node, get_enemy_name, get_simaris_target, get_item_name, \
-    get_faction, get_invasion_loctag, get_accolyte_name, get_region
+    get_faction, get_invasion_loctag, get_accolyte_name, get_region, get_upgrade_type
 
 
 class TestGameTranslationsUtils(unittest.TestCase):
@@ -20,6 +20,9 @@ class TestGameTranslationsUtils(unittest.TestCase):
     LOC_TAG_NAME_EN_TRANSLATED = "Corpus Siege"
     LOC_TAG_NAME_UNKNOWN = "/Lotus/Language/Menu/SentientsInvasion"
     LOC_TAG_NAME_NOT_FOUND = "SentientsInvasion"
+    UPGRADE_TYPE = "GAMEPLAY_PICKUP_AMOUNT"
+    UPGRADE_TYPE_IT = "Bonus Drop Risorse"
+    UPGRADE_TYPE_EN = "Resource Drop Chance"
 
     def test_get_node_it_found(self):
         res = get_node(self.NODE)
@@ -145,5 +148,15 @@ class TestGameTranslationsUtils(unittest.TestCase):
         OptionsHandler.set_option("Language", "en")
         res = get_region(4)
         self.assertEqual("Jupiter", res)
+        OptionsHandler.set_option("Language", "it")
+
+    def test_get_upgrade_type_it(self):
+        res = get_upgrade_type(self.UPGRADE_TYPE)
+        self.assertEqual(self.UPGRADE_TYPE_IT, res)
+
+    def test_get_upgrade_type_en(self):
+        OptionsHandler.set_option("Language", "en")
+        res = get_upgrade_type(self.UPGRADE_TYPE)
+        self.assertEqual(self.UPGRADE_TYPE_EN, res)
         OptionsHandler.set_option("Language", "it")
 

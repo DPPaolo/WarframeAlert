@@ -169,7 +169,7 @@
         <translation>Location Tag Invasione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="186"/>
+        <location filename="../utils/gameTranslationUtils.py" line="195"/>
         <source>errorFileSolNodes</source>
         <translation>Errore nella lettura del file SolNodes.json</translation>
     </message>
@@ -179,19 +179,24 @@
         <translation>Accolito Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="135"/>
+        <location filename="../utils/gameTranslationUtils.py" line="144"/>
         <source>unknownRegion</source>
         <translation>Regione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="152"/>
+        <location filename="../utils/gameTranslationUtils.py" line="161"/>
         <source>errorFileStarchart</source>
         <translation>Impossibile aprire il file starchart.txt</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="175"/>
+        <location filename="../utils/gameTranslationUtils.py" line="184"/>
         <source>noStarchartNode</source>
         <translation>Tipo Missione non trovata per il Nodo</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="135"/>
+        <source>unknownupgradeType</source>
+        <translation>Tipo Upgrade sconosciuto</translation>
     </message>
 </context>
 <context>
@@ -355,6 +360,19 @@
         <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
+    </message>
+</context>
+<context>
+    <name>globalUpgrade</name>
+    <message>
+        <location filename="../components/common/GlobalUpgrade.py" line="23"/>
+        <source>end</source>
+        <translation>Termina tra</translation>
+    </message>
+    <message>
+        <location filename="../components/common/GlobalUpgrade.py" line="48"/>
+        <source>init</source>
+        <translation>Iniziata il</translation>
     </message>
 </context>
 <context>
@@ -525,97 +543,92 @@
 <context>
     <name>newsWidgetTab</name>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="59"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="63"/>
         <source>newsLabel</source>
         <translation>News Gioco</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="60"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
         <source>contestLabel</source>
         <translation>Contest e Altro</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="68"/>
         <source>noNews</source>
         <translation>Nessuna News Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="65"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="69"/>
         <source>noContest</source>
         <translation>Nessuna News Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="92"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="96"/>
         <source>newsError</source>
         <translation>Errore nelle News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="198"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="202"/>
         <source>version</source>
         <translation>Versione</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="199"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="203"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="227"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="231"/>
         <source>globalUpgradeError</source>
         <translation>Errore nei global upgrade</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="260"/>
-        <source>globalUpgradeOperationUnknown</source>
-        <translation>Operazione Global Upgrade sconosciuta</translation>
-    </message>
-    <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="294"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="295"/>
         <source>newBooster!</source>
         <translation>Nuovo Booster Attivato!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="200"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
         <source>time</source>
         <translation>Ultimo Aggiornamento</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="216"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="220"/>
         <source>newNews!</source>
         <translation>Nuova News Disponibile!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="136"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="140"/>
         <source>newsInit</source>
         <translation>Apparso il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="152"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="156"/>
         <source>eventInit</source>
         <translation>Evento inizia il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="158"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="162"/>
         <source>eventEnd</source>
         <translation>Finisce il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="160"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
         <source>newsSite</source>
         <translation>Sito della News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="163"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="167"/>
         <source>priority</source>
         <translation>Con Priorità</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="168"/>
         <source>onlyMobile</source>
         <translation>Solo per Mobile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="202"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="206"/>
         <source>resetServer</source>
         <translation>Reset del server alle</translation>
     </message>
@@ -832,29 +845,34 @@
         <translation>Item casuale da</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="39"/>
+        <location filename="../utils/warframeUtils.py" line="42"/>
         <source>affinity</source>
         <translation>affinità</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="45"/>
+        <location filename="../utils/warframeUtils.py" line="49"/>
         <source>credits</source>
         <translation>crediti</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="88"/>
+        <location filename="../utils/warframeUtils.py" line="93"/>
         <source>weaponPartsNotFound</source>
         <translation>Parte Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="112"/>
+        <location filename="../utils/warframeUtils.py" line="117"/>
         <source>weaponTypeNotFound</source>
         <translation>Tipo Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="129"/>
+        <location filename="../utils/warframeUtils.py" line="143"/>
         <source>ExportManifestNotFound</source>
         <translation>ExportManifest.json non trovato</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="126"/>
+        <source>operationTypeNotFound</source>
+        <translation>Tipo Operazione non trovata</translation>
     </message>
 </context>
 </TS>

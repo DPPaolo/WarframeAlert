@@ -42,7 +42,7 @@ def parse_reward(data):
             temp_rew += " + " + str(data['xp']) + " " + translate("warframeUtils", "affinity")
 
     if ('credits' in data):
-        if (data['xp'] != 0):
+        if (data['credits'] != 0):
             if (temp_rew == ""):
                 temp_rew += str(data['credits']) + " " + translate("warframeUtils", "credits")
             else:
@@ -116,6 +116,15 @@ def get_weapon_type(part):
         print(translate("warframeUtils", "weaponTypeNotFound") + " " + part)
         LogHandler.err(translate("warframeUtils", "weaponTypeNotFound") + " " + part)
         return "Unknown"
+
+
+def get_operation_type(operation):
+    if (operation in warframeData.OPERATION_TYPE):
+        return warframeData.OPERATION_TYPE[operation]
+    else:
+        print(translate("warframeUtils", "operationTypeNotFound") + " " + operation)
+        LogHandler.err(translate("warframeUtils", "operationTypeNotFound") + " " + operation)
+        return operation
 
 
 def get_image_path_from_name(name):

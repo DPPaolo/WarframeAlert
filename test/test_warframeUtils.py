@@ -2,7 +2,7 @@
 import unittest
 
 from warframeAlert.utils.warframeUtils import get_image_path_from_name, get_weapon_part, get_weapon_type, \
-    get_image_path_from_export_manifest, parse_reward
+    get_image_path_from_export_manifest, parse_reward, get_operation_type
 
 
 class TestWarframeUtils(unittest.TestCase):
@@ -41,6 +41,16 @@ class TestWarframeUtils(unittest.TestCase):
     REWARDS_ITEMS_ONLY_TRANSLATED = "Dex Furis"
     REWARDS_ALMOUST_COMPLETE_TRANSLATED = "Amalgam Shotgun Spazz + Amalgam Serration"
     REWARDS_COMPLETE_TRANSLATED = "Opticor Vandal + 3 x Fieldron"
+    OPERATION_TYPE = "MULTIPLY"
+    OPERATION_TYPE_UNKNOWN = "ADD"
+
+    def test_get_operation_type(self):
+        res = get_operation_type(self.OPERATION_TYPE)
+        self.assertEqual(" x ", res)
+
+    def test_get_operation_type_UNKOWN(self):
+        res = get_operation_type(self.OPERATION_TYPE_UNKNOWN)
+        self.assertEqual(self.OPERATION_TYPE_UNKNOWN, res)
 
     def test_parse_reward_only_counted_complete(self):
         res = parse_reward(self.REWARDS_COUNTED_ITEMS_ONLY)
