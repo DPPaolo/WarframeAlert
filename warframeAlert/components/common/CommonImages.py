@@ -2,7 +2,8 @@
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 
-from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
+from warframeAlert.services import networkServices
+from warframeAlert.utils.fileUtils import get_cur_dir, get_separator, check_file
 
 
 class CommonImages():
@@ -11,18 +12,40 @@ class CommonImages():
         self.pixmap = QtGui.QPixmap()
         self.image = QtWidgets.QLabel()
         self.image.setPixmap(self.pixmap)
+        self.width = 50
+        self.height = 50
+        self.aspect_ratio = Qt.IgnoreAspectRatio
+        self.trasform = Qt.SmoothTransformation
+        self.downloader_thread = None
 
-    def set_image(self, url_image):
-        res = self.pixmap.load(get_cur_dir() + get_separator() + url_image)
-        if (not res):
-            # if (not check_file(image1)):
-            #    warframe.download_image_from_name(img1)
-            # TODO remove and handle this with the download
-            print("Immagine non valida : " + get_cur_dir() + url_image)
+    def set_image(self, path_image, url_download_image=None):
+        current_dir = get_cur_dir()
+        if ("assets" in path_image):
+            res = self.pixmap.load(current_dir + get_separator() + path_image)
+            if (res):
+                self.image.setPixmap(self.pixmap)
+                return True
+            return False
+        elif (not check_file(path_image)):
+            path = current_dir + get_separator() + path_image
+            url = url_download_image
+            self.downloader_thread = networkServices.Downloader(url, path)
+            self.downloader_thread.start()
+            self.downloader_thread.download_completed.connect(lambda: self.set_image(path_image, url_download_image))
+            return False
         else:
-            self.image.setPixmap(self.pixmap)
+            res = self.pixmap.load(current_dir + get_separator() + path_image)
+            if (res):
+                self.image.setPixmap(self.pixmap)
+                self.set_image_dimension(self.width, self.height, self.aspect_ratio, self.trasform)
+                return True
+            return False
 
     def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, trasform=Qt.SmoothTransformation):
+        self.width = width
+        self.height = height
+        self.aspect_ratio = aspect_ratio
+        self.trasform = trasform
         self.image.setPixmap(self.pixmap.scaled(width, height, aspect_ratio, trasform))
 
     def set_tooltip(self, tooltip):

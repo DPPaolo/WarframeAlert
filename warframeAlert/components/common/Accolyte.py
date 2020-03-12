@@ -1,6 +1,7 @@
 # coding=utf-8
 from PyQt5 import QtWidgets, QtGui, QtCore
 
+from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.translationService import translate
@@ -112,7 +113,7 @@ class Accolyte():
 
     def set_acc_image(self, url_image):
         image_name = "images" + get_separator() + get_last_item_with_backslash(url_image)
-        self.AccImg.set_image(image_name)
+        self.AccImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + url_image)
         self.AccImg.set_image_dimension(120, 120, QtCore.Qt.KeepAspectRatio)
         self.acc_image = image_name
 
