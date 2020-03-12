@@ -46,8 +46,7 @@ class OtherWidgetTab():
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
     def set_other_datas(self, version, mob_version, world_seed, force_logout_version):
-        self.generalWidget.set_other_datas(version, mob_version, world_seed)
-        print("aggiungere force_logout_version")
+        self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version)
 
     def update_prime_access(self, prime_access, prime_available):
         try:

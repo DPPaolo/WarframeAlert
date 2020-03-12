@@ -6,7 +6,7 @@ from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, create_pixmap
-from warframeAlert.utils.fileUtils import get_separator, get_cur_dir
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_mission_from_starchart
 
 

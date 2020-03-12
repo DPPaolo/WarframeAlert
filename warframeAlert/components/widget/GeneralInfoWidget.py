@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
+from warframeAlert.utils.commonUtils import bool_to_yes_no
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -20,6 +21,7 @@ class GeneralInfoWidget():
         self.EarthStatus = QtWidgets.QLabel(translate("generalWidget", "earthTime") + ": N/D")
         self.Version = QtWidgets.QLabel(translate("generalWidget", "fileVersion") + ": N/D")
         self.MobVersion = QtWidgets.QLabel(translate("generalWidget", "mobileFileVersion") + ": N/D")
+        self.ForceLogoutVersion = QtWidgets.QLabel(translate("generalWidget", "forceLogoutVersion") + ": N/D")
         self.WorldSeedLab = QtWidgets.QLabel(translate("generalWidget", "worldSeed") + ": ")
         self.WorldSeed = QtWidgets.QLabel("N/D")
         self.PrimeAccessLab = QtWidgets.QLabel(translate("generalWidget", "primeAccessState") + ": ")
@@ -38,14 +40,15 @@ class GeneralInfoWidget():
         self.gridOther.addWidget(self.EarthTime.TimeLab, 0, 1)
         self.gridOther.addWidget(self.Version, 1, 0)
         self.gridOther.addWidget(self.MobVersion, 1, 1)
-        self.gridOther.addWidget(self.WorldSeedLab, 2, 0)
-        self.gridOther.addWidget(self.WorldSeed, 3, 0, 1, 2)
-        self.gridOther.addWidget(self.PrimeAccessLab, 4, 0)
-        self.gridOther.addWidget(self.PrimeAccess, 4, 1)
-        self.gridOther.addWidget(self.PrimeVaultLab, 5, 0)
-        self.gridOther.addWidget(self.PrimeVault, 5, 1)
-        self.gridOther.addWidget(self.FeaturedDojoLab, 6, 0)
-        self.gridOther.addWidget(self.FeaturedDojo, 6, 1)
+        self.gridOther.addWidget(self.ForceLogoutVersion, 2, 0)
+        self.gridOther.addWidget(self.WorldSeedLab, 3, 0)
+        self.gridOther.addWidget(self.WorldSeed, 4, 0, 1, 2)
+        self.gridOther.addWidget(self.PrimeAccessLab, 5, 0)
+        self.gridOther.addWidget(self.PrimeAccess, 5, 1)
+        self.gridOther.addWidget(self.PrimeVaultLab, 6, 0)
+        self.gridOther.addWidget(self.PrimeVault, 6, 1)
+        self.gridOther.addWidget(self.FeaturedDojoLab, 7, 0)
+        self.gridOther.addWidget(self.FeaturedDojo, 7, 1)
 
         self.generalInfoWidget.setLayout(self.gridOther)
         self.gridOther.setAlignment(QtCore.Qt.AlignTop)
@@ -66,9 +69,13 @@ class GeneralInfoWidget():
         self.EarthTime.set_countdown(int(timeUtils.get_local_time()) + earth_time)
         self.EarthTime.start()
 
-    def set_other_datas(self, version, mob_version, world_seed):
-        self.Version.setText(translate("generalWidget", "fileVersion") + ": " + str(version))
-        self.MobVersion.setText(translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version))
+    def set_other_datas(self, version, mob_version, world_seed, force_logout):
+        version_text = translate("generalWidget", "fileVersion") + ": " + str(version)
+        mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
+        force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
+        self.Version.setText(version_text)
+        self.MobVersion.setText(mobile_version_text)
+        self.ForceLogoutVersion.setText(force_logout_text)
         w_seed = ""
         len_world_seed = len(world_seed)
         j = 0

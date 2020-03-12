@@ -31,7 +31,7 @@ class TestCommonUtils(unittest.TestCase):
         res = bool_to_int(True)
         self.assertEqual(1, res)
 
-    def test_bool_to_int_true(self):
+    def test_bool_to_int_false(self):
         res = bool_to_int(False)
         self.assertEqual(0, res)
 
