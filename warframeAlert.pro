@@ -16,6 +16,7 @@ SOURCES      = test/test_translationService.py \
                warframeAlert/components/tab/NewsWidgetTab.py \
                warframeAlert/components/tab/OtherWidgetTab.py \
                warframeAlert/components/tab/InvasionWidgetTab.py \
+               warframeAlert/services/networkService.py \
                warframeAlert/services/notificationService.py \
                warframeAlert/services/trayService.py \
                warframeAlert/utils/commonUtils.py \

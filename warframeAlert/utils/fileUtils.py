@@ -39,9 +39,10 @@ def get_asset_path():
 def check_file(name):
     d = get_cur_dir()
     path = d + get_separator() + name
-    images_path = d + get_separator() + "images" + get_separator() + name
+    image_path = d + get_separator() + "images" + get_separator() + name
+    news_path = d + get_separator() + "images" + get_separator() + "news" + name
     files_path = d + get_separator() + "data" + get_separator() + name
-    return os.path.exists(path) or os.path.exists(images_path) or os.path.exists(files_path)
+    return os.path.exists(path) or os.path.exists(image_path) or os.path.exists(files_path) or os.path.exists(news_path)
 
 
 def check_folder(name):
@@ -53,5 +54,7 @@ def create_default_folder():
     d = get_cur_dir()
     if (not check_folder("images")):
         os.makedirs(d + get_separator() + "images")
+    if (not check_folder("images" + get_separator() + "news")):
+        os.makedirs(d + get_separator() + "images" + get_separator() + "news")
     if (not check_folder("data")):
         os.makedirs(d + get_separator() + "data")

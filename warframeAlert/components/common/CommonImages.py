@@ -2,7 +2,7 @@
 from PyQt5 import QtWidgets, QtGui
 from PyQt5.QtCore import Qt
 
-from warframeAlert.services import networkServices
+from warframeAlert.services import networkService
 from warframeAlert.utils.fileUtils import get_cur_dir, get_separator, check_file
 
 
@@ -29,7 +29,7 @@ class CommonImages():
         elif (not check_file(path_image)):
             path = current_dir + get_separator() + path_image
             url = url_download_image
-            self.downloader_thread = networkServices.Downloader(url, path)
+            self.downloader_thread = networkService.Downloader(url, path)
             self.downloader_thread.start()
             self.downloader_thread.download_completed.connect(lambda: self.set_image(path_image, url_download_image))
             return False

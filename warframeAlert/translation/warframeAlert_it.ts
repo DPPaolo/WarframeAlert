@@ -4,52 +4,52 @@
 <context>
     <name>accolyt</name>
     <message>
-        <location filename="../components/common/Accolyte.py" line="71"/>
+        <location filename="../components/common/Accolyte.py" line="72"/>
         <source>level</source>
         <translation>Livello</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="72"/>
+        <location filename="../components/common/Accolyte.py" line="73"/>
         <source>damageFlee</source>
         <translation>Danno prima che scappi</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="78"/>
+        <location filename="../components/common/Accolyte.py" line="79"/>
         <source>init</source>
         <translation>Apparso il</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="88"/>
+        <location filename="../components/common/Accolyte.py" line="89"/>
         <source>found?</source>
         <translation>Scoperto?</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="94"/>
+        <location filename="../components/common/Accolyte.py" line="95"/>
         <source>founded</source>
         <translation>Trovato su</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="96"/>
+        <location filename="../components/common/Accolyte.py" line="97"/>
         <source>positionUnknown</source>
         <translation>Posizione Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="130"/>
+        <location filename="../components/common/Accolyte.py" line="131"/>
         <source>accolytDead</source>
         <translation>Accolito Morto</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="133"/>
+        <location filename="../components/common/Accolyte.py" line="134"/>
         <source>health</source>
         <translation>Vita Rimanente</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="70"/>
+        <location filename="../components/common/Accolyte.py" line="71"/>
         <source>inGameName</source>
         <translation>Codice Nome</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="73"/>
+        <location filename="../components/common/Accolyte.py" line="74"/>
         <source>useTicket?</source>
         <translation>Serve un biglietto per accedere?</translation>
     </message>
@@ -444,7 +444,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="116"/>
+        <location filename="../components/common/Invasion.py" line="117"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -452,17 +452,17 @@
 <context>
     <name>invasionNode</name>
     <message>
-        <location filename="../components/common/InvasionNode.py" line="12"/>
+        <location filename="../components/common/InvasionNode.py" line="13"/>
         <source>occupationDesc</source>
         <translation>Occupazione</translation>
     </message>
     <message>
-        <location filename="../components/common/InvasionNode.py" line="14"/>
+        <location filename="../components/common/InvasionNode.py" line="15"/>
         <source>occupationNode</source>
         <translation>Nodo Occupato</translation>
     </message>
     <message>
-        <location filename="../components/common/InvasionNode.py" line="16"/>
+        <location filename="../components/common/InvasionNode.py" line="17"/>
         <source>occupationTimer</source>
         <translation>Liberato tra</translation>
     </message>
@@ -541,6 +541,14 @@
     </message>
 </context>
 <context>
+    <name>networkService</name>
+    <message>
+        <location filename="../services/networkService.py" line="57"/>
+        <source>connectionError</source>
+        <translation>Errore di connessione durante il download del file</translation>
+    </message>
+</context>
+<context>
     <name>newsWidgetTab</name>
     <message>
         <location filename="../components/tab/NewsWidgetTab.py" line="63"/>
@@ -568,67 +576,67 @@
         <translation>Errore nelle News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="202"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
         <source>version</source>
         <translation>Versione</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="203"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="205"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="231"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="233"/>
         <source>globalUpgradeError</source>
         <translation>Errore nei global upgrade</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="295"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="297"/>
         <source>newBooster!</source>
         <translation>Nuovo Booster Attivato!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="206"/>
         <source>time</source>
         <translation>Ultimo Aggiornamento</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="220"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="222"/>
         <source>newNews!</source>
         <translation>Nuova News Disponibile!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="140"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="142"/>
         <source>newsInit</source>
         <translation>Apparso il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="156"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="158"/>
         <source>eventInit</source>
         <translation>Evento inizia il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="162"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
         <source>eventEnd</source>
         <translation>Finisce il</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="166"/>
         <source>newsSite</source>
         <translation>Sito della News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="167"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="169"/>
         <source>priority</source>
         <translation>Con Priorità</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="168"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="170"/>
         <source>onlyMobile</source>
         <translation>Solo per Mobile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="206"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="208"/>
         <source>resetServer</source>
         <translation>Reset del server alle</translation>
     </message>
