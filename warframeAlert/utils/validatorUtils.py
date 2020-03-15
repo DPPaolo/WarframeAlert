@@ -9,6 +9,7 @@ from warframeAlert.assets.validator.json_data_validator import *
 def check_json_data(json_data):
     validate_all_json(json_data)
     validate_daily_deals(json_data['DailyDeals'])
+    validate_global_upgrades(json_data['GlobalUpgrades'])
     validate_events(json_data['Events'])
     validate_featured_guilds(json_data['FeaturedGuilds'])
     validate_hub_events(json_data['HubEvents'])
@@ -31,6 +32,10 @@ def validate_all_json(json_data):
 
 def validate_daily_deals(json_data):
     validate(instance={'DailyDeals': json_data}, schema=daily_deals_schema)
+
+
+def validate_global_upgrades(json_data):
+    validate(instance={'GlobalUpgrades': json_data}, schema=global_upgrades_schema)
 
 
 def validate_events(json_data):

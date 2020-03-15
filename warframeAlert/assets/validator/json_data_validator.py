@@ -57,6 +57,7 @@ all_json_schema = {
     },
 }
 
+#TODO: Remove when all validation is completed
 default_schema = {
     "type": "object",
     "properties": {
@@ -73,6 +74,66 @@ default_schema = {
             "properties": {
             },
             "required": [],
+        }
+    }
+}
+
+global_upgrades_schema = {
+    "type": "object",
+    "properties": {
+        "GlobalUpgrades": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/global_upgades"},
+        }
+    },
+    "required": ["GlobalUpgrades"],
+    "definitions": {
+        "global_upgades": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "ExpiryDate": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "OperationType": {"type": "string"},
+                "UpgradeType": {"type": "string"},
+                "Value": {"type": "integer"},
+                "LocalizeTag": {"type": "string"},
+                "LocalizeDescTag": {"type": "string"},
+                "ValidType": {"type": "string"},
+                "Nodes": {
+                    "type": "array",
+                    "items": {"type": "string"}
+                },
+            },
+            "required": ["_id", "Activation", "ExpiryDate", "OperationType", "UpgradeType", "Value"],
         }
     }
 }
