@@ -64,6 +64,9 @@ class Countdown(QThread):
     def set_alignment(self, alignment):
         self.TimeLab.setAlignment(alignment)
 
+    def set_tooltip(self, text):
+        self.TimeLab.setToolTip(text)
+
     def start_timer(self):
         self.stop = 0
 
