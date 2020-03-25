@@ -29,8 +29,11 @@ class AlertWidget():
     def get_widget(self):
         return self.AllerteWidget
 
+    def get_lenght(self):
+        return len(self.alerts['Alerts'])
+
     def parse_alert_data(self, data):
-        self.reset_alert()
+        self.reset_alerts()
         n_alert = len(self.alerts['Alerts'])
         for alert in data:
             try:
@@ -78,9 +81,9 @@ class AlertWidget():
                         self.alerts['Alerts'].append(temp)
                     del temp
 
-        self.add_allerte(n_alert)
+        self.add_alerts(n_alert)
 
-    def add_allerte(self, n_alert):
+    def add_alerts(self, n_alert):
         for i in range(n_alert, len(self.alerts['Alerts'])):
             if (not self.alerts['Alerts'][i].is_expired()):
                 self.gridAllerte.addLayout(self.alerts['Alerts'][i].AlertBox, self.gridAllerte.count(), 0)
@@ -91,7 +94,7 @@ class AlertWidget():
         if (len(self.alerts['Alerts']) > 0):
             self.NoAlert.hide()
 
-    def reset_alert(self):
+    def reset_alerts(self):
         self.NoAlert.show()
         canc = []
         for i in range(0, len(self.alerts['Alerts'])):

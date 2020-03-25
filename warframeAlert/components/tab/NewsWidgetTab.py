@@ -187,9 +187,8 @@ class NewsWidgetTab():
         self.add_news(n_news, n_contest)
         self.reset_news()
 
-    def update_news_info(self, build_label, game_date, game_time):
+    def update_news_info(self, build_label, game_time):
         translated_time = timeUtils.get_time(str(game_time * 1000))
-        translated_date_time = timeUtils.get_time(str(game_date * 1000))
         if (OptionsHandler.get_option("Update/Console") == 0):
             console = "PC"
         elif (OptionsHandler.get_option("Update/Console") == 1):
@@ -205,7 +204,6 @@ class NewsWidgetTab():
         news_text += translate("newsWidgetTab", "build") + ": " + build_label + "\t"
         news_text += translate("newsWidgetTab", "time") + ": " + translated_time
         self.NewsLabel.setText(news_text)
-        self.NewsLabel.setToolTip(translate("newsWidgetTab", "resetServer") + ": " + translated_date_time)
 
     def add_news(self, n_news, n_news2):
         for i in range(n_news, len(self.alerts['Events']['News'])):

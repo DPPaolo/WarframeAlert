@@ -118,9 +118,52 @@
         <translation>Nessuna Allerta Presente</translation>
     </message>
     <message>
-        <location filename="../components/widget/AlertWidget.py" line="58"/>
+        <location filename="../components/widget/AlertWidget.py" line="61"/>
         <source>end</source>
         <translation>Scade tra</translation>
+    </message>
+</context>
+<context>
+    <name>clanEvent</name>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="14"/>
+        <source>clanScore</source>
+        <translation>Punteggio richiesto per i clan</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="15"/>
+        <source>solo</source>
+        <translation>Solo</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="16"/>
+        <source>ghost</source>
+        <translation>Fantasma</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="17"/>
+        <source>shadow</source>
+        <translation>Ombra</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="18"/>
+        <source>storm</source>
+        <translation>Tempesta</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="19"/>
+        <source>mountain</source>
+        <translation>Montagna</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="20"/>
+        <source>moon</source>
+        <translation>Luna</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ClanEvent.py" line="68"/>
+        <source>unlockScore</source>
+        <translation>Raggiunto il punteggio il clan sblocca</translation>
     </message>
 </context>
 <context>
@@ -180,6 +223,69 @@
         <location filename="../components/common/DailyDeals.py" line="57"/>
         <source>start</source>
         <translation>Iniziato il</translation>
+    </message>
+</context>
+<context>
+    <name>eventsWidget</name>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="94"/>
+        <source>alertError</source>
+        <translation>Errore nelle Allerte</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="105"/>
+        <source>eventsError</source>
+        <translation>Errore negli Eventi</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="138"/>
+        <source>newEvent</source>
+        <translation>Nuovo Evento Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="142"/>
+        <source>newRazorbackEvent</source>
+        <translation>Attacco Razorback</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="144"/>
+        <source>newFomorianEvent</source>
+        <translation>Invasione Fomorian</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="147"/>
+        <source>newCetusEvent</source>
+        <translation>Nuovo Evento su Cetus</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="150"/>
+        <source>newRecostructionEvent</source>
+        <translation>Nuova Stazione da Ricostruire</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="172"/>
+        <source>alerts</source>
+        <translation>Allerte</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="177"/>
+        <source>genericEvent</source>
+        <translation>Allerte Tattiche</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="178"/>
+        <source>fomorian</source>
+        <translation>Razorback e Fomorian</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="179"/>
+        <source>ghoul</source>
+        <translation>Ghoul</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="180"/>
+        <source>recostruction</source>
+        <translation>Ricostruzione Stazioni</translation>
     </message>
 </context>
 <context>
@@ -632,32 +738,32 @@
         <translation>Errore nelle News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="203"/>
         <source>version</source>
         <translation>Versione</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="205"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="233"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="231"/>
         <source>globalUpgradeError</source>
         <translation>Errore nei global upgrade</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="297"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="295"/>
         <source>newBooster!</source>
         <translation>Nuovo Booster Attivato!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="206"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="205"/>
         <source>time</source>
         <translation>Ultimo Aggiornamento</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="222"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="220"/>
         <source>newNews!</source>
         <translation>Nuova News Disponibile!</translation>
     </message>
@@ -690,11 +796,6 @@
         <location filename="../components/tab/NewsWidgetTab.py" line="170"/>
         <source>onlyMobile</source>
         <translation>Solo per Mobile</translation>
-    </message>
-    <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="208"/>
-        <source>resetServer</source>
-        <translation>Reset del server alle</translation>
     </message>
 </context>
 <context>
@@ -779,6 +880,24 @@
         <location filename="../components/widget/RelayStationWidget.py" line="27"/>
         <source>None</source>
         <translation>Nessuno</translation>
+    </message>
+</context>
+<context>
+    <name>scoreEvent</name>
+    <message>
+        <location filename="../components/common/ScoreEvent.py" line="12"/>
+        <source>noEvent</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ScoreEvent.py" line="14"/>
+        <source>globalScore</source>
+        <translation>Punteggio Globale</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ScoreEvent.py" line="16"/>
+        <source>bestScore</source>
+        <translation>Punteggio Migliore</translation>
     </message>
 </context>
 <context>

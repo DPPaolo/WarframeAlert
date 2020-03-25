@@ -8,7 +8,7 @@ from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
-from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler, LOG_FILE
 from warframeAlert.utils.warframeUtils import get_image_path_from_export_manifest
 
@@ -141,7 +141,6 @@ class Alert():
         return self.AlertRew.text()
 
     def is_expired(self):
-        return False
         return (int(self.AlertTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
     def is_hided(self):
