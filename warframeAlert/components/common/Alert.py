@@ -96,6 +96,10 @@ class Alert():
         self.AlertWave.setText(wave)
         self.AlertLoc.setText(translate("alert", "map") + ": " + loc)
 
+    def set_alert_extra_data(self, difficulty, enemy_spec):
+        self.AlertLevel.setToolTip(translate("alert", "difficulty") + ": " + str(difficulty))
+        self.AlertLoc.setToolTip(translate("alert", "enemy_type") + ": " + get_last_item_with_backslash(enemy_spec))
+
     def get_title(self):
         return self.AlertNode.text() + " " + self.AlertPlanet.text()
 

@@ -95,19 +95,29 @@
         <translation>Map</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="120"/>
+        <location filename="../components/common/Alert.py" line="124"/>
         <source>hidedAlert</source>
         <translation>Alert hided with ID</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="116"/>
+        <location filename="../components/common/Alert.py" line="120"/>
         <source>unlock</source>
         <translation>Unlocked for everyone</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="110"/>
+        <location filename="../components/common/Alert.py" line="114"/>
         <source>init</source>
         <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Alert.py" line="100"/>
+        <source>difficulty</source>
+        <translation>Difficulty</translation>
+    </message>
+    <message>
+        <location filename="../components/common/Alert.py" line="101"/>
+        <source>enemy_type</source>
+        <translation>Type of enemies that you encounter</translation>
     </message>
 </context>
 <context>
@@ -126,42 +136,42 @@
 <context>
     <name>clanEvent</name>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="14"/>
+        <location filename="../components/common/ClanEvent.py" line="16"/>
         <source>clanScore</source>
         <translation>Score required for clans</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="15"/>
+        <location filename="../components/common/ClanEvent.py" line="17"/>
         <source>solo</source>
         <translation>Solo</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="16"/>
+        <location filename="../components/common/ClanEvent.py" line="18"/>
         <source>ghost</source>
         <translation>Ghost</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="17"/>
+        <location filename="../components/common/ClanEvent.py" line="19"/>
         <source>shadow</source>
         <translation>Shadow</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="18"/>
+        <location filename="../components/common/ClanEvent.py" line="20"/>
         <source>storm</source>
         <translation>Storm</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="19"/>
+        <location filename="../components/common/ClanEvent.py" line="21"/>
         <source>mountain</source>
         <translation>Mountain</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="20"/>
+        <location filename="../components/common/ClanEvent.py" line="22"/>
         <source>moon</source>
         <translation>Moon</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="68"/>
+        <location filename="../components/common/ClanEvent.py" line="70"/>
         <source>unlockScore</source>
         <translation>With the score the clan unlock</translation>
     </message>
@@ -326,7 +336,7 @@
         <translation>Unknown Invasion Location Tag</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="195"/>
+        <location filename="../utils/gameTranslationUtils.py" line="225"/>
         <source>errorFileSolNodes</source>
         <translation>Error during reading SolNodes.json file</translation>
     </message>
@@ -341,12 +351,12 @@
         <translation>Unknown Region</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="161"/>
+        <location filename="../utils/gameTranslationUtils.py" line="191"/>
         <source>errorFileStarchart</source>
         <translation>Error during reading starchart.txt file</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="184"/>
+        <location filename="../utils/gameTranslationUtils.py" line="214"/>
         <source>noStarchartNode</source>
         <translation>No Mission Type found for node</translation>
     </message>
@@ -354,6 +364,26 @@
         <location filename="../utils/gameTranslationUtils.py" line="135"/>
         <source>unknownupgradeType</source>
         <translation>Unkown Upgrade Type</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="156"/>
+        <source>unknownMissionType</source>
+        <translation>Unkown Mission Type</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="242"/>
+        <source>unknownMapType</source>
+        <translation>Unknown Map Type</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="165"/>
+        <source>unknownAlertInfo</source>
+        <translation>Unknown Alert Info</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="174"/>
+        <source>unknownWeaponRestriction</source>
+        <translation>Unknown Weapon Restriction</translation>
     </message>
 </context>
 <context>
@@ -906,6 +936,64 @@
         <location filename="../components/common/SimarisTarget.py" line="13"/>
         <source>actualSimarisTarget</source>
         <translation>Actual Simaris Target</translation>
+    </message>
+</context>
+<context>
+    <name>specialAlert</name>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="99"/>
+        <source>minutes</source>
+        <translation>Minutes</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="101"/>
+        <source>waves</source>
+        <translation>Waves</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="104"/>
+        <source>terminal</source>
+        <translation>Terminal</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="106"/>
+        <source>terminals</source>
+        <translation>Terminals</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <source>rounds</source>
+        <translation>Rounds</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <source>pipe</source>
+        <translation>Conduits</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="114"/>
+        <source>unkownWaveType</source>
+        <translation>maxWaveNum not found for the mission type</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="45"/>
+        <source>requiredItem</source>
+        <translation>Required Item</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="46"/>
+        <source>itemConsumed</source>
+        <translation>Used</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="47"/>
+        <source>itemNotConsumed</source>
+        <translation>Not Used</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="48"/>
+        <source>restriction</source>
+        <translation>Restriction</translation>
     </message>
 </context>
 <context>

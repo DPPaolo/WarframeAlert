@@ -145,6 +145,36 @@ def get_region(region):
         return str(region)
 
 
+def get_mission_type(mission):
+    mission = mission.replace("\n", "")
+    if (mission in warframeData.MISSION_TYPE):
+        return warframeData.MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)]
+    elif (mission == ""):
+        return ""
+    else:
+        print(translate("gameTranslation", "unknownMissionType") + ": " + mission)
+        LogHandler.err(translate("gameTranslation", "unknownMissionType") + ": " + mission)
+        return mission
+
+
+def get_alert_info(alert_info):
+    if (alert_info in warframeData.ALERT_INFO):
+        return warframeData.ALERT_INFO[alert_info][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownAlertInfo") + ": " + alert_info)
+        LogHandler.err(translate("gameTranslation", "unknownAlertInfo") + ": " + alert_info)
+        return get_last_item_with_backslash(alert_info)
+
+
+def get_alert_weapon_restriction(weapon):
+    if (weapon in warframeData.ALERT_WEAPON_RESTRICTION):
+        return warframeData.ALERT_WEAPON_RESTRICTION[weapon][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownWeaponRestriction") + ": " + weapon)
+        LogHandler.err(translate("gameTranslation", "unknownWeaponRestriction") + ": " + weapon)
+        return get_last_item_with_backslash(weapon)
+
+
 def get_mission_from_starchart(node, planet):
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_mission_from_starchart_it(node, planet)
@@ -201,3 +231,13 @@ def get_mission_from_starchart_en(node):
         if (name == node):
             return json_data[elem]['type']
     return ""
+
+
+def get_map_type(map_type):
+    for maps in warframeData.MAP_TYPE:
+        if (maps in map_type):
+            return warframeData.MAP_TYPE[maps][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownMapType") + ": " + ": " + map_type)
+        LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + map_type)
+        return get_last_item_with_backslash(map_type)
