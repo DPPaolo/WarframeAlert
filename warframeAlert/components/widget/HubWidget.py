@@ -34,15 +34,12 @@ class HubWidget:
         n_hub = len(self.data['HubEvents'])
         if (json_data):
             for hub in json_data:
-                try:
-                    fin = hub['Expiry']['$date']['$numberLong']
-                except KeyError:
-                    fin = str((int(timeUtils.get_local_time()) + 3600) * 1000)
+                end = hub['Expiry']['$date']['$numberLong']
                 try:
                     tag = hub['Tag']
                 except KeyError:
                     tag = translate("hubEvent", "eventNoName")
-                remaining_time = int(fin[:10]) - int(timeUtils.get_local_time())
+                remaining_time = int(end[:10]) - int(timeUtils.get_local_time())
                 if (remaining_time > 0):
                     found = 0
                     for hub_event in self.data['HubEvents']:

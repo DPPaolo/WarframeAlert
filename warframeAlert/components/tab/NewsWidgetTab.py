@@ -101,10 +101,7 @@ class NewsWidgetTab():
         n_contest = len(self.alerts['Events']['Contest'])
         for news in data:
             text = ""
-            try:
-                news_id = news['_id']['$oid']
-            except KeyError:
-                news_id = news['_id']['$id']
+            news_id = news['_id']['$oid']
             forum = news['Prop']
             message_it = message_en = 0
             for i in range(0, len(news['Messages'])):

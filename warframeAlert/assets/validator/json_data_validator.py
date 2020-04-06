@@ -14,7 +14,6 @@ all_json_schema = {
                 "BuildLabel": {"type": "string"},
                 "ConstructionProjects": {"type": "array"},
                 "DailyDeals": {"type": "array"},
-                "Date": {"type": "integer"},
                 "Events": {"type": "array"},
                 "FeaturedGuilds": {"type": "array"},
                 "FlashSales": {"type": "array"},
@@ -44,8 +43,7 @@ all_json_schema = {
                 "WorldSeed": {"type": "string"}
             },
             "required": ["ActiveMissions", "Alerts", "BadlandNodes", "BuildLabel", "ConstructionProjects",
-                         "DailyDeals",
-                         "Date", "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion",
+                         "DailyDeals", "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion",
                          "GlobalUpgrades",
                          "Goals", "HubEvents", "Invasions", "LibraryInfo", "MobileVersion", "NodeOverrides",
                          "PVPActiveTournaments", "PVPAlternativeModes", "PVPChallengeInstances",
@@ -57,7 +55,7 @@ all_json_schema = {
     },
 }
 
-#TODO: Remove when all validation is completed
+# TODO: Remove when all validation is completed
 default_schema = {
     "type": "object",
     "properties": {

@@ -2,9 +2,6 @@
 from jsonschema import validate
 from warframeAlert.assets.validator.json_data_validator import *
 
-# jsonschema.exceptions.ValidationError – is invalid
-# jsonschema.exceptions.SchemaError – is invalid
-
 
 def check_json_data(json_data):
     validate_all_json(json_data)

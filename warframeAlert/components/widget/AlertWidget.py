@@ -36,17 +36,9 @@ class AlertWidget():
         self.reset_alerts()
         n_alert = len(self.alerts['Alerts'])
         for alert in data:
-            try:
-                alert_id = alert['_id']['$oid']
-            except KeyError:
-                alert_id = str(timeUtils.get_local_time())
-            try:
-                init = alert['Activation']['$date']['$numberLong']
-                end = alert['Expiry']['$date']['$numberLong']
-            except KeyError:
-                init = str((int(timeUtils.get_local_time())) * 1000)
-                end = str((int(timeUtils.get_local_time()) + 3600) * 1000)
-
+            alert_id = alert['_id']['$oid']
+            init = alert['Activation']['$date']['$numberLong']
+            end = alert['Expiry']['$date']['$numberLong']
             tempo = int(end[:10]) - int(timeUtils.get_local_time())
             if (tempo < 0):
                 found = 0

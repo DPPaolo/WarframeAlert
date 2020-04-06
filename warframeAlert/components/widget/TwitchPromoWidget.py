@@ -36,27 +36,23 @@ class TwitchPromoWidget():
             n_promo = len(self.data['TwitchPromos'])
             for promo in twitch_data:
                 streams = []
-                try:
-                    init = timeUtils.get_time(promo['startDate']['$date']['$numberLong'])
-                    end = promo['endDate']['$date']['$numberLong']
-                except KeyError:
-                    init = str((int(timeUtils.get_local_time())) * 1000)
-                    end = str((int(timeUtils.get_local_time()) + 3600) * 1000)
+                init = timeUtils.get_time(promo['startDate']['$date']['$numberLong'])
+                end = promo['endDate']['$date']['$numberLong']
 
                 achievement = promo['achievement']
                 agent_types = promo['agentTypes']
                 spawn = promo['spawnChance']
                 cooldown = promo['cooldown']
 
-                tempo = int(end[:10]) - int(timeUtils.get_local_time())
-                if (tempo > 0):
-                    trovato = 0
+                remaining_time = int(end[:10]) - int(timeUtils.get_local_time())
+                if (remaining_time > 0):
+                    found = 0
 
                     for twitch in self.data['TwitchPromos']:
                         if (twitch.get_iniz() == init):
-                            trovato = 1
+                            found = 1
 
-                    if (trovato == 0):
+                    if (found == 0):
                         twitch_type = promo['type']
                         if ('streamers' in promo):
                             for stream in promo['streamers']:

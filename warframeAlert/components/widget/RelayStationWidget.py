@@ -52,14 +52,10 @@ class RelayStationWidget:
     def parse_daily_deals(self, daily_deals_data):
         if (daily_deals_data):
             for deal in daily_deals_data:
-                try:
-                    init = deal['Activation']['$date']['$numberLong']
-                    end = deal['Expiry']['$date']['$numberLong']
-                except KeyError:
-                    init = str((int(timeUtils.get_local_time())) * 1000)
-                    end = str((int(timeUtils.get_local_time()) + 3600) * 1000)
-                tempo = int(end[:10]) - int(timeUtils.get_local_time())
-                if (tempo >= 0 or tempo != translate("timeUtils", "Timed Out")):
+                init = deal['Activation']['$date']['$numberLong']
+                end = deal['Expiry']['$date']['$numberLong']
+                remaining_time = int(end[:10]) - int(timeUtils.get_local_time())
+                if (remaining_time >= 0 or remaining_time != translate("timeUtils", "Timed Out")):
                     q_sold = deal['AmountSold']
                     q_total = deal['AmountTotal']
                     sale = deal['Discount']

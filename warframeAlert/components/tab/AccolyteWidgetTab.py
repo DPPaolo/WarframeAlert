@@ -43,10 +43,7 @@ class AccolyteWidgetTab():
     def parse_accolyte(self, data):
         n_acc = len(self.alerts['PersistentEnemies'])
         for acc in data:
-            try:
-                acc_id = acc['_id']['$oid']
-            except KeyError:
-                acc_id = acc['_id']['$id']
+            acc_id = acc['_id']['$oid']
             try:
                 region = get_region(acc['Region'])
             except KeyError:

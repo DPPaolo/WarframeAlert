@@ -122,10 +122,7 @@ class InvasionWidgetTab():
         n_inv_c = len(self.alerts['Invasions']['Corpus'])
         n_inv_i = len(self.alerts['Invasions']['Infested'])
         for invasion in data:
-            try:
-                invasion_id = invasion['_id']['$oid']
-            except KeyError:
-                invasion_id = invasion['_id']['$id']
+            invasion_id = invasion['_id']['$oid']
             completed = invasion['Completed']
             count = invasion['Count']
             goal = invasion['Goal']
@@ -143,10 +140,7 @@ class InvasionWidgetTab():
                     inv.set_completed(completed)
 
             if (found == 0):
-                try:
-                    init = invasion['Activation']['$date']['$numberLong']
-                except KeyError:
-                    init = str((int(timeUtils.get_local_time())) * 1000)
+                init = invasion['Activation']['$date']['$numberLong']
                 chain_id = ""
                 if ('ChainID' in invasion):
                     chain_id = invasion["ChainID"]
