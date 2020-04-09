@@ -57,7 +57,7 @@
 <context>
     <name>accolyteWidgetTab</name>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="53"/>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="50"/>
         <source>noRegion</source>
         <translation>None</translation>
     </message>
@@ -67,7 +67,7 @@
         <translation>Error during parsing accolytes</translation>
     </message>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="55"/>
+        <location filename="../components/tab/AccolyteWidgetTab.py" line="52"/>
         <source>noDiscovered</source>
         <translation>Not discovered yet</translation>
     </message>
@@ -95,17 +95,17 @@
         <translation>Map</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="124"/>
+        <location filename="../components/common/Alert.py" line="127"/>
         <source>hidedAlert</source>
         <translation>Alert hided with ID</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="120"/>
+        <location filename="../components/common/Alert.py" line="123"/>
         <source>unlock</source>
         <translation>Unlocked for everyone</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="114"/>
+        <location filename="../components/common/Alert.py" line="117"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
@@ -119,6 +119,11 @@
         <source>enemy_type</source>
         <translation>Type of enemies that you encounter</translation>
     </message>
+    <message>
+        <location filename="../components/common/Alert.py" line="103"/>
+        <source>extra_enemy_type</source>
+        <translation>Type of extra enemies that you encounter</translation>
+    </message>
 </context>
 <context>
     <name>alertWidget</name>
@@ -128,7 +133,7 @@
         <translation>No available alert</translation>
     </message>
     <message>
-        <location filename="../components/widget/AlertWidget.py" line="61"/>
+        <location filename="../components/widget/AlertWidget.py" line="53"/>
         <source>end</source>
         <translation>Expires in</translation>
     </message>
@@ -238,62 +243,62 @@
 <context>
     <name>eventsWidget</name>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="94"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="97"/>
         <source>alertError</source>
         <translation>Error on the alert</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="105"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="108"/>
         <source>eventsError</source>
         <translation>Error on the events</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="138"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="134"/>
         <source>newEvent</source>
         <translation>New Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="142"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="141"/>
         <source>newRazorbackEvent</source>
         <translation>Razorback Attack</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="144"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="143"/>
         <source>newFomorianEvent</source>
         <translation>Fomorian Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="147"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="146"/>
         <source>newCetusEvent</source>
         <translation>New Event on Cetus</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="150"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="149"/>
         <source>newRecostructionEvent</source>
         <translation>New Relay Recostruction Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="172"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="171"/>
         <source>alerts</source>
         <translation>Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="177"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="176"/>
         <source>genericEvent</source>
         <translation>Tactical Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="178"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="177"/>
         <source>fomorian</source>
         <translation>Razorback and Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="179"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="178"/>
         <source>ghoul</source>
         <translation>Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="180"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="179"/>
         <source>recostruction</source>
         <translation>Relay Recostruction</translation>
     </message>
@@ -610,17 +615,17 @@
         <translation>seconds</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="88"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="84"/>
         <source>none</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="../components/widget/HubWidget.py" line="44"/>
+        <location filename="../components/widget/HubWidget.py" line="41"/>
         <source>eventNoName</source>
         <translation>No Name Event</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="81"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="77"/>
         <source>event</source>
         <translation>Event on</translation>
     </message>
@@ -717,17 +722,17 @@
         <translation>Error during parsing of invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="236"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="230"/>
         <source>nodeOverrideUpdateError</source>
         <translation>Error during parsing Node Overrides</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="297"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="291"/>
         <source>invasionProjectUpdateError</source>
         <translation>Error during parsing Invasion Project</translation>
     </message>
     <message>
-        <location filename="../components/tab/InvasionWidgetTab.py" line="306"/>
+        <location filename="../components/tab/InvasionWidgetTab.py" line="300"/>
         <source>unknownInvasionProject</source>
         <translation>Unknown value on Invasion Project</translation>
     </message>
@@ -768,62 +773,62 @@
         <translation>Error on the news</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="203"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="200"/>
         <source>version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="204"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="201"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="231"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="228"/>
         <source>globalUpgradeError</source>
         <translation>Error on global upgrades</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="205"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="202"/>
         <source>time</source>
         <translation>Last Update</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="295"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="292"/>
         <source>newBooster!</source>
         <translation>New Booster Activated!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="220"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="217"/>
         <source>newNews!</source>
         <translation>New News Available!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="142"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="139"/>
         <source>newsInit</source>
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="158"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="155"/>
         <source>eventInit</source>
         <translation>Event starts at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="164"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="161"/>
         <source>eventEnd</source>
         <translation>Event ends at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="166"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="163"/>
         <source>newsSite</source>
         <translation>News Site</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="169"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="166"/>
         <source>priority</source>
         <translation>With priority</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="170"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="167"/>
         <source>onlyMobile</source>
         <translation>Only for Mobile</translation>
     </message>
@@ -941,42 +946,42 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="99"/>
+        <location filename="../components/common/SpecialAlert.py" line="95"/>
         <source>minutes</source>
         <translation>Minutes</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="101"/>
+        <location filename="../components/common/SpecialAlert.py" line="97"/>
         <source>waves</source>
         <translation>Waves</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="104"/>
+        <location filename="../components/common/SpecialAlert.py" line="100"/>
         <source>terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="106"/>
+        <location filename="../components/common/SpecialAlert.py" line="102"/>
         <source>terminals</source>
         <translation>Terminals</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <location filename="../components/common/SpecialAlert.py" line="104"/>
         <source>rounds</source>
         <translation>Rounds</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <location filename="../components/common/SpecialAlert.py" line="108"/>
         <source>pipe</source>
         <translation>Conduits</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="114"/>
+        <location filename="../components/common/SpecialAlert.py" line="110"/>
         <source>unkownWaveType</source>
         <translation>maxWaveNum not found for the mission type</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="45"/>
+        <location filename="../components/common/SpecialAlert.py" line="44"/>
         <source>requiredItem</source>
         <translation>Required Item</translation>
     </message>
@@ -986,12 +991,12 @@
         <translation>Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="47"/>
+        <location filename="../components/common/SpecialAlert.py" line="48"/>
         <source>itemNotConsumed</source>
         <translation>Not Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="48"/>
+        <location filename="../components/common/SpecialAlert.py" line="50"/>
         <source>restriction</source>
         <translation>Restriction</translation>
     </message>
@@ -1103,7 +1108,7 @@
         <translation>No active Twitch Promo</translation>
     </message>
     <message>
-        <location filename="../components/widget/TwitchPromoWidget.py" line="78"/>
+        <location filename="../components/widget/TwitchPromoWidget.py" line="74"/>
         <source>active_twich_promo</source>
         <translation>Active Twitch Promo</translation>
     </message>

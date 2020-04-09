@@ -100,21 +100,32 @@ class GeneralInfoWidget():
             self.set_featured_dojo(guild)
 
     def set_featured_dojo(self, dojo):
-        data = translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"
-        data += translate("generalWidget", "tier2") + ": " + dojo[1][0] + "\n"
-        data += translate("generalWidget", "tier3") + ": " + dojo[2][0] + "\n"
-        data += translate("generalWidget", "tier4") + ": " + dojo[3][0] + "\n"
-        data += translate("generalWidget", "tier5") + ": " + dojo[4][0]
-        tooltip = translate("generalWidget", "tier1Id") + ": " + dojo[0][1]
-        tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[0][2] + ")\n"
-        tooltip += translate("generalWidget", "tier2Id") + ": " + dojo[1][1]
-        tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[1][2] + ")\n"
-        tooltip += translate("generalWidget", "tier3Id") + ": " + dojo[2][1]
-        tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[2][2] + ")\n"
-        tooltip += translate("generalWidget", "tier4Id") + ": " + dojo[3][1]
-        tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[3][2] + ")\n"
-        tooltip += translate("generalWidget", "tier5Id") + ": " + dojo[4][1]
-        tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[4][2] + ")"
+        data = tooltip = ""
+        if (dojo[0] != ''):
+            data += translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"
+        if (dojo[1] != ''):
+            data += translate("generalWidget", "tier2") + ": " + dojo[1][0] + "\n"
+        if (dojo[2] != ''):
+            data += translate("generalWidget", "tier3") + ": " + dojo[2][0] + "\n"
+        if (dojo[3] != ''):
+            data += translate("generalWidget", "tier4") + ": " + dojo[3][0] + "\n"
+        if (dojo[4] != ''):
+            data += translate("generalWidget", "tier5") + ": " + dojo[4][0]
+        if (dojo[0] != ''):
+            tooltip += translate("generalWidget", "tier1Id") + ": " + dojo[0][1]
+            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[0][2] + ")\n"
+        if (dojo[1] != ''):
+            tooltip += translate("generalWidget", "tier2Id") + ": " + dojo[1][1]
+            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[1][2] + ")\n"
+        if (dojo[2] != ''):
+            tooltip += translate("generalWidget", "tier3Id") + ": " + dojo[2][1]
+            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[2][2] + ")\n"
+        if (dojo[3] != ''):
+            tooltip += translate("generalWidget", "tier4Id") + ": " + dojo[3][1]
+            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[3][2] + ")\n"
+        if (dojo[4] != ''):
+            tooltip += translate("generalWidget", "tier5Id") + ": " + dojo[4][1]
+            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[4][2] + ")"
         self.FeaturedDojo.setText(data)
         self.FeaturedDojo.setToolTip(tooltip)
 
