@@ -40,7 +40,7 @@ class AlertWidget():
             init = alert['Activation']['$date']['$numberLong']
             end = alert['Expiry']['$date']['$numberLong']
             tempo = int(end[:10]) - int(timeUtils.get_local_time())
-            if (tempo < 0):
+            if (tempo > 0):
                 found = 0
 
                 for old_alert in self.alerts['Alerts']:

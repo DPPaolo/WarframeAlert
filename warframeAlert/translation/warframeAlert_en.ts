@@ -75,52 +75,52 @@
 <context>
     <name>alert</name>
     <message>
-        <location filename="../components/common/Alert.py" line="92"/>
+        <location filename="../components/common/Alert.py" line="94"/>
         <source>level</source>
         <translation>Level</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="32"/>
+        <location filename="../components/common/Alert.py" line="33"/>
         <source>reward</source>
         <translation>Reward</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="37"/>
+        <location filename="../components/common/Alert.py" line="38"/>
         <source>hide</source>
         <translation>Hide</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="97"/>
+        <location filename="../components/common/Alert.py" line="99"/>
         <source>map</source>
         <translation>Map</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="127"/>
+        <location filename="../components/common/Alert.py" line="130"/>
         <source>hidedAlert</source>
         <translation>Alert hided with ID</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="123"/>
+        <location filename="../components/common/Alert.py" line="126"/>
         <source>unlock</source>
         <translation>Unlocked for everyone</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="117"/>
+        <location filename="../components/common/Alert.py" line="120"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="100"/>
+        <location filename="../components/common/Alert.py" line="102"/>
         <source>difficulty</source>
         <translation>Difficulty</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="101"/>
+        <location filename="../components/common/Alert.py" line="103"/>
         <source>enemy_type</source>
         <translation>Type of enemies that you encounter</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="103"/>
+        <location filename="../components/common/Alert.py" line="105"/>
         <source>extra_enemy_type</source>
         <translation>Type of extra enemies that you encounter</translation>
     </message>
@@ -243,64 +243,74 @@
 <context>
     <name>eventsWidget</name>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="97"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="107"/>
         <source>alertError</source>
         <translation>Error on the alert</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="108"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="118"/>
         <source>eventsError</source>
         <translation>Error on the events</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="134"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="144"/>
         <source>newEvent</source>
         <translation>New Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="141"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="151"/>
         <source>newRazorbackEvent</source>
         <translation>Razorback Attack</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="143"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="153"/>
         <source>newFomorianEvent</source>
         <translation>Fomorian Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="146"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="156"/>
         <source>newCetusEvent</source>
         <translation>New Event on Cetus</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="149"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="159"/>
         <source>newRecostructionEvent</source>
         <translation>New Relay Recostruction Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="171"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="185"/>
         <source>alerts</source>
         <translation>Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="176"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="190"/>
         <source>genericEvent</source>
         <translation>Tactical Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="177"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="191"/>
         <source>fomorian</source>
         <translation>Razorback and Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="178"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="192"/>
         <source>ghoul</source>
         <translation>Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="179"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="193"/>
         <source>recostruction</source>
         <translation>Relay Recostruction</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="163"/>
+        <source>newsquadLinkEvent</source>
+        <translation>New Sentient Invasion</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="194"/>
+        <source>squadLink</source>
+        <translation>Sentient Invasion</translation>
     </message>
 </context>
 <context>
@@ -449,27 +459,27 @@
         <translation>Time until Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
         <source>tier1</source>
         <translation>Ghost Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="104"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
         <source>tier2</source>
         <translation>Shadow Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
         <source>tier3</source>
         <translation>Storm Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="106"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
         <source>tier4</source>
         <translation>Mountain Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
         <source>tier5</source>
         <translation>Moon Clan</translation>
     </message>
@@ -479,77 +489,77 @@
         <translation>no alliance</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="108"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
         <source>tier1Id</source>
         <translation>Ghost Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="128"/>
         <source>guildAllianceId</source>
         <translation>Alliance ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="110"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
         <source>tier2Id</source>
         <translation>Shadow Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="112"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
         <source>tier3Id</source>
         <translation>Storm Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="114"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
         <source>tier4Id</source>
         <translation>Mountain Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="116"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
         <source>tier5Id</source>
         <translation>Moon Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="138"/>
         <source>primeState1</source>
         <translation>Women</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="129"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
         <source>primeState2</source>
         <translation>Man</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
         <source>primeStateUnknown</source>
         <translation>Unknown Prime State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
         <source>morePrimeVault</source>
         <translation>There are more Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>vault0</source>
         <translation>Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="138"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
         <source>vault1</source>
         <translation>Frost and Ember Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="139"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
         <source>vault2</source>
         <translation>Rhino and Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>vault3</source>
         <translation>Ember, Frost and Loki Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="141"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
         <source>vault4</source>
         <translation>Nyx e Rhino Prime Vault</translation>
     </message>
@@ -946,59 +956,122 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="95"/>
+        <location filename="../components/common/SpecialAlert.py" line="100"/>
         <source>minutes</source>
         <translation>Minutes</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="97"/>
+        <location filename="../components/common/SpecialAlert.py" line="102"/>
         <source>waves</source>
         <translation>Waves</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="100"/>
+        <location filename="../components/common/SpecialAlert.py" line="105"/>
         <source>terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="102"/>
+        <location filename="../components/common/SpecialAlert.py" line="107"/>
         <source>terminals</source>
         <translation>Terminals</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="104"/>
+        <location filename="../components/common/SpecialAlert.py" line="109"/>
         <source>rounds</source>
         <translation>Rounds</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <location filename="../components/common/SpecialAlert.py" line="113"/>
         <source>pipe</source>
         <translation>Conduits</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="110"/>
+        <location filename="../components/common/SpecialAlert.py" line="115"/>
         <source>unkownWaveType</source>
         <translation>maxWaveNum not found for the mission type</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="44"/>
+        <location filename="../components/common/SpecialAlert.py" line="49"/>
         <source>requiredItem</source>
         <translation>Required Item</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="46"/>
+        <location filename="../components/common/SpecialAlert.py" line="51"/>
         <source>itemConsumed</source>
         <translation>Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="48"/>
+        <location filename="../components/common/SpecialAlert.py" line="53"/>
         <source>itemNotConsumed</source>
         <translation>Not Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="50"/>
+        <location filename="../components/common/SpecialAlert.py" line="46"/>
         <source>restriction</source>
         <translation>Restriction</translation>
+    </message>
+</context>
+<context>
+    <name>squadLinkEvent</name>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="42"/>
+        <source>waveInit</source>
+        <translation>Wave started</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="22"/>
+        <source>waveEnd</source>
+        <translation>Wave end</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="43"/>
+        <source>nextWaveEnd</source>
+        <translation>Next wave ends at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="24"/>
+        <source>nextWaveInit</source>
+        <translation>Next wave start</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="63"/>
+        <source>murexNumber</source>
+        <translation>Murex to destroy</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="66"/>
+        <source>duration</source>
+        <translation>Duration</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="68"/>
+        <source>cooldown</source>
+        <translation>Cooldown between waves</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="71"/>
+        <source>groundTier</source>
+        <translation>Ground Tier</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="77"/>
+        <source>spaceTier</source>
+        <translation>Space Tier</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="82"/>
+        <source>epoch_number</source>
+        <translation>Wave number</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="83"/>
+        <source>pauseAutoScheduling</source>
+        <translation>Pause for next wave</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SquadLinkEvent.py" line="84"/>
+        <source>completitionBonus</source>
+        <translation>Completition Bonus</translation>
     </message>
 </context>
 <context>

@@ -15,6 +15,8 @@ def divide_for_n(message, num, divide="\n"):
 
 
 def divide_message(mess, dim_line=50):
+    if (dim_line <= 0):
+        return mess
     space = -1
     if (len(mess) > dim_line):
         for i in range(0, len(mess)):

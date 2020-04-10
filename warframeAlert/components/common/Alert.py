@@ -5,6 +5,7 @@ from PyQt5.QtCore import Qt
 from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
@@ -79,6 +80,7 @@ class Alert():
         self.Alertvbox.addLayout(self.Alerthbox3)
         self.Alertvbox.addLayout(self.Alerthbox4)
         self.Alertvbox.addLayout(self.Alerthbox5)
+        self.Alertvbox.addLayout(EmptySpace().SpaceBox)
 
         self.AlertBox.addWidget(self.AlertImg.image)
         self.AlertBox.addLayout(self.Alertvbox)

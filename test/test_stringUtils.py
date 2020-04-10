@@ -27,6 +27,10 @@ class TestStringUtils(unittest.TestCase):
         res = stringUtils.divide_message(self.MESSAGE_WITH_SPACE, 5)
         self.assertEqual(res, "test\nmessa\nge\nwith\nspace")
 
+    def test_divide_message_0_dimension(self):
+        res = stringUtils.divide_message(self.MESSAGE_WITH_SPACE, 0)
+        self.assertEqual(res, "test message with space")
+
     def test_divide_for_n_with_empty_separator(self):
         res = stringUtils.divide_for_n(self.MESSAGE_WITH_SPACE, 4, "")
         self.assertIsNone(res)
