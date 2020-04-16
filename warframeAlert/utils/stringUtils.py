@@ -1,5 +1,5 @@
 # coding=utf-8
-def divide_for_n(message, num, divide="\n"):
+def divide_for_n(message, num=1, divide="\n"):
     if (divide == ""):
         return None
     data = []

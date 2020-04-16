@@ -238,6 +238,55 @@ def get_map_type(map_type):
         if (maps in map_type):
             return warframeData.MAP_TYPE[maps][OptionsHandler.get_option("Language", str)]
     else:
-        print(translate("gameTranslation", "unknownMapType") + ": " + ": " + map_type)
+        print(translate("gameTranslation", "unknownMapType") + ": " + map_type)
         LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + map_type)
         return get_last_item_with_backslash(map_type)
+
+
+def get_syndicate(syn):
+    if (syn in warframeData.SYNDICATE_NAME):
+        return warframeData.SYNDICATE_NAME[syn][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownSyndicate") + ": " + syn)
+        LogHandler.err(translate("gameTranslation", "unknownSyndicate") + ": " + syn)
+        return syn
+
+
+def get_cetus_job(job):
+    if (OptionsHandler.get_option("Language", str) == "it"):
+        return get_cetus_job_it(job)
+    else:
+        return get_cetus_job_en(job)
+
+
+def get_cetus_job_it(job):
+    if (job in warframeData.CETUS_JOB_NAME):
+        return warframeData.CETUS_JOB_NAME[job]
+    else:
+        print(translate("gameTranslation", "unknownJob") + ": " + ": " + job)
+        LogHandler.err(translate("gameTranslation", "unknownJob") + ": " + job)
+        return job
+
+
+def get_cetus_job_en(job):
+    return get_item_name_en(job)
+
+
+def get_cetus_job_desc(job):
+    if (OptionsHandler.get_option("Language", str) == "it"):
+        return get_cetus_job_desc_it(job)
+    else:
+        return get_cetus_job_desc_en(job)
+
+
+def get_cetus_job_desc_it(job):
+    if (job in warframeData.CETUS_JOB_DESC):
+        return warframeData.CETUS_JOB_DESC[job]
+    else:
+        print(translate("gameTranslation", "unknownJobDesc") + ": " + job)
+        LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + job)
+        return " "
+
+
+def get_cetus_job_desc_en(job):
+    return get_item_name_en(job)

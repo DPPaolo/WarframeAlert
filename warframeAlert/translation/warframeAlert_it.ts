@@ -139,6 +139,54 @@
     </message>
 </context>
 <context>
+    <name>bountyBox</name>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="80"/>
+        <source>bountyName</source>
+        <translation>Taglia</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="26"/>
+        <source>affinity</source>
+        <translation>Affinità Totale Ottenibile</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="28"/>
+        <source>drop</source>
+        <translation>Visualizza Drop Taglia</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="79"/>
+        <source>syndicate</source>
+        <translation>Associazione collegata</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="68"/>
+        <source>level</source>
+        <translation>Livello</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="92"/>
+        <source>rewardType</source>
+        <translation>Ricompense Tipo</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="98"/>
+        <source>dropFortuna</source>
+        <translation>Drop Taglia Orb Vallis</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="103"/>
+        <source>dropGhoul</source>
+        <translation>Drop Taglia Ghoul</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="108"/>
+        <source>dropCetus</source>
+        <translation>Drop Taglia Cetus</translation>
+    </message>
+</context>
+<context>
     <name>clanEvent</name>
     <message>
         <location filename="../components/common/ClanEvent.py" line="16"/>
@@ -243,74 +291,79 @@
 <context>
     <name>eventsWidget</name>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="107"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="111"/>
         <source>alertError</source>
         <translation>Errore nelle Allerte</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="118"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="122"/>
         <source>eventsError</source>
         <translation>Errore negli Eventi</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="144"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="148"/>
         <source>newEvent</source>
         <translation>Nuovo Evento Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="151"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="155"/>
         <source>newRazorbackEvent</source>
         <translation>Attacco Razorback</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="153"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="157"/>
         <source>newFomorianEvent</source>
         <translation>Invasione Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="156"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="160"/>
         <source>newCetusEvent</source>
         <translation>Nuovo Evento su Cetus</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="159"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="163"/>
         <source>newRecostructionEvent</source>
         <translation>Nuova Stazione da Ricostruire</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="185"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="189"/>
         <source>alerts</source>
         <translation>Allerte</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="190"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="194"/>
         <source>genericEvent</source>
         <translation>Allerte Tattiche</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="191"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="195"/>
         <source>fomorian</source>
         <translation>Razorback e Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="192"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="196"/>
         <source>ghoul</source>
         <translation>Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="193"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="197"/>
         <source>recostruction</source>
         <translation>Ricostruzione Stazioni</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="163"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="167"/>
         <source>newsquadLinkEvent</source>
         <translation>Nuova Invasione Sentient</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="194"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="198"/>
         <source>squadLink</source>
         <translation>Invasione Sentient</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="399"/>
+        <source>event</source>
+        <translation>Evento</translation>
     </message>
 </context>
 <context>
@@ -386,7 +439,7 @@
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="242"/>
+        <location filename="../utils/gameTranslationUtils.py" line="287"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
@@ -399,6 +452,21 @@
         <location filename="../utils/gameTranslationUtils.py" line="174"/>
         <source>unknownWeaponRestriction</source>
         <translation>Restrizione Arma Sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="267"/>
+        <source>unknownJob</source>
+        <translation>Taglia sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="286"/>
+        <source>unknownJobDesc</source>
+        <translation>Descrizione taglia sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="251"/>
+        <source>unknownSyndicate</source>
+        <translation>Associazione sconosciuta</translation>
     </message>
 </context>
 <context>
@@ -1014,62 +1082,62 @@
 <context>
     <name>squadLinkEvent</name>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="42"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="37"/>
         <source>waveInit</source>
         <translation>Ondata iniziata</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="22"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="17"/>
         <source>waveEnd</source>
         <translation>Ondata termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="43"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="38"/>
         <source>nextWaveEnd</source>
         <translation>Prossima ondata termina il</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="24"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="19"/>
         <source>nextWaveInit</source>
         <translation>Prossima ondata inizia tra</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="63"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="52"/>
         <source>murexNumber</source>
         <translation>Murex da distruggere</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="66"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="55"/>
         <source>duration</source>
         <translation>Durata</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="68"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="57"/>
         <source>cooldown</source>
         <translation>Attesa tra ondata</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="71"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="60"/>
         <source>groundTier</source>
         <translation>Gradi a terra</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="77"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="66"/>
         <source>spaceTier</source>
         <translation>Gradi con Railjack</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="82"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="71"/>
         <source>epoch_number</source>
         <translation>Numero Ondata</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="83"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="76"/>
         <source>pauseAutoScheduling</source>
         <translation>Prossima ondata in pausa</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="84"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="72"/>
         <source>completitionBonus</source>
         <translation>Bonus Completamento</translation>
     </message>
@@ -1189,39 +1257,54 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="15"/>
+        <location filename="../utils/warframeUtils.py" line="16"/>
         <source>randomItem</source>
         <translation>Item casuale da</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="42"/>
+        <location filename="../utils/warframeUtils.py" line="43"/>
         <source>affinity</source>
         <translation>affinità</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="49"/>
+        <location filename="../utils/warframeUtils.py" line="50"/>
         <source>credits</source>
         <translation>crediti</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="93"/>
+        <location filename="../utils/warframeUtils.py" line="94"/>
         <source>weaponPartsNotFound</source>
         <translation>Parte Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="117"/>
+        <location filename="../utils/warframeUtils.py" line="118"/>
         <source>weaponTypeNotFound</source>
         <translation>Tipo Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="143"/>
+        <location filename="../utils/warframeUtils.py" line="144"/>
         <source>ExportManifestNotFound</source>
         <translation>ExportManifest.json non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="126"/>
+        <location filename="../utils/warframeUtils.py" line="127"/>
         <source>operationTypeNotFound</source>
         <translation>Tipo Operazione non trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="159"/>
+        <source>jsonFileNotFound</source>
+        <translation>.json non trovato</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="170"/>
+        <source>noBountyReward</source>
+        <translation>Nessuna Ricompensa Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="180"/>
+        <source>bountyRewardNotFound</source>
+        <translation>Ricompensa Taglia non trovata</translation>
     </message>
 </context>
 </TS>

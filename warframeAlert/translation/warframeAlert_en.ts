@@ -139,6 +139,54 @@
     </message>
 </context>
 <context>
+    <name>bountyBox</name>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="80"/>
+        <source>bountyName</source>
+        <translation>Bounty</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="26"/>
+        <source>affinity</source>
+        <translation>Total affinity</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="28"/>
+        <source>drop</source>
+        <translation>View Bounty Drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="79"/>
+        <source>syndicate</source>
+        <translation>Affiliated syndycate</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="68"/>
+        <source>level</source>
+        <translation>Level</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="92"/>
+        <source>rewardType</source>
+        <translation>Reward Type</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="98"/>
+        <source>dropFortuna</source>
+        <translation>Orb Vallis Bounty Drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="103"/>
+        <source>dropGhoul</source>
+        <translation>Ghoul Bounty Drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="108"/>
+        <source>dropCetus</source>
+        <translation>Cetus Bounty Drop</translation>
+    </message>
+</context>
+<context>
     <name>clanEvent</name>
     <message>
         <location filename="../components/common/ClanEvent.py" line="16"/>
@@ -243,74 +291,79 @@
 <context>
     <name>eventsWidget</name>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="107"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="111"/>
         <source>alertError</source>
         <translation>Error on the alert</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="118"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="122"/>
         <source>eventsError</source>
         <translation>Error on the events</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="144"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="148"/>
         <source>newEvent</source>
         <translation>New Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="151"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="155"/>
         <source>newRazorbackEvent</source>
         <translation>Razorback Attack</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="153"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="157"/>
         <source>newFomorianEvent</source>
         <translation>Fomorian Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="156"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="160"/>
         <source>newCetusEvent</source>
         <translation>New Event on Cetus</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="159"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="163"/>
         <source>newRecostructionEvent</source>
         <translation>New Relay Recostruction Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="185"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="189"/>
         <source>alerts</source>
         <translation>Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="190"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="194"/>
         <source>genericEvent</source>
         <translation>Tactical Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="191"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="195"/>
         <source>fomorian</source>
         <translation>Razorback and Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="192"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="196"/>
         <source>ghoul</source>
         <translation>Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="193"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="197"/>
         <source>recostruction</source>
         <translation>Relay Recostruction</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="163"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="167"/>
         <source>newsquadLinkEvent</source>
         <translation>New Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="194"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="198"/>
         <source>squadLink</source>
         <translation>Sentient Invasion</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/EventsWidgetTab.py" line="399"/>
+        <source>event</source>
+        <translation>Event</translation>
     </message>
 </context>
 <context>
@@ -386,7 +439,7 @@
         <translation>Unkown Mission Type</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="242"/>
+        <location filename="../utils/gameTranslationUtils.py" line="287"/>
         <source>unknownMapType</source>
         <translation>Unknown Map Type</translation>
     </message>
@@ -399,6 +452,21 @@
         <location filename="../utils/gameTranslationUtils.py" line="174"/>
         <source>unknownWeaponRestriction</source>
         <translation>Unknown Weapon Restriction</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="267"/>
+        <source>unknownJob</source>
+        <translation>Unknown Bounty</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="286"/>
+        <source>unknownJobDesc</source>
+        <translation>Unkonown Bounty Description</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="251"/>
+        <source>unknownSyndicate</source>
+        <translation>Unkown Syndicate</translation>
     </message>
 </context>
 <context>
@@ -1014,62 +1082,62 @@
 <context>
     <name>squadLinkEvent</name>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="42"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="37"/>
         <source>waveInit</source>
         <translation>Wave started</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="22"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="17"/>
         <source>waveEnd</source>
         <translation>Wave end</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="43"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="38"/>
         <source>nextWaveEnd</source>
         <translation>Next wave ends at</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="24"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="19"/>
         <source>nextWaveInit</source>
         <translation>Next wave start</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="63"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="52"/>
         <source>murexNumber</source>
         <translation>Murex to destroy</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="66"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="55"/>
         <source>duration</source>
         <translation>Duration</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="68"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="57"/>
         <source>cooldown</source>
         <translation>Cooldown between waves</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="71"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="60"/>
         <source>groundTier</source>
         <translation>Ground Tier</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="77"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="66"/>
         <source>spaceTier</source>
         <translation>Space Tier</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="82"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="71"/>
         <source>epoch_number</source>
         <translation>Wave number</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="83"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="76"/>
         <source>pauseAutoScheduling</source>
         <translation>Pause for next wave</translation>
     </message>
     <message>
-        <location filename="../components/common/SquadLinkEvent.py" line="84"/>
+        <location filename="../components/common/SquadLinkEvent.py" line="72"/>
         <source>completitionBonus</source>
         <translation>Completition Bonus</translation>
     </message>
@@ -1189,39 +1257,54 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="15"/>
+        <location filename="../utils/warframeUtils.py" line="16"/>
         <source>randomItem</source>
         <translation>Random item from</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="42"/>
+        <location filename="../utils/warframeUtils.py" line="43"/>
         <source>affinity</source>
         <translation>affinity</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="49"/>
+        <location filename="../utils/warframeUtils.py" line="50"/>
         <source>credits</source>
         <translation>credits</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="93"/>
+        <location filename="../utils/warframeUtils.py" line="94"/>
         <source>weaponPartsNotFound</source>
         <translation>Weapon Parts not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="117"/>
+        <location filename="../utils/warframeUtils.py" line="118"/>
         <source>weaponTypeNotFound</source>
         <translation>Weapon Type not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="143"/>
+        <location filename="../utils/warframeUtils.py" line="144"/>
         <source>ExportManifestNotFound</source>
         <translation>File ExportManifest.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="126"/>
+        <location filename="../utils/warframeUtils.py" line="127"/>
         <source>operationTypeNotFound</source>
         <translation>Operation type not found</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="159"/>
+        <source>jsonFileNotFound</source>
+        <translation>.json not found</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="170"/>
+        <source>noBountyReward</source>
+        <translation>No Reward Available</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="180"/>
+        <source>bountyRewardNotFound</source>
+        <translation>Bounty Reward not found</translation>
     </message>
 </context>
 </TS>
