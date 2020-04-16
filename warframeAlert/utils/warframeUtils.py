@@ -3,7 +3,7 @@ import json
 
 from warframeAlert import warframeData
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import print_traceback
+from warframeAlert.utils.commonUtils import print_traceback, get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_item_name
 from warframeAlert.utils.logUtils import LogHandler
@@ -150,3 +150,69 @@ def get_image_path_from_export_manifest(name):
         if (name == unique_name):
             return item['textureLocation'].replace("\\", "/")
     return warframeData.DEFAULT_ALERT_IMAGE
+
+
+def read_drop_file(name):
+    try:
+        fp = open("data" + get_separator() + name + ".json")
+    except FileNotFoundError as err:
+        LogHandler.err("File " + name + translate("warframeUtils", "jsonFileNotFound") + ":\n " + str(err))
+        print_traceback("File " + name + translate("warframeUtils", "jsonFileNotFound") + ":\n  " + str(err))
+        return {}
+    data = fp.readlines()
+    fp.close()
+    try:
+        return json.loads(data[0])
+    except IndexError or Exception:
+        return {}
+
+
+def get_bounty_reward(reward, nome_file):
+    no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
+    try:
+        json_data = read_drop_file(nome_file)['bounty']
+    except KeyError or Exception:
+        return [no_reward, no_reward, no_reward]
+    reward_type = get_last_item_with_backslash(reward)[:-7]
+    if (reward_type in warframeData.CETUS_RANK_LEVEL):
+        reward_type = warframeData.CETUS_RANK_LEVEL[reward_type]
+    else:
+        print(translate("warframeUtils", "bountyRewardNotFound") + " " + reward_type)
+        return [no_reward, no_reward, no_reward]
+    rew_a = rew_b = rew_c = no_reward
+    for bounty in json_data:
+        if (bounty['level'] != reward_type):
+            continue
+        if ('A' in bounty['rotations']):
+            rew_a = ""
+            for stage in sorted(bounty['rotations']['A']):
+                rew_a += stage + "\n\n"
+                for i in range(0, len(bounty['rotations']['A'][stage])):
+                    elem = bounty['rotations']['A'][stage][i]
+                    item = elem['name']
+                    rar = elem['rarity'].split("(")[1].split(")")[0]
+                    rew_a += item + " (" + rar + ")\n"
+                rew_a += "\n"
+        if ('B' in bounty['rotations']):
+            rew_b = ""
+            for stage in sorted(bounty['rotations']['B']):
+                rew_b += stage + "\n\n"
+                for i in range(0, len(bounty['rotations']['B'][stage])):
+                    elem = bounty['rotations']['B'][stage][i]
+                    item = elem['name']
+                    rar = elem['rarity'].split("(")[1].split(")")[0]
+                    rew_b += item + " (" + rar + ")\n"
+                rew_b += "\n"
+        if ('C' in bounty['rotations']):
+            rew_c = ""
+            for stage in sorted(bounty['rotations']['C']):
+                rew_c += stage + "\n\n"
+                for i in range(0, len(bounty['rotations']['C'][stage])):
+                    elem = bounty['rotations']['C'][stage][i]
+                    item = elem['name']
+                    rar = elem['rarity'].split("(")[1].split(")")[0]
+                    rew_c += item + " (" + rar + ")\n"
+                rew_c += "\n"
+    reward = [rew_a, rew_b, rew_c]
+    return reward
+

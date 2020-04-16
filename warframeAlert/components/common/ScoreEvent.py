@@ -32,8 +32,6 @@ class ScoreEvent(Event):
         self.TADescvbox.addLayout(self.TABarbox1)
         self.TADescvbox.addLayout(self.TABarbox2)
 
-        self.hide_optional_field()
-
     def set_perc_att(self, per, attnode):
         self.TAPerAtt.reset()
         self.TAPerAtt.setMaximum(100)
@@ -53,24 +51,16 @@ class ScoreEvent(Event):
             self.TANodeAtt.hide()
 
     def set_score_data(self, score, best):
-        self.show_optional_field()
         self.TAScore.setText(str(score))
         self.TABest.setText(best)
+        if (score == ""):
+            self.TAScoreLab.hide()
+            self.TAScore.hide()
+        if (best == ""):
+            self.TABestLab.hide()
+            self.TABest.hide()
 
     def hide(self):
         super().hide()
         self.TANodeAtt.hide()
         self.TAPerAtt.hide()
-        self.hide_optional_field()
-
-    def hide_optional_field(self):
-        self.TAScoreLab.hide()
-        self.TAScore.hide()
-        self.TABestLab.hide()
-        self.TABest.hide()
-
-    def show_optional_field(self):
-        self.TAScoreLab.show()
-        self.TAScore.show()
-        self.TABestLab.show()
-        self.TABest.show()

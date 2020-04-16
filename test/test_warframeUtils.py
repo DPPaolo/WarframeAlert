@@ -2,7 +2,7 @@
 import unittest
 
 from warframeAlert.utils.warframeUtils import get_image_path_from_name, get_weapon_part, get_weapon_type, \
-    get_image_path_from_export_manifest, parse_reward, get_operation_type
+    get_image_path_from_export_manifest, parse_reward, get_operation_type, get_bounty_reward
 
 
 class TestWarframeUtils(unittest.TestCase):
@@ -107,3 +107,7 @@ class TestWarframeUtils(unittest.TestCase):
     def test_get_image_path_from_export_manifest_not_found(self):
         res = get_image_path_from_export_manifest(self.IMAGE_EXPORT_MANIFEST_UNKNOWN)
         self.assertEqual(self.IMAGE_EXPORT_MANIFEST_NOT_FOUND, res)
+
+    def test_get_bounty_reward(self):
+        res = get_bounty_reward("/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierATableBRewards", "cetus")
+        self.assertEqual(len(res), 3)
