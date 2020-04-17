@@ -123,6 +123,9 @@ class BountyBox():
         self.CetusRewardType.hide()
         self.CetusSyn.hide()
 
+    def __del__(self):
+        self.hide()
+
 
 def create_cetus_box(job):
     xp = []

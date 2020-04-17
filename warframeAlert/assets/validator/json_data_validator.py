@@ -76,6 +76,122 @@ default_schema = {
     }
 }
 
+
+
+alerts_schema = {
+    "type": "object",
+    "properties": {
+        "Alerts": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/alert"},
+        }
+    },
+    "required": ["Alerts"],
+    "definitions": {
+        "alert": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Tag": {"type": "string"},
+                "ForceUnlock": {"type": "boolean"},
+                "MissionInfo": {
+                    "additionalProperties": False,
+                    "properties": {
+                        "location": {"type": "string"},
+                        "levelOverride": {"type": "string"},
+                        "missionType": {"type": "string"},
+                        "faction": {"type": "string"},
+                        "enemySpec": {"type": "string"},
+                        "maxEnemyLevel": {"type": "integer"},
+                        "minEnemyLevel": {"type": "integer"},
+                        "archwingRequired": {"type": "integer"},
+                        "isSharkwingMission": {"type": "integer"},
+                        "maxWaveNum": {"type": "integer"},
+                        "nightmare": {"type": "integer"},
+                        "difficulty": {"type": "integer"},
+                        "missionReward": {
+                            "type": "object",
+                            "properties": {
+                                "additionalProperties": False,
+                                "credits": {"type": "integer"},
+                                "xp": {"type": "integer"},
+                                "countedItems": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "ItemCount": {"type": "integer"},
+                                            "ItemType": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "countedStoreItems": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "ItemCount": {"type": "integer"},
+                                            "StoreItem": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "randomizedItems": {"type": "string"},
+                                "items": {
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                }
+                            },
+                        },
+                        "descText": {"type": "string"},
+                        "extraEnemySpec": {"type": "string"},
+                        # Extra Data
+                        "exclusiveWeapon": {"type": "string"},
+                        "leadersAlwaysAllowed": {"type": "boolean"},
+                        "advancedSpawners": {"type": "array",
+                                             "items": {"type": "string"}},
+
+                    },
+                    "required": ["missionReward", "location", "missionType", "faction", "difficulty",
+                                 "maxEnemyLevel", "minEnemyLevel", "levelOverride", "enemySpec"],
+                },
+            },
+            "required": ["_id", "Activation", "Expiry", "MissionInfo"],
+        }
+    }
+}
+
 global_upgrades_schema = {
     "type": "object",
     "properties": {
