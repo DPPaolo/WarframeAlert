@@ -6,10 +6,11 @@ from PyQt5 import QtGui
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
+from warframeAlert.utils.logUtils import LogHandler
 
 
 def print_traceback(mess):
-    print(mess)
+    LogHandler.debug(mess)
     exc_type, exc_value, exc_traceback = sys.exc_info()
     traceback.print_exception(exc_type, exc_value, exc_traceback)
 

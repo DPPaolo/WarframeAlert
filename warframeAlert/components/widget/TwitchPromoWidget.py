@@ -71,7 +71,7 @@ class TwitchPromoWidget():
 
         if (len(self.data['TwitchPromos']) > 0):
             self.NoTwitchLab.hide()
-            print(translate("twitchPromoWidget", "active_twich_promo"))
+            LogHandler.debug(translate("twitchPromoWidget", "active_twich_promo"))
 
     def reset_twitch_promo(self):
         self.NoTwitchLab.show()

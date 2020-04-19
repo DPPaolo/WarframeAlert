@@ -5,6 +5,7 @@ from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.gameTranslationUtils import get_enemy_name
+from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.stringUtils import divide_for_n
 
 
@@ -60,7 +61,7 @@ class TwitchBox:
             self.TwitchType.setText(text)
         else:
             self.TwitchType.setText(translate("twitchBox", "unknown"))
-            print(translate("twitchBox", "unknown") + ": " + twitch_type)
+            LogHandler.debug(translate("twitchBox", "unknown") + ": " + twitch_type)
 
     def is_expired(self):
         return (int(self.TwitchEnd.get_time()) - int(timeUtils.get_local_time())) < 0

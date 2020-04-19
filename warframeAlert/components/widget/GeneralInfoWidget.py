@@ -141,10 +141,9 @@ class GeneralInfoWidget():
         else:
             state = prime['State']
             LogHandler.debug(translate("generalWidget", "primeStateUnknown") + state)
-            print(translate("generalWidget", "primeStateUnknown") + state)
         self.PrimeAccess.setText(state)
         if (len(vault_available) > 5):
-            print(translate("generalWidget", "morePrimeVault"))
+            LogHandler.debug(translate("generalWidget", "morePrimeVault"))
         data = translate("generalWidget", "vault0") + ": " + str(vault_available[0]) + "\n"
         data += translate("generalWidget", "vault1") + ": " + str(vault_available[1]) + "\n"
         data += translate("generalWidget", "vault2") + ": " + str(vault_available[2]) + "\n"

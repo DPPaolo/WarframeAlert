@@ -5,6 +5,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/Countdown.py \
                warframeAlert/components/common/DailyDeals.py \
                warframeAlert/components/common/Event.py \
+               warframeAlert/components/common/EventReward.py \
                warframeAlert/components/common/GlobalUpgrade.py \
                warframeAlert/components/common/HubEvent.py \
                warframeAlert/components/common/Invasion.py \

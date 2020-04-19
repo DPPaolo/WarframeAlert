@@ -7,6 +7,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_upgrade_type
+from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.warframeData import UPGRADE_TYPE_IMAGE
 
 
@@ -82,7 +83,7 @@ class GlobalUpgrade():
         if (upgrade_type in UPGRADE_TYPE_IMAGE):
             image = UPGRADE_TYPE_IMAGE[upgrade_type]
         else:
-            print(translate("gameTranslation", "unknownupgradeType"))
+            LogHandler.debug(translate("gameTranslation", "unknownupgradeType"))
             return
 
         image_name = "assets" + get_separator() + "image" + get_separator() + image

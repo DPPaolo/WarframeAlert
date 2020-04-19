@@ -297,7 +297,7 @@ class InvasionWidgetTab():
         razor = data[1]
         unk = data[2]
         if (unk != 0):
-            print(translate("invasionWidget", "unknownInvasionProject") + str(unk))
+            LogHandler.debug(translate("invasionWidget", "unknownInvasionProject") + str(unk))
         self.set_invasion_project(fomor, razor)
 
     def set_invasion_project(self, fomor, razor):
@@ -307,7 +307,9 @@ class InvasionWidgetTab():
             fomor = 100
         if (float(razor) >= 100):
             razor = 100
+        # noinspection PyTypeChecker
         self.FomorPer.setValue(float(fomor))
+        # noinspection PyTypeChecker
         self.RazorPer.setValue(float(razor))
 
     def reset_invasion_project(self):

@@ -60,6 +60,10 @@ class ScoreEvent(Event):
             self.TABestLab.hide()
             self.TABest.hide()
 
+    def set_score_optional_tooltip(self, optional_in_mission, upgrades_id):
+        self.EventReqItemLab.setToolTip(translate("scoreEvent", "optionalInMission") + ": " + optional_in_mission)
+        self.TAScoreLab.setToolTip(translate("scoreEvent", "upgradesId") + ": " + upgrades_id)
+
     def hide(self):
         super().hide()
         self.TANodeAtt.hide()

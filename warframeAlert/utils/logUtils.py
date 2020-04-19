@@ -15,6 +15,7 @@ class LogHandler:
 
     @staticmethod
     def debug(text):
+        print(text)
         LogHandler.log.debug(time.strftime('%x %X') + " - " + text)
 
     @staticmethod
