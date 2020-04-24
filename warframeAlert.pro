@@ -10,6 +10,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/HubEvent.py \
                warframeAlert/components/common/Invasion.py \
                warframeAlert/components/common/InvasionNode.py \
+               warframeAlert/components/common/ReconstructionRelayEvent.py \
                warframeAlert/components/common/ScoreEvent.py \
                warframeAlert/components/common/SimarisTarget.py \
                warframeAlert/components/common/SpecialAlert.py \

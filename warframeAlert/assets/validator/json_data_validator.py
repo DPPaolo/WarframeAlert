@@ -76,7 +76,273 @@ default_schema = {
     }
 }
 
+construction_projects_schema = {
+    "type": "object",
+    "properties": {
+        "ConstructionProjects": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/constructionSchema"},
+        }
+    },
+    "required": ["ConstructionProjects"],
+    "definitions": {
+        "constructionSchema": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+            },
+            "required": [],
+        }
+    }
+}
 
+goals_schema = {
+    "type": "object",
+    "properties": {
+        "Goals": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/WfEvents"},
+        }
+    },
+    "required": ["Goals"],
+    "definitions": {
+        "WfEvents": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Tag": {"type": "string"},
+                "Desc": {"type": "string"},
+                # Extra data
+                "Icon": {"type": "string"},
+                "Count": {"type": "integer"},
+                "Personal": {"type": "boolean"},
+                "ClampNodeScores": {"type": "boolean"},
+                "Bounty": {"type": "string"},
+                "ToolTip": {"type": "string"},
+                "ScoreLocTag": {"type": "string"},
+                "MissionKeyName": {"type": "string"},
+                "ScoreVar": {"type": "string"},
+                "Success": {"type": "integer"},
+                "Faction": {"type": "string"},
+                "InstructionalItem": {"type": "string"},
+
+                # Fomorian or ghoul data
+                "HealthPct": {"type": "number"},
+                "VictimNode":  {"type": "string"},
+                "Transmission":  {"type": "string"},
+                "OptionalInMission": {"type": "boolean"},
+                "Regions": {"type": "array",
+                            "items": {"type": "integer"}},
+                "RegionIdx": {"type": "integer"},
+                "UpgradeIds": {"type": "array",
+                               "items": {
+                                   "type": "object",
+                                   "properties": {
+                                       "$oid": {"type": "string"}
+                                   }}
+                               },
+                "JobAffiliationTag": {"type": "string"},
+                "JobCurrentVersion": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "JobPreviousVersion": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                'Jobs': {"type": "array",
+                         "items": {
+                             "type": "object",
+                             "properties": {
+                                 "jobType": {"type": "string"},
+                                 "rewards": {"type": "string"},
+                                 "masteryReq": {"type": "integer"},
+                                 "minEnemyLevel": {"type": "integer"},
+                                 "maxEnemyLevel": {"type": "integer"},
+                                 "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                             }
+                         }},
+                'PreviousJobs': {"type": "array",
+                                 "items": {
+                                     "type": "object",
+                                     "properties": {
+                                         "jobType": {"type": "string"},
+                                         "rewards": {"type": "string"},
+                                         "masteryReq": {"type": "integer"},
+                                         "minEnemyLevel": {"type": "integer"},
+                                         "maxEnemyLevel": {"type": "integer"},
+                                         "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                                     }
+                                 }},
+
+                # Scarlet Spear Data
+                "PauseAutoScheduling": {"type": "boolean"},
+                "NextAltActivation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "NextAltExpiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "AltActivation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "AltExpiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EpochNum": {"type": "integer"},
+                "CompletionBonus": {"type": "array",
+                                    "items": {"type": "integer"}},
+                "Metadata": {"type": "string"},
+
+                # Reward
+                "Node": {"type": "string"},
+                "Goal": {"type": "integer"},
+                "InterimGoals": {"type": "array",
+                                 "items": {"type": "integer"}},
+
+                "Reward": {"type": "object",
+                           "properties": {
+                               "additionalProperties": False,
+                               "credits": {"type": "integer"},
+                               "xp": {"type": "integer"},
+                               "countedItems": {
+                                   "type": "array",
+                                   "items": {
+                                       "type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                           "ItemCount": {"type": "integer"},
+                                           "ItemType": {"type": "string"}
+                                       }
+                                   }
+                               },
+                               "countedStoreItems": {
+                                   "type": "array",
+                                   "items": {
+                                       "type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                           "ItemCount": {"type": "integer"},
+                                           "StoreItem": {"type": "string"}
+                                       }
+                                   }
+                               },
+                               "randomizedItems": {"type": "string"},
+                               "items": {
+                                   "type": "array",
+                                   "items": {"type": "string"}
+                               }
+                           }
+                           },
+                "InterimRewards": {"type": "array",
+                                   "items": {"type": "object",
+                                             "properties": {
+                                                 "additionalProperties": False,
+                                                 "credits": {"type": "integer"},
+                                                 "xp": {"type": "integer"},
+                                                 "countedItems": {
+                                                     "type": "array",
+                                                     "items": {
+                                                         "type": "object",
+                                                         "additionalProperties": False,
+                                                         "properties": {
+                                                             "ItemCount": {"type": "integer"},
+                                                             "ItemType": {"type": "string"}
+                                                         }
+                                                     }
+                                                 },
+                                                 "countedStoreItems": {
+                                                     "type": "array",
+                                                     "items": {
+                                                         "type": "object",
+                                                         "additionalProperties": False,
+                                                         "properties": {
+                                                             "ItemCount": {"type": "integer"},
+                                                             "StoreItem": {"type": "string"}
+                                                         }
+                                                     }
+                                                 },
+                                                 "randomizedItems": {"type": "string"},
+                                                 "items": {
+                                                     "type": "array",
+                                                     "items": {"type": "string"}
+                                                 }
+                                             }}},
+            },
+            "required": ["_id", "Activation", "Expiry", "Tag", "Desc"],
+        }
+    }
+}
 
 alerts_schema = {
     "type": "object",

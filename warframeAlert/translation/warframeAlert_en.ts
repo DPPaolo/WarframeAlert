@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -457,12 +456,12 @@
         <translation>Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="420"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="419"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="411"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="410"/>
         <source>oldBounty</source>
         <translation>Previous Bounty</translation>
     </message>
@@ -1076,6 +1075,19 @@
         <location filename="../components/tab/OtherWidgetTab.py" line="78"/>
         <source>relayStationUpdateError</source>
         <translation>Error on Relay Station</translation>
+    </message>
+</context>
+<context>
+    <name>reconstrutionEvent</name>
+    <message>
+        <location filename="../components/common/ReconstructionRelayEvent.py" line="18"/>
+        <source>resourcePlanet</source>
+        <translation>The resource can be obtained in these planet</translation>
+    </message>
+    <message>
+        <location filename="../components/common/ReconstructionRelayEvent.py" line="73"/>
+        <source>reconstructionNode</source>
+        <translation>Reconstruction</translation>
     </message>
 </context>
 <context>
