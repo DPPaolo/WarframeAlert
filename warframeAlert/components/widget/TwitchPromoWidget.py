@@ -5,6 +5,7 @@ from warframeAlert.components.common.TwitchBox import TwitchBox
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import remove_widget
+from warframeAlert.utils.logUtils import LogHandler
 
 
 class TwitchPromoWidget():

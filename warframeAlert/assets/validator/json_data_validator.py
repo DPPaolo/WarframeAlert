@@ -40,7 +40,7 @@ all_json_schema = {
                 "TwitchPromos": {"type": "array"},
                 "Version": {"type": "integer"},
                 "VoidTraders": {"type": "array"},
-                "WorldSeed": {"type": "string"}
+                "WorldSeed": {"type": "string"},
             },
             "required": ["ActiveMissions", "Alerts", "BadlandNodes", "BuildLabel", "ConstructionProjects",
                          "DailyDeals", "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion",
@@ -150,20 +150,30 @@ goals_schema = {
                 "Bounty": {"type": "string"},
                 "ToolTip": {"type": "string"},
                 "ScoreLocTag": {"type": "string"},
-                "MissionKeyName": {"type": "string"},
+                "ScoreMaxTag": {"type": "string"},
                 "ScoreVar": {"type": "string"},
+                "MissionKeyName": {"type": "string"},
                 "Success": {"type": "integer"},
                 "Faction": {"type": "string"},
                 "InstructionalItem": {"type": "string"},
+                "RoamingVIP": {"type": "string"},
+                "PrereqGoalTags": {"type": "string"},
 
                 # Fomorian or ghoul data
                 "HealthPct": {"type": "number"},
-                "VictimNode":  {"type": "string"},
-                "Transmission":  {"type": "string"},
+                "Fomorian": {"type": "boolean"},
+                "Best": {"type": "boolean"},
+                "ScoreTagBlocksGuildTierChanges": {"type": "boolean"},
+                "VictimNode": {"type": "string"},
+                "Transmission": {"type": "string"},
                 "OptionalInMission": {"type": "boolean"},
                 "Regions": {"type": "array",
                             "items": {"type": "integer"}},
                 "RegionIdx": {"type": "integer"},
+                "ArchwingDrops": {"type": "array",
+                                  "items": {"type": "string"}},
+                "RegionDrops": {"type": "array",
+                                "items": {"type": "string"}},
                 "UpgradeIds": {"type": "array",
                                "items": {
                                    "type": "object",
@@ -263,6 +273,111 @@ goals_schema = {
                 "CompletionBonus": {"type": "array",
                                     "items": {"type": "integer"}},
                 "Metadata": {"type": "string"},
+
+                # Hub Event
+                "ContinuousHubEvent": {"type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                           "Expiry": {
+                                               "type": "object",
+                                               "properties": {
+                                                   "$date": {"type": "object"},
+                                                   "items": {
+                                                       "type": "object",
+                                                       "properties": {
+                                                           "$numberLong": {"type": "integer"}
+                                                       }
+                                                   }
+                                               }
+                                           },
+                                           "Activation": {
+                                               "type": "object",
+                                               "properties": {
+                                                   "$date": {"type": "object"},
+                                                   "items": {
+                                                       "type": "object",
+                                                       "properties": {
+                                                           "$numberLong": {"type": "integer"}
+                                                       }
+                                                   }
+                                               }
+                                           },
+                                           "RepeatInterval": {
+                                               "type": "integer"
+                                           },
+                                           "Transmission": {"type": "string"}
+                                       },
+                                       "required": ["Expiry", "Activation", "RepeatInterval", "Transmission"]
+                                       },
+
+                "MissionInfo": {
+                    "additionalProperties": False,
+                    "properties": {
+                        "location": {"type": "string"},
+                        "levelOverride": {"type": "string"},
+                        "missionType": {"type": "string"},
+                        "faction": {"type": "string"},
+                        "enemySpec": {"type": "string"},
+                        "maxEnemyLevel": {"type": "integer"},
+                        "minEnemyLevel": {"type": "integer"},
+                        "archwingRequired": {"type": "boolean"},
+                        "isSharkwingMission": {"type": "boolean"},
+                        "maxWaveNum": {"type": "integer"},
+                        "nightmare": {"type": "integer"},
+                        "difficulty": {"type": "integer"},
+                        "missionReward": {
+                            "type": "object",
+                            "properties": {
+                                "additionalProperties": False,
+                                "credits": {"type": "integer"},
+                                "xp": {"type": "integer"},
+                                "countedItems": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "ItemCount": {"type": "integer"},
+                                            "ItemType": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "countedStoreItems": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "ItemCount": {"type": "integer"},
+                                            "StoreItem": {"type": "string"}
+                                        }
+                                    }
+                                },
+                                "randomizedItems": {"type": "string"},
+                                "items": {
+                                    "type": "array",
+                                    "items": {"type": "string"}
+                                }
+                            },
+                        },
+                        "descText": {"type": "string"},
+                        "extraEnemySpec": {"type": "string"},
+                        # Extra Data
+                        "goalTag": {"type": "string"},
+                        "exclusiveWeapon": {"type": "string"},
+                        "leadersAlwaysAllowed": {"type": "boolean"},
+                        "advancedSpawners": {"type": "array",
+                                             "items": {"type": "string"}},
+                        "requiredItems": {"type": "array",
+                                          "items": {"type": "string"}},
+                        "requiredItemsCounts": {"type": "number"},
+                        "consumeRequiredItems": {"type": "boolean"},
+                        "levelAuras": {"type": "array",
+                                       "items": {"type": "string"}},
+                        "vipAgent": {"type": "string"},
+                        "icon": {"type": "string"},
+                    }
+                },
 
                 # Reward
                 "Node": {"type": "string"},
@@ -400,8 +515,8 @@ alerts_schema = {
                         "enemySpec": {"type": "string"},
                         "maxEnemyLevel": {"type": "integer"},
                         "minEnemyLevel": {"type": "integer"},
-                        "archwingRequired": {"type": "integer"},
-                        "isSharkwingMission": {"type": "integer"},
+                        "archwingRequired": {"type": "boolean"},
+                        "isSharkwingMission": {"type": "boolean"},
                         "maxWaveNum": {"type": "integer"},
                         "nightmare": {"type": "integer"},
                         "difficulty": {"type": "integer"},
@@ -443,10 +558,19 @@ alerts_schema = {
                         "descText": {"type": "string"},
                         "extraEnemySpec": {"type": "string"},
                         # Extra Data
+                        "goalTag": {"type": "string"},
                         "exclusiveWeapon": {"type": "string"},
                         "leadersAlwaysAllowed": {"type": "boolean"},
                         "advancedSpawners": {"type": "array",
                                              "items": {"type": "string"}},
+                        "requiredItems": {"type": "array",
+                                          "items": {"type": "string"}},
+                        "requiredItemsCounts": {"type": "number"},
+                        "consumeRequiredItems": {"type": "boolean"},
+                        "levelAuras": {"type": "array",
+                                       "items": {"type": "string"}},
+                        "vipAgent": {"type": "string"},
+                        "icon": {"type": "string"},
 
                     },
                     "required": ["missionReward", "location", "missionType", "faction", "difficulty",
@@ -875,12 +999,12 @@ hub_events_schema = {
     "properties": {
         "HubEvents": {
             "type": "array",
-            "items": {"$ref": "#/definitions/HubEvents"}
+            "items": {"$ref": "#/definitions/hubEvents"}
         }
     },
     "required": ["HubEvents"],
     "definitions": {
-        "dailyDeals": {
+        "hubEvents": {
             "type": "object",
             "additionalProperties": False,
             "properties": {
@@ -926,7 +1050,8 @@ hub_events_schema = {
                 "Transmissions": {
                     "type": "array",
                     "items": {"type": "string"}
-                }
+                },
+                "Transmission": {"type": "string"}
             },
             "required": ["Expiry", "Activation", "RepeatInterval", "Transmissions"]
         }

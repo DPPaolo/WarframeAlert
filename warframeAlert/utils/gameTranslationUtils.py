@@ -243,6 +243,46 @@ def get_map_type(map_type):
         return get_last_item_with_backslash(map_type)
 
 
+def get_alert_aura(aura):
+    if (aura in warframeData.ALERT_LEVEL_AURA):
+        return warframeData.ALERT_LEVEL_AURA[aura][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownAuraType") + ": " + aura)
+        LogHandler.err(translate("gameTranslation", "unknownAuraType") + ": " + aura)
+        return get_last_item_with_backslash(aura)
+
+
+def get_alert_fx(fx):
+    if (fx in warframeData.ALERT_FX):
+        return warframeData.ALERT_FX[fx][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownFXType") + ": " + fx)
+        LogHandler.err(translate("gameTranslation", "unknownFXType") + ": " + fx)
+        return get_last_item_with_backslash(fx)
+
+
+def get_vip_agent(vip_agent):
+    if (vip_agent == ""):
+        return ""
+    if (vip_agent in warframeData.ALERT_BOSS):
+        return warframeData.ALERT_BOSS[vip_agent][OptionsHandler.get_option("Language", str)]
+    elif (vip_agent in warframeData.ALERT_VIP_AGENT):
+        return warframeData.ALERT_VIP_AGENT[vip_agent][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownVipType") + ": " + vip_agent)
+        LogHandler.err(translate("gameTranslation", "unknownVipType") + ": " + vip_agent)
+        return get_last_item_with_backslash(vip_agent)
+
+
+def get_task_type(task):
+    if (task in warframeData.TASK_TYPE):
+        return warframeData.TASK_TYPE[task][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
+        LogHandler.err(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
+        return get_last_item_with_backslash(task)
+
+
 def get_syndicate(syn):
     if (syn in warframeData.SYNDICATE_NAME):
         return warframeData.SYNDICATE_NAME[syn][OptionsHandler.get_option("Language", str)]

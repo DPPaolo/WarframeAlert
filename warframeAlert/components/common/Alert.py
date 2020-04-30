@@ -179,7 +179,10 @@ class Alert():
         elif ("Riven" in item):
             img = "/Lotus/Interface/Cards/Images/OmegaMod.png"
         else:
-            img = get_image_path_from_export_manifest(url_image)
+            if (url_image):
+                img = get_image_path_from_export_manifest(url_image)
+            else:
+                img = item
         image_name = "images" + get_separator() + get_last_item_with_backslash(img)
         self.AlertImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + img)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)

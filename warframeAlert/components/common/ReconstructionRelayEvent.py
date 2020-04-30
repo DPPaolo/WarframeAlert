@@ -3,7 +3,17 @@ from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Event import Event
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.gameTranslationUtils import get_region, get_node
+from warframeAlert.utils.gameTranslationUtils import get_region, get_node, get_task_type
+
+
+def get_reconstruction_task(name, cons_relay):
+    task = []
+    for data in cons_relay:
+        tag = data['Tag']
+        if (tag == name):
+            for tasks in data['Tasks']:
+                task.append(get_task_type(tasks))
+    return task
 
 
 class ReconstructionRelayEvent(Event):

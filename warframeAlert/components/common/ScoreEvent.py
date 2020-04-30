@@ -60,9 +60,10 @@ class ScoreEvent(Event):
             self.TABestLab.hide()
             self.TABest.hide()
 
-    def set_score_optional_tooltip(self, optional_in_mission, upgrades_id):
+    def set_score_optional_tooltip(self, optional_in_mission, upgrades_id, score_block_guilds):
         self.EventReqItemLab.setToolTip(translate("scoreEvent", "optionalInMission") + ": " + optional_in_mission)
         self.TAScoreLab.setToolTip(translate("scoreEvent", "upgradesId") + ": " + upgrades_id)
+        self.EventScoreLab.setToolTip(translate("scoreEvent", "scoreBlockGuilds") + ": " + score_block_guilds)
 
     def hide(self):
         super().hide()
