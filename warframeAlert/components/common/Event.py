@@ -54,6 +54,8 @@ class Event():
 
         self.EventImg = CommonImages()
 
+        self.TAInfoBox = QtWidgets.QVBoxLayout()
+        self.TABaseInfoBox = QtWidgets.QHBoxLayout()
         self.TADescvbox = QtWidgets.QVBoxLayout()
         self.TAEventBox = QtWidgets.QHBoxLayout()
 
@@ -92,14 +94,20 @@ class Event():
         self.TADescbox5.addWidget(self.EventReqMisLab)
         self.TADescbox5.addWidget(self.EventReqMis)
 
-        self.TADescvbox.addLayout(self.TADescbox1)
-        self.TADescvbox.addLayout(self.TADescbox2)
-        self.TADescvbox.addLayout(self.TADescbox3)
-        self.TADescvbox.addLayout(self.TADescbox4)
-        self.TADescvbox.addLayout(self.TADescbox5)
+        self.TAInfoBox.addStretch()
+        self.TAInfoBox.addLayout(self.TADescbox1)
+        self.TAInfoBox.addLayout(self.TADescbox2)
+        self.TAInfoBox.addLayout(self.TADescbox3)
+        self.TAInfoBox.addLayout(self.TADescbox4)
+        self.TAInfoBox.addLayout(self.TADescbox5)
+        self.TAInfoBox.addStretch()
 
-        self.TAEventBox.addLayout(self.TADescvbox, 3)
-        self.TAEventBox.addWidget(self.EventImg.image)
+        self.TABaseInfoBox.addLayout(self.TAInfoBox, 2)
+        self.TABaseInfoBox.addWidget(self.EventImg.image)
+
+        self.TADescvbox.addLayout(self.TABaseInfoBox)
+
+        self.TAEventBox.addLayout(self.TADescvbox)
 
     def add_event_object(self, layout):
         self.TADescvbox.addLayout(layout)
@@ -111,7 +119,7 @@ class Event():
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
             self.EventImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + icon)
-            self.EventImg.set_image_dimension(32, 32, QtCore.Qt.KeepAspectRatio)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
             self.icon = image_name
         else:
             self.EventImg.hide()
@@ -155,7 +163,7 @@ class Event():
         if (faction == ""):
             self.EventFactionLab.hide()
             self.EventFaction.hide()
-        if (faction == ""):
+        if (item_required == ""):
             self.EventReqItemLab.hide()
             self.EventReqItem.hide()
         if (roaming_vip == ""):

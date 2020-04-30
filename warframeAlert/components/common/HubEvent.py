@@ -114,11 +114,11 @@ def create_hub_event(hub):
     try:
         node = get_node(hub['Node'])
     except KeyError:
-        node = (translate("hubEvent", "none"))
+        node = (translate("hubEvent", "none"), "")
     if ('CinematicTag' in hub):
         cinematic = hub['CinematicTag']
     else:
-        cinematic = ""
+        cinematic = translate("hubEvent", "none")
     try:
         tag = hub['Tag']
     except KeyError:
