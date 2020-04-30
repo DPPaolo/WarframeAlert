@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets, QtGui
 from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWithImage
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.fileUtils import is_mac_os
+from warframeAlert.utils.fileUtils import is_mac_os, get_separator
 from warframeAlert.utils.stringUtils import set_barred
 from warframeAlert.utils.timeUtils import get_time
 
@@ -22,7 +22,8 @@ class DailyDeals:
         self.DealsAmount = QtWidgets.QLabel("N/D")
         self.DealsOriginalPriceLab = QtWidgets.QLabel(translate("dailyDeals", "price") + ": ")
         self.DealsOriginalPrice = QtWidgets.QLabel("N/D")
-        self.DealsPrice = CommonLabelWithImage("assets/icon/platinum.png", "N/D")
+        platinum_image = "assets" + get_separator() + "icon" + get_separator() + "platinum.png"
+        self.DealsPrice = CommonLabelWithImage(platinum_image, "N/D")
         self.DealsSales = QtWidgets.QLabel("N/D")
 
         font_barred = self.DealsOriginalPrice.font()

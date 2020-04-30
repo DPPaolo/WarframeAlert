@@ -24,8 +24,7 @@ class CommonImages():
             res = self.pixmap.load(current_dir + get_separator() + path_image)
             if (res):
                 self.image.setPixmap(self.pixmap)
-                return True
-            return False
+            return res
         elif (not check_file(path_image)):
             path = current_dir + get_separator() + path_image
             url = url_download_image
@@ -38,8 +37,7 @@ class CommonImages():
             if (res):
                 self.image.setPixmap(self.pixmap)
                 self.set_image_dimension(self.width, self.height, self.aspect_ratio, self.trasform)
-                return True
-            return False
+            return res
 
     def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, trasform=Qt.SmoothTransformation):
         self.width = width
