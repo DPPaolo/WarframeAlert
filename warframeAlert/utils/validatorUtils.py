@@ -20,6 +20,7 @@ def check_json_data(json_data):
     validate_prime_access_availabilities(json_data['PrimeAccessAvailability'])
     validate_prime_vault_availabilities(json_data['PrimeVaultAvailabilities'])
     validate_invasion_project(json_data['ProjectPct'])
+    validate_nightwave(json_data['SeasonInfo'])
     validate_twich_promos(json_data['TwitchPromos'])
     validate_version(json_data['Version'])
     validate_mobile_version(json_data['MobileVersion'])
@@ -88,6 +89,10 @@ def validate_prime_vault_availabilities(json_data):
 
 def validate_invasion_project(json_data):
     validate(instance={'ProjectPct': json_data}, schema=invasion_project_schema)
+
+
+def validate_nightwave(json_data):
+    validate(instance={'SeasonInfo': json_data}, schema=season_info_schema)
 
 
 def validate_twich_promos(json_data):

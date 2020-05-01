@@ -76,6 +76,90 @@ default_schema = {
     }
 }
 
+season_info_schema = {
+    "type": "object",
+    "properties": {
+        "SeasonInfo": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "AffiliationTag": {"type": "string"},
+                "Params": {"type": "string"},
+                "Phase": {"type": "integer"},
+                "Season": {"type": "integer"},
+                "ActiveChallenges": {"type": "array",
+                                     "items": {
+                                         "type": "object",
+                                         "additionalProperties": False,
+                                         "properties": {
+                                             "_id": {
+                                                 "type": "object",
+                                                 "properties": {
+                                                     "$oid": {"type": "string"}
+                                                 }
+                                             },
+                                             "Activation": {
+                                                 "type": "object",
+                                                 "properties": {
+                                                     "$date": {"type": "object"},
+                                                     "items": {
+                                                         "type": "object",
+                                                         "properties": {
+                                                             "$numberLong": {"type": "integer"}
+                                                         }
+                                                     }
+                                                 }
+                                             },
+                                             "Expiry": {
+                                                 "type": "object",
+                                                 "properties": {
+                                                     "$date": {"type": "object"},
+                                                     "items": {
+                                                         "type": "object",
+                                                         "properties": {
+                                                             "$numberLong": {"type": "integer"}
+                                                         }
+                                                     }
+                                                 }
+                                             },
+                                             "Challenge": {"type": "string"},
+                                             "Daily": {"type": "boolean"},
+                                         },
+                                         "required": ["_id", "Activation", "Expiry", "Challenge"],
+                                     }
+                                     },
+
+            },
+            "required": ["Activation", "Expiry", "AffiliationTag", "Season", "Phase", "Params", "ActiveChallenges"],
+        }
+    },
+    "required": ["SeasonInfo"],
+}
+
 construction_projects_schema = {
     "type": "object",
     "properties": {

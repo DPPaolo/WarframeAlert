@@ -330,3 +330,32 @@ def get_cetus_job_desc_it(job):
 
 def get_cetus_job_desc_en(job):
     return get_item_name_en(job)
+
+
+def get_nightwave_challenge(challenge):
+    if (challenge in warframeData.SEASON_CHALLENGE):
+        challenge_type = warframeData.SEASON_CHALLENGE[challenge]
+        if (OptionsHandler.get_option("Language", str) == "it"):
+            return challenge_type
+        else:
+            translation_path = "data" + get_separator() + "Language.json"
+            try:
+                fp = open(translation_path)
+                data = fp.read()
+            except KeyError:
+                print(translate("gameTranslation", "errorFileLanguage"))
+                LogHandler.err(translate("gameTranslation", "errorFileLanguage"))
+                return ("???", get_last_item_with_backslash(challenge), 0)
+            fp.close()
+            json_data = json.loads(data)
+            name_lower = challenge.lower()
+            found = 0
+            if (name_lower in json_data):
+                return (json_data[name_lower]['value'], json_data[name_lower]['desc'], challenge_type[2])
+            if (found == 0):
+                return ("???", get_last_item_with_backslash(challenge), 0)
+
+    else:
+        print(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
+        LogHandler.err(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
+        return ("???", get_last_item_with_backslash(challenge), 0)

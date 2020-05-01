@@ -1,0 +1,160 @@
+# coding=utf-8
+from PyQt5 import QtWidgets, QtCore
+
+from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.components.common.SeasonBox import SeasonBox
+from warframeAlert.services.notificationService import NotificationService
+from warframeAlert.services.optionHandlerService import OptionsHandler
+from warframeAlert.services.translationService import translate
+from warframeAlert.utils import commonUtils, timeUtils
+from warframeAlert.utils.commonUtils import remove_widget
+from warframeAlert.utils.gameTranslationUtils import get_syndicate, get_nightwave_challenge
+from warframeAlert.utils.logUtils import LogHandler
+
+
+class NightwaveWidgetTab():
+
+    def __init__(self):
+        self.alerts = {'SeasonInfo': []}
+
+        self.nightwaveWidget = QtWidgets.QWidget()
+        self.ChallengeWidget = QtWidgets.QWidget()
+
+        self.SeasonEnd = Countdown(" " + translate("nightwaveWidgetTab", "end") + " ")
+        self.SeasonEnd.set_alignment(QtCore.Qt.AlignRight)
+
+        self.SeasonData = QtWidgets.QLabel("??? " +
+                                           translate("nightwaveWidgetTab", "season") +
+                                           " N/D " +
+                                           translate("nightwaveWidgetTab", "phase") +
+                                           " N/D")
+        self.SeasonParam = QtWidgets.QLabel("")
+        self.SeasonSpace = QtWidgets.QLabel(" ")
+        self.SeasonData.setAlignment(QtCore.Qt.AlignLeft)
+        self.SeasonParam.setAlignment(QtCore.Qt.AlignLeft)
+
+        self.NoSeason = QtWidgets.QLabel(translate("nightwaveWidgetTab", "noNightwave"))
+        self.NoSeason.setAlignment(QtCore.Qt.AlignCenter)
+
+        self.NightwaveGrid = QtWidgets.QGridLayout(self.ChallengeWidget)
+        self.NightwaveGrid.addWidget(self.NoSeason, 0, 0)
+        self.NightwaveGrid.setAlignment(QtCore.Qt.AlignTop)
+
+        self.SeasonScrollBar = QtWidgets.QScrollArea()
+        self.SeasonScrollBar.setWidgetResizable(True)
+        self.SeasonScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+
+        self.SeasonScrollBar.setWidget(self.ChallengeWidget)
+
+        self.SeasonTabber = QtWidgets.QTabWidget()
+        self.SeasonTabber.insertTab(1, self.SeasonScrollBar, translate("nightwaveWidgetTab", "missionAvailable"))
+
+        self.SeasonGrid = QtWidgets.QGridLayout(self.nightwaveWidget)
+
+        self.SeasonGrid.addWidget(self.SeasonData, 0, 0)
+        self.SeasonGrid.addWidget(self.SeasonParam, 0, 1)
+        self.SeasonGrid.addWidget(self.SeasonSpace, 0, 2)
+        self.SeasonGrid.addWidget(self.SeasonEnd.TimeLab, 0, 3)
+        self.SeasonGrid.addWidget(self.SeasonTabber, 1, 0, 1, 4)
+        self.SeasonGrid.setAlignment(QtCore.Qt.AlignTop)
+
+        self.nightwaveWidget.setLayout(self.SeasonGrid)
+
+    def get_widget(self):
+        return self.nightwaveWidget
+
+    def update_nightwave_season(self, data):
+        if (OptionsHandler.get_option("Tab/Nightwave") == 1):
+            try:
+                self.parse_nightwave(data)
+            except Exception as er:
+                LogHandler.err(translate("nightwaveWidgetTab", "nightwaveParsingError") + ": " + str(er))
+                commonUtils.print_traceback(translate("nightwaveWidgetTab", "nightwaveParsingError") + ": " + str(er))
+                self.reset_season()
+                return
+        else:
+            self.reset_season()
+
+    def parse_nightwave(self, data):
+        self.reset_season()
+
+        if (data):
+            n_nightwave = len(self.alerts['SeasonInfo'])
+
+            init = timeUtils.get_time(data['Activation']['$date']['$numberLong'])
+            end = data['Expiry']['$date']['$numberLong']
+
+            syn = get_syndicate(data['AffiliationTag'])
+            season = data['Season']
+            phase = data['Phase']
+            param = data['Params']
+
+            self.update_nightwave_data(init, end, syn, season, phase, param)
+
+            for challenge in data['ActiveChallenges']:
+                challenge_id = challenge['_id']['$oid']
+                trovato = 0
+                for mission in self.alerts['SeasonInfo']:
+                    if (mission.get_challenge_id() == challenge_id):
+                        trovato = 1
+
+                if (trovato == 0):
+                    init = challenge['Activation']['$date']['$numberLong']
+                    end = challenge['Expiry']['$date']['$numberLong']
+
+                    mission = get_nightwave_challenge(challenge['Challenge'])
+                    if ('Daily' in challenge):
+                        daily = challenge['Daily']
+                    else:
+                        daily = False
+
+                    temp = SeasonBox(challenge_id)
+                    temp.set_data(init, end, mission, daily)
+                    self.alerts['SeasonInfo'].append(temp)
+
+                    del temp
+
+            self.add_nightwave(n_nightwave)
+        else:
+            self.season_not_available()
+
+    def update_nightwave_data(self, init, end, syn, season, phase, param):
+        self.SeasonEnd.set_countdown(end[:10])
+        self.SeasonEnd.start()
+        self.SeasonData.setToolTip(translate("nightwaveWidgetTab", "init") + " " + init)
+        self.SeasonData.setText(syn + "\t" + translate("nightwaveWidgetTab", "season") + " " + str(int(season) + 1)
+                                + " " + translate("nightwaveWidgetTab", "phase") + " " + str(int(phase) + 1))
+        if (param != ""):
+            self.SeasonParam.setText(translate("nightwaveWidgetTab", "parameters") + " " + str(param))
+
+    def add_nightwave(self, n_nightwave):
+        if (len(self.alerts['SeasonInfo']) > 0):
+            self.NoSeason.hide()
+        n = 0
+        for i in range(n_nightwave, len(self.alerts['SeasonInfo'])):
+            if (not self.alerts['SeasonInfo'][i].is_expired()):
+                self.NightwaveGrid.addLayout(self.alerts['SeasonInfo'][i].SeasonBox, int(n / 2), n % 2)
+                n += 1
+                NotificationService.send_notification(
+                    self.alerts['SeasonInfo'][i].get_title(),
+                    self.alerts['SeasonInfo'][i].to_string(),
+                    None)
+
+    def reset_season(self):
+        self.NoSeason.show()
+        canc = []
+        for i in range(0, len(self.alerts['SeasonInfo'])):
+            if (self.alerts['SeasonInfo'][i].is_expired()):
+                canc.append(i)
+        i = len(canc)
+        while i > 0:
+            self.alerts['SeasonInfo'][canc[i - 1]].hide()
+            remove_widget(self.alerts['SeasonInfo'][canc[i - 1]].SeasonBox)
+            del self.alerts['SeasonInfo'][canc[i - 1]]
+            i -= 1
+
+    def season_not_available(self):
+        self.SeasonEnd.set_countdown(-1)
+        self.SeasonEnd.start()
+        self.SeasonData.setText(translate("nightwaveWidgetTab", "noSeasonActive"))
+        self.SeasonParam.setText("")

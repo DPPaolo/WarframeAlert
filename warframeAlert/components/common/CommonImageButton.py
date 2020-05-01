@@ -41,13 +41,13 @@ class CommonImageButton():
     def set_image_news(self, image, url):
         assets_path = "assets" + get_separator() + "image"
         default_image = assets_path + get_separator() + "default_news_image.jpg"
-        if ("default_news_image" in image):
+        if ("default_news_image" in image or "imageproxy.php" in image):
             self.common_image.set_image(default_image)
-            return
-        image_path = "images" + get_separator() + "news" + get_separator() + image
-        res = self.common_image.set_image(image_path, url)
-        if (not res):
-            self.common_image.set_image(default_image)
+        else:
+            image_path = "images" + get_separator() + "news" + get_separator() + image
+            res = self.common_image.set_image(image_path, url)
+            if (not res):
+                self.common_image.set_image(default_image)
         self.update_image_news_button()
 
     def update_image_news_button(self):
