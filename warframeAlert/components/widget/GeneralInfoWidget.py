@@ -138,9 +138,11 @@ class GeneralInfoWidget():
             state = translate("generalWidget", "primeState1")  # White Skin?
         elif (prime['State'] == "PRIME2"):
             state = translate("generalWidget", "primeState2")  # Dark Skin?
+        elif (prime['State'] == "COMING_SOON"):
+            state = translate("generalWidget", "comingSoon")
         else:
             state = prime['State']
-            LogHandler.debug(translate("generalWidget", "primeStateUnknown") + state)
+            LogHandler.debug(translate("generalWidget", "primeStateUnknown") + " " + state)
         self.PrimeAccess.setText(state)
         if (len(vault_available) > 5):
             LogHandler.debug(translate("generalWidget", "morePrimeVault"))

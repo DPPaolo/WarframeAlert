@@ -130,7 +130,7 @@ class NightwaveWidgetTab():
     def add_nightwave(self, n_nightwave):
         if (len(self.alerts['SeasonInfo']) > 0):
             self.NoSeason.hide()
-        n = 0
+        n = n_nightwave
         for i in range(n_nightwave, len(self.alerts['SeasonInfo'])):
             if (not self.alerts['SeasonInfo'][i].is_expired()):
                 self.NightwaveGrid.addLayout(self.alerts['SeasonInfo'][i].SeasonBox, int(n / 2), n % 2)
@@ -155,6 +155,6 @@ class NightwaveWidgetTab():
 
     def season_not_available(self):
         self.SeasonEnd.set_countdown(-1)
-        self.SeasonEnd.start()
+        self.SeasonEnd.hide()
         self.SeasonData.setText(translate("nightwaveWidgetTab", "noSeasonActive"))
         self.SeasonParam.setText("")

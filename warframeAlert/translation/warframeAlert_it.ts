@@ -263,17 +263,17 @@
         <translation>Oggetto Scontato da Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="70"/>
+        <location filename="../components/common/DailyDeals.py" line="71"/>
         <source>sold</source>
         <translation>Venduti</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="71"/>
+        <location filename="../components/common/DailyDeals.py" line="72"/>
         <source>price</source>
         <translation>Costo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="61"/>
+        <location filename="../components/common/DailyDeals.py" line="62"/>
         <source>sale</source>
         <translation>Scontato del</translation>
     </message>
@@ -283,7 +283,7 @@
         <translation>Termina tra</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="57"/>
+        <location filename="../components/common/DailyDeals.py" line="58"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
@@ -341,12 +341,12 @@
         <translation>Item Richiesto per l&apos;evento</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="129"/>
+        <location filename="../components/common/Event.py" line="137"/>
         <source>numEvent</source>
         <translation>Riproposizione dell&apos;evento numero</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="131"/>
+        <location filename="../components/common/Event.py" line="139"/>
         <source>transmission</source>
         <translation>Trasmissione Attiva</translation>
     </message>
@@ -515,7 +515,7 @@
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="344"/>
+        <location filename="../utils/gameTranslationUtils.py" line="347"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
@@ -565,7 +565,7 @@
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="324"/>
+        <location filename="../utils/gameTranslationUtils.py" line="327"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
@@ -580,42 +580,42 @@
         <translation>Restrizione Arma Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="304"/>
+        <location filename="../utils/gameTranslationUtils.py" line="307"/>
         <source>unknownJob</source>
         <translation>Taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="323"/>
+        <location filename="../utils/gameTranslationUtils.py" line="326"/>
         <source>unknownJobDesc</source>
         <translation>Descrizione taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="288"/>
+        <location filename="../utils/gameTranslationUtils.py" line="291"/>
         <source>unknownSyndicate</source>
         <translation>Associazione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="357"/>
+        <location filename="../utils/gameTranslationUtils.py" line="360"/>
         <source>unknownChallengeType</source>
         <translation>Sfida Nightwave sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="249"/>
+        <location filename="../utils/gameTranslationUtils.py" line="251"/>
         <source>unknownAuraType</source>
         <translation>Aura Missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="257"/>
+        <location filename="../utils/gameTranslationUtils.py" line="260"/>
         <source>unknownFXType</source>
         <translation>FX missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="270"/>
+        <location filename="../utils/gameTranslationUtils.py" line="273"/>
         <source>unknownVipType</source>
         <translation>Vip missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="279"/>
+        <location filename="../utils/gameTranslationUtils.py" line="282"/>
         <source>unknownReconstructionTaskType</source>
         <translation>Obiettivo Ricostruzione Stazione sconosciuto</translation>
     </message>
@@ -748,37 +748,37 @@
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="143"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="145"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="153"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
@@ -786,6 +786,11 @@
         <location filename="../components/widget/GeneralInfoWidget.py" line="75"/>
         <source>forceLogoutVersion</source>
         <translation>Obbligo di Logout</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="142"/>
+        <source>comingSoon</source>
+        <translation>Prossimamente</translation>
     </message>
 </context>
 <context>
@@ -1100,7 +1105,7 @@
         <translation>Errore nel parsing delle Nightwave</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="157"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="159"/>
         <source>noSeasonActive</source>
         <translation>Nessuna Stagione attiva</translation>
     </message>
@@ -1225,17 +1230,17 @@
         <translation>Punteggio Migliore</translation>
     </message>
     <message>
-        <location filename="../components/common/ScoreEvent.py" line="64"/>
+        <location filename="../components/common/ScoreEvent.py" line="65"/>
         <source>optionalInMission</source>
         <translation>Opzionale in missione</translation>
     </message>
     <message>
-        <location filename="../components/common/ScoreEvent.py" line="65"/>
+        <location filename="../components/common/ScoreEvent.py" line="67"/>
         <source>upgradesId</source>
         <translation>Id Upgrade</translation>
     </message>
     <message>
-        <location filename="../components/common/ScoreEvent.py" line="66"/>
+        <location filename="../components/common/ScoreEvent.py" line="69"/>
         <source>scoreBlockGuilds</source>
         <translation>Il punteggio blocca il cambio di Grado dei clan</translation>
     </message>
@@ -1243,32 +1248,32 @@
 <context>
     <name>seasonBox</name>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="70"/>
+        <location filename="../components/common/SeasonBox.py" line="61"/>
         <source>points</source>
         <translation>Punti</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="72"/>
+        <location filename="../components/common/SeasonBox.py" line="63"/>
         <source>daily</source>
         <translation>Giornaliero</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="75"/>
+        <location filename="../components/common/SeasonBox.py" line="65"/>
         <source>weekly</source>
         <translation>Settimanale</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="78"/>
+        <location filename="../components/common/SeasonBox.py" line="67"/>
         <source>weeklyElite</source>
         <translation>Settimanale Elite</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="81"/>
+        <location filename="../components/common/SeasonBox.py" line="69"/>
         <source>unkown</source>
         <translation>Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="65"/>
+        <location filename="../components/common/SeasonBox.py" line="56"/>
         <source>init</source>
         <translation>Apparsa il</translation>
     </message>
@@ -1284,82 +1289,82 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="98"/>
+        <location filename="../components/common/SpecialAlert.py" line="99"/>
         <source>minutes</source>
         <translation>Minuti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="100"/>
+        <location filename="../components/common/SpecialAlert.py" line="101"/>
         <source>waves</source>
         <translation>Ondate</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="103"/>
+        <location filename="../components/common/SpecialAlert.py" line="104"/>
         <source>terminal</source>
         <translation>Terminale</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="105"/>
+        <location filename="../components/common/SpecialAlert.py" line="106"/>
         <source>terminals</source>
         <translation>Terminali</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="107"/>
+        <location filename="../components/common/SpecialAlert.py" line="108"/>
         <source>rounds</source>
         <translation>Round</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="111"/>
+        <location filename="../components/common/SpecialAlert.py" line="112"/>
         <source>pipe</source>
         <translation>Condutture</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="113"/>
+        <location filename="../components/common/SpecialAlert.py" line="114"/>
         <source>unkownWaveType</source>
         <translation>maxWaveNum non trovato per la missione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="50"/>
+        <location filename="../components/common/SpecialAlert.py" line="51"/>
         <source>requiredItem</source>
         <translation>Item Richiesto</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="52"/>
+        <location filename="../components/common/SpecialAlert.py" line="53"/>
         <source>itemConsumed</source>
         <translation>Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="54"/>
+        <location filename="../components/common/SpecialAlert.py" line="55"/>
         <source>itemNotConsumed</source>
         <translation>Non Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="47"/>
+        <location filename="../components/common/SpecialAlert.py" line="48"/>
         <source>restriction</source>
         <translation>Restrizione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="60"/>
+        <location filename="../components/common/SpecialAlert.py" line="61"/>
         <source>leaderAllowed</source>
         <translation>Miniboss presenti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="62"/>
+        <location filename="../components/common/SpecialAlert.py" line="63"/>
         <source>advancedSpawn</source>
         <translation>Spawn avanzato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="64"/>
+        <location filename="../components/common/SpecialAlert.py" line="65"/>
         <source>vipAgent</source>
         <translation>Nemico speciale extra</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="66"/>
+        <location filename="../components/common/SpecialAlert.py" line="67"/>
         <source>missionAura</source>
         <translation>Aura extra missione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="68"/>
+        <location filename="../components/common/SpecialAlert.py" line="69"/>
         <source>fx</source>
         <translation>FX missione</translation>
     </message>
