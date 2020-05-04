@@ -50,6 +50,11 @@ def check_folder(name):
     return os.path.isdir(d + get_separator() + name)
 
 
+def delete_file(path):
+    if (os.path.exists(path)):
+        os.remove(path)
+
+
 def create_default_folder():
     d = get_cur_dir()
     if (not check_folder("images")):

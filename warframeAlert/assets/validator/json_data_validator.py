@@ -48,8 +48,8 @@ all_json_schema = {
                          "Goals", "HubEvents", "Invasions", "LibraryInfo", "MobileVersion", "NodeOverrides",
                          "PVPActiveTournaments", "PVPAlternativeModes", "PVPChallengeInstances",
                          "PersistentEnemies",
-                         "PrimeAccessAvailability", "PrimeVaultAvailabilities", "ProjectPct", "SeasonInfo",
-                         "Sorties", "SyndicateMissions", "Time", "Tmp", "TwitchPromos", "Version", "VoidTraders",
+                         "PrimeAccessAvailability", "PrimeVaultAvailabilities", "ProjectPct", "Sorties",
+                         "SyndicateMissions", "Time", "Tmp", "TwitchPromos", "Version", "VoidTraders",
                          "WorldSeed"]
         },
     },
@@ -1405,7 +1405,8 @@ prime_access_availabilities_schema = {
             "additionalProperties": False,
             "properties": {
                 "State": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["PRIME1", "PRIME2", "COMING_SOON"]
                 }
             },
             "required": ["State"]
