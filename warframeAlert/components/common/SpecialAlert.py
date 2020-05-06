@@ -23,7 +23,6 @@ class SpecialAlert(Alert):
         self.extra_text = ""
 
         self.AlertExtraInfo = QtWidgets.QLabel("")
-        self.AlertExtraInfo.setAlignment(QtCore.Qt.AlignCenter)
         self.AlertExtraInfo.setFont(self.Font)
 
         self.AlerthExtraBox0 = QtWidgets.QHBoxLayout()
@@ -47,8 +46,10 @@ class SpecialAlert(Alert):
         if (weapon != ""):
             self.extra_text += translate("specialAlert", "restriction") + ": " + str(weapon)
         if (reqitem != ""):
+            if (weapon != ""):
+                self.extra_text += "\t"
+            self.extra_text += translate("specialAlert", "requiredItem") + ": " + str(reqitem)
             if (consume_item != ""):
-                self.extra_text += "\t" + translate("specialAlert", "requiredItem") + ": " + str(reqitem)
                 if (consume_item == translate("commonUtils", "yes")):
                     self.extra_text += " " + translate("specialAlert", "itemConsumed")
                 else:
@@ -57,8 +58,10 @@ class SpecialAlert(Alert):
             self.extra_text += ")"
 
     def set_alert_other_info(self, leader, advanced_spawn, aura, vip, fx):
+        if (self.extra_text != ""):
+            self.extra_text += "\n"
         if (leader != ""):
-            self.extra_text += "\t" + translate("specialAlert", "leaderAllowed") + "? " + str(leader)
+            self.extra_text += translate("specialAlert", "leaderAllowed") + "? " + str(leader)
         if (advanced_spawn != ""):
             self.extra_text += "\t" + translate("specialAlert", "advancedSpawn") + ": " + str(advanced_spawn)
         if (vip != ""):

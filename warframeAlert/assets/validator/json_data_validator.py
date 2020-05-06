@@ -76,6 +76,80 @@ default_schema = {
     }
 }
 
+syndicate_schema = {
+    "type": "object",
+    "properties": {
+        "SyndicateMissions": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/syndicate"},
+        }
+    },
+    "required": ["SyndicateMissions"],
+    "definitions": {
+        "syndicate": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Tag": {
+                    "type": "string",
+                    "enum": ["ArbitersSyndicate", "CephalonSudaSyndicate", "NewLokaSyndicate",
+                             "PerrinSyndicate", "RedVeilSyndicate", "SteelMeridianSyndicate", "AssassinsSyndicate",
+                             "QuillsSyndicate", "CetusSyndicate", "VentKidsSyndicate", "VoxSyndicate",
+                             "SolarisSyndicate", "RadioLegionSyndicate", "RadioLegionIntermissionSyndicate",
+                             "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
+                             "RadioLegion3Syndicate", "HivemindSyndicate"]
+                },
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Seed": {"type": "integer"},
+                "Nodes": {"type": "array",
+                          "items": {"type": "string"}},
+                'Jobs': {"type": "array",
+                         "items": {
+                             "type": "object",
+                             "properties": {
+                                 "jobType": {"type": "string"},
+                                 "rewards": {"type": "string"},
+                                 "masteryReq": {"type": "integer"},
+                                 "minEnemyLevel": {"type": "integer"},
+                                 "maxEnemyLevel": {"type": "integer"},
+                                 "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                             }
+                         }},
+            },
+            "required": ["Tag", "Activation", "Expiry", "_id", "Seed", "Nodes"],
+        }
+    }
+}
+
 season_info_schema = {
     "type": "object",
     "properties": {

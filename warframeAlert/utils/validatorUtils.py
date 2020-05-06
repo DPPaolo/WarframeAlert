@@ -22,6 +22,7 @@ def check_json_data(json_data):
     validate_invasion_project(json_data['ProjectPct'])
     if ('SeasonInfo' in json_data):
         validate_nightwave(json_data['SeasonInfo'])
+    validate_syndicate(json_data['SyndicateMissions'])
     validate_twich_promos(json_data['TwitchPromos'])
     validate_version(json_data['Version'])
     validate_mobile_version(json_data['MobileVersion'])
@@ -94,6 +95,10 @@ def validate_invasion_project(json_data):
 
 def validate_nightwave(json_data):
     validate(instance={'SeasonInfo': json_data}, schema=season_info_schema)
+
+
+def validate_syndicate(json_data):
+    validate(instance={'SyndicateMissions': json_data}, schema=syndicate_schema)
 
 
 def validate_twich_promos(json_data):
