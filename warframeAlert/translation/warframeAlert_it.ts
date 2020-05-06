@@ -515,7 +515,7 @@
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="347"/>
+        <location filename="../utils/gameTranslationUtils.py" line="356"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
@@ -565,7 +565,7 @@
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="327"/>
+        <location filename="../utils/gameTranslationUtils.py" line="336"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
@@ -580,12 +580,12 @@
         <translation>Restrizione Arma Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="307"/>
+        <location filename="../utils/gameTranslationUtils.py" line="316"/>
         <source>unknownJob</source>
         <translation>Taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="326"/>
+        <location filename="../utils/gameTranslationUtils.py" line="335"/>
         <source>unknownJobDesc</source>
         <translation>Descrizione taglia sconosciuta</translation>
     </message>
@@ -595,7 +595,7 @@
         <translation>Associazione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="360"/>
+        <location filename="../utils/gameTranslationUtils.py" line="369"/>
         <source>unknownChallengeType</source>
         <translation>Sfida Nightwave sconosciuta</translation>
     </message>
@@ -618,6 +618,11 @@
         <location filename="../utils/gameTranslationUtils.py" line="282"/>
         <source>unknownReconstructionTaskType</source>
         <translation>Obiettivo Ricostruzione Stazione sconosciuto</translation>
+    </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="300"/>
+        <source>unknownSyndicateRank</source>
+        <translation>Nome Rango Associazione sconosciuto</translation>
     </message>
 </context>
 <context>
@@ -1430,6 +1435,34 @@
         <location filename="../components/common/SquadLinkEvent.py" line="72"/>
         <source>completitionBonus</source>
         <translation>Bonus Completamento</translation>
+    </message>
+</context>
+<context>
+    <name>syndicateBox</name>
+    <message>
+        <location filename="../components/common/SyndicateBox.py" line="76"/>
+        <source>rank1</source>
+        <translation>Rango 1</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SyndicateBox.py" line="77"/>
+        <source>rank2</source>
+        <translation>Rango 2</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SyndicateBox.py" line="78"/>
+        <source>rank3</source>
+        <translation>Rango 3</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SyndicateBox.py" line="79"/>
+        <source>rank4</source>
+        <translation>Rango 4</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SyndicateBox.py" line="80"/>
+        <source>rank5</source>
+        <translation>Rango 5</translation>
     </message>
 </context>
 <context>

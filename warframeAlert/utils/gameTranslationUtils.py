@@ -292,6 +292,15 @@ def get_syndicate(syn):
         return syn
 
 
+def get_syndicate_rank(syn, rank):
+    if (syn in warframeData.SYNDICATE_RANK_NAME):
+        return warframeData.SYNDICATE_RANK_NAME[syn][OptionsHandler.get_option("Language", str)][rank]
+    else:
+        print(translate("gameTranslation", "unknownSyndicateRank") + ": " + str(rank) + " " + syn)
+        LogHandler.err(translate("gameTranslation", "unknownSyndicateRank") + str(rank) + " " + ": " + syn)
+        return syn
+
+
 def get_cetus_job(job):
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_cetus_job_it(job)

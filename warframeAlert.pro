@@ -16,6 +16,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/SimarisTarget.py \
                warframeAlert/components/common/SpecialAlert.py \
                warframeAlert/components/common/SquadLinkEvent.py \
+               warframeAlert/components/common/SyndicateBox.py \
                warframeAlert/components/common/TwitchBox.py \
                warframeAlert/components/tab/AccolyteWidgetTab.py \
                warframeAlert/components/tab/EventsWidgetTab.py \
