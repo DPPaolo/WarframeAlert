@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -166,24 +165,70 @@
         <translation>Livello</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="93"/>
+        <location filename="../components/common/BountyBox.py" line="92"/>
         <source>rewardType</source>
         <translation>Ricompense Tipo</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="100"/>
+        <location filename="../components/common/BountyBox.py" line="99"/>
         <source>dropFortuna</source>
         <translation>Drop Taglia Orb Vallis</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="106"/>
+        <location filename="../components/common/BountyBox.py" line="105"/>
         <source>dropGhoul</source>
         <translation>Drop Taglia Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="112"/>
+        <location filename="../components/common/BountyBox.py" line="111"/>
         <source>dropCetus</source>
         <translation>Drop Taglia Cetus</translation>
+    </message>
+</context>
+<context>
+    <name>bountyWidget</name>
+    <message>
+        <location filename="../components/widget/BountyWidget.py" line="15"/>
+        <source>noBounty</source>
+        <translation>Nessuna taglia disponibile</translation>
+    </message>
+</context>
+<context>
+    <name>bountyWidgetTab</name>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="60"/>
+        <source>newSynJobs</source>
+        <translation>Nuove taglie per il sindacato</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="56"/>
+        <source>bountiesError</source>
+        <translation>Errore nelle taglie</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="103"/>
+        <source>bountyInit</source>
+        <translation>Inizio Taglie</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="76"/>
+        <source>cetusDay</source>
+        <translation>Cetus - Notte tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="78"/>
+        <source>cetusNight</source>
+        <translation>Cetus - Giorno tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="90"/>
+        <source>fortunaHot</source>
+        <translation>Fortuna - Freddo tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="92"/>
+        <source>fortunaCold</source>
+        <translation>Fortuna - Caldo tra</translation>
     </message>
 </context>
 <context>
@@ -250,7 +295,7 @@
         <translation>Errore nel calcolo del tempo del countdown</translation>
     </message>
     <message>
-        <location filename="../components/common/Countdown.py" line="41"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
@@ -1294,37 +1339,37 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="99"/>
+        <location filename="../components/common/SpecialAlert.py" line="102"/>
         <source>minutes</source>
         <translation>Minuti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="101"/>
+        <location filename="../components/common/SpecialAlert.py" line="104"/>
         <source>waves</source>
         <translation>Ondate</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="104"/>
+        <location filename="../components/common/SpecialAlert.py" line="107"/>
         <source>terminal</source>
         <translation>Terminale</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="106"/>
+        <location filename="../components/common/SpecialAlert.py" line="109"/>
         <source>terminals</source>
         <translation>Terminali</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <location filename="../components/common/SpecialAlert.py" line="111"/>
         <source>rounds</source>
         <translation>Round</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <location filename="../components/common/SpecialAlert.py" line="115"/>
         <source>pipe</source>
         <translation>Condutture</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="114"/>
+        <location filename="../components/common/SpecialAlert.py" line="117"/>
         <source>unkownWaveType</source>
         <translation>maxWaveNum non trovato per la missione</translation>
     </message>
@@ -1334,42 +1379,42 @@
         <translation>Item Richiesto</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="53"/>
+        <location filename="../components/common/SpecialAlert.py" line="54"/>
         <source>itemConsumed</source>
         <translation>Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="55"/>
+        <location filename="../components/common/SpecialAlert.py" line="56"/>
         <source>itemNotConsumed</source>
         <translation>Non Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="48"/>
+        <location filename="../components/common/SpecialAlert.py" line="47"/>
         <source>restriction</source>
         <translation>Restrizione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="61"/>
+        <location filename="../components/common/SpecialAlert.py" line="64"/>
         <source>leaderAllowed</source>
         <translation>Miniboss presenti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="63"/>
+        <location filename="../components/common/SpecialAlert.py" line="66"/>
         <source>advancedSpawn</source>
         <translation>Spawn avanzato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="65"/>
+        <location filename="../components/common/SpecialAlert.py" line="68"/>
         <source>vipAgent</source>
         <translation>Nemico speciale extra</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="67"/>
+        <location filename="../components/common/SpecialAlert.py" line="70"/>
         <source>missionAura</source>
         <translation>Aura extra missione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="69"/>
+        <location filename="../components/common/SpecialAlert.py" line="72"/>
         <source>fx</source>
         <translation>FX missione</translation>
     </message>

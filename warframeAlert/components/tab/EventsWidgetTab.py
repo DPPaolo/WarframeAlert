@@ -1,7 +1,7 @@
 # coding=utf-8
 from PyQt5 import QtWidgets, QtCore, QtGui
 
-from warframeAlert.components.common.BountyBox import create_cetus_box
+from warframeAlert.components.common.BountyBox import create_bounty_box
 from warframeAlert.components.common.ClanEvent import ClanEvent
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.Event import EventType, Event
@@ -395,28 +395,28 @@ def create_event(event_id, event, relay):
     # Bounty Data
     if ('PreviousJobs' in event):
         for job in event['PreviousJobs']:
-            bounty = create_cetus_box(job)
+            bounty = create_bounty_box(job)
             if ('JobAffiliationTag' in event):
                 syn = get_syndicate(event['JobAffiliationTag'])
                 bounty.set_syndicate(syn, translate("eventsWidget", "event"))
             if ('JobPreviousVersion' in event):
-                bounty.set_cetus_id(event['JobPreviousVersion']['$oid'])
+                bounty.set_bounty_id(event['JobPreviousVersion']['$oid'])
 
             spoiler = Spoiler(translate("eventsWidget", "oldBounty"))
-            spoiler.set_content_layout(bounty.CetusBox)
+            spoiler.set_content_layout(bounty.BountyBox)
             temp.add_event_widget(spoiler)
 
     if ('Jobs' in event):
         for job in event['Jobs']:
-            bounty = create_cetus_box(job)
+            bounty = create_bounty_box(job)
             if ('JobAffiliationTag' in event):
                 syn = get_syndicate(event['JobAffiliationTag'])
                 bounty.set_syndicate(syn, translate("eventsWidget", "event"))
             if ('JobCurrentVersion' in event):
-                bounty.set_cetus_id(event['JobCurrentVersion']['$oid'])
+                bounty.set_bounty_id(event['JobCurrentVersion']['$oid'])
 
             temp.add_event_object(EmptySpace().SpaceBox)
-            temp.add_event_object(bounty.CetusBox)
+            temp.add_event_object(bounty.BountyBox)
 
     # Mission Data
     if ('MissionInfo' in event):

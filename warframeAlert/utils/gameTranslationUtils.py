@@ -301,14 +301,14 @@ def get_syndicate_rank(syn, rank):
         return syn
 
 
-def get_cetus_job(job):
+def get_bounty_job(job):
     if (OptionsHandler.get_option("Language", str) == "it"):
-        return get_cetus_job_it(job)
+        return get_bounty_job_it(job)
     else:
-        return get_cetus_job_en(job)
+        return get_bounty_job_en(job)
 
 
-def get_cetus_job_it(job):
+def get_bounty_job_it(job):
     if (job in warframeData.CETUS_JOB_NAME):
         return warframeData.CETUS_JOB_NAME[job]
     else:
@@ -317,11 +317,11 @@ def get_cetus_job_it(job):
         return job
 
 
-def get_cetus_job_en(job):
+def get_bounty_job_en(job):
     return get_item_name_en(job)
 
 
-def get_cetus_job_desc(job):
+def get_bounty_job_desc(job):
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_cetus_job_desc_it(job)
     else:
