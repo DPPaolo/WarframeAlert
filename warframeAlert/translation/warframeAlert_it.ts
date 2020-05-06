@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>accolyt</name>
     <message>
@@ -196,39 +197,44 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="60"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="61"/>
         <source>newSynJobs</source>
         <translation>Nuove taglie per il sindacato</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="56"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="58"/>
         <source>bountiesError</source>
         <translation>Errore nelle taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="103"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
         <source>bountyInit</source>
         <translation>Inizio Taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="76"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="77"/>
         <source>cetusDay</source>
         <translation>Cetus - Notte tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="78"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="79"/>
         <source>cetusNight</source>
         <translation>Cetus - Giorno tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="90"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="87"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Freddo tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="92"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Caldo tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="24"/>
+        <source>bountyEnd</source>
+        <translation>Scadono tra</translation>
     </message>
 </context>
 <context>
@@ -295,7 +301,7 @@
         <translation>Errore nel calcolo del tempo del countdown</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
+        <location filename="../components/common/Countdown.py" line="41"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>

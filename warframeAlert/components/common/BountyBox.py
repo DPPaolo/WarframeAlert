@@ -137,6 +137,6 @@ def create_bounty_box(job):
             xp.append(i)
     if ('jobType' in job):
         job_type = job['jobType']
-    cetus = BountyBox()
-    cetus.set_bounty_mission(job_type, rew, minlv, maxlv, xp)
-    return cetus
+    bounty = BountyBox()
+    bounty.set_bounty_mission(job_type, rew, minlv, maxlv, xp)
+    return bounty

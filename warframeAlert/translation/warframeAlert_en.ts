@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>accolyt</name>
     <message>
@@ -196,39 +197,44 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="60"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="61"/>
         <source>newSynJobs</source>
         <translation>New Syndicate Jobs for</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="56"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="58"/>
         <source>bountiesError</source>
         <translation>Error on bounties</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="103"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
         <source>bountyInit</source>
         <translation>Bounties Start</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="76"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="77"/>
         <source>cetusDay</source>
         <translation>Cetus - Night in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="78"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="79"/>
         <source>cetusNight</source>
         <translation>Cetus - Day in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="90"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="87"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Cold in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="92"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Warn in</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="24"/>
+        <source>bountyEnd</source>
+        <translation>Expiry in</translation>
     </message>
 </context>
 <context>
@@ -295,7 +301,7 @@
         <translation>Error during calculation of countdown timer</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
+        <location filename="../components/common/Countdown.py" line="41"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
