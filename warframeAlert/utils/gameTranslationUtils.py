@@ -322,23 +322,12 @@ def get_bounty_job_en(job):
 
 
 def get_bounty_job_desc(job):
-    if (OptionsHandler.get_option("Language", str) == "it"):
-        return get_cetus_job_desc_it(job)
-    else:
-        return get_cetus_job_desc_en(job)
-
-
-def get_cetus_job_desc_it(job):
     if (job in warframeData.CETUS_JOB_DESC):
-        return warframeData.CETUS_JOB_DESC[job]
+        return warframeData.CETUS_JOB_DESC[job][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownJobDesc") + ": " + job)
         LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + job)
-        return " "
-
-
-def get_cetus_job_desc_en(job):
-    return get_item_name_en(job)
+        return warframeData.CETUS_JOB_DESC[""][OptionsHandler.get_option("Language", str)]
 
 
 def get_nightwave_challenge(challenge):

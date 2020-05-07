@@ -20,20 +20,20 @@ class CommonImages():
 
     def set_image(self, path_image, url_download_image=None):
         current_dir = get_cur_dir()
+        path = current_dir + get_separator() + path_image
         if ("assets" in path_image):
-            res = self.pixmap.load(current_dir + get_separator() + path_image)
+            res = self.pixmap.load(path)
             if (res):
                 self.image.setPixmap(self.pixmap)
             return res
         elif (not check_file(path_image)):
-            path = current_dir + get_separator() + path_image
             url = url_download_image
             self.downloader_thread = networkService.Downloader(url, path)
             self.downloader_thread.start()
             self.downloader_thread.download_completed.connect(lambda: self.set_image(path_image, url_download_image))
             return False
         else:
-            res = self.pixmap.load(current_dir + get_separator() + path_image)
+            res = self.pixmap.load(path)
             if (res):
                 self.image.setPixmap(self.pixmap)
                 self.set_image_dimension(self.width, self.height, self.aspect_ratio, self.trasform)

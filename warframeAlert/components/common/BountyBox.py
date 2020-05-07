@@ -4,7 +4,9 @@ from PyQt5 import QtGui, QtWidgets
 from warframeAlert.components.common.MissionDropView import MissionDropView
 from warframeAlert.components.widget.MissionDropViewWidget import MissionDropViewWidget
 from warframeAlert.services.translationService import translate
+from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.gameTranslationUtils import get_bounty_job, get_bounty_job_desc
+from warframeAlert.utils.stringUtils import divide_message
 from warframeAlert.utils.warframeUtils import get_bounty_reward
 
 
@@ -64,8 +66,8 @@ class BountyBox():
 
     def set_bounty_mission(self, job, rew, minlv, maxlv, xp):
         self.reward = rew
-        self.BountyJob.setText(get_bounty_job(job))
-        self.BountyDesc.setText(get_bounty_job_desc(job))
+        self.BountyJob.setText(get_last_item_with_backslash(get_bounty_job(job)))
+        self.BountyDesc.setText(divide_message(get_bounty_job_desc(job)))
         self.BountyLevel.setText(translate("bountyBox", "level") + ": " + str(minlv) + " - " + str(maxlv))
         affinity = 0
         for i in range(0, len(xp)):
@@ -103,12 +105,14 @@ class BountyBox():
             self.missionDropWidget = MissionDropViewWidget(None, drop)
             self.viewDropWidget = self.missionDropWidget.get_widget()
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropGhoul"))
-        else:
+        elif ('Eidolon' in self.reward):
             reward = get_bounty_reward(self.reward, "cetus")
-            drop.set_drop(3, name, reward)
+            drop.set_drop(1, name, reward)
             self.missionDropWidget = MissionDropViewWidget(None, drop)
             self.viewDropWidget = self.missionDropWidget.get_widget()
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropCetus"))
+        else:
+            print(translate("bountyBox", "noBountyRewardFound") + " " + self.reward)
         self.viewDropWidget.show()
 
     def hide(self):

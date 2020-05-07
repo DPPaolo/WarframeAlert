@@ -185,11 +185,16 @@
         <source>dropCetus</source>
         <translation>Cetus Bounty Drop</translation>
     </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="113"/>
+        <source>noBountyRewardFound</source>
+        <translation>Unkown bounty reward</translation>
+    </message>
 </context>
 <context>
     <name>bountyWidget</name>
     <message>
-        <location filename="../components/widget/BountyWidget.py" line="15"/>
+        <location filename="../components/widget/BountyWidget.py" line="18"/>
         <source>noBounty</source>
         <translation>No Bounty available</translation>
     </message>
@@ -197,44 +202,59 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="61"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="73"/>
         <source>newSynJobs</source>
         <translation>New Syndicate Jobs for</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="58"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="70"/>
         <source>bountiesError</source>
         <translation>Error on bounties</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="97"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="109"/>
         <source>bountyInit</source>
         <translation>Bounties Start</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="77"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
         <source>cetusDay</source>
         <translation>Cetus - Night in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="79"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="91"/>
         <source>cetusNight</source>
         <translation>Cetus - Day in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="87"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="99"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Cold in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="101"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Warn in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="24"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="25"/>
         <source>bountyEnd</source>
         <translation>Expiry in</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="35"/>
+        <source>ostron</source>
+        <translation>Ostron</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="36"/>
+        <source>fortuna</source>
+        <translation>Fortuna</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="37"/>
+        <source>hiveMind</source>
+        <translation>Hive Mind</translation>
     </message>
 </context>
 <context>
@@ -314,17 +334,17 @@
         <translation>Daily Deals of Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="71"/>
+        <location filename="../components/common/DailyDeals.py" line="72"/>
         <source>sold</source>
         <translation>Sold</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="72"/>
+        <location filename="../components/common/DailyDeals.py" line="73"/>
         <source>price</source>
         <translation>Price</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="62"/>
+        <location filename="../components/common/DailyDeals.py" line="63"/>
         <source>sale</source>
         <translation>Discounted by</translation>
     </message>
@@ -334,7 +354,7 @@
         <translation>Expires in</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="58"/>
+        <location filename="../components/common/DailyDeals.py" line="59"/>
         <source>start</source>
         <translation>Started at</translation>
     </message>
