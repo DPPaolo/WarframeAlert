@@ -6,6 +6,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import bool_to_yes_no
 from warframeAlert.utils.logUtils import LogHandler
+from warframeAlert.utils.stringUtils import divide_message
 
 
 class GeneralInfoWidget():
@@ -76,14 +77,7 @@ class GeneralInfoWidget():
         self.Version.setText(version_text)
         self.MobVersion.setText(mobile_version_text)
         self.ForceLogoutVersion.setText(force_logout_text)
-        w_seed = ""
-        len_world_seed = len(world_seed)
-        j = 0
-        while (j < len_world_seed):
-            w_seed = w_seed + world_seed[j:j+100] + "\n"
-            j += 100
-        w_seed = w_seed + world_seed[j:]
-        self.WorldSeed.setText(w_seed)
+        self.WorldSeed.setText(divide_message(world_seed, 100))
 
     def parse_featured_dojo(self, data):
         guild = ["", "", "", "", ""]
