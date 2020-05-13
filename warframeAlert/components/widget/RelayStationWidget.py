@@ -1,6 +1,7 @@
 # coding=utf-8
 from PyQt5 import QtCore, QtWidgets
 
+from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.SimarisTarget import SimarisTarget
 from warframeAlert.components.common.DailyDeals import DailyDeals
 from warframeAlert.services.translationService import translate
@@ -25,17 +26,14 @@ class RelayStationWidget:
         self.RelayOtherLabelDesc = QtWidgets.QLabel(translate("relayStationWidget", "specialNode") + ": ")
         self.RelayLabel = QtWidgets.QLabel("")
         self.RelayOtherLabel = QtWidgets.QLabel(translate("relayStationWidget", "None"))
-        self.RelaySpace1 = QtWidgets.QLabel("")
-        self.RelaySpace2 = QtWidgets.QLabel("")
-        self.RelaySpace3 = QtWidgets.QLabel("")
 
         self.gridRelay.addLayout(self.dailyDeals.DealsBox, 0, 0)
-        self.gridRelay.addWidget(self.RelaySpace1, 1, 0)
+        self.gridRelay.addLayout(EmptySpace().SpaceBox, 1, 0)
         self.gridRelay.addLayout(self.simarisTarget.SimarisBox, 2, 0)
-        self.gridRelay.addWidget(self.RelaySpace2, 3, 0)
+        self.gridRelay.addLayout(EmptySpace().SpaceBox, 3, 0)
         self.gridRelay.addWidget(self.RelayLabelDesc, 4, 0)
         self.gridRelay.addWidget(self.RelayLabel, 5, 0)
-        self.gridRelay.addWidget(self.RelaySpace3, 6, 0)
+        self.gridRelay.addLayout(EmptySpace().SpaceBox, 6, 0)
         self.gridRelay.addWidget(self.RelayOtherLabelDesc, 7, 0)
         self.gridRelay.addWidget(self.RelayOtherLabel, 8, 0)
 

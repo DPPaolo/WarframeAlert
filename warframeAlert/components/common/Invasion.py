@@ -4,6 +4,7 @@ from PyQt5.QtCore import Qt
 
 from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
+from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
@@ -80,7 +81,7 @@ class Invasion():
 
         self.InvasionBox.addLayout(self.InvasionBox5)
         self.InvasionBox.addLayout(self.InvasionBox6)
-        self.InvasionBox.addStretch(1)
+        self.InvasionBox.addLayout(EmptySpace().SpaceBox)
 
     def set_completed(self, completed):
         self.completed = completed

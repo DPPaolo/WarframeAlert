@@ -1,6 +1,7 @@
 # coding=utf-8
 from PyQt5 import QtWidgets, QtCore
 
+from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.Event import Event
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.gameTranslationUtils import get_region, get_node, get_task_type
@@ -22,8 +23,6 @@ class ReconstructionRelayEvent(Event):
 
         self.TARelayNode = QtWidgets.QLabel("N/D")
         self.TARelayNode.setAlignment(QtCore.Qt.AlignCenter)
-        self.TARelaySpace1 = QtWidgets.QLabel("")
-        self.TARelaySpace2 = QtWidgets.QLabel("")
 
         self.TAListRegion = QtWidgets.QLabel(translate("reconstrutionEvent", "resourcePlanet") + ":")
         self.TAListRegion.setAlignment(QtCore.Qt.AlignCenter)
@@ -63,10 +62,10 @@ class ReconstructionRelayEvent(Event):
         self.TAReconstructionhbox.addWidget(self.TARegion4)
 
         self.TAReconstructionBox.addWidget(self.TARelayNode)
-        self.TAReconstructionBox.addWidget(self.TARelaySpace1)
+        self.TAReconstructionBox.addLayout(EmptySpace().SpaceBox)
         self.TAReconstructionBox.addWidget(self.TAListRegion)
         self.TAReconstructionBox.addLayout(self.TAReconstructionhbox)
-        self.TAReconstructionBox.addWidget(self.TARelaySpace2)
+        self.TAReconstructionBox.addLayout(EmptySpace().SpaceBox)
         self.TAReconstructionBox.addWidget(self.TATask0)
         self.TAReconstructionBox.addWidget(self.TATask1)
         self.TAReconstructionBox.addWidget(self.TATask2)
@@ -101,7 +100,6 @@ class ReconstructionRelayEvent(Event):
     def hide(self):
         super().hide()
         self.TARelayNode.hide()
-        self.TARelaySpace1.hide()
         self.TAListRegion.hide()
         self.TARegion0.hide()
         self.TARegion1.hide()
