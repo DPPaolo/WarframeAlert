@@ -141,52 +141,52 @@
 <context>
     <name>bountyBox</name>
     <message>
-        <location filename="../components/common/BountyBox.py" line="81"/>
+        <location filename="../components/common/BountyBox.py" line="83"/>
         <source>bountyName</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="27"/>
+        <location filename="../components/common/BountyBox.py" line="29"/>
         <source>affinity</source>
         <translation>Affinità Totale Ottenibile</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="29"/>
+        <location filename="../components/common/BountyBox.py" line="31"/>
         <source>drop</source>
         <translation>Visualizza Drop Taglia</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="80"/>
+        <location filename="../components/common/BountyBox.py" line="82"/>
         <source>syndicate</source>
         <translation>Associazione collegata</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="69"/>
+        <location filename="../components/common/BountyBox.py" line="71"/>
         <source>level</source>
         <translation>Livello</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="92"/>
+        <location filename="../components/common/BountyBox.py" line="94"/>
         <source>rewardType</source>
         <translation>Ricompense Tipo</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="99"/>
+        <location filename="../components/common/BountyBox.py" line="101"/>
         <source>dropFortuna</source>
         <translation>Drop Taglia Orb Vallis</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="105"/>
+        <location filename="../components/common/BountyBox.py" line="107"/>
         <source>dropGhoul</source>
         <translation>Drop Taglia Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="111"/>
+        <location filename="../components/common/BountyBox.py" line="113"/>
         <source>dropCetus</source>
         <translation>Drop Taglia Cetus</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="113"/>
+        <location filename="../components/common/BountyBox.py" line="115"/>
         <source>noBountyRewardFound</source>
         <translation>Ricompensa taglia sconosciuta</translation>
     </message>
@@ -586,7 +586,7 @@
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="356"/>
+        <location filename="../utils/gameTranslationUtils.py" line="345"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
@@ -636,7 +636,7 @@
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="336"/>
+        <location filename="../utils/gameTranslationUtils.py" line="329"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
@@ -656,7 +656,7 @@
         <translation>Taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="335"/>
+        <location filename="../utils/gameTranslationUtils.py" line="328"/>
         <source>unknownJobDesc</source>
         <translation>Descrizione taglia sconosciuta</translation>
     </message>
@@ -666,7 +666,7 @@
         <translation>Associazione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="369"/>
+        <location filename="../utils/gameTranslationUtils.py" line="358"/>
         <source>unknownChallengeType</source>
         <translation>Sfida Nightwave sconosciuta</translation>
     </message>
@@ -699,172 +699,172 @@
 <context>
     <name>generalWidget</name>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="21"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="22"/>
         <source>earthTime</source>
         <translation>Ora sulla Terra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="73"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="74"/>
         <source>fileVersion</source>
         <translation>Versione File</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="74"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="75"/>
         <source>mobileFileVersion</source>
         <translation>Versione File Mobile</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="25"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="26"/>
         <source>worldSeed</source>
         <translation>World Seed</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="27"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
         <source>primeAccessState</source>
         <translation>Stato Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="29"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
         <source>primeVaultState</source>
         <translation>Stato Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="31"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
         <source>featuredDojo</source>
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="63"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="64"/>
         <source>earthTimeDay</source>
         <translation>Ora sulla Terra : Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="64"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="65"/>
         <source>timeToNight</source>
         <translation>Tempo per la Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="66"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
         <source>earthTimeNight</source>
         <translation>Ora sulla Terra : Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="68"/>
         <source>timeToDay</source>
         <translation>Tempo per il Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
         <source>tier1</source>
         <translation>Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="101"/>
         <source>tier2</source>
         <translation>Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
         <source>tier3</source>
         <translation>Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
         <source>tier4</source>
         <translation>Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
         <source>tier5</source>
         <translation>Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="96"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="90"/>
         <source>noAlliance</source>
         <translation>senza alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
         <source>tier1Id</source>
         <translation>ID Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="128"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
         <source>guildAllianceId</source>
         <translation>ID Alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="112"/>
         <source>tier2Id</source>
         <translation>ID Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
         <source>tier3Id</source>
         <translation>ID Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
         <source>tier4Id</source>
         <translation>ID Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
         <source>tier5Id</source>
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="138"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="132"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="145"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="139"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="142"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="143"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="145"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="153"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="75"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="76"/>
         <source>forceLogoutVersion</source>
         <translation>Obbligo di Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="142"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
         <source>comingSoon</source>
         <translation>Prossimamente</translation>
     </message>
@@ -925,7 +925,7 @@
         <translation>secondi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="84"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="82"/>
         <source>none</source>
         <translation>Nessuno</translation>
     </message>
@@ -935,7 +935,7 @@
         <translation>Evento senza Nome</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="77"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="75"/>
         <source>event</source>
         <translation>Evento su</translation>
     </message>
@@ -951,7 +951,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="117"/>
+        <location filename="../components/common/Invasion.py" line="118"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -1260,12 +1260,12 @@
 <context>
     <name>reconstrutionEvent</name>
     <message>
-        <location filename="../components/common/ReconstructionRelayEvent.py" line="28"/>
+        <location filename="../components/common/ReconstructionRelayEvent.py" line="27"/>
         <source>resourcePlanet</source>
         <translation>La risorda si ottiene nei seguenti pianeti</translation>
     </message>
     <message>
-        <location filename="../components/common/ReconstructionRelayEvent.py" line="83"/>
+        <location filename="../components/common/ReconstructionRelayEvent.py" line="82"/>
         <source>reconstructionNode</source>
         <translation>Ricostruzione</translation>
     </message>
@@ -1273,17 +1273,17 @@
 <context>
     <name>relayStationWidget</name>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="24"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="25"/>
         <source>destroyedStation</source>
         <translation>Stazioni Distrutte</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="25"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="26"/>
         <source>specialNode</source>
         <translation>Atri Nodi Speciali</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelayStationWidget.py" line="27"/>
+        <location filename="../components/widget/RelayStationWidget.py" line="28"/>
         <source>None</source>
         <translation>Nessuno</translation>
     </message>
@@ -1511,29 +1511,82 @@
 <context>
     <name>syndicateBox</name>
     <message>
-        <location filename="../components/common/SyndicateBox.py" line="76"/>
+        <location filename="../components/common/SyndicateBox.py" line="78"/>
         <source>rank1</source>
         <translation>Rango 1</translation>
     </message>
     <message>
-        <location filename="../components/common/SyndicateBox.py" line="77"/>
+        <location filename="../components/common/SyndicateBox.py" line="79"/>
         <source>rank2</source>
         <translation>Rango 2</translation>
     </message>
     <message>
-        <location filename="../components/common/SyndicateBox.py" line="78"/>
+        <location filename="../components/common/SyndicateBox.py" line="80"/>
         <source>rank3</source>
         <translation>Rango 3</translation>
     </message>
     <message>
-        <location filename="../components/common/SyndicateBox.py" line="79"/>
+        <location filename="../components/common/SyndicateBox.py" line="81"/>
         <source>rank4</source>
         <translation>Rango 4</translation>
     </message>
     <message>
-        <location filename="../components/common/SyndicateBox.py" line="80"/>
+        <location filename="../components/common/SyndicateBox.py" line="82"/>
         <source>rank5</source>
         <translation>Rango 5</translation>
+    </message>
+</context>
+<context>
+    <name>syndicateWidget</name>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="26"/>
+        <source>syndicateInit</source>
+        <translation>Attive dal</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="27"/>
+        <source>syndicateEnd</source>
+        <translation>Scadono tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="40"/>
+        <source>arbiterSyndicate</source>
+        <translation>Arbiter of Hexis</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="41"/>
+        <source>cephalonSyndicate</source>
+        <translation>Cephalon Suda</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="42"/>
+        <source>newLokaSyndicate</source>
+        <translation>New Loka</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="43"/>
+        <source>meridianSyndicate</source>
+        <translation>Steel Meridian</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="44"/>
+        <source>perrinSyndicate</source>
+        <translation>Perrin Sequence</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="45"/>
+        <source>redVeilSyndicate</source>
+        <translation>Red Veil</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="76"/>
+        <source>syndicateError</source>
+        <translation>Errore nelle associazioni</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SyndicateWidgetTab.py" line="79"/>
+        <source>noSyndicate</source>
+        <translation>Nessuna missione associazione disponibile</translation>
     </message>
 </context>
 <context>

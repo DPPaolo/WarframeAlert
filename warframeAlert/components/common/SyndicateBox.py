@@ -13,6 +13,7 @@ class SyndicateBox():
 
         self.syn_id = ""
         self.tag = ""
+        self.seed = ""
 
         self.SynMis1 = QtWidgets.QLabel(translate("syndicateBox", "rank1") + ": ")
         self.SynMis2 = QtWidgets.QLabel(translate("syndicateBox", "rank2") + ": ")
@@ -70,9 +71,10 @@ class SyndicateBox():
     def get_syn_id(self):
         return self.syn_id
 
-    def set_syndicate(self, tag, syn_id):
+    def set_syndicate(self, tag, syn_id, seed):
         self.syn_id = syn_id
         self.tag = tag
+        self.seed = seed
         self.SynMis1.setText(translate("syndicateBox", "rank1") + ": " + get_syndicate_rank(tag, 0))
         self.SynMis2.setText(translate("syndicateBox", "rank2") + ": " + get_syndicate_rank(tag, 1))
         self.SynMis3.setText(translate("syndicateBox", "rank3") + ": " + get_syndicate_rank(tag, 2))
