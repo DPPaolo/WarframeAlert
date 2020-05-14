@@ -128,11 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Project settings
-# .idea
-
 # My Ignore
-/warframeAlert/images/
-/warframeAlert/data/
-/warframeAlert/qt.conf
-/warframeAlert/config.ini
+warframeAlert/images/
+warframeAlert/data/
+warframeAlert/qt.conf
+warframeAlert/config.ini
