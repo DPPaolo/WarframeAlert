@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['warframeAlert\\Warframe Alert.py'],
+a = Analysis(['warframeAlert\\WarframeAlert.py'],
              pathex=['C:\\Users\\Paolo\\OneDrive\\Miei Tool\\WarframeAlert'],
              binaries=[],
              datas=[
