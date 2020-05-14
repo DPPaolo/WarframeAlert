@@ -73,6 +73,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
 
 
+        #self.create_menu()      #crea il Menu
+
+        # Create a status bar under the tabs
+        self.statusBar()
+
+
         #Crea il menu e le sue schede
         #self.tab_menu = warframeClass.tab_menu()
 
@@ -81,10 +87,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #Crea la finestra per gli aggiornamenti
         #warframeData.gestore_update.create_update_widget()
-                
-        #self.create_menu()      #crea il Menu
-
-        #self.statusBar() # crea una veloce barra di stato
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
 
@@ -97,14 +99,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.resize(680, 450)
         
-    # def start_update(self):
-    #     #Aggiorna il contenuto delle varie Tab e avvia il timer di aggiornamento
-    #     self.tabService.update(False)
-    #     self.resize(680, 450)
-    #
-    #     OptionsHandler.set_first_init(False)
+    def start_update(self):
+        self.tabService.update(False)
+        self.resize(680, 450)
+        OptionsHandler.set_first_init(False)
     #     warframeData.gestore_update.start_update_timer(self)
-    #
+
     # def closeEvent(self, event):
     #     if (warframeClass.gestore_opzioni.get_option("TrayIcon") == 1):
     #         event.ignore()
@@ -221,7 +221,7 @@ class MainWindow(QtWidgets.QMainWindow):
     #         parse_file.setStatusTip("Traduce le Allerte a Schermo")
     #         parse_file.triggered.connect(lambda: self.update(False))
     #         debug.addAction(parse_file)
-    #
+    #       togliere non serve mappa stellare
     #     #Menu Strumenti
     #     self.MSTool = QtWidgets.QAction("Mappa Stellare", tool)
     #     self.MSTool.setShortcut("Ctrl+M")
@@ -240,11 +240,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #     EELog.setStatusTip("Apre la finestra per la lettura dell'EE.log")
     #     EELog.triggered.connect(self.tab_menu.open_window_EELog)
     #     tool.addAction(EELog)
-    #
-    #     if (warframeClass.gestore_opzioni.get_option("ViewStarChart") == 0):
-    #         self.MSTool.setVisible(False)
-    #     if (warframeClass.gestore_opzioni.get_option("ViewMissionDeck") == 0):
-    #         self.MDTool.setVisible(False)
     #
     #     warframeData.MSTool = self.MSTool
     #     warframeData.MDTool = self.MDTool
@@ -381,5 +376,6 @@ main = MainWindow()
 #     except Exception as er:
 #         print(er)
 #
+main.start_update()
 main.show()
 sys.exit(app.exec_())

@@ -1680,7 +1680,7 @@
     <message>
         <location filename="../services/tabService.py" line="111"/>
         <source>alertError</source>
-        <translation>Errore nella lettura del gile allerte.json</translation>
+        <translation type="unfinished">Errore nella lettura del file allerte.json</translation>
     </message>
     <message>
         <location filename="../services/tabService.py" line="123"/>
