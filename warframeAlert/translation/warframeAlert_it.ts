@@ -1048,6 +1048,27 @@
     </message>
 </context>
 <context>
+    <name>main</name>
+    <message>
+        <location filename="../WarframeAlert.py" line="63"/>
+        <source>title</source>
+        <translation>Warframe Alert</translation>
+    </message>
+</context>
+<context>
+    <name>messageBox</name>
+    <message>
+        <location filename="../components/common/MessageBox.py" line="26"/>
+        <source>info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <location filename="../components/common/MessageBox.py" line="28"/>
+        <source>error</source>
+        <translation>Errore</translation>
+    </message>
+</context>
+<context>
     <name>networkService</name>
     <message>
         <location filename="../services/networkService.py" line="57"/>
@@ -1587,6 +1608,84 @@
         <location filename="../components/tab/SyndicateWidgetTab.py" line="79"/>
         <source>noSyndicate</source>
         <translation>Nessuna missione associazione disponibile</translation>
+    </message>
+</context>
+<context>
+    <name>tabService</name>
+    <message>
+        <location filename="../services/tabService.py" line="51"/>
+        <source>news</source>
+        <translation>News</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="52"/>
+        <source>nightwave</source>
+        <translation>Nightwave</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="53"/>
+        <source>events</source>
+        <translation>Eventi</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="54"/>
+        <source>acolyte</source>
+        <translation>Accoliti</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="55"/>
+        <source>bounty</source>
+        <translation>Taglie</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="56"/>
+        <source>invasion</source>
+        <translation>Invasioni</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="54"/>
+        <source>sortie</source>
+        <translation type="obsolete">Incursioni</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="58"/>
+        <source>syndicate</source>
+        <translation>Associazioni</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="56"/>
+        <source>fissure</source>
+        <translation type="obsolete">Fratture Void</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="57"/>
+        <source>baro</source>
+        <translation type="obsolete">Baro Ki&apos;Teer</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="58"/>
+        <source>sales</source>
+        <translation type="obsolete">Sconti</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="59"/>
+        <source>pvp</source>
+        <translation type="obsolete">PvP</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="63"/>
+        <source>other</source>
+        <translation>Altro</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="111"/>
+        <source>alertError</source>
+        <translation>Errore nella lettura del gile allerte.json</translation>
+    </message>
+    <message>
+        <location filename="../services/tabService.py" line="123"/>
+        <source>validationError</source>
+        <translation>Errore nella validazione del file allerte.json</translation>
     </message>
 </context>
 <context>
