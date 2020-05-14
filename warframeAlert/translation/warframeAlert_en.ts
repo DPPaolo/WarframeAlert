@@ -1050,15 +1050,25 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="63"/>
+        <location filename="../WarframeAlert.py" line="64"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="143"/>
+        <source>noConnection</source>
+        <translation>No Connection</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="143"/>
+        <source>noConnectionFirstInit</source>
+        <translation>The first init need an internet connection. Please retry again</translation>
     </message>
 </context>
 <context>
     <name>messageBox</name>
     <message>
-        <location filename="../components/common/MessageBox.py" line="26"/>
+        <location filename="../components/common/MessageBox.py" line="25"/>
         <source>info</source>
         <translation>Info</translation>
     </message>

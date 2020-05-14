@@ -1,6 +1,8 @@
 # coding=utf-8
 import os
 import platform
+import shutil
+import sys
 
 
 def get_os_type():
@@ -63,3 +65,10 @@ def create_default_folder():
         os.makedirs(d + get_separator() + "images" + get_separator() + "news")
     if (not check_folder("data")):
         os.makedirs(d + get_separator() + "data")
+
+
+def copy_bundled_files_to_current_dir():
+    path = getattr(sys, '_MEIPASS', os.getcwd())
+    shutil.copytree(path + get_separator() + "assets" + get_separator() + "icon", "assets" + get_separator() + "icon")
+    shutil.copytree(path + get_separator() + "assets" + get_separator() + "image", "assets" + get_separator() + "image")
+    shutil.copytree(path + get_separator() + "translation", "translation")

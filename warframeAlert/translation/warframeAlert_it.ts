@@ -1050,15 +1050,25 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="63"/>
+        <location filename="../WarframeAlert.py" line="64"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="143"/>
+        <source>noConnection</source>
+        <translation>Nessuna Connessione</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="143"/>
+        <source>noConnectionFirstInit</source>
+        <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
 </context>
 <context>
     <name>messageBox</name>
     <message>
-        <location filename="../components/common/MessageBox.py" line="26"/>
+        <location filename="../components/common/MessageBox.py" line="25"/>
         <source>info</source>
         <translation>Info</translation>
     </message>
@@ -1680,7 +1690,7 @@
     <message>
         <location filename="../services/tabService.py" line="111"/>
         <source>alertError</source>
-        <translation type="unfinished">Errore nella lettura del file allerte.json</translation>
+        <translation>Errore nella lettura del file allerte.json</translation>
     </message>
     <message>
         <location filename="../services/tabService.py" line="123"/>

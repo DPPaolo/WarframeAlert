@@ -6,7 +6,6 @@ from PyQt5 import QtGui, QtCore, QtWidgets
 from utils import timeUtils, commonUtils
 
 import os
-import shutil
 import subprocess
 import sys
 import time
@@ -15,6 +14,7 @@ import warframe
 import warframeData
 import warframeClass
 
+from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.networkService import check_connection
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -22,7 +22,8 @@ from warframeAlert.services.tabService import TabService
 from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
 from warframeAlert.utils import fileUtils
-from warframeAlert.utils.fileUtils import create_default_folder, get_cur_dir, get_separator
+from warframeAlert.utils.fileUtils import create_default_folder, get_cur_dir, get_separator, \
+    copy_bundled_files_to_current_dir
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -93,7 +94,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
         self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
 
-        #self.init_app()
+        self.init_app()
 
         self.tabService.update_tabber()
 
@@ -118,7 +119,7 @@ class MainWindow(QtWidgets.QMainWindow):
     #         #resize(settings.value("size", QSize(400, 400)).toSize());
     #         #move(settings.value("pos", QPoint(200, 200)).toPoint());
 
-    # def init_app(self):
+    def init_app(self):
     #
     #     #Controlla se c'è stato un aggiornamento della versione del programma
     #     if (fileUtils.check_file("PostUpdate.txt")):
@@ -136,42 +137,38 @@ class MainWindow(QtWidgets.QMainWindow):
     #             warframe.stampa_errore("Impossibile cancellare/chiudere la vecchia versione del programma\n" + str(er))
     #         os.remove("PostUpdate.txt")
     #
-    #     #Scarica i file se e' il primo avvio e crea il file di opzioni
-    #     if (warframeClass.gestore_opzioni.get_option("FirstInit") == 0):
-    #         if not check_connection() and not (warframeClass.gestore_opzioni.get_option("Debug") == 1):
-    #             Qtwarframe.errore("Il primo avvio dell'applicazione necessita di una connessione ad internet.\nAssicurati di essere connesso alla rete")
-    #             self.emit(QtCore.SLOT('close()'))
-    #             return
-    #
-    #         create_default_folder()
-    #
-    #         gestore_opzioni.create_config()
-    #         warframeData.gestore_update.open_update_file()
-    #         if (not fileUtils.is_linux_os() and not fileUtils.is_linux_os()):
-    #             if getattr(sys, 'frozen', False):
-    #                 path = getattr(sys, '_MEIPASS', os.getcwd())
-    #                 shutil.copytree(path + "/assets/icon", "assets/icon")
-    #                 shutil.copytree(path + "/assets/image", "assets/image")
-    #                 shutil.copytree(path + "/translation", "translation")
-    #         warframeClass.gestore_opzioni.set_option("FirstInit", 1)
-    #
-    #     # #controlla se è presente l'icona del programma
-    #     ##sistemare e farlo fare solo manca un file in quelle cartelle
-    #     if not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False):
-    #         path = getattr(sys, '_MEIPASS', os.getcwd())
-    #         shutil.copytree(path + "/assets/icon", "assets/icon")
-    #         shutil.copytree(path + "/assets/image", "assets/image")
-    #         shutil.copytree(path + "/translation", "translation")
-    #
+        # Download files if it's the first init
+        if (OptionsHandler.get_option("FirstInit") == 0):
+            if not check_connection():# and not (OptionsHandler.get_option("Debug") == 1):
+                MessageBox(translate("main", "noConnection"),
+                           translate("main", "noConnectionFirstInit"),
+                           MessageBoxType.ERROR)
+                sys.exit()
+
+            create_default_folder()
+            OptionsHandler.create_config()
+
+            #warframeData.gestore_update.open_update_file()
+
+            if (not fileUtils.is_linux_os() and not fileUtils.is_linux_os()):
+                if getattr(sys, 'frozen', False):
+                    copy_bundled_files_to_current_dir()
+            OptionsHandler.set_option("FirstInit", 1)
+
+        # Copy bundled files if missing
+        #TODO: sistemare e farlo fare solo manca un file in quelle cartelle
+        if not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False):
+            copy_bundled_files_to_current_dir()
+
     #     #aggiorna i file necessari al funzionamento
-    #     if (warframeClass.gestore_opzioni.get_option("Update/Cycle") != 0):
+    #     if (OptionsHandler.get_option("Update/Cycle") != 0):
     #         warframeData.gestore_update_file.update_alert_file_only(True)
     #
     #
-    #     date = warframeClass.gestore_opzioni.get_option("Update/AutoUpdateAll")
+    #     date = OptionsHandler.get_option("Update/AutoUpdateAll")
     #     att_date = int(timeUtils.get_local_time())
     #     if ((att_date - date) > 604800):
-    #         warframeClass.gestore_opzioni.set_option("Update/AutoUpdateAll", att_date)
+    #         OptionsHandler.set_option("Update/AutoUpdateAll", att_date)
     #         warframeData.gestore_update.open_update_file()
 
     # def create_menu(self):
