@@ -11,7 +11,6 @@ import sys
 import time
 import Qtwarframe
 import warframe
-import warframeData
 import warframeClass
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
@@ -26,8 +25,6 @@ from warframeAlert.utils.fileUtils import create_default_folder, get_cur_dir, ge
     copy_bundled_files_to_current_dir
 from warframeAlert.utils.logUtils import LogHandler
 
-
-warframeData.TRAY_ICON = None
 
 #Creazione file di configurazione
 #gestore_opzioni = warframeClass.gestore_opzioni()
@@ -329,18 +326,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #             return
     #     else:
     #         self.tab_sortie.sortie_not_available()
-    #
-    # def update_baro(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/Baro")== 1):
-    #         try:
-    #             Qtwarframe.parse_baro(self.tab_baro, data)
-    #         except Exception as er:
-    #             warframe.err("Errore in Baro Ki'Teer: " + str(er))
-    #             warframe.stampa_errore("Errore in Baro Ki'Teer: " + str(er))
-    #             self.tab_baro.delete_baro()
-    #             return
-    #     else:
-    #         self.tab_baro.delete_baro()
     #
     # def open_old_allert(self):
     #     path = get_cur_dir()

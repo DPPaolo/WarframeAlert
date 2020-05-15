@@ -139,6 +139,49 @@
     </message>
 </context>
 <context>
+    <name>baroWidget</name>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="139"/>
+        <source>end</source>
+        <translation>Parte tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="54"/>
+        <source>baroItem</source>
+        <translation>Item di Baro Ki&apos;Teer</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="73"/>
+        <source>baroError</source>
+        <translation>Errore con Baro Ki&apos;Teer</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="89"/>
+        <source>arrived</source>
+        <translation>Arriva il</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="90"/>
+        <source>on</source>
+        <translation>nella</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="130"/>
+        <source>baroArrived</source>
+        <translation>Baro Ki&apos;Teer è arrivato</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="148"/>
+        <source>init</source>
+        <translation>Arriva tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BaroWidgetTab.py" line="40"/>
+        <source>noBaro</source>
+        <translation>Baro Ki&apos;Teer non presente al momento</translation>
+    </message>
+</context>
+<context>
     <name>bountyBox</name>
     <message>
         <location filename="../components/common/BountyBox.py" line="83"/>
@@ -316,12 +359,12 @@
 <context>
     <name>countdown</name>
     <message>
-        <location filename="../components/common/Countdown.py" line="39"/>
+        <location filename="../components/common/Countdown.py" line="42"/>
         <source>countdown_error</source>
         <translation>Errore nel calcolo del tempo del countdown</translation>
     </message>
     <message>
-        <location filename="../components/common/Countdown.py" line="41"/>
+        <location filename="../components/common/Countdown.py" line="44"/>
         <source>Error</source>
         <translation>Errore</translation>
     </message>
@@ -1050,17 +1093,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="64"/>
+        <location filename="../WarframeAlert.py" line="61"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="140"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="140"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
@@ -1081,7 +1124,7 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="57"/>
+        <location filename="../services/networkService.py" line="60"/>
         <source>connectionError</source>
         <translation>Errore di connessione durante il download del file</translation>
     </message>
@@ -1623,32 +1666,32 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="46"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="52"/>
+        <location filename="../services/tabService.py" line="47"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="48"/>
         <source>events</source>
         <translation>Eventi</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="49"/>
         <source>acolyte</source>
         <translation>Accoliti</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="50"/>
         <source>bounty</source>
         <translation>Taglie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="56"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>invasion</source>
         <translation>Invasioni</translation>
     </message>
@@ -1658,7 +1701,7 @@
         <translation type="obsolete">Incursioni</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="58"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>syndicate</source>
         <translation>Associazioni</translation>
     </message>
@@ -1668,9 +1711,9 @@
         <translation type="obsolete">Fratture Void</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="57"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>baro</source>
-        <translation type="obsolete">Baro Ki&apos;Teer</translation>
+        <translation>Baro Ki&apos;Teer</translation>
     </message>
     <message>
         <location filename="../services/tabService.py" line="58"/>
@@ -1683,17 +1726,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="63"/>
+        <location filename="../services/tabService.py" line="58"/>
         <source>other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="111"/>
+        <location filename="../services/tabService.py" line="106"/>
         <source>alertError</source>
         <translation>Errore nella lettura del file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="123"/>
+        <location filename="../services/tabService.py" line="118"/>
         <source>validationError</source>
         <translation>Errore nella validazione del file allerte.json</translation>
     </message>
@@ -1838,7 +1881,7 @@
         <translation>Tipo Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="143"/>
+        <location filename="../utils/warframeUtils.py" line="171"/>
         <source>ExportManifestNotFound</source>
         <translation>ExportManifest.json non trovato</translation>
     </message>
@@ -1848,17 +1891,17 @@
         <translation>Tipo Operazione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="160"/>
+        <location filename="../utils/warframeUtils.py" line="188"/>
         <source>jsonFileNotFound</source>
         <translation>.json non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="171"/>
+        <location filename="../utils/warframeUtils.py" line="199"/>
         <source>noBountyReward</source>
         <translation>Nessuna Ricompensa Disponibile</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="180"/>
+        <location filename="../utils/warframeUtils.py" line="208"/>
         <source>bountyRewardNotFound</source>
         <translation>Ricompensa Taglia non trovata</translation>
     </message>

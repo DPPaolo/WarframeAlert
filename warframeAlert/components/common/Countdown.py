@@ -25,7 +25,10 @@ class Countdown(QThread):
 
     def __del__(self):
         self.deleted = 1
-        self.wait()
+        try:
+            self.wait()
+        except RuntimeError:
+            pass
 
     def run(self):
         while(not self.deleted):

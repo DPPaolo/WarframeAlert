@@ -76,6 +76,69 @@ default_schema = {
     }
 }
 
+void_traders_schema = {
+    "type": "object",
+    "properties": {
+        "VoidTraders": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/baroKiTeer"},
+        }
+    },
+    "required": ["VoidTraders"],
+    "definitions": {
+        "baroKiTeer": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Node": {"type": "string"},
+                "Character": {"type": "string"},
+                "Manifest": {"type": "array",
+                             "items": {
+                                 "type": "object",
+                                 "additionalProperties": False,
+                                 "properties": {
+                                     "ItemType": {"type": "string"},
+                                     "PrimePrice": {"type": "integer"},
+                                     "RegularPrice": {"type": "integer"},
+                                 },
+                                 "required": ["ItemType", "PrimePrice", "RegularPrice"],
+                             }}
+            },
+            "required": ["Activation", "Expiry", "_id", "Node", "Character"],
+        }
+    }
+}
+
 syndicate_schema = {
     "type": "object",
     "properties": {

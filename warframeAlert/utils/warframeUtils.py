@@ -139,8 +139,8 @@ def get_image_path_from_export_manifest(name):
     try:
         fp = open("data" + get_separator() + "ExportManifest.json")
     except Exception as err:
-        LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n " + str(err))
-        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n  " + str(err))
+        LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
+        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         return warframeData.DEFAULT_ALERT_IMAGE
     data = fp.readlines()
     fp.close()
@@ -150,6 +150,34 @@ def get_image_path_from_export_manifest(name):
         if (name == unique_name):
             return item['textureLocation'].replace("\\", "/")
     return warframeData.DEFAULT_ALERT_IMAGE
+
+
+def get_image_from_url_with_store_items(url):
+    if ("/StoreItems/" in url):
+        line = url.split("/StoreItems/")
+        if (len(line) > 2):
+            return line[1] + "/StoreItems/" + line[2]
+        else:
+            return line[1]
+    else:
+        return url
+
+
+def get_baro_image_path_from_export_manifest(name):
+    try:
+        fp = open("data" + get_separator() + "ExportManifest.json")
+    except Exception as err:
+        LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
+        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
+        return name
+    data = fp.readlines()
+    fp.close()
+    json_data = json.loads(data[0])
+    for item in json_data['Manifest']:
+        unique_name = item['uniqueName'].lower()
+        if (name.lower() in unique_name or get_image_from_url_with_store_items(name).lower() in unique_name):
+            return item['textureLocation'].replace("\\", "/")
+    return name
 
 
 def read_drop_file(name):

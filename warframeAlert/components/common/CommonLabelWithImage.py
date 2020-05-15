@@ -30,3 +30,8 @@ class CommonLabelWithImage():
 
     def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio):
         self.Image.set_image_dimension(width, height, aspect_ratio)
+
+    def hide(self):
+        self.Image.hide()
+        self.TextAfter.hide()
+        self.TextBefore.hide()

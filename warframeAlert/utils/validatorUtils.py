@@ -24,6 +24,7 @@ def check_json_data(json_data):
         validate_nightwave(json_data['SeasonInfo'])
     validate_syndicate(json_data['SyndicateMissions'])
     validate_twich_promos(json_data['TwitchPromos'])
+    validate_void_traders(json_data['VoidTraders'])
     validate_version(json_data['Version'])
     validate_mobile_version(json_data['MobileVersion'])
     validate_world_seed(json_data['WorldSeed'])
@@ -103,6 +104,10 @@ def validate_syndicate(json_data):
 
 def validate_twich_promos(json_data):
     validate(instance={'TwitchPromos': json_data}, schema=twitch_promos_schema)
+
+
+def validate_void_traders(json_data):
+    validate(instance={'VoidTraders': json_data}, schema=void_traders_schema)
 
 
 def validate_version(json_data):
