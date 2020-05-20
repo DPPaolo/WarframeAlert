@@ -38,20 +38,22 @@ def check_connection():
 class Downloader(QThread):
     download_completed = QtCore.pyqtSignal()
 
-    def __init__(self, url, path):
+    def __init__(self, url, path, time_to_sleep=10):
         QThread.__init__(self)
         self.url = url
         self.path = path
+        self.time_to_sleep = time_to_sleep
 
     def run(self):
         downloaded = False
-        while(not downloaded):
+        while (not downloaded):
             if (not check_connection()):
                 time.sleep(300)
                 continue
             try:
                 download(self.url, self.path)
-                time.sleep(10)
+                if (self.time_to_sleep > 0):
+                    time.sleep(int(self.time_to_sleep))
                 self.download_completed.emit()
                 downloaded = True
             except URLError as url_error:

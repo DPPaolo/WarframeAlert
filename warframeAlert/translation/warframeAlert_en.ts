@@ -377,17 +377,17 @@
         <translation>Daily Deals of Darvo</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="72"/>
+        <location filename="../components/common/DailyDeals.py" line="77"/>
         <source>sold</source>
         <translation>Sold</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="73"/>
+        <location filename="../components/common/DailyDeals.py" line="78"/>
         <source>price</source>
         <translation>Price</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="63"/>
+        <location filename="../components/common/DailyDeals.py" line="68"/>
         <source>sale</source>
         <translation>Discounted by</translation>
     </message>
@@ -397,7 +397,7 @@
         <translation>Expires in</translation>
     </message>
     <message>
-        <location filename="../components/common/DailyDeals.py" line="59"/>
+        <location filename="../components/common/DailyDeals.py" line="64"/>
         <source>start</source>
         <translation>Started at</translation>
     </message>
@@ -1093,17 +1093,17 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="61"/>
+        <location filename="../WarframeAlert.py" line="65"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="140"/>
+        <location filename="../WarframeAlert.py" line="143"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="140"/>
+        <location filename="../WarframeAlert.py" line="143"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
@@ -1124,7 +1124,7 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="60"/>
+        <location filename="../services/networkService.py" line="62"/>
         <source>connectionError</source>
         <translation>Connetion error during downloading file</translation>
     </message>
@@ -1666,32 +1666,32 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="46"/>
+        <location filename="../services/tabService.py" line="48"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="47"/>
+        <location filename="../services/tabService.py" line="49"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="48"/>
+        <location filename="../services/tabService.py" line="50"/>
         <source>events</source>
         <translation>Events</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="49"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>acolyte</source>
         <translation>acolytes</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="50"/>
+        <location filename="../services/tabService.py" line="52"/>
         <source>bounty</source>
         <translation>Bounties</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>invasion</source>
         <translation>Invasions</translation>
     </message>
@@ -1701,7 +1701,7 @@
         <translation type="obsolete">Sortie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>syndicate</source>
         <translation>Syndycates</translation>
     </message>
@@ -1711,7 +1711,7 @@
         <translation type="obsolete">Void Fissure</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="57"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
@@ -1726,17 +1726,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="58"/>
+        <location filename="../services/tabService.py" line="60"/>
         <source>other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="106"/>
+        <location filename="../services/tabService.py" line="109"/>
         <source>alertError</source>
         <translation>Error during reading file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="118"/>
+        <location filename="../services/tabService.py" line="120"/>
         <source>validationError</source>
         <translation>Errore in the validation of file allerte.json</translation>
     </message>
@@ -1851,6 +1851,19 @@
         <location filename="../components/widget/TwitchPromoWidget.py" line="75"/>
         <source>active_twich_promo</source>
         <translation>Active Twitch Promo</translation>
+    </message>
+</context>
+<context>
+    <name>updateService</name>
+    <message>
+        <location filename="../services/updateService.py" line="60"/>
+        <source>saveError</source>
+        <translation>Can&apos;t save file allerte.json</translation>
+    </message>
+    <message>
+        <location filename="../services/updateService.py" line="63"/>
+        <source>downloaded</source>
+        <translation>downloaded</translation>
     </message>
 </context>
 <context>

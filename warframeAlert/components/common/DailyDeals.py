@@ -34,18 +34,23 @@ class DailyDeals:
 
         self.Dealshbox1 = QtWidgets.QHBoxLayout()
         self.Dealshbox2 = QtWidgets.QHBoxLayout()
+        self.DealsPriceBox = QtWidgets.QHBoxLayout()
 
         self.Dealshbox1.addWidget(self.DealsLab)
+        self.Dealshbox1.addStretch(1)
         self.Dealshbox1.addWidget(self.Deals)
+        self.Dealshbox1.addStretch(1)
         self.Dealshbox1.addWidget(self.DealsEnd.TimeLab)
+
+        if (is_mac_os()):
+            self.DealsPriceBox.addWidget(self.DealsSpace1)
+            self.DealsPriceBox.addWidget(self.DealsOriginalPriceLab)
+            self.DealsPriceBox.addWidget(self.DealsOriginalPrice)
+        self.DealsPriceBox.addLayout(self.DealsPrice.LabelWithImage)
 
         self.Dealshbox2.addWidget(self.DealsAmount)
         self.Dealshbox2.addStretch(1)
-        if (is_mac_os()):
-            self.Dealshbox2.addWidget(self.DealsSpace1)
-            self.Dealshbox2.addWidget(self.DealsOriginalPriceLab)
-            self.Dealshbox2.addWidget(self.DealsOriginalPrice)
-        self.Dealshbox2.addLayout(self.DealsPrice.LabelWithImage)
+        self.Dealshbox2.addLayout(self.DealsPriceBox)
         self.Dealshbox2.addStretch(1)
         self.Dealshbox2.addWidget(self.DealsSales)
 

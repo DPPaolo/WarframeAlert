@@ -2,6 +2,7 @@
 import json
 import sys
 
+from PyQt5 import QtCore
 from jsonschema import ValidationError
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
@@ -17,14 +18,15 @@ from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
-from warframeAlert.utils.fileUtils import get_separator
+from warframeAlert.utils.fileUtils import get_separator, check_file
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.validatorUtils import check_json_data
 
 
-class TabService():
+class TabService(QtCore.QObject):
 
     def __init__(self, tabber):
+        super().__init__()
         self.mainTabber = tabber
 
         self.news_tab = NewsWidgetTab()
@@ -101,6 +103,7 @@ class TabService():
         try:
             fp = open(path, "rb")
             data = fp.readlines()
+            data = data[0].decode('utf-8')
         except Exception as error:
             MessageBox("", translate("tabService", "alertError") + "\n" + str(error), MessageBoxType.ERROR)
             print_traceback(translate("tabService", "alertError") + str(error))
@@ -109,14 +112,14 @@ class TabService():
         fp.close()
 
         # Parse and validate the file
-        data = data[0].decode('utf-8')
         json_data = json.loads(data)
         if (OptionsHandler.get_option("Debug") == 1):
             try:
                 check_json_data(json_data)
             except ValidationError as validation_error:
                 LogHandler.debug(translate("tabService", "validationError"))
-                LogHandler.debug(str(validation_error))
+                LogHandler.debug(str(validation_error.message))
+                print(validation_error)
                 sys.exit()
 
         build_label = json_data['BuildLabel']

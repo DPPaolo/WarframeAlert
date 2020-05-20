@@ -16,8 +16,8 @@ class LogHandler:
     @staticmethod
     def debug(text):
         print(text)
-        LogHandler.log.debug(time.strftime('%x %X') + " - " + text)
+        LogHandler.log.debug(time.strftime('%x %X') + " - " + str(text))
 
     @staticmethod
     def err(text):
-        LogHandler.log.error(time.strftime('%x %X') + " - " + text)
+        LogHandler.log.error(time.strftime('%x %X') + " - " + str(text))

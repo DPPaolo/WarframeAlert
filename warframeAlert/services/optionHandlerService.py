@@ -86,6 +86,10 @@ class OptionsHandler(QtCore.QObject):
     # def update_console_agg(self, ConsoleIndex):
     #     self.set_option("Update/Console", ConsoleIndex)
 
+    # @pyqtSlot()
+    #def update_lang_agg(self, ConsoleIndex):
+    #    self.set_option("Language", ConsoleIndex)
+
     # #@pyqtSlot()
     # def update_cycle_agg(self, ComboBoxText):
     #     self.set_option("Update/Cycle", int(ComboBoxText))

@@ -20,6 +20,7 @@ from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.tabService import TabService
 from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
+from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils
 from warframeAlert.utils.fileUtils import create_default_folder, get_cur_dir, get_separator, \
     copy_bundled_files_to_current_dir
@@ -55,6 +56,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.notification_service = NotificationService(self.tray.get_tray_icon())
         self.notification_service.start()
 
+        # Start the file update service
+        self.update_service = UpdateService()
+
         self.setWindowTitle(translate("main", "title"))
 
         self.app = QtCore.QCoreApplication.instance()
@@ -87,6 +91,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #warframeData.gestore_update.create_update_widget()
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
+        self.update_service.file_downloaded.connect(lambda: self.tabService.update(False))
 
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
         self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
@@ -98,10 +103,8 @@ class MainWindow(QtWidgets.QMainWindow):
         self.resize(680, 450)
         
     def start_update(self):
-        self.tabService.update(False)
         self.resize(680, 450)
-        OptionsHandler.set_first_init(False)
-    #     warframeData.gestore_update.start_update_timer(self)
+        self.update_service.start()
 
     # def closeEvent(self, event):
     #     if (warframeClass.gestore_opzioni.get_option("TrayIcon") == 1):
@@ -136,7 +139,7 @@ class MainWindow(QtWidgets.QMainWindow):
     #
         # Download files if it's the first init
         if (OptionsHandler.get_option("FirstInit") == 0):
-            if not check_connection():# and not (OptionsHandler.get_option("Debug") == 1):
+            if not check_connection():
                 MessageBox(translate("main", "noConnection"),
                            translate("main", "noConnectionFirstInit"),
                            MessageBoxType.ERROR)
