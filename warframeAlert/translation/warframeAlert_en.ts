@@ -1093,19 +1093,29 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="65"/>
+        <location filename="../WarframeAlert.py" line="49"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="127"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="127"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="178"/>
+        <source>exitMenu</source>
+        <translation>Exit</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="180"/>
+        <source>exitMenuDesc</source>
+        <translation>Close the application</translation>
     </message>
 </context>
 <context>

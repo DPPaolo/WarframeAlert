@@ -1093,19 +1093,29 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="65"/>
+        <location filename="../WarframeAlert.py" line="49"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="127"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="143"/>
+        <location filename="../WarframeAlert.py" line="127"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="178"/>
+        <source>exitMenu</source>
+        <translation>Esci</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="180"/>
+        <source>exitMenuDesc</source>
+        <translation>Esci dall&apos;applicazione</translation>
     </message>
 </context>
 <context>

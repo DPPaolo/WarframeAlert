@@ -66,7 +66,7 @@ class BaroItemBox():
             site = site.replace("\\", "/")
             image_name += ".png"
         else:
-            site = warframeData.DEFAULT_SITE_IMAGE + url_image
+            site = warframeData.DEFAULT_SITE_IMAGE + img
 
         image_path = "images" + get_separator() + image_name
         self.BaroImage.set_image(image_path, site)
