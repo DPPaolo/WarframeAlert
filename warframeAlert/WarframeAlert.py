@@ -91,23 +91,20 @@ class MainWindow(QtWidgets.QMainWindow):
             self.show()
 
         self.resize(680, 450)
-        
+
     def start_update(self):
         self.resize(680, 450)
         self.update_service.start()
 
-    # def closeEvent(self, event):
-    #     if (warframeClass.gestore_opzioni.get_option("TrayIcon") == 1):
-    #         event.ignore()
-    #         self.hide()
-    #         NotificationService.send_notification(
-    #             "Warframe Alert",
-    #             "L'applicazione verrà ridotta ad icona.",
-    #             QtWidgets.QSystemTrayIcon.Information)
-    #     #else:
-    #         #salva dati sula size() e pos() della finestra principale
-    #         #resize(settings.value("size", QSize(400, 400)).toSize());
-    #         #move(settings.value("pos", QPoint(200, 200)).toPoint());
+    def closeEvent(self, event):
+        if (OptionsHandler.get_option("TrayIcon") == 1):
+            event.ignore()
+            self.hide()
+            NotificationService.send_notification(
+                translate("main", "title"),
+                translate("main", "closeToTray"),
+                None
+            )
 
     def init_app(self):
     #
@@ -347,7 +344,6 @@ main = MainWindow()
 # else:
 #     try:
 #         main.start_update()
-#         main.show()
 #     except Exception as er:
 #         print(er)
 #

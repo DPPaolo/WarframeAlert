@@ -1093,29 +1093,34 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="49"/>
+        <location filename="../WarframeAlert.py" line="103"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="127"/>
+        <location filename="../WarframeAlert.py" line="129"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="127"/>
+        <location filename="../WarframeAlert.py" line="129"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="178"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="182"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="103"/>
+        <source>closeToTray</source>
+        <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
 </context>
 <context>
@@ -1866,12 +1871,12 @@
 <context>
     <name>updateService</name>
     <message>
-        <location filename="../services/updateService.py" line="60"/>
+        <location filename="../services/updateService.py" line="61"/>
         <source>saveError</source>
         <translation>Impossibile salvare il file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/updateService.py" line="63"/>
+        <location filename="../services/updateService.py" line="64"/>
         <source>downloaded</source>
         <translation>scaricato</translation>
     </message>

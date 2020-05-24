@@ -1093,29 +1093,34 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="49"/>
+        <location filename="../WarframeAlert.py" line="103"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="127"/>
+        <location filename="../WarframeAlert.py" line="129"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="127"/>
+        <location filename="../WarframeAlert.py" line="129"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="178"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="182"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="103"/>
+        <source>closeToTray</source>
+        <translation>The application will be minimized</translation>
     </message>
 </context>
 <context>
@@ -1866,12 +1871,12 @@
 <context>
     <name>updateService</name>
     <message>
-        <location filename="../services/updateService.py" line="60"/>
+        <location filename="../services/updateService.py" line="61"/>
         <source>saveError</source>
         <translation>Can&apos;t save file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/updateService.py" line="63"/>
+        <location filename="../services/updateService.py" line="64"/>
         <source>downloaded</source>
         <translation>downloaded</translation>
     </message>
