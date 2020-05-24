@@ -13,6 +13,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class UpdateService(QtCore.QObject):
     file_downloaded = QtCore.pyqtSignal()
+    fist_init_completed = QtCore.pyqtSignal()
 
     def __init__(self):
         super().__init__()
@@ -65,4 +66,5 @@ class UpdateService(QtCore.QObject):
         if (not download_only):
             self.start()
         else:
+            self.fist_init_completed.emit()
             OptionsHandler.set_first_init(False)

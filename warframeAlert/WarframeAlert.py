@@ -3,15 +3,7 @@
 
 from PyQt5 import QtGui, QtCore, QtWidgets
 
-from utils import timeUtils, commonUtils
-
-import os
-import subprocess
 import sys
-import time
-import Qtwarframe
-import warframe
-import warframeClass
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.networkService import check_connection
@@ -22,17 +14,9 @@ from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
 from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils
-from warframeAlert.utils.fileUtils import create_default_folder, get_cur_dir, get_separator, \
+from warframeAlert.utils.fileUtils import create_default_folder, get_separator, \
     copy_bundled_files_to_current_dir
 from warframeAlert.utils.logUtils import LogHandler
-
-
-#Creazione file di configurazione
-#gestore_opzioni = warframeClass.gestore_opzioni()
-
-#Avvia i vari gestori del programma
-#warframeData.gestore_update = warframeClass.gestore_update()
-#warframeData.gestore_update_file = warframeClass.gestore_update_file()
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -73,9 +57,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mainTabber = QtWidgets.QTabWidget(self.mainWidget)
         self.tabService = TabService(self.mainTabber)
 
-
-
-        #self.create_menu()      #crea il Menu
+        # Create the nav bar menu on top of the tabs
+        self.navBarMenu = self.menuBar()
+        self.create_menu()
 
         # Create a status bar under the tabs
         self.statusBar()
@@ -92,6 +76,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(False))
+        self.update_service.fist_init_completed.connect(self.show)
 
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
         self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
@@ -99,6 +84,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.init_app()
 
         self.tabService.update_tabber()
+
+        update_cycle = OptionsHandler.get_option("Update/Cycle")
+        if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
+            self.tabService.update(False)
+            self.show()
 
         self.resize(680, 450)
         
@@ -171,16 +161,14 @@ class MainWindow(QtWidgets.QMainWindow):
     #         OptionsHandler.set_option("Update/AutoUpdateAll", att_date)
     #         warframeData.gestore_update.open_update_file()
 
-    # def create_menu(self):
-    #     self.menu = self.menuBar()
+    def create_menu(self):
+        file = self.navBarMenu.addMenu('&File')
+        #debug = self.navBarMenu.addMenu('&Debug')
+
+    #     tool = self.navBarMenu.addMenu('&Strumenti')
+    #     aiuto = self.navBarMenu.addMenu('&Aiuto')
     #
-    #     file = self.menu.addMenu('&File')
-    #     if (warframeClass.gestore_opzioni.get_option("Debug") == 1):
-    #         debug = self.menu.addMenu('&Debug')
-    #     tool = self.menu.addMenu('&Strumenti')
-    #     aiuto = self.menu.addMenu('&Aiuto')
-    #
-    #     #Menu File
+        # Files Menu
     #     open_alert = QtWidgets.QAction("Apri...", file)
     #     open_alert.setShortcut("Ctrl+A")
     #     open_alert.setStatusTip("Apri un file json contenente dati di allerte precedenti")
@@ -192,15 +180,16 @@ class MainWindow(QtWidgets.QMainWindow):
     #     opzioni.setStatusTip("Opzioni dell'Applicazione")
     #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())
     #     file.addAction(opzioni)
-    #
-    #     esci = QtWidgets.QAction("Esci", file)
-    #     esci.setShortcut("Ctrl+Q")
-    #     esci.setStatusTip("Esci dall'Applicazione")
-    #     esci.triggered.connect(QtCore.QCoreApplication.quit)
-    #     file.addAction(esci)
-    #
+
+        exit_menu = QtWidgets.QAction(translate("main", "exitMenu"), file)
+        exit_menu.setShortcut("Ctrl+Q")
+        exit_menu.setStatusTip(translate("main", "exitMenuDesc"))
+        exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
+        file.addAction(exit_menu)
+
+        #
+
     #     #Menu Debug
-    #     if (warframeClass.gestore_opzioni.get_option("Debug") == 1):
     #         update_file = QtWidgets.QAction("Aggiorna Tutti i File", debug)
     #         update_file.setShortcut("Ctrl+U")
     #         update_file.setStatusTip("Aggiorna Tutti i File utilizzati dal programma")
@@ -219,6 +208,7 @@ class MainWindow(QtWidgets.QMainWindow):
     #         parse_file.triggered.connect(lambda: self.update(False))
     #         debug.addAction(parse_file)
     #       togliere non serve mappa stellare
+
     #     #Menu Strumenti
     #     self.MSTool = QtWidgets.QAction("Mappa Stellare", tool)
     #     self.MSTool.setShortcut("Ctrl+M")
@@ -362,5 +352,4 @@ main = MainWindow()
 #         print(er)
 #
 main.start_update()
-main.show()
 sys.exit(app.exec_())
