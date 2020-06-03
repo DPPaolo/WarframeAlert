@@ -107,7 +107,6 @@ class MainWindow(QtWidgets.QMainWindow):
             )
 
     def init_app(self):
-    #
     #     #Controlla se c'è stato un aggiornamento della versione del programma
     #     if (fileUtils.check_file("PostUpdate.txt")):
     #         fp = open("PostUpdate.txt", "r")
@@ -159,12 +158,11 @@ class MainWindow(QtWidgets.QMainWindow):
     #         warframeData.gestore_update.open_update_file()
 
     def create_menu(self):
-        file = self.navBarMenu.addMenu('&File')
-        #debug = self.navBarMenu.addMenu('&Debug')
+        file = self.navBarMenu.addMenu('&' + translate("main", "fileMenu"))
+        debug = self.navBarMenu.addMenu('&' + translate("main", "dataMenu"))
+        tool = self.navBarMenu.addMenu('&' + translate("main", "toolsMenu"))
+        info = self.navBarMenu.addMenu('&' + translate("main", "helpMenu"))
 
-    #     tool = self.navBarMenu.addMenu('&Strumenti')
-    #     aiuto = self.navBarMenu.addMenu('&Aiuto')
-    #
         # Files Menu
     #     open_alert = QtWidgets.QAction("Apri...", file)
     #     open_alert.setShortcut("Ctrl+A")
@@ -184,19 +182,18 @@ class MainWindow(QtWidgets.QMainWindow):
         exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
         file.addAction(exit_menu)
 
-        #
+        # Data Menu
 
-    #     #Menu Debug
-    #         update_file = QtWidgets.QAction("Aggiorna Tutti i File", debug)
-    #         update_file.setShortcut("Ctrl+U")
-    #         update_file.setStatusTip("Aggiorna Tutti i File utilizzati dal programma")
-    #         update_file.triggered.connect(lambda: warframeData.gestore_update_file.update_alert_file(False))
-    #         debug.addAction(update_file)
-    #
-    #         update_only_file = QtWidgets.QAction("Aggiorna File Allerte", debug)
+        update_file = QtWidgets.QAction(translate("main", "updateFileMenu"), debug)
+        update_file.setShortcut("Ctrl+U")
+        update_file.setStatusTip(translate("main", "updateFileMenuDesc"))
+        update_file.triggered.connect(lambda: self.update_service.download_alert_file(True))
+        debug.addAction(update_file)
+
+    #         update_only_file = QtWidgets.QAction(translate("main", "updateFilesMenu") + "Aggiorna Tutti i File", debug)
     #         update_only_file.setShortcut("Ctrl+T")
-    #         update_only_file.setStatusTip("Aggiorna solo il File delle Allerte")
-    #         update_only_file.triggered.connect(lambda: warframeData.gestore_update_file.update_alert_file_only(False))
+    #         update_only_file.setStatusTip("Aggiorna Tutti i File utilizzati dal programma")
+    #         update_only_file.triggered.connect(lambda: warframeData.gestore_update_file.update_alert_file(False))
     #         debug.addAction(update_only_file)
     #
     #         parse_file = QtWidgets.QAction("Parserizza il File", debug)

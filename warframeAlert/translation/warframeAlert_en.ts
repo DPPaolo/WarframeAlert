@@ -1108,12 +1108,12 @@
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="179"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="182"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
@@ -1121,6 +1121,36 @@
         <location filename="../WarframeAlert.py" line="103"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="161"/>
+        <source>fileMenu</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="162"/>
+        <source>dataMenu</source>
+        <translation>Data</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="163"/>
+        <source>toolsMenu</source>
+        <translation>Tools</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="164"/>
+        <source>helpMenu</source>
+        <translation>Help</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="187"/>
+        <source>updateFileMenu</source>
+        <translation>Update alert file only</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="189"/>
+        <source>updateFileMenuDesc</source>
+        <translation>Update alets file only to update all the tabs</translation>
     </message>
 </context>
 <context>

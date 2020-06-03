@@ -1108,12 +1108,12 @@
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="179"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="182"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
@@ -1121,6 +1121,36 @@
         <location filename="../WarframeAlert.py" line="103"/>
         <source>closeToTray</source>
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="161"/>
+        <source>fileMenu</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="162"/>
+        <source>dataMenu</source>
+        <translation>Dati</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="163"/>
+        <source>toolsMenu</source>
+        <translation>Strumenti</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="164"/>
+        <source>helpMenu</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="187"/>
+        <source>updateFileMenu</source>
+        <translation>Aggiorna file Allerte</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="189"/>
+        <source>updateFileMenuDesc</source>
+        <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
     </message>
 </context>
 <context>
