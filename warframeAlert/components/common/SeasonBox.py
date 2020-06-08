@@ -61,6 +61,8 @@ class SeasonBox():
         self.ChallengePoint.setText(str(challenge[2]) + " " + translate("seasonBox", "points"))
         if (daily):
             temp = translate("seasonBox", "daily").upper()
+        elif (challenge[2] == 1000):
+            temp = translate("seasonBox", "daily").upper()
         elif (challenge[2] == 4500):
             temp = translate("seasonBox", "weekly").upper()
         elif (challenge[2] == 7000):
