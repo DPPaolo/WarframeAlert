@@ -15,6 +15,8 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/SeasonBox.py \
                warframeAlert/components/common/ScoreEvent.py \
                warframeAlert/components/common/SimarisTarget.py \
+               warframeAlert/components/common/SortieBox.py \
+               warframeAlert/components/common/SortieMissionBox.py \
                warframeAlert/components/common/SpecialAlert.py \
                warframeAlert/components/common/SquadLinkEvent.py \
                warframeAlert/components/common/SyndicateBox.py \
@@ -27,6 +29,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/tab/NewsWidgetTab.py \
                warframeAlert/components/tab/NightwaveWidgetTab.py \
                warframeAlert/components/tab/OtherWidgetTab.py \
+               warframeAlert/components/tab/SortieWidgetTab.py \
                warframeAlert/components/tab/SyndicateWidgetTab.py \
                warframeAlert/components/widget/AlertWidget.py \
                warframeAlert/components/widget/BountyWidget.py \

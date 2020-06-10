@@ -192,7 +192,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
     #         update_only_file = QtWidgets.QAction(translate("main", "updateFilesMenu") + "Aggiorna Tutti i File", debug)
     #         update_only_file.setShortcut("Ctrl+T")
-    #         update_only_file.setStatusTip("Aggiorna Tutti i File utilizzati dal programma")
+    #         update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc") + "Aggiorna Tutti i File utilizzati dal programma")
     #         update_only_file.triggered.connect(lambda: warframeData.gestore_update_file.update_alert_file(False))
     #         debug.addAction(update_only_file)
     #
@@ -301,18 +301,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #             return
     #     else:
     #         self.tab_pvp.PVP_alternative_mission_not_available()
-    #
-    # def update_sortie(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/Sortie")== 1):
-    #         try:
-    #             Qtwarframe.parse_sortie(self.tab_sortie, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nelle Sortie: " + str(er))
-    #             warframe.stampa_errore("Errore nelle Sortie: " + str(er))
-    #             self.tab_sortie.sortie_not_available()
-    #             return
-    #     else:
-    #         self.tab_sortie.sortie_not_available()
     #
     # def open_old_allert(self):
     #     path = get_cur_dir()

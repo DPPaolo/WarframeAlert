@@ -738,6 +738,11 @@
         <source>unknownSyndicateRank</source>
         <translation>Nome Rango Associazione sconosciuto</translation>
     </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="375"/>
+        <source>unknownSortieBoss</source>
+        <translation>Boss Incursioni Sconosciuto</translation>
+    </message>
 </context>
 <context>
     <name>generalWidget</name>
@@ -1448,22 +1453,22 @@
         <translation>Punti</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="63"/>
+        <location filename="../components/common/SeasonBox.py" line="65"/>
         <source>daily</source>
         <translation>Giornaliero</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="65"/>
+        <location filename="../components/common/SeasonBox.py" line="67"/>
         <source>weekly</source>
         <translation>Settimanale</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="67"/>
+        <location filename="../components/common/SeasonBox.py" line="69"/>
         <source>weeklyElite</source>
         <translation>Settimanale Elite</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="69"/>
+        <location filename="../components/common/SeasonBox.py" line="71"/>
         <source>unkown</source>
         <translation>Sconosciuto</translation>
     </message>
@@ -1479,6 +1484,65 @@
         <location filename="../components/common/SimarisTarget.py" line="13"/>
         <source>actualSimarisTarget</source>
         <translation>Bersaglio Simaris Attuale</translation>
+    </message>
+</context>
+<context>
+    <name>sortieBox</name>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="23"/>
+        <source>end</source>
+        <translation>Scadono tra</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="92"/>
+        <source>boss</source>
+        <translation>Boss</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="88"/>
+        <source>init</source>
+        <translation>Iniziate il</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="72"/>
+        <source>sortie</source>
+        <translation>Incusioni</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="92"/>
+        <source>noBoss</source>
+        <translation>Nessuno</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="54"/>
+        <source>reward</source>
+        <translation>Ricompense possibili delle incursioni</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="258"/>
+        <source>noReward</source>
+        <translation>Nessuna Ricompensa Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="67"/>
+        <source>newSortieRewards</source>
+        <translation>Nuove ricompense delle incursioni trovate</translation>
+    </message>
+</context>
+<context>
+    <name>sortieMissionBox</name>
+    <message>
+        <location filename="../components/common/SortieMissionBox.py" line="12"/>
+        <source>mission</source>
+        <translation>Missione</translation>
+    </message>
+</context>
+<context>
+    <name>sortieWidgetTab</name>
+    <message>
+        <location filename="../components/tab/SortieWidgetTab.py" line="35"/>
+        <source>sortieError</source>
+        <translation>Errore nelle incursioni</translation>
     </message>
 </context>
 <context>
@@ -1711,42 +1775,42 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="48"/>
+        <location filename="../services/tabService.py" line="49"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="49"/>
+        <location filename="../services/tabService.py" line="50"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="50"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>events</source>
         <translation>Eventi</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="52"/>
         <source>acolyte</source>
         <translation>Accoliti</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="52"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>bounty</source>
         <translation>Taglie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="54"/>
         <source>invasion</source>
         <translation>Invasioni</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>sortie</source>
-        <translation type="obsolete">Incursioni</translation>
+        <translation>Incursioni</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="56"/>
         <source>syndicate</source>
         <translation>Associazioni</translation>
     </message>
@@ -1756,7 +1820,7 @@
         <translation type="obsolete">Fratture Void</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="57"/>
+        <location filename="../services/tabService.py" line="58"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
@@ -1771,17 +1835,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="60"/>
+        <location filename="../services/tabService.py" line="61"/>
         <source>other</source>
         <translation>Altro</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="109"/>
+        <location filename="../services/tabService.py" line="110"/>
         <source>alertError</source>
         <translation>Errore nella lettura del file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="120"/>
+        <location filename="../services/tabService.py" line="121"/>
         <source>validationError</source>
         <translation>Errore nella validazione del file allerte.json</translation>
     </message>
@@ -1914,54 +1978,59 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="15"/>
+        <location filename="../utils/warframeUtils.py" line="16"/>
         <source>randomItem</source>
         <translation>Item casuale da</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="42"/>
+        <location filename="../utils/warframeUtils.py" line="43"/>
         <source>affinity</source>
         <translation>affinità</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="49"/>
+        <location filename="../utils/warframeUtils.py" line="50"/>
         <source>credits</source>
         <translation>crediti</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="93"/>
+        <location filename="../utils/warframeUtils.py" line="94"/>
         <source>weaponPartsNotFound</source>
         <translation>Parte Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="117"/>
+        <location filename="../utils/warframeUtils.py" line="118"/>
         <source>weaponTypeNotFound</source>
         <translation>Tipo Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="171"/>
+        <location filename="../utils/warframeUtils.py" line="172"/>
         <source>ExportManifestNotFound</source>
         <translation>ExportManifest.json non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="126"/>
+        <location filename="../utils/warframeUtils.py" line="127"/>
         <source>operationTypeNotFound</source>
         <translation>Tipo Operazione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="188"/>
+        <location filename="../utils/warframeUtils.py" line="189"/>
         <source>jsonFileNotFound</source>
         <translation>.json non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="199"/>
+        <location filename="../utils/warframeUtils.py" line="200"/>
         <source>noBountyReward</source>
         <translation>Nessuna Ricompensa Disponibile</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="208"/>
+        <location filename="../utils/warframeUtils.py" line="209"/>
         <source>bountyRewardNotFound</source>
         <translation>Ricompensa Taglia non trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="256"/>
+        <source>sortieRewardReadingError</source>
+        <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
 </context>
 </TS>

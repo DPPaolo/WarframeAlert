@@ -738,6 +738,11 @@
         <source>unknownSyndicateRank</source>
         <translation>Unkown Syndicate Rank Name</translation>
     </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="375"/>
+        <source>unknownSortieBoss</source>
+        <translation>Unkown Sortie Boss</translation>
+    </message>
 </context>
 <context>
     <name>generalWidget</name>
@@ -1448,22 +1453,22 @@
         <translation>Points</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="63"/>
+        <location filename="../components/common/SeasonBox.py" line="65"/>
         <source>daily</source>
         <translation>Daily</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="65"/>
+        <location filename="../components/common/SeasonBox.py" line="67"/>
         <source>weekly</source>
         <translation>Weekly</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="67"/>
+        <location filename="../components/common/SeasonBox.py" line="69"/>
         <source>weeklyElite</source>
         <translation>Weekly Elite</translation>
     </message>
     <message>
-        <location filename="../components/common/SeasonBox.py" line="69"/>
+        <location filename="../components/common/SeasonBox.py" line="71"/>
         <source>unkown</source>
         <translation>Unkown</translation>
     </message>
@@ -1479,6 +1484,65 @@
         <location filename="../components/common/SimarisTarget.py" line="13"/>
         <source>actualSimarisTarget</source>
         <translation>Actual Simaris Target</translation>
+    </message>
+</context>
+<context>
+    <name>sortieBox</name>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="23"/>
+        <source>end</source>
+        <translation>Expiry in</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="92"/>
+        <source>boss</source>
+        <translation>Boss</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="88"/>
+        <source>init</source>
+        <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="72"/>
+        <source>sortie</source>
+        <translation>Sorties</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="92"/>
+        <source>noBoss</source>
+        <translation>None</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="54"/>
+        <source>reward</source>
+        <translation>Possible reward from the sorties</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="258"/>
+        <source>noReward</source>
+        <translation>No Rewards Available</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SortieBox.py" line="67"/>
+        <source>newSortieRewards</source>
+        <translation>New sortie rewards found</translation>
+    </message>
+</context>
+<context>
+    <name>sortieMissionBox</name>
+    <message>
+        <location filename="../components/common/SortieMissionBox.py" line="12"/>
+        <source>mission</source>
+        <translation>Mission</translation>
+    </message>
+</context>
+<context>
+    <name>sortieWidgetTab</name>
+    <message>
+        <location filename="../components/tab/SortieWidgetTab.py" line="35"/>
+        <source>sortieError</source>
+        <translation>Error during parsing sorties</translation>
     </message>
 </context>
 <context>
@@ -1711,42 +1775,42 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="48"/>
+        <location filename="../services/tabService.py" line="49"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="49"/>
+        <location filename="../services/tabService.py" line="50"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="50"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>events</source>
         <translation>Events</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="52"/>
         <source>acolyte</source>
         <translation>acolytes</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="52"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>bounty</source>
         <translation>Bounties</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="54"/>
         <source>invasion</source>
         <translation>Invasions</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>sortie</source>
-        <translation type="obsolete">Sortie</translation>
+        <translation>Sortie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="56"/>
         <source>syndicate</source>
         <translation>Syndycates</translation>
     </message>
@@ -1756,7 +1820,7 @@
         <translation type="obsolete">Void Fissure</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="57"/>
+        <location filename="../services/tabService.py" line="58"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
@@ -1771,17 +1835,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="60"/>
+        <location filename="../services/tabService.py" line="61"/>
         <source>other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="109"/>
+        <location filename="../services/tabService.py" line="110"/>
         <source>alertError</source>
         <translation>Error during reading file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="120"/>
+        <location filename="../services/tabService.py" line="121"/>
         <source>validationError</source>
         <translation>Errore in the validation of file allerte.json</translation>
     </message>
@@ -1914,54 +1978,59 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="15"/>
+        <location filename="../utils/warframeUtils.py" line="16"/>
         <source>randomItem</source>
         <translation>Random item from</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="42"/>
+        <location filename="../utils/warframeUtils.py" line="43"/>
         <source>affinity</source>
         <translation>affinity</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="49"/>
+        <location filename="../utils/warframeUtils.py" line="50"/>
         <source>credits</source>
         <translation>credits</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="93"/>
+        <location filename="../utils/warframeUtils.py" line="94"/>
         <source>weaponPartsNotFound</source>
         <translation>Weapon Parts not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="117"/>
+        <location filename="../utils/warframeUtils.py" line="118"/>
         <source>weaponTypeNotFound</source>
         <translation>Weapon Type not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="171"/>
+        <location filename="../utils/warframeUtils.py" line="172"/>
         <source>ExportManifestNotFound</source>
         <translation>File ExportManifest.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="126"/>
+        <location filename="../utils/warframeUtils.py" line="127"/>
         <source>operationTypeNotFound</source>
         <translation>Operation type not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="188"/>
+        <location filename="../utils/warframeUtils.py" line="189"/>
         <source>jsonFileNotFound</source>
         <translation>.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="199"/>
+        <location filename="../utils/warframeUtils.py" line="200"/>
         <source>noBountyReward</source>
         <translation>No Reward Available</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="208"/>
+        <location filename="../utils/warframeUtils.py" line="209"/>
         <source>bountyRewardNotFound</source>
         <translation>Bounty Reward not found</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="256"/>
+        <source>sortieRewardReadingError</source>
+        <translation>Error during reading sortie data</translation>
     </message>
 </context>
 </TS>

@@ -14,6 +14,7 @@ from warframeAlert.components.tab.InvasionWidgetTab import InvasionWidgetTab
 from warframeAlert.components.tab.NewsWidgetTab import NewsWidgetTab
 from warframeAlert.components.tab.NightwaveWidgetTab import NightwaveWidgetTab
 from warframeAlert.components.tab.OtherWidgetTab import OtherWidgetTab
+from warframeAlert.components.tab.SortieWidgetTab import SortieWidgetTab
 from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -34,7 +35,7 @@ class TabService(QtCore.QObject):
         self.event_tab = EventsWidgetTab()
         self.bounty_tab = BountyWidgetTab()
         self.invasion_tab = InvasionWidgetTab()
-        # self.tab_sortie = warframeClass.tab_sortie()
+        self.sortie_tab = SortieWidgetTab()
         self.syndicate_tab = SyndicateWidgetTab()
         # self.tab_fissure = warframeClass.tab_fissure()
         self.baro_tab = BaroWidgetTab()
@@ -51,7 +52,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(3, self.accolyte_tab.get_widget(), translate("tabService", "acolyte"))
         self.mainTabber.insertTab(4, self.bounty_tab.get_widget(), translate("tabService", "bounty"))
         self.mainTabber.insertTab(5, self.invasion_tab.get_widget(), translate("tabService", "invasion"))
-        #self.mainTabber.insertTab(6, self.SortieWidget, translate("tabService", "sortie"))
+        self.mainTabber.insertTab(6, self.sortie_tab.get_widget(), translate("tabService", "sortie"))
         self.mainTabber.insertTab(7, self.syndicate_tab.get_widget(), translate("tabService", "syndicate"))
         #self.mainTabber.insertTab(8, self.FisWidget, translate("tabService", "fissure"))
         self.mainTabber.insertTab(9, self.baro_tab.get_widget(), translate("tabService", "baro"))
@@ -74,8 +75,8 @@ class TabService(QtCore.QObject):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.bounty_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Invasion") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.invasion_tab.get_widget()))
-        # if (not OptionsHandler.get_option("Tab/Sortie") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.SortieWidget))
+        if (not OptionsHandler.get_option("Tab/Sortie") == 1):
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.sortie_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Syndicate") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.syndicate_tab.get_widget()))
         # if (not OptionsHandler.get_option("Tab/Fissure") == 1):
@@ -157,9 +158,7 @@ class TabService(QtCore.QObject):
             self.nightwave_tab.update_nightwave_season(json_data['SeasonInfo'])
         else:
             self.nightwave_tab.season_not_available()
-
-        #self.update_sortie(json_data['Sorties'])
-
+        self.sortie_tab.update_sortie(json_data['Sorties'])
         self.syndicate_tab.update_syndicate(json_data['SyndicateMissions'])
         self.bounty_tab.update_bounties(json_data['SyndicateMissions'])
         self.other_tab.update_twitch_promo(json_data['TwitchPromos'])

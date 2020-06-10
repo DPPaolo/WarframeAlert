@@ -2,6 +2,7 @@
 import json
 
 from warframeAlert import warframeData
+from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback, get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
@@ -244,3 +245,20 @@ def get_bounty_reward(reward, nome_file):
     reward = [rew_a, rew_b, rew_c]
     return reward
 
+
+def get_reward_from_sortie():
+    try:
+        json_data = read_drop_file("sortie")["Sortie"]
+    except Exception as er:
+        LogHandler.err(translate("warframeUtils",
+                                 "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
+        LogHandler.err(str(er))
+        print_traceback(translate("warframeUtils",
+                                  "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
+        return translate("sortieBox", "noReward")
+    data = ""
+    for item in json_data:
+        name = item['name_' + OptionsHandler.get_option("Language", str)]
+        rar = item['rarity'].split("(")[1].split(")")[0]
+        data = data + name + " (" + rar + ")\n"
+    return data

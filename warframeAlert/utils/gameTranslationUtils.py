@@ -357,3 +357,21 @@ def get_nightwave_challenge(challenge):
         print(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
         LogHandler.err(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
         return ("???", get_last_item_with_backslash(challenge), 0)
+
+
+def get_sortie_boss(boss):
+    if (boss in warframeData.SORTIE_BOSS):
+        return warframeData.SORTIE_BOSS[boss][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownSortieBoss") + ": " + boss)
+        LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + boss)
+        return boss
+
+
+def get_sortie_modifier(modifier):
+    if (modifier in warframeData.SORTIE_MODIFIER):
+        return warframeData.SORTIE_MODIFIER[modifier][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
+        LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
+        return modifier

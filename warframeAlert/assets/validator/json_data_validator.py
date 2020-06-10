@@ -76,6 +76,75 @@ default_schema = {
     }
 }
 
+sortie_schema = {
+    "type": "object",
+    "properties": {
+        "Sorties": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/sortie"},
+        }
+    },
+    "required": ["Sorties"],
+    "definitions": {
+        "sortie": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Seed": {"type": "integer"},
+                "Boss": {"type": "string"},
+                "Reward": {"type": "string"},
+                "ExtraDrops": {"type": "array",
+                               "items": {"type": "object",
+                                         "additionalProperties": False,
+                                         }},
+                "Variants": {"type": "array",
+                             "items": {"type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                           "missionType": {"type": "string"},
+                                           "modifierType": {"type": "string"},
+                                           "node": {"type": "string"},
+                                           "tileset": {"type": "string"},
+                                       },
+                                       "required": ["missionType", "modifierType", "node", "tileset"]
+                                       }},
+                "Twitter": {"type": "boolean"}
+            },
+            "required": ["_id", "Activation", "Expiry", "Seed", "Boss", "Reward", "ExtraDrops", "Variants", "Twitter"],
+        }
+    }
+}
+
 void_traders_schema = {
     "type": "object",
     "properties": {
