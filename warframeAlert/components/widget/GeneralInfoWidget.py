@@ -23,6 +23,7 @@ class GeneralInfoWidget():
         self.Version = QtWidgets.QLabel(translate("generalWidget", "fileVersion") + ": N/D")
         self.MobVersion = QtWidgets.QLabel(translate("generalWidget", "mobileFileVersion") + ": N/D")
         self.ForceLogoutVersion = QtWidgets.QLabel(translate("generalWidget", "forceLogoutVersion") + ": N/D")
+        self.DTLDSActivated = QtWidgets.QLabel(translate("generalWidget", "DTLSActivated") + ": N/D")
         self.WorldSeedLab = QtWidgets.QLabel(translate("generalWidget", "worldSeed") + ": ")
         self.WorldSeed = QtWidgets.QLabel("N/D")
         self.PrimeAccessLab = QtWidgets.QLabel(translate("generalWidget", "primeAccessState") + ": ")
@@ -42,6 +43,7 @@ class GeneralInfoWidget():
         self.gridOther.addWidget(self.Version, 1, 0)
         self.gridOther.addWidget(self.MobVersion, 1, 1)
         self.gridOther.addWidget(self.ForceLogoutVersion, 2, 0)
+        self.gridOther.addWidget(self.DTLDSActivated, 2, 1)
         self.gridOther.addWidget(self.WorldSeedLab, 3, 0)
         self.gridOther.addWidget(self.WorldSeed, 4, 0, 1, 2)
         self.gridOther.addWidget(self.PrimeAccessLab, 5, 0)
@@ -70,13 +72,15 @@ class GeneralInfoWidget():
         self.EarthTime.set_countdown(int(timeUtils.get_local_time()) + earth_time)
         self.EarthTime.start()
 
-    def set_other_datas(self, version, mob_version, world_seed, force_logout):
+    def set_other_datas(self, version, mob_version, world_seed, force_logout, dtls):
         version_text = translate("generalWidget", "fileVersion") + ": " + str(version)
         mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
+        dtls_active_text = translate("generalWidget", "DTLSActivated") + ": " + bool_to_yes_no(dtls)
         self.Version.setText(version_text)
         self.MobVersion.setText(mobile_version_text)
         self.ForceLogoutVersion.setText(force_logout_text)
+        self.DTLDSActivated.setText(dtls_active_text)
         self.WorldSeed.setText(divide_message(world_seed, 100))
 
     def parse_featured_dojo(self, data):

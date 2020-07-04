@@ -45,8 +45,8 @@ class OtherWidgetTab():
         if (not (len(self.twitchPromoWidget.data['TwitchPromos']) > 0)):
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
-    def set_other_datas(self, version, mob_version, world_seed, force_logout_version):
-        self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version)
+    def set_other_datas(self, version, mob_version, world_seed, force_logout_version, dtls):
+        self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
 
     def update_prime_access(self, prime_access, prime_available):
         try:

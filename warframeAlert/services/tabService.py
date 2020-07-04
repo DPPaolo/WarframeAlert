@@ -129,9 +129,6 @@ class TabService(QtCore.QObject):
         #self.update_fissure(json_data['ActiveMissions'])
 
         self.event_tab.update_alert_mission(json_data['Alerts'])
-
-        #self.update_dark_sector(json_data['BadlandNodes'])
-
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
 
@@ -167,6 +164,7 @@ class TabService(QtCore.QObject):
         mob_version = json_data['MobileVersion']
         world_seed = json_data['WorldSeed']
         force_logout_version = json_data['ForceLogoutVersion']
-        self.other_tab.set_other_datas(version, mob_version, world_seed, force_logout_version)
+        dtls = json_data['DTLS']
+        self.other_tab.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
 
         self.update_tabber()

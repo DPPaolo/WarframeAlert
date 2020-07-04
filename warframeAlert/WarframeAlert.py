@@ -244,16 +244,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #     else:
     #         self.tab_fissure.reset_fissure()
     #
-    # def update_dark_sector(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/PvP")== 1):
-    #         try:
-    #             Qtwarframe.parse_dark_sector(self.tab_pvp, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nei Settori Oscuri: " + str(er))
-    #             warframe.stampa_errore("Errore nei Settori Oscuri: " + str(er))
-    #             self.tab_pvp.reset_dark_sector()
-    #             return
-    #
     # def update_sales(self, data):
     #     if (warframeClass.gestore_opzioni.get_option("Tab/Market")== 1):
     #         try:
