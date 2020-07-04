@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets, QtGui
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.SortieMissionBox import SortieMissionBox
+from warframeAlert.components.common.SortieMissionDropView import SortieMissionDropView
 from warframeAlert.components.common.Spoiler import Spoiler
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.translationService import translate
@@ -48,11 +49,10 @@ class SortieBox():
 
         self.SortieRewardBox = QtWidgets.QVBoxLayout()
 
-        self.SortieReward = QtWidgets.QLabel("")
-        self.SortieRewardBox.addWidget(self.SortieReward)
+        self.SortieReward = SortieMissionDropView()
 
         self.spoiler = Spoiler(translate("sortieBox", "reward"))
-        self.spoiler.set_content_layout(self.SortieRewardBox)
+        self.spoiler.set_content_layout(self.SortieReward.DropBox)
 
         self.SortieBox.addWidget(self.spoiler)
         self.SortieBox.addStretch(1)
@@ -62,13 +62,16 @@ class SortieBox():
         self.SortieInit.setText(translate("sortieBox", "init") + ": " + timeUtils.get_time(init))
         self.SortieEnd.set_countdown(end)
         self.SortieEnd.start()
-        self.SortieReward.setText(get_reward_from_sortie().replace("\n", "\t"))
+        sortie_reward = get_reward_from_sortie()
         if (reward != "/Lotus/Types/Game/MissionDecks/SortieRewards"):
             LogHandler.debug(translate("sortieBox", "newSortieRewards"))
             LogHandler.debug("/Lotus/Types/Game/MissionDecks/SortieRewards -> " + reward)
         if (len(extra_reward) > 0):
             for extra_rew in extra_reward:
-                self.SortieReward.setText(self.SortieReward.text() + " " + extra_rew)
+                sortie_reward.add(extra_rew)
+
+        self.SortieReward.set_drop(sortie_reward)
+        self.spoiler.set_content_layout(self.SortieReward.DropBox)
 
         NotificationService.send_notification(
             translate("sortieBox", "sortie") + ": " + get_sortie_boss(boss),
@@ -96,4 +99,4 @@ class SortieBox():
         self.SortieBox2.sortie_not_available()
         self.SortieBox3.sortie_not_available()
 
-        self.SortieReward.setText(translate("sortieBox", "noReward"))
+        self.SortieReward.set_drop_message(translate("sortieBox", "noReward"))

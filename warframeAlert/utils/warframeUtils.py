@@ -256,9 +256,9 @@ def get_reward_from_sortie():
         print_traceback(translate("warframeUtils",
                                   "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
         return translate("sortieBox", "noReward")
-    data = ""
+    data = []
     for item in json_data:
         name = item['name_' + OptionsHandler.get_option("Language", str)]
         rar = item['rarity'].split("(")[1].split(")")[0]
-        data = data + name + " (" + rar + ")\n"
+        data.append(name + " (" + rar + ")")
     return data
