@@ -437,12 +437,14 @@ goals_schema = {
                 "Count": {"type": "integer"},
                 "Personal": {"type": "boolean"},
                 "ClampNodeScores": {"type": "boolean"},
-                "Bounty": {"type": "string"},
+                "Bounty": {"type": "boolean"},
                 "ToolTip": {"type": "string"},
                 "ScoreLocTag": {"type": "string"},
                 "ScoreMaxTag": {"type": "string"},
                 "ScoreVar": {"type": "string"},
                 "MissionKeyName": {"type": "string"},
+                "ConcurrentMissionKeyNames": {"type": "array",
+                                              "items": {"type": "string"}},
                 "Success": {"type": "integer"},
                 "Faction": {"type": "string"},
                 "InstructionalItem": {"type": "string"},
@@ -671,7 +673,12 @@ goals_schema = {
 
                 # Reward
                 "Node": {"type": "string"},
+                "ConcurrentNodes": {"type": "array",
+                                    "items": {"type": "string"}},
+                "ConcurrentNodeReqs": {"type": "array",
+                                       "items": {"type": "integer"}},
                 "Goal": {"type": "integer"},
+                "BonusGoal": {"type": "integer"},
                 "InterimGoals": {"type": "array",
                                  "items": {"type": "integer"}},
 
@@ -709,6 +716,40 @@ goals_schema = {
                                }
                            }
                            },
+                "BonusReward": {"type": "object",
+                                "properties": {
+                                    "additionalProperties": False,
+                                    "credits": {"type": "integer"},
+                                    "xp": {"type": "integer"},
+                                    "countedItems": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "additionalProperties": False,
+                                            "properties": {
+                                                "ItemCount": {"type": "integer"},
+                                                "ItemType": {"type": "string"}
+                                            }
+                                        }
+                                    },
+                                    "countedStoreItems": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",
+                                            "additionalProperties": False,
+                                            "properties": {
+                                                "ItemCount": {"type": "integer"},
+                                                "StoreItem": {"type": "string"}
+                                            }
+                                        }
+                                    },
+                                    "randomizedItems": {"type": "string"},
+                                    "items": {
+                                        "type": "array",
+                                        "items": {"type": "string"}
+                                    }
+                                }
+                                },
                 "InterimRewards": {"type": "array",
                                    "items": {"type": "object",
                                              "properties": {

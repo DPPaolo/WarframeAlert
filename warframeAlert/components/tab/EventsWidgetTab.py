@@ -246,6 +246,8 @@ def create_event(event_id, event, relay):
         tooltip = tooltip or get_last_item_with_backslash(event['ScoreLocTag'])
     if ('MissionKeyName' in event):
         tooltip = tooltip or get_last_item_with_backslash(event['MissionKeyName'])
+    if ('ConcurrentMissionKeyNames' in event):
+        tooltip = tooltip or get_last_item_with_backslash(event['ConcurrentMissionKeyNames'[-1]])
     if ('ScoreVar' in event):
         tooltip = tooltip or event['ScoreVar']
     if ('ScoreMaxTag' in event):
@@ -432,8 +434,11 @@ def create_event(event_id, event, relay):
     req = [0]
 
     if ('InterimGoals' in event):
-        goal = event['InterimGoals']
+        for temp_goal in event['InterimGoals']:
+            goal.append(temp_goal)
     if ('Goal' in event):
+        goal.append(event['Goal'])
+    if ('BonusGoal' in event):
         goal.append(event['Goal'])
 
     if ('InterimRewards' in event):
@@ -441,9 +446,18 @@ def create_event(event_id, event, relay):
             rew.append(parse_reward(temprew))
     if ('Reward' in event):
         rew.append(parse_reward(event['Reward']))
+    if ('BonusReward' in event):
+        rew.append(parse_reward(event['Reward']))
+
+    if ('ConcurrentNodeReqs' in event):
+        for temp_req in event['ConcurrentNodeReqs']:
+            req.append(temp_req)
 
     if ('Node' in event):
         node.append(get_node(event['Node']))
+    if ('ConcurrentNodes' in event):
+        for temp_node in event['ConcurrentNodes']:
+            node.append(get_node(temp_node))
     g_len = len(goal)
     n_len = len(node)
     r_len = len(rew)
