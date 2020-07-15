@@ -79,6 +79,7 @@ class BaroWidgetTab():
     def parse_baro(self, data):
         self.reset_baro()
         n_baro = len(self.alerts['VoidTraders'])
+        manifest_empty = 0
         for baro in data:
             baro_id = baro['_id']['$oid']
             init = timeUtils.get_time(baro['Activation']['$date']['$numberLong'])
@@ -92,6 +93,7 @@ class BaroWidgetTab():
             self.set_time(desc, end[:10])
 
             if ('Manifest' in baro):
+                manifest_empty += 1
                 for baro_item in baro['Manifest']:
                     item = get_item_name(baro_item['ItemType'])
                     item = divide_message(item, 18)
@@ -112,8 +114,8 @@ class BaroWidgetTab():
 
                 self.add_baro_item(n_baro, node, planet)
 
-            else:
-                self.delete_baro()
+        if (manifest_empty == 0):
+            self.delete_baro()
 
     def add_baro_item(self, n_baro, node, plan):
         n = n_baro
