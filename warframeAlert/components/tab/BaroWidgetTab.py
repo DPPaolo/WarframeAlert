@@ -26,6 +26,7 @@ class BaroWidgetTab():
         self.alerts = {'VoidTraders': []}
 
         self.baro_arrived = BaroState.BARO_NOT_ARRIVED
+        self.baro_con_arrived = BaroState.BARO_NOT_ARRIVED
 
         self.BaroWidget = QtWidgets.QWidget()
 
@@ -34,9 +35,15 @@ class BaroWidgetTab():
         self.BaroTabber = QtWidgets.QTabWidget()
 
         self.BaroDesc = QtWidgets.QLabel("")
-        self.BaroEnd = Countdown()
         self.BaroDesc.setAlignment(QtCore.Qt.AlignLeft)
+        self.BaroEnd = Countdown()
         self.BaroEnd.TimeLab.setAlignment(QtCore.Qt.AlignCenter)
+
+        self.BaroConDesc = QtWidgets.QLabel("")
+        self.BaroConDesc.setAlignment(QtCore.Qt.AlignLeft)
+        self.BaroConEnd = Countdown()
+        self.BaroConEnd.TimeLab.setAlignment(QtCore.Qt.AlignCenter)
+
         self.NoBaro = QtWidgets.QLabel(translate("baroWidget", "noBaro"))
         self.NoBaro.setAlignment(QtCore.Qt.AlignCenter)
 
@@ -56,7 +63,9 @@ class BaroWidgetTab():
         self.gridBaro = QtWidgets.QGridLayout(self.BaroWidget)
         self.gridBaro.addWidget(self.BaroDesc, 0, 0)
         self.gridBaro.addWidget(self.BaroEnd.TimeLab, 0, 1)
-        self.gridBaro.addWidget(self.BaroTabber, 1, 0, 1, 2)
+        self.gridBaro.addWidget(self.BaroConDesc, 1, 0)
+        self.gridBaro.addWidget(self.BaroConEnd.TimeLab, 1, 1)
+        self.gridBaro.addWidget(self.BaroTabber, 2, 0, 1, 2)
         self.gridBaro.setAlignment(QtCore.Qt.AlignTop)
 
         self.BaroWidget.setLayout(self.gridBaro)
@@ -85,12 +94,16 @@ class BaroWidgetTab():
             init = timeUtils.get_time(baro['Activation']['$date']['$numberLong'])
             end = baro['Expiry']['$date']['$numberLong']
             node, planet = get_node(baro['Node'])
-            self.BaroDesc.setToolTip("ID " + baro['Character'] + ": " + str(baro_id))
 
             desc = translate("baroWidget", "arrived") + ": " + init
             desc += "\t" + translate("baroWidget", "on") + " " + node + " " + planet
 
-            self.set_time(desc, end[:10])
+            if ('TennoCon' in node):
+                self.BaroConDesc.setToolTip("ID " + baro['Character'] + ": " + str(baro_id))
+                self.set_tennocon_time(desc, end[:10])
+            else:
+                self.BaroDesc.setToolTip("ID " + baro['Character'] + ": " + str(baro_id))
+                self.set_time(desc, end[:10])
 
             if ('Manifest' in baro):
                 manifest_empty += 1
@@ -128,12 +141,22 @@ class BaroWidgetTab():
             if (self.baro_arrived == BaroState.BARO_NOT_ARRIVED):
                 self.baro_arrived = BaroState.BARO_ARRIVED
 
+            if (self.baro_con_arrived == BaroState.BARO_NOT_ARRIVED):
+                self.baro_con_arrived = BaroState.BARO_ARRIVED
+
         if (self.baro_arrived == BaroState.BARO_ARRIVED):
             NotificationService.send_notification(
                 translate("baroWidget", "baroArrived") + "!",
                 node + " " + plan,
                 None)
             self.baro_arrived = BaroState.BARO_ITEM_COMPLETED
+
+        if (self.baro_con_arrived == BaroState.BARO_ARRIVED):
+            NotificationService.send_notification(
+                translate("baroWidget", "baroArrived") + "!",
+                node + " " + plan,
+                None)
+            self.baro_con_arrived = BaroState.BARO_ITEM_COMPLETED
 
     def set_time(self, desc, end):
         time = int(end) - int(timeUtils.get_local_time())
@@ -145,8 +168,19 @@ class BaroWidgetTab():
             self.BaroEnd.hide()
         self.BaroDesc.setText(desc)
 
+    def set_tennocon_time(self, desc, end):
+        time = int(end) - int(timeUtils.get_local_time())
+        if (time > 0):
+            self.BaroConEnd.set_name(translate("baroWidget", "end") + " ")
+            self.BaroConEnd.set_countdown(end)
+            self.BaroConEnd.start()
+        else:
+            self.BaroConEnd.hide()
+        self.BaroConDesc.setText(desc)
+
     def delete_baro(self):
         self.baro_arrived = BaroState.BARO_NOT_ARRIVED
+        self.baro_con_arrived = BaroState.BARO_NOT_ARRIVED
         self.BaroEnd.set_name(translate("baroWidget", "init") + " ")
         for i in reversed(range(0, len(self.alerts['VoidTraders']))):
             self.alerts['VoidTraders'][i].hide()
@@ -157,3 +191,4 @@ class BaroWidgetTab():
     def reset_baro(self):
         self.NoBaro.show()
         self.BaroEnd.TimeLab.show()
+        self.BaroConEnd.TimeLab.show()
