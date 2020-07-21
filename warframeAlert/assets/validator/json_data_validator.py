@@ -140,7 +140,7 @@ sortie_schema = {
                                        }},
                 "Twitter": {"type": "boolean"}
             },
-            "required": ["_id", "Activation", "Expiry", "Seed", "Boss", "Reward", "ExtraDrops", "Variants", "Twitter"],
+            "required": ["_id", "Activation", "Expiry", "Seed", "Boss", "Reward", "ExtraDrops", "Variants"],
         }
     }
 }

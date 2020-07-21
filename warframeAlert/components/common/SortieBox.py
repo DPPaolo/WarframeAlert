@@ -98,5 +98,3 @@ class SortieBox():
         self.SortieBox1.sortie_not_available()
         self.SortieBox2.sortie_not_available()
         self.SortieBox3.sortie_not_available()
-
-        self.SortieReward.set_drop_message(translate("sortieBox", "noReward"))
