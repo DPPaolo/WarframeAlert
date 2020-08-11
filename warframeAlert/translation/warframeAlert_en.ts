@@ -141,42 +141,42 @@
 <context>
     <name>baroWidget</name>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="139"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="174"/>
         <source>end</source>
         <translation>Leave in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="54"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="61"/>
         <source>baroItem</source>
         <translation>Baro Ki&apos;Teee Offer</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="73"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="82"/>
         <source>baroError</source>
         <translation>Error on Baro Ki&apos;Teer</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="89"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="98"/>
         <source>arrived</source>
         <translation>Arrives on</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="90"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="99"/>
         <source>on</source>
         <translation>at the</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="130"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="155"/>
         <source>baroArrived</source>
         <translation>Baro Ki&apos;Teer is arrived</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="148"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="184"/>
         <source>init</source>
         <translation>Arrives in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="40"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="47"/>
         <source>noBaro</source>
         <translation>Baro Ki&apos;Teer not arrived yet</translation>
     </message>
@@ -297,7 +297,7 @@
     <message>
         <location filename="../components/tab/BountyWidgetTab.py" line="37"/>
         <source>hiveMind</source>
-        <translation>Hive Mind</translation>
+        <translation>Deimos</translation>
     </message>
 </context>
 <context>
@@ -581,27 +581,27 @@
         <translation>Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="414"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="416"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="405"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
         <source>oldBounty</source>
         <translation>Previous Bounty</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="385"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="387"/>
         <source>razorbackHubEvent</source>
         <translation>Hub Event: Razorback Armada</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="387"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="389"/>
         <source>fomorianHubEvent</source>
         <translation>Hub Event: Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="389"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="391"/>
         <source>hubEvent</source>
         <translation>Hub Event: Event</translation>
     </message>
@@ -739,7 +739,7 @@
         <translation>Unkown Syndicate Rank Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="375"/>
+        <location filename="../utils/gameTranslationUtils.py" line="376"/>
         <source>unknownSortieBoss</source>
         <translation>Unkown Sortie Boss</translation>
     </message>
@@ -752,169 +752,174 @@
         <translation>Time on Earth</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="74"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="76"/>
         <source>fileVersion</source>
         <translation>File Version</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="75"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="77"/>
         <source>mobileFileVersion</source>
         <translation>Mobile File Version</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="26"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="27"/>
         <source>worldSeed</source>
         <translation>World Seed</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="29"/>
         <source>primeAccessState</source>
         <translation>Prime Access State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="31"/>
         <source>primeVaultState</source>
         <translation>Prime Vault State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="33"/>
         <source>featuredDojo</source>
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="64"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="66"/>
         <source>earthTimeDay</source>
         <translation>Time on Earth : Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="65"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
         <source>timeToNight</source>
         <translation>Time until Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="69"/>
         <source>earthTimeNight</source>
         <translation>Time on Earth : Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="68"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
         <source>timeToDay</source>
         <translation>Time until Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="99"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
         <source>tier1</source>
         <translation>Ghost Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="101"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
         <source>tier2</source>
         <translation>Shadow Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="103"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
         <source>tier3</source>
         <translation>Storm Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
         <source>tier4</source>
         <translation>Mountain Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
         <source>tier5</source>
         <translation>Moon Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="90"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="94"/>
         <source>noAlliance</source>
         <translation>no alliance</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
         <source>tier1Id</source>
         <translation>Ghost Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="126"/>
         <source>guildAllianceId</source>
         <translation>Alliance ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="112"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="116"/>
         <source>tier2Id</source>
         <translation>Shadow Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
         <source>tier3Id</source>
         <translation>Storm Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
         <source>tier4Id</source>
         <translation>Mountain Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="125"/>
         <source>tier5Id</source>
         <translation>Moon Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="132"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
         <source>primeState1</source>
         <translation>Women</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="138"/>
         <source>primeState2</source>
         <translation>Man</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="139"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="143"/>
         <source>primeStateUnknown</source>
         <translation>Unknown Prime State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="142"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
         <source>morePrimeVault</source>
         <translation>There are more Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="143"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
         <source>vault0</source>
         <translation>Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>vault1</source>
         <translation>Frost and Ember Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="145"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
         <source>vault2</source>
         <translation>Rhino and Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
         <source>vault3</source>
         <translation>Ember, Frost and Loki Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>vault4</source>
         <translation>Nyx e Rhino Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="76"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="78"/>
         <source>forceLogoutVersion</source>
         <translation>Force Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
         <source>comingSoon</source>
         <translation>Coming Soon</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="79"/>
+        <source>DTLSActivated</source>
+        <translation>DTLS active</translation>
     </message>
 </context>
 <context>
@@ -1098,64 +1103,74 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="103"/>
+        <location filename="../WarframeAlert.py" line="107"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="129"/>
+        <location filename="../WarframeAlert.py" line="133"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="129"/>
+        <location filename="../WarframeAlert.py" line="133"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="179"/>
+        <location filename="../WarframeAlert.py" line="183"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="181"/>
+        <location filename="../WarframeAlert.py" line="185"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="103"/>
+        <location filename="../WarframeAlert.py" line="107"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="161"/>
+        <location filename="../WarframeAlert.py" line="165"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="162"/>
+        <location filename="../WarframeAlert.py" line="166"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="163"/>
+        <location filename="../WarframeAlert.py" line="167"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="164"/>
+        <location filename="../WarframeAlert.py" line="168"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="187"/>
+        <location filename="../WarframeAlert.py" line="191"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="189"/>
+        <location filename="../WarframeAlert.py" line="193"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="197"/>
+        <source>updateFilesMenu</source>
+        <translation>Updat secondary files</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="199"/>
+        <source>updateFilesMenuDesc</source>
+        <translation>Update all the seconday files</translation>
     </message>
 </context>
 <context>
@@ -1489,27 +1504,27 @@
 <context>
     <name>sortieBox</name>
     <message>
-        <location filename="../components/common/SortieBox.py" line="23"/>
+        <location filename="../components/common/SortieBox.py" line="24"/>
         <source>end</source>
         <translation>Expiry in</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="92"/>
+        <location filename="../components/common/SortieBox.py" line="96"/>
         <source>boss</source>
         <translation>Boss</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="88"/>
+        <location filename="../components/common/SortieBox.py" line="92"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="72"/>
+        <location filename="../components/common/SortieBox.py" line="76"/>
         <source>sortie</source>
         <translation>Sorties</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="92"/>
+        <location filename="../components/common/SortieBox.py" line="96"/>
         <source>noBoss</source>
         <translation>None</translation>
     </message>
@@ -1970,7 +1985,7 @@
         <translation>Can&apos;t save file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/updateService.py" line="64"/>
+        <location filename="../services/updateService.py" line="65"/>
         <source>downloaded</source>
         <translation>downloaded</translation>
     </message>
