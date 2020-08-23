@@ -61,7 +61,8 @@ class UpdateService(QtCore.QObject):
             print_traceback(translate("updateService", "saveError") + " " + str(er))
 
     def download_finished(self, download_only):
-        LogHandler.debug("allerte.json" + " " + translate("updateService", "downloaded"))
+        if (OptionsHandler.get_option("Debug") == 1):
+            LogHandler.debug("allerte.json" + " " + translate("updateService", "downloaded"))
         self.file_downloaded.emit()
         if (not download_only):
             self.start()

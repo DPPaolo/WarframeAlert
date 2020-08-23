@@ -12,6 +12,7 @@ def check_json_data(json_data):
     validate_goals(json_data['Goals'])
     validate_events(json_data['Events'])
     validate_featured_guilds(json_data['FeaturedGuilds'])
+    validate_flash_sales(json_data['FlashSales'])
     validate_hub_events(json_data['HubEvents'])
     validate_invasions(json_data['Invasions'])
     validate_library_info(json_data['LibraryInfo'])
@@ -61,6 +62,10 @@ def validate_events(json_data):
 
 def validate_featured_guilds(json_data):
     validate(instance={'FeaturedGuilds': json_data}, schema=featured_guilds_schema)
+
+
+def validate_flash_sales(json_data):
+    validate(instance={'FlashSales': json_data}, schema=flash_sales_schema)
 
 
 def validate_hub_events(json_data):

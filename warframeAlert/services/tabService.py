@@ -14,6 +14,7 @@ from warframeAlert.components.tab.InvasionWidgetTab import InvasionWidgetTab
 from warframeAlert.components.tab.NewsWidgetTab import NewsWidgetTab
 from warframeAlert.components.tab.NightwaveWidgetTab import NightwaveWidgetTab
 from warframeAlert.components.tab.OtherWidgetTab import OtherWidgetTab
+from warframeAlert.components.tab.SalesWidgetTab import SalesWidgetTab
 from warframeAlert.components.tab.SortieWidgetTab import SortieWidgetTab
 from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -37,11 +38,11 @@ class TabService(QtCore.QObject):
         self.invasion_tab = InvasionWidgetTab()
         self.sortie_tab = SortieWidgetTab()
         self.syndicate_tab = SyndicateWidgetTab()
-        # self.tab_fissure = warframeClass.tab_fissure()
+        # self.fissure_tab = warframeClass.tab_fissure()
         self.baro_tab = BaroWidgetTab()
-        # self.tab_pvp = warframeClass.tab_pvp()
+        # self.pvp_tab = warframeClass.tab_pvp()
         self.accolyte_tab = AccolyteWidgetTab()
-        # self.tab_sconti = warframeClass.tab_sconti()
+        self.sales_tab = SalesWidgetTab()
         self.other_tab = OtherWidgetTab()
 
     def update_tabber(self):
@@ -54,10 +55,10 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(5, self.invasion_tab.get_widget(), translate("tabService", "invasion"))
         self.mainTabber.insertTab(6, self.sortie_tab.get_widget(), translate("tabService", "sortie"))
         self.mainTabber.insertTab(7, self.syndicate_tab.get_widget(), translate("tabService", "syndicate"))
-        #self.mainTabber.insertTab(8, self.FisWidget, translate("tabService", "fissure"))
+        #self.mainTabber.insertTab(8, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
         self.mainTabber.insertTab(9, self.baro_tab.get_widget(), translate("tabService", "baro"))
-        #self.mainTabber.insertTab(10, self.MerWidget, translate("tabService", "sales"))
-        #self.mainTabber.insertTab(11, self.PvPWidget, translate("tabService", "pvp"))
+        self.mainTabber.insertTab(10, self.sales_tab.get_widget(), translate("tabService", "sales"))
+        #self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
         n_event = self.event_tab.get_lenght()
@@ -80,21 +81,21 @@ class TabService(QtCore.QObject):
         if (not OptionsHandler.get_option("Tab/Syndicate") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.syndicate_tab.get_widget()))
         # if (not OptionsHandler.get_option("Tab/Fissure") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.FisWidget))
+        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.fissure_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Baro") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.baro_tab.get_widget()))
-        # if (not OptionsHandler.get_option("Tab/Market") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.MerWidget))
+        if (not OptionsHandler.get_option("Tab/Market") == 1):
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.sales_tab.get_widget()))
         # if (not OptionsHandler.get_option("Tab/PVP") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.PvPWidget))
+        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.pvp_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Other") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.other_tab.get_widget()))
 
         self.event_tab.update_tab()
         self.invasion_tab.update_tab()
-        # self.tab_sconti.update_tab()
+        self.sales_tab.update_tab()
         self.other_tab.update_tab()
-        # self.tab_pvp.update_tab()
+        # self.pvp_tab.update_tab()
 
         self.mainTabber.setCurrentIndex(index)
 
@@ -131,9 +132,7 @@ class TabService(QtCore.QObject):
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
-
-        #self.update_sales(json_data['FlashSales'])
-
+        self.sales_tab.update_sales(json_data['FlashSales'])
         self.event_tab.update_events(json_data['Goals'], json_data['ConstructionProjects'])
         self.news_tab.update_global_upgrades(json_data['GlobalUpgrades'])
         self.news_tab.update_news(json_data['Events'])

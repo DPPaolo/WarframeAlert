@@ -1428,6 +1428,77 @@
     </message>
 </context>
 <context>
+    <name>salesBox</name>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="51"/>
+        <source>discount</source>
+        <translation>Discount</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="59"/>
+        <source>credits</source>
+        <translation>credits</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="63"/>
+        <source>platinum</source>
+        <translation>platinum</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="22"/>
+        <source>end</source>
+        <translation>Expiry in</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="50"/>
+        <source>isShow</source>
+        <translation>Visible</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="68"/>
+        <source>start</source>
+        <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="69"/>
+        <source>bogobuy</source>
+        <translation>Bogobuy</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="69"/>
+        <source>bogoget</source>
+        <translation>Bogoget</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="71"/>
+        <source>featured</source>
+        <translation>Featured</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="71"/>
+        <source>popular</source>
+        <translation>Popular</translation>
+    </message>
+</context>
+<context>
+    <name>salesWidgetTab</name>
+    <message>
+        <location filename="../components/tab/SalesWidgetTab.py" line="44"/>
+        <source>featuredItems</source>
+        <translation>Featured Items</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SalesWidgetTab.py" line="57"/>
+        <source>discountedItems</source>
+        <translation>Discounted Items</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/SalesWidgetTab.py" line="67"/>
+        <source>salesError</source>
+        <translation>Error in the parsing of sales</translation>
+    </message>
+</context>
+<context>
     <name>scoreEvent</name>
     <message>
         <location filename="../components/common/ScoreEvent.py" line="12"/>
@@ -1790,42 +1861,42 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="49"/>
+        <location filename="../services/tabService.py" line="50"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="50"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="52"/>
         <source>events</source>
         <translation>Events</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="52"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>acolyte</source>
         <translation>acolytes</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="54"/>
         <source>bounty</source>
         <translation>Bounties</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>invasion</source>
         <translation>Invasions</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="56"/>
         <source>sortie</source>
         <translation>Sortie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="56"/>
+        <location filename="../services/tabService.py" line="57"/>
         <source>syndicate</source>
         <translation>Syndycates</translation>
     </message>
@@ -1835,14 +1906,14 @@
         <translation type="obsolete">Void Fissure</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="58"/>
+        <location filename="../services/tabService.py" line="59"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="58"/>
+        <location filename="../services/tabService.py" line="60"/>
         <source>sales</source>
-        <translation type="obsolete">Sales</translation>
+        <translation>Sales</translation>
     </message>
     <message>
         <location filename="../services/tabService.py" line="59"/>
@@ -1850,17 +1921,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="61"/>
+        <location filename="../services/tabService.py" line="62"/>
         <source>other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="110"/>
+        <location filename="../services/tabService.py" line="111"/>
         <source>alertError</source>
         <translation>Error during reading file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="121"/>
+        <location filename="../services/tabService.py" line="122"/>
         <source>validationError</source>
         <translation>Errore in the validation of file allerte.json</translation>
     </message>

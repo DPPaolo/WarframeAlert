@@ -98,4 +98,3 @@ class AlertWidget():
             remove_widget(self.alerts['Alerts'][canc[i-1]].AlertBox)
             del self.alerts['Alerts'][canc[i-1]]
             i -= 1
-

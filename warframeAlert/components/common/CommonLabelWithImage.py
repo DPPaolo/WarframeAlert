@@ -18,6 +18,7 @@ class CommonLabelWithImage():
         self.LabelWithImage.addWidget(self.TextBefore)
         self.LabelWithImage.addWidget(self.Image.image)
         self.LabelWithImage.addWidget(self.TextAfter)
+        self.LabelWithImage.addStretch(1)
 
     def set_after_text(self, text):
         self.TextAfter.setText(text)

@@ -76,6 +76,62 @@ default_schema = {
     }
 }
 
+flash_sales_schema = {
+    "type": "object",
+    "properties": {
+        "FlashSales": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/sales"},
+        }
+    },
+    "required": ["FlashSales"],
+    "definitions": {
+        "sales": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "StartDate": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EndDate": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "BannerIndex": {"type": "integer"},
+                "BogoBuy": {"type": "integer", "enum": [0]},
+                "BogoGet": {"type": "integer", "enum": [0]},
+                "Discount": {"type": "integer"},
+                "PremiumOverride": {"type": "integer"},
+                "RegularOverride": {"type": "integer"},
+                "ShowInMarket": {"type": "boolean"},
+                "Featured": {"type": "boolean"},
+                "Popular": {"type": "boolean"},
+                "TypeName": {"type": "string"},
+                "ExperimentFeatured": {"type": "integer"},
+            },
+            "required": ["StartDate", "EndDate", "BannerIndex", "BogoBuy", "BogoGet", "Discount", "PremiumOverride", "RegularOverride", "ShowInMarket",
+                         "Featured", "Popular", "TypeName", "ExperimentFeatured"],
+        }
+    }
+}
+
 sortie_schema = {
     "type": "object",
     "properties": {
