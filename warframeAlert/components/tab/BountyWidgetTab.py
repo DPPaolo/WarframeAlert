@@ -17,7 +17,7 @@ class BountyWidgetTab():
 
         self.OstronWidget = BountyWidget()
         self.FortunaWidget = BountyWidget()
-        self.HiveMindWidget = BountyWidget()
+        self.DeimosWidget = BountyWidget()
 
         self.BountiesTabber = QtWidgets.QTabWidget(self.BountiesWidget)
 
@@ -25,16 +25,18 @@ class BountyWidgetTab():
         self.CetusEnd = Countdown(translate("bountyWidgetTab", "bountyEnd") + " ")
         self.CetusTime = Countdown()
         self.FortunaTime = Countdown()
+        self.DeimosTime = Countdown()
 
         self.BountiesGrid.addWidget(self.CetusInit, 0, 0)
         self.BountiesGrid.addWidget(self.CetusEnd.TimeLab, 0, 1)
-        self.BountiesGrid.addWidget(self.CetusTime.TimeLab, 0, 2)
-        self.BountiesGrid.addWidget(self.FortunaTime.TimeLab, 0, 3)
-        self.BountiesGrid.addWidget(self.BountiesTabber, 1, 0, 1, 4)
+        self.BountiesGrid.addWidget(self.CetusTime.TimeLab, 1, 0)
+        self.BountiesGrid.addWidget(self.FortunaTime.TimeLab, 1, 1)
+        self.BountiesGrid.addWidget(self.DeimosTime.TimeLab, 1, 2)
+        self.BountiesGrid.addWidget(self.BountiesTabber, 2, 0, 1, 3)
 
         self.BountiesTabber.insertTab(0, self.OstronWidget.get_widget(), translate("bountyWidgetTab", "ostron"))
         self.BountiesTabber.insertTab(1, self.FortunaWidget.get_widget(), translate("bountyWidgetTab", "fortuna"))
-        self.BountiesTabber.insertTab(2, self.HiveMindWidget.get_widget(), translate("bountyWidgetTab", "hiveMind"))
+        self.BountiesTabber.insertTab(2, self.DeimosWidget.get_widget(), translate("bountyWidgetTab", "hiveMind"))
 
         self.BountiesGrid.setAlignment(QtCore.Qt.AlignTop)
 
@@ -44,6 +46,7 @@ class BountyWidgetTab():
 
         self.CetusTime.TimeOut.connect(self.set_cetus_time)
         self.FortunaTime.TimeOut.connect(self.set_fortuna_time)
+        self.DeimosTime.TimeOut.connect(self.set_deimos_time)
 
     def get_widget(self):
         return self.BountiesWidget
@@ -59,8 +62,8 @@ class BountyWidgetTab():
                         self.set_time(bounty_init, bounty_end)
                     elif (tag == 'SolarisSyndicate'):
                         self.FortunaWidget.parse_bounty(syndicate)
-                    elif (tag == 'HivemindSyndicate'):
-                        self.HiveMindWidget.parse_bounty(syndicate)
+                    elif (tag == 'EntratiSyndicate'):
+                        self.DeimosWidget.parse_bounty(syndicate)
                     else:
                         if ('Jobs' in syndicate):
                             LogHandler.debug(translate("bountyWidgetTab", "newSynJobs") + " " + tag)
@@ -82,6 +85,7 @@ class BountyWidgetTab():
         self.CetusTimeFin = end
         self.set_cetus_time()
         self.set_fortuna_time()
+        self.set_deimos_time()
 
     def set_cetus_time(self):
         cetus_time, day = timeUtils.get_cetus_time(int(self.CetusTimeFin))
@@ -102,6 +106,17 @@ class BountyWidgetTab():
 
         self.FortunaTime.set_countdown(int(timeUtils.get_local_time()) + fortuna_time)
         self.FortunaTime.start()
+
+    # same time of cetus
+    def set_deimos_time(self):
+        deimos_time, fass = timeUtils.get_cetus_time(int(self.CetusTimeFin))
+        if (fass):
+            self.DeimosTime.set_name(translate("bountyWidgetTab", "deimosFass") + " ")
+        else:
+            self.DeimosTime.set_name(translate("bountyWidgetTab", "deimosVome") + " ")
+
+        self.DeimosTime.set_countdown(int(timeUtils.get_local_time()) + deimos_time)
+        self.DeimosTime.start()
 
     def bounty_not_available(self):
         self.OstronWidget.reset_bounty()

@@ -219,12 +219,12 @@
         <translation>Drop Taglia Orb Vallis</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="107"/>
+        <location filename="../components/common/BountyBox.py" line="105"/>
         <source>dropGhoul</source>
         <translation>Drop Taglia Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="113"/>
+        <location filename="../components/common/BountyBox.py" line="109"/>
         <source>dropCetus</source>
         <translation>Drop Taglia Cetus</translation>
     </message>
@@ -232,6 +232,11 @@
         <location filename="../components/common/BountyBox.py" line="115"/>
         <source>noBountyRewardFound</source>
         <translation>Ricompensa taglia sconosciuta</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="113"/>
+        <source>dropDeimos</source>
+        <translation>Drop Taglia Deimos</translation>
     </message>
 </context>
 <context>
@@ -245,37 +250,37 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="73"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="76"/>
         <source>newSynJobs</source>
         <translation>Nuove taglie per il sindacato</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="70"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="73"/>
         <source>bountiesError</source>
         <translation>Errore nelle taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="109"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="124"/>
         <source>bountyInit</source>
         <translation>Inizio Taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="93"/>
         <source>cetusDay</source>
         <translation>Cetus - Notte tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="91"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="95"/>
         <source>cetusNight</source>
         <translation>Cetus - Giorno tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="99"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="103"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Freddo tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="101"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="105"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Caldo tra</translation>
     </message>
@@ -285,19 +290,29 @@
         <translation>Scadono tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="35"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="37"/>
         <source>ostron</source>
         <translation>Ostron</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="36"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="38"/>
         <source>fortuna</source>
         <translation>Fortuna</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="37"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="39"/>
         <source>hiveMind</source>
         <translation>Deimos</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="114"/>
+        <source>deimosFass</source>
+        <translation>Deimos - Vome tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="116"/>
+        <source>deimosVome</source>
+        <translation>Deimos - Fass tra</translation>
     </message>
 </context>
 <context>
@@ -1465,17 +1480,17 @@
         <translation>Bogobuy</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="69"/>
+        <location filename="../components/common/SalesBox.py" line="70"/>
         <source>bogoget</source>
         <translation>Bogoget</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="71"/>
+        <location filename="../components/common/SalesBox.py" line="72"/>
         <source>featured</source>
         <translation>In Evidenza</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="71"/>
+        <location filename="../components/common/SalesBox.py" line="73"/>
         <source>popular</source>
         <translation>Popolare</translation>
     </message>

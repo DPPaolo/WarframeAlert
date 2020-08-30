@@ -203,8 +203,8 @@ def get_bounty_reward(reward, nome_file):
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
     reward_type = get_last_item_with_backslash(reward)[:-7]
-    if (reward_type in warframeData.CETUS_RANK_LEVEL):
-        reward_type = warframeData.CETUS_RANK_LEVEL[reward_type]
+    if (reward_type in warframeData.BOUNTY_RANK_LEVEL):
+        reward_type = warframeData.BOUNTY_RANK_LEVEL[reward_type]
     else:
         print(translate("warframeUtils", "bountyRewardNotFound") + " " + reward_type)
         return [no_reward, no_reward, no_reward]

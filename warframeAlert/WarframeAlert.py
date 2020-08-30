@@ -12,6 +12,7 @@ from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.tabService import TabService
 from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
+from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils
 from warframeAlert.utils.fileUtils import create_default_folder, get_separator, \
@@ -40,8 +41,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.notification_service = NotificationService(self.tray.get_tray_icon())
         self.notification_service.start()
 
-        # Start the file update service
+        # Start the update service
         self.update_service = UpdateService()
+
+        # Start the file update service
+        self.update_file_service = UpdateFileService()
 
         self.setWindowTitle(translate("main", "title"))
 
@@ -190,11 +194,11 @@ class MainWindow(QtWidgets.QMainWindow):
         update_file.triggered.connect(lambda: self.update_service.download_alert_file(True))
         debug.addAction(update_file)
 
-    #         update_only_file = QtWidgets.QAction(translate("main", "updateFilesMenu") + "Aggiorna Tutti i File", debug)
-    #         update_only_file.setShortcut("Ctrl+T")
-    #         update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc") + "Aggiorna Tutti i File utilizzati dal programma")
-    #         update_only_file.triggered.connect(lambda: warframeData.gestore_update_file.update_alert_file(False))
-    #         debug.addAction(update_only_file)
+        update_only_file = QtWidgets.QAction(translate("main", "updateFilesMenu"), debug)
+        update_only_file.setShortcut("Ctrl+T")
+        update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc"))
+        update_only_file.triggered.connect(lambda: self.update_file_service.download_all_file())
+        debug.addAction(update_only_file)
     #
     #         parse_file = QtWidgets.QAction("Parserizza il File", debug)
     #         parse_file.setShortcut("Ctrl+P")
@@ -244,17 +248,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #     else:
     #         self.tab_fissure.reset_fissure()
     #
-    # def update_sales(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/Market")== 1):
-    #         try:
-    #             Qtwarframe.parse_sales(self.tab_sconti, data)
-    #         except Exception as er:
-    #             warframe.err("Errore negli Sconti: " + str(er))
-    #             warframe.stampa_errore("Errore negli Sconti: " + str(er))
-    #             self.tab_sconti.reset_sales()
-    #             return
-    #     else:
-    #         self.tab_sconti.reset_sales()
     #
     # def update_PVP_tournament(self, data):
     #     if (warframeClass.gestore_opzioni.get_option("Tab/PVP")== 1):

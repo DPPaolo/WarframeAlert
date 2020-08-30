@@ -285,7 +285,7 @@ syndicate_schema = {
                              "QuillsSyndicate", "CetusSyndicate", "VentKidsSyndicate", "VoxSyndicate",
                              "SolarisSyndicate", "RadioLegionSyndicate", "RadioLegionIntermissionSyndicate",
                              "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
-                             "RadioLegion3Syndicate", "HivemindSyndicate"]
+                             "RadioLegion3Syndicate", "EntratiSyndicate", "NecraloidSyndicate"]
                 },
                 "Activation": {
                     "type": "object",
