@@ -209,34 +209,39 @@
         <translation>Level</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="94"/>
+        <location filename="../components/common/BountyBox.py" line="96"/>
         <source>rewardType</source>
         <translation>Reward Type</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="101"/>
+        <location filename="../components/common/BountyBox.py" line="103"/>
         <source>dropFortuna</source>
         <translation>Orb Vallis Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="105"/>
+        <location filename="../components/common/BountyBox.py" line="107"/>
         <source>dropGhoul</source>
         <translation>Ghoul Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="109"/>
+        <location filename="../components/common/BountyBox.py" line="111"/>
         <source>dropCetus</source>
         <translation>Cetus Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="115"/>
+        <location filename="../components/common/BountyBox.py" line="117"/>
         <source>noBountyRewardFound</source>
         <translation>Unkown bounty reward</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="113"/>
+        <location filename="../components/common/BountyBox.py" line="115"/>
         <source>dropDeimos</source>
         <translation>Deimos Bounty Drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/BountyBox.py" line="85"/>
+        <source>token</source>
+        <translation>Total Token</translation>
     </message>
 </context>
 <context>

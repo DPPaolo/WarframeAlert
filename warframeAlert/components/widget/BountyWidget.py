@@ -30,7 +30,7 @@ class BountyWidget:
     def get_timer(self):
         return self.bountyInit, self.bountyEnd
 
-    def parse_bounty(self, data):
+    def parse_bounty(self, data, use_token=False):
         if (data):
             is_bounty_present = 0
             bounty_id = data['_id']['$oid']
@@ -49,7 +49,7 @@ class BountyWidget:
             if ('Jobs' in data):
                 for i in range(0, len(data['Jobs'])):
                     bounty = create_bounty_box(data['Jobs'][i])
-                    bounty.set_syndicate(get_syndicate(tag), i + 1)
+                    bounty.set_syndicate(get_syndicate(tag), i + 1, use_token)
                     bounty.set_bounty_id(bounty_id)
                     self.alerts['Bounty'].append(bounty)
                     del bounty

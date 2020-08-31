@@ -78,9 +78,11 @@ class BountyBox():
         else:
             self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " " + rew[-8])
 
-    def set_syndicate(self, syn, num):
+    def set_syndicate(self, syn, num, use_token):
         self.BountySyn.setText(translate("bountyBox", "syndicate") + ": " + syn)
         self.BountyNumber.setText(translate("bountyBox", "bountyName") + " " + str(num))
+        if (use_token):
+            self.BountyXPLab.setText(translate("bountyBox", "token") + ": ")
 
     def set_bounty_id(self, bounty_id):
         self.bounty_id = bounty_id

@@ -63,7 +63,7 @@ class BountyWidgetTab():
                     elif (tag == 'SolarisSyndicate'):
                         self.FortunaWidget.parse_bounty(syndicate)
                     elif (tag == 'EntratiSyndicate'):
-                        self.DeimosWidget.parse_bounty(syndicate)
+                        self.DeimosWidget.parse_bounty(syndicate, True)
                     else:
                         if ('Jobs' in syndicate):
                             LogHandler.debug(translate("bountyWidgetTab", "newSynJobs") + " " + tag)
