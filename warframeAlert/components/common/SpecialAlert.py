@@ -132,7 +132,9 @@ def create_alert(alert, alert_id):
         if ('extraEnemySpec' in alert):
             extra_enemy_spec = alert['extraEnemySpec']
         if ('advancedSpawners' in alert):
-            advanced_spawners = get_last_item_with_backslash(alert['advancedSpawners'])
+            advanced_spawners = ""
+            for spawn in alert['advancedSpawners']:
+                advanced_spawners += get_last_item_with_backslash(spawn) + " "
         if ('requiredItems' in alert):
             for req_i in alert['requiredItems']:
                 reqitem += get_item_name(req_i) + " "

@@ -117,7 +117,7 @@ class Alert():
     def set_alert_time(self, end, start):
         self.AlertTime.set_countdown(end[:10])
         self.AlertTime.start()
-        self.AlertTime.set_tooltip(translate("alert", "init") + ": " + timeUtils.get_alert_time(start[:10]))
+        self.AlertTime.set_tooltip(translate("alert", "init") + ": " + timeUtils.get_time(start[:10]))
 
     def set_alert_time_name(self, name):
         self.AlertTime.set_name(name)
