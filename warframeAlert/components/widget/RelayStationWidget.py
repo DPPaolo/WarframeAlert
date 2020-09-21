@@ -72,7 +72,8 @@ class RelayStationWidget:
                 if (nod['Hide'] and 'Activation' not in nod):
                     self.set_relay_text(self.get_relay_text() + node[0] + " " + node[1] + "\n")
             elif ('CustomNpcEncounters' in nod):
-                self.set_other_text(self.get_other_text() + translate("hubEvent", "event") + " " + node[0] + " " + node[1] + "\n")
+                self.set_other_text(self.get_other_text() + translate("hubEvent", "event") +
+                                    " " + node[0] + " " + node[1] + "\n")
                 spec = 1
             elif ('Seed' in nod):
                 self.set_other_text(self.get_other_text() + node[0] + " " + node[1] + "\n")

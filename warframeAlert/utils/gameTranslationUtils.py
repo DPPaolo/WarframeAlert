@@ -56,19 +56,20 @@ def get_faction(name):
         return faction
 
 
-def get_item_name(name):
+def get_item_name(name, warning=True):
     if (OptionsHandler.get_option("Language", str) == "it"):
-        return get_item_name_it(name)
+        return get_item_name_it(name, warning)
     else:
         return get_item_name_en(name)
 
 
-def get_item_name_it(name):
+def get_item_name_it(name, warning):
     if (name in warframeData.ITEM_NAME_IT):
         return warframeData.ITEM_NAME_IT[name]
     else:
-        print(translate("gameTranslation", "unknownItemName") + ": " + name)
-        LogHandler.err(translate("gameTranslation", "unknownItemName") + ": " + name)
+        if (warning):
+            print(translate("gameTranslation", "unknownItemName") + ": " + name)
+            LogHandler.err(translate("gameTranslation", "unknownItemName") + ": " + name)
         return get_last_item_with_backslash(name)
 
 

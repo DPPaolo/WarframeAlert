@@ -49,6 +49,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/utils/stringUtils.py \
                warframeAlert/utils/timeUtils.py \
                warframeAlert/utils/warframeUtils.py \
+               warframeAlert/utils/warframeFileUtils.py \
                warframeAlert/WarframeAlert.py
 
 TRANSLATIONS = warframeAlert/translation/warframeAlert_en.ts \

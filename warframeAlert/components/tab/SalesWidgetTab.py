@@ -7,7 +7,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import print_traceback, remove_widget
 from warframeAlert.utils.logUtils import LogHandler
-from warframeAlert.warframe import get_item_translation
+from warframeAlert.utils.gameTranslationUtils import get_item_name
 
 
 class SalesWidgetTab():
@@ -80,7 +80,7 @@ class SalesWidgetTab():
 
             timer = int(end[:10]) - int(timeUtils.get_local_time())
             if (timer > 0):
-                item = get_item_translation(sales['TypeName'], 0)
+                item = get_item_name(sales['TypeName'], 0)
                 found = 0
                 for actualSale in self.alerts['FlashSales']['Featured']:
                     if (actualSale.get_item_name() == item):

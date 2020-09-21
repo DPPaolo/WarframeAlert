@@ -95,24 +95,24 @@ class BountyBox():
                 translate("bountyBox", "rewardType") + " B",
                 translate("bountyBox", "rewardType") + " C"]
         drop = MissionDropView()
+        self.missionDropWidget = MissionDropViewWidget(None, drop)
+        self.viewDropWidget = self.missionDropWidget.get_widget()
         if ('Venus' in self.reward):
             reward = get_bounty_reward(self.reward, "fortuna")
             drop.set_drop(3, name, reward)
-            self.missionDropWidget = MissionDropViewWidget(None, drop)
-            self.viewDropWidget = self.missionDropWidget.get_widget()
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropFortuna"))
         elif ('Ghoul' in self.reward):
             reward = get_bounty_reward(self.reward, "cetus")
             drop.set_drop(1, name, reward)
-            self.missionDropWidget = MissionDropViewWidget(None, drop)
-            self.viewDropWidget = self.missionDropWidget.get_widget()
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropGhoul"))
         elif ('Eidolon' in self.reward):
             reward = get_bounty_reward(self.reward, "cetus")
-            drop.set_drop(1, name, reward)
-            self.missionDropWidget = MissionDropViewWidget(None, drop)
-            self.viewDropWidget = self.missionDropWidget.get_widget()
+            drop.set_drop(3, name, reward)
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropCetus"))
+        elif ('Deimos' in self.reward):
+            reward = get_bounty_reward(self.reward, "deimos")
+            drop.set_drop(3, name, reward)
+            self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropDeimos"))
         else:
             print(translate("bountyBox", "noBountyRewardFound") + " " + self.reward)
         self.viewDropWidget.show()
