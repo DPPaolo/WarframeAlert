@@ -196,13 +196,13 @@ def read_drop_file(name):
         return {}
 
 
-def get_bounty_reward(reward, nome_file):
+def get_bounty_reward(reward, file_name):
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
     try:
-        json_data = read_drop_file(nome_file)['bounty']
+        json_data = read_drop_file(file_name)['bounty']
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
-    reward_type = get_last_item_with_backslash(reward)[:-7]
+    reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1][:-7]
     if (reward_type in warframeData.BOUNTY_RANK_LEVEL):
         reward_type = warframeData.BOUNTY_RANK_LEVEL[reward_type]
     else:
@@ -218,7 +218,7 @@ def get_bounty_reward(reward, nome_file):
                 rew_a += stage + "\n\n"
                 for i in range(0, len(bounty['rotations']['A'][stage])):
                     elem = bounty['rotations']['A'][stage][i]
-                    item = elem['name']
+                    item = elem['name_en'] if (OptionsHandler.get_option("Language", str) == "en") else elem['name_it']
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_a += item + " (" + rar + ")\n"
                 rew_a += "\n"
@@ -228,7 +228,7 @@ def get_bounty_reward(reward, nome_file):
                 rew_b += stage + "\n\n"
                 for i in range(0, len(bounty['rotations']['B'][stage])):
                     elem = bounty['rotations']['B'][stage][i]
-                    item = elem['name']
+                    item = elem['name_' + OptionsHandler.get_option("Language", str)]
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_b += item + " (" + rar + ")\n"
                 rew_b += "\n"
@@ -238,7 +238,7 @@ def get_bounty_reward(reward, nome_file):
                 rew_c += stage + "\n\n"
                 for i in range(0, len(bounty['rotations']['C'][stage])):
                     elem = bounty['rotations']['C'][stage][i]
-                    item = elem['name']
+                    item = elem['name_' + OptionsHandler.get_option("Language", str)]
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_c += item + " (" + rar + ")\n"
                 rew_c += "\n"
