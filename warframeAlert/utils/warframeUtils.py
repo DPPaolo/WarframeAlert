@@ -262,3 +262,69 @@ def get_reward_from_sortie():
         rar = item['rarity'].split("(")[1].split(")")[0]
         data.append(name + " (" + rar + ")")
     return data
+
+
+def translate_item_from_drop_file(data):
+    if (data[-1] == " "):
+        data = data[:-1]
+    if (data[0] == " "):
+        data = data[0:]
+    if ("PROFIT:" in data):
+        return translate("warframeUtils", "profit") + ": " + data.split(' ')[1]
+    if ('RETURN:' in data):
+        return translate("warframeUtils", "return") + ": " + data.split(' ')[1]
+    item = data.split(" ")
+    num = item[0].replace("X", "").replace(",", "").isnumeric()
+    num2 = item[0].isnumeric()
+    if (num or num2):
+        data_new = ""
+        for i in item[1:]:
+            data_new = data_new + i + " "
+        return item[0].replace("X", " x") + " " + translate_item_from_drop_file(data_new)
+    if (is_relic(item[0])):
+        return translate_relic(data)
+    elif (is_lens(item[0])):
+        return translate_focus_lens(data)
+    # TODO: continue the translation
+    # elif (is_mod(data)):
+    #     return data.lower().title()
+    # elif (is_warframe(item[0])):
+    #     return prime(data)
+    # elif (is_prime(item[0])):
+    #     return prime(data)
+    # elif (is_resource(data)):
+    #     return warframeData.RISORSA[data]
+    # elif (is_item(data)):
+    #     return warframeData.OGGETTI[data]
+    else:
+        print(translate("warframeUtils", "itemNotFound") + ": " + data)
+        LogHandler.err(translate("warframeUtils", "itemNotFound") + ": " + data)
+        return data
+
+
+def is_relic(relic):
+    return relic in warframeData.RELICS
+
+
+def translate_relic(relic):
+    relic = relic.split(" ")
+    return "Reliquia" + str.capitalize(relic[0]) + " " + relic[1]
+
+
+def is_lens(lens):
+    return lens in warframeData.LENS
+
+
+def translate_focus_lens(focus_lens):
+    focus_lens = focus_lens.split(" ")
+    if ("EIDOLON" in focus_lens):
+        if (len(focus_lens) == 3):
+            return "Lente Eidolon (Schema)"
+        elif (len(focus_lens) == 4):
+            return "Lente Eidolon " + str.capitalize(focus_lens[1]) + " (Schema)"
+    if ("LUA" in focus_lens):
+        "Lente Lua (Schema)"
+    elif (len(focus_lens) == 2):
+        return "Lente " + str.capitalize(focus_lens[0])
+    elif (len(focus_lens) == 3):
+        return "Lente Maggiore " + str.capitalize(focus_lens[1])

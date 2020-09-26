@@ -376,3 +376,25 @@ def get_sortie_modifier(modifier):
         print(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
         LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
         return modifier
+
+
+def get_stage_name(stage):
+    if (OptionsHandler.get_option("Language", str) == "en"):
+        return stage
+    if (stage in warframeData.BOUNTY_STAGE):
+        return warframeData.BOUNTY_STAGE[stage]
+    else:
+        print(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
+        LogHandler.err(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
+        return stage
+
+
+def get_relic_grade(grade):
+    if (OptionsHandler.get_option("Language", str) == "en"):
+        return grade
+    if (grade in warframeData.RELIC_GRADE):
+        return warframeData.RELIC_GRADE[grade]
+    else:
+        print(translate("gameTranslation", "unknownRelicGrade") + ": " + grade)
+        LogHandler.err(translate("gameTranslation", "unknownRelicGrade") + ": " + grade)
+        return grade

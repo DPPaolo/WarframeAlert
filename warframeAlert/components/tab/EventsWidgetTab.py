@@ -400,7 +400,7 @@ def create_event(event_id, event, relay):
             bounty = create_bounty_box(job)
             if ('JobAffiliationTag' in event):
                 syn = get_syndicate(event['JobAffiliationTag'])
-                bounty.set_syndicate(syn, translate("eventsWidget", "event"))
+                bounty.set_syndicate(syn, translate("eventsWidget", "event"), False)
             if ('JobPreviousVersion' in event):
                 bounty.set_bounty_id(event['JobPreviousVersion']['$oid'])
 
@@ -413,7 +413,7 @@ def create_event(event_id, event, relay):
             bounty = create_bounty_box(job)
             if ('JobAffiliationTag' in event):
                 syn = get_syndicate(event['JobAffiliationTag'])
-                bounty.set_syndicate(syn, translate("eventsWidget", "event"))
+                bounty.set_syndicate(syn, translate("eventsWidget", "event"), False)
             if ('JobCurrentVersion' in event):
                 bounty.set_bounty_id(event['JobCurrentVersion']['$oid'])
 
