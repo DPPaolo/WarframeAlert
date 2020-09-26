@@ -52,6 +52,9 @@ class SortieBox():
         self.SortieReward = SortieMissionDropView()
 
         self.spoiler = Spoiler(translate("sortieBox", "reward"))
+
+        sortie_reward = get_reward_from_sortie()
+        self.SortieReward.set_drop(sortie_reward)
         self.spoiler.set_content_layout(self.SortieReward.DropBox)
 
         self.SortieBox.addWidget(self.spoiler)
@@ -62,16 +65,15 @@ class SortieBox():
         self.SortieInit.setText(translate("sortieBox", "init") + ": " + timeUtils.get_time(init))
         self.SortieEnd.set_countdown(end)
         self.SortieEnd.start()
-        sortie_reward = get_reward_from_sortie()
         if (reward != "/Lotus/Types/Game/MissionDecks/SortieRewards"):
             LogHandler.debug(translate("sortieBox", "newSortieRewards"))
             LogHandler.debug("/Lotus/Types/Game/MissionDecks/SortieRewards -> " + reward)
         if (len(extra_reward) > 0):
+            sortie_reward = []
             for extra_rew in extra_reward:
-                sortie_reward.add(extra_rew)
-
-        self.SortieReward.set_drop(sortie_reward)
-        self.spoiler.set_content_layout(self.SortieReward.DropBox)
+                sortie_reward.append(extra_rew)
+            self.SortieReward.set_drop(sortie_reward)
+            self.spoiler.set_content_layout(self.SortieReward.DropBox)
 
         NotificationService.send_notification(
             translate("sortieBox", "sortie") + ": " + get_sortie_boss(boss),
