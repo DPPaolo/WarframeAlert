@@ -1,7 +1,7 @@
 # coding=utf-8
 import time
 
-from PyQt5 import QtCore, QtWidgets
+from PyQt5 import QtCore, QtWidgets, sip
 from PyQt5.QtCore import QThread
 
 from warframeAlert.services.translationService import translate
@@ -36,7 +36,8 @@ class Countdown(QThread):
                 end_time = int(self.time) - int(timeUtils.get_local_time())
                 self.stop = 0
                 try:
-                    self.calculate_time(end_time)
+                    if (not sip.isdeleted(self.TimeLab)):
+                        self.calculate_time(end_time)
                 except Exception as er:
                     commonUtils.print_traceback(translate("countdown", "countdown_error") + ":\n" + str(end_time))
                     LogHandler.err(translate("countdown", "countdown_error") + " " + str(end_time))

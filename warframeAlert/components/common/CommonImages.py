@@ -15,7 +15,7 @@ class CommonImages():
         self.width = 50
         self.height = 50
         self.aspect_ratio = Qt.IgnoreAspectRatio
-        self.trasform = Qt.SmoothTransformation
+        self.transform = Qt.SmoothTransformation
         self.downloader_thread = None
 
     def set_image(self, path_image, url_download_image=None):
@@ -36,18 +36,18 @@ class CommonImages():
             res = self.pixmap.load(path)
             if (res):
                 self.image.setPixmap(self.pixmap)
-                self.set_image_dimension(self.width, self.height, self.aspect_ratio, self.trasform)
+                self.set_image_dimension(self.width, self.height, self.aspect_ratio, self.transform)
             else:
                 # the downloaded file is corrupted
                 delete_file(path_image)
             return res
 
-    def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, trasform=Qt.SmoothTransformation):
+    def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, transform=Qt.SmoothTransformation):
         self.width = width
         self.height = height
         self.aspect_ratio = aspect_ratio
-        self.trasform = trasform
-        self.image.setPixmap(self.pixmap.scaled(width, height, aspect_ratio, trasform))
+        self.transform = transform
+        self.image.setPixmap(self.pixmap.scaled(width, height, aspect_ratio, transform))
 
     def set_tooltip(self, tooltip):
         self.image.setToolTip(tooltip)
