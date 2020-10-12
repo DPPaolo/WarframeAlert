@@ -35,7 +35,8 @@ class SquadLinkEvent(Event):
 
     def set_squad_link_data(self, init, end, next_init, next_end):
         wave_init = translate("squadLinkEvent", "waveInit") + ": " + timeUtils.get_time(init[:10])
-        next_wave_end = translate("squadLinkEvent", "nextWaveEnd") + ": " + timeUtils.get_time(next_end[:10])
+        if (next_end != 0):
+            next_wave_end = translate("squadLinkEvent", "nextWaveEnd") + ": " + timeUtils.get_time(next_end[:10])
         self.TAWaveEndLab.setToolTip(wave_init)
         self.TAWaveEnd.set_tooltip(wave_init)
         self.TAWaveEnd.set_countdown(end[:10])

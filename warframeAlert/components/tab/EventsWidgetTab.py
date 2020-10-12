@@ -367,7 +367,7 @@ def create_event(event_id, event, relay):
         temp = ReconstructionRelayEvent(event_id)
         temp.add_relay_reconstruction(regions, relay_node, task)
         temp.set_event_type(EventType.RECOSTRUCTION)
-    elif (alt_activation):
+    elif (alt_activation and alt_expiry):
         temp = SquadLinkEvent(event_id)
         temp.set_squad_link_data(alt_activation, alt_expiry, next_alt_activation, next_alt_expiry)
         temp.set_squad_link_extra_data(completition_bonus, epoch_number, pause_scheduling, metadata)
