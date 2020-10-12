@@ -96,8 +96,8 @@ def create_alert(alert, alert_id):
         level = str(min_lv) + "-" + str(max_lv)
         mis_level = get_map_type(alert['levelOverride'])
         item = parse_reward(alert['missionReward'])
-        if ('maxWaveNum' in alert):
-            wave = str(alert['maxWaveNum'])
+        if ('maxWavenum' in alert):
+            wave = str(alert['maxWavenum'])
             if (alert['missionType'] == "MT_SURVIVAL"):
                 wave += " " + translate("specialAlert", "minutes")
             elif (alert['missionType'] == "MT_DEFENSE"):

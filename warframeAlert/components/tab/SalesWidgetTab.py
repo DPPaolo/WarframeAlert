@@ -77,6 +77,8 @@ class SalesWidgetTab():
         for sales in data:
             init = timeUtils.get_time(sales['StartDate']['$date']['$numberLong'])
             end = sales['EndDate']['$date']['$numberLong']
+            if ('ProductExpiryOverride' in sales):
+                end = sales['ProductExpiryOverride']['$date']['$numberLong']
 
             timer = int(end[:10]) - int(timeUtils.get_local_time())
             if (timer > 0):

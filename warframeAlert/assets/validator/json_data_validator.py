@@ -114,6 +114,18 @@ flash_sales_schema = {
                         }
                     }
                 },
+                "ProductExpiryOverride": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
                 "BannerIndex": {"type": "integer"},
                 "BogoBuy": {"type": "integer", "enum": [0]},
                 "BogoGet": {"type": "integer", "enum": [0]},
@@ -670,7 +682,7 @@ goals_schema = {
                         "minEnemyLevel": {"type": "integer"},
                         "archwingRequired": {"type": "boolean"},
                         "isSharkwingMission": {"type": "boolean"},
-                        "maxWaveNum": {"type": "integer"},
+                        "maxWavenum": {"type": "integer"},
                         "nightmare": {"type": "integer"},
                         "difficulty": {"type": "integer"},
                         "missionReward": {
@@ -904,7 +916,7 @@ alerts_schema = {
                         "minEnemyLevel": {"type": "integer"},
                         "archwingRequired": {"type": "boolean"},
                         "isSharkwingMission": {"type": "boolean"},
-                        "maxWaveNum": {"type": "integer"},
+                        "maxWavenum": {"type": "integer"},
                         "nightmare": {"type": "integer"},
                         "difficulty": {"type": "integer"},
                         "missionReward": {
