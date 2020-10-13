@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>accolyt</name>
     <message>
@@ -626,14 +627,27 @@
     </message>
 </context>
 <context>
+    <name>fissureBox</name>
+    <message>
+        <location filename="../components/common/FissureBox.py" line="55"/>
+        <source>newFissure</source>
+        <translation>Nuove Fratture Void</translation>
+    </message>
+    <message>
+        <location filename="../components/common/FissureBox.py" line="48"/>
+        <source>fissureStart</source>
+        <translation>Iniziata il</translation>
+    </message>
+</context>
+<context>
     <name>fissureWidgetTab</name>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="24"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="25"/>
         <source>viewRelics</source>
         <translation>Visualizza Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="50"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="51"/>
         <source>errorRelics</source>
         <translation>Errore nel parsing delle fratture</translation>
     </message>
@@ -1467,32 +1481,32 @@
 <context>
     <name>relicWidget</name>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="15"/>
+        <location filename="../components/widget/RelicWidget.py" line="27"/>
         <source>relicWidgetTitle</source>
         <translation>Gestione Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="60"/>
+        <location filename="../components/widget/RelicWidget.py" line="72"/>
         <source>relicLith</source>
         <translation>Reliquie Lith</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="61"/>
+        <location filename="../components/widget/RelicWidget.py" line="73"/>
         <source>relicMeso</source>
         <translation>Reliquie Meso</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="62"/>
+        <location filename="../components/widget/RelicWidget.py" line="74"/>
         <source>relicNeo</source>
         <translation>Reliquie Neo</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="63"/>
+        <location filename="../components/widget/RelicWidget.py" line="75"/>
         <source>relicAxi</source>
         <translation>Reliquie Axi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="64"/>
+        <location filename="../components/widget/RelicWidget.py" line="76"/>
         <source>relicRequiem</source>
         <translation>Reliquie Requiem</translation>
     </message>
@@ -1502,7 +1516,7 @@
         <translation type="obsolete">Info Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="125"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="126"/>
         <source>unknownRelicTier</source>
         <translation>Grado Reliquia Sconosciuto</translation>
     </message>
