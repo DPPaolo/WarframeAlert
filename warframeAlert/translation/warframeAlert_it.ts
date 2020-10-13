@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -629,9 +628,9 @@
 <context>
     <name>fissureWidgetTab</name>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="23"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="24"/>
         <source>viewRelics</source>
-        <translation type="unfinished">Visualizza Reliquie</translation>
+        <translation>Visualizza Reliquie</translation>
     </message>
     <message>
         <location filename="../components/tab/FissureWidgetTab.py" line="50"/>
@@ -777,19 +776,9 @@
         <translation>Boss Incursioni Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="386"/>
-        <source>unknownbountyStage</source>
-        <translation type="obsolete">Stage Taglia Sconosciuto</translation>
-    </message>
-    <message>
         <location filename="../utils/gameTranslationUtils.py" line="388"/>
         <source>unknownBountyStage</source>
         <translation>Stage Taglia Sconosciuto</translation>
-    </message>
-    <message>
-        <location filename="../utils/gameTranslationUtils.py" line="399"/>
-        <source>unknownRelicGrade</source>
-        <translation>Grado Reliquia Sconosciuto</translation>
     </message>
 </context>
 <context>
@@ -1473,6 +1462,49 @@
         <location filename="../components/widget/RelayStationWidget.py" line="28"/>
         <source>None</source>
         <translation>Nessuno</translation>
+    </message>
+</context>
+<context>
+    <name>relicWidget</name>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="15"/>
+        <source>relicWidgetTitle</source>
+        <translation>Gestione Reliquie</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="60"/>
+        <source>relicLith</source>
+        <translation>Reliquie Lith</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="61"/>
+        <source>relicMeso</source>
+        <translation>Reliquie Meso</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="62"/>
+        <source>relicNeo</source>
+        <translation>Reliquie Neo</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="63"/>
+        <source>relicAxi</source>
+        <translation>Reliquie Axi</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="64"/>
+        <source>relicRequiem</source>
+        <translation>Reliquie Requiem</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/RelicWidget.py" line="73"/>
+        <source>searchRelics</source>
+        <translation type="obsolete">Info Reliquie</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="125"/>
+        <source>unknownRelicTier</source>
+        <translation>Grado Reliquia Sconosciuto</translation>
     </message>
 </context>
 <context>

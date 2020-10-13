@@ -10,6 +10,7 @@ from warframeAlert.components.tab.AccolyteWidgetTab import AccolyteWidgetTab
 from warframeAlert.components.tab.BaroWidgetTab import BaroWidgetTab
 from warframeAlert.components.tab.BountyWidgetTab import BountyWidgetTab
 from warframeAlert.components.tab.EventsWidgetTab import EventsWidgetTab
+from warframeAlert.components.tab.FissureWidgetTab import FissureWidgetTab
 from warframeAlert.components.tab.InvasionWidgetTab import InvasionWidgetTab
 from warframeAlert.components.tab.NewsWidgetTab import NewsWidgetTab
 from warframeAlert.components.tab.NightwaveWidgetTab import NightwaveWidgetTab
@@ -20,7 +21,7 @@ from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
-from warframeAlert.utils.fileUtils import get_separator, check_file
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.validatorUtils import check_json_data
 
@@ -38,7 +39,7 @@ class TabService(QtCore.QObject):
         self.invasion_tab = InvasionWidgetTab()
         self.sortie_tab = SortieWidgetTab()
         self.syndicate_tab = SyndicateWidgetTab()
-        # self.fissure_tab = warframeClass.tab_fissure()
+        self.fissure_tab = FissureWidgetTab()
         self.baro_tab = BaroWidgetTab()
         # self.pvp_tab = warframeClass.tab_pvp()
         self.accolyte_tab = AccolyteWidgetTab()
@@ -55,7 +56,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(5, self.invasion_tab.get_widget(), translate("tabService", "invasion"))
         self.mainTabber.insertTab(6, self.sortie_tab.get_widget(), translate("tabService", "sortie"))
         self.mainTabber.insertTab(7, self.syndicate_tab.get_widget(), translate("tabService", "syndicate"))
-        #self.mainTabber.insertTab(8, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
+        self.mainTabber.insertTab(8, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
         self.mainTabber.insertTab(9, self.baro_tab.get_widget(), translate("tabService", "baro"))
         self.mainTabber.insertTab(10, self.sales_tab.get_widget(), translate("tabService", "sales"))
         #self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
@@ -80,8 +81,8 @@ class TabService(QtCore.QObject):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.sortie_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Syndicate") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.syndicate_tab.get_widget()))
-        # if (not OptionsHandler.get_option("Tab/Fissure") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.fissure_tab.get_widget()))
+        if (not OptionsHandler.get_option("Tab/Fissure") == 1):
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.fissure_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Baro") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.baro_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Market") == 1):
@@ -127,8 +128,7 @@ class TabService(QtCore.QObject):
         build_label = json_data['BuildLabel']
         game_time = json_data['Time']
 
-        #self.update_fissure(json_data['ActiveMissions'])
-
+        self.fissure_tab.update_fissure(json_data['ActiveMissions'])
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])

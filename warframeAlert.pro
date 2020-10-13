@@ -6,6 +6,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/DailyDeals.py \
                warframeAlert/components/common/Event.py \
                warframeAlert/components/common/EventReward.py \
+               warframeAlert/components/common/FissureBox.py \
                warframeAlert/components/common/GlobalUpgrade.py \
                warframeAlert/components/common/HubEvent.py \
                warframeAlert/components/common/Invasion.py \
@@ -39,6 +40,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/widget/GeneralInfoWidget.py \
                warframeAlert/components/widget/HubWidget.py \
                warframeAlert/components/widget/RelayStationWidget.py \
+               warframeAlert/components/widget/RelicWidget.py \
                warframeAlert/components/widget/TwitchPromoWidget.py \
                warframeAlert/services/networkService.py \
                warframeAlert/services/notificationService.py \
