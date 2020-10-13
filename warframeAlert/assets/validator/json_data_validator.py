@@ -76,6 +76,61 @@ default_schema = {
     }
 }
 
+fissure_schema = {
+    "type": "object",
+    "properties": {
+        "ActiveMissions": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/fissure"},
+        }
+    },
+    "required": ["ActiveMissions"],
+    "definitions": {
+        "fissure": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Seed": {"type": "integer"},
+                "Region": {"type": "integer"},
+                "Modifier": {"type": "string"},
+                "Node": {"type": "string"},
+                "MissionType": {"type": "string"},
+            },
+            "required": ["Activation", "Expiry", "_id", "Seed", "Region", "Modifier", "Node", "MissionType"],
+        }
+    }
+}
+
 flash_sales_schema = {
     "type": "object",
     "properties": {
@@ -138,7 +193,8 @@ flash_sales_schema = {
                 "TypeName": {"type": "string"},
                 "ExperimentFeatured": {"type": "integer"},
             },
-            "required": ["StartDate", "EndDate", "BannerIndex", "BogoBuy", "BogoGet", "Discount", "PremiumOverride", "RegularOverride", "ShowInMarket",
+            "required": ["StartDate", "EndDate", "BannerIndex", "BogoBuy", "BogoGet", "Discount", "PremiumOverride",
+                         "RegularOverride", "ShowInMarket",
                          "Featured", "Popular", "TypeName", "ExperimentFeatured"],
         }
     }

@@ -5,6 +5,7 @@ from warframeAlert.assets.validator.json_data_validator import *
 
 def check_json_data(json_data):
     validate_all_json(json_data)
+    validate_fissure(json_data['ActiveMissions'])
     validate_alerts(json_data['Alerts'])
     validate_construction_projects(json_data['ConstructionProjects'])
     validate_daily_deals(json_data['DailyDeals'])
@@ -34,6 +35,10 @@ def check_json_data(json_data):
 
 def validate_all_json(json_data):
     validate(instance={'json_data': json_data}, schema=all_json_schema)
+
+
+def validate_fissure(json_data):
+    validate(instance={'ActiveMissions': json_data}, schema=fissure_schema)
 
 
 def validate_alerts(json_data):

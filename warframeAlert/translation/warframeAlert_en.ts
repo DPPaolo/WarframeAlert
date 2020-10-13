@@ -379,12 +379,12 @@
 <context>
     <name>countdown</name>
     <message>
-        <location filename="../components/common/Countdown.py" line="42"/>
+        <location filename="../components/common/Countdown.py" line="43"/>
         <source>countdown_error</source>
         <translation>Error during calculation of countdown timer</translation>
     </message>
     <message>
-        <location filename="../components/common/Countdown.py" line="44"/>
+        <location filename="../components/common/Countdown.py" line="45"/>
         <source>Error</source>
         <translation>Error</translation>
     </message>
@@ -627,6 +627,19 @@
     </message>
 </context>
 <context>
+    <name>fissureWidgetTab</name>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="23"/>
+        <source>viewRelics</source>
+        <translation>View Relics</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="50"/>
+        <source>errorRelics</source>
+        <translation>Error during parsing fissure</translation>
+    </message>
+</context>
+<context>
     <name>gameTranslation</name>
     <message>
         <location filename="../utils/gameTranslationUtils.py" line="26"/>
@@ -774,7 +787,7 @@
         <translation>Unkown Stage Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="397"/>
+        <location filename="../utils/gameTranslationUtils.py" line="399"/>
         <source>unknownRelicGrade</source>
         <translation>Unkown Relic Grade</translation>
     </message>
@@ -1615,22 +1628,22 @@
         <translation>Expiry in</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="96"/>
+        <location filename="../components/common/SortieBox.py" line="98"/>
         <source>boss</source>
         <translation>Boss</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="92"/>
+        <location filename="../components/common/SortieBox.py" line="94"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="76"/>
+        <location filename="../components/common/SortieBox.py" line="78"/>
         <source>sortie</source>
         <translation>Sorties</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="96"/>
+        <location filename="../components/common/SortieBox.py" line="98"/>
         <source>noBoss</source>
         <translation>None</translation>
     </message>
@@ -1640,12 +1653,12 @@
         <translation>Possible reward from the sorties</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="258"/>
+        <location filename="../utils/warframeUtils.py" line="262"/>
         <source>noReward</source>
         <translation>No Rewards Available</translation>
     </message>
     <message>
-        <location filename="../components/common/SortieBox.py" line="67"/>
+        <location filename="../components/common/SortieBox.py" line="69"/>
         <source>newSortieRewards</source>
         <translation>New sortie rewards found</translation>
     </message>
@@ -1896,57 +1909,57 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="50"/>
+        <location filename="../services/tabService.py" line="51"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="51"/>
+        <location filename="../services/tabService.py" line="52"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="52"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>events</source>
         <translation>Events</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="53"/>
+        <location filename="../services/tabService.py" line="54"/>
         <source>acolyte</source>
         <translation>acolytes</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>bounty</source>
         <translation>Bounties</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="56"/>
         <source>invasion</source>
         <translation>Invasions</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="56"/>
+        <location filename="../services/tabService.py" line="57"/>
         <source>sortie</source>
         <translation>Sortie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="57"/>
+        <location filename="../services/tabService.py" line="58"/>
         <source>syndicate</source>
         <translation>Syndycates</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="56"/>
+        <location filename="../services/tabService.py" line="59"/>
         <source>fissure</source>
-        <translation type="obsolete">Void Fissure</translation>
+        <translation>Void Fissure</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="59"/>
+        <location filename="../services/tabService.py" line="60"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="60"/>
+        <location filename="../services/tabService.py" line="61"/>
         <source>sales</source>
         <translation>Sales</translation>
     </message>
@@ -1956,17 +1969,17 @@
         <translation type="obsolete">PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="62"/>
+        <location filename="../services/tabService.py" line="63"/>
         <source>other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="111"/>
+        <location filename="../services/tabService.py" line="112"/>
         <source>alertError</source>
         <translation>Error during reading file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="122"/>
+        <location filename="../services/tabService.py" line="123"/>
         <source>validationError</source>
         <translation>Errore in the validation of file allerte.json</translation>
     </message>
@@ -2099,42 +2112,42 @@
 <context>
     <name>warframeFileUtils</name>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="17"/>
+        <location filename="../utils/warframeFileUtils.py" line="30"/>
         <source>notFound</source>
         <translation>not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="73"/>
+        <location filename="../utils/warframeFileUtils.py" line="86"/>
         <source>errorSortie</source>
         <translation>Error during parsing sortie file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="78"/>
+        <location filename="../utils/warframeFileUtils.py" line="91"/>
         <source>errorCetus</source>
         <translation>Error during parsing cetus drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="83"/>
+        <location filename="../utils/warframeFileUtils.py" line="96"/>
         <source>errorFortuna</source>
         <translation>Error during parsing fortuna drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="88"/>
+        <location filename="../utils/warframeFileUtils.py" line="101"/>
         <source>errorDeimos</source>
         <translation>Error during parsing deimos drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="93"/>
+        <location filename="../utils/warframeFileUtils.py" line="106"/>
         <source>errorRelics</source>
         <translation>Error during parsing relic file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="98"/>
+        <location filename="../utils/warframeFileUtils.py" line="111"/>
         <source>errorDropMission</source>
         <translation>Error during parsing mission drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="103"/>
+        <location filename="../utils/warframeFileUtils.py" line="116"/>
         <source>errorDropKey</source>
         <translation>Error during parsing key drop file</translation>
     </message>
@@ -2182,32 +2195,32 @@
         <translation>.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="200"/>
+        <location filename="../utils/warframeUtils.py" line="201"/>
         <source>noBountyReward</source>
         <translation>No Reward Available</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="209"/>
+        <location filename="../utils/warframeUtils.py" line="210"/>
         <source>bountyRewardNotFound</source>
         <translation>Bounty Reward not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="256"/>
+        <location filename="../utils/warframeUtils.py" line="260"/>
         <source>sortieRewardReadingError</source>
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="273"/>
+        <location filename="../utils/warframeUtils.py" line="277"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="275"/>
+        <location filename="../utils/warframeUtils.py" line="279"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="300"/>
+        <location filename="../utils/warframeUtils.py" line="305"/>
         <source>itemNotFound</source>
         <translation>Item not found</translation>
     </message>
