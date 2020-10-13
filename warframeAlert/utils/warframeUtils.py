@@ -4,9 +4,9 @@ import json
 from warframeAlert import warframeData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import print_traceback, get_last_item_with_backslash
+from warframeAlert.utils.commonUtils import print_traceback
 from warframeAlert.utils.fileUtils import get_separator
-from warframeAlert.utils.gameTranslationUtils import get_item_name
+from warframeAlert.utils.gameTranslationUtils import get_item_name, get_stage_name
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -197,6 +197,7 @@ def read_drop_file(name):
 
 
 def get_bounty_reward(reward, file_name):
+    language = OptionsHandler.get_option("Language", str)
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
     try:
         json_data = read_drop_file(file_name)['bounty']
@@ -215,30 +216,33 @@ def get_bounty_reward(reward, file_name):
         if ('A' in bounty['rotations']):
             rew_a = ""
             for stage in sorted(bounty['rotations']['A']):
-                rew_a += stage + "\n\n"
+                stage_translated = stage if (language == "en") else get_stage_name(stage)
+                rew_a += stage_translated + "\n\n"
                 for i in range(0, len(bounty['rotations']['A'][stage])):
                     elem = bounty['rotations']['A'][stage][i]
-                    item = elem['name_en'] if (OptionsHandler.get_option("Language", str) == "en") else elem['name_it']
+                    item = elem['name_' + language]
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_a += item + " (" + rar + ")\n"
                 rew_a += "\n"
         if ('B' in bounty['rotations']):
             rew_b = ""
             for stage in sorted(bounty['rotations']['B']):
-                rew_b += stage + "\n\n"
+                stage_translated = stage if (language == "en") else get_stage_name(stage)
+                rew_b += stage_translated + "\n\n"
                 for i in range(0, len(bounty['rotations']['B'][stage])):
                     elem = bounty['rotations']['B'][stage][i]
-                    item = elem['name_' + OptionsHandler.get_option("Language", str)]
+                    item = elem['name_' + language]
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_b += item + " (" + rar + ")\n"
                 rew_b += "\n"
         if ('C' in bounty['rotations']):
             rew_c = ""
             for stage in sorted(bounty['rotations']['C']):
-                rew_c += stage + "\n\n"
+                stage_translated = stage if (language == "en") else get_stage_name(stage)
+                rew_c += stage_translated + "\n\n"
                 for i in range(0, len(bounty['rotations']['C'][stage])):
                     elem = bounty['rotations']['C'][stage][i]
-                    item = elem['name_' + OptionsHandler.get_option("Language", str)]
+                    item = elem['name_' + language]
                     rar = elem['rarity'].split("(")[1].split(")")[0]
                     rew_c += item + " (" + rar + ")\n"
                 rew_c += "\n"
@@ -308,7 +312,7 @@ def is_relic(relic):
 
 def translate_relic(relic):
     relic = relic.split(" ")
-    return "Reliquia" + str.capitalize(relic[0]) + " " + relic[1]
+    return "Reliquia " + str.capitalize(relic[0]) + " " + relic[1]
 
 
 def is_lens(lens):

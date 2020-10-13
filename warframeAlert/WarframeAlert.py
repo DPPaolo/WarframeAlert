@@ -236,19 +236,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #     info.triggered.connect(self.tab_menu.info)
     #     aiuto.addAction(info)
 
-    # def update_fissure(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/Fissure")== 1):
-    #         try:
-    #             Qtwarframe.parse_fissure(self.tab_fissure, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nelle Fissure: " + str(er))
-    #             warframe.stampa_errore("Errore nelle Fissure: " + str(er))
-    #             self.tab_fissure.reset_fissure()
-    #             return
-    #     else:
-    #         self.tab_fissure.reset_fissure()
-    #
-    #
     # def update_PVP_tournament(self, data):
     #     if (warframeClass.gestore_opzioni.get_option("Tab/PVP")== 1):
     #         try:

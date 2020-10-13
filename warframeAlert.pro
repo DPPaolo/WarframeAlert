@@ -26,6 +26,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/tab/BaroWidgetTab.py \
                warframeAlert/components/tab/BountyWidgetTab.py \
                warframeAlert/components/tab/EventsWidgetTab.py \
+               warframeAlert/components/tab/FissureWidgetTab.py \
                warframeAlert/components/tab/InvasionWidgetTab.py \
                warframeAlert/components/tab/NewsWidgetTab.py \
                warframeAlert/components/tab/NightwaveWidgetTab.py \
