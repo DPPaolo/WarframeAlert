@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="it">
+<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -1481,39 +1480,39 @@
 <context>
     <name>relicWidget</name>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="27"/>
+        <location filename="../components/widget/RelicWidget.py" line="17"/>
         <source>relicWidgetTitle</source>
         <translation>Gestione Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="72"/>
+        <location filename="../components/widget/RelicWidget.py" line="64"/>
         <source>relicLith</source>
         <translation>Reliquie Lith</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="73"/>
+        <location filename="../components/widget/RelicWidget.py" line="65"/>
         <source>relicMeso</source>
         <translation>Reliquie Meso</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="74"/>
+        <location filename="../components/widget/RelicWidget.py" line="66"/>
         <source>relicNeo</source>
         <translation>Reliquie Neo</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="75"/>
+        <location filename="../components/widget/RelicWidget.py" line="67"/>
         <source>relicAxi</source>
         <translation>Reliquie Axi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="76"/>
+        <location filename="../components/widget/RelicWidget.py" line="68"/>
         <source>relicRequiem</source>
         <translation>Reliquie Requiem</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="73"/>
+        <location filename="../components/widget/RelicWidget.py" line="71"/>
         <source>searchRelics</source>
-        <translation type="obsolete">Info Reliquie</translation>
+        <translation>Info Reliquie</translation>
     </message>
     <message>
         <location filename="../components/tab/FissureWidgetTab.py" line="126"/>
@@ -1623,6 +1622,19 @@
         <location filename="../components/common/ScoreEvent.py" line="69"/>
         <source>scoreBlockGuilds</source>
         <translation>Il punteggio blocca il cambio di Grado dei clan</translation>
+    </message>
+</context>
+<context>
+    <name>searchRelicWidget</name>
+    <message>
+        <location filename="../components/widget/SearchRelicWidget.py" line="17"/>
+        <source>searchRelic</source>
+        <translation>Ricerca per Reliquia</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/SearchRelicWidget.py" line="20"/>
+        <source>searchByItem</source>
+        <translation>Ricerca per Oggetto</translation>
     </message>
 </context>
 <context>
@@ -2256,17 +2268,17 @@
         <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="277"/>
+        <location filename="../utils/warframeUtils.py" line="308"/>
         <source>profit</source>
         <translation>Profitto</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="279"/>
+        <location filename="../utils/warframeUtils.py" line="310"/>
         <source>return</source>
         <translation>Guadagno</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="305"/>
+        <location filename="../utils/warframeUtils.py" line="336"/>
         <source>itemNotFound</source>
         <translation>Oggetto non trovato</translation>
     </message>
