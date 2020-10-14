@@ -13,15 +13,6 @@ from warframeAlert.utils.warframeUtils import get_weapon_part, get_weapon_type, 
     get_image_path_from_export_manifest
 
 
-def get_invasion_color(faz):
-    if (faz == "Grineer"):
-        return "QLabel { color : red; }"
-    elif (faz == "Corpus"):
-        return "QLabel { color : blue; }"
-    elif (faz == "Infested"):
-        return "QLabel { color : green; }"
-
-
 class Invasion():
 
     def __init__(self, invasion_id, chain_id):
@@ -202,3 +193,11 @@ class Invasion():
         self.InvAttackerImg.hide()
         self.InvDefenderImg.hide()
         self.InvPer.hide()
+
+def get_invasion_color(faz):
+    if (faz == "Grineer"):
+        return "QLabel { color : red; }"
+    elif (faz == "Corpus"):
+        return "QLabel { color : blue; }"
+    elif (faz == "Infested"):
+        return "QLabel { color : green; }"

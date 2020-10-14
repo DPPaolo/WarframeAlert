@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS>
-<TS version="2.1" language="en">
+<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
 <context>
     <name>accolyt</name>
     <message>
@@ -1479,6 +1478,24 @@
     </message>
 </context>
 <context>
+    <name>relicBox</name>
+    <message>
+        <location filename="../components/common/RelicBox.py" line="32"/>
+        <source>viewRelicDrop</source>
+        <translation>View Relic Drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/RelicBox.py" line="118"/>
+        <source>missionDrop</source>
+        <translation>Missions that drop</translation>
+    </message>
+    <message>
+        <location filename="../components/common/RelicBox.py" line="113"/>
+        <source>missions</source>
+        <translation>Missions</translation>
+    </message>
+</context>
+<context>
     <name>relicWidget</name>
     <message>
         <location filename="../components/widget/RelicWidget.py" line="19"/>
@@ -1628,12 +1645,12 @@
 <context>
     <name>searchRelicWidget</name>
     <message>
-        <location filename="../components/widget/SearchRelicWidget.py" line="16"/>
+        <location filename="../components/widget/SearchRelicWidget.py" line="15"/>
         <source>searchRelic</source>
         <translation>Search by Relic</translation>
     </message>
     <message>
-        <location filename="../components/widget/SearchRelicWidget.py" line="19"/>
+        <location filename="../components/widget/SearchRelicWidget.py" line="18"/>
         <source>searchByItem</source>
         <translation>Search by Items</translation>
     </message>
@@ -2269,57 +2286,57 @@
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="408"/>
+        <location filename="../utils/warframeUtils.py" line="441"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="410"/>
+        <location filename="../utils/warframeUtils.py" line="443"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="436"/>
+        <location filename="../utils/warframeUtils.py" line="469"/>
         <source>itemNotFound</source>
         <translation>Item not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="327"/>
+        <location filename="../utils/warframeUtils.py" line="360"/>
         <source>errorDropRelic</source>
         <translation>Error during reading relic drop</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="332"/>
+        <location filename="../utils/warframeUtils.py" line="365"/>
         <source>relic</source>
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="354"/>
+        <location filename="../utils/warframeUtils.py" line="387"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="355"/>
+        <location filename="../utils/warframeUtils.py" line="388"/>
         <source>rotation</source>
         <translation>Rotation</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="397"/>
+        <location filename="../utils/warframeUtils.py" line="430"/>
         <source>primeVaultRelicDrop</source>
         <translation>Prime Vault Relic\nNo mission drops this relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="309"/>
+        <location filename="../utils/warframeUtils.py" line="342"/>
         <source>rare</source>
         <translation>Rare</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="313"/>
+        <location filename="../utils/warframeUtils.py" line="346"/>
         <source>notCommon</source>
         <translation>Not Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="315"/>
+        <location filename="../utils/warframeUtils.py" line="348"/>
         <source>common</source>
         <translation>Common</translation>
     </message>

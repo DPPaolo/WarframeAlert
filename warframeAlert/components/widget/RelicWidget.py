@@ -103,17 +103,17 @@ class RelicWidget():
             temp.set_relic_data(relic, reward)
             if (tier == 1):
                 grid_count = self.gridLith.count()
-                self.gridLith.addLayout(temp.RelBox, int(grid_count / 2), grid_count % 2)
+                self.gridLith.addLayout(temp.RelicBox, int(grid_count / 2), grid_count % 2)
             elif (tier == 2):
                 grid_count = self.gridMeso.count()
-                self.gridMeso.addLayout(temp.RelBox, int(grid_count / 2), grid_count % 2)
+                self.gridMeso.addLayout(temp.RelicBox, int(grid_count / 2), grid_count % 2)
             elif (tier == 3):
                 grid_count = self.gridNeo.count()
-                self.gridNeo.addLayout(temp.RelBox, int(grid_count / 2), grid_count % 2)
+                self.gridNeo.addLayout(temp.RelicBox, int(grid_count / 2), grid_count % 2)
             elif (tier == 4):
                 grid_count = self.gridAxi.count()
-                self.gridAxi.addLayout(temp.RelBox, int(grid_count / 2), grid_count % 2)
+                self.gridAxi.addLayout(temp.RelicBox, int(grid_count / 2), grid_count % 2)
             elif (tier == 5):
                 grid_count = self.gridRequiem.count()
-                self.gridRequiem.addLayout(temp.RelBox, int(grid_count / 2), grid_count % 2)
+                self.gridRequiem.addLayout(temp.RelicBox, int(grid_count / 2), grid_count % 2)
             del temp
