@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>accolyt</name>
     <message>
@@ -789,7 +790,7 @@
         <translation>Boss Incursioni Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="388"/>
+        <location filename="../utils/gameTranslationUtils.py" line="386"/>
         <source>unknownBountyStage</source>
         <translation>Stage Taglia Sconosciuto</translation>
     </message>
@@ -1054,7 +1055,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="118"/>
+        <location filename="../components/common/Invasion.py" line="109"/>
         <source>invasionInit</source>
         <translation>Apparsa il</translation>
     </message>
@@ -1480,17 +1481,17 @@
 <context>
     <name>relicBox</name>
     <message>
-        <location filename="../components/common/RelicBox.py" line="32"/>
+        <location filename="../components/common/RelicBox.py" line="35"/>
         <source>viewRelicDrop</source>
         <translation>Visualizza Drop Reliquia</translation>
     </message>
     <message>
-        <location filename="../components/common/RelicBox.py" line="118"/>
+        <location filename="../components/common/RelicBox.py" line="121"/>
         <source>missionDrop</source>
         <translation>Missioni che droppano</translation>
     </message>
     <message>
-        <location filename="../components/common/RelicBox.py" line="113"/>
+        <location filename="../components/common/RelicBox.py" line="116"/>
         <source>missions</source>
         <translation>Missioni</translation>
     </message>
@@ -2286,44 +2287,39 @@
         <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="441"/>
+        <location filename="../utils/warframeUtils.py" line="435"/>
         <source>profit</source>
         <translation>Profitto</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="443"/>
+        <location filename="../utils/warframeUtils.py" line="437"/>
         <source>return</source>
         <translation>Guadagno</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="469"/>
+        <location filename="../utils/warframeUtils.py" line="463"/>
         <source>itemNotFound</source>
         <translation>Oggetto non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="360"/>
+        <location filename="../utils/warframeUtils.py" line="361"/>
         <source>errorDropRelic</source>
         <translation>Errore nella lettura dei drop delle reliquie</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="365"/>
+        <location filename="../utils/warframeUtils.py" line="366"/>
         <source>relic</source>
         <translation>Reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="387"/>
+        <location filename="../utils/warframeUtils.py" line="376"/>
         <source>bounty</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="388"/>
+        <location filename="../utils/warframeUtils.py" line="380"/>
         <source>rotation</source>
         <translation>Rotazione</translation>
-    </message>
-    <message>
-        <location filename="../utils/warframeUtils.py" line="430"/>
-        <source>primeVaultRelicDrop</source>
-        <translation>Reliquia nel Prime Vault\nNessuna missione droppa questa reliquia</translation>
     </message>
     <message>
         <location filename="../utils/warframeUtils.py" line="342"/>
@@ -2339,6 +2335,16 @@
         <location filename="../utils/warframeUtils.py" line="348"/>
         <source>common</source>
         <translation>Comune</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="424"/>
+        <source>primeVault</source>
+        <translation>Reliquia nel Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="424"/>
+        <source>relicDrop</source>
+        <translation>Nessuna missione droppa questa reliquia</translation>
     </message>
 </context>
 </TS>

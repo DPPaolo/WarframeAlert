@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="en" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
 <context>
     <name>accolyt</name>
     <message>
@@ -789,7 +790,7 @@
         <translation>Unkown Sortie Boss</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="388"/>
+        <location filename="../utils/gameTranslationUtils.py" line="386"/>
         <source>unknownBountyStage</source>
         <translation>Unkown Stage Name</translation>
     </message>
@@ -1054,7 +1055,7 @@
 <context>
     <name>invasion</name>
     <message>
-        <location filename="../components/common/Invasion.py" line="118"/>
+        <location filename="../components/common/Invasion.py" line="109"/>
         <source>invasionInit</source>
         <translation>Started on</translation>
     </message>
@@ -1480,17 +1481,17 @@
 <context>
     <name>relicBox</name>
     <message>
-        <location filename="../components/common/RelicBox.py" line="32"/>
+        <location filename="../components/common/RelicBox.py" line="35"/>
         <source>viewRelicDrop</source>
         <translation>View Relic Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/RelicBox.py" line="118"/>
+        <location filename="../components/common/RelicBox.py" line="121"/>
         <source>missionDrop</source>
         <translation>Missions that drop</translation>
     </message>
     <message>
-        <location filename="../components/common/RelicBox.py" line="113"/>
+        <location filename="../components/common/RelicBox.py" line="116"/>
         <source>missions</source>
         <translation>Missions</translation>
     </message>
@@ -2286,44 +2287,39 @@
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="441"/>
+        <location filename="../utils/warframeUtils.py" line="435"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="443"/>
+        <location filename="../utils/warframeUtils.py" line="437"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="469"/>
+        <location filename="../utils/warframeUtils.py" line="463"/>
         <source>itemNotFound</source>
         <translation>Item not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="360"/>
+        <location filename="../utils/warframeUtils.py" line="361"/>
         <source>errorDropRelic</source>
         <translation>Error during reading relic drop</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="365"/>
+        <location filename="../utils/warframeUtils.py" line="366"/>
         <source>relic</source>
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="387"/>
+        <location filename="../utils/warframeUtils.py" line="376"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="388"/>
+        <location filename="../utils/warframeUtils.py" line="380"/>
         <source>rotation</source>
         <translation>Rotation</translation>
-    </message>
-    <message>
-        <location filename="../utils/warframeUtils.py" line="430"/>
-        <source>primeVaultRelicDrop</source>
-        <translation>Prime Vault Relic\nNo mission drops this relic</translation>
     </message>
     <message>
         <location filename="../utils/warframeUtils.py" line="342"/>
@@ -2339,6 +2335,16 @@
         <location filename="../utils/warframeUtils.py" line="348"/>
         <source>common</source>
         <translation>Common</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="424"/>
+        <source>primeVault</source>
+        <translation>Relic in Prime Vault</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="424"/>
+        <source>relicDrop</source>
+        <translation>No mission drops this relic</translation>
     </message>
 </context>
 </TS>

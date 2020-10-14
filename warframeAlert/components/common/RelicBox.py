@@ -104,8 +104,8 @@ class RelicBox():
         self.set_relic_image()
 
     def set_relic_name(self, name):
-        ric = get_relic_item(name)
-        self.set_relic_data(name, ric)
+        reward = get_relic_item(name)
+        self.set_relic_data(name, reward)
 
     def hide_button(self):
         self.RelicDrop.hide()
