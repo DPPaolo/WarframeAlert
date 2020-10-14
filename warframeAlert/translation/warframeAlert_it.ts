@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE TS><TS version="2.0" language="it" sourcelanguage="">
+<!DOCTYPE TS>
+<TS version="2.1" language="it">
 <context>
     <name>accolyt</name>
     <message>
@@ -1480,37 +1481,37 @@
 <context>
     <name>relicWidget</name>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="17"/>
+        <location filename="../components/widget/RelicWidget.py" line="19"/>
         <source>relicWidgetTitle</source>
         <translation>Gestione Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="64"/>
+        <location filename="../components/widget/RelicWidget.py" line="66"/>
         <source>relicLith</source>
         <translation>Reliquie Lith</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="65"/>
+        <location filename="../components/widget/RelicWidget.py" line="67"/>
         <source>relicMeso</source>
         <translation>Reliquie Meso</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="66"/>
+        <location filename="../components/widget/RelicWidget.py" line="68"/>
         <source>relicNeo</source>
         <translation>Reliquie Neo</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="67"/>
+        <location filename="../components/widget/RelicWidget.py" line="69"/>
         <source>relicAxi</source>
         <translation>Reliquie Axi</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="68"/>
+        <location filename="../components/widget/RelicWidget.py" line="70"/>
         <source>relicRequiem</source>
         <translation>Reliquie Requiem</translation>
     </message>
     <message>
-        <location filename="../components/widget/RelicWidget.py" line="71"/>
+        <location filename="../components/widget/RelicWidget.py" line="73"/>
         <source>searchRelics</source>
         <translation>Info Reliquie</translation>
     </message>
@@ -1627,12 +1628,12 @@
 <context>
     <name>searchRelicWidget</name>
     <message>
-        <location filename="../components/widget/SearchRelicWidget.py" line="17"/>
+        <location filename="../components/widget/SearchRelicWidget.py" line="16"/>
         <source>searchRelic</source>
         <translation>Ricerca per Reliquia</translation>
     </message>
     <message>
-        <location filename="../components/widget/SearchRelicWidget.py" line="20"/>
+        <location filename="../components/widget/SearchRelicWidget.py" line="19"/>
         <source>searchByItem</source>
         <translation>Ricerca per Oggetto</translation>
     </message>
@@ -2268,19 +2269,59 @@
         <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="308"/>
+        <location filename="../utils/warframeUtils.py" line="408"/>
         <source>profit</source>
         <translation>Profitto</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="310"/>
+        <location filename="../utils/warframeUtils.py" line="410"/>
         <source>return</source>
         <translation>Guadagno</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="336"/>
+        <location filename="../utils/warframeUtils.py" line="436"/>
         <source>itemNotFound</source>
         <translation>Oggetto non trovato</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="327"/>
+        <source>errorDropRelic</source>
+        <translation>Errore nella lettura dei drop delle reliquie</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="332"/>
+        <source>relic</source>
+        <translation>Reliquia</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="354"/>
+        <source>bounty</source>
+        <translation>Taglia</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="355"/>
+        <source>rotation</source>
+        <translation>Rotazione</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="397"/>
+        <source>primeVaultRelicDrop</source>
+        <translation>Reliquia nel Prime Vault\nNessuna missione droppa questa reliquia</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="309"/>
+        <source>rare</source>
+        <translation>Raro</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="313"/>
+        <source>notCommon</source>
+        <translation>Non Comune</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="315"/>
+        <source>common</source>
+        <translation>Comune</translation>
     </message>
 </context>
 </TS>
