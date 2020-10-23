@@ -2189,44 +2189,49 @@
 <context>
     <name>warframeFileUtils</name>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="30"/>
+        <location filename="../utils/warframeFileUtils.py" line="31"/>
         <source>notFound</source>
         <translation>not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="86"/>
+        <location filename="../utils/warframeFileUtils.py" line="87"/>
         <source>errorSortie</source>
         <translation>Error during parsing sortie file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="91"/>
+        <location filename="../utils/warframeFileUtils.py" line="92"/>
         <source>errorCetus</source>
         <translation>Error during parsing cetus drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="96"/>
+        <location filename="../utils/warframeFileUtils.py" line="97"/>
         <source>errorFortuna</source>
         <translation>Error during parsing fortuna drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="101"/>
+        <location filename="../utils/warframeFileUtils.py" line="102"/>
         <source>errorDeimos</source>
         <translation>Error during parsing deimos drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="106"/>
+        <location filename="../utils/warframeFileUtils.py" line="107"/>
         <source>errorRelics</source>
         <translation>Error during parsing relic file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="111"/>
+        <location filename="../utils/warframeFileUtils.py" line="112"/>
         <source>errorDropMission</source>
         <translation>Error during parsing mission drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="116"/>
-        <source>errorDropKey</source>
-        <translation>Error during parsing key drop file</translation>
+        <location filename="../utils/warframeFileUtils.py" line="152"/>
+        <source>errorDropBySource</source>
+        <translation>Error during parsing drop by source file</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeFileUtils.py" line="137"/>
+        <source>errorDropByItem</source>
+        <translation>Error during parsing drop by item file</translation>
     </message>
 </context>
 <context>
@@ -2287,37 +2292,37 @@
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="435"/>
+        <location filename="../utils/warframeUtils.py" line="446"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="437"/>
+        <location filename="../utils/warframeUtils.py" line="448"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="463"/>
+        <location filename="../utils/warframeUtils.py" line="474"/>
         <source>itemNotFound</source>
         <translation>Item not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="361"/>
+        <location filename="../utils/warframeUtils.py" line="360"/>
         <source>errorDropRelic</source>
         <translation>Error during reading relic drop</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="366"/>
+        <location filename="../utils/warframeUtils.py" line="365"/>
         <source>relic</source>
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="376"/>
+        <location filename="../utils/warframeUtils.py" line="377"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="380"/>
+        <location filename="../utils/warframeUtils.py" line="401"/>
         <source>rotation</source>
         <translation>Rotation</translation>
     </message>
@@ -2337,14 +2342,19 @@
         <translation>Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="424"/>
+        <location filename="../utils/warframeUtils.py" line="406"/>
         <source>primeVault</source>
         <translation>Relic in Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="424"/>
+        <location filename="../utils/warframeUtils.py" line="406"/>
         <source>relicDrop</source>
         <translation>No mission drops this relic</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeFileUtils.py" line="344"/>
+        <source>noRotation</source>
+        <translation>No Rotation</translation>
     </message>
 </context>
 </TS>

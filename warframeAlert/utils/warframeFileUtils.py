@@ -60,26 +60,26 @@ def write_json_drop():
     # Deimos Rewards
     data = data.split('<h3 id="deimosRewards">Cambion Drift Bounty Rewards:</h3>')[1]
     deimos = data.split('<h3 id="modByAvatar">Mod Drops by Source:</h3>')[0]
-    # # Mod Drops by Enemy
-    # data = data.split('<h3 id="modByAvatar">Mod Drops by Source:</h3>')[1]
-    # mod_by_enemy = data.split('<h3 id="modByDrop">Mod Drops by Mod:</h3>')[0]
-    # # Mod Drops by Mod
-    # data = data.split('<h3 id="modByDrop">Mod Drops by Mod:</h3>')[1]
-    # mod_by_mob = data.split('<h3 id="blueprintByAvatar">Blueprint/Item Drops by Source:</h3>')[0]
-    # # BP Drops by Enemy
-    # data = data.split('<h3 id="blueprintByAvatar">Blueprint/Item Drops by Source:</h3>')[1]
-    # bp_by_enemy = data.split('<h3 id="blueprintByDrop">Blueprint/Item Drops by Blueprint/Item::</h3>')[0]
-    # # BP Drops by BP
-    # data = data.split('<h3 id="blueprintByDrop">Blueprint/Item Drops by Blueprint/Item:</h3>')[1]
-    # bp_by_bp = data.split('<h3 id="resourceByAvatar">Resource Drops by Source:</h3>')[0]
-    # # Resource Drops by Enemy
-    # data = data.split('<h3 id="resourceByAvatar">Resource Drops by Source:</h3>')[1]
-    # resource_by_resource = data.split('<h3 id="sigilByAvatar">Sigil Drops by Source:</h3>')[0]
-    # # Sigil Drop by Enemy
-    # data = data.split('<h3 id="sigilByAvatar">Sigil Drops by Source:</h3>')[1]
-    # sigil_per_enemy = data.split('<h3 id="additionalItemByAvatar">Additional Item Drops by Source:</h3>')[0]
-    # # Extra Drop by Enemy
-    # extra_per_enemy = data.split('<h3 id="additionalItemByAvatar">Additional Item Drops by Source:</h3>')[1]
+    # Mod Drops by Enemy
+    data = data.split('<h3 id="modByAvatar">Mod Drops by Source:</h3>')[1]
+    mod_by_enemy = data.split('<h3 id="modByDrop">Mod Drops by Mod:</h3>')[0]
+    # Mod Drops by Mod
+    data = data.split('<h3 id="modByDrop">Mod Drops by Mod:</h3>')[1]
+    mod_by_mob = data.split('<h3 id="blueprintByAvatar">Blueprint/Item Drops by Source:</h3>')[0]
+    # BP Drops by Enemy
+    data = data.split('<h3 id="blueprintByAvatar">Blueprint/Item Drops by Source:</h3>')[1]
+    bp_by_enemy = data.split('<h3 id="blueprintByDrop">Blueprint/Item Drops by Blueprint/Item:</h3>')[0]
+    # BP Drops by BP
+    data = data.split('<h3 id="blueprintByDrop">Blueprint/Item Drops by Blueprint/Item:</h3>')[1]
+    bp_by_bp = data.split('<h3 id="resourceByAvatar">Resource Drops by Resource:</h3>')[0]
+    # Resource Drops by Enemy
+    data = data.split('<h3 id="resourceByAvatar">Resource Drops by Source:</h3>')[1]
+    resource_by_resource = data.split('<h3 id="sigilByAvatar">Sigil Drops by Source:</h3>')[0]
+    # Sigil Drop by Enemy
+    data = data.split('<h3 id="sigilByAvatar">Sigil Drops by Source:</h3>')[1]
+    sigil_by_enemy = data.split('<h3 id="additionalItemByAvatar">Additional Item Drops by Source:</h3>')[0]
+    # Extra Drop by Enemy
+    extra_by_enemy = data.split('<h3 id="additionalItemByAvatar">Additional Item Drops by Source:</h3>')[1]
 
     try:
         create_sortie_drop(sortie)
@@ -111,15 +111,41 @@ def write_json_drop():
     except Exception as err:
         commonUtils.print_traceback(translate("warframeFileUtils", "errorDropMission") + ":\n" + str(err))
         return
-
-    # mod_by_enemy
-    # mod_by_mod
-    # bp_by_enemy
-    # bp_by_bp
-    # resoruce_by_enemy
-    # resource_by_resource
-    # sigil_per_enemy
-    # extra_per_enemy
+    try:
+        create_drop_by_source(mod_by_enemy, "mod_by_source")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropBySource") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_item(mod_by_mob, "mod_by_item")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropByItem") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_source(bp_by_enemy, "bp_by_source")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropBySource") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_item(bp_by_bp, "bp_by_item")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropByItem") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_source(resource_by_resource, "resource_by_source")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropBySource") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_source(sigil_by_enemy, "sigil_by_source")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropBySource") + ":\n" + str(err))
+        return
+    try:
+        create_drop_by_source(extra_by_enemy, "extra_by_source")
+    except Exception as err:
+        commonUtils.print_traceback(translate("warframeFileUtils", "errorDropBySource") + ":\n" + str(err))
+        return
 
 
 def create_sortie_drop(data):
@@ -267,18 +293,6 @@ def create_mission_drop(mission, key, transient):
     transient = [value for value in transient if value != '']
     data = mission + key + transient
 
-    # {
-    #     "reward": [
-    #         {
-    #             "planet": "Mercurio",
-    #             "node": "Apollodorus",
-    #             "missionType": "Sopravvivenza",
-    #             "rewards": { <-- se non c'è la rotation vi è direttamente una lista
-    #                 "A" : []
-    #             }
-    #         },
-    # }
-
     mission_reward = {'reward': []}
     mission = {'planet': "", 'node': "", 'missionType': "", 'reward': []}
     mission_drop = {}
@@ -346,6 +360,87 @@ def create_mission_drop(mission, key, transient):
 
     json_data = json.dumps(mission_reward)
     fp = open("data" + get_separator() + "mission.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
+
+
+def create_drop_by_source(data, file_name):
+    data = data.replace("/", "").replace("<table>", "")
+    data = data.split('<tr>')
+    data = [value for value in data if value != '']
+
+    drop_reward = {'drop': []}
+    drop = {}
+
+    actual_stage = StageTypeEnum.MISSION_NAME
+    for line in data:
+        if ('blank-row' in line or '<body><html>' in line):
+            continue
+        if ('<th>' in line and actual_stage == StageTypeEnum.DROP):
+            drop_reward["drop"].append(drop)
+            drop = {}
+            actual_stage = StageTypeEnum.MISSION_NAME
+        elif ('<td>' in line):
+            actual_stage = StageTypeEnum.DROP
+
+        if (actual_stage == StageTypeEnum.MISSION_NAME):
+            drop_name = line.split("<th>")[1]
+            drop_chance = line.split(": ")[1].split("<")[0]
+            drop['name'] = drop_name
+            drop['chance'] = drop_chance
+            drop['drop'] = []
+        elif (actual_stage == StageTypeEnum.DROP):
+            line = line.split('<td>')
+            item = {"name_it": translate_item_from_drop_file(line[3].upper()), "name_en": line[3], "rarity": line[5]}
+            drop['drop'].append(item)
+
+    drop_reward["drop"].append(drop)
+
+    # save the file with the drop
+    json_data = json.dumps(drop_reward)
+    fp = open("data" + get_separator() + file_name + ".json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
+
+
+def create_drop_by_item(data, file_name):
+    data = data.replace("/", "").replace("<table>", "")
+    data = data.split('<tr>')
+    data = [value for value in data if value != '']
+
+    drop_reward = {'drop': []}
+    drop = {}
+
+    actual_stage = StageTypeEnum.MISSION_NAME
+    for line in data:
+        print(line)
+        if ('blank-row' in line or '<body><html>' in line):
+            continue
+
+        if ('<th colspan="3">' in line and actual_stage == StageTypeEnum.DROP):
+            drop_reward["drop"].append(drop)
+            drop = {}
+            actual_stage = StageTypeEnum.MISSION_NAME
+        elif ('<td>' in line):
+            actual_stage = StageTypeEnum.DROP
+
+        if (actual_stage == StageTypeEnum.MISSION_NAME and '<th colspan="3">' in line):
+            drop_name = line.split(">")[1].split("<")[0]
+            drop['name_it'] = translate_item_from_drop_file(drop_name.upper())
+            drop['name_en'] = drop_name
+            drop['drop'] = []
+        elif (actual_stage == StageTypeEnum.DROP):
+            line = line.split('<td>')
+            item = {"name": line[1], "chance": line[3], "rarity": line[5]}
+            drop['drop'].append(item)
+
+    drop_reward["drop"].append(drop)
+
+    # save the file with the drop
+    json_data = json.dumps(drop_reward)
+    fp = open("data" + get_separator() + file_name + ".json", "w")
     fp.write(json_data)
     fp.flush()
     fp.close()
