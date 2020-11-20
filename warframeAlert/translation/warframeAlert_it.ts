@@ -1253,11 +1253,6 @@
         <translation>News Gioco</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
-        <source>contestLabel</source>
-        <translation>Contest e Altro</translation>
-    </message>
-    <message>
         <location filename="../components/tab/NewsWidgetTab.py" line="68"/>
         <source>noNews</source>
         <translation>Nessuna News Disponibile</translation>
@@ -1331,6 +1326,11 @@
         <location filename="../components/tab/NewsWidgetTab.py" line="167"/>
         <source>onlyMobile</source>
         <translation>Solo per Mobile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
+        <source>communityLabel</source>
+        <translation>Comunità</translation>
     </message>
 </context>
 <context>
@@ -2224,12 +2224,12 @@
         <translation>Errore nel parsing del file del drop delle missioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="152"/>
+        <location filename="../utils/warframeFileUtils.py" line="147"/>
         <source>errorDropBySource</source>
         <translation>Errore nel parsing del file del drop per nemico</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="137"/>
+        <location filename="../utils/warframeFileUtils.py" line="132"/>
         <source>errorDropByItem</source>
         <translation>Errore nel parsing del file del drop per oggetto</translation>
     </message>
@@ -2352,7 +2352,7 @@
         <translation>Nessuna missione droppa questa reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="344"/>
+        <location filename="../utils/warframeFileUtils.py" line="327"/>
         <source>noRotation</source>
         <translation>Nessuna Rotazione</translation>
     </message>

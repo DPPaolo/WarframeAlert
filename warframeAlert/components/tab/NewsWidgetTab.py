@@ -23,7 +23,7 @@ def get_news_type(message, url):
     elif ("forums.warframe.com" in url):  # Hotfix and in Game Events
         return 1
     else:
-        return 2
+        return 1
 
 
 class NewsWidgetTab():
@@ -61,7 +61,7 @@ class NewsWidgetTab():
         self.NewsScrollBarC.setWidget(self.ContestWidget)
 
         self.Newstabber.insertTab(0, self.NewsScrollBar, translate("newsWidgetTab", "newsLabel"))
-        self.Newstabber.insertTab(1, self.NewsScrollBarC, translate("newsWidgetTab", "contestLabel"))
+        self.Newstabber.insertTab(1, self.NewsScrollBarC, translate("newsWidgetTab", "communityLabel"))
 
         self.NewsLabel = QtWidgets.QLabel("")
 
@@ -103,6 +103,7 @@ class NewsWidgetTab():
             text = ""
             news_id = news['_id']['$oid']
             forum = news['Prop']
+            community = news['Community'] if ('Community' in news) else None
             message_it = message_en = 0
             for i in range(0, len(news['Messages'])):
                 if ('it' == news['Messages'][i]['LanguageCode']):
@@ -116,7 +117,7 @@ class NewsWidgetTab():
                 message = message_en
             else:
                 continue
-            news_type = get_news_type(message, forum)
+            news_type = 2 if (community is not None and community) else get_news_type(message, forum)
 
             found = 0
             if (news_type == 1):

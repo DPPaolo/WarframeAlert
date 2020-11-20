@@ -1253,11 +1253,6 @@
         <translation>Game News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
-        <source>contestLabel</source>
-        <translation>Contest and Other</translation>
-    </message>
-    <message>
         <location filename="../components/tab/NewsWidgetTab.py" line="68"/>
         <source>noNews</source>
         <translation>No News Available</translation>
@@ -1331,6 +1326,11 @@
         <location filename="../components/tab/NewsWidgetTab.py" line="167"/>
         <source>onlyMobile</source>
         <translation>Only for Mobile</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
+        <source>communityLabel</source>
+        <translation>Community</translation>
     </message>
 </context>
 <context>
@@ -2224,12 +2224,12 @@
         <translation>Error during parsing mission drop file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="152"/>
+        <location filename="../utils/warframeFileUtils.py" line="147"/>
         <source>errorDropBySource</source>
         <translation>Error during parsing drop by source file</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="137"/>
+        <location filename="../utils/warframeFileUtils.py" line="132"/>
         <source>errorDropByItem</source>
         <translation>Error during parsing drop by item file</translation>
     </message>
@@ -2352,7 +2352,7 @@
         <translation>No mission drops this relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeFileUtils.py" line="344"/>
+        <location filename="../utils/warframeFileUtils.py" line="327"/>
         <source>noRotation</source>
         <translation>No Rotation</translation>
     </message>

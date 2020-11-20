@@ -1156,6 +1156,7 @@ events_schema = {
                 "EventLiveUrl": {"type": "string"},
                 "Prop": {"type": "string"},
                 "Priority": {"type": "boolean"},
+                "Community": {"type": "boolean"},
                 "MobileOnly": {"type": "boolean"},
                 "ImageUrl": {"type": "string"},
                 "Messages": {
