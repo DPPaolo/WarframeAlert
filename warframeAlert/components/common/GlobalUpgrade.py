@@ -3,12 +3,12 @@ from PyQt5 import QtWidgets, QtGui, QtCore
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.constants.events import UPGRADE_TYPE_IMAGE
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_upgrade_type
 from warframeAlert.utils.logUtils import LogHandler
-from warframeAlert.warframeData import UPGRADE_TYPE_IMAGE
 
 
 class GlobalUpgrade():
