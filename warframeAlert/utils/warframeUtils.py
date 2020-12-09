@@ -2,6 +2,8 @@
 import json
 
 from warframeAlert import warframeData
+from warframeAlert.constants.events import OPERATION_TYPE
+from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -120,8 +122,8 @@ def get_weapon_type(part):
 
 
 def get_operation_type(operation):
-    if (operation in warframeData.OPERATION_TYPE):
-        return warframeData.OPERATION_TYPE[operation]
+    if (operation in OPERATION_TYPE):
+        return OPERATION_TYPE[operation]
     else:
         print(translate("warframeUtils", "operationTypeNotFound") + " " + operation)
         LogHandler.err(translate("warframeUtils", "operationTypeNotFound") + " " + operation)
@@ -204,8 +206,8 @@ def get_bounty_reward(reward, file_name):
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
     reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1][:-7]
-    if (reward_type in warframeData.BOUNTY_RANK_LEVEL):
-        reward_type = warframeData.BOUNTY_RANK_LEVEL[reward_type]
+    if (reward_type in BOUNTY_RANK_LEVEL):
+        reward_type = BOUNTY_RANK_LEVEL[reward_type]
     else:
         print(translate("warframeUtils", "bountyRewardNotFound") + " " + reward_type)
         return [no_reward, no_reward, no_reward]

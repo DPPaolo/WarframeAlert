@@ -2,6 +2,14 @@
 import json
 
 from warframeAlert import warframeData
+from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON_RESTRICTION, MAP_TYPE, \
+    ALERT_LEVEL_AURA, ALERT_FX, ALERT_BOSS, ALERT_VIP_AGENT
+from warframeAlert.constants.events import ACCOLYTE_NAME, TASK_TYPE, UPGRADE_TYPE
+from warframeAlert.constants.maps import NODE_NAME_IT, FACTION, REGION_MAP, MISSION_TYPE
+from warframeAlert.constants.other_missions import SIMARIS_TARGET, SEASON_CHALLENGE, SORTIE_BOSS, SORTIE_MODIFIER, \
+    INVASION_LOCTAG
+from warframeAlert.constants.syndicates import SYNDICATE_NAME, BOUNTY_JOB_NAME, BOUNTY_JOB_DESC, BOUNTY_STAGE, \
+    SYNDICATE_RANK_NAME
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, print_traceback
@@ -17,8 +25,8 @@ def get_node(name):
 
 
 def get_node_it(name):
-    if (name in warframeData.NODE_NAME_IT):
-        return warframeData.NODE_NAME_IT[name][0], "(" + warframeData.NODE_NAME_IT[name][1] + ")"
+    if (name in NODE_NAME_IT):
+        return NODE_NAME_IT[name][0], "(" + NODE_NAME_IT[name][1] + ")"
     elif (name == ""):
         return "", "(????)"
     else:
@@ -48,8 +56,8 @@ def get_node_en(name):
 
 def get_faction(name):
     faction = name.replace("\n", "")
-    if (faction in warframeData.FACTION):
-        return warframeData.FACTION[faction]
+    if (faction in FACTION):
+        return FACTION[faction]
     else:
         print(translate("gameTranslation", "unknownFaction") + ": " + faction)
         LogHandler.err(translate("gameTranslation", "unknownFaction") + ": " + faction)
@@ -93,8 +101,8 @@ def get_item_name_en(name):
 
 
 def get_enemy_name(name):
-    if (name in warframeData.ALERT_ENEMY):
-        return warframeData.ALERT_ENEMY[name]
+    if (name in ALERT_ENEMY):
+        return ALERT_ENEMY[name]
     else:
         print(translate("gameTranslation", "unknownEnemy") + ": " + name)
         LogHandler.err(translate("gameTranslation", "unknownEnemy") + ": " + name)
@@ -102,8 +110,8 @@ def get_enemy_name(name):
 
 
 def get_simaris_target(simaris_target):
-    if (simaris_target in warframeData.SIMARIS_TARGET):
-        return warframeData.SIMARIS_TARGET[simaris_target]
+    if (simaris_target in SIMARIS_TARGET):
+        return SIMARIS_TARGET[simaris_target]
     else:
         print(translate("gameTranslation", "unknownSimarisTarget") + ": " + simaris_target)
         LogHandler.err(translate("gameTranslation", "unknownSimarisTarget") + ": " + simaris_target)
@@ -111,8 +119,8 @@ def get_simaris_target(simaris_target):
 
 
 def get_invasion_loctag(loctag):
-    if (loctag in warframeData.INVASION_LOCTAG):
-        return warframeData.INVASION_LOCTAG[loctag][OptionsHandler.get_option("Language", str)]
+    if (loctag in INVASION_LOCTAG):
+        return INVASION_LOCTAG[loctag][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
         LogHandler.err(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
@@ -120,8 +128,8 @@ def get_invasion_loctag(loctag):
 
 
 def get_accolyte_name(name):
-    if (name in warframeData.ACCOLYTE_NAME):
-        return warframeData.ACCOLYTE_NAME[name]
+    if (name in ACCOLYTE_NAME):
+        return ACCOLYTE_NAME[name]
     else:
         print(translate("gameTranslation", "unknownAccolyte") + ": " + name)
         LogHandler.err(translate("gameTranslation", "unknownAccolyte") + ": " + name)
@@ -129,8 +137,8 @@ def get_accolyte_name(name):
 
 
 def get_upgrade_type(upgrade):
-    if (upgrade in warframeData.UPGRADE_TYPE):
-        return warframeData.UPGRADE_TYPE[upgrade][OptionsHandler.get_option("Language", str)]
+    if (upgrade in UPGRADE_TYPE):
+        return UPGRADE_TYPE[upgrade][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
         LogHandler.err(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
@@ -138,8 +146,8 @@ def get_upgrade_type(upgrade):
 
 
 def get_region(region):
-    if (region in warframeData.REGION_MAP):
-        return warframeData.REGION_MAP[int(region)][OptionsHandler.get_option("Language", str)]
+    if (region in REGION_MAP):
+        return REGION_MAP[int(region)][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownRegion") + ": " + str(region))
         LogHandler.err(translate("gameTranslation", "unknownRegion") + ": " + str(region))
@@ -148,8 +156,8 @@ def get_region(region):
 
 def get_mission_type(mission):
     mission = mission.replace("\n", "")
-    if (mission in warframeData.MISSION_TYPE):
-        return warframeData.MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)]
+    if (mission in MISSION_TYPE):
+        return MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)]
     elif (mission == ""):
         return ""
     else:
@@ -159,8 +167,8 @@ def get_mission_type(mission):
 
 
 def get_alert_info(alert_info):
-    if (alert_info in warframeData.ALERT_INFO):
-        return warframeData.ALERT_INFO[alert_info][OptionsHandler.get_option("Language", str)]
+    if (alert_info in ALERT_INFO):
+        return ALERT_INFO[alert_info][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownAlertInfo") + ": " + alert_info)
         LogHandler.err(translate("gameTranslation", "unknownAlertInfo") + ": " + alert_info)
@@ -168,8 +176,8 @@ def get_alert_info(alert_info):
 
 
 def get_alert_weapon_restriction(weapon):
-    if (weapon in warframeData.ALERT_WEAPON_RESTRICTION):
-        return warframeData.ALERT_WEAPON_RESTRICTION[weapon][OptionsHandler.get_option("Language", str)]
+    if (weapon in ALERT_WEAPON_RESTRICTION):
+        return ALERT_WEAPON_RESTRICTION[weapon][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownWeaponRestriction") + ": " + weapon)
         LogHandler.err(translate("gameTranslation", "unknownWeaponRestriction") + ": " + weapon)
@@ -235,9 +243,9 @@ def get_mission_from_starchart_en(node):
 
 
 def get_map_type(map_type):
-    for maps in warframeData.MAP_TYPE:
+    for maps in MAP_TYPE:
         if (maps in map_type):
-            return warframeData.MAP_TYPE[maps][OptionsHandler.get_option("Language", str)]
+            return MAP_TYPE[maps][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownMapType") + ": " + map_type)
         LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + map_type)
@@ -245,8 +253,8 @@ def get_map_type(map_type):
 
 
 def get_alert_aura(aura):
-    if (aura in warframeData.ALERT_LEVEL_AURA):
-        return warframeData.ALERT_LEVEL_AURA[aura][OptionsHandler.get_option("Language", str)]
+    if (aura in ALERT_LEVEL_AURA):
+        return ALERT_LEVEL_AURA[aura][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownAuraType") + ": " + aura)
         LogHandler.err(translate("gameTranslation", "unknownAuraType") + ": " + aura)
@@ -254,8 +262,8 @@ def get_alert_aura(aura):
 
 
 def get_alert_fx(fx):
-    if (fx in warframeData.ALERT_FX):
-        return warframeData.ALERT_FX[fx][OptionsHandler.get_option("Language", str)]
+    if (fx in ALERT_FX):
+        return ALERT_FX[fx][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownFXType") + ": " + fx)
         LogHandler.err(translate("gameTranslation", "unknownFXType") + ": " + fx)
@@ -265,10 +273,10 @@ def get_alert_fx(fx):
 def get_vip_agent(vip_agent):
     if (vip_agent == ""):
         return ""
-    if (vip_agent in warframeData.ALERT_BOSS):
-        return warframeData.ALERT_BOSS[vip_agent][OptionsHandler.get_option("Language", str)]
-    elif (vip_agent in warframeData.ALERT_VIP_AGENT):
-        return warframeData.ALERT_VIP_AGENT[vip_agent][OptionsHandler.get_option("Language", str)]
+    if (vip_agent in ALERT_BOSS):
+        return ALERT_BOSS[vip_agent][OptionsHandler.get_option("Language", str)]
+    elif (vip_agent in ALERT_VIP_AGENT):
+        return ALERT_VIP_AGENT[vip_agent][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownVipType") + ": " + vip_agent)
         LogHandler.err(translate("gameTranslation", "unknownVipType") + ": " + vip_agent)
@@ -276,8 +284,8 @@ def get_vip_agent(vip_agent):
 
 
 def get_task_type(task):
-    if (task in warframeData.TASK_TYPE):
-        return warframeData.TASK_TYPE[task][OptionsHandler.get_option("Language", str)]
+    if (task in TASK_TYPE):
+        return TASK_TYPE[task][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
         LogHandler.err(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
@@ -285,8 +293,8 @@ def get_task_type(task):
 
 
 def get_syndicate(syn):
-    if (syn in warframeData.SYNDICATE_NAME):
-        return warframeData.SYNDICATE_NAME[syn][OptionsHandler.get_option("Language", str)]
+    if (syn in SYNDICATE_NAME):
+        return SYNDICATE_NAME[syn][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownSyndicate") + ": " + syn)
         LogHandler.err(translate("gameTranslation", "unknownSyndicate") + ": " + syn)
@@ -294,8 +302,8 @@ def get_syndicate(syn):
 
 
 def get_syndicate_rank(syn, rank):
-    if (syn in warframeData.SYNDICATE_RANK_NAME):
-        return warframeData.SYNDICATE_RANK_NAME[syn][OptionsHandler.get_option("Language", str)][rank]
+    if (syn in SYNDICATE_RANK_NAME):
+        return SYNDICATE_RANK_NAME[syn][OptionsHandler.get_option("Language", str)][rank]
     else:
         print(translate("gameTranslation", "unknownSyndicateRank") + ": " + str(rank) + " " + syn)
         LogHandler.err(translate("gameTranslation", "unknownSyndicateRank") + str(rank) + " " + ": " + syn)
@@ -310,8 +318,8 @@ def get_bounty_job(job):
 
 
 def get_bounty_job_it(job):
-    if (job in warframeData.BOUNTY_JOB_NAME):
-        return warframeData.BOUNTY_JOB_NAME[job]
+    if (job in BOUNTY_JOB_NAME):
+        return BOUNTY_JOB_NAME[job]
     else:
         print(translate("gameTranslation", "unknownJob") + ": " + ": " + job)
         LogHandler.err(translate("gameTranslation", "unknownJob") + ": " + job)
@@ -323,17 +331,17 @@ def get_bounty_job_en(job):
 
 
 def get_bounty_job_desc(job):
-    if (job in warframeData.BOUNTY_JOB_DESC):
-        return warframeData.BOUNTY_JOB_DESC[job][OptionsHandler.get_option("Language", str)]
+    if (job in BOUNTY_JOB_DESC):
+        return BOUNTY_JOB_DESC[job][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownJobDesc") + ": " + job)
         LogHandler.err(translate("gameTranslation", "unknownMapType") + ": " + job)
-        return warframeData.BOUNTY_JOB_DESC[""][OptionsHandler.get_option("Language", str)]
+        return BOUNTY_JOB_DESC[""][OptionsHandler.get_option("Language", str)]
 
 
 def get_nightwave_challenge(challenge):
-    if (challenge in warframeData.SEASON_CHALLENGE):
-        challenge_type = warframeData.SEASON_CHALLENGE[challenge]
+    if (challenge in SEASON_CHALLENGE):
+        challenge_type = SEASON_CHALLENGE[challenge]
         if (OptionsHandler.get_option("Language", str) == "it"):
             return challenge_type
         else:
@@ -361,8 +369,8 @@ def get_nightwave_challenge(challenge):
 
 
 def get_sortie_boss(boss):
-    if (boss in warframeData.SORTIE_BOSS):
-        return warframeData.SORTIE_BOSS[boss][OptionsHandler.get_option("Language", str)]
+    if (boss in SORTIE_BOSS):
+        return SORTIE_BOSS[boss][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownSortieBoss") + ": " + boss)
         LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + boss)
@@ -370,8 +378,8 @@ def get_sortie_boss(boss):
 
 
 def get_sortie_modifier(modifier):
-    if (modifier in warframeData.SORTIE_MODIFIER):
-        return warframeData.SORTIE_MODIFIER[modifier][OptionsHandler.get_option("Language", str)]
+    if (modifier in SORTIE_MODIFIER):
+        return SORTIE_MODIFIER[modifier][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
         LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
@@ -379,8 +387,8 @@ def get_sortie_modifier(modifier):
 
 
 def get_stage_name(stage):
-    if (stage in warframeData.BOUNTY_STAGE):
-        return warframeData.BOUNTY_STAGE[stage][OptionsHandler.get_option("Language", str)]
+    if (stage in BOUNTY_STAGE):
+        return BOUNTY_STAGE[stage][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
         LogHandler.err(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
