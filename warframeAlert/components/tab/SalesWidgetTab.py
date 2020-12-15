@@ -93,9 +93,9 @@ class SalesWidgetTab():
                         found = 1
 
                 if (found == 0):
-                    if (sales['BannerIndex'] == sales['ExperimentFeatured']):
-                        index = sales['ExperimentFeatured']
-                    else:
+                    if ('ExperimentFeatured' in sales):
+                        index = sales['ExperimentFeatured'][0]['FeaturedIndex']
+                    else:  # temporary item
                         index = sales['BannerIndex']
                     bogobuy = sales['BogoBuy']
                     bogoget = sales['BogoGet']
