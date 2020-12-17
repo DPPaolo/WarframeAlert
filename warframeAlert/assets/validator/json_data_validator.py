@@ -92,6 +92,7 @@ fissure_schema = {
             "properties": {
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -104,6 +105,7 @@ fissure_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -116,6 +118,7 @@ fissure_schema = {
                 },
                 "_id": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$oid": {"type": "string"}
                     }
@@ -159,6 +162,7 @@ flash_sales_schema = {
                 },
                 "EndDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -171,6 +175,7 @@ flash_sales_schema = {
                 },
                 "ProductExpiryOverride": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -180,6 +185,18 @@ flash_sales_schema = {
                             }
                         }
                     }
+                },
+                "ExperimentFeatured": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "additionalProperties": False,
+                        "properties": {
+                            "ExperimentGroup": {"type": "string"},
+                            "FeaturedIndex": {"type": "integer"}
+                        }
+                    }
+
                 },
                 "BannerIndex": {"type": "integer"},
                 "BogoBuy": {"type": "integer", "enum": [0]},
@@ -191,11 +208,10 @@ flash_sales_schema = {
                 "Featured": {"type": "boolean"},
                 "Popular": {"type": "boolean"},
                 "TypeName": {"type": "string"},
-                "ExperimentFeatured": {"type": "integer"},
             },
             "required": ["StartDate", "EndDate", "BannerIndex", "BogoBuy", "BogoGet", "Discount", "PremiumOverride",
                          "RegularOverride", "ShowInMarket",
-                         "Featured", "Popular", "TypeName", "ExperimentFeatured"],
+                         "Featured", "Popular", "TypeName"],
         }
     }
 }
@@ -357,6 +373,7 @@ syndicate_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -369,6 +386,7 @@ syndicate_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -454,6 +472,7 @@ season_info_schema = {
                                              },
                                              "Activation": {
                                                  "type": "object",
+                                                 "additionalProperties": False,
                                                  "properties": {
                                                      "$date": {"type": "object"},
                                                      "items": {
@@ -466,6 +485,7 @@ season_info_schema = {
                                              },
                                              "Expiry": {
                                                  "type": "object",
+                                                 "additionalProperties": False,
                                                  "properties": {
                                                      "$date": {"type": "object"},
                                                      "items": {
@@ -613,6 +633,7 @@ goals_schema = {
                 'Jobs': {"type": "array",
                          "items": {
                              "type": "object",
+                             "additionalProperties": False,
                              "properties": {
                                  "jobType": {"type": "string"},
                                  "rewards": {"type": "string"},
@@ -651,6 +672,7 @@ goals_schema = {
                 },
                 "NextAltExpiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -663,6 +685,7 @@ goals_schema = {
                 },
                 "AltActivation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -807,6 +830,7 @@ goals_schema = {
                                  "items": {"type": "integer"}},
 
                 "Reward": {"type": "object",
+                           "additionalProperties": False,
                            "properties": {
                                "additionalProperties": False,
                                "credits": {"type": "integer"},
@@ -876,6 +900,7 @@ goals_schema = {
                                 },
                 "InterimRewards": {"type": "array",
                                    "items": {"type": "object",
+                                             "additionalProperties": False,
                                              "properties": {
                                                  "additionalProperties": False,
                                                  "credits": {"type": "integer"},
@@ -936,6 +961,7 @@ alerts_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -948,6 +974,7 @@ alerts_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -972,7 +999,7 @@ alerts_schema = {
                         "minEnemyLevel": {"type": "integer"},
                         "archwingRequired": {"type": "boolean"},
                         "isSharkwingMission": {"type": "boolean"},
-                        "maxWavenum": {"type": "integer"},
+                        "maxWaveNum": {"type": "integer"},
                         "nightmare": {"type": "integer"},
                         "difficulty": {"type": "integer"},
                         "missionReward": {
@@ -1059,6 +1086,7 @@ global_upgrades_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1071,6 +1099,7 @@ global_upgrades_schema = {
                 },
                 "ExpiryDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1119,6 +1148,7 @@ events_schema = {
                 },
                 "Date": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1131,6 +1161,7 @@ events_schema = {
                 },
                 "EventStartDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1143,6 +1174,7 @@ events_schema = {
                 },
                 "EventEndDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1207,6 +1239,7 @@ persistent_enemies_schema = {
                 },
                 "LastDiscoveredTime": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1264,6 +1297,7 @@ invasion_schema = {
                 },
                 "AttackerMissionInfo": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "faction": {"type": "string"},
                         "seed": {"type": "integer"}
@@ -1271,9 +1305,15 @@ invasion_schema = {
                 },
                 "DefenderMissionInfo": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "faction": {"type": "string"},
-                        "seed": {"type": "integer"}
+                        "seed": {"type": "integer"},
+                        "missionReward": {"type": "array",
+                                          "items": {"type": "object",
+                                                    "additionalProperties": False
+                                                    }
+                                          }
                     }
                 },
                 "Completed": {
@@ -1368,6 +1408,7 @@ daily_deals_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1478,6 +1519,7 @@ hub_events_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1552,6 +1594,7 @@ node_overrides_schema = {
             "properties": {
                 "_id": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$oid": {"type": "string"},
                     },
@@ -1586,6 +1629,7 @@ node_overrides_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1623,6 +1667,7 @@ node_overrides_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1661,6 +1706,7 @@ node_overrides_schema = {
                 },
                 "Expiry": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1673,6 +1719,7 @@ node_overrides_schema = {
                 },
                 "Activation": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1721,6 +1768,7 @@ twitch_promos_schema = {
                 },
                 "startDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
@@ -1733,6 +1781,7 @@ twitch_promos_schema = {
                 },
                 "endDate": {
                     "type": "object",
+                    "additionalProperties": False,
                     "properties": {
                         "$date": {"type": "object"},
                         "items": {
