@@ -45,7 +45,7 @@ class SquadLinkEvent(Event):
         self.TANextWaveInit.set_countdown(next_init[:10])
         self.TANextWaveInit.start()
 
-    def set_squad_link_extra_data(self, completition_bonus, epoch_number, pause_scheduling, metadata):
+    def set_squad_link_extra_data(self, completion_bonus, epoch_number, pause_scheduling, metadata):
         metadata = json.loads(metadata)
         extra_text = ""
         if ('progressReq' in metadata):
@@ -70,9 +70,9 @@ class SquadLinkEvent(Event):
 
         extra_text += translate("squadLinkEvent", "epoch_number") + ": " + str(epoch_number) + "\t"
         extra_text += translate("squadLinkEvent", "completitionBonus") + ": "
-        for num in range(len(completition_bonus) - 1):
-            extra_text += str(completition_bonus[num]) + ", "
-        extra_text += str(completition_bonus[len(completition_bonus)-1]) + "\t"
+        for num in range(len(completion_bonus) - 1):
+            extra_text += str(completion_bonus[num]) + ", "
+        extra_text += str(completion_bonus[len(completion_bonus) - 1]) + "\t"
         extra_text += translate("squadLinkEvent", "pauseAutoScheduling") + ": " + pause_scheduling
         self.TASquadExtra.setText(extra_text)
 

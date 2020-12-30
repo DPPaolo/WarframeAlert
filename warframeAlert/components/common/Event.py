@@ -130,17 +130,19 @@ class Event():
         else:
             self.EventName.setText(event_name)
 
-    def set_event_info(self, init, end, count, personal, score, embl, transmission):
+    def set_event_info(self, init, end, count, personal, score, emblem, transmission, community):
         self.EventInit.setText(init)
         self.EventEnd.set_countdown(end[:10])
         self.EventEnd.start()
         name_tooltip = translate("event", "numEvent") + " " + str(count+1)
         if (transmission != ""):
             name_tooltip += " " + translate("event", "transmission") + ": " + transmission
+        if (community):
+            name_tooltip += " " + translate("event", "community") + ": " + community
         self.EventNameLab.setToolTip(name_tooltip)
         self.EventName.setToolTip(name_tooltip)
         self.EventPer.setText(personal)
-        self.EventStr.setText(embl)
+        self.EventStr.setText(emblem)
         self.EventScore.setText(score)
 
     def set_optional_field(self, regions, success, faction, item_required, roaming_vip, req_mis):
@@ -149,7 +151,7 @@ class Event():
         self.EventFaction.setText(faction)
         self.EventReqItem.setText(item_required)
         self.EventRoamingVip.setText(roaming_vip)
-        if (req_mis != ""):
+        if (req_mis != []):
             req_mission = ""
             for mission in req_mis:
                 req_mission += mission + " "

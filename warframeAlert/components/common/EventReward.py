@@ -45,12 +45,20 @@ class EventReward():
         self.TAvbox.addLayout(self.TAbox2)
         self.TAvbox.addLayout(self.TAbox3)
 
-    def set_reward_data(self, item, node, score, req):
+    def set_reward_data(self, item, node, score, req, mission_interval, mission_map_rotation):
         self.TAMisNumDesc.setText(translate("eventReward", "mission") + " " + str(self.Nmis))
         self.TAItem.setText(item)
         self.TANode.setText(translate("eventReward", "node") + ": " + node[0] + " " + node[1])
         self.TAScore.setText(str(score))
         self.TAScoreReq.setText(str(req))
+        seconds = " " + translate("eventReward", "seconds")
+        node_tooltip = ""
+        if (mission_interval != 0):
+            node_tooltip += translate("eventReward", "missionInterval") + ": " + str(mission_interval) + seconds + "\n"
+        if (mission_map_rotation != ""):
+            node_tooltip += translate("eventReward", "missionMapRotation") + " " + str(mission_map_rotation)
+        if (node_tooltip != ""):
+            self.TANode.setToolTip(node_tooltip)
 
     def hide(self):
         self.TAMisNumDesc.hide()

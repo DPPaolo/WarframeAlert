@@ -104,7 +104,7 @@ class EventsWidgetTab():
     def get_widget(self):
         return self.eventsWidget
 
-    def get_lenght(self):
+    def get_length(self):
         return self.alertWidget.get_lenght() + len(self.alerts['Goals'])
 
     def update_alert_mission(self, data):
@@ -228,8 +228,9 @@ class EventsWidgetTab():
 
 def create_event(event_id, event, relay):
     icon = tooltip = success = regions = faction = ""
-    req_item = roaming_vip = req_mis = ""
-    personal = clampscore = embl = "No"
+    req_item = roaming_vip = req_mis = mission_map_rotation = ""
+    personal = clamp_score = emblem = "No"
+    mission_interval = 0
     init = timeUtils.get_time(event['Activation']['$date']['$numberLong'])
     end = event['Expiry']['$date']['$numberLong']
     if ('Personal' in event):
@@ -254,11 +255,19 @@ def create_event(event_id, event, relay):
         tooltip = tooltip or event['ScoreMaxTag']
     if ('Icon' in event):
         icon = event['Icon']
+    if ('MissionKeyRotationInterval' in event):
+        mission_interval = event['MissionKeyRotationInterval']
+    if ('MissionKeyRotation' in event):
+        for index, rotation in enumerate(event['MissionKeyRotation']):
+            mission_map_rotation += rotation
+            if (index < (len(event['MissionKeyRotation']) - 1)):
+                mission_map_rotation += "\n"
 
+    community = bool_to_yes_no(event['Community'] if ('Community' in event) else False)
     if ('ClampNodeScores' in event):
-        clampscore = bool_to_yes_no(event['ClampNodeScores'])
+        clamp_score = bool_to_yes_no(event['ClampNodeScores'])
     if ('Bounty' in event):
-        embl = bool_to_yes_no(event['Bounty'])
+        emblem = bool_to_yes_no(event['Bounty'])
     if ('Success' in event):
         success = bool_to_yes_no(event['Success'])
     if ('Regions' in event):
@@ -296,8 +305,8 @@ def create_event(event_id, event, relay):
     if ('OptionalInMission' in event):
         optional_in_mission = bool_to_yes_no(event['OptionalInMission'])
     if ('UpgradeIds' in event):
-        for upgrage in event['UpgradeIds']:
-            upgrade_ids += upgrage['$oid'] + ","
+        for upgrade in event['UpgradeIds']:
+            upgrade_ids += upgrade['$oid'] + ","
         upgrade_ids = upgrade_ids[:-1]
     if ('RegionDrops' in event):
         for i in range(0, len(event['RegionDrops'])):
@@ -330,7 +339,7 @@ def create_event(event_id, event, relay):
 
     # Squad Link Data
     alt_activation = alt_expiry = next_alt_activation = next_alt_expiry = 0
-    completition_bonus = epoch_number = pause_scheduling = metadata = ""
+    completion_bonus = epoch_number = pause_scheduling = metadata = ""
     if ('AltActivation' in event):
         alt_activation = event['AltActivation']['$date']['$numberLong']
     if ('AltExpiry' in event):
@@ -340,7 +349,7 @@ def create_event(event_id, event, relay):
     if ('NextAltExpiry' in event):
         next_alt_expiry = event['NextAltExpiry']['$date']['$numberLong']
     if ('CompletionBonus' in event):
-        completition_bonus = event['CompletionBonus']
+        completion_bonus = event['CompletionBonus']
     if ('EpochNum' in event):
         epoch_number = event['EpochNum']
     if ('PauseAutoScheduling' in event):
@@ -370,13 +379,13 @@ def create_event(event_id, event, relay):
     elif (alt_activation and alt_expiry):
         temp = SquadLinkEvent(event_id)
         temp.set_squad_link_data(alt_activation, alt_expiry, next_alt_activation, next_alt_expiry)
-        temp.set_squad_link_extra_data(completition_bonus, epoch_number, pause_scheduling, metadata)
+        temp.set_squad_link_extra_data(completion_bonus, epoch_number, pause_scheduling, metadata)
         temp.set_event_type(EventType.SQUAD_LINK)
     else:
         temp = Event(event_id)
 
     temp.set_event_name(name, desc, tooltip, icon)
-    temp.set_event_info(init, end, count, personal, clampscore, embl, transmission)
+    temp.set_event_info(init, end, count, personal, clamp_score, emblem, transmission, community)
     temp.set_optional_field(regions, success, faction, req_item, roaming_vip, req_mis)
 
     # Hub Event Data
@@ -474,7 +483,7 @@ def create_event(event_id, event, relay):
                 req.append(req[0])
         for i in range(0, g_len):
             event_rew = EventReward(i + 1)
-            event_rew.set_reward_data(rew[i], node[i], goal[i], req[i])
+            event_rew.set_reward_data(rew[i], node[i], goal[i], req[i], mission_interval, mission_map_rotation)
             temp.add_event_object(event_rew.TAvbox)
             temp.add_event_object(EmptySpace().SpaceBox)
 

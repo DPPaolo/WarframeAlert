@@ -62,7 +62,7 @@ class TabService(QtCore.QObject):
         #self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
-        n_event = self.event_tab.get_lenght()
+        n_event = self.event_tab.get_length()
         n_acc = self.accolyte_tab.get_lenght()
 
         if (not OptionsHandler.get_option("Tab/News") == 1):
