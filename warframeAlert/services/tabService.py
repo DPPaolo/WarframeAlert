@@ -163,7 +163,7 @@ class TabService(QtCore.QObject):
         mob_version = json_data['MobileVersion']
         world_seed = json_data['WorldSeed']
         force_logout_version = json_data['ForceLogoutVersion']
-        dtls = json_data['DTLS']
+        dtls = json_data['DTLS'] if ('DTLS' in json_data) else False
         self.other_tab.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
 
         self.update_tabber()

@@ -42,7 +42,7 @@ all_json_schema = {
                 "VoidTraders": {"type": "array"},
                 "WorldSeed": {"type": "string"},
             },
-            "required": ["ActiveMissions", "Alerts", "BuildLabel", "ConstructionProjects", "DTLS",
+            "required": ["ActiveMissions", "Alerts", "BuildLabel", "ConstructionProjects",
                          "DailyDeals", "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion",
                          "GlobalUpgrades",
                          "Goals", "HubEvents", "Invasions", "LibraryInfo", "MobileVersion", "NodeOverrides",
@@ -369,7 +369,8 @@ syndicate_schema = {
                              "QuillsSyndicate", "CetusSyndicate", "VentKidsSyndicate", "VoxSyndicate",
                              "SolarisSyndicate", "RadioLegionSyndicate", "RadioLegionIntermissionSyndicate",
                              "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
-                             "RadioLegion3Syndicate", "EntratiSyndicate", "NecraloidSyndicate"]
+                             "RadioLegion3Syndicate", "RadioLegionIntermission3Syndicate", "EntratiSyndicate",
+                             "NecraloidSyndicate"]
                 },
                 "Activation": {
                     "type": "object",

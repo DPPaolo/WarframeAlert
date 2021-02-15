@@ -24,6 +24,8 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                                                        "en": "Nightwawe - Intermission"},
                   "RadioLegionIntermission2Syndicate": {"it": "Nightwawe - Intermedia 2",
                                                         "en": "Nightwawe - Intermission 2"},
+                  "RadioLegionIntermission3Syndicate": {"it": "Nightwawe - Intermedia 3",
+                                                        "en": "Nightwawe - Intermission 3"},
                   }
 
 SYNDICATE_RANK_NAME = {
