@@ -2,7 +2,7 @@
 from PyQt5 import QtCore
 
 from warframeAlert import warframeData
-from warframeAlert.components.common.MessageBox import MessageBox
+from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services import networkService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -55,7 +55,7 @@ class UpdateService(QtCore.QObject):
             self.downloader_thread.start()
             self.downloader_thread.download_completed.connect(lambda: self.download_finished(download_only))
         except Exception as er:
-            MessageBox(translate("updateService", "saveError") + "\n" + str(er))
+            MessageBox(translate("updateService", "saveError"), str(er), MessageBoxType.ERROR)
             LogHandler.err(translate("updateService", "saveError"))
             LogHandler.err(str(er))
             print_traceback(translate("updateService", "saveError") + " " + str(er))

@@ -9,6 +9,7 @@ a = Analysis(['warframeAlert\\WarframeAlert.py'],
              datas=[
              ('warframeAlert\\assets\\icon\\*.*', 'assets\\icon'),
              ('warframeAlert\\assets\\image\\*.*', 'assets\\image'),
+             ('warframeAlert\\assets\\file\\*.*', 'assets\\file'),
              ('warframeAlert\\translation\\*.qm', 'translation'),
              ],
              hiddenimports=[],
@@ -19,8 +20,10 @@ a = Analysis(['warframeAlert\\WarframeAlert.py'],
              win_private_assemblies=False,
              cipher=block_cipher,
              noarchive=False)
+
 pyz = PYZ(a.pure, a.zipped_data,
              cipher=block_cipher)
+
 exe = EXE(pyz,
           a.scripts,
           a.binaries,
