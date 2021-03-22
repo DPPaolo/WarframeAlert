@@ -117,6 +117,21 @@ class NewsWidgetTab():
                 message = message_en
             else:
                 continue
+
+            if (forum == ""):
+                link_it = link_en = ""
+                for i in range(0, len(news['Links'])):
+                    if ('it' == news['Links'][i]['LanguageCode']):
+                        link_it = divide_message(news['Links'][i]['Link'])
+                        break
+                    elif ('en' == news['Links'][i]['LanguageCode']):
+                        link_en = divide_message(news['Links'][i]['Link'])
+                if (link_it):
+                    forum = link_it
+                elif (link_en):
+                    forum = link_en
+                else:
+                    continue
             news_type = 2 if (community is not None and community) else get_news_type(message, forum)
 
             found = 0

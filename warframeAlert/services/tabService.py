@@ -132,11 +132,12 @@ class TabService(QtCore.QObject):
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
+        #self.other_tab.update_experiment_recommended(json_data['ExperimentRecommended'])
+        self.news_tab.update_news(json_data['Events'])
+        self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])
         self.sales_tab.update_sales(json_data['FlashSales'])
         self.event_tab.update_events(json_data['Goals'], json_data['ConstructionProjects'])
         self.news_tab.update_global_upgrades(json_data['GlobalUpgrades'])
-        self.news_tab.update_news(json_data['Events'])
-        self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])
         self.other_tab.update_hub_event(json_data['HubEvents'])
         self.invasion_tab.update_invasion(json_data['Invasions'])
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
@@ -158,6 +159,7 @@ class TabService(QtCore.QObject):
         self.syndicate_tab.update_syndicate(json_data['SyndicateMissions'])
         self.bounty_tab.update_bounties(json_data['SyndicateMissions'])
         self.other_tab.update_twitch_promo(json_data['TwitchPromos'])
+        #self.other_tab.update_void_storms(json_data['VoidStorms'])
         self.baro_tab.update_baro(json_data['VoidTraders'])
         version = json_data['Version']
         mob_version = json_data['MobileVersion']

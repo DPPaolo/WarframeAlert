@@ -15,6 +15,7 @@ all_json_schema = {
                 "DTLS": {"type": "number", "enum": [0]},
                 "DailyDeals": {"type": "array"},
                 "Events": {"type": "array"},
+                "ExperimentRecommended": {"type": "array"},
                 "FeaturedGuilds": {"type": "array"},
                 "FlashSales": {"type": "array"},
                 "ForceLogoutVersion": {"type": "integer"},
@@ -40,6 +41,7 @@ all_json_schema = {
                 "TwitchPromos": {"type": "array"},
                 "Version": {"type": "integer"},
                 "VoidTraders": {"type": "array"},
+                "VoidStorms": {"type": "array"},
                 "WorldSeed": {"type": "string"},
             },
             "required": ["ActiveMissions", "Alerts", "BuildLabel", "ConstructionProjects",
@@ -67,6 +69,47 @@ default_schema = {
     "required": ["Default"],
     "definitions": {
         "????": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+            },
+            "required": [],
+        }
+    }
+}
+
+
+void_storm_schema = {
+    "type": "object",
+    "properties": {
+        "VoidStorms": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/voidStorm"},
+        }
+    },
+    "required": ["VoidStorms"],
+    "definitions": {
+        "voidStorm": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+            },
+            "required": [],
+        }
+    }
+}
+
+experiment_recommended_schema = {
+    "type": "object",
+    "properties": {
+        "ExperimentRecommended": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/experimentRecommended"},
+        }
+    },
+    "required": ["ExperimentRecommended"],
+    "definitions": {
+        "experimentRecommended": {
             "type": "object",
             "additionalProperties": False,
             "properties": {
@@ -1204,6 +1247,16 @@ events_schema = {
                         "properties": {
                             "LanguageCode": {"type": "string"},
                             "Message": {"type": "string"}
+                        }
+                    }
+                },
+                "Links": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "LanguageCode": {"type": "string"},
+                            "Link": {"type": "string"}
                         }
                     }
                 }

@@ -12,6 +12,7 @@ def check_json_data(json_data):
     validate_global_upgrades(json_data['GlobalUpgrades'])
     validate_goals(json_data['Goals'])
     validate_events(json_data['Events'])
+    validate_experiment_recommended(json_data['ExperimentRecommended'])
     validate_featured_guilds(json_data['FeaturedGuilds'])
     validate_flash_sales(json_data['FlashSales'])
     validate_hub_events(json_data['HubEvents'])
@@ -28,6 +29,7 @@ def check_json_data(json_data):
     validate_syndicate(json_data['SyndicateMissions'])
     validate_twich_promos(json_data['TwitchPromos'])
     validate_void_traders(json_data['VoidTraders'])
+    validate_void_storm(json_data['VoidStorms'])
     validate_version(json_data['Version'])
     validate_mobile_version(json_data['MobileVersion'])
     validate_world_seed(json_data['WorldSeed'])
@@ -63,6 +65,10 @@ def validate_goals(json_data):
 
 def validate_events(json_data):
     validate(instance={'Events': json_data}, schema=events_schema)
+
+
+def validate_experiment_recommended(json_data):
+    validate(instance={'ExperimentRecommended': json_data}, schema=experiment_recommended_schema)
 
 
 def validate_featured_guilds(json_data):
@@ -123,6 +129,10 @@ def validate_twich_promos(json_data):
 
 def validate_void_traders(json_data):
     validate(instance={'VoidTraders': json_data}, schema=void_traders_schema)
+
+
+def validate_void_storm(json_data):
+    validate(instance={'VoidStorms': json_data}, schema=void_storm_schema)
 
 
 def validate_version(json_data):
