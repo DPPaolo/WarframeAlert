@@ -170,6 +170,12 @@ SEASON_CHALLENGE = {
         "Solo di Passaggio", "Visita un Dojo in Evidenza", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyLichNode": (
         "Rivendicato", "Libera un nodo dall'influenza di un Lich personale", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyRequiemTotem": (
+        "Obelisco Antico", "Attiva un Obelisco Requiem su Cambion Drift", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWhileOnKDrive": (
+        "In Pista!", "Uccidi 20 nemici mentre sei a bordo di un K-Drive", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPilotFallenMech": (
+        "Rianimatore", "Trova e pilota un Necramech abbattuto su Deimos", 10000),
     # WEEKLY
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions": (
         "Invasore", "Completa 9 Missioni di invasione qualsiasi", 4500),
@@ -210,7 +216,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSabotage": (
         "Sabotatore", "Completa 3 missioni sabotaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockDragonVaults": (
-        "Saccheggiatore di Camere", "Sblocca 4 Camere Orokin", 4500),
+        "Saccheggiatore di Camere", "Apri 4 Caveau Orokin su Deimos", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSpy": (
         "Operativo", "Completa 3 missioni spionaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRarePlainsFish": (
@@ -246,6 +252,12 @@ SEASON_CHALLENGE = {
         "Fuoco Amico", "Distruggi 3 Caccia Nemici mentre piloti un Trasporto Armato dirottato", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRailjackMissions": (
         "Esploratore", "Completa 3 missioni Railjack", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIsolationBounties": (
+        "Saccheggiatore di Vault", "Completa una Taglia Vault d'isolamento su Deimos", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFeedHelminth": (
+        "Nutri la Bestia", "Nutri l'Helminth con qualsiasi risorsa", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesInMech": (
+        "Necralizzatore", "Uccidi 100 nemici con un Necramech", 4500),
     # WEEKLY ELITE
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus": (
         "Giustiziere Eximus", "Uccidi 100 Eximus", 7000),
@@ -297,4 +309,10 @@ SEASON_CHALLENGE = {
         "Completa una missione Spionaggio hackerando manualmente 3 banche dati senza allarmi", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFinishLich": (
         "Scegli Saggiamente", "Uccidi o Converti un Kuva Lich", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEnemiesSteelPath": (
+        "Acciaio Gelato", "Uccidi 1000 nemici ne Il Percorso d'Acciaio", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSteelPathMissions": (
+        "Il Percorso Meno Abbattuto", "Completa 5 missioni Percorso d'Acciaio", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCollectUniqueResources": (
+        "Razziatore di Risorse", "Raccogli 20 tipi diversi di risorse", 7000)
 }

@@ -43,11 +43,11 @@ class SortieMissionDropRow():
         self.ViewDrop3 = QtWidgets.QLabel(drop[2])
 
         if ("%)" in drop[0]):
-            self.ViewDrop1.setStyleSheet(get_sortie_reward_color(drop[0].split("%)")[0].split("(")[-1]))
+            self.ViewDrop1.setStyleSheet(get_sortie_reward_color(drop[0].split("%)")[0].split(" ")[-1]))
         if ("%)" in drop[1]):
-            self.ViewDrop2.setStyleSheet(get_sortie_reward_color(drop[1].split("%)")[0].split("(")[-1]))
+            self.ViewDrop2.setStyleSheet(get_sortie_reward_color(drop[1].split("%)")[0].split(" ")[-1]))
         if ("%)" in drop[2]):
-            self.ViewDrop3.setStyleSheet(get_sortie_reward_color(drop[2].split("%)")[0].split("(")[-1]))
+            self.ViewDrop3.setStyleSheet(get_sortie_reward_color(drop[2].split("%)")[0].split(" ")[-1]))
 
         self.DropListBox = QtWidgets.QHBoxLayout()
 

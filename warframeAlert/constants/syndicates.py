@@ -479,6 +479,15 @@ BOUNTY_RANK_LEVEL = {"EidolonJobMissionRewards/TierATableA": "Level 5 - 15 Cetus
                      "DeimosMissionRewards/TierETableA": "Level 40 - 60 Cambion Drift Bounty",
                      "DeimosMissionRewards/TierETableB": "Level 40 - 60 Cambion Drift Bounty",
                      "DeimosMissionRewards/TierETableC": "Level 40 - 60 Cambion Drift Bounty",
+                     "DeimosMissionRewards/VaultBountyTierATableA": "Level 30 - 40 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierATableB": "Level 30 - 40 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierATableC": "Level 30 - 40 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierBTableA": "Level 40 - 50 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierBTableB": "Level 40 - 50 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierBTableC": "Level 40 - 50 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierCTableA": "Level 50 - 60 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierCTableB": "Level 50 - 60 Isolation Vault",
+                     "DeimosMissionRewards/VaultBountyTierCTableC": "Level 50 - 60 Isolation Vault",
                      }
 
 BOUNTY_STAGE = {

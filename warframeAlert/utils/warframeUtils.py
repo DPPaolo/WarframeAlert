@@ -1,5 +1,6 @@
 # coding=utf-8
 import json
+from itertools import groupby
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
@@ -7,8 +8,8 @@ from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
-from warframeAlert.utils.fileUtils import get_separator
-from warframeAlert.utils.gameTranslationUtils import get_item_name, get_stage_name
+from warframeAlert.utils.fileUtils import get_separator, get_asset_path
+from warframeAlert.utils.gameTranslationUtils import get_item_name, get_stage_name, get_rarity
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -140,7 +141,7 @@ def get_image_path_from_name(name):
 def get_image_path_from_export_manifest(name):
     name = name.lower()
     try:
-        fp = open("data" + get_separator() + "ExportManifest.json")
+        fp = open(get_asset_path() + "file" + get_separator() + "ExportManifest.json")
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
@@ -168,7 +169,7 @@ def get_image_from_url_with_store_items(url):
 
 def get_baro_image_path_from_export_manifest(name):
     try:
-        fp = open("data" + get_separator() + "ExportManifest.json")
+        fp = open(get_asset_path() + "file" + get_separator() + "ExportManifest.json")
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
@@ -201,8 +202,15 @@ def read_drop_file(name):
 def get_bounty_reward(reward, file_name):
     language = OptionsHandler.get_option("Language", str)
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
+    prefix = ""
+    if (file_name == "cetus"):
+        prefix = "cetusBountyRewards"
+    elif (file_name == "fortuna"):
+        prefix = "solarisBountyRewards"
+    elif (file_name == "deimos"):
+        prefix = "deimosRewards"
     try:
-        json_data = read_drop_file(file_name)['bounty']
+        json_data = read_drop_file(file_name + "_" + language)[prefix]
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
     reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1][:-7]
@@ -211,50 +219,63 @@ def get_bounty_reward(reward, file_name):
     else:
         print(translate("warframeUtils", "bountyRewardNotFound") + " " + reward_type)
         return [no_reward, no_reward, no_reward]
+
     rew_a = rew_b = rew_c = no_reward
-    for bounty in json_data:
-        if (bounty['level'] != reward_type):
-            continue
-        if ('A' in bounty['rotations']):
-            rew_a = ""
-            for stage in sorted(bounty['rotations']['A']):
-                stage_translated = stage if (language == "en") else get_stage_name(stage)
-                rew_a += stage_translated + "\n\n"
-                for i in range(0, len(bounty['rotations']['A'][stage])):
-                    elem = bounty['rotations']['A'][stage][i]
-                    item = elem['name_' + language]
-                    rar = elem['rarity'].split("(")[1].split(")")[0]
-                    rew_a += item + " (" + rar + ")\n"
-                rew_a += "\n"
-        if ('B' in bounty['rotations']):
-            rew_b = ""
-            for stage in sorted(bounty['rotations']['B']):
-                stage_translated = stage if (language == "en") else get_stage_name(stage)
-                rew_b += stage_translated + "\n\n"
-                for i in range(0, len(bounty['rotations']['B'][stage])):
-                    elem = bounty['rotations']['B'][stage][i]
-                    item = elem['name_' + language]
-                    rar = elem['rarity'].split("(")[1].split(")")[0]
-                    rew_b += item + " (" + rar + ")\n"
-                rew_b += "\n"
-        if ('C' in bounty['rotations']):
-            rew_c = ""
-            for stage in sorted(bounty['rotations']['C']):
-                stage_translated = stage if (language == "en") else get_stage_name(stage)
-                rew_c += stage_translated + "\n\n"
-                for i in range(0, len(bounty['rotations']['C'][stage])):
-                    elem = bounty['rotations']['C'][stage][i]
-                    item = elem['name_' + language]
-                    rar = elem['rarity'].split("(")[1].split(")")[0]
-                    rew_c += item + " (" + rar + ")\n"
-                rew_c += "\n"
+    for bounty_level in json_data:
+        if (bounty_level['bountyLevel'] == reward_type):
+            if ('A' in bounty_level['rewards']):
+                rot_a = bounty_level['rewards']['A']
+                rot_a.sort(key=lambda x: x['stage'])
+                rew_a = ""
+                for stage, stage_rewards in groupby(rot_a, key=lambda x: x['stage']):
+                    stage_translated = stage if (language == "en") else get_stage_name(stage)
+                    rew_a += stage_translated + "\n\n"
+                    for drop in stage_rewards:
+                        item = drop['itemName']
+                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
+                        rew_a += item + " (" + rar + ")\n"
+                    rew_a += "\n"
+
+            if ('B' in bounty_level['rewards']):
+                rot_b = bounty_level['rewards']['B']
+                rot_b.sort(key=lambda x: x['stage'])
+                rew_b = ""
+                for stage, stage_rewards in groupby(rot_b, key=lambda x: x['stage']):
+                    stage_translated = stage if (language == "en") else get_stage_name(stage)
+                    rew_b += stage_translated + "\n\n"
+                    for drop in stage_rewards:
+                        item = drop['itemName']
+                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
+                        rew_b += item + " (" + rar + ")\n"
+                    rew_b += "\n"
+
+            if ('C' in bounty_level['rewards']):
+                rot_c = bounty_level['rewards']['C']
+                rot_c.sort(key=lambda x: x['stage'])
+                rew_c = ""
+                for stage, stage_rewards in groupby(rot_c, key=lambda x: x['stage']):
+                    stage_translated = stage if (language == "en") else get_stage_name(stage)
+                    rew_c += stage_translated + "\n\n"
+                    for drop in stage_rewards:
+                        item = drop['itemName']
+                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
+                        rew_c += item + " (" + rar + ")\n"
+                    rew_c += "\n"
+
+    if (rew_a == ""):
+        rew_a = no_reward
+    if (rew_b == ""):
+        rew_b = no_reward
+    if (rew_c == ""):
+        rew_c = no_reward
     reward = [rew_a, rew_b, rew_c]
     return reward
 
 
 def get_reward_from_sortie():
+    language = OptionsHandler.get_option("Language", str)
     try:
-        json_data = read_drop_file("sortie")["Sortie"]
+        json_data = read_drop_file("sortie_" + language)["sortieRewards"]
     except Exception as er:
         LogHandler.err(translate("warframeUtils",
                                  "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
@@ -264,8 +285,8 @@ def get_reward_from_sortie():
         return translate("sortieBox", "noReward")
     data = []
     for item in json_data:
-        name = item['name_' + OptionsHandler.get_option("Language", str)]
-        rar = item['rarity'].split("(")[1].split(")")[0]
+        name = item['itemName']
+        rar = get_rarity(item['rarity'].upper()) + " " + str(item['chance']) + "%"
         data.append(name + " (" + rar + ")")
     return data
 

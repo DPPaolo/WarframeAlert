@@ -393,3 +393,12 @@ def get_stage_name(stage):
         print(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
         LogHandler.err(translate("gameTranslation", "unknownBountyStage") + ": " + stage)
         return stage
+
+
+def get_rarity(rarity):
+    if (rarity in RARITY):
+        return RARITY[rarity][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownRarity") + ": " + rarity)
+        LogHandler.err(translate("gameTranslation", "unknownRarity") + ": " + rarity)
+        return rarity
