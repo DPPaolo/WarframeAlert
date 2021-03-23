@@ -15,6 +15,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, print_traceback
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
+from warframeAlert.warframeData import RARITY
 
 
 def get_node(name):

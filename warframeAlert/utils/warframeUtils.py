@@ -291,6 +291,127 @@ def get_reward_from_sortie():
     return data
 
 
+def get_relic_tier_from_name(name):
+    if ("Lith" in name):
+        return 1
+    elif ("Meso" in name):
+        return 2
+    elif ("Neo" in name):
+        return 3
+    elif ("Axi" in name):
+        return 4
+    elif ("Requiem" in name):
+        return 5
+
+
+def get_relic_item(name):
+    language = OptionsHandler.get_option("Language", str)
+    try:
+        json_data = read_drop_file('relic_' + language)['relics']
+    except Exception as ex:
+        LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
+        print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
+        return []
+    rewards = []
+    for relic in json_data:
+        relic_name = relic["tier"] + " " + relic["relicName"]
+        if (relic_name == name and relic['state'] == 'Intact'):
+            for reward in relic['rewards']:
+                reward_name = reward["itemName"]
+                data = (reward_name, get_relic_rarity_from_percent(reward['chance'], "Intact"))
+                rewards.append(data)
+            return rewards
+    return rewards
+
+
+def get_relic_drop_from_name(name):
+    language = OptionsHandler.get_option("Language", str)
+    try:
+        json_data = read_drop_file('relic_' + language)['relics']
+    except Exception as ex:
+        LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
+        print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
+        return ""
+    drop = ""
+    for relic in json_data:
+        if (relic['state'] == 'Intact'):
+            for reward in relic['rewards']:
+                if (reward['itemName'] == name):
+                    relic_name = relic['tier'] + " " + relic['relicName']
+                    drop += relic_name + " " + get_relic_rarity_from_percent(reward['chance'], "Intact") + "\n"
+    return drop
+
+
+def add_all_relic_from_file(obj):
+    language = OptionsHandler.get_option("Language", str)
+    json_data = read_drop_file('relic_' + language)['relics']
+    relics = []
+
+    for relic in json_data:
+        relic_name = relic["tier"] + " " + relic["relicName"]
+        relics.append(relic_name)
+
+    for relic in sorted(set(relics)):
+        obj.addItem(relic)
+
+
+def add_all_relic_item_from_file(obj):
+    language = OptionsHandler.get_option("Language", str)
+    json_data = read_drop_file('relic_' + language)['relics']
+    item = []
+    for relic in json_data:
+        if (relic['state'] == "Intact"):
+            for reward in relic['rewards']:
+                item.append(reward["itemName"])
+    item.sort()
+    items = set(item)
+    for line in items:
+        obj.addItem(line)
+
+
+def get_all_relic_from_file():
+    language = OptionsHandler.get_option("Language", str)
+    json_data = read_drop_file('relic_' + language)['relics']
+    return json_data
+
+
+def get_relic_rarity_from_percent(rarity, relic_type):
+    rarity = str(rarity)
+
+    if (relic_type == "Intact"):
+        if (rarity == "2"):
+            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+        elif (rarity == "11"):
+            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+        else:
+            # 25.33
+            return translate("warframeUtils", "common") + " (" + rarity + "%)"
+    elif (relic_type == "Exceptional"):
+        if (rarity == "4"):
+            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+        elif (rarity == "13"):
+            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+        else:
+            # 23.33
+            return translate("warframeUtils", "common") + " (" + rarity + "%)"
+    elif (relic_type == "Flawless"):
+        if (rarity == "6"):
+            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+        elif (rarity == "17"):
+            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+        else:
+            # 20
+            return translate("warframeUtils", "common") + " (" + rarity + "%)"
+    elif (relic_type == "Radiant"):
+        if (rarity == "10"):
+            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+        elif (rarity == "20"):
+            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+        else:
+            # 16.67
+            return translate("warframeUtils", "common") + " (" + rarity + "%)"
+
+
 def translate_item_from_drop_file(data):
     if (data[-1] == " "):
         data = data[:-1]
