@@ -3,7 +3,8 @@ import copy
 import json
 
 from warframeAlert.utils.fileUtils import get_separator
-from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file
+from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file, \
+    translate_mission_type_from_drop_file
 
 
 def write_json_drop():
@@ -103,8 +104,51 @@ def translate_relic_drop():
 
 
 def translate_mission_drop():
-    # TODO: parse the file
     json_data = read_drop_file("mission" + "_en")
+
+    new_json_data = {'missionRewards': {}}
+
+    for planet in json_data['missionRewards']:
+        new_planet = {}
+
+        for mission in json_data['missionRewards'][planet]:
+            new_mission = json_data['missionRewards'][planet][mission]
+            new_mission['gameMode'] = translate_mission_type_from_drop_file(json_data['missionRewards'][planet][mission]['gameMode'])
+
+            rewards_list = []
+            rewards_map = {}
+
+            for reward in json_data['missionRewards'][planet][mission]['rewards']:
+
+                if (reward in ["A", "B", "C"]):
+                    rotation = json_data['missionRewards'][planet][mission]['rewards'][reward]
+
+                    rotation_drops = []
+                    for rotation_reward in rotation:
+                        new_reward = rotation_reward
+                        new_reward['itemName'] = translate_item_from_drop_file(rotation_reward['itemName'].upper())
+                        rotation_drops.append(new_reward)
+
+                    rewards_map[reward] = rotation_drops
+                else:
+                    new_reward = reward
+                    new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
+                    rewards_list.append(new_reward)
+
+            if (rewards_list == []):
+                new_mission['rewards'] = rewards_map
+            else:
+                new_mission['rewards'] = rewards_list
+
+            new_planet[mission] = new_mission
+
+        new_json_data['missionRewards'][planet] = new_planet
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "mission_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_key_drop():

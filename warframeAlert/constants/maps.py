@@ -24,16 +24,16 @@ REGION_MAP = {
     10: {"it": "Eris", "en": "Eris"},
     11: {"it": "Sedna", "en": "Sedna"},
     12: {"it": "Europa", "en": "Europa"},
-    13: {"it": "13", "en": "13"},  # Bho?
+    13: {"it": "13", "en": "13"},
     14: {"it": "Void", "en": "Void"},
     15: {"it": "Phobos", "en": "Phobos"},
-    16: {"it": "Relitto", "en": "Derelict"},  # Maybe
+    16: {"it": "Deimos", "en": "Deimos"},
     17: {"it": "Lua", "en": "Lua"},
     18: {"it": "Fortezza Kuva", "en": "Kuva Fortress"},
-    # 19: {"it": "Cetus", "en": "Cetust"}, ???
-    # 20: {"it": "Fortuna", "en": "Fortuna"}, ???
-    # 21: {"it": "Santuario", "en": "Sanctuary"}, ???
-    # 22: {"it": "Deimos", "en": "Deimos"}, ???
+    19: {"it": "Cetus", "en": "Cetus"},
+    20: {"it": "Fortuna", "en": "Fortuna"},
+    21: {"it": "Santuario", "en": "Sanctuary"},
+    22: {"it": "Veil", "en": "Veil"},
 }
 
 MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
@@ -41,10 +41,11 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_MOBILE_DEFENSE": {"it": "Difesa Mobile", "en": "Mobile Defense"},
                 "MT_RESCUE": {"it": "Salvataggio", "en": "Rescue"},
                 "MT_CAPTURE": {"it": "Cattura", "en": "Capture"},
-                "MT_EXTERMINATION": {"it": "Sterminio", "en": "Extermination"},
+                "MT_EXTERMINATION": {"it": "Sterminio", "en": "Exterminate"},
                 "MT_INTEL": {"it": "Spionaggio", "en": "Spy"},
                 "MT_COUNTER_INTEL": {"it": "Inganno", "en": "Deception"},
                 "MT_SABOTAGE": {"it": "Sabotaggio", "en": "Sabotage"},
+                "MT_SABOTAGE_2": {"it": "Sabotaggio", "en": "Caches"},
                 "MT_EXCAVATE": {"it": "Scavo", "en": "Excavation"},
                 "MT_HIVE": {"it": "Alveare", "en": "Hive"},
                 "MT_TERRITORY": {"it": "Intercettazione", "en": "Interception"},
@@ -61,12 +62,14 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_ARTIFACT": {"it": "Disturbo", "en": "Disruption"},
                 "MT_SECTOR": {"it": "Dark Sector", "en": "Dark Sector"},
                 "MT_JUNCTION": {"it": "Raccordo", "en": "Junction"},
-                "MT_PVP": {"it": "PvP", "en": "PvP"},
+                "MT_PVP": {"it": "Conclave", "en": "Conclave"},
                 "MT_GENERIC": {"it": "Quest", "en": "Quest"},
                 "MT_LANDSCAPE": {"it": "Esplorazione", "en": "Free Roam"},
                 "MT_ENDLESS_EXTERMINATION": {"it": "Carneficina al Santuario", "en": "Sanctuary Onslaught"},
                 "MT_RAILJACK": {"it": "Schermaglia (Railjack)", "en": "Skirmish  (Railjack)"},
-        }
+                "MT_RAILJACK_ORPHIX": {"it": "Orphix (Railjack)", "en": "Orphix  (Railjack)"},
+                "MT_RAILJACK_VOLATILE": {"it": "Volatile (Railjack)", "en": "Volatile  (Railjack)"},
+                }
 
 NODE_NAME_IT = {
     "SolNode1": ("Galatea", "Nettuno"),
@@ -555,31 +558,50 @@ NODE_NAME_IT = {
 
     "CrewBattleNode501": ("Ammasso Mordo", "Saturno Proxima"),
     "CrewBattleNode502": ("Stretto Sover", "Terra Proxima"),
-
-    "CrewBattleNode505": ("Campo di Battaglia Ruse", "Veil Proxima"),
-    "CrewBattleNode506": ("Ammasso Posit", "Terra Proxima"),
-    "CrewBattleNode507": ("Stazione Minhast", "Terra Proxima"),
-    "CrewBattleNode508": ("Satelliti Phanghoul", "Terra Proxima"),
+    "CrewBattleNode503": ("Eco Bifrost", "Venere Proxima"),
+    "CrewBattleNode504": ("Vettore Arva", "Nettuno Proxima"),
+    "CrewBattleNode505": ("Campo di Battaglia Ruse", "Veil Proxima"),  # removed
+    "CrewBattleNode506": ("Ammasso Posit", "Terra Proxima"),  # removed
+    "CrewBattleNode507": ("Stazione Minhast", "Terra Proxima"),  # removed
+    "CrewBattleNode508": ("Satelliti Phanghoul", "Terra Proxima"),  # removed
     "CrewBattleNode509": ("Tempio Iota", "Terra Proxima"),
-    "CrewBattleNode510": ("Punto Gian", "Veil Proxima"),
+    "CrewBattleNode510": ("Punto Gian", "Veil Proxima"),  # removed
+    "CrewBattleNode511": ("Anello Protezione del Faro", "Venere Proxima"),
+    "CrewBattleNode512": ("Orvin-Haarc", "Venere Proxima"),
+    "CrewBattleNode513": ("Stretto Vesper", "Venere Proxima"),
+    "CrewBattleNode514": ("Gloria Perduta", "Venere Proxima"),
 
-    "CrewBattleNode517": ("Sentieri Jex", "Terra Proxima"),
+    "CrewBattleNode516": ("Miniere Nu-Gua", "Nettuno Proxima"),
+    "CrewBattleNode517": ("Sentieri Jex", "Terra Proxima"),  # removed
     "CrewBattleNode518": ("Ammasso Ogal", "Terra Proxima"),
     "CrewBattleNode519": ("Cintura Korms", "Terra Proxima"),
-    "CrewBattleNode520": ("Cintura Rian", "Terra Proxima"),
-
+    "CrewBattleNode520": ("Cintura Rian", "Terra Proxima"),  # removed
+    "CrewBattleNode521": ("Deriva dei Ghiaccio Enkidu", "Nettuno Proxima"),
     "CrewBattleNode522": ("Ammasso Bendar", "Terra Proxima"),
+    "CrewBattleNode523": ("Prospetto di Mammon", "Nettuno Proxima"),
+    "CrewBattleNode524": ("Percezione di Sovereign", "Nettuno Proxima"),
 
+    "CrewBattleNode526": ("Emissario Khufu", "Plutone Proxima"),
+    "CrewBattleNode527": ("Sette Sirene", "Plutone Proxima"),
+    "CrewBattleNode528": ("Frontiera Obol", "Plutone Proxima"),
+    "CrewBattleNode529": ("Margine di Profitto", "Plutone Proxima"),
     "CrewBattleNode530": ("Riposo di Kasio", "Saturno Proxima"),
-    "CrewBattleNode531": ("Varco Vila", "Saturno Proxima"),
-    "CrewBattleNode532": ("Varco Spiro", "Saturno Proxima"),
+    "CrewBattleNode531": ("Varco Vila", "Saturno Proxima"),  # removed
+    "CrewBattleNode532": ("Varco Spiro", "Saturno Proxima"),  # removed
     "CrewBattleNode533": ("Varco Nodo", "Saturno Proxima"),
     "CrewBattleNode534": ("Passo Lupal", "Saturno Proxima"),
     "CrewBattleNode535": ("Ammasso Vand", "Saturno Proxima"),
+    "CrewBattleNode536": ("Asse Peregrine", "Plutone Proxima"),
+
+    "CrewBattleNode538": ("Calabash", "Veil Proxima"),
+    "CrewBattleNode539": ("Numina", "Veil Proxima"),
+    "CrewBattleNode540": ("Arco d'Argento", "Veil Proxima"),
+    "CrewBattleNode541": ("Erato", "Veil Proxima"),
+    "CrewBattleNode542": ("Lu-Yan", "Veil Proxima"),
 
     "CrewBattleNode550": ("Reticolo Nsu", "Veil Proxima"),
-    "CrewBattleNode551": ("Tomba di Ganalen", "Veil Proxima"),
-    "CrewBattleNode552": ("Rya", "Veil Proxima"),
+    "CrewBattleNode551": ("Tomba di Ganalen", "Veil Proxima"),  # removed
+    "CrewBattleNode552": ("Rya", "Veil Proxima"),  # removed
     "CrewBattleNode553": ("Flexa", "Veil Proxima"),
     "CrewBattleNode554": ("Nebulosa H-2", "Veil Proxima"),
     "CrewBattleNode555": ("Nebulosa R-9", "Veil Proxima"),
