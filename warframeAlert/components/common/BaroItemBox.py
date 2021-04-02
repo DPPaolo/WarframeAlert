@@ -1,9 +1,9 @@
 # coding=utf-8
 from PyQt5 import QtGui, QtWidgets, QtCore
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWithImage
+from warframeAlert.constants.files import UPDATE_SITE, DEFAULT_SITE_IMAGE
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.warframeUtils import get_baro_image_path_from_export_manifest
@@ -62,11 +62,11 @@ class BaroItemBox():
         image_name = get_last_item_with_backslash(img)
 
         if (img == url_image):
-            site = warframeData.UPDATE_SITE + "images" + get_separator() + image_name + ".png"
+            site = UPDATE_SITE + "images" + get_separator() + image_name + ".png"
             site = site.replace("\\", "/")
             image_name += ".png"
         else:
-            site = warframeData.DEFAULT_SITE_IMAGE + img
+            site = DEFAULT_SITE_IMAGE + img
 
         image_path = "images" + get_separator() + image_name
         self.BaroImage.set_image(image_path, site)

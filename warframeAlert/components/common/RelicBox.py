@@ -1,11 +1,11 @@
 # coding=utf-8
 from PyQt5 import QtCore, QtWidgets, QtGui
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.MissionDropView import MissionDropView
 from warframeAlert.components.widget.MissionDropViewWidget import MissionDropViewWidget
+from warframeAlert.constants.files import IMAGE_NAME
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
@@ -92,7 +92,7 @@ class RelicBox():
             tier = "Requiem"
         else:
             tier = "Lith"
-        img = warframeData.IMAGE_NAME[tier]
+        img = IMAGE_NAME[tier]
         image = get_last_item_with_backslash(img)
         image_name = "assets" + get_separator() + "image" + get_separator() + image
 

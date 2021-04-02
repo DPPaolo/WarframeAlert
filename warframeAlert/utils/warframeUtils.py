@@ -4,6 +4,7 @@ from itertools import groupby
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
+from warframeAlert.constants.files import DEFAULT_ALERT_IMAGE, IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -133,8 +134,8 @@ def get_operation_type(operation):
 
 
 def get_image_path_from_name(name):
-    if (name in warframeData.IMAGE_NAME):
-        return warframeData.IMAGE_NAME[name]
+    if (name in IMAGE_NAME):
+        return IMAGE_NAME[name]
     else:
         return name
 
@@ -146,7 +147,7 @@ def get_image_path_from_export_manifest(name):
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
-        return warframeData.DEFAULT_ALERT_IMAGE
+        return DEFAULT_ALERT_IMAGE
     data = fp.readlines()
     fp.close()
     json_data = json.loads(data[0])
@@ -154,7 +155,7 @@ def get_image_path_from_export_manifest(name):
         unique_name = item['uniqueName'].lower()
         if (name == unique_name):
             return item['textureLocation'].replace("\\", "/")
-    return warframeData.DEFAULT_ALERT_IMAGE
+    return DEFAULT_ALERT_IMAGE
 
 
 def get_image_from_url_with_store_items(url):

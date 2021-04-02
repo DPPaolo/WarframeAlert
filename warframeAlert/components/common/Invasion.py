@@ -2,9 +2,9 @@
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.EmptySpace import EmptySpace
+from warframeAlert.constants.files import DEFAULT_SITE_IMAGE
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
@@ -156,7 +156,7 @@ class Invasion():
             else:
                 img = get_image_path_from_export_manifest(attacker_reward_item)
             image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-            self.InvAttackerImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + img)
+            self.InvAttackerImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
             self.image = image_name
             self.InvAttackerImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
         else:
@@ -175,7 +175,7 @@ class Invasion():
         else:
             img = get_image_path_from_export_manifest(defender_reward_item)
         image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-        self.InvDefenderImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + img)
+        self.InvDefenderImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
         if (not self.image):
             self.image = image_name
         self.InvDefenderImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
@@ -193,6 +193,7 @@ class Invasion():
         self.InvAttackerImg.hide()
         self.InvDefenderImg.hide()
         self.InvPer.hide()
+
 
 def get_invasion_color(faz):
     if (faz == "Grineer"):

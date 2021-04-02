@@ -1,8 +1,8 @@
 # coding=utf-8
 from PyQt5 import QtCore
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
+from warframeAlert.constants.files import DATA_SITE
 from warframeAlert.services import networkService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -40,15 +40,15 @@ class UpdateService(QtCore.QObject):
     def download_alert_file(self, download_only=False):
         opt = OptionsHandler.get_option("Update/Console")
         if (opt == 0):
-            url = warframeData.DATA_SITE["PC"]
+            url = DATA_SITE["PC"]
         elif (opt == 1):
-            url = warframeData.DATA_SITE["PS4"]
+            url = DATA_SITE["PS4"]
         elif (opt == 2):
-            url = warframeData.DATA_SITE["XBOX"]
+            url = DATA_SITE["XBOX"]
         elif (opt == 3):
-            url = warframeData.DATA_SITE["SWITCH"]
+            url = DATA_SITE["SWITCH"]
         else:
-            url = warframeData.DATA_SITE["PC"]
+            url = DATA_SITE["PC"]
 
         try:
             self.downloader_thread = networkService.Downloader(url, "data" + get_separator() + "allerte.json", 0)

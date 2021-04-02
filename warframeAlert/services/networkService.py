@@ -7,7 +7,7 @@ from urllib.error import URLError
 from PyQt5 import QtCore
 from PyQt5.QtCore import QThread
 
-from warframeAlert import warframeData
+from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.fileUtils import create_default_folder
@@ -58,7 +58,7 @@ class Downloader(QThread):
                 self.download_completed.emit()
                 downloaded = True
             except URLError as url_error:
-                if (warframeData.UPDATE_SITE in self.url or OptionsHandler.get_option("Debug") == 1):
+                if (UPDATE_SITE in self.url or OptionsHandler.get_option("Debug") == 1):
                     print(translate("networkService", "connectionError") + ": " + self.url)
                 LogHandler.err(translate("networkService", "connectionError") + ": " + self.url + "\n" + str(url_error))
                 time.sleep(600)

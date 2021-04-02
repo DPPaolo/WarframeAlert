@@ -3,9 +3,9 @@ from enum import Enum
 
 from PyQt5 import QtWidgets, QtCore
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.constants.files import DEFAULT_SITE_IMAGE
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
@@ -118,7 +118,7 @@ class Event():
     def set_event_name(self, name, desc, tooltip, icon):
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
-            self.EventImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + icon)
+            self.EventImg.set_image(image_name, DEFAULT_SITE_IMAGE + icon)
             self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
             self.icon = image_name
         else:

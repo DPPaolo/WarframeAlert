@@ -2,10 +2,10 @@
 from PyQt5 import QtGui, QtWidgets
 from PyQt5.QtCore import Qt
 
-from warframeAlert import warframeData
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.EmptySpace import EmptySpace
+from warframeAlert.constants.files import DEFAULT_SITE_IMAGE, DEFAULT_ALERT_IMAGE, IMAGE_NAME
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
@@ -172,8 +172,8 @@ class Alert():
         self.AlertHide.hide()
 
     def set_alert_image(self, url_image, item):
-        if (item in warframeData.IMAGE_NAME):
-            img = warframeData.IMAGE_NAME[item]
+        if (item in IMAGE_NAME):
+            img = IMAGE_NAME[item]
         elif ("Endo" in item):
             img = "/Lotus/Interface/Icons/Store/EndoIconRenderLarge.png"
         elif ("Riven" in item):
@@ -184,12 +184,12 @@ class Alert():
             else:
                 img = item
         image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-        self.AlertImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + img)
+        self.AlertImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)
         self.image = image_name
 
     def set_default_alert_image(self):
-        image_name = "images" + get_separator() + get_last_item_with_backslash(warframeData.DEFAULT_ALERT_IMAGE)
-        self.AlertImg.set_image(image_name, warframeData.DEFAULT_SITE_IMAGE + warframeData.DEFAULT_ALERT_IMAGE)
+        image_name = "images" + get_separator() + get_last_item_with_backslash(DEFAULT_ALERT_IMAGE)
+        self.AlertImg.set_image(image_name, DEFAULT_SITE_IMAGE + DEFAULT_ALERT_IMAGE)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)
         self.image = image_name
