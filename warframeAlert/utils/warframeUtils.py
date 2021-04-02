@@ -4,6 +4,7 @@ from itertools import groupby
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
+from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -410,6 +411,126 @@ def get_relic_rarity_from_percent(rarity, relic_type):
         else:
             # 16.67
             return translate("warframeUtils", "common") + " (" + rarity + "%)"
+
+
+def get_relic_drop(relic_name):
+    language = OptionsHandler.get_option("Language", str)
+    try:
+        json_cetus = read_drop_file('cetus_' + language)['cetusBountyRewards']
+        json_fortuna = read_drop_file('fortuna_' + language)['solarisBountyRewards']
+        json_deimos = read_drop_file('deimos_' + language)['deimosRewards']
+        json_mission = read_drop_file('mission_' + language)['missionRewards']
+        json_key = read_drop_file('key_' + language)['keyRewards']
+        json_transient = read_drop_file('transient_' + language)['transientRewards']
+        json_misc = read_drop_file('misc' + language)['miscItems']
+    except Exception as ex:
+        LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
+        print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
+        return translate("warframeUtils", "errorDropRelic")
+    found = 0
+    if (OptionsHandler.get_option("Language", str) == "en"):
+        relic_name = relic_name + " " + translate("warframeUtils", "relic")
+    else:
+        relic_name = translate("warframeUtils", "relic") + " " + relic_name
+    mis = ""
+
+    for bounty in json_cetus + json_fortuna + json_deimos:
+        bounty_lv = bounty['bountyLevel']
+        for rotation in bounty['rewards']:
+            for reward in bounty['rewards'][rotation]:
+                if (reward['itemName'] == relic_name):
+                    drop_text = translate("warframeUtils", "bounty") + " " + get_stage_name(bounty_lv) + " ("
+                    if (rotation in ["A", "B", "C"]):
+                        drop_text += translate("warframeUtils", "rotation") + " " + rotation
+                    else:
+                        drop_text += translate("warframeUtils", "rotation") + " " + get_stage_name(reward['stage'])
+                    drop_text += " " + get_stage_name(reward['stage']) + ")\n"
+                    mis += drop_text
+                    found = 1
+
+    for planet in json_mission:
+        translated_planet = translate_planet_from_drop_file(planet)
+        for mission in json_mission[planet]:
+            mission_data = json_mission[planet][mission]
+            mission_type = mission_data['gameMode']
+            is_event = mission_data['isEvent']
+            if (is_event):
+                mission_name = mission + " (" + translate("warframeUtils", "event") + ")"
+            else:
+                mission_name = mission
+
+            for rewards in mission_data['rewards']:
+                if (rewards in ["A", "B", "C"]):
+                    rotation_items = mission_data['rewards'][rewards]
+                    for rotation_reward in rotation_items:
+                        item = rotation_reward['itemName']
+                        if (item == relic_name):
+                            mis += mission_name + " (" + translated_planet + ") (" + mission_type + " " + \
+                                   translate("warframeUtils", "rotation") + " " + rewards + ")\n"
+                            found = 1
+                else:
+                    item = rewards['itemName']
+                    if (item == relic_name):
+                        mis += mission + " (" + translated_planet + ") (" + mission_type + ")\n"
+                        found = 1
+
+    for key_mission in json_key:
+        mission_name = key_mission['keyName']
+        for rewards in key_mission['rewards']:
+            if (rewards in ["A", "B", "C"]):
+                rotation_items = key_mission['rewards'][rewards]
+                for rotation_reward in rotation_items:
+                    item = rotation_reward['itemName']
+                    if (item == relic_name):
+                        mis += mission_name + " (" + translate("warframeUtils", "rotation") + " " + rewards + ")\n"
+                        found = 1
+            else:
+                item = rewards['itemName']
+                if (item == relic_name):
+                    mis += mission_name + "\n"
+                    found = 1
+
+    for transient_mission in json_transient:
+        mission_name = transient_mission['objectiveName']
+        for rewards in transient_mission['rewards']:
+            item = rewards['itemName']
+            rotation = translate("warframeUtils", "rotation") + " " + rewards['rotation']
+            if (item == relic_name):
+                mis += mission_name + " (" + rotation + ")\n"
+                found = 1
+
+    for misc_mission in json_misc:
+        mission_name = misc_mission['enemyName']
+        for rewards in misc_mission['items']:
+            item = rewards['itemName']
+            if (item == relic_name):
+                mis += mission_name + "\n"
+                found = 1
+
+    if (found == 0):
+        return translate("warframeUtils", "primeVault") + "\n" + translate("warframeUtils", "relicDrop")
+    else:
+        return mis
+
+
+def translate_planet_from_drop_file(planet):
+    for planet_translation in REGION_MAP.values():
+        if (planet in planet_translation["en"]):
+            return planet_translation["it"]
+
+    print(translate("warframeUtils", "planetNotFound") + ": " + planet)
+    LogHandler.err(translate("warframeUtils", "planetNotFound") + ": " + planet)
+    return planet
+
+
+def translate_mission_type_from_drop_file(mission_type):
+    for mission_type_translation in MISSION_TYPE.values():
+        if (mission_type in mission_type_translation["en"]):
+            return mission_type_translation["it"]
+
+    print(translate("warframeUtils", "missionTypeNotFound") + ": " + mission_type)
+    LogHandler.err(translate("warframeUtils", "missionTypeNotFound") + ": " + mission_type)
+    return mission_type
 
 
 def translate_item_from_drop_file(data):

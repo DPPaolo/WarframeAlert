@@ -113,7 +113,7 @@ def translate_mission_drop():
 
         for mission in json_data['missionRewards'][planet]:
             new_mission = json_data['missionRewards'][planet][mission]
-            new_mission['gameMode'] = translate_mission_type_from_drop_file(json_data['missionRewards'][planet][mission]['gameMode'])
+            new_mission['gameMode'] = translate_mission_type_from_drop_file(new_mission['gameMode'])
 
             rewards_list = []
             rewards_map = {}
@@ -152,35 +152,168 @@ def translate_mission_drop():
 
 
 def translate_key_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("key" + "_en")
+    json_data = read_drop_file("key_en")
+
+    new_json_data = {'keyRewards': []}
+
+    for key_drop in json_data['keyRewards']:
+        rewards_list = []
+        rewards_map = {}
+
+        for reward in key_drop['rewards']:
+
+            if (reward in ["A", "B", "C"]):
+                rotation = key_drop['rewards'][reward]
+
+                rotation_drops = []
+                for rotation_reward in rotation:
+                    new_reward = rotation_reward
+                    new_reward['itemName'] = translate_item_from_drop_file(rotation_reward['itemName'].upper())
+                    rotation_drops.append(new_reward)
+
+                rewards_map[reward] = rotation_drops
+            else:
+                new_reward = reward
+                new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
+                rewards_list.append(new_reward)
+
+        if (rewards_list == []):
+            key_drop['rewards'] = rewards_map
+        else:
+            key_drop['rewards'] = rewards_list
+
+        new_json_data['keyRewards'].append(key_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "key_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_transient_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("transient" + "_en")
+    json_data = read_drop_file("transient_en")
+
+    new_json_data = {'transientRewards': []}
+
+    for transient_drop in json_data['transientRewards']:
+        rewards_list = []
+
+        for reward in transient_drop['rewards']:
+            new_reward = reward
+            new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
+            rewards_list.append(new_reward)
+
+        transient_drop['rewards'] = rewards_list
+
+        new_json_data['transientRewards'].append(transient_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "transient_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_misc_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("misc" + "_en")
+    json_data = read_drop_file("misc_en")
+    new_json_data = {'miscItems': []}
+
+    for misc_drop in json_data['miscItems']:
+        rewards_list = []
+
+        for reward in misc_drop['items']:
+            new_reward = reward
+            new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
+            rewards_list.append(new_reward)
+
+        misc_drop['items'] = rewards_list
+
+        new_json_data['miscItems'].append(misc_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "misc_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_bp_by_item_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("bp_by_item" + "_en")
+    json_data = read_drop_file("bp_by_item_en")
+
+    new_json_data = {'blueprintLocations': []}
+
+    for blueprint_drop in json_data['blueprintLocations']:
+        blueprint_drop['itemName'] = translate_item_from_drop_file(blueprint_drop['itemName'].upper())
+        blueprint_drop['blueprintName'] = translate_item_from_drop_file(blueprint_drop['blueprintName'].upper())
+        new_json_data['blueprintLocations'].append(blueprint_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "bp_by_item_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_bp_by_source_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("bp_by_source" + "_en")
+    json_data = read_drop_file("bp_by_source_en")
+
+    new_json_data = {'enemyBlueprintTables': []}
+
+    for blueprint_drop in json_data['enemyBlueprintTables']:
+        rewards_list = []
+
+        for reward in blueprint_drop['items']:
+            new_reward = reward
+            new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
+            rewards_list.append(new_reward)
+
+        blueprint_drop['items'] = rewards_list
+
+        new_json_data['enemyBlueprintTables'].append(blueprint_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "bp_by_source_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_mod_by_item_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("mod_by_item" + "_en")
+    json_data = read_drop_file("mod_by_item_en")
+
+    new_json_data = {'modLocations': []}
+
+    for mod_drop in json_data['modLocations']:
+        mod_drop['modName'] = translate_item_from_drop_file(mod_drop['modName'].upper())
+        new_json_data['modLocations'].append(mod_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "mod_by_item_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
 
 
 def translate_mod_by_source_drop():
-    # TODO: parse the file
-    json_data = read_drop_file("mod_by_source" + "_en")
+    json_data = read_drop_file("mod_by_source_en")
+
+    new_json_data = {'enemyModTables': []}
+
+    for mod_drop in json_data['enemyModTables']:
+        rewards_list = []
+
+        for reward in mod_drop['mods']:
+            new_reward = reward
+            new_reward['modName'] = translate_item_from_drop_file(reward['modName'].upper())
+            rewards_list.append(new_reward)
+
+        mod_drop['mods'] = rewards_list
+
+        new_json_data['enemyModTables'].append(mod_drop)
+
+    json_data = json.dumps(new_json_data)
+    fp = open("data" + get_separator() + "mod_by_source_it.json", "w")
+    fp.write(json_data)
+    fp.flush()
+    fp.close()
