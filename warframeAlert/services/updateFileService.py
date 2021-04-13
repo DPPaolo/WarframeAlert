@@ -3,7 +3,7 @@
 from PyQt5 import QtCore
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.constants.files import OTHER_FILE_SITE, OTHER_FILE_NAME
+from warframeAlert.constants.files import OTHER_FILE_SITE, OTHER_FILE_NAME, DEFAULT_MANIFEST_SITE
 from warframeAlert.services import networkService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -22,6 +22,7 @@ class UpdateFileService(QtCore.QObject):
         self.downloader_thread = []
 
     def download_all_file(self):
+        self.downloader_thread = []
         self.num_files_downloaded = 0
         for i in range(0, len(OTHER_FILE_SITE)):
             try:
@@ -57,5 +58,17 @@ class UpdateFileService(QtCore.QObject):
             LogHandler.debug(OTHER_FILE_NAME[index] + " " + translate("updateService", "downloaded"))
         if (self.num_files_downloaded == len(OTHER_FILE_NAME)):
             self.downloader_thread = []
-            self.file_downloaded.emit()
+            self.download_export_manifest(warframeFileUtils.decompress_export_manifest_index())
             warframeFileUtils.write_json_drop()
+            self.file_downloaded.emit()
+
+    def download_export_manifest(self, manifest_id):
+        file_name = "ExportManifest.json"
+        download_path = "data" + get_separator() + file_name
+        url = DEFAULT_MANIFEST_SITE + manifest_id
+        self.downloader_thread.append(networkService.Downloader(url, download_path, 0))
+        self.downloader_thread[-1].start()
+        self.downloader_thread[-1].download_completed.connect(
+            lambda: print(file_name + " " + translate("updateService", "downloaded")))
+
+

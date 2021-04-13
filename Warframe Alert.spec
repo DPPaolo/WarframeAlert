@@ -9,7 +9,6 @@ a = Analysis(['warframeAlert\\WarframeAlert.py'],
              datas=[
              ('warframeAlert\\assets\\icon\\*.*', 'assets\\icon'),
              ('warframeAlert\\assets\\image\\*.*', 'assets\\image'),
-             ('warframeAlert\\assets\\file\\*.*', 'assets\\file'),
              ('warframeAlert\\translation\\*.qm', 'translation'),
              ],
              hiddenimports=[],

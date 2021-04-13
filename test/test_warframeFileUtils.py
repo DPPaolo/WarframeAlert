@@ -4,10 +4,15 @@ import unittest
 from warframeAlert.utils.fileUtils import get_separator, check_file, delete_file
 from warframeAlert.utils.warframeFileUtils import translate_sortie_drop, translate_free_roam_drop, \
     translate_relic_drop, translate_mission_drop, translate_key_drop, translate_transient_drop, translate_misc_drop, \
-    translate_bp_by_item_drop, translate_bp_by_source_drop, translate_mod_by_item_drop, translate_mod_by_source_drop
+    translate_bp_by_item_drop, translate_bp_by_source_drop, translate_mod_by_item_drop, translate_mod_by_source_drop, \
+    decompress_export_manifest_index
 
 
 class TestWarframeUtils(unittest.TestCase):
+
+    def test_decompress_export_manifest_index(self):
+        manifest_id = decompress_export_manifest_index()
+        self.assertIn("ExportManifest.json!", manifest_id)
 
     def test_create_sortie_drop(self):
         delete_file("data" + get_separator() + "sortie_it.json")

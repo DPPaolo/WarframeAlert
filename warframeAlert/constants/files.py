@@ -3,6 +3,9 @@
 # TODO: change with the new one
 DEFAULT_SITE_IMAGE = "http://content.warframe.com/PublicExport"
 
+DEFAULT_MANIFEST_SITE = "http://content.warframe.com/PublicExport/Manifest/"
+MOBILE_MANIFEST_ID_SITE = "http://content.warframe.com/PublicExport/index_en.txt.lzma"
+
 DEFAULT_ALERT_IMAGE = "/Lotus/Interface/Icons/Store/CorpusCreditCardHigh.png"
 UPDATE_SITE = "http://deathmt2.altervista.org/warframe/"
 
@@ -36,6 +39,7 @@ OTHER_FILE_SITE = (
 OTHER_FILE_NAME = (
     "Language.json",
     "SolNodes.json",
+    # drop file name
     "relic_en.json",
     "sortie_en.json",
     "mission_en.json",

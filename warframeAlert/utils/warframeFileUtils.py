@@ -1,10 +1,33 @@
 # coding=utf-8
 import copy
 import json
+import lzma
 
-from warframeAlert.utils.fileUtils import get_separator
+import requests as requests
+
+from warframeAlert.constants.files import MOBILE_MANIFEST_ID_SITE
+from warframeAlert.utils.fileUtils import get_separator, decompress_lzma
 from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file, \
     translate_mission_type_from_drop_file
+
+
+def decompress_export_manifest_index():
+    response = requests.get(MOBILE_MANIFEST_ID_SITE)
+    data = response.content
+    byte_data = bytes(data)
+    length = len(data)
+    stay = True
+    decompressed_data = ""
+    while stay:
+        stay = False
+        try:
+            decompressed_data = decompress_lzma(byte_data[0:length])
+        except lzma.LZMAError:
+            length -= 1
+            stay = True
+
+    export_id = str(decompressed_data).split("ExportManifest.json")[1]
+    return "ExportManifest.json" + export_id
 
 
 def write_json_drop():

@@ -143,7 +143,7 @@ def get_image_path_from_name(name):
 def get_image_path_from_export_manifest(name):
     name = name.lower()
     try:
-        fp = open(get_asset_path() + "file" + get_separator() + "ExportManifest.json")
+        fp = open("data" + get_separator() + "ExportManifest.json")
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
@@ -171,7 +171,7 @@ def get_image_from_url_with_store_items(url):
 
 def get_baro_image_path_from_export_manifest(name):
     try:
-        fp = open(get_asset_path() + "file" + get_separator() + "ExportManifest.json")
+        fp = open("data" + get_separator() + "ExportManifest.json")
     except Exception as err:
         LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
         print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
