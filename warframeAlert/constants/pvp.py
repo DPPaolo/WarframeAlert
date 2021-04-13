@@ -12,7 +12,8 @@ PVP_MISSION_TYPE = {
     "PVPChallengeTypeCategory_WEEKLY_ROOT": {"it": "Nessuna", "en": "None"},
     "PVPChallengeTypeCategory_WEEKLY": {"it": "Settimanale", "en": "Weekly"},
     "PVPChallengeTypeCategory_DAILY": {"it": "Giornaliera", "en": "Daily"},
-    "PVPChallengeTypeCategory_MODEAFFECTOR": {"it": "Modificatore", "en": "Mode Affector"}
+    "PVPChallengeTypeCategory_MODEAFFECTOR": {"it": "Modificatore", "en": "Mode Affector"},
+    "PVPChallengeTypeCategory_POWERUP": {"it": "Potenziamento", "en": "Power Up"}
 }
 
 PVP_CHALLENGE_TYPE = {
@@ -73,9 +74,12 @@ PVP_CHALLENGE_DESC = {
     "PVPTimedAffectorSuperEverything": {
         "it": "Aumento danno Pistola, Abilità, Corpo a Corpo  e drop energia di {{X}} volte",
         "en": "Pistol, Ability, Melee Damage Boost and Energy drop boost by {{X}} times"},
-    "PVPTimedChallengeGameModeWins": {"it": "Completa {{X}} sfide Giornaliere", "en": "Complete {{X}} daily missions"},
+    "PVPTimedChallengeGameModeWins": {"it": "Completa {{X}} partite giornaliere in qualsiasi modalità di gioco",
+                                      "en": "Complete {{X}} daily missions in any game mode"},
+    "PVPTimedChallengeOtherChallengeCompleteANY": {"it": "Completa {{X}} sfide Giornaliere",
+                                                   "en": "Complete {{X}} daily missions"},
     "PVPTimedChallengeGameModeComplete": {"it": "Completa {{X}} partite di qualsiasi modalità di gioco",
-                                          "en": "Complete {{X}} any match"},
+                                          "en": "Complete {{X}} any game in any game mode"},
     "PVPTimedChallengeMatchComplete": {"it": "Completa {{X}} partite", "en": "Complete {{X}} match"},
     "PVPTimedChallengeKillsPrimary": {"it": "Uccidi {{X}} nemici con la tua arma primaria in una partita",
                                       "en": "Kill {{X}} enemies with your primary weapon in a match"},

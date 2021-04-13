@@ -181,7 +181,7 @@ class PvPWidgetTab():
                         sub_challenge = pvp['subChallenges']
 
                         temp = PvPMissionBox(pvp_id, generated)
-                        temp.set_PvP_data(name, desc, mission, difficulty, end, sub_challenge)
+                        temp.set_pvp_data(name, desc, mission, difficulty, end, sub_challenge)
 
                         if (is_daily_challenge):
                             self.alerts['PvPMission']['Daily'].append(temp)

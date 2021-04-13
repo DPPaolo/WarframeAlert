@@ -1493,11 +1493,132 @@
     </message>
 </context>
 <context>
+    <name>pvpAlternativeMissionBox</name>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="110"/>
+        <source>energyPickup</source>
+        <translation>Raccolta Energia</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <source>energySurge</source>
+        <translation>Ondata Energia</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="118"/>
+        <source>weaponHUD</source>
+        <translation>HUD Arma</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <source>weaponSwap</source>
+        <translation>Cambio Arma</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="126"/>
+        <source>matchDuration</source>
+        <translation>Durata Match</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="127"/>
+        <source>maxPlayer</source>
+        <translation>Numero Massimo Giocatori</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="128"/>
+        <source>maxDiffSquadPlayer</source>
+        <translation>Massima Differenza Giocatori Squadre</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="129"/>
+        <source>minSquadPlayer</source>
+        <translation>Minimo Giocatori Squadre</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="34"/>
+        <source>warframePermitted</source>
+        <translation>Warframe Permesso</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="36"/>
+        <source>primaryWeaponPermitted</source>
+        <translation>Arma Primaria Permessa</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="38"/>
+        <source>secondaryWeaponPermitted</source>
+        <translation>Arma Secondaria Permessa</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="40"/>
+        <source>meleePermitted</source>
+        <translation>Arma Corpo a Corpo Permessa</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="112"/>
+        <source>enabledF</source>
+        <translation>Abilitata</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <source>disabledF</source>
+        <translation>Disattivata</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="120"/>
+        <source>enabledM</source>
+        <translation>Abilitato</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <source>disabledM</source>
+        <translation>Disabilitato</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="125"/>
+        <source>modality</source>
+        <translation>Modalità</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="106"/>
+        <source>ammoPickup</source>
+        <translation>Raccolta Munizioni</translation>
+    </message>
+</context>
+<context>
     <name>pvpAlternativeWidget</name>
     <message>
-        <location filename="../components/widget/PvPAlternativeWidget.py" line="19"/>
+        <location filename="../components/widget/PvPAlternativeWidget.py" line="20"/>
         <source>noOtherMission</source>
         <translation>Nessuna Missione PvP Alternativa Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/PvPAlternativeWidget.py" line="79"/>
+        <source>none</source>
+        <translation>Nessuna</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/PvPAlternativeWidget.py" line="83"/>
+        <source>any</source>
+        <translation>qualunque</translation>
+    </message>
+</context>
+<context>
+    <name>pvpMissionBox</name>
+    <message>
+        <location filename="../components/common/PvPMissionBox.py" line="39"/>
+        <source>hardMission</source>
+        <translation>Focalizzato</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPMissionBox.py" line="50"/>
+        <source>points</source>
+        <translation>Punti</translation>
+    </message>
+    <message>
+        <location filename="../components/common/PvPMissionBox.py" line="55"/>
+        <source>subChallengPresents</source>
+        <translation>Sub Challenge presenti</translation>
     </message>
 </context>
 <context>
@@ -1511,47 +1632,47 @@
 <context>
     <name>pvpWidgetTab</name>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="120"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="121"/>
         <source>start</source>
         <translation>Iniziato il</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="32"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="33"/>
         <source>end</source>
-        <translation>Finisce il</translation>
+        <translation>Finisce tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="47"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="48"/>
         <source>dailyMission</source>
         <translation>Missioni Giornaliere</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="48"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="49"/>
         <source>weeklyMission</source>
         <translation>Missioni Settimanali</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="61"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="62"/>
         <source>alternativeMission</source>
         <translation>PvP Alternativo</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="62"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="63"/>
         <source>tournamentMission</source>
         <translation>Tornei PvP</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="99"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="100"/>
         <source>pvpTournamentUpdateError</source>
         <translation>Errore nel parsing dei tornei pvp</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="87"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="88"/>
         <source>pvpAlternativeUpdateError</source>
         <translation>Errore nel parsing delle missioni pvp alternative</translation>
     </message>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="75"/>
+        <location filename="../components/tab/PvPWidgetTab.py" line="76"/>
         <source>pvpMissionUpdateError</source>
         <translation>Errore nel parsing delle missioni pvp</translation>
     </message>

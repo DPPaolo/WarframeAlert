@@ -12,6 +12,8 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/Invasion.py \
                warframeAlert/components/common/InvasionNode.py \
                warframeAlert/components/common/MessageBox.py \
+               warframeAlert/components/common/PvPMissionBox.py \
+               warframeAlert/components/common/PvPAlternativeMissionBox.py \
                warframeAlert/components/common/ReconstructionRelayEvent.py \
                warframeAlert/components/common/RelicBox.py \
                warframeAlert/components/common/SalesBox.py \
