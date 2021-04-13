@@ -8,6 +8,7 @@ from warframeAlert.constants.events import ACCOLYTE_NAME, TASK_TYPE, UPGRADE_TYP
 from warframeAlert.constants.maps import NODE_NAME_IT, FACTION, REGION_MAP, MISSION_TYPE
 from warframeAlert.constants.other_missions import SIMARIS_TARGET, SEASON_CHALLENGE, SORTIE_BOSS, SORTIE_MODIFIER, \
     INVASION_LOCTAG
+from warframeAlert.constants.pvp import PVP_MISSION_TYPE, PVP_CHALLENGE_TYPE, PVP_CHALLENGE_DESC, PVP_ALT_DESC
 from warframeAlert.constants.syndicates import SYNDICATE_NAME, BOUNTY_JOB_NAME, BOUNTY_JOB_DESC, BOUNTY_STAGE, \
     SYNDICATE_RANK_NAME
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -403,3 +404,44 @@ def get_rarity(rarity):
         print(translate("gameTranslation", "unknownRarity") + ": " + rarity)
         LogHandler.err(translate("gameTranslation", "unknownRarity") + ": " + rarity)
         return rarity
+
+
+def get_pvp_mission_type(mission):
+    if (mission in PVP_MISSION_TYPE):
+        return PVP_MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)].upper()
+    else:
+        print(translate("gameTranslation", "unknownPvPCategory") + ": " + mission)
+        LogHandler.err(translate("gameTranslation", "unknownPvPCategory") + ": " + mission)
+        return mission.upper()
+
+
+def get_pvp_mission_name(name):
+    language = OptionsHandler.get_option("Language", str)
+    if (language == "it"):
+        if (name in PVP_CHALLENGE_TYPE):
+            return PVP_CHALLENGE_TYPE[name]
+        else:
+            print(translate("gameTranslation", "unknownPvPMissionName") + ": " + name)
+            LogHandler.err(translate("gameTranslation", "unknownPvPMissionName") + ": " + name)
+            return name
+    else:
+        return get_item_name_en(name)
+
+
+def get_pvp_desc(challenge, num):
+    if (challenge in PVP_CHALLENGE_DESC):
+        desc = PVP_CHALLENGE_DESC[challenge][OptionsHandler.get_option("Language", str)]
+        return desc.replace("{{X}}", str(num))
+    else:
+        print(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
+        LogHandler.err(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
+        return challenge + " " + num
+
+
+def get_pvp_alt_desc(name):
+    if (name in PVP_ALT_DESC):
+        return PVP_ALT_DESC[name][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownPvPAlternativeDesc") + ": " + name)
+        LogHandler.err(translate("gameTranslation", "unknownPvPAlternativeDesc") + ": " + name)
+        return get_last_item_with_backslash(name)

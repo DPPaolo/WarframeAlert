@@ -15,6 +15,7 @@ from warframeAlert.components.tab.InvasionWidgetTab import InvasionWidgetTab
 from warframeAlert.components.tab.NewsWidgetTab import NewsWidgetTab
 from warframeAlert.components.tab.NightwaveWidgetTab import NightwaveWidgetTab
 from warframeAlert.components.tab.OtherWidgetTab import OtherWidgetTab
+from warframeAlert.components.tab.PvPWidgetTab import PvPWidgetTab
 from warframeAlert.components.tab.SalesWidgetTab import SalesWidgetTab
 from warframeAlert.components.tab.SortieWidgetTab import SortieWidgetTab
 from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
@@ -41,7 +42,7 @@ class TabService(QtCore.QObject):
         self.syndicate_tab = SyndicateWidgetTab()
         self.fissure_tab = FissureWidgetTab()
         self.baro_tab = BaroWidgetTab()
-        # self.pvp_tab = warframeClass.tab_pvp()
+        self.pvp_tab = PvPWidgetTab()
         self.accolyte_tab = AccolyteWidgetTab()
         self.sales_tab = SalesWidgetTab()
         self.other_tab = OtherWidgetTab()
@@ -59,7 +60,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(8, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
         self.mainTabber.insertTab(9, self.baro_tab.get_widget(), translate("tabService", "baro"))
         self.mainTabber.insertTab(10, self.sales_tab.get_widget(), translate("tabService", "sales"))
-        #self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
+        self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
         n_event = self.event_tab.get_length()
@@ -87,8 +88,8 @@ class TabService(QtCore.QObject):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.baro_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Market") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.sales_tab.get_widget()))
-        # if (not OptionsHandler.get_option("Tab/PVP") == 1):
-        #    self.mainTabber.removeTab(self.mainTabber.indexOf(self.pvp_tab.get_widget()))
+        if (not OptionsHandler.get_option("Tab/PVP") == 1):
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.pvp_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Other") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.other_tab.get_widget()))
 
@@ -96,7 +97,7 @@ class TabService(QtCore.QObject):
         self.invasion_tab.update_tab()
         self.sales_tab.update_tab()
         self.other_tab.update_tab()
-        # self.pvp_tab.update_tab()
+        self.pvp_tab.update_tab()
 
         self.mainTabber.setCurrentIndex(index)
 
@@ -143,11 +144,9 @@ class TabService(QtCore.QObject):
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
         self.other_tab.update_relay_station(json_data['NodeOverrides'])
         self.invasion_tab.update_node_ovveride(json_data['NodeOverrides'])
-
-        #self.update_PVP_tournament(json_data['PVPActiveTournaments'])
-        #self.update_PVP_alternative_mission(json_data['PVPAlternativeModes'])
-        #self.update_PVP_mission(json_data['PVPChallengeInstances'])
-
+        self.pvp_tab.update_pvp_tournament(json_data['PVPActiveTournaments'])
+        self.pvp_tab.update_pvp_alternative_mission(json_data['PVPAlternativeModes'])
+        self.pvp_tab.update_pvp_mission(json_data['PVPChallengeInstances'])
         self.accolyte_tab.update_accolyte(json_data['PersistentEnemies'])
         self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'])
         self.invasion_tab.update_invasion_project(json_data['ProjectPct'])

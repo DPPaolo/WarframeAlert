@@ -33,6 +33,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/tab/NewsWidgetTab.py \
                warframeAlert/components/tab/NightwaveWidgetTab.py \
                warframeAlert/components/tab/OtherWidgetTab.py \
+               warframeAlert/components/tab/PvPWidgetTab.py \
                warframeAlert/components/tab/SalesWidgetTab.py \
                warframeAlert/components/tab/SortieWidgetTab.py \
                warframeAlert/components/tab/SyndicateWidgetTab.py \
@@ -40,6 +41,8 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/widget/BountyWidget.py \
                warframeAlert/components/widget/GeneralInfoWidget.py \
                warframeAlert/components/widget/HubWidget.py \
+               warframeAlert/components/widget/PvPAlternativeWidget.py \
+               warframeAlert/components/widget/PvPTournamentWidget.py \
                warframeAlert/components/widget/RelayStationWidget.py \
                warframeAlert/components/widget/RelicWidget.py \
                warframeAlert/components/widget/SearchRelicWidget.py \

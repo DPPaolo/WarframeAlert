@@ -57,18 +57,17 @@ all_json_schema = {
     },
 }
 
-# TODO: Remove when all validation is completed
-default_schema = {
+pvp_tournament_schema = {
     "type": "object",
     "properties": {
-        "Default": {
+        "PVPActiveTournaments": {
             "type": "array",
-            "items": {"$ref": "#/definitions/???"},
+            "items": {"$ref": "#/definitions/pvpTournament"},
         }
     },
-    "required": ["Default"],
+    "required": ["PVPActiveTournaments"],
     "definitions": {
-        "????": {
+        "pvpTournament": {
             "type": "object",
             "additionalProperties": False,
             "properties": {
@@ -78,6 +77,115 @@ default_schema = {
     }
 }
 
+pvp_alternative_schema = {
+    "type": "object",
+    "properties": {
+        "PVPAlternativeModes": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/alternativePvP"},
+        }
+    },
+    "required": ["PVPAlternativeModes"],
+    "definitions": {
+        "alternativePvP": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "TitleLoc": {"type": "string"},
+                "DescriptionLoc": {"type": "string"},
+                "DisableAmmoPickups": {"type": "boolean"},
+                "DisableEnergyPickups": {"type": "boolean"},
+                "DisableEnergySurge": {"type": "boolean"},
+                "DisableWeaponHud": {"type": "boolean"},
+                "DisableWeaponSwitching": {"type": "boolean"},
+                "MatchTimeOverride": {"type": "number"},
+                "MaxPlayersOverride": {"type": "number"},
+                "MaxTeamCountDifferenceOverride": {"type": "number"},
+                "MinPlayersPerTeamOverride": {"type": "number"},
+                "TargetMode": {"type": "string"},
+                "ForcedLoadouts": {"type": "array",
+                                   "items": {
+                                       "type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                       }
+                                   }},
+            },
+            "required": ["TitleLoc", "DescriptionLoc", "DisableAmmoPickups", "DisableEnergyPickups",
+                         "DisableEnergySurge", "DisableWeaponHud", "ForcedLoadouts",
+                         "DisableWeaponSwitching", "MatchTimeOverride", "MaxPlayersOverride",
+                         "MaxTeamCountDifferenceOverride", "MinPlayersPerTeamOverride"],
+        }
+    }
+}
+
+pvp_mission_schema = {
+    "type": "object",
+    "properties": {
+        "PVPChallengeInstances": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/pvpMissions"},
+        }
+    },
+    "required": ["PVPChallengeInstances"],
+    "definitions": {
+        "pvpMissions": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "startDate": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "endDate": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Category": {"type": "string"},
+                "PVPMode": {"type": "string"},
+                "challengeTypeRefID": {"type": "string"},
+                "subChallenges": {"type": "array"},
+                "isGenerated": {"type": "boolean"},
+                "params": {"type": "array",
+                           "items": {
+                               "type": "object",
+                               "additionalProperties": False,
+                               "properties": {
+                                   "n": {"type": "string"},
+                                   "v": {"type": "integer"}
+                               }
+                           }},
+            },
+            "required": ["startDate", "endDate", "_id", "Category", "PVPMode", "challengeTypeRefID", "isGenerated",
+                         "subChallenges", "params"],
+        }
+    }
+}
 
 void_storm_schema = {
     "type": "object",

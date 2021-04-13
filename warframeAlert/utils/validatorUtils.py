@@ -19,6 +19,9 @@ def check_json_data(json_data):
     validate_invasions(json_data['Invasions'])
     validate_library_info(json_data['LibraryInfo'])
     validate_node_overrides(json_data['NodeOverrides'])
+    validate_pvp_tournament(json_data['PVPActiveTournaments'])
+    validate_pvp_alternative_mission(json_data['PVPAlternativeModes'])
+    validate_pvp_mission(json_data['PVPChallengeInstances'])
     validate_persistent_enemies(json_data['PersistentEnemies'])
     validate_prime_access_availabilities(json_data['PrimeAccessAvailability'])
     validate_prime_vault_availabilities(json_data['PrimeVaultAvailabilities'])
@@ -93,6 +96,18 @@ def validate_library_info(json_data):
 
 def validate_node_overrides(json_data):
     validate(instance={'NodeOverrides': json_data}, schema=node_overrides_schema)
+
+
+def validate_pvp_tournament(json_data):
+    validate(instance={'PVPActiveTournaments': json_data}, schema=pvp_tournament_schema)
+
+
+def validate_pvp_alternative_mission(json_data):
+    validate(instance={'PVPAlternativeModes': json_data}, schema=pvp_alternative_schema)
+
+
+def validate_pvp_mission(json_data):
+    validate(instance={'PVPChallengeInstances': json_data}, schema=pvp_mission_schema)
 
 
 def validate_persistent_enemies(json_data):

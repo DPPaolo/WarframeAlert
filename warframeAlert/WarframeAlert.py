@@ -236,42 +236,6 @@ class MainWindow(QtWidgets.QMainWindow):
     #     info.triggered.connect(self.tab_menu.info)
     #     aiuto.addAction(info)
 
-    # def update_PVP_tournament(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/PVP")== 1):
-    #         try:
-    #             Qtwarframe.parse_pvp_tournament(self.tab_pvp, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nei Tornei PvP: " + str(er))
-    #             warframe.stampa_errore("Errore nei Tornei PvP: " + str(er))
-    #             self.tab_pvp.PVP_tournament_not_available()
-    #             return
-    #     else:
-    #         self.tab_pvp.PVP_tournament_not_available()
-    #
-    # def update_PVP_alternative_mission(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/PVP")== 1):
-    #         try:
-    #             Qtwarframe.parse_pvp_alternative_mission(self.tab_pvp, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nelle Missioni PvP Alternative: " + str(er))
-    #             warframe.stampa_errore("Errore nelle Missioni PvP Alternative: " + str(er))
-    #             self.tab_pvp.PVP_alternative_mission_not_available()
-    #             return
-    #     else:
-    #         self.tab_pvp.PVP_alternative_mission_not_available()
-    #
-    # def update_PVP_mission(self, data):
-    #     if (warframeClass.gestore_opzioni.get_option("Tab/PVP")== 1):
-    #         try:
-    #             Qtwarframe.parse_pvp_mission(self.tab_pvp, data)
-    #         except Exception as er:
-    #             warframe.err("Errore nelle Missioni PvP: " + str(er))
-    #             warframe.stampa_errore("Errore nelle Missioni PvP: " + str(er))
-    #             self.tab_pvp.PVP_mission_not_available()
-    #             return
-    #     else:
-    #         self.tab_pvp.PVP_alternative_mission_not_available()
-    #
     # def open_old_allert(self):
     #     path = get_cur_dir()
     #     path = QtWidgets.QFileDialog.getOpenFileName(self, "Seleziona allerta precedente", path, "JSON (*.json)")
