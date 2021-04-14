@@ -129,11 +129,11 @@ class TabService(QtCore.QObject):
         build_label = json_data['BuildLabel']
         game_time = json_data['Time']
 
-        self.fissure_tab.update_fissure(json_data['ActiveMissions'])
+        self.fissure_tab.update_fissure(json_data['ActiveMissions'], json_data['VoidStorms'])
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
-        #self.other_tab.update_experiment_recommended(json_data['ExperimentRecommended'])
+        self.other_tab.update_experiment_recommended(json_data['ExperimentRecommended'])
         self.news_tab.update_news(json_data['Events'])
         self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])
         self.sales_tab.update_sales(json_data['FlashSales'])
@@ -158,7 +158,6 @@ class TabService(QtCore.QObject):
         self.syndicate_tab.update_syndicate(json_data['SyndicateMissions'])
         self.bounty_tab.update_bounties(json_data['SyndicateMissions'])
         self.other_tab.update_twitch_promo(json_data['TwitchPromos'])
-        #self.other_tab.update_void_storms(json_data['VoidStorms'])
         self.baro_tab.update_baro(json_data['VoidTraders'])
         version = json_data['Version']
         mob_version = json_data['MobileVersion']

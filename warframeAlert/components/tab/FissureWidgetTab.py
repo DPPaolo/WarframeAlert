@@ -42,10 +42,10 @@ class FissureWidgetTab():
     def get_widget(self):
         return self.FissureWidget
 
-    def update_fissure(self, data):
+    def update_fissure(self, fissure_data, void_storm_data):
         if (OptionsHandler.get_option("Tab/Fissure") == 1):
             try:
-                self.parse_fissure(data)
+                self.parse_fissure(fissure_data, void_storm_data)
             except Exception as er:
                 LogHandler.err(translate("fissureWidgetTab", "errorRelics") + ": " + str(er))
                 print_traceback(translate("fissureWidgetTab", "errorRelics") + ": " + str(er))
@@ -54,19 +54,19 @@ class FissureWidgetTab():
         else:
             self.reset_fissure()
 
-    def parse_fissure(self, data):
+    def parse_fissure(self, fissure_data, void_storm_data):
         self.reset_fissure()
         n_fis = len(self.alerts['ActiveMissions'])
-        for fissure in data:
+        for fissure in fissure_data:
             fissure_id = fissure['_id']['$oid']
-            init = fissure['Activation']['$date']['$numberLong']  # non usato
+            init = fissure['Activation']['$date']['$numberLong']
             end = fissure['Expiry']['$date']['$numberLong']
 
             timer = int(end[:10]) - int(timeUtils.get_local_time())
             if (timer > 0):
                 found = 0
-                for fissures in self.alerts['ActiveMissions']:
-                    if (fissures.get_fissure_id() == fissure_id):
+                for old_fissure in self.alerts['ActiveMissions']:
+                    if (old_fissure.get_fissure_id() == fissure_id):
                         found = 1
 
                 if (found == 0):
@@ -79,6 +79,29 @@ class FissureWidgetTab():
 
                     temp = FissureBox(fissure_id, seed)
                     temp.set_fissure_data(node, plan, mis, init, end, tier, region)
+                    self.alerts['ActiveMissions'].append(temp)
+                    del temp
+
+        for void_storm in void_storm_data:
+            fissure_id = void_storm['_id']['$oid']
+            init = void_storm['Activation']['$date']['$numberLong']
+            end = void_storm['Expiry']['$date']['$numberLong']
+
+            timer = int(end[:10]) - int(timeUtils.get_local_time())
+            if (timer > 0):
+                found = 0
+                for old_void_storms in self.alerts['ActiveMissions']:
+                    if (old_void_storms.get_fissure_id() == fissure_id):
+                        found = 1
+
+                if (found == 0):
+                    node, plan = get_node(void_storm['Node'])
+                    mis = "Railjack"
+
+                    n_tier, tier = get_relic_tier(void_storm['ActiveMissionTier'])
+
+                    temp = FissureBox(fissure_id, "")
+                    temp.set_fissure_data(node, plan, mis, init, end, tier, "")
                     self.alerts['ActiveMissions'].append(temp)
                     del temp
 

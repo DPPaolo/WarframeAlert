@@ -100,3 +100,12 @@ class OtherWidgetTab():
             LogHandler.err(translate("otherWidgetTab", "hubEventUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "hubEventUpdateError") + ": " + str(er))
             self.hubEventWidget.reset_hub_event()
+
+    def update_experiment_recommended(self, data):
+        try:
+            self.get_widget()
+            if (data != []):
+                print(data)
+        except Exception as er:
+            LogHandler.err(translate("otherWidgetTab", "experimentUpdateError") + ": " + str(er))
+            commonUtils.print_traceback(translate("otherWidgetTab", "experimentUpdateError") + ": " + str(er))

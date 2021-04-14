@@ -1491,46 +1491,51 @@
         <source>relayStationUpdateError</source>
         <translation>Error on Relay Station</translation>
     </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="111"/>
+        <source>experimentUpdateError</source>
+        <translation>Error on Recommended Experiment</translation>
+    </message>
 </context>
 <context>
     <name>pvpAlternativeMissionBox</name>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="110"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="113"/>
         <source>energyPickup</source>
         <translation>Energy Pickup</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="119"/>
         <source>energySurge</source>
         <translation>Energy Surge</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="118"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="125"/>
         <source>weaponHUD</source>
         <translation>Weapon HUD</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="131"/>
         <source>weaponSwap</source>
         <translation>Weapon Swap</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="126"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="136"/>
         <source>matchDuration</source>
         <translation>Match Duration</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="127"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="137"/>
         <source>maxPlayer</source>
         <translation>Max Number of Players</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="128"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="138"/>
         <source>maxDiffSquadPlayer</source>
         <translation>Max Difference Squad Player</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="129"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="139"/>
         <source>minSquadPlayer</source>
         <translation>Minimun Squad Players</translation>
     </message>
@@ -1555,32 +1560,32 @@
         <translation>Melee Permitted</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="112"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="116"/>
         <source>enabledF</source>
         <translation>Enabled</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="119"/>
         <source>disabledF</source>
         <translation>Disabled</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="120"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="128"/>
         <source>enabledM</source>
         <translation>Enabled</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="131"/>
         <source>disabledM</source>
         <translation>Disabled</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="125"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="135"/>
         <source>modality</source>
         <translation>Modality</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="106"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="107"/>
         <source>ammoPickup</source>
         <translation>Ammo Pickup</translation>
     </message>
@@ -1764,7 +1769,7 @@
         <translation>Relics Info</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="126"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="149"/>
         <source>unknownRelicTier</source>
         <translation>Unkown Relic Tier</translation>
     </message>

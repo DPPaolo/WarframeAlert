@@ -201,8 +201,43 @@ void_storm_schema = {
             "type": "object",
             "additionalProperties": False,
             "properties": {
+                "Activation": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "ActiveMissionTier": {"type": "string"},
+                "Node": {"type": "string"},
             },
-            "required": [],
+            "required": ["_id", "Activation", "Expiry", "ActiveMissionTier", "Node"],
         }
     }
 }

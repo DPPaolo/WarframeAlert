@@ -1491,46 +1491,51 @@
         <source>relayStationUpdateError</source>
         <translation>Errore nelle Stazioni</translation>
     </message>
+    <message>
+        <location filename="../components/tab/OtherWidgetTab.py" line="111"/>
+        <source>experimentUpdateError</source>
+        <translation>Errore negli esperimenti raccomandati</translation>
+    </message>
 </context>
 <context>
     <name>pvpAlternativeMissionBox</name>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="110"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="113"/>
         <source>energyPickup</source>
         <translation>Raccolta Energia</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="119"/>
         <source>energySurge</source>
         <translation>Ondata Energia</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="118"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="125"/>
         <source>weaponHUD</source>
         <translation>HUD Arma</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="131"/>
         <source>weaponSwap</source>
         <translation>Cambio Arma</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="126"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="136"/>
         <source>matchDuration</source>
         <translation>Durata Match</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="127"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="137"/>
         <source>maxPlayer</source>
         <translation>Numero Massimo Giocatori</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="128"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="138"/>
         <source>maxDiffSquadPlayer</source>
         <translation>Massima Differenza Giocatori Squadre</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="129"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="139"/>
         <source>minSquadPlayer</source>
         <translation>Minimo Giocatori Squadre</translation>
     </message>
@@ -1555,32 +1560,32 @@
         <translation>Arma Corpo a Corpo Permessa</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="112"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="116"/>
         <source>enabledF</source>
         <translation>Abilitata</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="114"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="119"/>
         <source>disabledF</source>
         <translation>Disattivata</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="120"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="128"/>
         <source>enabledM</source>
         <translation>Abilitato</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="122"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="131"/>
         <source>disabledM</source>
         <translation>Disabilitato</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="125"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="135"/>
         <source>modality</source>
         <translation>Modalità</translation>
     </message>
     <message>
-        <location filename="../components/common/PvPAlternativeMissionBox.py" line="106"/>
+        <location filename="../components/common/PvPAlternativeMissionBox.py" line="107"/>
         <source>ammoPickup</source>
         <translation>Raccolta Munizioni</translation>
     </message>
@@ -1764,7 +1769,7 @@
         <translation>Info Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="126"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="149"/>
         <source>unknownRelicTier</source>
         <translation>Grado Reliquia Sconosciuto</translation>
     </message>
