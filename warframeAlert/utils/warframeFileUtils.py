@@ -26,7 +26,7 @@ def decompress_export_manifest_index():
             length -= 1
             stay = True
 
-    export_id = str(decompressed_data).split("ExportManifest.json")[1]
+    export_id = str(decompressed_data).replace("'", "").split("ExportManifest.json")[1]
     return "ExportManifest.json" + export_id
 
 

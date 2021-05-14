@@ -512,6 +512,8 @@ NODE_NAME_IT = {
     "EventNode33": ("Hostile Mergers (Nodo Evento)", "Giove"),
     "EventNode34": ("Dog Days (Nodo Evento)", "Terra"),
     "EventNode35": ("Dog Days (Nodo Evento)", "Terra"),
+    "EventNode36": ("Doni Rubati (Nodo Evento)", "Terra"),
+    "EventNode37": ("Doni Rubati (Nodo Evento)", "Marte"),
 
     "EventNode761": ("The Index (Nodo Evento)", "Nettuno"),
     "EventNode762": ("The Index (Nodo Evento)", "Nettuno"),

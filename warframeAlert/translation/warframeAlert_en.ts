@@ -2553,5 +2553,10 @@
         <source>planetNotFound</source>
         <translation>Planet Not Found</translation>
     </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="625"/>
+        <source>primeNotFound</source>
+        <translation>Prime Parts Not Found</translation>
+    </message>
 </context>
 </TS>

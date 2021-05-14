@@ -59,7 +59,7 @@ class Downloader(QThread):
                 downloaded = True
             except URLError as url_error:
                 if (UPDATE_SITE in self.url or OptionsHandler.get_option("Debug") == 1):
-                    print(translate("networkService", "connectionError") + ": " + self.url)
+                    print(translate("networkService", "connectionError") + ": " + self.url + "\n")
                 LogHandler.err(translate("networkService", "connectionError") + ": " + self.url + "\n" + str(url_error))
                 time.sleep(600)
             except ValueError:

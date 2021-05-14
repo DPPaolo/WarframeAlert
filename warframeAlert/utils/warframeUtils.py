@@ -555,18 +555,27 @@ def translate_item_from_drop_file(data):
         return translate_relic(data)
     elif (is_lens(item[0])):
         return translate_focus_lens(data)
+    elif (is_resource(data)):
+        return warframeData.RESOURCES[data]
+    elif (is_item(data)):
+        return warframeData.ITEMS[data]
+    elif (is_arcane_item(data)):
+        translate_generic_item(data)
+    elif (is_special_weapon(data)):
+        return translate_special_weapon(data)
+    elif (is_prime_part(data)):
+        return translate_prime_part(data)
+    elif (is_weapon_parts(data)):
+        return translate_weapon_parts(data)
+    elif (is_warframe_parts(data)):
+        return translate_warframe_part(data)
+    elif (is_railjack_weapon(data)):
+        return translate_generic_item(data)
     # TODO: continue the translation
     # elif (is_mod(data)):
     #     return data.lower().title()
-    # elif (is_warframe(item[0])):
-    #     return prime(data)
-    # elif (is_prime(item[0])):
-    #     return prime(data)
-    # elif (is_resource(data)):
-    #     return warframeData.RISORSA[data]
-    # elif (is_item(data)):
-    #     return warframeData.OGGETTI[data]
     else:
+        translate_generic_item(item)
         print(translate("warframeUtils", "itemNotFound") + ": " + data)
         LogHandler.err(translate("warframeUtils", "itemNotFound") + ": " + data)
         return data
@@ -598,3 +607,134 @@ def translate_focus_lens(focus_lens):
         return "Lente " + str.capitalize(focus_lens[0])
     elif (len(focus_lens) == 3):
         return "Lente Maggiore " + str.capitalize(focus_lens[1])
+
+
+def is_resource(resource):
+    return resource in warframeData.RESOURCES
+
+
+def is_item(item):
+    return item in warframeData.ITEMS
+
+
+def is_arcane_item(item):
+    return "ARCANE" in item
+
+
+def is_special_weapon(item):
+    special = ["VANDAL", "WRAITH", "CARMINE"]
+    for elem in special:
+        if (elem in item):
+            return True
+    return False
+
+
+def translate_special_weapon(item):
+    if ("VANDAL" in item):
+        translate_prime_part(item, "VANDAL")
+    elif ("WRAITH" in item):
+        translate_prime_part(item, "WRAITH")
+    elif ("CARMINE" in item):
+        translate_prime_part(item, "CARMINE")
+
+
+def is_prime_part(item):
+    return len(item.split(" ")) > 2 and "PRIME" in item
+
+
+def translate_prime_part(item, separator="PRIME"):
+    prime_item = item.split(" " + separator + " ")[0]
+    prime_parts = item.split(" " + separator + " ")[1].split(" ")
+    parts_translated = ""
+    j = 0
+    for i in range(0, len(prime_parts)):
+        if (prime_parts[i] not in warframeData.ITEM_PARTS):
+            print(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
+            LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
+        else:
+            parts_translated = parts_translated + warframeData.ITEM_PARTS[prime_parts[i]]
+        j += 1
+        if (j != len(prime_parts)):
+            parts_translated += " "
+    return prime_item.capitalize() + " " + warframeData.ITEM_PARTS[separator] + " " + parts_translated
+
+
+def is_warframe_parts(item):
+    item_parts = item.split(" ")
+    parts = ["NEUROPTICS", "CHASSIS", "SYSTEMS", "BLUEPRINT"]
+    equal_parts = 0
+    for i in range(0, len(item_parts)):
+        if (item_parts[i] in parts):
+            equal_parts += 1
+    return equal_parts >= 2
+
+
+def translate_warframe_part(item):
+    warframe = item.split(" ")[0]
+    warframe_parts = item.split(warframe + " ")[1].split(" ")
+    parts_translated = ""
+    j = 0
+    for i in range(0, len(warframe_parts)):
+        if (warframe_parts[i] not in warframeData.ITEM_PARTS):
+            print(translate("warframeUtils", "primeNotFound") + ": " + warframe_parts[i])
+            LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + warframe_parts[i])
+        else:
+            parts_translated = parts_translated + warframeData.ITEM_PARTS[warframe_parts[i]]
+        j += 1
+        if (j != len(warframe_parts)):
+            parts_translated += " "
+    return warframe.capitalize() + "  " + parts_translated
+
+
+def is_weapon_parts(item):
+    item_parts = item.split(" ")
+    equal_parts = 0
+    for i in range(0, len(item_parts)):
+        if (item_parts[i] in warframeData.ITEM_PARTS and i != 0):
+            equal_parts += 1
+    return equal_parts == 1
+
+
+def translate_weapon_parts(item):
+    weapon = item.split(" ")[0]
+    weapon_parts = item.split(weapon + " ")[1].split(" ")
+    parts_translated = ""
+
+    item_parts = item.split(" ")
+    equal_parts = 0
+    for i in range(0, len(item_parts)):
+        if (item_parts[i] in warframeData.ITEM_PARTS and i != 0):
+            equal_parts = i
+
+    j = 0
+    for i in range(equal_parts, len(weapon_parts)):
+        if (weapon_parts[i] not in warframeData.ITEM_PARTS):
+            print(translate("warframeUtils", "primeNotFound") + ": " + item)
+            LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + item)
+        else:
+            parts_translated = parts_translated + warframeData.ITEM_PARTS[weapon_parts[i]]
+        j += 1
+        if (j != len(weapon_parts)):
+            parts_translated += " "
+    return weapon.capitalize() + "  " + parts_translated
+
+
+def is_railjack_weapon(item):
+    schools = ["LAVAN", "VIDAR", "ZETKI"]
+    for elem in schools:
+        if (elem in item):
+            return True
+    return False
+
+
+def translate_generic_item(item):
+    item_parts = item.split(" ") if (" " in item) else (item)
+    parts_translated = ""
+    j = 0
+    for i in range(0, len(item_parts)):
+        parts_translated = parts_translated + item_parts[i].capitalize()
+        j += 1
+        if (j != len(item_parts)):
+            parts_translated += " "
+
+    return parts_translated
