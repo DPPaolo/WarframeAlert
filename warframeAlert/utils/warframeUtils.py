@@ -576,8 +576,8 @@ def translate_item_from_drop_file(data):
     #     return data.lower().title()
     else:
         translate_generic_item(item)
-        print(translate("warframeUtils", "itemNotFound") + ": " + data)
-        LogHandler.err(translate("warframeUtils", "itemNotFound") + ": " + data)
+        # print(translate("warframeUtils", "itemNotFound") + ": " + data)
+        # LogHandler.err(translate("warframeUtils", "itemNotFound") + ": " + data)
         return data
 
 
@@ -635,7 +635,7 @@ def translate_special_weapon(item):
     elif ("WRAITH" in item):
         translate_prime_part(item, "WRAITH")
     elif ("CARMINE" in item):
-        translate_prime_part(item, "CARMINE")
+        translate_carmine_part(item)
 
 
 def is_prime_part(item):
@@ -649,6 +649,26 @@ def translate_prime_part(item, separator="PRIME"):
     j = 0
     for i in range(0, len(prime_parts)):
         if (prime_parts[i] not in warframeData.ITEM_PARTS):
+            print(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
+            LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
+        else:
+            parts_translated = parts_translated + warframeData.ITEM_PARTS[prime_parts[i]]
+        j += 1
+        if (j != len(prime_parts)):
+            parts_translated += " "
+    return prime_item.capitalize() + " " + warframeData.ITEM_PARTS[separator] + " " + parts_translated
+
+
+def translate_carmine_part(item):
+    separator = "CARMINE"
+    prime_item = item.split(separator + " ")[0]
+    prime_parts = item.split(separator + " ")[1].split(" ")
+    parts_translated = ""
+    j = 0
+    for i in range(0, len(prime_parts)):
+        if (i == 0):
+            parts_translated = parts_translated + prime_parts[i].capitalize()
+        elif (prime_parts[i] not in warframeData.ITEM_PARTS):
             print(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
             LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
         else:

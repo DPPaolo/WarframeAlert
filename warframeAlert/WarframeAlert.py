@@ -136,11 +136,11 @@ class MainWindow(QtWidgets.QMainWindow):
                 sys.exit()
 
             create_default_folder()
-            OptionsHandler.create_config()
+            self.optionHandler.create_config()
 
             #warframeData.gestore_update.open_update_file()
 
-            if (not fileUtils.is_linux_os() and not fileUtils.is_linux_os()):
+            if (not fileUtils.is_linux_os() and not fileUtils.is_mac_os()):
                 if getattr(sys, 'frozen', False):
                     copy_bundled_files_to_current_dir()
             OptionsHandler.set_option("FirstInit", 1)

@@ -10,8 +10,14 @@ from warframeAlert.utils.warframeFileUtils import translate_sortie_drop, transla
 
 class TestWarframeUtils(unittest.TestCase):
 
+    def test_download_all_file(self):
+        test_class = UpdateFileService()
+        manifest_id = decompress_export_manifest_index()
+        test_class.download_export_manifest(manifest_id)
+
     def test_decompress_export_manifest_index(self):
         manifest_id = decompress_export_manifest_index()
+        print(manifest_id)
         self.assertIn("ExportManifest.json!", manifest_id)
 
     def test_create_sortie_drop(self):

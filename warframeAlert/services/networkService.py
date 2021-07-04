@@ -64,3 +64,5 @@ class Downloader(QThread):
                 time.sleep(600)
             except ValueError:
                 pass
+            except Exception as ex:
+                LogHandler.err(translate("networkService", "connectionError") + ": " + self.url + "\n" + str(ex))

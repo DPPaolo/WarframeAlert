@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-# TODO: change with the new one
 DEFAULT_SITE_IMAGE = "http://content.warframe.com/PublicExport"
 
 DEFAULT_MANIFEST_SITE = "http://content.warframe.com/PublicExport/Manifest/"
