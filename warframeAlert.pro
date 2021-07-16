@@ -53,6 +53,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/services/notificationService.py \
                warframeAlert/services/tabService.py \
                warframeAlert/services/trayService.py \
+               warframeAlert/services/updateFileService.py \
                warframeAlert/services/updateService.py \
                warframeAlert/utils/commonUtils.py \
                warframeAlert/utils/gameTranslationUtils.py \

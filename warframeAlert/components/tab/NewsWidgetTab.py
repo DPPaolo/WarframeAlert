@@ -16,14 +16,20 @@ from warframeAlert.utils.warframeUtils import get_operation_type
 
 
 def get_news_type(message, url):
-    if ("prime" in url and "access" in url):  # Prime Access
+    if (url == ""):  # No URL available
+        return 2
+    elif ("www.youtube.com" in url):  # YouTube
+        return 2
+    elif ("prime" in url and "access" in url):  # Prime Access
+        return 1
+    elif ("tennocon" in url.lower()):  # Tennocon
         return 1
     elif ("contest" in url or "contest" in message):  # Contest
         return 2
     elif ("forums.warframe.com" in url):  # Hotfix and in Game Events
         return 1
     else:
-        return 1
+        return 2
 
 
 class NewsWidgetTab():
@@ -102,7 +108,7 @@ class NewsWidgetTab():
         for news in data:
             text = ""
             news_id = news['_id']['$oid']
-            forum = news['Prop']
+            forum_url = news['Prop']
             community = news['Community'] if ('Community' in news) else None
             message_it = message_en = 0
             for i in range(0, len(news['Messages'])):
@@ -118,7 +124,7 @@ class NewsWidgetTab():
             else:
                 continue
 
-            if (forum == ""):
+            if (forum_url == "" and 'Links' in news):
                 link_it = link_en = ""
                 for i in range(0, len(news['Links'])):
                     if ('it' == news['Links'][i]['LanguageCode']):
@@ -127,12 +133,12 @@ class NewsWidgetTab():
                     elif ('en' == news['Links'][i]['LanguageCode']):
                         link_en = divide_message(news['Links'][i]['Link'])
                 if (link_it):
-                    forum = link_it
+                    forum_url = link_it
                 elif (link_en):
-                    forum = link_en
+                    forum_url = link_en
                 else:
                     continue
-            news_type = 2 if (community is not None and community) else get_news_type(message, forum)
+            news_type = 2 if (community is not None and community) else get_news_type(message, forum_url)
 
             found = 0
             if (news_type == 1):
@@ -185,7 +191,7 @@ class NewsWidgetTab():
                 temp = CommonImageButton(news_id)
 
                 temp.set_text_news_button(message)
-                temp.set_news_url(forum)
+                temp.set_news_url(forum_url)
                 temp.set_tooltip(text)
                 image = get_last_item_with_backslash(url)
                 temp.set_image_news(image, url)

@@ -1285,7 +1285,7 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="63"/>
+        <location filename="../services/networkService.py" line="68"/>
         <source>connectionError</source>
         <translation>Connetion error during downloading file</translation>
     </message>
@@ -1293,87 +1293,87 @@
 <context>
     <name>newsWidgetTab</name>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="63"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="69"/>
         <source>newsLabel</source>
         <translation>Game News</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="68"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="74"/>
         <source>noNews</source>
         <translation>No News Available</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="69"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="75"/>
         <source>noContest</source>
         <translation>No News Available</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="96"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="102"/>
         <source>newsError</source>
         <translation>Error on the news</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="216"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="222"/>
         <source>version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="217"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="223"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="244"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="250"/>
         <source>globalUpgradeError</source>
         <translation>Error on global upgrades</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="218"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="224"/>
         <source>time</source>
         <translation>Last Update</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="308"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="314"/>
         <source>newBooster!</source>
         <translation>New Booster Activated!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="233"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="239"/>
         <source>newNews!</source>
         <translation>New News Available!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="155"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="161"/>
         <source>newsInit</source>
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="171"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="177"/>
         <source>eventInit</source>
         <translation>Event starts at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="177"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="183"/>
         <source>eventEnd</source>
         <translation>Event ends at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="179"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="185"/>
         <source>newsSite</source>
         <translation>News Site</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="182"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="188"/>
         <source>priority</source>
         <translation>With priority</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="183"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="189"/>
         <source>onlyMobile</source>
         <translation>Only for Mobile</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="64"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="70"/>
         <source>communityLabel</source>
         <translation>Community</translation>
     </message>
@@ -1965,7 +1965,7 @@
         <translation>Possible reward from the sorties</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="287"/>
+        <location filename="../utils/warframeUtils.py" line="291"/>
         <source>noReward</source>
         <translation>No Rewards Available</translation>
     </message>
@@ -2420,6 +2420,11 @@
         <source>downloaded</source>
         <translation>downloaded</translation>
     </message>
+    <message>
+        <location filename="../services/updateFileService.py" line="63"/>
+        <source>downloadFinished</source>
+        <translation>Download Finished</translation>
+    </message>
 </context>
 <context>
     <name>warframeUtils</name>
@@ -2449,7 +2454,7 @@
         <translation>Weapon Type not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="177"/>
+        <location filename="../utils/warframeUtils.py" line="181"/>
         <source>ExportManifestNotFound</source>
         <translation>File ExportManifest.json not found</translation>
     </message>
@@ -2459,102 +2464,102 @@
         <translation>Operation type not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="194"/>
+        <location filename="../utils/warframeUtils.py" line="198"/>
         <source>jsonFileNotFound</source>
         <translation>.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="206"/>
+        <location filename="../utils/warframeUtils.py" line="210"/>
         <source>noBountyReward</source>
         <translation>No Reward Available</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="222"/>
+        <location filename="../utils/warframeUtils.py" line="226"/>
         <source>bountyRewardNotFound</source>
         <translation>Bounty Reward not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="285"/>
+        <location filename="../utils/warframeUtils.py" line="289"/>
         <source>sortieRewardReadingError</source>
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="543"/>
+        <location filename="../utils/warframeUtils.py" line="547"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="545"/>
+        <location filename="../utils/warframeUtils.py" line="549"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
         <location filename="../utils/warframeUtils.py" line="571"/>
         <source>itemNotFound</source>
-        <translation>Item not found</translation>
+        <translation type="obsolete">Item not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="430"/>
+        <location filename="../utils/warframeUtils.py" line="434"/>
         <source>errorDropRelic</source>
         <translation>Error during reading relic drop</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="435"/>
+        <location filename="../utils/warframeUtils.py" line="439"/>
         <source>relic</source>
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="443"/>
+        <location filename="../utils/warframeUtils.py" line="447"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="498"/>
+        <location filename="../utils/warframeUtils.py" line="502"/>
         <source>rotation</source>
         <translation>Rotation</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="409"/>
+        <location filename="../utils/warframeUtils.py" line="413"/>
         <source>rare</source>
         <translation>Rare</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="411"/>
+        <location filename="../utils/warframeUtils.py" line="415"/>
         <source>notCommon</source>
         <translation>Not Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="414"/>
+        <location filename="../utils/warframeUtils.py" line="418"/>
         <source>common</source>
         <translation>Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="512"/>
+        <location filename="../utils/warframeUtils.py" line="516"/>
         <source>primeVault</source>
         <translation>Relic in Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="512"/>
+        <location filename="../utils/warframeUtils.py" line="516"/>
         <source>relicDrop</source>
         <translation>No mission drops this relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="533"/>
+        <location filename="../utils/warframeUtils.py" line="537"/>
         <source>missionTypeNotFound</source>
         <translation>Mission Type Translation Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="459"/>
+        <location filename="../utils/warframeUtils.py" line="463"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="523"/>
+        <location filename="../utils/warframeUtils.py" line="527"/>
         <source>planetNotFound</source>
         <translation>Planet Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="625"/>
+        <location filename="../utils/warframeUtils.py" line="734"/>
         <source>primeNotFound</source>
         <translation>Prime Parts Not Found</translation>
     </message>

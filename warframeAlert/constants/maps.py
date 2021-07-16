@@ -69,6 +69,8 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_RAILJACK": {"it": "Schermaglia (Railjack)", "en": "Skirmish  (Railjack)"},
                 "MT_RAILJACK_ORPHIX": {"it": "Orphix (Railjack)", "en": "Orphix  (Railjack)"},
                 "MT_RAILJACK_VOLATILE": {"it": "Volatile (Railjack)", "en": "Volatile  (Railjack)"},
+                "MT_RAILJACK_SPY": {"it": "Spionaggio (Railjack)", "en": "Spy  (Railjack)"},
+                "MT_RAILJACK_SURVIVAL": {"it": "Sopravvivenza (Railjack)", "en": "Survival  (Railjack)"},
                 }
 
 NODE_NAME_IT = {
@@ -572,7 +574,7 @@ NODE_NAME_IT = {
     "CrewBattleNode512": ("Orvin-Haarc", "Venere Proxima"),
     "CrewBattleNode513": ("Stretto Vesper", "Venere Proxima"),
     "CrewBattleNode514": ("Gloria Perduta", "Venere Proxima"),
-
+    "CrewBattleNode515": ("Luckless Expanse", "Venere Proxima"),
     "CrewBattleNode516": ("Miniere Nu-Gua", "Nettuno Proxima"),
     "CrewBattleNode517": ("Sentieri Jex", "Terra Proxima"),  # removed
     "CrewBattleNode518": ("Ammasso Ogal", "Terra Proxima"),
@@ -582,13 +584,13 @@ NODE_NAME_IT = {
     "CrewBattleNode522": ("Ammasso Bendar", "Terra Proxima"),
     "CrewBattleNode523": ("Prospetto di Mammon", "Nettuno Proxima"),
     "CrewBattleNode524": ("Percezione di Sovereign", "Nettuno Proxima"),
-
+    "CrewBattleNode525": ("Brom Cluster", "Nettuno Proxima"),
     "CrewBattleNode526": ("Emissario Khufu", "Plutone Proxima"),
     "CrewBattleNode527": ("Sette Sirene", "Plutone Proxima"),
     "CrewBattleNode528": ("Frontiera Obol", "Plutone Proxima"),
     "CrewBattleNode529": ("Margine di Profitto", "Plutone Proxima"),
     "CrewBattleNode530": ("Riposo di Kasio", "Saturno Proxima"),
-    "CrewBattleNode531": ("Varco Vila", "Saturno Proxima"),  # removed
+    "CrewBattleNode531": ("Campo di Fenton", "Plutone Proxima"),
     "CrewBattleNode532": ("Varco Spiro", "Saturno Proxima"),  # removed
     "CrewBattleNode533": ("Varco Nodo", "Saturno Proxima"),
     "CrewBattleNode534": ("Passo Lupal", "Saturno Proxima"),
@@ -600,6 +602,7 @@ NODE_NAME_IT = {
     "CrewBattleNode540": ("Arco d'Argento", "Veil Proxima"),
     "CrewBattleNode541": ("Erato", "Veil Proxima"),
     "CrewBattleNode542": ("Lu-Yan", "Veil Proxima"),
+    "CrewBattleNode543": ("Sabmir Cloud", "Veil Proxima"),
 
     "CrewBattleNode550": ("Reticolo Nsu", "Veil Proxima"),
     "CrewBattleNode551": ("Tomba di Ganalen", "Veil Proxima"),  # removed
@@ -608,6 +611,7 @@ NODE_NAME_IT = {
     "CrewBattleNode554": ("Nebulosa H-2", "Veil Proxima"),
     "CrewBattleNode555": ("Nebulosa R-9", "Veil Proxima"),
     "CrewBattleNode556": ("Volo Libero", "Terra Proxima"),
+    "CrewBattleNode557": ("Confronta il tuo Lich", "Saturno Proxima"),
 
     "/Lotus/Types/Keys/SortieBossKeyPhorid": ("???", "Mercurio"),
 }

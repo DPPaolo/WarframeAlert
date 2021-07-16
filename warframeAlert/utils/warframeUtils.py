@@ -571,9 +571,6 @@ def translate_item_from_drop_file(data):
         return translate_warframe_part(data)
     elif (is_railjack_weapon(data)):
         return translate_generic_item(data)
-    # TODO: continue the translation
-    # elif (is_mod(data)):
-    #     return data.lower().title()
     else:
         translate_generic_item(item)
         # print(translate("warframeUtils", "itemNotFound") + ": " + data)

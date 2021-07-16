@@ -1,6 +1,7 @@
 # coding=utf-8
 import unittest
 
+from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.utils.fileUtils import get_separator, check_file, delete_file
 from warframeAlert.utils.warframeFileUtils import translate_sortie_drop, translate_free_roam_drop, \
     translate_relic_drop, translate_mission_drop, translate_key_drop, translate_transient_drop, translate_misc_drop, \

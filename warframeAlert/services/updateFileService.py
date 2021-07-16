@@ -60,6 +60,7 @@ class UpdateFileService(QtCore.QObject):
             self.downloader_thread = []
             self.download_export_manifest(warframeFileUtils.decompress_export_manifest_index())
             warframeFileUtils.write_json_drop()
+            print(translate("updateService", "downloadFinished"))
             self.file_downloaded.emit()
 
     def download_export_manifest(self, manifest_id):
@@ -67,8 +68,8 @@ class UpdateFileService(QtCore.QObject):
         download_path = "data" + get_separator() + file_name
         url = DEFAULT_MANIFEST_SITE + manifest_id
         self.downloader_thread.append(networkService.Downloader(url, download_path, 0))
-        self.downloader_thread[-1].start()
-        self.downloader_thread[-1].download_completed.connect(
+        self.downloader_thread[0].start()
+        self.downloader_thread[0].download_completed.connect(
             lambda: print(file_name + " " + translate("updateService", "downloaded")))
 
 
