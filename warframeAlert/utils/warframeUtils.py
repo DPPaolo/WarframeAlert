@@ -423,7 +423,7 @@ def get_relic_drop(relic_name):
         json_mission = read_drop_file('mission_' + language)['missionRewards']
         json_key = read_drop_file('key_' + language)['keyRewards']
         json_transient = read_drop_file('transient_' + language)['transientRewards']
-        json_misc = read_drop_file('misc' + language)['miscItems']
+        json_misc = read_drop_file('misc_' + language)['miscItems']
     except Exception as ex:
         LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
         print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
@@ -495,7 +495,7 @@ def get_relic_drop(relic_name):
         mission_name = transient_mission['objectiveName']
         for rewards in transient_mission['rewards']:
             item = rewards['itemName']
-            rotation = translate("warframeUtils", "rotation") + " " + rewards['rotation']
+            rotation = translate("warframeUtils", "rotation") + " " + translate("warframeUtils", "noRotation")
             if (item == relic_name):
                 mis += mission_name + " (" + rotation + ")\n"
                 found = 1

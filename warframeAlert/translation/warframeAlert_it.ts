@@ -255,69 +255,74 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="76"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="94"/>
         <source>newSynJobs</source>
         <translation>Nuove taglie per il sindacato</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="73"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="91"/>
         <source>bountiesError</source>
         <translation>Errore nelle taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="124"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="142"/>
         <source>bountyInit</source>
         <translation>Inizio Taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="93"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="111"/>
         <source>cetusDay</source>
         <translation>Cetus - Notte tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="95"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="113"/>
         <source>cetusNight</source>
         <translation>Cetus - Giorno tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="103"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="121"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Freddo tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="105"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="123"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Caldo tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="25"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="28"/>
         <source>bountyEnd</source>
         <translation>Scadono tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="37"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="40"/>
         <source>ostron</source>
         <translation>Ostron</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="38"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="41"/>
         <source>fortuna</source>
         <translation>Fortuna</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="39"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="42"/>
         <source>hiveMind</source>
         <translation>Deimos</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="114"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="132"/>
         <source>deimosFass</source>
         <translation>Deimos - Vome tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="116"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="134"/>
         <source>deimosVome</source>
         <translation>Deimos - Fass tra</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/BountyWidgetTab.py" line="43"/>
+        <source>hiveMindVault</source>
+        <translation>Vault Deimos</translation>
     </message>
 </context>
 <context>
@@ -2421,7 +2426,7 @@
         <translation>scaricato</translation>
     </message>
     <message>
-        <location filename="../services/updateFileService.py" line="63"/>
+        <location filename="../services/updateFileService.py" line="65"/>
         <source>downloadFinished</source>
         <translation>Download terminato</translation>
     </message>
@@ -2562,6 +2567,11 @@
         <location filename="../utils/warframeUtils.py" line="734"/>
         <source>primeNotFound</source>
         <translation>Parte Prime Non Trovata</translation>
+    </message>
+    <message>
+        <location filename="../utils/warframeUtils.py" line="502"/>
+        <source>noRotation</source>
+        <translation>Nessuna</translation>
     </message>
 </context>
 </TS>

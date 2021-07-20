@@ -1,4 +1,6 @@
 # coding=utf-8
+import copy
+
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -18,6 +20,7 @@ class BountyWidgetTab():
         self.OstronWidget = BountyWidget()
         self.FortunaWidget = BountyWidget()
         self.DeimosWidget = BountyWidget()
+        self.DeimosVaultWidget = BountyWidget()
 
         self.BountiesTabber = QtWidgets.QTabWidget(self.BountiesWidget)
 
@@ -37,6 +40,8 @@ class BountyWidgetTab():
         self.BountiesTabber.insertTab(0, self.OstronWidget.get_widget(), translate("bountyWidgetTab", "ostron"))
         self.BountiesTabber.insertTab(1, self.FortunaWidget.get_widget(), translate("bountyWidgetTab", "fortuna"))
         self.BountiesTabber.insertTab(2, self.DeimosWidget.get_widget(), translate("bountyWidgetTab", "hiveMind"))
+        self.BountiesTabber.insertTab(3, self.DeimosVaultWidget.get_widget(),
+                                      translate("bountyWidgetTab", "hiveMindVault"))
 
         self.BountiesGrid.setAlignment(QtCore.Qt.AlignTop)
 
@@ -63,7 +68,16 @@ class BountyWidgetTab():
                     elif (tag == 'SolarisSyndicate'):
                         self.FortunaWidget.parse_bounty(syndicate)
                     elif (tag == 'EntratiSyndicate'):
-                        self.DeimosWidget.parse_bounty(syndicate, True)
+                        jobs = copy.copy(syndicate['Jobs'])
+
+                        general_jobs = copy.copy(syndicate)
+                        general_jobs['Jobs'] = [x for x in jobs if 'isVault' not in x]
+
+                        vault_jobs = copy.copy(syndicate)
+                        vault_jobs['Jobs'] = [y for y in jobs if 'isVault' in y]
+
+                        self.DeimosWidget.parse_bounty(general_jobs, True)
+                        self.DeimosVaultWidget.parse_bounty(vault_jobs, True)
                     else:
                         if ('Jobs' in syndicate):
                             LogHandler.debug(translate("bountyWidgetTab", "newSynJobs") + " " + tag)

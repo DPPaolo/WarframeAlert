@@ -612,6 +612,7 @@ NODE_NAME_IT = {
     "CrewBattleNode555": ("Nebulosa R-9", "Veil Proxima"),
     "CrewBattleNode556": ("Volo Libero", "Terra Proxima"),
     "CrewBattleNode557": ("Confronta il tuo Lich", "Saturno Proxima"),
+    "CrewBattleNode558": ("Confronta la tua Sorella", "Nettuno Proxima"),
 
     "/Lotus/Types/Keys/SortieBossKeyPhorid": ("???", "Mercurio"),
 }

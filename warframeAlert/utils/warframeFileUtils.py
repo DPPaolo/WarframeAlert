@@ -13,6 +13,8 @@ from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, rea
 
 def decompress_export_manifest_index():
     response = requests.get(MOBILE_MANIFEST_ID_SITE)
+    if (response.status_code != 200):
+        return ""
     data = response.content
     byte_data = bytes(data)
     length = len(data)

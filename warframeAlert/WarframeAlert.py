@@ -146,7 +146,7 @@ class MainWindow(QtWidgets.QMainWindow):
             OptionsHandler.set_option("FirstInit", 1)
 
         # Copy bundled files if missing
-        #TODO: sistemare e farlo fare solo manca un file in quelle cartelle
+        #TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
         if not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False):
             copy_bundled_files_to_current_dir()
 

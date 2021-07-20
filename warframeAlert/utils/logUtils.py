@@ -3,7 +3,7 @@ import logging
 import time
 
 LOG_FILE = 'log.log'
-FORMAT = "[%(filename)s:%(lineno)s - %(funcName)20s() ] %(message)s"
+FORMAT = "[%(filename)s:%(lineno)s - %(funcName)s() ] %(message)s"
 
 
 class LogHandler:
