@@ -1,13 +1,16 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.Event import Event
+from warframeAlert.constants.warframeTypes import ConstructionProject
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.gameTranslationUtils import get_region, get_node, get_task_type
 
 
-def get_reconstruction_task(name, cons_relay):
+def get_reconstruction_task(name: str, cons_relay: List[ConstructionProject]):
     task = []
     for data in cons_relay:
         tag = data['Tag']
@@ -18,7 +21,7 @@ def get_reconstruction_task(name, cons_relay):
 
 
 class ReconstructionRelayEvent(Event):
-    def __init__(self, event_id):
+    def __init__(self, event_id: str) -> None:
         super().__init__(event_id)
 
         self.TARelayNode = QtWidgets.QLabel("N/D")
@@ -77,7 +80,7 @@ class ReconstructionRelayEvent(Event):
         self.TARegion4.hide()
         self.TATask4.hide()
 
-    def add_relay_reconstruction(self, region, node, task):
+    def add_relay_reconstruction(self, region: str, node: str, task: List[str]) -> None:
         node = get_node(node)
         self.TARelayNode.setText(translate("reconstrutionEvent", "reconstructionNode") + " " + node[0] + " " + node[1])
         region_lenght = len(region)
@@ -97,7 +100,7 @@ class ReconstructionRelayEvent(Event):
             self.TATask4.show()
             self.TATask4.setText(str(task[4][1]) + "x " + task[4][0])
 
-    def hide(self):
+    def hide(self) -> None:
         super().hide()
         self.TARelayNode.hide()
         self.TAListRegion.hide()

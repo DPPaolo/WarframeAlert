@@ -37,7 +37,7 @@ all_json_schema = {
                 "Sorties": {"type": "array"},
                 "SyndicateMissions": {"type": "array"},
                 "Time": {"type": "integer"},
-                "Tmp": {"maxItems": 0},
+                "Tmp": {"type": "string"},
                 "TwitchPromos": {"type": "array"},
                 "Version": {"type": "integer"},
                 "VoidTraders": {"type": "array"},
@@ -711,6 +711,9 @@ construction_projects_schema = {
             "type": "object",
             "additionalProperties": False,
             "properties": {
+                "Tag": {"type": "string"},
+                "Tasks": {"type": "array",
+                          "items": {"type": "string"}},
             },
             "required": [],
         }
@@ -792,9 +795,13 @@ goals_schema = {
                 "Fomorian": {"type": "boolean"},
                 "Best": {"type": "boolean"},
                 "ScoreTagBlocksGuildTierChanges": {"type": "boolean"},
+                "RewardNode": {"type": "string"},
+                "ClanGoal": {"type": "array",
+                             "items": {"type": "string"}},
                 "VictimNode": {"type": "string"},
                 "Transmission": {"type": "string"},
                 "OptionalInMission": {"type": "boolean"},
+                "RelayReconstruction": {"type": "integer"},
                 "Regions": {"type": "array",
                             "items": {"type": "integer"}},
                 "RegionIdx": {"type": "integer"},
@@ -1995,7 +2002,8 @@ twitch_promos_schema = {
                     }
                 },
                 "agentTypes": {
-                    "type": "array"
+                    "type": "array",
+                    "items": {"type": "string"}
                 },
             },
             "required": ["type", "streamers", "achievement", "spawnChance", "cooldown", "agentTypes", "startDate",

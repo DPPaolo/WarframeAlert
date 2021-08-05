@@ -15,16 +15,16 @@ class UpdateService(QtCore.QObject):
     file_downloaded = QtCore.pyqtSignal()
     fist_init_completed = QtCore.pyqtSignal()
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
-        self.update_timer = QtCore.QTimer()
+        self.update_timer: QtCore.QTimer = QtCore.QTimer()
         self.downloader_thread = None
-        update_cycle = OptionsHandler.get_option("Update/Cycle")
+        update_cycle: int = OptionsHandler.get_option("Update/Cycle")
         if (str(update_cycle).isdigit() and int(update_cycle) >= 30):
             self.download_alert_file(True)
 
-    def start(self):
-        update_cycle = OptionsHandler.get_option("Update/Cycle")
+    def start(self) -> None:
+        update_cycle: int = OptionsHandler.get_option("Update/Cycle")
         if (not str(update_cycle).isdigit()):
             return
         if (int(update_cycle) < 30):
@@ -33,25 +33,26 @@ class UpdateService(QtCore.QObject):
 
         self.update_timer.singleShot(int(update_cycle)*1000, self.download_alert_file)
 
-    def stop(self):
+    def stop(self) -> None:
         self.update_timer.stop()
         self.update_timer.deleteLater()
 
-    def download_alert_file(self, download_only=False):
-        opt = OptionsHandler.get_option("Update/Console")
+    def download_alert_file(self, download_only: bool = False) -> None:
+        opt: int = OptionsHandler.get_option("Update/Console")
         if (opt == 0):
-            url = DATA_SITE["PC"]
+            url: str = DATA_SITE["PC"]
         elif (opt == 1):
-            url = DATA_SITE["PS4"]
+            url: str = DATA_SITE["PS4"]
         elif (opt == 2):
-            url = DATA_SITE["XBOX"]
+            url: str = DATA_SITE["XBOX"]
         elif (opt == 3):
-            url = DATA_SITE["SWITCH"]
+            url: str = DATA_SITE["SWITCH"]
         else:
-            url = DATA_SITE["PC"]
+            url: str = DATA_SITE["PC"]
 
         try:
-            self.downloader_thread = networkService.Downloader(url, "data" + get_separator() + "allerte.json", 0)
+            path = "data" + get_separator() + "allerte.json"
+            self.downloader_thread: networkService.Downloader = networkService.Downloader(url, path, 0)
             self.downloader_thread.start()
             self.downloader_thread.download_completed.connect(lambda: self.download_finished(download_only))
         except Exception as er:
@@ -60,7 +61,7 @@ class UpdateService(QtCore.QObject):
             LogHandler.err(str(er))
             print_traceback(translate("updateService", "saveError") + " " + str(er))
 
-    def download_finished(self, download_only):
+    def download_finished(self, download_only: bool) -> None:
         if (OptionsHandler.get_option("Debug") == 1):
             LogHandler.debug("allerte.json" + " " + translate("updateService", "downloaded"))
         self.file_downloaded.emit()

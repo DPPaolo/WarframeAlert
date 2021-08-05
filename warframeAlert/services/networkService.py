@@ -23,12 +23,12 @@ else:
     ssl._create_default_https_context = _create_unverified_https_context
 
 
-def download(url, path):
+def download(url: str, path: str) -> None:
     create_default_folder()
     urllib.request.urlretrieve(url, path)
 
 
-def check_connection():
+def check_connection() -> bool:
     try:
         urllib.request.urlopen("https://www.google.com")
         return True
@@ -39,13 +39,13 @@ def check_connection():
 class Downloader(QThread):
     download_completed = QtCore.pyqtSignal()
 
-    def __init__(self, url, path, time_to_sleep=10):
+    def __init__(self, url: str, path: str, time_to_sleep: int = 10) -> None:
         QThread.__init__(self)
-        self.url = url
-        self.path = path
-        self.time_to_sleep = time_to_sleep
+        self.url: str = url
+        self.path: str = path
+        self.time_to_sleep: int = time_to_sleep
 
-    def run(self):
+    def run(self) -> None:
         downloaded = False
         while (not downloaded):
             if (not check_connection()):

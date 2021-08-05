@@ -3,6 +3,7 @@ import json
 import sys
 
 from PyQt5 import QtCore
+from PyQt5.QtWidgets import QTabWidget
 from jsonschema import ValidationError
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
@@ -19,6 +20,7 @@ from warframeAlert.components.tab.PvPWidgetTab import PvPWidgetTab
 from warframeAlert.components.tab.SalesWidgetTab import SalesWidgetTab
 from warframeAlert.components.tab.SortieWidgetTab import SortieWidgetTab
 from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
+from warframeAlert.constants.warframeTypes import JsonData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -29,26 +31,26 @@ from warframeAlert.utils.validatorUtils import check_json_data
 
 class TabService(QtCore.QObject):
 
-    def __init__(self, tabber):
+    def __init__(self, tabber: QTabWidget):
         super().__init__()
-        self.mainTabber = tabber
+        self.mainTabber: QTabWidget = tabber
 
-        self.news_tab = NewsWidgetTab()
-        self.nightwave_tab = NightwaveWidgetTab()
-        self.event_tab = EventsWidgetTab()
-        self.bounty_tab = BountyWidgetTab()
-        self.invasion_tab = InvasionWidgetTab()
-        self.sortie_tab = SortieWidgetTab()
-        self.syndicate_tab = SyndicateWidgetTab()
-        self.fissure_tab = FissureWidgetTab()
-        self.baro_tab = BaroWidgetTab()
-        self.pvp_tab = PvPWidgetTab()
-        self.accolyte_tab = AccolyteWidgetTab()
-        self.sales_tab = SalesWidgetTab()
-        self.other_tab = OtherWidgetTab()
+        self.news_tab: NewsWidgetTab = NewsWidgetTab()
+        self.nightwave_tab: NightwaveWidgetTab = NightwaveWidgetTab()
+        self.event_tab: EventsWidgetTab = EventsWidgetTab()
+        self.bounty_tab: BountyWidgetTab = BountyWidgetTab()
+        self.invasion_tab: InvasionWidgetTab = InvasionWidgetTab()
+        self.sortie_tab: SortieWidgetTab = SortieWidgetTab()
+        self.syndicate_tab: SyndicateWidgetTab = SyndicateWidgetTab()
+        self.fissure_tab: FissureWidgetTab = FissureWidgetTab()
+        self.baro_tab: BaroWidgetTab = BaroWidgetTab()
+        self.pvp_tab: PvPWidgetTab = PvPWidgetTab()
+        self.accolyte_tab: AccolyteWidgetTab = AccolyteWidgetTab()
+        self.sales_tab: SalesWidgetTab = SalesWidgetTab()
+        self.other_tab: OtherWidgetTab = OtherWidgetTab()
 
-    def update_tabber(self):
-        index = self.mainTabber.currentIndex()
+    def update_tabber(self) -> None:
+        index: int = self.mainTabber.currentIndex()
         self.mainTabber.insertTab(0, self.news_tab.get_widget(), translate("tabService", "news"))
         self.mainTabber.insertTab(1, self.nightwave_tab.get_widget(), translate("tabService", "nightwave"))
         self.mainTabber.insertTab(2, self.event_tab.get_widget(), translate("tabService", "events"))
@@ -63,8 +65,8 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
-        n_event = self.event_tab.get_length()
-        n_acc = self.accolyte_tab.get_lenght()
+        n_event: int = self.event_tab.get_length()
+        n_acc: int = self.accolyte_tab.get_lenght()
 
         if (not OptionsHandler.get_option("Tab/News") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.news_tab.get_widget()))
@@ -101,9 +103,9 @@ class TabService(QtCore.QObject):
 
         self.mainTabber.setCurrentIndex(index)
 
-    def update(self, path):
+    def update(self, path: str) -> str:
         if (not path):
-            path = "data" + get_separator() + "allerte.json"
+            path: str = "data" + get_separator() + "allerte.json"
         try:
             fp = open(path, "rb")
             data = fp.readlines()
@@ -112,11 +114,11 @@ class TabService(QtCore.QObject):
             MessageBox("", translate("tabService", "alertError") + "\n" + str(error), MessageBoxType.ERROR)
             print_traceback(translate("tabService", "alertError") + str(error))
             LogHandler.err(str(error))
-            return
+            return ""
         fp.close()
 
         # Parse and validate the file
-        json_data = json.loads(data)
+        json_data: JsonData = json.loads(data)
         if (OptionsHandler.get_option("Debug") == 1):
             try:
                 check_json_data(json_data)
@@ -126,8 +128,12 @@ class TabService(QtCore.QObject):
                 print(validation_error)
                 sys.exit()
 
-        build_label = json_data['BuildLabel']
-        game_time = json_data['Time']
+        build_label: str = json_data['BuildLabel']
+        game_time: int = json_data['Time']
+
+        # TODO: try with ray
+        # https://stackoverflow.com/questions/2957116/make-2-functions-run-at-the-same-time
+        # https://github.com/ray-project/ray
 
         self.fissure_tab.update_fissure(json_data['ActiveMissions'], json_data['VoidStorms'])
         self.event_tab.update_alert_mission(json_data['Alerts'])
@@ -137,8 +143,8 @@ class TabService(QtCore.QObject):
         self.news_tab.update_news(json_data['Events'])
         self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])
         self.sales_tab.update_sales(json_data['FlashSales'])
-        self.event_tab.update_events(json_data['Goals'], json_data['ConstructionProjects'])
         self.news_tab.update_global_upgrades(json_data['GlobalUpgrades'])
+        self.event_tab.update_events(json_data['Goals'], json_data['ConstructionProjects'])
         self.other_tab.update_hub_event(json_data['HubEvents'])
         self.invasion_tab.update_invasion(json_data['Invasions'])
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
@@ -159,11 +165,11 @@ class TabService(QtCore.QObject):
         self.bounty_tab.update_bounties(json_data['SyndicateMissions'])
         self.other_tab.update_twitch_promo(json_data['TwitchPromos'])
         self.baro_tab.update_baro(json_data['VoidTraders'])
-        version = json_data['Version']
-        mob_version = json_data['MobileVersion']
-        world_seed = json_data['WorldSeed']
-        force_logout_version = json_data['ForceLogoutVersion']
-        dtls = json_data['DTLS'] if ('DTLS' in json_data) else False
-        self.other_tab.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
+        version: int = json_data['Version']
+        mobile_version: str = json_data['MobileVersion']
+        world_seed: str = json_data['WorldSeed']
+        force_logout_version: int = json_data['ForceLogoutVersion']
+        dtls: bool = json_data['DTLS'] if ('DTLS' in json_data) else False
+        self.other_tab.set_other_datas(version, mobile_version, world_seed, force_logout_version, dtls)
 
         self.update_tabber()

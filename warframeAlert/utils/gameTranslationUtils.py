@@ -1,5 +1,6 @@
 # coding=utf-8
 import json
+from typing import Tuple
 
 from warframeAlert import warframeData
 from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON_RESTRICTION, MAP_TYPE, \
@@ -19,14 +20,14 @@ from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.warframeData import RARITY
 
 
-def get_node(name):
+def get_node(name: str) -> Tuple[str, str]:
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_node_it(name)
     else:
         return get_node_en(name)
 
 
-def get_node_it(name):
+def get_node_it(name: str) -> Tuple[str, str]:
     if (name in NODE_NAME_IT):
         return NODE_NAME_IT[name][0], "(" + NODE_NAME_IT[name][1] + ")"
     elif (name == ""):
@@ -37,7 +38,7 @@ def get_node_it(name):
         return name, "(????)"
 
 
-def get_node_en(name):
+def get_node_en(name: str) -> Tuple[str, str]:
     translation_path = "data" + get_separator() + "SolNodes.json"
     try:
         fp = open(translation_path)
@@ -56,7 +57,7 @@ def get_node_en(name):
         return name, "(????)"
 
 
-def get_faction(name):
+def get_faction(name: str) -> str:
     faction = name.replace("\n", "")
     if (faction in FACTION):
         return FACTION[faction]
@@ -66,14 +67,14 @@ def get_faction(name):
         return faction
 
 
-def get_item_name(name, warning=True):
+def get_item_name(name: str, warning=True) -> str:
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_item_name_it(name, warning)
     else:
         return get_item_name_en(name)
 
 
-def get_item_name_it(name, warning):
+def get_item_name_it(name: str, warning: bool) -> str:
     if (name in warframeData.ITEM_NAME_IT):
         return warframeData.ITEM_NAME_IT[name]
     else:
@@ -83,7 +84,7 @@ def get_item_name_it(name, warning):
         return get_last_item_with_backslash(name)
 
 
-def get_item_name_en(name):
+def get_item_name_en(name: str) -> str:
     translation_path = "data" + get_separator() + "Language.json"
     try:
         fp = open(translation_path)
@@ -102,7 +103,7 @@ def get_item_name_en(name):
         return get_last_item_with_backslash(name)
 
 
-def get_enemy_name(name):
+def get_enemy_name(name: str) -> str:
     if (name in ALERT_ENEMY):
         return ALERT_ENEMY[name]
     else:
@@ -111,7 +112,7 @@ def get_enemy_name(name):
         return get_last_item_with_backslash(name)
 
 
-def get_simaris_target(simaris_target):
+def get_simaris_target(simaris_target: str) -> str:
     if (simaris_target in SIMARIS_TARGET):
         return SIMARIS_TARGET[simaris_target]
     else:
@@ -120,7 +121,7 @@ def get_simaris_target(simaris_target):
         return get_last_item_with_backslash(simaris_target)
 
 
-def get_invasion_loctag(loctag):
+def get_invasion_loctag(loctag: str) -> str:
     if (loctag in INVASION_LOCTAG):
         return INVASION_LOCTAG[loctag][OptionsHandler.get_option("Language", str)]
     else:
@@ -129,7 +130,7 @@ def get_invasion_loctag(loctag):
         return get_last_item_with_backslash(loctag)
 
 
-def get_accolyte_name(name):
+def get_accolyte_name(name: str) -> str:
     if (name in ACCOLYTE_NAME):
         return ACCOLYTE_NAME[name]
     else:
@@ -138,7 +139,7 @@ def get_accolyte_name(name):
         return get_last_item_with_backslash(name)
 
 
-def get_upgrade_type(upgrade):
+def get_upgrade_type(upgrade: str) -> str:
     if (upgrade in UPGRADE_TYPE):
         return UPGRADE_TYPE[upgrade][OptionsHandler.get_option("Language", str)]
     else:
@@ -156,7 +157,7 @@ def get_region(region):
         return str(region)
 
 
-def get_mission_type(mission):
+def get_mission_type(mission: str) -> str:
     mission = mission.replace("\n", "")
     if (mission in MISSION_TYPE):
         return MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)]
@@ -168,7 +169,7 @@ def get_mission_type(mission):
         return mission
 
 
-def get_alert_info(alert_info):
+def get_alert_info(alert_info: str) -> str:
     if (alert_info in ALERT_INFO):
         return ALERT_INFO[alert_info][OptionsHandler.get_option("Language", str)]
     else:
@@ -177,7 +178,7 @@ def get_alert_info(alert_info):
         return get_last_item_with_backslash(alert_info)
 
 
-def get_alert_weapon_restriction(weapon):
+def get_alert_weapon_restriction(weapon: str) -> str:
     if (weapon in ALERT_WEAPON_RESTRICTION):
         return ALERT_WEAPON_RESTRICTION[weapon][OptionsHandler.get_option("Language", str)]
     else:
@@ -186,14 +187,14 @@ def get_alert_weapon_restriction(weapon):
         return get_last_item_with_backslash(weapon)
 
 
-def get_mission_from_starchart(node, planet):
+def get_mission_from_starchart(node: str, planet: str) -> str:
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_mission_from_starchart_it(node, planet)
     else:
         return get_mission_from_starchart_en(node + " (" + planet + ")")
 
 
-def get_mission_from_starchart_it(node, planet):
+def get_mission_from_starchart_it(node: str, planet: str) -> str:
     file_path = "data" + get_separator() + "starchart.txt"
     try:
         fp = open(file_path)
@@ -226,7 +227,7 @@ def get_mission_from_starchart_it(node, planet):
         return ""
 
 
-def get_mission_from_starchart_en(node):
+def get_mission_from_starchart_en(node: str) -> str:
     translation_path = "data" + get_separator() + "SolNodes.json"
     try:
         fp = open(translation_path)
@@ -244,7 +245,7 @@ def get_mission_from_starchart_en(node):
     return ""
 
 
-def get_map_type(map_type):
+def get_map_type(map_type: str) -> str:
     for maps in MAP_TYPE:
         if (maps in map_type):
             return MAP_TYPE[maps][OptionsHandler.get_option("Language", str)]
@@ -254,7 +255,7 @@ def get_map_type(map_type):
         return get_last_item_with_backslash(map_type)
 
 
-def get_alert_aura(aura):
+def get_alert_aura(aura: str) -> str:
     if (aura in ALERT_LEVEL_AURA):
         return ALERT_LEVEL_AURA[aura][OptionsHandler.get_option("Language", str)]
     else:
@@ -263,7 +264,7 @@ def get_alert_aura(aura):
         return get_last_item_with_backslash(aura)
 
 
-def get_alert_fx(fx):
+def get_alert_fx(fx: str) -> str:
     if (fx in ALERT_FX):
         return ALERT_FX[fx][OptionsHandler.get_option("Language", str)]
     else:
@@ -272,7 +273,7 @@ def get_alert_fx(fx):
         return get_last_item_with_backslash(fx)
 
 
-def get_vip_agent(vip_agent):
+def get_vip_agent(vip_agent: str) -> str:
     if (vip_agent == ""):
         return ""
     if (vip_agent in ALERT_BOSS):
@@ -285,7 +286,7 @@ def get_vip_agent(vip_agent):
         return get_last_item_with_backslash(vip_agent)
 
 
-def get_task_type(task):
+def get_task_type(task: str) -> str:
     if (task in TASK_TYPE):
         return TASK_TYPE[task][OptionsHandler.get_option("Language", str)]
     else:
@@ -294,7 +295,7 @@ def get_task_type(task):
         return get_last_item_with_backslash(task)
 
 
-def get_syndicate(syn):
+def get_syndicate(syn: str) -> str:
     if (syn in SYNDICATE_NAME):
         return SYNDICATE_NAME[syn][OptionsHandler.get_option("Language", str)]
     else:
@@ -303,7 +304,7 @@ def get_syndicate(syn):
         return syn
 
 
-def get_syndicate_rank(syn, rank):
+def get_syndicate_rank(syn: str, rank: int) -> str:
     if (syn in SYNDICATE_RANK_NAME):
         return SYNDICATE_RANK_NAME[syn][OptionsHandler.get_option("Language", str)][rank]
     else:
@@ -312,14 +313,14 @@ def get_syndicate_rank(syn, rank):
         return syn
 
 
-def get_bounty_job(job):
+def get_bounty_job(job: str) -> str:
     if (OptionsHandler.get_option("Language", str) == "it"):
         return get_bounty_job_it(job)
     else:
         return get_bounty_job_en(job)
 
 
-def get_bounty_job_it(job):
+def get_bounty_job_it(job: str) -> str:
     if (job in BOUNTY_JOB_NAME):
         return BOUNTY_JOB_NAME[job]
     else:
@@ -328,11 +329,11 @@ def get_bounty_job_it(job):
         return job
 
 
-def get_bounty_job_en(job):
+def get_bounty_job_en(job: str) -> str:
     return get_item_name_en(job)
 
 
-def get_bounty_job_desc(job):
+def get_bounty_job_desc(job: str) -> str:
     if (job in BOUNTY_JOB_DESC):
         return BOUNTY_JOB_DESC[job][OptionsHandler.get_option("Language", str)]
     else:
@@ -341,7 +342,7 @@ def get_bounty_job_desc(job):
         return BOUNTY_JOB_DESC[""][OptionsHandler.get_option("Language", str)]
 
 
-def get_nightwave_challenge(challenge):
+def get_nightwave_challenge(challenge: str) -> Tuple[str, str, int]:
     if (challenge in SEASON_CHALLENGE):
         challenge_type = SEASON_CHALLENGE[challenge]
         if (OptionsHandler.get_option("Language", str) == "it"):
@@ -370,7 +371,7 @@ def get_nightwave_challenge(challenge):
         return ("???", get_last_item_with_backslash(challenge), 0)
 
 
-def get_sortie_boss(boss):
+def get_sortie_boss(boss: str) -> str:
     if (boss in SORTIE_BOSS):
         return SORTIE_BOSS[boss][OptionsHandler.get_option("Language", str)]
     else:
@@ -379,7 +380,7 @@ def get_sortie_boss(boss):
         return boss
 
 
-def get_sortie_modifier(modifier):
+def get_sortie_modifier(modifier: str) -> str:
     if (modifier in SORTIE_MODIFIER):
         return SORTIE_MODIFIER[modifier][OptionsHandler.get_option("Language", str)]
     else:
@@ -388,7 +389,7 @@ def get_sortie_modifier(modifier):
         return modifier
 
 
-def get_stage_name(stage):
+def get_stage_name(stage: str) -> str:
     if (stage in BOUNTY_STAGE):
         return BOUNTY_STAGE[stage][OptionsHandler.get_option("Language", str)]
     else:
@@ -397,7 +398,7 @@ def get_stage_name(stage):
         return stage
 
 
-def get_rarity(rarity):
+def get_rarity(rarity: str) -> str:
     if (rarity in RARITY):
         return RARITY[rarity][OptionsHandler.get_option("Language", str)]
     else:
@@ -406,7 +407,7 @@ def get_rarity(rarity):
         return rarity
 
 
-def get_pvp_mission_type(mission):
+def get_pvp_mission_type(mission: str) -> str:
     if (mission in PVP_MISSION_TYPE):
         return PVP_MISSION_TYPE[mission][OptionsHandler.get_option("Language", str)].upper()
     else:
@@ -415,7 +416,7 @@ def get_pvp_mission_type(mission):
         return mission.upper()
 
 
-def get_pvp_mission_name(name):
+def get_pvp_mission_name(name: str) -> str:
     language = OptionsHandler.get_option("Language", str)
     if (language == "it"):
         if (name in PVP_CHALLENGE_TYPE):
@@ -428,17 +429,17 @@ def get_pvp_mission_name(name):
         return get_item_name_en(name)
 
 
-def get_pvp_desc(challenge, num):
+def get_pvp_desc(challenge: str, num: int) -> str:
     if (challenge in PVP_CHALLENGE_DESC):
         desc = PVP_CHALLENGE_DESC[challenge][OptionsHandler.get_option("Language", str)]
         return desc.replace("{{X}}", str(num))
     else:
         print(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
         LogHandler.err(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
-        return challenge + " " + num
+        return challenge + " " + str(num)
 
 
-def get_pvp_alt_desc(name):
+def get_pvp_alt_desc(name: str) -> str:
     if (name in PVP_ALT_DESC):
         return PVP_ALT_DESC[name][OptionsHandler.get_option("Language", str)]
     else:

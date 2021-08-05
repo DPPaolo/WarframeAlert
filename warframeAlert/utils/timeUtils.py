@@ -1,11 +1,13 @@
 # coding=utf-8
 import datetime
 import time
+from typing import Tuple
+
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 
 
-def get_time(times):
+def get_time(times: str) -> str:
     return datetime.datetime.fromtimestamp(int(times[:10])).strftime("%d/%m/%Y %H:%M")
 
 
@@ -55,11 +57,11 @@ def get_alert_time(timer):
         return date + str(sec) + "s"
 
 
-def get_local_time():
+def get_local_time() -> str:
     return str(time.mktime(time.localtime()))[0:-2]
 
 
-def get_earth_time():
+def get_earth_time() -> Tuple[int, bool]:
     now = int(time.time())
     cycle_sec = now % 28800  # 8 hours
     day = cycle_sec > 14400
@@ -67,7 +69,7 @@ def get_earth_time():
     return remaining_sec, day
 
 
-def get_cetus_time(bounty_end_time):
+def get_cetus_time(bounty_end_time) -> Tuple[int, bool]:
     try:
         now = int(time.time())
         remaining_sec = bounty_end_time - now
@@ -84,7 +86,7 @@ def get_cetus_time(bounty_end_time):
         return int(time.time()), False
 
 
-def get_fortuna_time():
+def get_fortuna_time() -> Tuple[int, bool]:
     try:
         # cold, warm, cold, freeze, 6 minutes and 40 seconds for cycle
         now = int(time.time())

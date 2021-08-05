@@ -11,7 +11,7 @@ from warframeAlert.utils import timeUtils
 
 class SquadLinkEvent(Event):
 
-    def __init__(self, event_id):
+    def __init__(self, event_id: str) -> None:
         super().__init__(event_id)
 
         self.TAWaveEndLab = QtWidgets.QLabel(translate("squadLinkEvent", "waveEnd") + ": ")
@@ -33,7 +33,7 @@ class SquadLinkEvent(Event):
         self.TADescvbox.addLayout(self.TASquadLinkbox1)
         self.TADescvbox.addLayout(self.TASquadLinkbox2)
 
-    def set_squad_link_data(self, init, end, next_init, next_end):
+    def set_squad_link_data(self, init: int, end: int, next_init: int, next_end: int) -> None:
         wave_init = translate("squadLinkEvent", "waveInit") + ": " + timeUtils.get_time(init[:10])
         next_wave_end = translate("squadLinkEvent", "nextWaveEnd") + ": " + timeUtils.get_time(next_end[:10])
         self.TAWaveEndLab.setToolTip(wave_init)
@@ -45,7 +45,8 @@ class SquadLinkEvent(Event):
         self.TANextWaveInit.set_countdown(next_init[:10])
         self.TANextWaveInit.start()
 
-    def set_squad_link_extra_data(self, completion_bonus, epoch_number, pause_scheduling, metadata):
+    def set_squad_link_extra_data(self, completion_bonus: str, epoch_number: str,
+                                  pause_scheduling: str, metadata: str) -> None:
         metadata = json.loads(metadata)
         extra_text = ""
         if ('progressReq' in metadata):
@@ -76,7 +77,7 @@ class SquadLinkEvent(Event):
         extra_text += translate("squadLinkEvent", "pauseAutoScheduling") + ": " + pause_scheduling
         self.TASquadExtra.setText(extra_text)
 
-    def hide(self):
+    def hide(self) -> None:
         self.TAWaveEndLab.hide()
         self.TAWaveEnd.hide()
         self.TANextWaveInitLab.hide()

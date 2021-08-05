@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List, Tuple
+
 from PyQt5 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.components.common.Event import Event
@@ -56,7 +58,7 @@ class ClanEvent(Event):
 
         self.set_req_node(req_node)
 
-    def set_clan_score(self, rank):
+    def set_clan_score(self, rank: List[str]):
         self.TAVRank0.setText(str(rank[0]))
         self.TAVRank1.setText(str(rank[1]))
         self.TAVRank2.setText(str(rank[2]))
@@ -69,7 +71,7 @@ class ClanEvent(Event):
             return
         self.TASDesc.setText(translate("clanEvent", "unlockScore") + " " + req_node[0] + " " + req_node[1])
 
-    def hide(self):
+    def hide(self) -> None:
         super().hide()
         self.TASDesc.hide()
         self.TARank0.hide()

@@ -1,4 +1,5 @@
 # coding=utf-8
+from typing import List
 
 from PyQt5 import QtCore
 
@@ -15,19 +16,19 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class UpdateFileService(QtCore.QObject):
     file_downloaded = QtCore.pyqtSignal()
-    num_files_downloaded = 0
+    num_files_downloaded: int = 0
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
-        self.downloader_thread = []
+        self.downloader_thread: List[networkService.Downloader] = []
 
-    def download_all_file(self):
-        self.downloader_thread = []
+    def download_all_file(self) -> None:
+        self.downloader_thread: List[networkService.Downloader] = []
         self.num_files_downloaded = 0
         for i in range(0, len(OTHER_FILE_SITE)):
             try:
-                download_path = "data" + get_separator() + OTHER_FILE_NAME[i]
-                url = OTHER_FILE_SITE[i]
+                download_path: str = "data" + get_separator() + OTHER_FILE_NAME[i]
+                url: str = OTHER_FILE_SITE[i]
                 self.downloader_thread.append(networkService.Downloader(url, download_path, 0))
                 self.downloader_thread[i].start()
             except Exception as er:
@@ -52,24 +53,24 @@ class UpdateFileService(QtCore.QObject):
         self.downloader_thread[13].download_completed.connect(lambda: self.download_finished(13))
         self.downloader_thread[14].download_completed.connect(lambda: self.download_finished(14))
 
-    def download_finished(self, index):
+    def download_finished(self, index: int) -> None:
         self.num_files_downloaded += 1
         if (OptionsHandler.get_option("Debug") == 1):
             LogHandler.debug(OTHER_FILE_NAME[index] + " " + translate("updateService", "downloaded"))
         if (self.num_files_downloaded == len(OTHER_FILE_NAME)):
-            self.downloader_thread = []
-            self.download_export_manifest(warframeFileUtils.decompress_export_manifest_index())
+            self.downloader_thread: List[networkService.Downloader] = []
+            manifest_id: str = warframeFileUtils.decompress_export_manifest_index()
+            if (manifest_id != ""):
+                self.download_export_manifest(manifest_id)
             warframeFileUtils.write_json_drop()
             print(translate("updateService", "downloadFinished"))
             self.file_downloaded.emit()
 
-    def download_export_manifest(self, manifest_id):
-        file_name = "ExportManifest.json"
-        download_path = "data" + get_separator() + file_name
-        url = DEFAULT_MANIFEST_SITE + manifest_id
+    def download_export_manifest(self, manifest_id: str) -> None:
+        file_name: str = "ExportManifest.json"
+        download_path: str = "data" + get_separator() + file_name
+        url: str = DEFAULT_MANIFEST_SITE + manifest_id
         self.downloader_thread.append(networkService.Downloader(url, download_path, 0))
         self.downloader_thread[0].start()
         self.downloader_thread[0].download_completed.connect(
             lambda: print(file_name + " " + translate("updateService", "downloaded")))
-
-

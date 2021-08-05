@@ -8,7 +8,7 @@ from warframeAlert.utils.fileUtils import get_cur_dir, get_separator, check_file
 
 class CommonImages():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.pixmap = QtGui.QPixmap()
         self.image = QtWidgets.QLabel()
         self.image.setPixmap(self.pixmap)
@@ -18,7 +18,7 @@ class CommonImages():
         self.transform = Qt.SmoothTransformation
         self.downloader_thread = None
 
-    def set_image(self, path_image, url_download_image=None):
+    def set_image(self, path_image: str, url_download_image: str = None) -> bool:
         current_dir = get_cur_dir()
         path = current_dir + get_separator() + path_image
         if ("assets" in path_image):
@@ -42,15 +42,17 @@ class CommonImages():
                 delete_file(path_image)
             return res
 
-    def set_image_dimension(self, width, height, aspect_ratio=Qt.IgnoreAspectRatio, transform=Qt.SmoothTransformation):
+    def set_image_dimension(self, width: int, height: int,
+                            aspect_ratio: Qt.IgnoreAspectRatio = Qt.IgnoreAspectRatio,
+                            transform: Qt.TransformationMode = Qt.SmoothTransformation):
         self.width = width
         self.height = height
         self.aspect_ratio = aspect_ratio
         self.transform = transform
         self.image.setPixmap(self.pixmap.scaled(width, height, aspect_ratio, transform))
 
-    def set_tooltip(self, tooltip):
+    def set_tooltip(self, tooltip: str) -> None:
         self.image.setToolTip(tooltip)
 
-    def hide(self):
+    def hide(self) -> None:
         self.image.hide()

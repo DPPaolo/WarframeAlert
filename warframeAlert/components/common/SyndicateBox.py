@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.services.translationService import translate
@@ -7,7 +9,7 @@ from warframeAlert.utils.gameTranslationUtils import get_node, get_syndicate_ran
 
 class SyndicateBox():
 
-    def __init__(self, syndicate_widget):
+    def __init__(self, syndicate_widget: QtWidgets.QWidget) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -68,10 +70,10 @@ class SyndicateBox():
 
         self.SynGrid.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_syn_id(self):
+    def get_syn_id(self) -> str:
         return self.syn_id
 
-    def set_syndicate(self, tag, syn_id, seed):
+    def set_syndicate(self, tag: str, syn_id: str, seed: int) -> None:
         self.syn_id = syn_id
         self.tag = tag
         self.seed = seed
@@ -81,7 +83,7 @@ class SyndicateBox():
         self.SynMis4.setText(translate("syndicateBox", "rank4") + ": " + get_syndicate_rank(tag, 3))
         self.SynMis5.setText(translate("syndicateBox", "rank5") + ": " + get_syndicate_rank(tag, 4))
 
-    def set_syndicate_mission(self, mis):
+    def set_syndicate_mission(self, mis: List[str]) -> None:
         mis1 = get_node(mis[0])
         mis2 = get_node(mis[1])
         mis3 = get_node(mis[2])
@@ -105,7 +107,7 @@ class SyndicateBox():
         self.Mis62.setText(mis6[0] + " " + mis6[1])
         self.Mis7.setText(mis7[0] + " " + mis7[1])
 
-    def set_syndicate_not_available(self):
+    def set_syndicate_not_available(self) -> None:
         self.Mis1.setText("N/D")
         self.Mis21.setText("N/D")
         self.Mis22.setText("N/D")

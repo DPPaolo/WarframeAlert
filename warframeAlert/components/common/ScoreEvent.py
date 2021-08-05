@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets
 
 from warframeAlert.components.common.Event import Event
@@ -7,7 +9,7 @@ from warframeAlert.services.translationService import translate
 
 class ScoreEvent(Event):
 
-    def __init__(self, event_id):
+    def __init__(self, event_id: str) -> None:
         super().__init__(event_id)
         self.TANodeAtt = QtWidgets.QLabel(translate("scoreEvent", "noEvent"))
 
@@ -32,7 +34,7 @@ class ScoreEvent(Event):
         self.TADescvbox.addLayout(self.TABarbox1)
         self.TADescvbox.addLayout(self.TABarbox2)
 
-    def set_perc_att(self, per, attnode):
+    def set_perc_att(self, per: int, att_node: List[str]):
         self.TAPerAtt.reset()
         self.TAPerAtt.setMaximum(100)
         val = float(per)*100
@@ -45,12 +47,12 @@ class ScoreEvent(Event):
         else:
             self.TAPerAtt.setValue(int(val))
             self.TAPerAtt.setToolTip(str(val))
-        if (attnode != ""):
-            self.TANodeAtt.setText(attnode[0])
+        if (att_node != ""):
+            self.TANodeAtt.setText(att_node[0])
         else:
             self.TANodeAtt.hide()
 
-    def set_score_data(self, score, best):
+    def set_score_data(self, score: str, best: str) -> None:
         self.TAScore.setText(str(score))
         self.TABest.setText(best)
         if (score == ""):
@@ -60,7 +62,7 @@ class ScoreEvent(Event):
             self.TABestLab.hide()
             self.TABest.hide()
 
-    def set_score_optional_tooltip(self, optional_in_mission, upgrades_id, score_block_guilds):
+    def set_score_optional_tooltip(self, optional_in_mission: str, upgrades_id: str, score_block_guilds: str) -> None:
         if (optional_in_mission != ""):
             self.EventReqItemLab.setToolTip(translate("scoreEvent", "optionalInMission") + ": " + optional_in_mission)
         if (upgrades_id != ""):
@@ -68,7 +70,7 @@ class ScoreEvent(Event):
         if (score_block_guilds != ""):
             self.EventScoreLab.setToolTip(translate("scoreEvent", "scoreBlockGuilds") + ": " + score_block_guilds)
 
-    def hide(self):
+    def hide(self) -> None:
         super().hide()
         self.TANodeAtt.hide()
         self.TAPerAtt.hide()

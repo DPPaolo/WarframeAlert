@@ -1,5 +1,8 @@
 # coding=utf-8
-def divide_for_n(message, num=1, divide="\n"):
+from typing import List, Optional
+
+
+def divide_for_n(message: str, num=1, divide="\n") -> Optional[List[str]]:
     if (divide == ""):
         return None
     data = []
@@ -14,7 +17,7 @@ def divide_for_n(message, num=1, divide="\n"):
     return data
 
 
-def divide_message(mess, dim_line=50):
+def divide_message(mess: str, dim_line=50) -> str:
     if (dim_line <= 0):
         return mess
     space = -1
@@ -32,5 +35,5 @@ def divide_message(mess, dim_line=50):
         return mess
 
 
-def set_barred(text):
+def set_barred(text: str) -> str:
     return ''.join([u'\u0336{}'.format(c) for c in text])

@@ -11,7 +11,7 @@ from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, rea
     translate_mission_type_from_drop_file
 
 
-def decompress_export_manifest_index():
+def decompress_export_manifest_index() -> str:
     response = requests.get(MOBILE_MANIFEST_ID_SITE)
     if (response.status_code != 200):
         return ""
@@ -32,7 +32,7 @@ def decompress_export_manifest_index():
     return "ExportManifest.json" + export_id
 
 
-def write_json_drop():
+def write_json_drop() -> None:
     translate_sortie_drop()
     translate_free_roam_drop("cetus")
     translate_free_roam_drop("fortuna")
@@ -48,7 +48,7 @@ def write_json_drop():
     translate_mod_by_source_drop()
 
 
-def translate_sortie_drop():
+def translate_sortie_drop() -> None:
     json_data = read_drop_file("sortie_en")
 
     new_json_data = {'sortieRewards': []}
@@ -67,7 +67,7 @@ def translate_sortie_drop():
     fp.close()
 
 
-def translate_free_roam_drop(file_name):
+def translate_free_roam_drop(file_name: str) -> None:
     json_data = read_drop_file(file_name + "_en")
     prefix = file_name
     if (file_name == "cetus"):
@@ -102,7 +102,7 @@ def translate_free_roam_drop(file_name):
     fp.close()
 
 
-def translate_relic_drop():
+def translate_relic_drop() -> None:
     json_data = read_drop_file("relic_en")
 
     new_json_data = {'relics': []}
@@ -128,7 +128,7 @@ def translate_relic_drop():
     fp.close()
 
 
-def translate_mission_drop():
+def translate_mission_drop() -> None:
     json_data = read_drop_file("mission" + "_en")
 
     new_json_data = {'missionRewards': {}}
@@ -176,7 +176,7 @@ def translate_mission_drop():
     fp.close()
 
 
-def translate_key_drop():
+def translate_key_drop() -> None:
     json_data = read_drop_file("key_en")
 
     new_json_data = {'keyRewards': []}
@@ -216,7 +216,7 @@ def translate_key_drop():
     fp.close()
 
 
-def translate_transient_drop():
+def translate_transient_drop() -> None:
     json_data = read_drop_file("transient_en")
 
     new_json_data = {'transientRewards': []}
@@ -240,7 +240,7 @@ def translate_transient_drop():
     fp.close()
 
 
-def translate_misc_drop():
+def translate_misc_drop() -> None:
     json_data = read_drop_file("misc_en")
     new_json_data = {'miscItems': []}
 
@@ -263,7 +263,7 @@ def translate_misc_drop():
     fp.close()
 
 
-def translate_bp_by_item_drop():
+def translate_bp_by_item_drop() -> None:
     json_data = read_drop_file("bp_by_item_en")
 
     new_json_data = {'blueprintLocations': []}
@@ -280,7 +280,7 @@ def translate_bp_by_item_drop():
     fp.close()
 
 
-def translate_bp_by_source_drop():
+def translate_bp_by_source_drop() -> None:
     json_data = read_drop_file("bp_by_source_en")
 
     new_json_data = {'enemyBlueprintTables': []}
@@ -304,7 +304,7 @@ def translate_bp_by_source_drop():
     fp.close()
 
 
-def translate_mod_by_item_drop():
+def translate_mod_by_item_drop() -> None:
     json_data = read_drop_file("mod_by_item_en")
 
     new_json_data = {'modLocations': []}
@@ -320,7 +320,7 @@ def translate_mod_by_item_drop():
     fp.close()
 
 
-def translate_mod_by_source_drop():
+def translate_mod_by_source_drop() -> None:
     json_data = read_drop_file("mod_by_source_en")
 
     new_json_data = {'enemyModTables': []}
