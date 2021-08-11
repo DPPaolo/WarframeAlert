@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import List, Tuple
+from typing import List, Tuple, Union
 
 from PyQt5 import QtCore, QtWidgets, QtGui
 
@@ -9,7 +9,8 @@ from warframeAlert.services.translationService import translate
 
 class ClanEvent(Event):
 
-    def __init__(self, event_id, req_node):
+    # TODO: use | instead of Union
+    def __init__(self, event_id: str, req_node: Union[Tuple[str, str], None]) -> None:
         super().__init__(event_id)
 
         self.Font = QtGui.QFont()
@@ -66,8 +67,9 @@ class ClanEvent(Event):
         self.TAVRank4.setText(str(rank[4]))
         self.TAVRank5.setText(str(rank[5]))
 
-    def set_req_node(self, req_node):
-        if (req_node == ""):
+    # TODO: use | instead of Union
+    def set_req_node(self, req_node: Union[Tuple[str, str], None]) -> None:
+        if (not req_node):
             return
         self.TASDesc.setText(translate("clanEvent", "unlockScore") + " " + req_node[0] + " " + req_node[1])
 

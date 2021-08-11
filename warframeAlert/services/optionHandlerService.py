@@ -1,13 +1,15 @@
 # coding=utf-8
 import time
+from typing import Any, Type, Union
 
 from PyQt5 import QtCore
+from PyQt5.QtWidgets import QWidget
 
 
 class OptionsHandler(QtCore.QObject):
     #UpdateTabber = QtCore.pyqtSignal()
-    setting = QtCore.QSettings("config.ini", QtCore.QSettings.IniFormat)
-    first_init = True
+    setting: QtCore.QSettings = QtCore.QSettings("config.ini", QtCore.QSettings.IniFormat)
+    first_init: bool = True
     default_value = {
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
@@ -36,25 +38,26 @@ class OptionsHandler(QtCore.QObject):
         "Update/Notify": 1          # Notification
     }
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
         self.setting.setFallbacksEnabled(False)
         self.ConfWidget = None
 
-    def create_config(self):
+    def create_config(self) -> None:
         for key in self.default_value:
             self.set_option(key, self.default_value[key])
 
     @classmethod
-    def set_first_init(cls, value):
+    def set_first_init(cls, value: Any) -> None:
         cls.first_init = value
 
     @classmethod
-    def get_first_init(cls):
+    def get_first_init(cls) -> bool:
         return cls.first_init
 
+    # TODO: use | instead of Union
     @classmethod
-    def get_option(cls, option, option_type=int):
+    def get_option(cls, option: str, option_type: Union[Type[int], Type[str]] = int) -> Union[str, int]:
         val = cls.setting.value(option, cls.default_value[option], type=option_type)
         if (option_type == int):
             if (str(val).isdigit()):
@@ -65,10 +68,10 @@ class OptionsHandler(QtCore.QObject):
             return str(val)
 
     @classmethod
-    def set_option(cls, option, value):
+    def set_option(cls, option: str, value: Any) -> None:
         cls.setting.setValue(option, value)
 
-    def get_widget(self):
+    def get_widget(self) -> QWidget:
         return self.ConfWidget
 
     # def create_config_widget(self):

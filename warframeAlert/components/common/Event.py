@@ -1,7 +1,8 @@
 # coding=utf-8
 from enum import Enum
+from typing import List
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
@@ -22,7 +23,7 @@ class EventType(Enum):
 
 class Event():
 
-    def __init__(self, event_id):
+    def __init__(self, event_id: str) -> None:
         self.event_id = event_id
         self.icon = ""
         self.event_type = EventType.GENERAL
@@ -109,13 +110,13 @@ class Event():
 
         self.TAEventBox.addLayout(self.TADescvbox)
 
-    def add_event_object(self, layout):
+    def add_event_object(self, layout: QtWidgets) -> None:
         self.TADescvbox.addLayout(layout)
 
-    def add_event_widget(self, layout):
+    def add_event_widget(self, layout: QtWidgets) -> None:
         self.TADescvbox.addWidget(layout)
 
-    def set_event_name(self, name, desc, tooltip, icon):
+    def set_event_name(self, name: str, desc: str, tooltip: str, icon: str) -> None:
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
             self.EventImg.set_image(image_name, DEFAULT_SITE_IMAGE + icon)
@@ -130,7 +131,8 @@ class Event():
         else:
             self.EventName.setText(event_name)
 
-    def set_event_info(self, init, end, count, personal, score, emblem, transmission, community):
+    def set_event_info(self, init: str, end: int, count: int, personal: str, score: str,
+                       emblem: str, transmission: str, community: str) -> None:
         self.EventInit.setText(init)
         self.EventEnd.set_countdown(end[:10])
         self.EventEnd.start()
@@ -145,7 +147,8 @@ class Event():
         self.EventStr.setText(emblem)
         self.EventScore.setText(score)
 
-    def set_optional_field(self, regions, success, faction, item_required, roaming_vip, req_mis):
+    def set_optional_field(self, regions: str, success: str, faction: str,
+                           item_required: str, roaming_vip: str, req_mis: List[str]) -> None:
         self.EventRegion.setText(regions)
         self.EventSuccess.setText(success)
         self.EventFaction.setText(faction)
@@ -175,28 +178,28 @@ class Event():
             self.EventReqMisLab.hide()
             self.EventReqMis.hide()
 
-    def get_event_id(self):
+    def get_event_id(self) -> str:
         return self.event_id
 
-    def set_event_type(self, event_type):
+    def set_event_type(self, event_type: EventType):
         self.event_type = event_type
 
-    def get_event_type(self):
+    def get_event_type(self) -> EventType:
         return self.event_type
 
-    def get_faction(self):
+    def get_faction(self) -> str:
         return self.EventFactionLab.text()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.EventEnd.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def get_title(self):
+    def get_title(self) -> str:
         return self.EventName.text()
 
-    def get_image(self):
-        return self.icon
+    def get_image(self) -> QtGui.QPixmap:
+        return self.EventImg.pixmap
 
-    def hide(self):
+    def hide(self) -> None:
         self.EventNameLab.hide()
         self.EventName.hide()
         self.EventStrLab.hide()

@@ -1,21 +1,24 @@
 # coding=utf-8
 import datetime
 import time
-from typing import Tuple
+from typing import Tuple, Union
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 
 
-def get_time(times: str) -> str:
+# TODO: use | instead of Union
+def get_time(times: Union[int, str]) -> str:
     return datetime.datetime.fromtimestamp(int(times[:10])).strftime("%d/%m/%Y %H:%M")
 
 
-def get_date_time(times):
+# TODO: use | instead of Union
+def get_date_time(times: Union[int, str]) -> str:
     return datetime.datetime.fromtimestamp(int(times[:10])).strftime("%d/%m/%Y")
 
 
-def get_alert_time(timer):
+# TODO: use | instead of Union
+def get_alert_time(timer: Union[int, str]) -> str:
     if (timer == translate("timeUtils", "Timed Out")):
         return translate("timeUtils", "Timed Out")
     timer = int(timer)

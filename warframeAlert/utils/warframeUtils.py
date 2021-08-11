@@ -1,13 +1,17 @@
 # coding=utf-8
 import json
 from itertools import groupby
-from typing import List
+from typing import List, Tuple
+
+from PyQt5 import QtWidgets
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
 from warframeAlert.constants.files import DEFAULT_ALERT_IMAGE, IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
+from warframeAlert.constants.warframeFileTypes import SortieFileRewards, BountyFileData, RelicFileData,  \
+    MissionFileData, TransientFileData, KeyFileData, MiscFileData
 from warframeAlert.constants.warframeTypes import MissionReward
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -188,7 +192,7 @@ def get_baro_image_path_from_export_manifest(name: str) -> str:
     return name
 
 
-def read_drop_file(name):
+def read_drop_file(name: str) -> dict:
     try:
         fp = open("data" + get_separator() + name + ".json")
     except FileNotFoundError as err:
@@ -207,14 +211,15 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
     language = OptionsHandler.get_option("Language", str)
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
     prefix = ""
-    if (file_name == "cetus"):
-        prefix = "cetusBountyRewards"
-    elif (file_name == "fortuna"):
-        prefix = "solarisBountyRewards"
-    elif (file_name == "deimos"):
-        prefix = "deimosRewards"
+    match file_name:
+        case "cetus":
+            prefix = "cetusBountyRewards"
+        case "fortuna":
+            prefix = "solarisBountyRewards"
+        case "deimos":
+            prefix = "deimosRewards"
     try:
-        json_data = read_drop_file(file_name + "_" + language)[prefix]
+        json_data: List[BountyFileData] = read_drop_file(file_name + "_" + language)[prefix]
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
     reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1][:-7]
@@ -276,17 +281,17 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
     return reward
 
 
-def get_reward_from_sortie():
+def get_reward_from_sortie() -> List[str]:
     language = OptionsHandler.get_option("Language", str)
     try:
-        json_data = read_drop_file("sortie_" + language)["sortieRewards"]
+        json_data: List[SortieFileRewards] = read_drop_file("sortie_" + language)["sortieRewards"]
     except Exception as er:
         LogHandler.err(translate("warframeUtils",
                                  "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
         LogHandler.err(str(er))
         print_traceback(translate("warframeUtils",
                                   "sortieRewardReadingError") + "Impossibile visualizzare la Ricompensa delle Sortie")
-        return translate("sortieBox", "noReward")
+        return [translate("sortieBox", "noReward")]
     data = []
     for item in json_data:
         name = item['itemName']
@@ -308,20 +313,20 @@ def get_relic_tier_from_name(name: str) -> int:
         return 5
 
 
-def get_relic_item(name):
+def get_relic_item(name: str) -> List[Tuple[str, str]]:
     language = OptionsHandler.get_option("Language", str)
     try:
-        json_data = read_drop_file('relic_' + language)['relics']
+        json_data: List[RelicFileData] = read_drop_file('relic_' + language)['relics']
     except Exception as ex:
         LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
         print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
         return []
-    rewards = []
+    rewards: List[Tuple[str, str]] = []
     for relic in json_data:
         relic_name = relic["tier"] + " " + relic["relicName"]
         if (relic_name == name and relic['state'] == 'Intact'):
             for reward in relic['rewards']:
-                reward_name = reward["itemName"]
+                reward_name: str = reward["itemName"]
                 data = (reward_name, get_relic_rarity_from_percent(reward['chance'], "Intact"))
                 rewards.append(data)
             return rewards
@@ -331,7 +336,7 @@ def get_relic_item(name):
 def get_relic_drop_from_name(name: str) -> str:
     language = OptionsHandler.get_option("Language", str)
     try:
-        json_data = read_drop_file('relic_' + language)['relics']
+        json_data: List[RelicFileData] = read_drop_file('relic_' + language)['relics']
     except Exception as ex:
         LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
         print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
@@ -346,9 +351,9 @@ def get_relic_drop_from_name(name: str) -> str:
     return drop
 
 
-def add_all_relic_from_file(obj):
+def add_all_relic_from_file(obj: QtWidgets.QComboBox) -> None:
     language = OptionsHandler.get_option("Language", str)
-    json_data = read_drop_file('relic_' + language)['relics']
+    json_data: List[RelicFileData] = read_drop_file('relic_' + language)['relics']
     relics = []
 
     for relic in json_data:
@@ -359,9 +364,9 @@ def add_all_relic_from_file(obj):
         obj.addItem(relic)
 
 
-def add_all_relic_item_from_file(obj):
+def add_all_relic_item_from_file(obj: QtWidgets.QComboBox) -> None:
     language = OptionsHandler.get_option("Language", str)
-    json_data = read_drop_file('relic_' + language)['relics']
+    json_data: List[RelicFileData] = read_drop_file('relic_' + language)['relics']
     item = []
     for relic in json_data:
         if (relic['state'] == "Intact"):
@@ -373,59 +378,60 @@ def add_all_relic_item_from_file(obj):
         obj.addItem(line)
 
 
-def get_all_relic_from_file():
+def get_all_relic_from_file() -> List[RelicFileData]:
     language = OptionsHandler.get_option("Language", str)
-    json_data = read_drop_file('relic_' + language)['relics']
+    json_data: List[RelicFileData] = read_drop_file('relic_' + language)['relics']
     return json_data
 
 
-def get_relic_rarity_from_percent(rarity: str, relic_type: str) -> str:
+def get_relic_rarity_from_percent(rarity: float, relic_type: str) -> str:
     rarity = str(rarity)
 
-    if (relic_type == "Intact"):
-        if (rarity == "2"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "11"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 25.33
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Exceptional"):
-        if (rarity == "4"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "13"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 23.33
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Flawless"):
-        if (rarity == "6"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "17"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 20
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Radiant"):
-        if (rarity == "10"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "20"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 16.67
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
+    match relic_type:
+        case "Intact":
+            match rarity:
+                case "2":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "11":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 25.33
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case  "Exceptional":
+            match rarity:
+                case "4":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "13":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 23.33
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case "Flawless":
+            match rarity:
+                case "6":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "17":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 20
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case"Radiant":
+            match rarity:
+                case "10":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "20":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 16.67
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
 
 
 def get_relic_drop(relic_name: str) -> str:
     language = OptionsHandler.get_option("Language", str)
     try:
-        json_cetus = read_drop_file('cetus_' + language)['cetusBountyRewards']
-        json_fortuna = read_drop_file('fortuna_' + language)['solarisBountyRewards']
-        json_deimos = read_drop_file('deimos_' + language)['deimosRewards']
-        json_mission = read_drop_file('mission_' + language)['missionRewards']
-        json_key = read_drop_file('key_' + language)['keyRewards']
-        json_transient = read_drop_file('transient_' + language)['transientRewards']
-        json_misc = read_drop_file('misc_' + language)['miscItems']
+        json_cetus: List[BountyFileData] = read_drop_file('cetus_' + language)['cetusBountyRewards']
+        json_fortuna: List[BountyFileData] = read_drop_file('fortuna_' + language)['solarisBountyRewards']
+        json_deimos: List[BountyFileData] = read_drop_file('deimos_' + language)['deimosRewards']
+        json_mission: dict[str, dict[str, MissionFileData]] = read_drop_file('mission_' + language)['missionRewards']
+        json_key: List[KeyFileData] = read_drop_file('key_' + language)['keyRewards']
+        json_transient: List[TransientFileData] = read_drop_file('transient_' + language)['transientRewards']
+        json_misc: List[MiscFileData] = read_drop_file('misc_' + language)['miscItems']
     except Exception as ex:
         LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
         print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
@@ -440,14 +446,15 @@ def get_relic_drop(relic_name: str) -> str:
     for bounty in json_cetus + json_fortuna + json_deimos:
         bounty_lv = bounty['bountyLevel']
         for rotation in bounty['rewards']:
-            for reward in bounty['rewards'][rotation]:
-                if (reward['itemName'] == relic_name):
+            for bounty_reward in bounty['rewards'][rotation]:
+                if (bounty_reward['itemName'] == relic_name):
                     drop_text = translate("warframeUtils", "bounty") + " " + get_stage_name(bounty_lv) + " ("
+                    drop_text += translate("warframeUtils", "rotation")
                     if (rotation in ["A", "B", "C"]):
-                        drop_text += translate("warframeUtils", "rotation") + " " + rotation
+                        drop_text += " " + rotation
                     else:
-                        drop_text += translate("warframeUtils", "rotation") + " " + get_stage_name(reward['stage'])
-                    drop_text += " " + get_stage_name(reward['stage']) + ")\n"
+                        drop_text += " " + get_stage_name(bounty_reward['stage'])
+                    drop_text += " " + get_stage_name(bounty_reward['stage']) + ")\n"
                     mis += drop_text
                     found = 1
 
@@ -462,41 +469,36 @@ def get_relic_drop(relic_name: str) -> str:
             else:
                 mission_name = mission
 
-            for rewards in mission_data['rewards']:
-                if (rewards in ["A", "B", "C"]):
-                    rotation_items = mission_data['rewards'][rewards]
+            is_rotation = isinstance(mission_data['rewards'], dict)
+            for mission_rewards in mission_data['rewards']:
+                if (is_rotation and mission_rewards in ["A", "B", "C"]):
+                    rotation_items = mission_data['rewards'][mission_rewards]
                     for rotation_reward in rotation_items:
                         item = rotation_reward['itemName']
                         if (item == relic_name):
                             mis += mission_name + " (" + translated_planet + ") (" + mission_type + " " + \
-                                   translate("warframeUtils", "rotation") + " " + rewards + ")\n"
+                                   translate("warframeUtils", "rotation") + " " + mission_rewards + ")\n"
                             found = 1
                 else:
-                    item = rewards['itemName']
+                    item = mission_rewards['itemName']
                     if (item == relic_name):
                         mis += mission + " (" + translated_planet + ") (" + mission_type + ")\n"
                         found = 1
 
     for key_mission in json_key:
         mission_name = key_mission['keyName']
-        for rewards in key_mission['rewards']:
-            if (rewards in ["A", "B", "C"]):
-                rotation_items = key_mission['rewards'][rewards]
-                for rotation_reward in rotation_items:
-                    item = rotation_reward['itemName']
-                    if (item == relic_name):
-                        mis += mission_name + " (" + translate("warframeUtils", "rotation") + " " + rewards + ")\n"
-                        found = 1
-            else:
-                item = rewards['itemName']
+        for key_rewards in key_mission['rewards']:
+            rotation_items = key_mission['rewards'][key_rewards]
+            for rotation_reward in rotation_items:
+                item = rotation_reward['itemName']
                 if (item == relic_name):
-                    mis += mission_name + "\n"
+                    mis += mission_name + " (" + translate("warframeUtils", "rotation") + " " + key_rewards + ")\n"
                     found = 1
 
     for transient_mission in json_transient:
         mission_name = transient_mission['objectiveName']
-        for rewards in transient_mission['rewards']:
-            item = rewards['itemName']
+        for transient_rewards in transient_mission['rewards']:
+            item = transient_rewards['itemName']
             rotation = translate("warframeUtils", "rotation") + " " + translate("warframeUtils", "noRotation")
             if (item == relic_name):
                 mis += mission_name + " (" + rotation + ")\n"
@@ -504,8 +506,8 @@ def get_relic_drop(relic_name: str) -> str:
 
     for misc_mission in json_misc:
         mission_name = misc_mission['enemyName']
-        for rewards in misc_mission['items']:
-            item = rewards['itemName']
+        for misc_rewards in misc_mission['items']:
+            item = misc_rewards['itemName']
             if (item == relic_name):
                 mis += mission_name + "\n"
                 found = 1
@@ -536,7 +538,7 @@ def translate_mission_type_from_drop_file(mission_type: str) -> str:
     return mission_type
 
 
-def translate_item_from_drop_file(data):
+def translate_item_from_drop_file(data: str) -> str:
     if (data[-1] == " "):
         data = data[:-1]
     if (data[0] == " "):
@@ -574,7 +576,7 @@ def translate_item_from_drop_file(data):
     elif (is_railjack_weapon(data)):
         return translate_generic_item(data)
     else:
-        translate_generic_item(item)
+        translate_generic_item(data)
         # print(translate("warframeUtils", "itemNotFound") + ": " + data)
         # LogHandler.err(translate("warframeUtils", "itemNotFound") + ": " + data)
         return data
@@ -641,7 +643,7 @@ def is_prime_part(item: str) -> bool:
     return len(item.split(" ")) > 2 and "PRIME" in item
 
 
-def translate_prime_part(item: str, separator: str="PRIME") -> str:
+def translate_prime_part(item: str, separator: str = "PRIME") -> str:
     prime_item = item.split(" " + separator + " ")[0]
     prime_parts = item.split(" " + separator + " ")[1].split(" ")
     parts_translated = ""

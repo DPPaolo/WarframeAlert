@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.widget.BountyWidget import BountyWidget
+from warframeAlert.constants.warframeTypes import SyndicateMissions
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
@@ -56,32 +57,33 @@ class BountyWidgetTab():
     def get_widget(self):
         return self.BountiesWidget
 
-    def update_bounties(self, data):
+    def update_bounties(self, data: SyndicateMissions) -> None:
         if (OptionsHandler.get_option("Tab/Cetus") == 1):
             try:
                 for syndicate in data:
                     tag = syndicate['Tag']
-                    if (tag == 'CetusSyndicate'):
-                        self.OstronWidget.parse_bounty(syndicate)
-                        bounty_init, bounty_end = self.OstronWidget.get_timer()
-                        self.set_time(bounty_init, bounty_end)
-                    elif (tag == 'SolarisSyndicate'):
-                        self.FortunaWidget.parse_bounty(syndicate)
-                    elif (tag == 'EntratiSyndicate'):
-                        jobs = copy.copy(syndicate['Jobs'])
+                    match tag:
+                        case 'CetusSyndicate':
+                            self.OstronWidget.parse_bounty(syndicate)
+                            bounty_init, bounty_end = self.OstronWidget.get_timer()
+                            self.set_time(bounty_init, bounty_end)
+                        case 'SolarisSyndicate':
+                            self.FortunaWidget.parse_bounty(syndicate)
+                        case 'EntratiSyndicate':
+                            jobs = copy.copy(syndicate['Jobs'])
 
-                        general_jobs = copy.copy(syndicate)
-                        general_jobs['Jobs'] = [x for x in jobs if 'isVault' not in x]
+                            general_jobs = copy.copy(syndicate)
+                            general_jobs['Jobs'] = [x for x in jobs if 'isVault' not in x]
 
-                        vault_jobs = copy.copy(syndicate)
-                        vault_jobs['Jobs'] = [y for y in jobs if 'isVault' in y]
+                            vault_jobs = copy.copy(syndicate)
+                            vault_jobs['Jobs'] = [y for y in jobs if 'isVault' in y]
 
-                        self.DeimosWidget.parse_bounty(general_jobs, True)
-                        self.DeimosVaultWidget.parse_bounty(vault_jobs, True)
-                    else:
-                        if ('Jobs' in syndicate):
-                            LogHandler.debug(translate("bountyWidgetTab", "newSynJobs") + " " + tag)
-                            print(syndicate['Jobs'])
+                            self.DeimosWidget.parse_bounty(general_jobs, True)
+                            self.DeimosVaultWidget.parse_bounty(vault_jobs, True)
+                        case _:
+                            if ('Jobs' in syndicate):
+                                LogHandler.debug(translate("bountyWidgetTab", "newSynJobs") + " " + tag)
+                                print(syndicate['Jobs'])
             except Exception as er:
                 LogHandler.err(translate("bountyWidgetTab", "bountiesError") + ": " + str(er))
                 print_traceback(translate("bountyWidgetTab", "bountiesError") + ": " + str(er))

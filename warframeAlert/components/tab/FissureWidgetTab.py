@@ -1,8 +1,11 @@
 # coding=utf-8
+from typing import Tuple
+
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.FissureBox import FissureBox
 from warframeAlert.components.widget.RelicWidget import RelicWidget
+from warframeAlert.constants.warframeTypes import VoidStorms, ActiveMissions
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -42,7 +45,7 @@ class FissureWidgetTab():
     def get_widget(self):
         return self.FissureWidget
 
-    def update_fissure(self, fissure_data, void_storm_data):
+    def update_fissure(self, fissure_data: ActiveMissions, void_storm_data: VoidStorms) -> None:
         if (OptionsHandler.get_option("Tab/Fissure") == 1):
             try:
                 self.parse_fissure(fissure_data, void_storm_data)
@@ -54,7 +57,7 @@ class FissureWidgetTab():
         else:
             self.reset_fissure()
 
-    def parse_fissure(self, fissure_data, void_storm_data):
+    def parse_fissure(self, fissure_data: ActiveMissions, void_storm_data: VoidStorms) -> None:
         self.reset_fissure()
         n_fis = len(self.alerts['ActiveMissions'])
         for fissure in fissure_data:
@@ -133,18 +136,19 @@ class FissureWidgetTab():
         self.RelicWidget.show()
 
 
-def get_relic_tier(tier):
-    if (tier[-1] == "1"):
-        return 1, "T1 Lith"
-    elif (tier[-1] == "2"):
-        return 2, "T2 Meso"
-    elif (tier[-1] == "3"):
-        return 3, "T3 Neo"
-    elif (tier[-1] == "4"):
-        return 4, "T4 Axi"
-    elif (tier[-1] == "5"):
-        return 5, "T5 Requiem"
-    else:
-        print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-        LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-        return tier[-1], tier
+def get_relic_tier(tier: str) -> Tuple[int, str]:
+    match tier[-1]:
+        case "1":
+            return 1, "T1 Lith"
+        case "2":
+            return 2, "T2 Meso"
+        case "3":
+            return 3, "T3 Neo"
+        case "4":
+            return 4, "T4 Axi"
+        case "5":
+            return 5, "T5 Requiem"
+        case _:
+            print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
+            LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)
+            return int(tier[-1]), tier

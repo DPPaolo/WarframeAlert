@@ -72,7 +72,7 @@ class GeneralInfoWidget():
         self.EarthTime.set_countdown(int(timeUtils.get_local_time()) + earth_time)
         self.EarthTime.start()
 
-    def set_other_datas(self, version, mob_version, world_seed, force_logout, dtls):
+    def set_other_datas(self, version: int, mob_version: str, world_seed: str, force_logout: int, dtls: bool) -> None:
         version_text = translate("generalWidget", "fileVersion") + ": " + str(version)
         mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)

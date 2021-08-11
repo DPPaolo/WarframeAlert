@@ -2,10 +2,13 @@
 import copy
 import json
 import lzma
+from typing import List
 
 import requests as requests
 
 from warframeAlert.constants.files import MOBILE_MANIFEST_ID_SITE
+from warframeAlert.constants.warframeFileTypes import RelicFile, BountyFileData, SortieFileData, \
+    MissionFile, TransientFile, KeyFile, MiscFile, BpByItemFile, BpBySourceFile, ModByItemFile, ModBySourceFile
 from warframeAlert.utils.fileUtils import get_separator, decompress_lzma
 from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file, \
     translate_mission_type_from_drop_file
@@ -49,7 +52,7 @@ def write_json_drop() -> None:
 
 
 def translate_sortie_drop() -> None:
-    json_data = read_drop_file("sortie_en")
+    json_data: SortieFileData = read_drop_file("sortie_en")
 
     new_json_data = {'sortieRewards': []}
     rewards = []
@@ -60,7 +63,7 @@ def translate_sortie_drop() -> None:
         rewards.append(new_reward)
     new_json_data['sortieRewards'] = rewards
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "sortie_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -68,15 +71,15 @@ def translate_sortie_drop() -> None:
 
 
 def translate_free_roam_drop(file_name: str) -> None:
-    json_data = read_drop_file(file_name + "_en")
-    prefix = file_name
-    if (file_name == "cetus"):
-        prefix = "cetusBountyRewards"
-    elif (file_name == "fortuna"):
-        prefix = "solarisBountyRewards"
-    elif (file_name == "deimos"):
-        prefix = "deimosRewards"
-    json_data = json_data[prefix]
+    prefix = ""
+    match file_name:
+        case "cetus":
+            prefix = "cetusBountyRewards"
+        case "fortuna":
+            prefix = "solarisBountyRewards"
+        case "deimos":
+            prefix = "deimosRewards"
+    json_data: List[BountyFileData] = read_drop_file(file_name + "_en")[prefix]
 
     new_json_data = {prefix: []}
 
@@ -95,7 +98,7 @@ def translate_free_roam_drop(file_name: str) -> None:
 
         new_json_data[prefix].append(new_bounty_level)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + file_name + "_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -103,7 +106,7 @@ def translate_free_roam_drop(file_name: str) -> None:
 
 
 def translate_relic_drop() -> None:
-    json_data = read_drop_file("relic_en")
+    json_data: RelicFile = read_drop_file("relic_en")
 
     new_json_data = {'relics': []}
     relics = []
@@ -121,7 +124,7 @@ def translate_relic_drop() -> None:
 
     new_json_data['relics'] = relics
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "relic_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -129,7 +132,7 @@ def translate_relic_drop() -> None:
 
 
 def translate_mission_drop() -> None:
-    json_data = read_drop_file("mission" + "_en")
+    json_data: MissionFile = read_drop_file("mission_en")
 
     new_json_data = {'missionRewards': {}}
 
@@ -169,7 +172,7 @@ def translate_mission_drop() -> None:
 
         new_json_data['missionRewards'][planet] = new_planet
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "mission_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -177,39 +180,30 @@ def translate_mission_drop() -> None:
 
 
 def translate_key_drop() -> None:
-    json_data = read_drop_file("key_en")
+    json_data: KeyFile = read_drop_file("key_en")
 
     new_json_data = {'keyRewards': []}
 
     for key_drop in json_data['keyRewards']:
-        rewards_list = []
         rewards_map = {}
 
         for reward in key_drop['rewards']:
 
-            if (reward in ["A", "B", "C"]):
-                rotation = key_drop['rewards'][reward]
+            rotation = key_drop['rewards'][reward]
 
-                rotation_drops = []
-                for rotation_reward in rotation:
-                    new_reward = rotation_reward
-                    new_reward['itemName'] = translate_item_from_drop_file(rotation_reward['itemName'].upper())
-                    rotation_drops.append(new_reward)
+            rotation_drops = []
+            for rotation_reward in rotation:
+                new_reward = rotation_reward
+                new_reward['itemName'] = translate_item_from_drop_file(rotation_reward['itemName'].upper())
+                rotation_drops.append(new_reward)
 
-                rewards_map[reward] = rotation_drops
-            else:
-                new_reward = reward
-                new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
-                rewards_list.append(new_reward)
+            rewards_map[reward] = rotation_drops
 
-        if (rewards_list == []):
-            key_drop['rewards'] = rewards_map
-        else:
-            key_drop['rewards'] = rewards_list
+        key_drop['rewards'] = rewards_map
 
         new_json_data['keyRewards'].append(key_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "key_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -217,7 +211,7 @@ def translate_key_drop() -> None:
 
 
 def translate_transient_drop() -> None:
-    json_data = read_drop_file("transient_en")
+    json_data: TransientFile = read_drop_file("transient_en")
 
     new_json_data = {'transientRewards': []}
 
@@ -233,7 +227,7 @@ def translate_transient_drop() -> None:
 
         new_json_data['transientRewards'].append(transient_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "transient_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -241,7 +235,7 @@ def translate_transient_drop() -> None:
 
 
 def translate_misc_drop() -> None:
-    json_data = read_drop_file("misc_en")
+    json_data: MiscFile = read_drop_file("misc_en")
     new_json_data = {'miscItems': []}
 
     for misc_drop in json_data['miscItems']:
@@ -256,7 +250,7 @@ def translate_misc_drop() -> None:
 
         new_json_data['miscItems'].append(misc_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "misc_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -264,7 +258,7 @@ def translate_misc_drop() -> None:
 
 
 def translate_bp_by_item_drop() -> None:
-    json_data = read_drop_file("bp_by_item_en")
+    json_data: BpByItemFile = read_drop_file("bp_by_item_en")
 
     new_json_data = {'blueprintLocations': []}
 
@@ -273,7 +267,7 @@ def translate_bp_by_item_drop() -> None:
         blueprint_drop['blueprintName'] = translate_item_from_drop_file(blueprint_drop['blueprintName'].upper())
         new_json_data['blueprintLocations'].append(blueprint_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "bp_by_item_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -281,7 +275,7 @@ def translate_bp_by_item_drop() -> None:
 
 
 def translate_bp_by_source_drop() -> None:
-    json_data = read_drop_file("bp_by_source_en")
+    json_data: BpBySourceFile = read_drop_file("bp_by_source_en")
 
     new_json_data = {'enemyBlueprintTables': []}
 
@@ -297,7 +291,7 @@ def translate_bp_by_source_drop() -> None:
 
         new_json_data['enemyBlueprintTables'].append(blueprint_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "bp_by_source_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -305,7 +299,7 @@ def translate_bp_by_source_drop() -> None:
 
 
 def translate_mod_by_item_drop() -> None:
-    json_data = read_drop_file("mod_by_item_en")
+    json_data: ModByItemFile = read_drop_file("mod_by_item_en")
 
     new_json_data = {'modLocations': []}
 
@@ -313,7 +307,7 @@ def translate_mod_by_item_drop() -> None:
         mod_drop['modName'] = translate_item_from_drop_file(mod_drop['modName'].upper())
         new_json_data['modLocations'].append(mod_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "mod_by_item_it.json", "w")
     fp.write(json_data)
     fp.flush()
@@ -321,7 +315,7 @@ def translate_mod_by_item_drop() -> None:
 
 
 def translate_mod_by_source_drop() -> None:
-    json_data = read_drop_file("mod_by_source_en")
+    json_data: ModBySourceFile = read_drop_file("mod_by_source_en")
 
     new_json_data = {'enemyModTables': []}
 
@@ -337,7 +331,7 @@ def translate_mod_by_source_drop() -> None:
 
         new_json_data['enemyModTables'].append(mod_drop)
 
-    json_data = json.dumps(new_json_data)
+    json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "mod_by_source_it.json", "w")
     fp.write(json_data)
     fp.flush()

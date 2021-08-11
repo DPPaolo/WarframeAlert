@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.SyndicateBox import SyndicateBox
+from warframeAlert.constants.warframeTypes import SyndicateMissions
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
@@ -12,14 +13,14 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class SyndicateWidgetTab():
 
-    def __init__(self):
-        self.alerts = {'SyndicateMissions': {}}
-        self.alerts['SyndicateMissions']['ArbitersSyndicate'] = []          # Arbiter of Hexis
-        self.alerts['SyndicateMissions']['CephalonSudaSyndicate'] = []      # Cephalon Suda
-        self.alerts['SyndicateMissions']['NewLokaSyndicate'] = []           # New Loka
-        self.alerts['SyndicateMissions']['SteelMeridianSyndicate'] = []     # Steel Meridian
-        self.alerts['SyndicateMissions']['PerrinSyndicate'] = []            # Perrin Sequence
-        self.alerts['SyndicateMissions']['RedVeilSyndicate'] = []           # Red Veil
+    def __init__(self) -> None:
+        self.alerts: dict[str, dict[str, SyndicateBox]] = {'SyndicateMissions': {}}
+        self.alerts['SyndicateMissions']['ArbitersSyndicate']: SyndicateBox         # Arbiter of Hexis
+        self.alerts['SyndicateMissions']['CephalonSudaSyndicate']: SyndicateBox     # Cephalon Suda
+        self.alerts['SyndicateMissions']['NewLokaSyndicate']: SyndicateBox          # New Loka
+        self.alerts['SyndicateMissions']['SteelMeridianSyndicate']: SyndicateBox    # Steel Meridian
+        self.alerts['SyndicateMissions']['PerrinSyndicate']: SyndicateBox           # Perrin Sequence
+        self.alerts['SyndicateMissions']['RedVeilSyndicate']: SyndicateBox          # Red Veil
 
         self.SyndicateWidget = QtWidgets.QWidget()
 
@@ -59,15 +60,15 @@ class SyndicateWidgetTab():
         self.gridSyndicate.addWidget(self.SyndicateEnd.TimeLab, 0, 3)
         self.gridSyndicate.addWidget(self.SyndicateTabber, 1, 0, 1, 4)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.SyndicateWidget
 
-    def set_time(self, iniz, fin):
-        self.SyndicateInit.setText(timeUtils.get_time(iniz))
-        self.SyndicateEnd.set_countdown(fin)
+    def set_time(self, init: int, end: int) -> None:
+        self.SyndicateInit.setText(timeUtils.get_time(str(init)))
+        self.SyndicateEnd.set_countdown(end)
         self.SyndicateEnd.start()
 
-    def update_syndicate(self, data):
+    def update_syndicate(self, data: SyndicateMissions) -> None:
         if (OptionsHandler.get_option("Tab/Syndicate") == 1):
             try:
                 self.parse_syndicate(data)
@@ -79,8 +80,8 @@ class SyndicateWidgetTab():
             LogHandler.debug(translate("syndicateWidget", "noSyndicate"))
             self.syndicate_not_available()
 
-    def parse_syndicate(self, data):
-        sydicates = ['ArbitersSyndicate', 'CephalonSudaSyndicate', 'NewLokaSyndicate', 'NewLokaSyndicate',
+    def parse_syndicate(self, data: SyndicateMissions) -> None:
+        sydicates = ['ArbitersSyndicate', 'CephalonSudaSyndicate', 'NewLokaSyndicate',
                      'SteelMeridianSyndicate', 'PerrinSyndicate', 'RedVeilSyndicate']
         syndicate_updated = False
 
@@ -99,7 +100,7 @@ class SyndicateWidgetTab():
                         self.set_time(init, end[:10])
                         syndicate_updated = True
 
-    def syndicate_not_available(self):
+    def syndicate_not_available(self) -> None:
         self.SyndicateInit.setText("N/D")
         for syn in self.alerts['SyndicateMissions']:
             self.alerts['SyndicateMissions'][syn].set_syndicate_not_available()

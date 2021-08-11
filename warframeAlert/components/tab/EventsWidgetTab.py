@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List, Tuple, Union
+
 from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.BountyBox import create_bounty_box
@@ -13,6 +15,7 @@ from warframeAlert.components.common.SpecialAlert import create_alert
 from warframeAlert.components.common.Spoiler import Spoiler
 from warframeAlert.components.common.SquadLinkEvent import SquadLinkEvent
 from warframeAlert.components.widget.AlertWidget import AlertWidget
+from warframeAlert.constants.warframeTypes import Goals, ConstructionProjects, Alerts, Goal
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -26,8 +29,10 @@ from warframeAlert.utils.warframeUtils import parse_reward
 
 class EventsWidgetTab():
 
-    def __init__(self):
-        self.alerts = {'Goals': []}
+    # TODO: use | instead of Union
+    def __init__(self) -> None:
+        self.alerts: dict[str, List[Union[Event, ScoreEvent, ClanEvent, ReconstructionRelayEvent, SquadLinkEvent]]] \
+            = {'Goals': []}
 
         self.eventsWidget = QtWidgets.QWidget()
 
@@ -101,13 +106,13 @@ class EventsWidgetTab():
 
         self.eventsWidget.setLayout(self.eventGrid)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.eventsWidget
 
-    def get_length(self):
+    def get_length(self) -> int:
         return self.alertWidget.get_lenght() + len(self.alerts['Goals'])
 
-    def update_alert_mission(self, data):
+    def update_alert_mission(self, data: Alerts) -> None:
         if (OptionsHandler.get_option("Tab/TactAll") == 1):
             try:
                 self.alertWidget.parse_alert_data(data)
@@ -118,7 +123,7 @@ class EventsWidgetTab():
         else:
             self.alertWidget.reset_alerts()
 
-    def update_events(self, data, relay):
+    def update_events(self, data: Goals, relay: ConstructionProjects) -> None:
         if (OptionsHandler.get_option("Tab/TactAll") == 1):
             try:
                 self.parse_events(data, relay)
@@ -130,7 +135,7 @@ class EventsWidgetTab():
         else:
             self.reset_events()
 
-    def parse_events(self, data, relay):
+    def parse_events(self, data: Goals, relay: ConstructionProjects) -> None:
         self.reset_events()
         if (data):
             n_event = len(self.alerts['Goals'])
@@ -149,7 +154,7 @@ class EventsWidgetTab():
 
             self.add_events(n_event)
 
-    def add_events(self, n_event):
+    def add_events(self, n_event: int) -> None:
         title = translate("eventsWidget", "newEvent")
         for i in range(n_event, len(self.alerts['Goals'])):
             if (self.alerts['Goals'][i].get_event_type() == EventType.GENERAL):
@@ -176,7 +181,7 @@ class EventsWidgetTab():
                 self.alerts['Goals'][i].get_title(),
                 self.alerts['Goals'][i].get_image())
 
-    def reset_events(self):
+    def reset_events(self) -> None:
         canc = []
         for i in range(0, len(self.alerts['Goals'])):
             if (self.alerts['Goals'][i].is_expired()):
@@ -188,7 +193,7 @@ class EventsWidgetTab():
             del self.alerts['Goals'][canc[i - 1]]
             i -= 1
 
-    def update_tab(self):
+    def update_tab(self) -> None:
         alerts_lenght = self.alertWidget.get_lenght()
         events_lenght = len(self.alerts['Goals'])
         self.EventTabber.insertTab(0, self.AlertScrollBar, translate("eventsWidget", "alerts"))
@@ -226,11 +231,14 @@ class EventsWidgetTab():
                 self.EventTabber.removeTab(self.EventTabber.indexOf(self.EventScrollBarE))
 
 
-def create_event(event_id, event, relay):
+# TODO: use | instead of Union
+def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
+        -> Union[Event, ScoreEvent, ClanEvent, ReconstructionRelayEvent, SquadLinkEvent]:
     icon = tooltip = success = regions = faction = ""
-    req_item = roaming_vip = req_mis = mission_map_rotation = ""
+    req_item = roaming_vip = mission_map_rotation = ""
     personal = clamp_score = emblem = "No"
     mission_interval = 0
+    req_mis: List[str] = []
     init = timeUtils.get_time(event['Activation']['$date']['$numberLong'])
     end = event['Expiry']['$date']['$numberLong']
     if ('Personal' in event):
@@ -248,7 +256,7 @@ def create_event(event_id, event, relay):
     if ('MissionKeyName' in event):
         tooltip = tooltip or get_last_item_with_backslash(event['MissionKeyName'])
     if ('ConcurrentMissionKeyNames' in event):
-        tooltip = tooltip or get_last_item_with_backslash(event['ConcurrentMissionKeyNames'[-1]])
+        tooltip = tooltip or get_last_item_with_backslash(event['ConcurrentMissionKeyNames'][-1])
     if ('ScoreVar' in event):
         tooltip = tooltip or event['ScoreVar']
     if ('ScoreMaxTag' in event):
@@ -324,7 +332,8 @@ def create_event(event_id, event, relay):
         score_block_guilds = bool_to_yes_no(event['Best'])
 
     # Clan Event Data
-    req_node = clan_goal = ""
+    req_node: Tuple[str, str] = ("", "")
+    clan_goal: List[str] = []
     if ('ClanGoal' in event):
         clan_goal = event['ClanGoal']
     if ('RewardNode' in event):
@@ -368,7 +377,7 @@ def create_event(event_id, event, relay):
             temp.set_event_type(EventType.GHOUL)
         else:
             temp.set_event_type(EventType.GENERAL)
-    elif (clan_goal):
+    elif (len(clan_goal) != 0):
         temp = ClanEvent(event_id, req_node)
         temp.set_clan_score(clan_goal)
     elif (relay_reconstruction):
