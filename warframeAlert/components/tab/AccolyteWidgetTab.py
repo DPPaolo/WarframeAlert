@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Accolyte import Accolyte
+from warframeAlert.constants.warframeTypes import PersistentEnemies
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -29,7 +30,7 @@ class AccolyteWidgetTab():
     def get_lenght(self):
         return len(self.alerts['PersistentEnemies'])
 
-    def update_accolyte(self, data):
+    def update_accolyte(self, data: PersistentEnemies) -> None:
         if (OptionsHandler.get_option("Tab/Accolyt") == 1):
             try:
                 self.parse_accolyte(data)

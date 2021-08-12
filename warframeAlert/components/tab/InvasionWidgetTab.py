@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Invasion import Invasion
 from warframeAlert.components.common.InvasionNode import InvasionNode
+from warframeAlert.constants.warframeTypes import ProjectPcts, NodeOverrides, Invasions
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -107,7 +108,7 @@ class InvasionWidgetTab():
         if (not len(self.alerts['NodeOverrides']) > 0):
             self.Invtabber.removeTab(self.Invtabber.indexOf(self.InvScrollBarO))
 
-    def update_invasion(self, data):
+    def update_invasion(self, data: Invasions) -> None:
         if (OptionsHandler.get_option("Tab/Invasion") == 1):
             try:
                 self.parse_invasion(data)
@@ -221,7 +222,7 @@ class InvasionWidgetTab():
                 del temp[canc[i-1]]
                 i -= 1
 
-    def update_node_ovveride(self, data):
+    def update_node_ovveride(self, data: NodeOverrides) -> None:
         if (OptionsHandler.get_option("Tab/Invasion") == 1):
             try:
                 self.parse_node_override(data)
@@ -283,7 +284,7 @@ class InvasionWidgetTab():
             del self.alerts['NodeOverrides'][canc[i-1]]
             i -= 1
 
-    def update_invasion_project(self, data):
+    def update_invasion_project(self, data: ProjectPcts) -> None:
         try:
             self.parse_invasion_project(data)
         except Exception as er:

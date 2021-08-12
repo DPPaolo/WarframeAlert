@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.BaroItemBox import BaroItemBox
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.constants.warframeTypes import VoidTraders
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -73,7 +74,7 @@ class BaroWidgetTab():
     def get_widget(self):
         return self.BaroWidget
 
-    def update_baro(self, data):
+    def update_baro(self, data: VoidTraders) -> None:
         if (OptionsHandler.get_option("Tab/Baro") == 1):
             try:
                 self.parse_baro(data)

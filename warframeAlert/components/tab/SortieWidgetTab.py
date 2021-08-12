@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets
 
 from warframeAlert.components.common.SortieBox import SortieBox
+from warframeAlert.constants.warframeTypes import Sorties
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -26,7 +27,7 @@ class SortieWidgetTab():
     def get_widget(self):
         return self.SortieWidget
 
-    def update_sortie(self, data):
+    def update_sortie(self, data: Sorties) -> None:
         if (OptionsHandler.get_option("Tab/Sortie") == 1):
             try:
                 self.parse_sortie(data)

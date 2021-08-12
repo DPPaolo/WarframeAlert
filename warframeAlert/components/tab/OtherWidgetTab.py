@@ -5,6 +5,8 @@ from warframeAlert.components.widget.GeneralInfoWidget import GeneralInfoWidget
 from warframeAlert.components.widget.HubWidget import HubWidget
 from warframeAlert.components.widget.RelayStationWidget import RelayStationWidget
 from warframeAlert.components.widget.TwitchPromoWidget import TwitchPromoWidget
+from warframeAlert.constants.warframeTypes import TwitchPromos, PrimeVaultAvailabilities, PrimeAccessAvailability, \
+    NodeOverrides, LibraryInfo, HubEvents, FeaturedGuilds, ExperimentRecommended, DailyDeals
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 from warframeAlert.utils.logUtils import LogHandler
@@ -45,10 +47,10 @@ class OtherWidgetTab():
         if (not (len(self.twitchPromoWidget.data['TwitchPromos']) > 0)):
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
-    def set_other_datas(self, version, mob_version, world_seed, force_logout_version, dtls):
+    def set_other_datas(self, version: int, mob_version: str, world_seed: str, force_logout_version: int, dtls: bool) -> None:
         self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
 
-    def update_prime_access(self, prime_access, prime_available):
+    def update_prime_access(self, prime_access: PrimeAccessAvailability, prime_available: PrimeVaultAvailabilities) -> None:
         try:
             self.generalWidget.parse_prime_access(prime_access, prime_available)
         except Exception as er:
@@ -56,28 +58,28 @@ class OtherWidgetTab():
             commonUtils.print_traceback(translate("otherWidgetTab", "primeAccessUpdateError") + ": " + str(er))
             self.generalWidget.reset_prime_access()
 
-    def update_simaris_target(self, data):
+    def update_simaris_target(self, data: LibraryInfo) -> None:
         try:
             self.relayStationWidget.parse_simaris_target(data)
         except Exception as er:
             LogHandler.err(translate("otherWidgetTab", "simarisUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "simarisUpdateError") + ": " + str(er))
 
-    def update_daily_deals(self, data):
+    def update_daily_deals(self, data: DailyDeals) -> None:
         try:
             self.relayStationWidget.parse_daily_deals(data)
         except Exception as er:
             LogHandler.err(translate("otherWidgetTab", "dailyDealsUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "dailyDealsUpdateError") + ": " + str(er))
 
-    def update_relay_station(self, data):
+    def update_relay_station(self, data: NodeOverrides) -> None:
         try:
             self.relayStationWidget.parse_relay_station(data)
         except Exception as er:
             LogHandler.err(translate("otherWidgetTab", "relayStationUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "relayStationUpdateError") + ": " + str(er))
 
-    def update_twitch_promo(self, data):
+    def update_twitch_promo(self, data: TwitchPromos) -> None:
         try:
             self.twitchPromoWidget.parse_twitch_promo(data)
         except Exception as er:
@@ -85,7 +87,7 @@ class OtherWidgetTab():
             commonUtils.print_traceback(translate("otherWidgetTab", "twitchPromoUpdateError") + ": " + str(er))
             self.twitchPromoWidget.reset_twitch_promo()
 
-    def update_featured_dojo(self, data):
+    def update_featured_dojo(self, data: FeaturedGuilds) -> None:
         try:
             self.generalWidget.parse_featured_dojo(data)
         except Exception as er:
@@ -93,7 +95,7 @@ class OtherWidgetTab():
             commonUtils.print_traceback(translate("otherWidgetTab", "featureDojoUpdateError") + ": " + str(er))
             self.generalWidget.reset_featured_dojo()
 
-    def update_hub_event(self, data):
+    def update_hub_event(self, data: HubEvents) -> None:
         try:
             self.hubEventWidget.parse_hub_event(data)
         except Exception as er:
@@ -101,7 +103,7 @@ class OtherWidgetTab():
             commonUtils.print_traceback(translate("otherWidgetTab", "hubEventUpdateError") + ": " + str(er))
             self.hubEventWidget.reset_hub_event()
 
-    def update_experiment_recommended(self, data):
+    def update_experiment_recommended(self, data: ExperimentRecommended) -> None:
         try:
             self.get_widget()
             if (data != []):

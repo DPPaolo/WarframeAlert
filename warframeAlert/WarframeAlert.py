@@ -22,7 +22,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class MainWindow(QtWidgets.QMainWindow):
 
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
 
         # Start the log handler

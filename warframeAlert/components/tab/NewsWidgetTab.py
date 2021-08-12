@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.CommonImageButton import CommonImageButton
 from warframeAlert.components.common.GlobalUpgrade import GlobalUpgrade
+from warframeAlert.constants.warframeTypes import GlobalUpgrades, Events
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -94,7 +95,7 @@ class NewsWidgetTab():
     def get_widget(self):
         return self.NewsWidgetTab
 
-    def update_news(self, data):
+    def update_news(self, data: Events) -> None:
         try:
             self.parse_news(data)
         except Exception as er:
@@ -206,7 +207,7 @@ class NewsWidgetTab():
         self.add_news(n_news, n_contest)
         self.reset_news()
 
-    def update_news_info(self, build_label, game_time):
+    def update_news_info(self, build_label: str, game_time: int) -> None:
         translated_time = timeUtils.get_time(str(game_time * 1000))
         if (OptionsHandler.get_option("Update/Console") == 0):
             console = "PC"
@@ -242,7 +243,7 @@ class NewsWidgetTab():
                 None)
             n_news2 += 1
 
-    def update_global_upgrades(self, data):
+    def update_global_upgrades(self, data: GlobalUpgrades) -> None:
         try:
             self.parse_global_upgrade(data)
         except Exception as er:

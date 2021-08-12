@@ -5,6 +5,7 @@ from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.PvPMissionBox import PvPMissionBox
 from warframeAlert.components.widget.PvPAlternativeWidget import PvPAlternativeWidget
 from warframeAlert.components.widget.PvPTournamentWidget import PvPTournamentWidget
+from warframeAlert.constants.warframeTypes import PVPChallengeInstances, PVPActiveTournaments, PVPAlternativeModes
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils, timeUtils
@@ -67,7 +68,7 @@ class PvPWidgetTab():
         if (not (self.TournamentWidget.get_lenght() > 0)):
             self.PvPtabber.removeTab(self.PvPtabber.indexOf(self.TournamentWidget.get_widget()))
 
-    def update_pvp_mission(self, data):
+    def update_pvp_mission(self, data: PVPChallengeInstances) -> None:
         if (OptionsHandler.get_option("Tab/PVP") == 1):
             try:
                 self.parse_pvp_mission(data)
@@ -79,7 +80,7 @@ class PvPWidgetTab():
         else:
             self.reset_pvp_mission()
 
-    def update_pvp_alternative_mission(self, data):
+    def update_pvp_alternative_mission(self, data: PVPAlternativeModes) -> None:
         if (OptionsHandler.get_option("Tab/PVP") == 1):
             try:
                 self.OtherPvPWidget.parse_pvp_alternative_mission(data)
@@ -91,7 +92,7 @@ class PvPWidgetTab():
         else:
             self.OtherPvPWidget.pvp_alternative_mission_not_available()
 
-    def update_pvp_tournament(self, data):
+    def update_pvp_tournament(self, data: PVPActiveTournaments) -> None:
         if (OptionsHandler.get_option("Tab/PVP") == 1):
             try:
                 self.TournamentWidget.parse_pvp_tournament(data)

@@ -2,12 +2,13 @@
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.SalesBox import SalesBox
+from warframeAlert.constants.warframeTypes import FlashSales
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import print_traceback, remove_widget
-from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.gameTranslationUtils import get_item_name
+from warframeAlert.utils.logUtils import LogHandler
 
 
 class SalesWidgetTab():
@@ -58,7 +59,7 @@ class SalesWidgetTab():
         if (not (len(self.alerts['FlashSales']['Discount']) > 0)):
             self.salesTabber.removeTab(self.salesTabber.indexOf(self.DiscountedSalesScrollBar))
 
-    def update_sales(self, data):
+    def update_sales(self, data: FlashSales) -> None:
         if (OptionsHandler.get_option("Tab/Market") == 1):
             try:
                 self.parse_sales(data)

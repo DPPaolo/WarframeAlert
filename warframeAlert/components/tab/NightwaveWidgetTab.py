@@ -3,6 +3,7 @@ from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.SeasonBox import SeasonBox
+from warframeAlert.constants.warframeTypes import SeasonInfo
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -63,7 +64,7 @@ class NightwaveWidgetTab():
     def get_widget(self):
         return self.nightwaveWidget
 
-    def update_nightwave_season(self, data):
+    def update_nightwave_season(self, data: SeasonInfo) -> None:
         if (OptionsHandler.get_option("Tab/Nightwave") == 1):
             try:
                 self.parse_nightwave(data)
@@ -122,7 +123,7 @@ class NightwaveWidgetTab():
         self.SeasonEnd.set_countdown(end[:10])
         self.SeasonEnd.start()
         self.SeasonData.setToolTip(translate("nightwaveWidgetTab", "init") + " " + init)
-        self.SeasonData.setText(syn + "\t" + translate("nightwaveWidgetTab", "season") + " " + str(int(season) + 1)
+        self.SeasonData.setText(syn + "\t\t" + translate("nightwaveWidgetTab", "season") + " " + str(int(season) + 1)
                                 + " " + translate("nightwaveWidgetTab", "phase") + " " + str(int(phase) + 1))
         if (param != ""):
             self.SeasonParam.setText(translate("nightwaveWidgetTab", "parameters") + " " + str(param))
