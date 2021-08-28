@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.PvPAlternativeMissionBox import PvPAlternativeMissionBox
+from warframeAlert.constants.warframeTypes import PVPAlternativeModes
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import remove_widget, get_last_item_with_backslash
 from warframeAlert.utils.gameTranslationUtils import get_pvp_mission_type
@@ -10,7 +11,7 @@ from warframeAlert.utils.gameTranslationUtils import get_pvp_mission_type
 class PvPAlternativeWidget():
     PvPAlternativeWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         self.alerts = {'PvPAlternative': []}
 
@@ -25,13 +26,13 @@ class PvPAlternativeWidget():
 
         self.gridPvPAlt.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.PvPAlternativeWidget
 
-    def get_lenght(self):
+    def get_lenght(self) -> int:
         return len(self.alerts['PvPAlternative'])
 
-    def parse_pvp_alternative_mission(self, data):
+    def parse_pvp_alternative_mission(self, data: PVPAlternativeModes) -> None:
         self.reset_pvp_alternative()
         n_pvp_alt = len(self.alerts['PvPAlternative'])
         if (data):
@@ -76,11 +77,11 @@ class PvPAlternativeWidget():
                     for loadout in pvp['ForcedLoadouts'][0]['WeaponOverrides']:
                         if (bool(loadout['Override'])):
                             if (loadout['Resource'] == ''):
-                                weapon.append(translate("pvpAlternativeWidget", "none").upper() + "NESSUNA")
+                                weapon.append(translate("pvpAlternativeWidget", "none").upper())
                             else:
                                 weapon.append(loadout['Resource'])
                         else:
-                            weapon.append(translate("pvpAlternativeWidget", "any").upper() + "QUALUNQUE")
+                            weapon.append(translate("pvpAlternativeWidget", "any").upper())
 
                     temp = PvPAlternativeMissionBox(name)
                     temp.set_pvp_data_match(time, player, maxteam, minplayer, mode, desc)
@@ -93,14 +94,14 @@ class PvPAlternativeWidget():
 
         self.add_pvp_alternative(n_pvp_alt)
 
-    def add_pvp_alternative(self, n_pvp_alt):
+    def add_pvp_alternative(self, n_pvp_alt: int) -> None:
         for i in range(n_pvp_alt, len(self.alerts['PvPAlternative'])):
             self.gridPvPAlt.addLayout(self.alerts['PvPAlternative'][i].PvPAltBox, self.gridPvPAlt.count(), 0)
 
         if (len(self.alerts['PvPAlternative']) > 0):
             self.NoPvPAltLab.hide()
 
-    def reset_pvp_alternative(self):
+    def reset_pvp_alternative(self) -> None:
         self.NoPvPAltLab.show()
         canc = []
         for i in range(0, len(self.alerts['PvPAlternative'])):
@@ -112,6 +113,6 @@ class PvPAlternativeWidget():
             del self.alerts['PvPAlternative'][canc[i - 1]]
             i -= 1
 
-    def pvp_alternative_mission_not_available(self):
+    def pvp_alternative_mission_not_available(self) -> None:
         self.NoPvPAltLab.show()
         self.reset_pvp_alternative()

@@ -14,7 +14,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class AccolyteWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.alerts = {'PersistentEnemies': []}
         self.accolyteWidget = QtWidgets.QWidget()
 
@@ -24,10 +24,10 @@ class AccolyteWidgetTab():
 
         self.gridAcc.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.accolyteWidget
 
-    def get_lenght(self):
+    def get_lenght(self) -> int:
         return len(self.alerts['PersistentEnemies'])
 
     def update_accolyte(self, data: PersistentEnemies) -> None:
@@ -41,7 +41,7 @@ class AccolyteWidgetTab():
         else:
             self.accolyte_not_available()
 
-    def parse_accolyte(self, data):
+    def parse_accolyte(self, data: PersistentEnemies) -> None:
         n_acc = len(self.alerts['PersistentEnemies'])
         for acc in data:
             acc_id = acc['_id']['$oid']
@@ -80,7 +80,7 @@ class AccolyteWidgetTab():
 
         self.add_accolytes(n_acc)
 
-    def add_accolytes(self, n_acc):
+    def add_accolytes(self, n_acc: int) -> None:
         for i in range(n_acc, len(self.alerts['PersistentEnemies'])):
             if (not self.alerts['PersistentEnemies'][i].is_dead()):
                 self.gridAcc.addLayout(self.alerts['PersistentEnemies'][i].AccBox, self.gridAcc.count(), 0)
@@ -89,7 +89,7 @@ class AccolyteWidgetTab():
                     self.alerts['PersistentEnemies'][i].to_string(),
                     create_pixmap(self.alerts['PersistentEnemies'][i].get_image()))
 
-    def accolyte_not_available(self):
+    def accolyte_not_available(self) -> None:
         for i in reversed(range(0, len(self.alerts['PersistentEnemies']))):
             self.alerts['PersistentEnemies'][i].hide()
             remove_widget(self.alerts['PersistentEnemies'][i].AccBox)

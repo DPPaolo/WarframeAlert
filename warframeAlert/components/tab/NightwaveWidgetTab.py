@@ -15,7 +15,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class NightwaveWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.alerts = {'SeasonInfo': []}
 
         self.nightwaveWidget = QtWidgets.QWidget()
@@ -61,7 +61,7 @@ class NightwaveWidgetTab():
 
         self.nightwaveWidget.setLayout(self.SeasonGrid)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.nightwaveWidget
 
     def update_nightwave_season(self, data: SeasonInfo) -> None:
@@ -76,7 +76,7 @@ class NightwaveWidgetTab():
         else:
             self.reset_season()
 
-    def parse_nightwave(self, data):
+    def parse_nightwave(self, data: SeasonInfo) -> None:
         self.reset_season()
 
         if (data):
@@ -103,14 +103,14 @@ class NightwaveWidgetTab():
                     init = challenge['Activation']['$date']['$numberLong']
                     end = challenge['Expiry']['$date']['$numberLong']
 
-                    mission = get_nightwave_challenge(challenge['Challenge'])
+                    nightwave_challenge = get_nightwave_challenge(challenge['Challenge'])
                     if ('Daily' in challenge):
                         daily = challenge['Daily']
                     else:
                         daily = False
 
                     temp = SeasonBox(challenge_id)
-                    temp.set_data(init, end, mission, daily)
+                    temp.set_data(init, end, nightwave_challenge, daily)
                     self.alerts['SeasonInfo'].append(temp)
 
                     del temp
@@ -119,7 +119,7 @@ class NightwaveWidgetTab():
         else:
             self.season_not_available()
 
-    def update_nightwave_data(self, init, end, syn, season, phase, param):
+    def update_nightwave_data(self, init: str, end: int, syn: str, season: int, phase: int, param: str) -> None:
         self.SeasonEnd.set_countdown(end[:10])
         self.SeasonEnd.start()
         self.SeasonData.setToolTip(translate("nightwaveWidgetTab", "init") + " " + init)
@@ -128,7 +128,7 @@ class NightwaveWidgetTab():
         if (param != ""):
             self.SeasonParam.setText(translate("nightwaveWidgetTab", "parameters") + " " + str(param))
 
-    def add_nightwave(self, n_nightwave):
+    def add_nightwave(self, n_nightwave: int) -> None:
         if (len(self.alerts['SeasonInfo']) > 0):
             self.NoSeason.hide()
         n = n_nightwave
@@ -141,7 +141,7 @@ class NightwaveWidgetTab():
                     self.alerts['SeasonInfo'][i].to_string(),
                     None)
 
-    def reset_season(self):
+    def reset_season(self) -> None:
         self.NoSeason.show()
         canc = []
         for i in range(0, len(self.alerts['SeasonInfo'])):
@@ -154,7 +154,7 @@ class NightwaveWidgetTab():
             del self.alerts['SeasonInfo'][canc[i - 1]]
             i -= 1
 
-    def season_not_available(self):
+    def season_not_available(self) -> None:
         self.SeasonEnd.set_countdown(-1)
         self.SeasonEnd.hide()
         self.SeasonData.setText(translate("nightwaveWidgetTab", "noSeasonActive"))

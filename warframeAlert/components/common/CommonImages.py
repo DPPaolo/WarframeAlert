@@ -44,7 +44,7 @@ class CommonImages():
 
     def set_image_dimension(self, width: int, height: int,
                             aspect_ratio: Qt.IgnoreAspectRatio = Qt.IgnoreAspectRatio,
-                            transform: Qt.TransformationMode = Qt.SmoothTransformation):
+                            transform: Qt.TransformationMode = Qt.SmoothTransformation) -> None:
         self.width = width
         self.height = height
         self.aspect_ratio = aspect_ratio

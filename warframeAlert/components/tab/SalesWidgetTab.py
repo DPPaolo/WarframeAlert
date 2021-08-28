@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.SalesBox import SalesBox
@@ -13,10 +15,10 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class SalesWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.alerts = {'FlashSales': {}}
-        self.alerts['FlashSales']['Featured'] = []  # Featured Items
-        self.alerts['FlashSales']['Discount'] = []  # Discounted Items
+        self.alerts['FlashSales']['Featured']: List[SalesBox] = []  # Featured Items
+        self.alerts['FlashSales']['Discount']: List[SalesBox] = []  # Discounted Items
 
         self.SalesWidget = QtWidgets.QWidget()
 
@@ -51,10 +53,10 @@ class SalesWidgetTab():
 
         self.SalesWidget.setLayout(self.gridSales)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.SalesWidget
 
-    def update_tab(self):
+    def update_tab(self) -> None:
         self.salesTabber.insertTab(1, self.DiscountedSalesScrollBar, translate("salesWidgetTab", "discountedItems"))
         if (not (len(self.alerts['FlashSales']['Discount']) > 0)):
             self.salesTabber.removeTab(self.salesTabber.indexOf(self.DiscountedSalesScrollBar))
@@ -71,7 +73,7 @@ class SalesWidgetTab():
         else:
             self.reset_sales()
 
-    def parse_sales(self, data):
+    def parse_sales(self, data: FlashSales) -> None:
         self.reset_sales()
         n_featured = len(self.alerts['FlashSales']['Featured'])
         n_discount = len(self.alerts['FlashSales']['Discount'])
@@ -117,20 +119,20 @@ class SalesWidgetTab():
                         self.alerts['FlashSales']['Featured'].append(temp)
                     del temp
 
-        self.add_sconti(n_featured, n_discount)
+        self.add_sales(n_featured, n_discount)
 
-    def add_sconti(self, n_sales, n_sconti):
-        for i in range(n_sales, len(self.alerts['FlashSales']['Featured'])):
+    def add_sales(self, n_featured: int, n_discount: int) -> None:
+        for i in range(n_featured, len(self.alerts['FlashSales']['Featured'])):
             if (not self.alerts['FlashSales']['Featured'][i].is_expired()):
                 self.gridFeaturedSales.addLayout(self.alerts['FlashSales']['Featured'][i].MerBox,
                                                  self.gridFeaturedSales.count(), 0)
 
-        for i in range(n_sconti, len(self.alerts['FlashSales']['Discount'])):
+        for i in range(n_discount, len(self.alerts['FlashSales']['Discount'])):
             if (not self.alerts['FlashSales']['Discount'][i].is_expired()):
                 self.gridDiscountedSales.addLayout(self.alerts['FlashSales']['Discount'][i].MerBox,
                                                    self.gridDiscountedSales.count(), 0)
 
-    def reset_sales(self):
+    def reset_sales(self) -> None:
         canc = []
         for i in range(0, len(self.alerts['FlashSales']['Featured'])):
             if (self.alerts['FlashSales']['Featured'][i].is_expired()):

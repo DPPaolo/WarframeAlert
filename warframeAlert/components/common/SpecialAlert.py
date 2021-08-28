@@ -1,7 +1,10 @@
 # coding=utf-8
+from typing import Union
+
 from PyQt5 import QtGui, QtWidgets
 
 from warframeAlert.components.common.Alert import Alert
+from warframeAlert.constants.warframeTypes import AlertMissionInfo
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import bool_to_yes_no, get_last_item_with_backslash
 from warframeAlert.utils.gameTranslationUtils import get_faction, get_node, get_mission_type, \
@@ -14,7 +17,7 @@ from warframeAlert.utils.warframeUtils import parse_reward
 
 class SpecialAlert(Alert):
 
-    def __init__(self, alert_id):
+    def __init__(self, alert_id: str) -> None:
         super().__init__(alert_id)
 
         self.Font = QtGui.QFont()
@@ -33,11 +36,11 @@ class SpecialAlert(Alert):
 
         self.Alerthbox0.addLayout(self.AlerthExtraBox0)
 
-    def set_alert_title_info(self, desc):
+    def set_alert_title_info(self, desc: str) -> None:
         if (desc != ""):
             self.extra_text += desc.upper() + ""
 
-    def set_alert_info(self, reqitem, consume_item, weapon):
+    def set_alert_info(self, reqitem: str, consume_item: str, weapon: str) -> None:
         add_bracket_end = False
         info = reqitem or consume_item or weapon
         if (info and self.extra_text != ""):
@@ -57,7 +60,7 @@ class SpecialAlert(Alert):
         if (add_bracket_end):
             self.extra_text += ")"
 
-    def set_alert_other_info(self, leader, advanced_spawn, aura, vip, fx):
+    def set_alert_other_info(self, leader: str, advanced_spawn: str, aura: str, vip: str, fx: str) -> None:
         if (self.extra_text != ""):
             self.extra_text += "\n"
         if (leader != ""):
@@ -71,16 +74,17 @@ class SpecialAlert(Alert):
         if (fx != ""):
             self.extra_text += "\t" + translate("specialAlert", "fx") + ": " + str(fx)
 
-    def set_extra_info(self):
+    def set_extra_info(self) -> None:
         text = divide_message(self.extra_text, 110)
         self.AlertExtraInfo.setText(text)
 
-    def hide(self):
+    def hide(self) -> None:
         super().hide()
         self.AlertExtraInfo.hide()
 
 
-def create_alert(alert, alert_id):
+#  TODO: change Union with |
+def create_alert(alert: AlertMissionInfo, alert_id: str) -> Union[None, Alert, SpecialAlert]:
     wave = ""
     if (alert):
         # Base Data
@@ -166,10 +170,10 @@ def create_alert(alert, alert_id):
             icon = alert['icon']
 
     else:
-        return -1
+        return None
 
     if (not faction or not mis_type or not mis_level):
-        return -1
+        return None
     if (extra == 0):
         temp = Alert(alert_id)
     else:
@@ -182,5 +186,5 @@ def create_alert(alert, alert_id):
     temp.set_alert_data(node, plan, level, mis_type, faction, item, wave, mis_level)
     temp.set_alert_extra_data(difficulty, enemy_spec, extra_enemy_spec)
     if (icon != ""):
-        temp.set_alert_image(None, icon)
+        temp.set_alert_image("", icon)
     return temp

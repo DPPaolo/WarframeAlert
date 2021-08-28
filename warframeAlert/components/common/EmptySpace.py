@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets
 
 class EmptySpace():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.space = QtWidgets.QLabel("")
 
         self.SpaceBox = QtWidgets.QHBoxLayout()

@@ -430,14 +430,14 @@ def get_pvp_mission_name(name: str) -> str:
         return get_item_name_en(name)
 
 
-def get_pvp_desc(challenge: str, num: int) -> str:
+def get_pvp_desc(challenge: str, num: str) -> str:
     if (challenge in PVP_CHALLENGE_DESC):
         desc = PVP_CHALLENGE_DESC[challenge][OptionsHandler.get_option("Language", str)]
-        return desc.replace("{{X}}", str(num))
+        return desc.replace("{{X}}", num)
     else:
         print(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
         LogHandler.err(translate("gameTranslation", "unknownPvPDesc") + ": " + challenge)
-        return challenge + " " + str(num)
+        return challenge + " " + num
 
 
 def get_pvp_alt_desc(name: str) -> str:

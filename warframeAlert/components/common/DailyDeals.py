@@ -10,7 +10,7 @@ from warframeAlert.utils.timeUtils import get_time
 
 
 class DailyDeals:
-    def __init__(self):
+    def __init__(self) -> None:
         font = QtGui.QFont()
         font.setBold(True)
 
@@ -57,7 +57,8 @@ class DailyDeals:
         self.DealsBox.addLayout(self.Dealshbox1)
         self.DealsBox.addLayout(self.Dealshbox2)
 
-    def set_deals_data(self, init, end, item, q_sold, q_total, original_price, sales, price_sales):
+    def set_deals_data(self, init: int, end: int, item: str, q_sold: int, q_total: int,
+                       original_price: int, sales: int, price_sales: int) -> None:
         self.DealsEnd.set_countdown(end[:10])
         self.DealsEnd.start()
 
@@ -76,4 +77,3 @@ class DailyDeals:
 
             self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
             self.DealsPrice.set_before_text(translate("dailyDeals", "price") + ": " + str(price) + " Platinum")
-

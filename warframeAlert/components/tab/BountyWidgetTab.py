@@ -14,7 +14,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 
 class BountyWidgetTab():
-    def __init__(self):
+    def __init__(self) -> None:
         self.BountiesWidget = QtWidgets.QWidget()
         self.BountiesGrid = QtWidgets.QGridLayout(self.BountiesWidget)
 
@@ -54,7 +54,7 @@ class BountyWidgetTab():
         self.FortunaTime.TimeOut.connect(self.set_fortuna_time)
         self.DeimosTime.TimeOut.connect(self.set_deimos_time)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.BountiesWidget
 
     def update_bounties(self, data: SyndicateMissions) -> None:
@@ -115,9 +115,8 @@ class BountyWidgetTab():
                 translate("bountyWidgetTab", "newSynJobs"))
             self.bounty_not_available()
 
-    def set_time(self, init, end):
-        self.CetusInit.setText(
-            translate("bountyWidgetTab", "bountyInit") + ": " + timeUtils.get_time(init))
+    def set_time(self, init: int, end: int) -> None:
+        self.CetusInit.setText(translate("bountyWidgetTab", "bountyInit") + ": " + timeUtils.get_time(init))
         self.CetusEnd.set_countdown(end)
         self.CetusEnd.start()
         self.CetusTimeFin = end
@@ -125,7 +124,7 @@ class BountyWidgetTab():
         self.set_fortuna_time()
         self.set_deimos_time()
 
-    def set_cetus_time(self):
+    def set_cetus_time(self) -> None:
         cetus_time, day = timeUtils.get_cetus_time(int(self.CetusTimeFin))
         if (day):
             self.CetusTime.set_name(translate("bountyWidgetTab", "cetusDay") + " ")
@@ -135,7 +134,7 @@ class BountyWidgetTab():
         self.CetusTime.set_countdown(int(timeUtils.get_local_time()) + cetus_time)
         self.CetusTime.start()
 
-    def set_fortuna_time(self):
+    def set_fortuna_time(self) -> None:
         fortuna_time, warm = timeUtils.get_fortuna_time()
         if (warm):
             self.FortunaTime.set_name(translate("bountyWidgetTab", "fortunaHot") + " ")
@@ -146,7 +145,7 @@ class BountyWidgetTab():
         self.FortunaTime.start()
 
     # same time of cetus
-    def set_deimos_time(self):
+    def set_deimos_time(self) -> None:
         deimos_time, fass = timeUtils.get_cetus_time(int(self.CetusTimeFin))
         if (fass):
             self.DeimosTime.set_name(translate("bountyWidgetTab", "deimosFass") + " ")
@@ -156,7 +155,7 @@ class BountyWidgetTab():
         self.DeimosTime.set_countdown(int(timeUtils.get_local_time()) + deimos_time)
         self.DeimosTime.start()
 
-    def bounty_not_available(self):
+    def bounty_not_available(self) -> None:
         self.OstronWidget.reset_bounty()
         self.FortunaWidget.reset_bounty()
         self.CetusInit.setText(translate("bountyWidgetTab", "bountyInit") + " : N/D")

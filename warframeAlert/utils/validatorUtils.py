@@ -56,7 +56,7 @@ def validate_construction_projects(json_data: ConstructionProjects) -> None:
     validate(instance={'ConstructionProjects': json_data}, schema=construction_projects_schema)
 
 
-def validate_daily_deals(json_data: DailyDeals) -> None:
+def validate_daily_deals(json_data: DailyDealsData) -> None:
     validate(instance={'DailyDeals': json_data}, schema=daily_deals_schema)
 
 

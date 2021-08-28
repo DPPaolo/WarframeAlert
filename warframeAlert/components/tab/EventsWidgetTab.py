@@ -441,7 +441,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     # Mission Data
     if ('MissionInfo' in event):
         alert = create_alert(event['MissionInfo'], str(timeUtils.get_local_time()))
-        if (alert != -1):
+        if (alert is not None):
             temp.add_event_object(EmptySpace().SpaceBox)
             temp.add_event_object(alert.AlertBox)
 

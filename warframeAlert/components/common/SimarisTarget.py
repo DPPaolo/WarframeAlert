@@ -6,7 +6,7 @@ from warframeAlert.utils.gameTranslationUtils import get_simaris_target
 
 
 class SimarisTarget():
-    def __init__(self):
+    def __init__(self) -> None:
         font = QtGui.QFont()
         font.setBold(True)
 
@@ -20,5 +20,5 @@ class SimarisTarget():
         self.SimarisBox.addWidget(self.SimarisLab)
         self.SimarisBox.addWidget(self.Simaris)
 
-    def set_simaris_target(self, simaris):
+    def set_simaris_target(self, simaris: str) -> None:
         self.Simaris.setText(get_simaris_target(simaris))

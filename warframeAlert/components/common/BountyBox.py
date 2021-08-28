@@ -1,8 +1,11 @@
 # coding=utf-8
+from typing import Union, List
+
 from PyQt5 import QtGui, QtWidgets
 
 from warframeAlert.components.common.MissionDropView import MissionDropView
 from warframeAlert.components.widget.MissionDropViewWidget import MissionDropViewWidget
+from warframeAlert.constants.warframeTypes import SyndicateJobs
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.gameTranslationUtils import get_bounty_job, get_bounty_job_desc
@@ -12,7 +15,7 @@ from warframeAlert.utils.warframeUtils import get_bounty_reward
 
 class BountyBox():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -64,7 +67,7 @@ class BountyBox():
 
         self.BountyReward.clicked.connect(lambda: self.open_drop_bounty())
 
-    def set_bounty_mission(self, job, rew, minlv, maxlv, xp):
+    def set_bounty_mission(self, job: str, rew: str, minlv: int, maxlv: int, xp: List[int]) -> None:
         self.reward = rew
         self.BountyJob.setText(get_last_item_with_backslash(get_bounty_job(job)))
         self.BountyDesc.setText(divide_message(get_bounty_job_desc(job)))
@@ -78,24 +81,25 @@ class BountyBox():
         else:
             self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " " + rew[-8])
 
-    def set_syndicate(self, syn, num, use_token):
+    # TODO: user | instead of Union
+    def set_syndicate(self, syn: str, num: Union[int, str], use_token: bool) -> None:
         self.BountySyn.setText(translate("bountyBox", "syndicate") + ": " + syn)
         self.BountyNumber.setText(translate("bountyBox", "bountyName") + " " + str(num))
         if (use_token):
             self.BountyXPLab.setText(translate("bountyBox", "token") + ": ")
 
-    def set_bounty_id(self, bounty_id):
+    def set_bounty_id(self, bounty_id: str) -> None:
         self.bounty_id = bounty_id
 
-    def get_bounty_id(self):
+    def get_bounty_id(self) -> str:
         return self.bounty_id
 
-    def open_drop_bounty(self):
+    def open_drop_bounty(self) -> None:
         name = [translate("bountyBox", "rewardType") + " A",
                 translate("bountyBox", "rewardType") + " B",
                 translate("bountyBox", "rewardType") + " C"]
         drop = MissionDropView()
-        self.missionDropWidget = MissionDropViewWidget(None, drop)
+        self.missionDropWidget = MissionDropViewWidget(drop)
         self.viewDropWidget = self.missionDropWidget.get_widget()
         if ('Venus' in self.reward):
             reward = get_bounty_reward(self.reward, "fortuna")
@@ -117,7 +121,7 @@ class BountyBox():
             print(translate("bountyBox", "noBountyRewardFound") + " " + self.reward)
         self.viewDropWidget.show()
 
-    def hide(self):
+    def hide(self) -> None:
         self.BountyNumber.hide()
         self.BountyJob.hide()
         self.BountyDesc.hide()
@@ -129,9 +133,10 @@ class BountyBox():
         self.BountySyn.hide()
 
 
-def create_bounty_box(job):
-    xp = []
-    job_type = minlv = maxlv = rew = ""
+def create_bounty_box(job: SyndicateJobs) -> BountyBox:
+    xp: List[int] = []
+    job_type = rew = ""
+    minlv = maxlv = 0
     if ('maxEnemyLevel' in job):
         maxlv = job['maxEnemyLevel']
     if ('minEnemyLevel' in job):

@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.SpecialAlert import create_alert
+from warframeAlert.constants.warframeTypes import Alerts
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
@@ -12,7 +13,7 @@ from warframeAlert.utils.gameTranslationUtils import get_item_name
 class AlertWidget():
     AllerteWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         self.alerts = {'Alerts': []}
 
@@ -26,21 +27,21 @@ class AlertWidget():
         self.gridAllerte.addWidget(self.NoAlert, 0, 0)
         self.AllerteWidget.setLayout(self.gridAllerte)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.AllerteWidget
 
-    def get_lenght(self):
+    def get_lenght(self) -> int:
         return len(self.alerts['Alerts'])
 
-    def parse_alert_data(self, data):
+    def parse_alert_data(self, data: Alerts):
         self.reset_alerts()
         n_alert = len(self.alerts['Alerts'])
         for alert in data:
             alert_id = alert['_id']['$oid']
             init = alert['Activation']['$date']['$numberLong']
             end = alert['Expiry']['$date']['$numberLong']
-            tempo = int(end[:10]) - int(timeUtils.get_local_time())
-            if (tempo > 0):
+            time = int(end[:10]) - int(timeUtils.get_local_time())
+            if (time > 0):
                 found = 0
 
                 for old_alert in self.alerts['Alerts']:
@@ -75,7 +76,7 @@ class AlertWidget():
 
         self.add_alerts(n_alert)
 
-    def add_alerts(self, n_alert):
+    def add_alerts(self, n_alert: int) -> None:
         for i in range(n_alert, len(self.alerts['Alerts'])):
             if (not self.alerts['Alerts'][i].is_expired()):
                 self.gridAllerte.addLayout(self.alerts['Alerts'][i].AlertBox, self.gridAllerte.count(), 0)
@@ -86,7 +87,7 @@ class AlertWidget():
         if (len(self.alerts['Alerts']) > 0):
             self.NoAlert.hide()
 
-    def reset_alerts(self):
+    def reset_alerts(self) -> None:
         self.NoAlert.show()
         canc = []
         for i in range(0, len(self.alerts['Alerts'])):

@@ -11,7 +11,7 @@ from warframeAlert.utils.fileUtils import get_separator
 
 class SalesBox():
 
-    def __init__(self, index):
+    def __init__(self, index: int) -> None:
         self.index = index
         self.SaleName = QtWidgets.QLabel("N/D")
         platinum_image = "assets" + get_separator() + "icon" + get_separator() + "platinum.png"
@@ -45,7 +45,7 @@ class SalesBox():
 
         self.SaleTime.TimeOut.connect(self.hide)
 
-    def set_sales_data(self, name, credit, plat, discount, end, is_show):
+    def set_sales_data(self, name: str, credit: int, plat: int, discount: int, end: int, is_show: bool) -> None:
         self.SaleName.setText(name)
         self.SaleIsShow.setText(translate("salesBox", "isShow") + ": " + bool_to_yes_no(is_show))
         self.SaleDiscount.setText(translate("salesBox", "discount") + ": " + str(discount) + "%")
@@ -64,7 +64,7 @@ class SalesBox():
         else:
             self.SalePricePlatinum.hide()
 
-    def set_other_sales_data(self, bogobuy, bogoget, featured, popular, init):
+    def set_other_sales_data(self, bogobuy: int, bogoget: int, featured: bool, popular: bool, init: str) -> None:
         self.SaleTime.set_tooltip(translate("salesBox", "start") + ": " + init)
         name_tooltip = translate("salesBox", "bogobuy") + ": " + str(bogobuy) + "\n"
         name_tooltip += translate("salesBox", "bogoget") + ": " + str(bogoget)
@@ -73,16 +73,16 @@ class SalesBox():
         is_show_tooltip += translate("salesBox", "popular") + ": " + bool_to_yes_no(popular)
         self.SaleIsShow.setToolTip(is_show_tooltip)
 
-    def get_item_name(self):
+    def get_item_name(self) -> str:
         return self.SaleName.text()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.SaleTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def hide_discount(self):
+    def hide_discount(self) -> None:
         self.SaleDiscount.hide()
 
-    def hide(self):
+    def hide(self) -> None:
         self.SaleName.hide()
         self.SalePriceCredit.hide()
         self.SalePricePlatinum.hide()

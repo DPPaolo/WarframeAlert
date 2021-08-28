@@ -13,7 +13,7 @@ class Countdown(QThread):
     TimeOut = QtCore.pyqtSignal()
     time = 0
 
-    def __init__(self, *name):
+    def __init__(self, *name) -> None:
         QThread.__init__(self)
         self.deleted = 0
         self.stop = 0
@@ -23,14 +23,14 @@ class Countdown(QThread):
             self.name = ""
         self.TimeLab = QtWidgets.QLabel(self.name)
 
-    def __del__(self):
+    def __del__(self) -> None:
         self.deleted = 1
         try:
             self.wait()
         except RuntimeError:
             pass
 
-    def run(self):
+    def run(self) -> None:
         while(not self.deleted):
             if not self.stop:
                 end_time = int(self.time) - int(timeUtils.get_local_time())
@@ -46,10 +46,10 @@ class Countdown(QThread):
                     self.TimeLab.setText(self.name + str(end_time))
             time.sleep(1)
 
-    def get_time(self):
+    def get_time(self) -> int:
         return self.time
 
-    def calculate_time(self, end_time):
+    def calculate_time(self, end_time: int) -> None:
         if (end_time < 0):
             calculated_end_timer = translate("timeUtils", "Timed Out")
             self.TimeLab.setText(self.name + " " + str(calculated_end_timer))
@@ -59,25 +59,23 @@ class Countdown(QThread):
             calculated_end_timer = timeUtils.get_alert_time(end_time)
             self.TimeLab.setText(self.name + " " + calculated_end_timer)
 
-    def set_name(self, name):
+    def set_name(self, name: str) -> None:
         self.name = name
 
-    def set_countdown(self, timer):
+    def set_countdown(self, timer: int) -> None:
         self.time = int(timer)
 
-    def set_alignment(self, alignment):
+    def set_alignment(self, alignment: QtCore.Qt.AlignmentFlag) -> None:
         self.TimeLab.setAlignment(alignment)
 
     def set_tooltip(self, text: str) -> None:
         self.TimeLab.setToolTip(text)
 
-    def start_timer(self):
+    def start_timer(self) -> None:
         self.stop = 0
 
-    def stop_timer(self):
+    def stop_timer(self) -> None:
         self.stop = 1
 
-    def hide(self):
+    def hide(self) -> None:
         self.TimeLab.hide()
-
-

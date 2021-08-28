@@ -5,7 +5,7 @@ from warframeAlert.services.translationService import translate
 
 
 class SortieMissionBox():
-    def __init__(self, mission_number):
+    def __init__(self, mission_number: int) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -31,16 +31,16 @@ class SortieMissionBox():
         self.SortieMissionBox.addWidget(self.SortieName)
         self.SortieMissionBox.addLayout(self.SortieBoxData)
 
-    def to_string(self):
+    def to_string(self) -> str:
         return self.SortieMission.text() + " (" + self.SortieModifier.text() + ")"
 
-    def set_mission_data(self, mission, modifier, node, planet, tileset):
+    def set_mission_data(self, mission: str, modifier: str, node: str, planet: str, tileset: str) -> None:
         self.SortieMission.setText(mission)
         self.SortieModifier.setText(modifier)
         self.SortieNode.setText(node + " " + planet)
         self.SortieTile.setText(tileset)
 
-    def sortie_not_available(self):
+    def sortie_not_available(self) -> None:
         self.SortieMission.setText("N/D")
         self.SortieModifier.setText("N/D")
         self.SortieNode.setText("N/D")

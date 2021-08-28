@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.HubEvent import create_hub_event
+from warframeAlert.constants.warframeTypes import HubEvents
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import remove_widget
@@ -10,7 +11,7 @@ from warframeAlert.utils.commonUtils import remove_widget
 class HubWidget:
     hubWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.data = {'HubEvents': []}
 
         self.hubWidget = QtWidgets.QWidget()
@@ -26,10 +27,10 @@ class HubWidget:
 
         self.hubWidget.setLayout(self.gridHub)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.hubWidget
 
-    def parse_hub_event(self, json_data):
+    def parse_hub_event(self, json_data: HubEvents) -> None:
         self.reset_hub_event()
         n_hub = len(self.data['HubEvents'])
         if (json_data):
@@ -53,7 +54,7 @@ class HubWidget:
 
         self.add_hub_event(n_hub)
 
-    def add_hub_event(self, n_hub):
+    def add_hub_event(self, n_hub: int) -> None:
         for i in range(n_hub, len(self.data['HubEvents'])):
             if (not self.data['HubEvents'][i].is_expired()):
                 self.gridHub.addLayout(self.data['HubEvents'][i].HubBox, self.gridHub.count(), 0)
@@ -61,7 +62,7 @@ class HubWidget:
         if (len(self.data['HubEvents']) > 0):
             self.NoHubLab.hide()
 
-    def reset_hub_event(self):
+    def reset_hub_event(self) -> None:
         self.NoHubLab.show()
         canc = []
         for i in range(0, len(self.data['HubEvents'])):

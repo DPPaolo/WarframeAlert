@@ -16,7 +16,7 @@ from warframeAlert.utils.stringUtils import divide_message
 from warframeAlert.utils.warframeUtils import get_operation_type
 
 
-def get_news_type(message, url):
+def get_news_type(message: str, url: str) -> int:
     if (url == ""):  # No URL available
         return 2
     elif ("www.youtube.com" in url):  # YouTube
@@ -34,7 +34,7 @@ def get_news_type(message, url):
 
 
 class NewsWidgetTab():
-    def __init__(self):
+    def __init__(self) -> None:
         self.NewsWidgetTab = QtWidgets.QWidget()
         self.alerts = {'Events': {}, 'GlobalUpgrades': []}
         self.alerts['Events']['News'] = []
@@ -92,7 +92,7 @@ class NewsWidgetTab():
 
         self.NewsWidgetTab.setLayout(self.gridNews)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.NewsWidgetTab
 
     def update_news(self, data: Events) -> None:
@@ -103,7 +103,7 @@ class NewsWidgetTab():
             commonUtils.print_traceback(translate("newsWidgetTab", "newsError") + ": " + str(er))
             self.reset_news()
 
-    def parse_news(self, data):
+    def parse_news(self, data: Events) -> None:
         n_news = len(self.alerts['Events']['News'])
         n_contest = len(self.alerts['Events']['Contest'])
         for news in data:
@@ -225,7 +225,7 @@ class NewsWidgetTab():
         news_text += translate("newsWidgetTab", "time") + ": " + translated_time
         self.NewsLabel.setText(news_text)
 
-    def add_news(self, n_news, n_news2):
+    def add_news(self, n_news: int, n_contest: int) -> None:
         for i in range(n_news, len(self.alerts['Events']['News'])):
             self.grid.addLayout(self.alerts['Events']['News'][i].NewsBox, 1 + int(n_news / 2), n_news % 2)
             self.alerts['Events']['News'][i].show()
@@ -234,14 +234,14 @@ class NewsWidgetTab():
                 self.alerts['Events']['News'][i].get_title(),
                 None)
             n_news += 1
-        for i in range(n_news2, len(self.alerts['Events']['Contest'])):
-            self.gridC.addLayout(self.alerts['Events']['Contest'][i].NewsBox, 1 + int(n_news2 / 2), n_news2 % 2)
+        for i in range(n_contest, len(self.alerts['Events']['Contest'])):
+            self.gridC.addLayout(self.alerts['Events']['Contest'][i].NewsBox, 1 + int(n_contest / 2), n_contest % 2)
             self.alerts['Events']['Contest'][i].show()
             NotificationService.send_notification(
                 translate("newsWidgetTab", "newNews!"),
                 self.alerts['Events']['Contest'][i].get_title(),
                 None)
-            n_news2 += 1
+            n_contest += 1
 
     def update_global_upgrades(self, data: GlobalUpgrades) -> None:
         try:
@@ -251,23 +251,16 @@ class NewsWidgetTab():
             commonUtils.print_traceback(translate("newsWidgetTab", "globalUpgradeError") + ": " + str(er))
             self.reset_global_upgrades()
 
-    def parse_global_upgrade(self, data):
+    def parse_global_upgrade(self, data: GlobalUpgrades) -> None:
         self.reset_global_upgrades()
         if (data):
             n_upgrade = len(self.alerts['GlobalUpgrades'])
             for upgrade in data:
-                try:
-                    iniz = timeUtils.get_time(upgrade['Activation']['$date']['$numberLong'])
-                    fin = upgrade['ExpiryDate']['$date']['$numberLong']
-                except KeyError:
-                    iniz = str((int(timeUtils.get_local_time())) * 1000)
-                    fin = str((int(timeUtils.get_local_time()) + 3600) * 1000)
-                try:
-                    upgrade_id = upgrade['_id']['$oid']
-                except KeyError:
-                    upgrade_id = upgrade['_id']['$id']
+                init = timeUtils.get_time(upgrade['Activation']['$date']['$numberLong'])
+                end = upgrade['ExpiryDate']['$date']['$numberLong']
+                upgrade_id = upgrade['_id']['$oid']
 
-                remaining_time = int(fin[:10]) - int(timeUtils.get_local_time())
+                remaining_time = int(end[:10]) - int(timeUtils.get_local_time())
                 if (remaining_time > 0):
                     found = 0
 
@@ -298,7 +291,7 @@ class NewsWidgetTab():
                         else:
                             valid_type = ""
                         temp = GlobalUpgrade(upgrade_id)
-                        temp.set_upgrade_data(iniz, fin, upgrade_type, operation, value, node)
+                        temp.set_upgrade_data(init, end, upgrade_type, operation, value, node)
                         temp.set_other_data(tag, desc, valid_type)
 
                         self.alerts['GlobalUpgrades'].append(temp)
@@ -306,7 +299,7 @@ class NewsWidgetTab():
 
             self.add_global_upgrades(n_upgrade)
 
-    def add_global_upgrades(self, n_upgrade):
+    def add_global_upgrades(self, n_upgrade: int) -> None:
         for i in range(n_upgrade, len(self.alerts['GlobalUpgrades'])):
             if (not self.alerts['GlobalUpgrades'][i].is_expired()):
                 self.GlobalUpgrade.show()
@@ -317,7 +310,7 @@ class NewsWidgetTab():
                     self.alerts['GlobalUpgrades'][i].to_string(),
                     self.alerts['GlobalUpgrades'][i].get_image())
 
-    def reset_news(self):
+    def reset_news(self) -> None:
         self.NoNewsLabel.hide()
         self.NoNewsOtherLabel.hide()
         len_n = len(self.alerts['Events']['News'])
@@ -327,7 +320,7 @@ class NewsWidgetTab():
         if (len_no == 0):
             self.NoNewsOtherLabel.show()
 
-    def reset_global_upgrades(self):
+    def reset_global_upgrades(self) -> None:
         canc = []
         for i in range(0, len(self.alerts['GlobalUpgrades'])):
             if (self.alerts['GlobalUpgrades'][i].is_expired()):

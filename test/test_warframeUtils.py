@@ -2,7 +2,7 @@
 import unittest
 
 from warframeAlert.utils.warframeUtils import get_image_path_from_name, get_weapon_part, get_weapon_type, \
-    get_image_path_from_export_manifest, parse_reward, get_operation_type, get_bounty_reward
+    parse_reward, get_operation_type, get_bounty_reward
 
 
 class TestWarframeUtils(unittest.TestCase):
@@ -18,10 +18,6 @@ class TestWarframeUtils(unittest.TestCase):
     WEAPON_TYPE_FOUND = "Karak Wraith"
     WEAPON_TYPE_UNKOWN = "/Lotus/Interface/Icons/Store/GlaxionVandal.png"
     WEAPON_TYPE_NOT_FOUND = "Unknown"
-    IMAGE_EXPORT_MANIFEST = "/Lotus/Weapons/Tenno/Melee/MeleeTrees/WhipCmbOneMeleeTree"
-    IMAGE_EXPORT_MANIFEST_FOUND = "/Lotus/Interface/Cards/Images/Stances/WhipCombo1a.jpeg"
-    IMAGE_EXPORT_MANIFEST_UNKNOWN = "/Lotus/Tenno/Melee/MeleeTrees/WhipCmbOneMeleeTree"
-    IMAGE_EXPORT_MANIFEST_NOT_FOUND = "/Lotus/Interface/Icons/Store/CorpusCreditCardHigh.png"
     REWARDS_COUNTED_ITEMS_ONLY = {'countedItems': [{'ItemType': '/Lotus/Types/Items/Research/EnergyComponent',
                                                     'ItemCount': 3}]}
     REWARDS_CREDITS_ONLY = {'credits': 3000}
@@ -99,14 +95,6 @@ class TestWarframeUtils(unittest.TestCase):
     def test_get_weapon_type_not_found(self):
         res = get_weapon_type(self.WEAPON_TYPE_UNKOWN)
         self.assertEqual(self.WEAPON_TYPE_NOT_FOUND, res)
-
-    def test_get_image_path_from_export_manifest(self):
-        res = get_image_path_from_export_manifest(self.IMAGE_EXPORT_MANIFEST)
-        self.assertEqual(self.IMAGE_EXPORT_MANIFEST_FOUND, res)
-
-    def test_get_image_path_from_export_manifest_not_found(self):
-        res = get_image_path_from_export_manifest(self.IMAGE_EXPORT_MANIFEST_UNKNOWN)
-        self.assertEqual(self.IMAGE_EXPORT_MANIFEST_NOT_FOUND, res)
 
     def test_get_bounty_reward(self):
         res = get_bounty_reward("/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierATableBRewards", "cetus")

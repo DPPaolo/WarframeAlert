@@ -131,9 +131,7 @@ class TabService(QtCore.QObject):
         build_label: str = json_data['BuildLabel']
         game_time: int = json_data['Time']
 
-        # TODO: try with ray
-        # https://stackoverflow.com/questions/2957116/make-2-functions-run-at-the-same-time
-        # https://github.com/ray-project/ray
+        # TODO: (if possible) try to parallelize
 
         self.fissure_tab.update_fissure(json_data['ActiveMissions'], json_data['VoidStorms'])
         self.event_tab.update_alert_mission(json_data['Alerts'])

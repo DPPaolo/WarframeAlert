@@ -1,7 +1,10 @@
 # coding=utf-8
+from typing import Tuple
+
 from PyQt5 import QtWidgets, QtCore
 
 from warframeAlert.components.common.BountyBox import create_bounty_box
+from warframeAlert.constants.warframeTypes import SyndicateMission
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import remove_widget
 from warframeAlert.utils.gameTranslationUtils import get_syndicate
@@ -10,10 +13,10 @@ from warframeAlert.utils.gameTranslationUtils import get_syndicate
 class BountyWidget:
     BountyWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.alerts = {'Bounty': []}
-        self.bountyInit = None
-        self.bountyEnd = None
+        self.bountyInit: int = 0
+        self.bountyEnd: int = 0
         self.BountyWidget = QtWidgets.QWidget()
         self.NoBountyMission = QtWidgets.QLabel(translate("bountyWidget", "noBounty"))
         self.NoBountyMission.setAlignment(QtCore.Qt.AlignCenter)
@@ -24,15 +27,15 @@ class BountyWidget:
 
         self.BountyWidget.setLayout(self.BountyGrid)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.BountyWidget
 
-    def get_timer(self):
+    def get_timer(self) -> Tuple[int, int]:
         return self.bountyInit, self.bountyEnd
 
-    def parse_bounty(self, data, use_token=False):
+    def parse_bounty(self, data: SyndicateMission, use_token: bool = False) -> None:
         if (data):
-            is_bounty_present = 0
+            is_bounty_present = False
             bounty_id = data['_id']['$oid']
             tag = data['Tag']
 
@@ -53,13 +56,13 @@ class BountyWidget:
                     bounty.set_bounty_id(bounty_id)
                     self.alerts['Bounty'].append(bounty)
                     del bounty
-                is_bounty_present = 1
+                is_bounty_present = True
 
             self.add_bounty(is_bounty_present)
         else:
             self.reset_bounty()
 
-    def add_bounty(self, bounty):
+    def add_bounty(self, bounty: bool) -> None:
         if (bounty):
             for i in range(0, len(self.alerts['Bounty'])):
                 self.BountyGrid.addLayout(self.alerts['Bounty'][i].BountyBox, self.BountyGrid.count(), 0)
@@ -67,7 +70,7 @@ class BountyWidget:
         if (len(self.alerts['Bounty']) > 0):
             self.NoBountyMission.hide()
 
-    def reset_bounty(self):
+    def reset_bounty(self) -> None:
         self.NoBountyMission.show()
         for i in reversed(range(0, len(self.alerts['Bounty']))):
             self.alerts['Bounty'][i].hide()

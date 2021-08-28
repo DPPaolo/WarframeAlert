@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.components.common.CommonImages import CommonImages
@@ -15,7 +17,7 @@ from warframeAlert.utils.warframeUtils import get_relic_item, get_relic_drop
 
 class RelicBox():
 
-    def __init__(self, tier):
+    def __init__(self, tier: int) -> None:
 
         self.ViewDropWidget = None
 
@@ -60,7 +62,7 @@ class RelicBox():
         self.RelicBox.addWidget(self.RelicDrop)
         self.RelicBox.addStretch(1)
 
-    def set_relic_data(self, name, reward):
+    def set_relic_data(self, name: str, reward: List[tuple[str, str]]) -> None:
         self.name = name
         self.RelicName.setText(name)
         self.RelicReward1.setText(reward[0][0])
@@ -79,7 +81,7 @@ class RelicBox():
 
         self.set_relic_image()
 
-    def set_relic_image(self):
+    def set_relic_image(self) -> None:
         if (self.tier == 1):
             tier = "Lith"
         elif (self.tier == 2):
@@ -99,18 +101,18 @@ class RelicBox():
         self.RelicImg.set_image(image_name)
         self.RelicImg.set_image_dimension(60, 60, QtCore.Qt.KeepAspectRatio)
 
-    def set_relic_tier(self, tier):
+    def set_relic_tier(self, tier: int) -> None:
         self.tier = tier
         self.set_relic_image()
 
-    def set_relic_name(self, name):
+    def set_relic_name(self, name: str) -> None:
         reward = get_relic_item(name)
         self.set_relic_data(name, reward)
 
-    def hide_button(self):
+    def hide_button(self) -> None:
         self.RelicDrop.hide()
 
-    def open_drop_relic(self):
+    def open_drop_relic(self) -> None:
         reward = get_relic_drop(self.name)
         reward = divide_for_n(reward, 3)
         name = [translate("relicBox", "missions"), "", ""]
@@ -122,7 +124,7 @@ class RelicBox():
         self.ViewDropWidget.show()
 
 
-def set_relic_rarity_font(rarity):
+def set_relic_rarity_font(rarity: str) -> str:
     if (translate("warframeUtils", "rare") in rarity):
         return "QLabel { color : gold; }"
     elif (translate("warframeUtils", "notCommon") in rarity):

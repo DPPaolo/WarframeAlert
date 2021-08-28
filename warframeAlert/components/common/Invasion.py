@@ -1,22 +1,22 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import Qt
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.EmptySpace import EmptySpace
-from warframeAlert.constants.files import DEFAULT_SITE_IMAGE
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.timeUtils import get_date_time
-from warframeAlert.utils.warframeUtils import get_weapon_part, get_weapon_type, get_image_path_from_name, \
-    get_image_path_from_export_manifest
+from warframeAlert.utils.warframeUtils import get_weapon_part, get_weapon_type, get_image_path_from_name
 
 
 class Invasion():
 
-    def __init__(self, invasion_id, chain_id):
-        self.completed = False
+    def __init__(self, invasion_id: str, chain_id: str) -> None:
+        self.completed: bool = False
         self.image = None
         self.invasion_id = invasion_id
         self.invasion_chain_id = chain_id
@@ -74,19 +74,19 @@ class Invasion():
         self.InvasionBox.addLayout(self.InvasionBox6)
         self.InvasionBox.addLayout(EmptySpace().SpaceBox)
 
-    def set_completed(self, completed):
+    def set_completed(self, completed: bool) -> None:
         self.completed = completed
 
-    def is_completed(self):
+    def is_completed(self) -> bool:
         return self.completed
 
-    def get_invasion_id(self):
+    def get_invasion_id(self) -> str:
         return self.invasion_id
 
-    def get_title(self):
+    def get_title(self) -> str:
         return self.InvDesc.text() + " " + self.InvNode.text()
 
-    def to_string(self):
+    def to_string(self) -> str:
         name = self.InvAttacker.text() + " vs " + self.InvDefender.text() + "\n"
         if (self.InvAttacker.text() == "Infested"):
             reward = self.InvRewardDef.text()
@@ -95,27 +95,28 @@ class Invasion():
 
         return name + reward
 
-    def get_image(self):
+    def get_image(self) -> str:
         return self.image
 
-    def set_invasion_data(self, mission, node, attacker_faction, defender_faction):
+    def set_invasion_data(self, mission: str, node: str, attacker_faction: str, defender_faction: str) -> None:
         self.InvNode.setText(mission + " " + node)
         self.InvAttacker.setText(defender_faction)
         self.InvDefender.setText(attacker_faction)
         self.InvAttacker.setStyleSheet(get_invasion_color(defender_faction))
         self.InvDefender.setStyleSheet(get_invasion_color(attacker_faction))
 
-    def set_invasion_info(self, init, loctag, perc):
+    def set_invasion_info(self, init: int, loctag: str, perc: List[int]):
         self.InvStart.setText(translate("invasion", "invasionInit") + " " + get_date_time(init))
         self.InvDesc.setText(loctag)
         self.set_invasion_perc(perc)
 
-    def set_invasion_reward(self, attacker_reward, defender_reward, attacker_reward_item, defender_reward_item):
+    def set_invasion_reward(self, attacker_reward: str, defender_reward: str,
+                            attacker_reward_item: str, defender_reward_item: str) -> None:
         self.InvRewardAtt.setText(attacker_reward)
         self.InvRewardDef.setText(defender_reward)
         self.set_invasion_image(attacker_reward, defender_reward, attacker_reward_item, defender_reward_item)
 
-    def set_invasion_perc(self, perc):
+    def set_invasion_perc(self, perc: List[int]) -> None:
         self.InvPer.reset()
         self.InvPer.setMaximum(perc[1])
         if (perc[2] == 1):
@@ -137,7 +138,8 @@ class Invasion():
                 self.InvPer.setValue(value)
             self.InvPer.setToolTip(str(value * 100 / perc[1]) + "%")
 
-    def set_invasion_image(self, attacker_reward, defender_reward, attacker_reward_item, defender_reward_item):
+    def set_invasion_image(self, attacker_reward: str, defender_reward: str,
+                           attacker_reward_item: str, defender_reward_item: str) -> None:
         if (" x " in attacker_reward):
             attacker_reward = attacker_reward.split(" x ")[1]
         if (" x " in defender_reward):
@@ -154,9 +156,9 @@ class Invasion():
             elif (get_image_path_from_name(attacker_reward) != attacker_reward):
                 img = get_image_path_from_name(attacker_reward)
             else:
-                img = get_image_path_from_export_manifest(attacker_reward_item)
-            image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-            self.InvAttackerImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
+                img = attacker_reward_item + ".png"
+            image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
+            self.InvAttackerImg.set_image(image_name)
             self.image = image_name
             self.InvAttackerImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
         else:
@@ -173,14 +175,14 @@ class Invasion():
         elif (get_image_path_from_name(defender_reward) != defender_reward):
             img = get_image_path_from_name(defender_reward)
         else:
-            img = get_image_path_from_export_manifest(defender_reward_item)
-        image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-        self.InvDefenderImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
+            img = defender_reward_item + ".png"
+        image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
+        self.InvDefenderImg.set_image(image_name)
         if (not self.image):
             self.image = image_name
         self.InvDefenderImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
 
-    def hide(self):
+    def hide(self) -> None:
         self.InvDesc.hide()
         self.InvStart.hide()
         self.InvNode.hide()
@@ -195,10 +197,10 @@ class Invasion():
         self.InvPer.hide()
 
 
-def get_invasion_color(faz):
-    if (faz == "Grineer"):
+def get_invasion_color(faction: str) -> str:
+    if (faction == "Grineer"):
         return "QLabel { color : red; }"
-    elif (faz == "Corpus"):
+    elif (faction == "Corpus"):
         return "QLabel { color : blue; }"
-    elif (faz == "Infested"):
+    elif (faction == "Infested"):
         return "QLabel { color : green; }"

@@ -6,7 +6,7 @@ from warframeAlert.components.widget.HubWidget import HubWidget
 from warframeAlert.components.widget.RelayStationWidget import RelayStationWidget
 from warframeAlert.components.widget.TwitchPromoWidget import TwitchPromoWidget
 from warframeAlert.constants.warframeTypes import TwitchPromos, PrimeVaultAvailabilities, PrimeAccessAvailability, \
-    NodeOverrides, LibraryInfo, HubEvents, FeaturedGuilds, ExperimentRecommended, DailyDeals
+    NodeOverrides, LibraryInfo, HubEvents, FeaturedGuilds, ExperimentRecommended, DailyDealsData
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 from warframeAlert.utils.logUtils import LogHandler
@@ -14,7 +14,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class OtherWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.otherWidget = QtWidgets.QWidget()
         self.generalWidget = GeneralInfoWidget()
         self.relayStationWidget = RelayStationWidget()
@@ -36,10 +36,10 @@ class OtherWidgetTab():
 
         self.otherGrid.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.otherWidget
 
-    def update_tab(self):
+    def update_tab(self) -> None:
         self.OtherTabber.insertTab(2, self.hubEventWidget.get_widget(), translate("otherWidgetTab", "hub"))
         self.OtherTabber.insertTab(3, self.twitchPromoWidget.get_widget(), translate("otherWidgetTab", "twitchPromo"))
         if (not (len(self.hubEventWidget.data['HubEvents']) > 0)):
@@ -47,10 +47,12 @@ class OtherWidgetTab():
         if (not (len(self.twitchPromoWidget.data['TwitchPromos']) > 0)):
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
-    def set_other_datas(self, version: int, mob_version: str, world_seed: str, force_logout_version: int, dtls: bool) -> None:
+    def set_other_datas(self, version: int, mob_version: str, world_seed: str,
+                        force_logout_version: int, dtls: bool) -> None:
         self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
 
-    def update_prime_access(self, prime_access: PrimeAccessAvailability, prime_available: PrimeVaultAvailabilities) -> None:
+    def update_prime_access(self, prime_access: PrimeAccessAvailability,
+                            prime_available: PrimeVaultAvailabilities) -> None:
         try:
             self.generalWidget.parse_prime_access(prime_access, prime_available)
         except Exception as er:
@@ -65,7 +67,7 @@ class OtherWidgetTab():
             LogHandler.err(translate("otherWidgetTab", "simarisUpdateError") + ": " + str(er))
             commonUtils.print_traceback(translate("otherWidgetTab", "simarisUpdateError") + ": " + str(er))
 
-    def update_daily_deals(self, data: DailyDeals) -> None:
+    def update_daily_deals(self, data: DailyDealsData) -> None:
         try:
             self.relayStationWidget.parse_daily_deals(data)
         except Exception as er:

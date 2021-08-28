@@ -16,7 +16,7 @@ from warframeAlert.utils.warframeUtils import parse_reward
 
 class InvasionWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.InvasionWidget = QtWidgets.QWidget()
 
         self.alerts = {'Invasions': {'Grineer': [], 'Corpus': [], 'Infested': []}, 'NodeOverrides': []}
@@ -99,10 +99,10 @@ class InvasionWidgetTab():
 
         self.InvasionWidget.setLayout(self.gridInv2)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.InvasionWidget
 
-    def update_tab(self):
+    def update_tab(self) -> None:
         self.Invtabber.insertTab(3, self.InvScrollBarO, translate("invasionWidget", "OccupiedNode"))
 
         if (not len(self.alerts['NodeOverrides']) > 0):
@@ -117,7 +117,7 @@ class InvasionWidgetTab():
                 commonUtils.print_traceback(translate("invasionWidget", "invasionUpdateError") + ": " + str(er))
                 self.reset_invasion()
 
-    def parse_invasion(self, data):
+    def parse_invasion(self, data: Invasions) -> None:
         self.reset_invasion()
         n_inv_g = len(self.alerts['Invasions']['Grineer'])
         n_inv_c = len(self.alerts['Invasions']['Corpus'])
@@ -176,7 +176,7 @@ class InvasionWidgetTab():
 
         self.add_invasions(n_inv_g, n_inv_c, n_inv_i)
 
-    def add_invasions(self, n_inv_g, n_inv_c, n_inv_i):
+    def add_invasions(self, n_inv_g: int, n_inv_c: int, n_inv_i: int) -> None:
         for i in range(n_inv_g, len(self.alerts['Invasions']['Grineer'])):
             if (not self.alerts['Invasions']['Grineer'][i].is_completed()):
                 self.gridGInv.addLayout(self.alerts['Invasions']['Grineer'][i].InvasionBox, self.gridGInv.count(), 0)
@@ -205,7 +205,7 @@ class InvasionWidgetTab():
         if (len(self.alerts['Invasions']['Infested']) > 0):
             self.NoInvI.hide()
 
-    def reset_invasion(self):
+    def reset_invasion(self) -> None:
         self.NoInvG.show()
         self.NoInvC.show()
         self.NoInvI.show()
@@ -231,16 +231,13 @@ class InvasionWidgetTab():
                 commonUtils.print_traceback(translate("invasionWidget", "nodeOverrideUpdateError") + ": " + str(er))
                 self.reset_invasion_node()
 
-    def parse_node_override(self, data):
+    def parse_node_override(self, data: NodeOverrides) -> None:
         self.reset_invasion_node()
         n_nod = len(self.alerts['NodeOverrides'])
-        for nod in data:
-            try:
-                node_id = nod['_id']['$oid']
-            except KeyError:
-                node_id = nod['_id']['$id']
-            node = get_node(nod['Node'])
-            if ('Faction' in nod):
+        for node_override in data:
+            node_id = node_override['_id']['$oid']
+            node = get_node(node_override['Node'])
+            if ('Faction' in node_override):
                 for override in self.alerts['NodeOverrides']:
                     found = 0
                     if (override.get_node_id() == node_id):
@@ -248,10 +245,10 @@ class InvasionWidgetTab():
 
                     if (found == 0):
                         try:
-                            expiry = nod['Expiry']['$date']['$numberLong']
+                            expiry = node_override['Expiry']['$date']['$numberLong']
                         except KeyError:
                             expiry = str((int(timeUtils.get_local_time()) + 3600) * 1000)
-                        faction = get_faction(nod['Faction'])
+                        faction = get_faction(node_override['Faction'])
 
                         timer = int(expiry[:10]) - int(timeUtils.get_local_time())
                         if (timer > 0):
@@ -263,7 +260,7 @@ class InvasionWidgetTab():
 
         self.add_invasion_node(n_nod)
 
-    def add_invasion_node(self, n_nod):
+    def add_invasion_node(self, n_nod: int) -> None:
         for i in range(n_nod, len(self.alerts['NodeOverrides'])):
             if (not self.alerts['NodeOverrides'][i].is_expired()):
                 self.gridOccInv.addLayout(self.alerts['NodeOverrides'][i].InvasionNodeBox, self.gridOccInv.count(), 0)
@@ -271,7 +268,7 @@ class InvasionWidgetTab():
         if (len(self.alerts['NodeOverrides']) > 0):
             self.NoInvOcc.hide()
 
-    def reset_invasion_node(self):
+    def reset_invasion_node(self) -> None:
         self.NoInvOcc.show()
         canc = []
         for i in range(0, len(self.alerts['NodeOverrides'])):
@@ -292,27 +289,25 @@ class InvasionWidgetTab():
             commonUtils.print_traceback(translate("invasionWidget", "invasionProjectUpdateError") + ": " + str(er))
             self.reset_invasion_project()
 
-    def parse_invasion_project(self, data):
+    def parse_invasion_project(self, data: ProjectPcts) -> None:
         self.reset_invasion_project()
         fomor = data[0]
         razor = data[1]
         unk = data[2]
         if (unk != 0):
             LogHandler.debug(translate("invasionWidget", "unknownInvasionProject") + str(unk))
-        self.set_invasion_project(fomor, razor)
+        self.set_invasion_project(float(fomor), float(razor))
 
-    def set_invasion_project(self, fomor, razor):
+    def set_invasion_project(self, fomor: float, razor: float) -> None:
         self.FomorPer.setToolTip(str(fomor) + "%")
         self.RazorPer.setToolTip(str(razor) + "%")
-        if (float(fomor) >= 100):
+        if (fomor >= 100):
             fomor = 100
-        if (float(razor) >= 100):
+        if (razor >= 100):
             razor = 100
-        # noinspection PyTypeChecker
-        self.FomorPer.setValue(float(fomor))
-        # noinspection PyTypeChecker
-        self.RazorPer.setValue(float(razor))
+        self.FomorPer.setValue(int(fomor))
+        self.RazorPer.setValue(int(razor))
 
-    def reset_invasion_project(self):
+    def reset_invasion_project(self) -> None:
         self.FomorPer.reset()
         self.RazorPer.reset()

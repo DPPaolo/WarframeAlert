@@ -12,7 +12,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 
 class GlobalUpgrade():
-    def __init__(self, upgrade_id):
+    def __init__(self, upgrade_id: str) -> None:
         self.id = upgrade_id
         self.upgrade_image = None
         font = QtGui.QFont()
@@ -40,7 +40,8 @@ class GlobalUpgrade():
         self.UpgradeBox.addLayout(self.Upgradevbox)
         self.UpgradeBox.addStretch(1)
 
-    def set_upgrade_data(self, init, end, upgrade_type, operation, value, node):
+    def set_upgrade_data(self, init: str, end: int, upgrade_type: str,
+                         operation: str, value: int, node: list[tuple[str, str]]) -> None:
         nodes = ""
         for nod in node:
             nodes += nod[0] + " " + nod[1] + " "
@@ -50,7 +51,7 @@ class GlobalUpgrade():
         self.UpgradeText.setText(get_upgrade_type(upgrade_type) + operation + str(value) + " " + nodes)
         self.set_image(upgrade_type)
 
-    def set_other_data(self, tag, desc, valid_type):
+    def set_other_data(self, tag: str, desc: str, valid_type: str) -> None:
         tooltip = ""
         if (tag != ""):
             tooltip += tag + " "
@@ -61,25 +62,25 @@ class GlobalUpgrade():
         if (tooltip != ""):
             self.UpgradeImage.set_tooltip(tooltip)
 
-    def to_string(self):
+    def to_string(self) -> str:
         return self.UpgradeText.text()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.UpgradeEnd.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def get_id(self):
+    def get_id(self) -> str:
         return self.id
 
-    def get_image(self):
+    def get_image(self) -> str:
         return self.upgrade_image
 
-    def hide(self):
+    def hide(self) -> None:
         self.UpgradeImage.hide()
         self.UpgradeText.hide()
         self.UpgradeInit.hide()
         self.UpgradeEnd.hide()
 
-    def set_image(self, upgrade_type):
+    def set_image(self, upgrade_type: str) -> None:
         if (upgrade_type in UPGRADE_TYPE_IMAGE):
             image = UPGRADE_TYPE_IMAGE[upgrade_type]
         else:

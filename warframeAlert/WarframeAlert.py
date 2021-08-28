@@ -79,7 +79,7 @@ class MainWindow(QtWidgets.QMainWindow):
         #warframeData.gestore_update.create_update_widget()
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
-        self.update_service.file_downloaded.connect(lambda: self.tabService.update(False))
+        self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
         self.update_service.fist_init_completed.connect(self.show)
 
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
@@ -91,12 +91,12 @@ class MainWindow(QtWidgets.QMainWindow):
 
         update_cycle = OptionsHandler.get_option("Update/Cycle")
         if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
-            self.tabService.update(False)
+            self.tabService.update("")
             self.show()
 
         self.resize(680, 450)
 
-    def start_update(self):
+    def start_update(self) -> None:
         self.resize(680, 450)
         self.update_service.start()
 

@@ -12,8 +12,8 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class SortieWidgetTab():
 
-    def __init__(self):
-        self.alerts = {'Sorties': (0, 0, False)}
+    def __init__(self) -> None:
+        self.alerts: dict[str, tuple[str, int, bool]] = {'Sorties': ("", 0, False)}
 
         self.SortieWidget = QtWidgets.QWidget()
 
@@ -24,7 +24,7 @@ class SortieWidgetTab():
 
         self.SortieWidget.setLayout(self.gridSortie)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.SortieWidget
 
     def update_sortie(self, data: Sorties) -> None:
@@ -38,14 +38,14 @@ class SortieWidgetTab():
         else:
             self.SortieBox.sortie_not_available()
 
-    def parse_sortie(self, data):
+    def parse_sortie(self, data: Sorties) -> None:
         if (data):
             for sortie in data:
                 sortie_id = sortie['_id']['$oid']
                 seed = sortie['Seed']
                 twitter = sortie['Twitter'] if ('Twitter' in sortie) else False
 
-                actual_sortie_id = (sortie_id, seed, twitter)
+                actual_sortie_id: tuple[str, int, bool] = (sortie_id, seed, twitter)
 
                 if (self.alerts['Sorties'] == actual_sortie_id):
                     return

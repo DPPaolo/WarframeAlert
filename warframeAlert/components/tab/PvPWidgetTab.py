@@ -16,7 +16,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class PvPWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.PvPWidget = QtWidgets.QWidget()
 
         self.alerts = {'PvPMission': {}}
@@ -56,10 +56,10 @@ class PvPWidgetTab():
         grid_pvp.setAlignment(QtCore.Qt.AlignTop)
         self.PvPWidget.setLayout(grid_pvp)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.PvPWidget
 
-    def update_tab(self):
+    def update_tab(self) -> None:
         self.PvPtabber.insertTab(2, self.OtherPvPWidget.get_widget(), translate("pvpWidgetTab", "alternativeMission"))
         self.PvPtabber.insertTab(3, self.TournamentWidget.get_widget(), translate("pvpWidgetTab", "tournamentMission"))
 
@@ -104,7 +104,7 @@ class PvPWidgetTab():
         else:
             self.TournamentWidget.pvp_tournament_not_available()
 
-    def pvp_mission_not_available(self):
+    def pvp_mission_not_available(self) -> None:
         self.reset_pvp_mission()
         self.PvPWeekInit.setText(translate("pvpWidgetTab", "start") + " N/D")
         self.PvPWeekFin.set_countdown(-1)
@@ -113,17 +113,17 @@ class PvPWidgetTab():
         self.PvPDayFin.set_countdown(-1)
         self.PvPDayFin.start()
 
-    def set_pvp_day_time(self, iniz, fin):
-        self.PvPDayInit.setText(translate("pvpWidgetTab", "start") + " " + timeUtils.get_time(iniz))
-        self.PvPDayFin.set_countdown(fin)
+    def set_pvp_day_time(self, init: int, end: int) -> None:
+        self.PvPDayInit.setText(translate("pvpWidgetTab", "start") + " " + timeUtils.get_time(init))
+        self.PvPDayFin.set_countdown(end)
         self.PvPDayFin.start()
 
-    def set_pvp_week_time(self, iniz, fin):
-        self.PvPWeekInit.setText(translate("pvpWidgetTab", "start") + " " + timeUtils.get_time(iniz))
-        self.PvPWeekFin.set_countdown(fin)
+    def set_pvp_week_time(self, init: int, end: int) -> None:
+        self.PvPWeekInit.setText(translate("pvpWidgetTab", "start") + " " + timeUtils.get_time(init))
+        self.PvPWeekFin.set_countdown(end)
         self.PvPWeekFin.start()
 
-    def parse_pvp_mission(self, data):
+    def parse_pvp_mission(self, data: PVPChallengeInstances) -> None:
         self.reset_pvp_mission()
         n_pvp_d = len(self.alerts['PvPMission']['Daily'])
         n_pvp_w = len(self.alerts['PvPMission']['Weekly'])
@@ -192,7 +192,7 @@ class PvPWidgetTab():
 
         self.add_pvp_mission(n_pvp_d, n_pvp_w)
 
-    def add_pvp_mission(self, n_pvp_d, n_pvp_w):
+    def add_pvp_mission(self, n_pvp_d: int, n_pvp_w: int) -> None:
         for i in range(n_pvp_d, len(self.alerts['PvPMission']['Daily'])):
             if (not self.alerts['PvPMission']['Daily'][i].is_expired()):
                 self.gridDayPvP.addLayout(self.alerts['PvPMission']['Daily'][i].PvPMissionBox, self.gridDayPvP.count(),
@@ -205,7 +205,7 @@ class PvPWidgetTab():
         if (len(self.alerts['PvPMission']['Daily']) == 0):
             self.pvp_mission_not_available()
 
-    def reset_pvp_mission(self):
+    def reset_pvp_mission(self) -> None:
         canc = []
         for i in range(0, len(self.alerts['PvPMission']['Daily'])):
             if (self.alerts['PvPMission']['Daily'][i].is_expired()):

@@ -11,13 +11,12 @@ from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler, LOG_FILE
-from warframeAlert.utils.warframeUtils import get_image_path_from_export_manifest
 
 
 class Alert():
 
-    def __init__(self, id_allerta):
-        self.alert_id = id_allerta
+    def __init__(self, alert_id: str) -> None:
+        self.alert_id = alert_id
         self.image = None
         self.HIDE = self.check_id()
 
@@ -88,7 +87,8 @@ class Alert():
         self.AlertTime.TimeOut.connect(self.hide)
         self.AlertHide.clicked.connect(self.hide_alert_data)
 
-    def set_alert_data(self, node, planet, level, mis, faction, item, wave, loc):
+    def set_alert_data(self, node: str, planet: str, level: str, mis: str, faction: str,
+                       item: str, wave: str, loc: str) -> None:
         self.AlertNode.setText(node)
         self.AlertPlanet.setText(planet)
         self.AlertLevel.setText(translate("alert", "level") + ": " + level)
@@ -98,7 +98,7 @@ class Alert():
         self.AlertWave.setText(wave)
         self.AlertLoc.setText(translate("alert", "map") + ": " + loc)
 
-    def set_alert_extra_data(self, difficulty, enemy_spec, extra_enemy_spec):
+    def set_alert_extra_data(self, difficulty, enemy_spec, extra_enemy_spec) -> None:
         self.AlertLevel.setToolTip(translate("alert", "difficulty") + ": " + str(difficulty))
         self.AlertLoc.setToolTip(translate("alert", "enemy_type") + ": " + get_last_item_with_backslash(enemy_spec))
         if (extra_enemy_spec != ""):
@@ -106,30 +106,30 @@ class Alert():
                                      translate("alert", "extra_enemy_type") + ": " +
                                      get_last_item_with_backslash(extra_enemy_spec))
 
-    def get_title(self):
+    def get_title(self) -> str:
         return self.AlertNode.text() + " " + self.AlertPlanet.text()
 
-    def to_string(self):
+    def to_string(self) -> str:
         text = self.AlertMis.text() + " " + self.AlertFaction.text() + " " + self.AlertLevel.text()
         text += "\n" + self.AlertRew.text()
         return text
 
-    def set_alert_time(self, end, start):
+    def set_alert_time(self, end: int, start: int) -> None:
         self.AlertTime.set_countdown(end[:10])
         self.AlertTime.start()
         self.AlertTime.set_tooltip(translate("alert", "init") + ": " + timeUtils.get_time(start[:10]))
 
-    def set_alert_time_name(self, name):
+    def set_alert_time_name(self, name: str) -> None:
         self.AlertTime.set_name(name)
 
-    def set_alert_unlock(self, unlock):
+    def set_alert_unlock(self, unlock: str) -> None:
         self.AlertNode.setToolTip(translate("alert", "unlock") + ":" + unlock)
 
-    def hide_alert_data(self):
+    def hide_alert_data(self) -> None:
         self.hide()
         LogHandler.debug(translate("alert", "hidedAlert") + ":" + str(self.alert_id))
 
-    def check_id(self):
+    def check_id(self) -> bool:
         try:
             fp = open(LOG_FILE)
             data = fp.readlines()
@@ -141,22 +141,22 @@ class Alert():
                 return True
         return False
 
-    def get_alert_id(self):
+    def get_alert_id(self) -> str:
         return self.alert_id
 
-    def get_image(self):
+    def get_image(self) -> str:
         return self.image
 
-    def get_ricompensa(self):
+    def get_reward(self) -> str:
         return self.AlertRew.text()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.AlertTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def is_hided(self):
+    def is_hided(self) -> bool:
         return self.HIDE
 
-    def hide(self):
+    def hide(self) -> None:
         self.AlertImg.hide()
         self.AlertNode.hide()
         self.AlertPlanet.hide()
@@ -171,24 +171,24 @@ class Alert():
         self.AlertSpace.hide()
         self.AlertHide.hide()
 
-    def set_alert_image(self, url_image, item):
+    def set_alert_image(self, url_image: str, item: str) -> None:
         if (item in IMAGE_NAME):
             img = IMAGE_NAME[item]
         elif ("Endo" in item):
-            img = "/Lotus/Interface/Icons/Store/EndoIconRenderLarge.png"
+            img = "EndoIconRenderLarge.png"
         elif ("Riven" in item):
-            img = "/Lotus/Interface/Cards/Images/OmegaMod.png"
+            img = "OmegaMod.png"
         else:
             if (url_image):
-                img = get_image_path_from_export_manifest(url_image)
+                img = url_image
             else:
                 img = item
-        image_name = "images" + get_separator() + get_last_item_with_backslash(img)
-        self.AlertImg.set_image(image_name, DEFAULT_SITE_IMAGE + img)
+        image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
+        self.AlertImg.set_image(image_name)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)
         self.image = image_name
 
-    def set_default_alert_image(self):
+    def set_default_alert_image(self) -> None:
         image_name = "images" + get_separator() + get_last_item_with_backslash(DEFAULT_ALERT_IMAGE)
         self.AlertImg.set_image(image_name, DEFAULT_SITE_IMAGE + DEFAULT_ALERT_IMAGE)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)

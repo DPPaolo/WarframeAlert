@@ -7,7 +7,7 @@ from PyQt5 import QtWidgets
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
-from warframeAlert.constants.files import DEFAULT_ALERT_IMAGE, IMAGE_NAME
+from warframeAlert.constants.files import IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.constants.warframeFileTypes import SortieFileRewards, BountyFileData, RelicFileData,  \
@@ -16,7 +16,7 @@ from warframeAlert.constants.warframeTypes import MissionReward
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
-from warframeAlert.utils.fileUtils import get_separator, get_asset_path
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_item_name, get_stage_name, get_rarity
 from warframeAlert.utils.logUtils import LogHandler
 
@@ -144,52 +144,6 @@ def get_image_path_from_name(name: str) -> str:
         return IMAGE_NAME[name]
     else:
         return name
-
-
-def get_image_path_from_export_manifest(name: str) -> str:
-    name = name.lower()
-    try:
-        fp = open("data" + get_separator() + "ExportManifest.json")
-    except Exception as err:
-        LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
-        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
-        return DEFAULT_ALERT_IMAGE
-    data = fp.readlines()
-    fp.close()
-    json_data = json.loads(data[0])
-    for item in json_data['Manifest']:
-        unique_name = item['uniqueName'].lower()
-        if (name == unique_name):
-            return item['textureLocation'].replace("\\", "/")
-    return DEFAULT_ALERT_IMAGE
-
-
-def get_image_from_url_with_store_items(url: str) -> str:
-    if ("/StoreItems/" in url):
-        line = url.split("/StoreItems/")
-        if (len(line) > 2):
-            return line[1] + "/StoreItems/" + line[2]
-        else:
-            return line[1]
-    else:
-        return url
-
-
-def get_baro_image_path_from_export_manifest(name: str) -> str:
-    try:
-        fp = open("data" + get_separator() + "ExportManifest.json")
-    except Exception as err:
-        LogHandler.err(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
-        print_traceback(translate("warframeUtils", "ExportManifestNotFound") + " :\n" + str(err))
-        return name
-    data = fp.readlines()
-    fp.close()
-    json_data = json.loads(data[0])
-    for item in json_data['Manifest']:
-        unique_name = item['uniqueName'].lower()
-        if (name.lower() in unique_name or get_image_from_url_with_store_items(name).lower() in unique_name):
-            return item['textureLocation'].replace("\\", "/")
-    return name
 
 
 def read_drop_file(name: str) -> dict:

@@ -8,7 +8,7 @@ from warframeAlert.utils.gameTranslationUtils import get_pvp_alt_desc, get_item_
 
 class PvPAlternativeMissionBox():
 
-    def __init__(self, name):
+    def __init__(self, name: str) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -96,10 +96,11 @@ class PvPAlternativeMissionBox():
         self.PvPAltBox.addLayout(self.PvPAltbox6)
         self.PvPAltBox.addLayout(self.PvPAltbox7)
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self.PvPAltName.text()
 
-    def set_disabled_data(self, disable_ammo, disable_energy, disable_energy_surge, disable_hud, disable_weapon_swap):
+    def set_disabled_data(self, disable_ammo: bool, disable_energy: bool, disable_energy_surge: bool,
+                          disable_hud: bool, disable_weapon_swap: bool) -> None:
         if (not disable_ammo):
             self.PvPAltdisAmmo.setText(translate("pvpAlternativeMissionBox", "ammoPickup") + ": "
                                        + translate("pvpAlternativeMissionBox", "enabledF"))
@@ -131,7 +132,7 @@ class PvPAlternativeMissionBox():
             self.PvPAltdisChangeWeapon.setText(translate("pvpAlternativeMissionBox", "weaponSwap") + ": "
                                                + translate("pvpAlternativeMissionBox", "disabledM"))
 
-    def set_pvp_data_match(self, time, player, maxteam, minplayer, mode, desc):
+    def set_pvp_data_match(self, time: int, player: int, maxteam: int, minplayer: int, mode: str, desc: str) -> None:
         self.PvPAltMode.setText(translate("pvpAlternativeMissionBox", "modality") + ": " + mode)
         self.PvPAltTime.setText(translate("pvpAlternativeMissionBox", "matchDuration") + ": " + str(time))
         self.PvPAltPlayer.setText(translate("pvpAlternativeMissionBox", "maxPlayer") + ": " + str(player))
@@ -139,13 +140,13 @@ class PvPAlternativeMissionBox():
         self.PvPAltMinPlayer.setText(translate("pvpAlternativeMissionBox", "minSquadPlayer") + ": " + str(minplayer))
         self.PvPAltDesc.setText(get_pvp_alt_desc(desc))
 
-    def set_pvp_weapon_restriction(self, warframes, primary, secondary, melee):
+    def set_pvp_weapon_restriction(self, warframes: str, primary: str, secondary: str, melee: str) -> None:
         self.PvPAltWarframe.setText(get_item_name(warframes, 0))
         self.PvPAltPrimary.setText(get_item_name(primary, 0))
         self.PvPAltSecondary.setText(get_item_name(secondary, 0))
         self.PvPAltMelee.setText(get_item_name(melee, 0))
 
-    def hide(self):
+    def hide(self) -> None:
         self.PvPAltdisAmmo.hide()
         self.PvPAltdisEnergy.hide()
         self.PvPAltdisEnergySurge.hide()

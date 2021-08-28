@@ -8,7 +8,7 @@ from warframeAlert.utils import timeUtils
 
 class InvasionNode():
 
-    def __init__(self, node_id):
+    def __init__(self, node_id: str) -> None:
         self.node_id = node_id
         self.OccDesc = QtWidgets.QLabel(translate("invasionNode", "occupationDesc"))
         self.OccFaz = QtWidgets.QLabel("N/D")
@@ -36,19 +36,19 @@ class InvasionNode():
 
         self.OccTime.TimeOut.connect(self.hide)
 
-    def get_node_id(self):
+    def get_node_id(self) -> str:
         return self.node_id
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.OccTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def set_invasion_node_data(self, faction, node, time):
+    def set_invasion_node_data(self, faction: str, node: tuple[str, str], time: int) -> None:
         self.OccFaz.setText(faction)
         self.OccPlan.setText(node[0] + " " + node[1])
         self.OccTime.set_countdown(time[:10])
         self.OccTime.start()
 
-    def hide(self):
+    def hide(self) -> None:
         self.OccDesc.hide()
         self.OccFaz.hide()
         self.OccDescPlan.hide()

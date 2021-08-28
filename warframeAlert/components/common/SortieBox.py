@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -15,7 +17,7 @@ from warframeAlert.utils.warframeUtils import get_reward_from_sortie
 
 
 class SortieBox():
-    def __init__(self):
+    def __init__(self) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -60,7 +62,7 @@ class SortieBox():
         self.SortieBox.addWidget(self.spoiler)
         self.SortieBox.addStretch(1)
 
-    def set_sortie_data(self, init, end, boss, reward, extra_reward):
+    def set_sortie_data(self, init: int, end: int, boss: str, reward: str, extra_reward: List[str]) -> None:
         self.SortieBoss.setText(translate("sortieBox", "boss") + ": " + get_sortie_boss(boss))
         self.SortieInit.setText(translate("sortieBox", "init") + ": " + timeUtils.get_time(init))
         self.SortieEnd.set_countdown(end)
@@ -82,7 +84,7 @@ class SortieBox():
             self.SortieBox1.to_string() + "\n",
             None)
 
-    def set_mission_data(self, num, mission, modifier, node, planet, tileset):
+    def set_mission_data(self, num: int, mission: str, modifier: str, node: str, planet: str, tileset: str) -> None:
         if (num == 1):
             self.SortieBox1.set_mission_data(mission, modifier, node, planet, tileset)
         elif (num == 2):
@@ -90,9 +92,9 @@ class SortieBox():
         elif (num == 3):
             self.SortieBox3.set_mission_data(mission, modifier, node, planet, tileset)
 
-    def sortie_not_available(self):
+    def sortie_not_available(self) -> None:
         self.SortieInit.setText(translate("sortieBox", "init") + ": N/D")
-        end = str((int(timeUtils.get_local_time()) - 1) * 1000)
+        end = (int(timeUtils.get_local_time()) - 1) * 1000
         self.SortieEnd.set_countdown(end[:10])
         self.SortieEnd.start()
         self.SortieBoss.setText(translate("sortieBox", "boss") + ": " + translate("sortieBox", "noBoss"))

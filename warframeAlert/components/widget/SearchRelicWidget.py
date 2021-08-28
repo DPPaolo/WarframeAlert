@@ -9,15 +9,17 @@ from warframeAlert.utils.warframeUtils import get_relic_tier_from_name, add_all_
 
 class SearchRelicWidget():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.SearchRelicWidget = QtWidgets.QWidget()
 
         self.SearchRelicLab = QtWidgets.QLabel(translate("searchRelicWidget", "searchRelic"))
         self.SearchRelicLab.setAlignment(QtCore.Qt.AlignLeft)
         self.RelicDrops = QtWidgets.QTextEdit(self.SearchRelicWidget)
+        self.RelicDrops.setReadOnly(True)
         self.SearchRelicByItemLab = QtWidgets.QLabel(translate("searchRelicWidget", "searchByItem"))
         self.SearchRelicByItemLab.setAlignment(QtCore.Qt.AlignLeft)
         self.ItemsRelicText = QtWidgets.QTextEdit(self.SearchRelicWidget)
+        self.ItemsRelicText.setReadOnly(True)
         self.RelicBox = RelicBox(1)
         self.RelicBox.hide_button()
 
@@ -42,16 +44,16 @@ class SearchRelicWidget():
 
         self.SearchRelicWidget.setLayout(self.gridSearchRelic)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.SearchRelicWidget
 
-    def show(self):
+    def show(self) -> None:
         self.SearchRelicWidget.show()
 
-    def hide(self):
+    def hide(self) -> None:
         self.SearchRelicWidget.hide()
 
-    def search_by_relic(self):
+    def search_by_relic(self) -> None:
         name = self.RelicComboBox.currentText()
         drop = get_relic_drop(name)
         self.RelicDrops.setText(drop)
@@ -59,7 +61,7 @@ class SearchRelicWidget():
         self.RelicBox.set_relic_tier(tier)
         self.RelicBox.set_relic_name(name)
 
-    def search_by_item(self):
+    def search_by_item(self) -> None:
         name = self.ItemComboBox.currentText()
         drop = get_relic_drop_from_name(name)
         self.ItemsRelicText.setText(drop)

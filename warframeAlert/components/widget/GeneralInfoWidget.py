@@ -1,7 +1,10 @@
 # coding=utf-8
+from typing import Union
+
 from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAvailability, PrimeVaultAvailabilities
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import bool_to_yes_no
@@ -12,7 +15,7 @@ from warframeAlert.utils.stringUtils import divide_message
 class GeneralInfoWidget():
     generalInfoWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.generalInfoWidget = QtWidgets.QWidget()
 
         font = QtGui.QFont()
@@ -57,10 +60,10 @@ class GeneralInfoWidget():
         self.gridOther.setAlignment(QtCore.Qt.AlignTop)
         self.calculate_earth_time()
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.generalInfoWidget
 
-    def calculate_earth_time(self):
+    def calculate_earth_time(self) -> None:
         earth_time, day = timeUtils.get_earth_time()
         if (day):
             self.EarthStatus.setText(translate("generalWidget", "earthTimeDay"))
@@ -83,7 +86,7 @@ class GeneralInfoWidget():
         self.DTLDSActivated.setText(dtls_active_text)
         self.WorldSeed.setText(divide_message(world_seed, 100))
 
-    def parse_featured_dojo(self, data):
+    def parse_featured_dojo(self, data: FeaturedGuilds) -> None:
         guild = ["", "", "", "", ""]
         if (data):
             for dojo in data:
@@ -97,7 +100,8 @@ class GeneralInfoWidget():
                 guild[tier - 1] = (name, dojo_id, alliance_id)
             self.set_featured_dojo(guild)
 
-    def set_featured_dojo(self, dojo):
+    # TODO: use | instead of Union
+    def set_featured_dojo(self, dojo:  list[Union[str, tuple[str, str, str]]]) -> None:
         data = tooltip = ""
         if (dojo[0] != ''):
             data += translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"
@@ -127,10 +131,10 @@ class GeneralInfoWidget():
         self.FeaturedDojo.setText(data)
         self.FeaturedDojo.setToolTip(tooltip)
 
-    def reset_featured_dojo(self):
+    def reset_featured_dojo(self) -> None:
         self.FeaturedDojo.setText("N/D")
 
-    def parse_prime_access(self, prime, vault_available):
+    def parse_prime_access(self, prime: PrimeAccessAvailability, vault_available: PrimeVaultAvailabilities) -> None:
         self.PrimeVault.setText("")
         if (prime['State'] == "PRIME1"):
             state = translate("generalWidget", "primeState1")  # White Skin?
@@ -152,6 +156,6 @@ class GeneralInfoWidget():
         # data += translate("generalWidget", "vault5") + ": " + str(vault_available[5]) # Vault Nova e Mag Prime
         self.PrimeVault.setText(data)
 
-    def reset_prime_access(self):
+    def reset_prime_access(self) -> None:
         self.PrimeAccess.setText("N/D")
         self.PrimeVault.setText("N/D")

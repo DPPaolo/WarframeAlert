@@ -6,7 +6,7 @@ from warframeAlert.services.translationService import translate
 
 class EventReward():
 
-    def __init__(self, mis):
+    def __init__(self, mis: int) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -45,7 +45,8 @@ class EventReward():
         self.TAvbox.addLayout(self.TAbox2)
         self.TAvbox.addLayout(self.TAbox3)
 
-    def set_reward_data(self, item, node, score, req, mission_interval, mission_map_rotation):
+    def set_reward_data(self, item: str, node: tuple[str, str], score: int, req: int,
+                        mission_interval: int, mission_map_rotation: str) -> None:
         self.TAMisNumDesc.setText(translate("eventReward", "mission") + " " + str(self.Nmis))
         self.TAItem.setText(item)
         self.TANode.setText(translate("eventReward", "node") + ": " + node[0] + " " + node[1])
@@ -60,7 +61,7 @@ class EventReward():
         if (node_tooltip != ""):
             self.TANode.setToolTip(node_tooltip)
 
-    def hide(self):
+    def hide(self) -> None:
         self.TAMisNumDesc.hide()
         self.TAItemDesc.hide()
         self.TAItem.hide()

@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtWidgets, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -10,7 +12,7 @@ from warframeAlert.utils.gameTranslationUtils import get_pvp_mission_type
 
 class PvPMissionBox():
 
-    def __init__(self, pvp_id, generated):
+    def __init__(self, pvp_id: str, generated: bool) -> None:
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
         self.pvp_id = pvp_id
@@ -34,7 +36,7 @@ class PvPMissionBox():
         self.PvPMissionBox.addLayout(self.PvPMissionbox)
         self.PvPMissionBox.addWidget(self.PvPMissionDesc)
 
-    def set_pvp_data(self, name, desc, mission, diff, time, sub_challenge):
+    def set_pvp_data(self, name: str, desc: str, mission: str, diff: int, time: int, sub_challenge: List[str]) -> None:
         if (diff == 2):
             name += " " + translate("pvpMissionBox", "hardMission")
         self.PvPMissionName.setText(name)
@@ -52,15 +54,15 @@ class PvPMissionBox():
         self.PvPTime.start()
 
         if (sub_challenge != []):
-            print(translate("pvpMissionBox", "subChallengPresents") + ": " + sub_challenge)
+            print(translate("pvpMissionBox", "subChallengPresents") + ": " + str(sub_challenge))
 
-    def get_pvp_id(self):
+    def get_pvp_id(self) -> str:
         return self.pvp_id
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.PvPTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def hide(self):
+    def hide(self) -> None:
         self.PvPMissionName.hide()
         self.PvPMissionDesc.hide()
         self.PvPMissionType.hide()

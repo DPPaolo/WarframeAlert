@@ -17,7 +17,7 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class FissureWidgetTab():
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.alerts = {'ActiveMissions': []}
 
         self.FissureWidget = QtWidgets.QWidget()
@@ -42,7 +42,7 @@ class FissureWidgetTab():
         self.gridFissure.setAlignment(QtCore.Qt.AlignTop)
         self.gridFissureWidget.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.FissureWidget
 
     def update_fissure(self, fissure_data: ActiveMissions, void_storm_data: VoidStorms) -> None:
@@ -103,14 +103,14 @@ class FissureWidgetTab():
 
                     n_tier, tier = get_relic_tier(void_storm['ActiveMissionTier'])
 
-                    temp = FissureBox(fissure_id, "")
+                    temp = FissureBox(fissure_id, -1)
                     temp.set_fissure_data(node, plan, mis, init, end, tier, "")
                     self.alerts['ActiveMissions'].append(temp)
                     del temp
 
         self.add_fissure(n_fis)
 
-    def add_fissure(self, n_fis):
+    def add_fissure(self, n_fis: int) -> None:
         for i in range(n_fis, len(self.alerts['ActiveMissions'])):
             if (not self.alerts['ActiveMissions'][i].is_expired()):
                 self.gridFissure.addLayout(self.alerts['ActiveMissions'][i].FisBox, self.gridFissure.count(), 0)
@@ -119,7 +119,7 @@ class FissureWidgetTab():
                     self.alerts['ActiveMissions'][i].to_string(),
                     None)
 
-    def reset_fissure(self):
+    def reset_fissure(self) -> None:
         canc = []
         for i in range(0, len(self.alerts['ActiveMissions'])):
             if (self.alerts['ActiveMissions'][i].is_expired()):
@@ -131,7 +131,7 @@ class FissureWidgetTab():
             del self.alerts['ActiveMissions'][canc[i - 1]]
             i -= 1
 
-    def open_relics(self):
+    def open_relics(self) -> None:
         self.RelicWidget = RelicWidget()
         self.RelicWidget.show()
 

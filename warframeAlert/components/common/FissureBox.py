@@ -8,7 +8,7 @@ from warframeAlert.utils import timeUtils
 
 class FissureBox():
 
-    def __init__(self, fissure_id, seed):
+    def __init__(self, fissure_id: str, seed: int) -> None:
         # Label
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
@@ -37,7 +37,7 @@ class FissureBox():
 
         self.FisTime.TimeOut.connect(self.hide)
 
-    def set_fissure_data(self, node, plan, mis, init, end, tier, region):
+    def set_fissure_data(self, node: str, plan: str, mis: str, init: int, end: int, tier: str, region: str) -> None:
         self.region = region
         self.FisNode.setText(node)
         self.FisPlan.setText(plan)
@@ -48,19 +48,19 @@ class FissureBox():
         self.FisTime.set_tooltip(translate("fissureBox", "fissureStart") + " " + timeUtils.get_time(init[:10]))
         self.FisTime.start()
 
-    def get_fissure_id(self):
+    def get_fissure_id(self) -> str:
         return self.fissure_id
 
-    def get_title(self):
+    def get_title(self) -> str:
         return translate("fissureBox", "newFissure") + " " + self.FisTier.text()
 
-    def to_string(self):
+    def to_string(self) -> str:
         return self.FisNode.text() + " " + self.FisPlan.text() + "\n" + self.FisMis.text()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.FisTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def hide(self):
+    def hide(self) -> None:
         self.FisNode.hide()
         self.FisPlan.hide()
         self.FisMis.hide()

@@ -1,4 +1,6 @@
 # coding=utf-8
+from typing import List
+
 from PyQt5 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -11,7 +13,7 @@ from warframeAlert.utils.stringUtils import divide_for_n
 
 class TwitchBox:
 
-    def __init__(self):
+    def __init__(self) -> None:
         font = QtGui.QFont()
         font.setBold(True)
 
@@ -34,10 +36,11 @@ class TwitchBox:
 
         self.TwitchEnd.TimeOut.connect(self.hide)
 
-    def set_twitch_data(self, iniz, fin, twitch_type, agent_type, spawn, cooldown, achievement, streamers):
-        self.TwitchEnd.set_countdown(fin[:10])
+    def set_twitch_data(self, init: str, end: int, twitch_type: str, agent_type: List[str], spawn: int,
+                        cooldown: int, achievement: str, streamers: List[str]) -> None:
+        self.TwitchEnd.set_countdown(end[:10])
         self.TwitchEnd.start()
-        self.TwitchInit.setText(translate("twitchBox", "init") + ": " + iniz)
+        self.TwitchInit.setText(translate("twitchBox", "init") + ": " + init)
         if (streamers != []):
             streamers_ids = ""
             for stream in streamers:
@@ -63,13 +66,13 @@ class TwitchBox:
             self.TwitchType.setText(translate("twitchBox", "unknown"))
             LogHandler.debug(translate("twitchBox", "unknown") + ": " + twitch_type)
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.TwitchEnd.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def get_iniz(self):
+    def get_init(self) -> str:
         return self.TwitchInit.text().split(" ")[1]
 
-    def hide(self):
+    def hide(self) -> None:
         self.TwitchInit.hide()
         self.TwitchEnd.hide()
         self.TwitchType.hide()

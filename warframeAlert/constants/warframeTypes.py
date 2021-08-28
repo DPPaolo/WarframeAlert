@@ -59,7 +59,7 @@ class AlertMissionInfo(TypedDict):
     minEnemyLevel: int
     archwingRequired: bool
     isSharkwingMission: bool
-    maxWavenum: int
+    maxWaveNum: int
     nightmare: int
     difficulty: int
     missionReward: MissionReward
@@ -74,10 +74,11 @@ class AlertMissionInfo(TypedDict):
     consumeRequiredItems: bool
     levelAuras: List[str]
     vipAgent: str
+    fxLayer: str
     icon: str
 
 
-class Alert(TypedDict, total=False):
+class AlertData(TypedDict, total=False):
     _id: IdType
     Activation: DateType
     Expiry: DateType
@@ -86,7 +87,7 @@ class Alert(TypedDict, total=False):
     MissionInfo: AlertMissionInfo
 
 
-Alerts = List[Alert]
+Alerts = List[AlertData]
 
 
 class ConstructionProject(TypedDict, total=False):
@@ -108,7 +109,7 @@ class DailyDeal(TypedDict, total=False):
     AmountSold: int
 
 
-DailyDeals = List[DailyDeal]
+DailyDealsData = List[DailyDeal]
 
 
 class NewsMessage(TypedDict):
@@ -118,7 +119,7 @@ class NewsMessage(TypedDict):
 
 class NewsLinksMessage(TypedDict):
     LanguageCode: str
-    Message: str
+    Link: str
 
 
 class Event(TypedDict, total=False):
@@ -165,7 +166,7 @@ class FlashSale(TypedDict, total=False):
     StartDate: DateType
     EndDate: DateType
     ProductExpiryOverride: DateType
-    ExperimentFeatured: ExperimentFeatured
+    ExperimentFeatured: List[ExperimentFeatured]
     BannerIndex: int
     BogoBuy: int
     BogoGet: int
@@ -184,7 +185,7 @@ FlashSales = List[FlashSale]
 class GlobalUpgrade(TypedDict, total=False):
     _id: IdType
     Activation: DateType
-    Expiry: DateType
+    ExpiryDate: DateType
     OperationType: str
     UpgradeType: str
     Value: int
@@ -197,7 +198,7 @@ class GlobalUpgrade(TypedDict, total=False):
 GlobalUpgrades = List[GlobalUpgrade]
 
 
-class HubEvent(TypedDict, total=False):
+class HubEventData(TypedDict, total=False):
     Activation: DateType
     Expiry: DateType
     Tag: str
@@ -209,7 +210,7 @@ class HubEvent(TypedDict, total=False):
     Transmission: str
 
 
-HubEvents = List[HubEvent]
+HubEvents = List[HubEventData]
 
 
 class Goal(TypedDict, total=False):
@@ -265,7 +266,7 @@ class Goal(TypedDict, total=False):
     EpochNum: int
     CompletionBonus: List[int]
     Metadata: str
-    ContinuousHubEvent: HubEvent
+    ContinuousHubEvent: HubEventData
     MissionInfo: AlertMissionInfo
     Node: str
     ConcurrentNodes: List[str]
@@ -333,6 +334,15 @@ class PVPActiveTournament(TypedDict, total=False):
 PVPActiveTournaments = List[PVPActiveTournament]
 
 
+class PvPAlternativeWeaponOverride(TypedDict):
+    Override: bool
+    Resource: str
+
+
+class PvPAlternativeLoadouts(TypedDict):
+    WeaponOverrides: List[PvPAlternativeWeaponOverride]
+
+
 class PVPAlternativeMode(TypedDict, total=False):
     TitleLoc: str
     DescriptionLoc: str
@@ -346,7 +356,7 @@ class PVPAlternativeMode(TypedDict, total=False):
     MaxTeamCountDifferenceOverride: int
     MinPlayersPerTeamOverride: int
     TargetMode: str
-    ForcedLoadouts: List[str]
+    ForcedLoadouts: List[PvPAlternativeLoadouts]
 
 
 PVPAlternativeModes = List[PVPAlternativeMode]
@@ -396,7 +406,7 @@ class PrimeAccessAvailability(TypedDict, total=False):
 
 PrimeVaultAvailabilities = List[bool]
 
-ProjectPcts = List[int]
+ProjectPcts = List[float]
 
 
 class NightwaweChallenge(TypedDict):
@@ -431,6 +441,7 @@ class Sortie(TypedDict, total=False):
     Seed: int
     Boss: str
     Reward: str
+    Twitter: bool
     ExtraDrops: List[str]
     Variants: List[SortieMission]
 
@@ -452,8 +463,8 @@ SyndicateMissions = List[SyndicateMission]
 
 
 class TwitchPromo(TypedDict, total=False):
-    Activation: DateType
-    Expiry: DateType
+    startDate: DateType
+    endDate: DateType
     achievement: str
     type: str
     streamers: List[str]
@@ -500,7 +511,7 @@ class JsonData(TypedDict, total=False):
     BuildLabel: str
     ConstructionProjects: ConstructionProjects
     DTLS: int
-    DailyDeals: DailyDeals
+    DailyDeals: DailyDealsData
     Events: Events
     ExperimentRecommended: ExperimentRecommended
     FeaturedGuilds: FeaturedGuilds

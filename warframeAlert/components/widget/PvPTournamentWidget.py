@@ -1,6 +1,7 @@
 # coding=utf-8
 from PyQt5 import QtWidgets, QtCore
 
+from warframeAlert.constants.warframeTypes import PVPActiveTournaments
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import remove_widget
 
@@ -8,7 +9,7 @@ from warframeAlert.utils.commonUtils import remove_widget
 class PvPTournamentWidget():
     TournamentPvPWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
 
         self.alerts = {'PvPTournament': []}
 
@@ -23,13 +24,13 @@ class PvPTournamentWidget():
 
         self.gridPvPTour.setAlignment(QtCore.Qt.AlignTop)
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.TournamentPvPWidget
 
-    def get_lenght(self):
+    def get_lenght(self) -> int:
         return len(self.alerts['PvPTournament'])
 
-    def parse_pvp_tournament(self, data):
+    def parse_pvp_tournament(self, data: PVPActiveTournaments) -> None:
         self.reset_pvp_tournament()
 
         n_pvp_t = len(self.alerts['PvPTournament'])
@@ -37,14 +38,14 @@ class PvPTournamentWidget():
         if (data):
             self.add_pvp_tournament(n_pvp_t)
 
-    def add_pvp_tournament(self, n_pvp_t):
+    def add_pvp_tournament(self, n_pvp_t: int) -> None:
         for i in range(n_pvp_t, len(self.alerts['PvPTournament'])):
             self.gridPvPTour.addLayout(self.alerts['PvPTournament'][i].PvPAltBox, self.gridPvPTour.count(), 0)
 
         if (len(self.alerts['PvPTournament']) > 0):
             self.NoPvPTourLab.hide()
 
-    def reset_pvp_tournament(self):
+    def reset_pvp_tournament(self) -> None:
         self.NoPvPTourLab.show()
         canc = []
         for i in range(0, len(self.alerts['PvPTournament'])):
@@ -57,6 +58,6 @@ class PvPTournamentWidget():
             del self.alerts['PvPTournament'][canc[i - 1]]
             i -= 1
 
-    def pvp_tournament_not_available(self):
+    def pvp_tournament_not_available(self) -> None:
         self.NoPvPTourLab.show()
         self.reset_pvp_tournament()

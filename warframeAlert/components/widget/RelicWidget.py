@@ -12,9 +12,8 @@ from warframeAlert.utils.warframeUtils import get_relic_tier_from_name, get_all_
 
 
 class RelicWidget():
-    AllerteWidget = None
 
-    def __init__(self):
+    def __init__(self) -> None:
         self.RelicWidget = QtWidgets.QWidget()
 
         self.RelicWidget.setWindowTitle(translate("relicWidget", "relicWidgetTitle"))
@@ -80,16 +79,16 @@ class RelicWidget():
 
         self.update_relic_widgets()
 
-    def get_widget(self):
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.RelicWidget
 
-    def show(self):
+    def show(self) -> None:
         self.RelicWidget.show()
 
-    def hide(self):
+    def hide(self) -> None:
         self.RelicWidget.hide()
 
-    def update_relic_widgets(self):
+    def update_relic_widgets(self) -> None:
         all_relics = get_all_relic_from_file()
         for relic_tier_name, relics in groupby(all_relics, key=lambda x: x['tier']):
             for relic in relics:

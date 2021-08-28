@@ -960,7 +960,7 @@ goals_schema = {
                         "minEnemyLevel": {"type": "integer"},
                         "archwingRequired": {"type": "boolean"},
                         "isSharkwingMission": {"type": "boolean"},
-                        "maxWavenum": {"type": "integer"},
+                        "maxWaveNum": {"type": "integer"},
                         "nightmare": {"type": "integer"},
                         "difficulty": {"type": "integer"},
                         "missionReward": {
@@ -1251,6 +1251,7 @@ alerts_schema = {
                         "levelAuras": {"type": "array",
                                        "items": {"type": "string"}},
                         "vipAgent": {"type": "string"},
+                        "fxLayer": {"type": "string"},
                         "icon": {"type": "string"},
 
                     },

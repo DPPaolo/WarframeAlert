@@ -2,6 +2,7 @@
 from PyQt5 import QtWidgets, QtGui, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
+from warframeAlert.constants.warframeTypes import HubEventData
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.gameTranslationUtils import get_node
@@ -9,7 +10,7 @@ from warframeAlert.utils.gameTranslationUtils import get_node
 
 class HubEvent():
 
-    def __init__(self):
+    def __init__(self) -> None:
         font = QtGui.QFont()
         font.setBold(True)
 
@@ -65,25 +66,26 @@ class HubEvent():
         self.HubBox.addLayout(hubhbox4)
         self.HubEnd.TimeOut.connect(self.hide)
 
-    def set_hubevent_data(self, iniz, fin, tag, node, cinematic, interval, ciclo, trasmission):
-        self.HubInit.setText(iniz)
+    def set_hubevent_data(self, init: str, end: int, tag: str, node: tuple[str, str],
+                          cinematic: str, interval: int, cycle: int, trasmission: str) -> None:
+        self.HubInit.setText(init)
         self.HubName.setText(tag)
         self.HubNode.setText(node[0] + " " + node[1])
         self.HubCinematic.setText(cinematic)
         self.HubRepeatCycle.setText(str(interval) + " " + translate("hubEvent", "seconds"))
-        self.HubCycle.setText(str(ciclo) + " " + translate("hubEvent", "seconds"))
+        self.HubCycle.setText(str(cycle) + " " + translate("hubEvent", "seconds"))
         self.HubTrasmission.setText(trasmission)
 
-        self.HubEnd.set_countdown(fin[:10])
+        self.HubEnd.set_countdown(end[:10])
         self.HubEnd.start()
 
-    def set_hub_name(self, name):
+    def set_hub_name(self, name: str) -> None:
         self.HubName.setText(name)
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self.HubName.text()
 
-    def hide(self):
+    def hide(self) -> None:
         self.HubName.hide()
         self.HubInit.hide()
         self.HubInitLab.hide()
@@ -100,16 +102,16 @@ class HubEvent():
         self.HubTrasmissionLab.hide()
         self.HubTrasmission.hide()
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.HubEnd.get_time()) - int(timeUtils.get_local_time())) < 0
 
 
-def create_hub_event(hub):
+def create_hub_event(hub: HubEventData) -> HubEvent:
     try:
-        iniz = timeUtils.get_time(hub['Activation']['$date']['$numberLong'])
+        init = timeUtils.get_time(hub['Activation']['$date']['$numberLong'])
         end = hub['Expiry']['$date']['$numberLong']
     except KeyError:
-        iniz = str((int(timeUtils.get_local_time()))*1000)
+        init = str((int(timeUtils.get_local_time()))*1000)
         end = str((int(timeUtils.get_local_time()) + 3600)*1000)
     try:
         node = get_node(hub['Node'])
@@ -136,5 +138,5 @@ def create_hub_event(hub):
         trasmission = hub['Transmission']
 
     temp = HubEvent()
-    temp.set_hubevent_data(iniz, end, tag, node, cinematic, interval, cycle, trasmission)
+    temp.set_hubevent_data(init, end, tag, node, cinematic, interval, cycle, trasmission)
     return temp

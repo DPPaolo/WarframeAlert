@@ -8,7 +8,7 @@ from warframeAlert.utils.stringUtils import divide_message
 
 
 class SeasonBox():
-    def __init__(self, id_nightwave):
+    def __init__(self, id_nightwave: str) -> None:
         self.id_nightwave = id_nightwave
         self.image = None
         self.Font = QtGui.QFont()
@@ -39,19 +39,19 @@ class SeasonBox():
         self.SeasonBox.addLayout(self.Seasonhbox2)
         self.SeasonBox.setContentsMargins(10, 10, 10, 10)
 
-    def get_challenge_id(self):
+    def get_challenge_id(self) -> str:
         return self.id_nightwave
 
-    def is_expired(self):
+    def is_expired(self) -> bool:
         return (int(self.ChallengeEnd.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def get_title(self):
+    def get_title(self) -> str:
         return self.ChallengeTitle.text()
 
-    def to_string(self):
+    def to_string(self) -> str:
         return self.ChallengeDesc.text()
 
-    def set_data(self, init, end, challenge, daily):
+    def set_data(self, init: int, end: int, challenge: tuple[str, str, int], daily) -> None:
         challenge_start = timeUtils.get_time(init)
         self.ChallengeTitle.setToolTip(translate("seasonBox", "init") + " " + challenge_start)
         self.ChallengeEnd.set_countdown(end[:10])
@@ -71,7 +71,7 @@ class SeasonBox():
             temp = translate("seasonBox", "unkown").upper()
         self.ChallengeType.setText(temp)
 
-    def hide(self):
+    def hide(self) -> None:
         self.ChallengeTitle.hide()
         self.ChallengeDesc.hide()
         self.ChallengePoint.hide()
