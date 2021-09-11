@@ -6,13 +6,14 @@ from PyQt5 import QtGui, QtCore, QtWidgets
 import sys
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.services.networkService import check_connection
+from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.tabService import TabService
 from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
 from warframeAlert.services.updateFileService import UpdateFileService
+from warframeAlert.services.updateProgramService import UpdateProgramService
 from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils
 from warframeAlert.utils.fileUtils import create_default_folder, get_separator, \
@@ -75,8 +76,8 @@ class MainWindow(QtWidgets.QMainWindow):
         #Crea la finestra delle opzioni
         #gestore_opzioni.create_config_widget()
 
-        #Crea la finestra per gli aggiornamenti
-        #warframeData.gestore_update.create_update_widget()
+        # Start the program service updater
+        self.updateProgramService = UpdateProgramService()
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
@@ -100,7 +101,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.resize(680, 450)
         self.update_service.start()
 
-    def closeEvent(self, event):
+    def closeEvent(self, event: QtGui.QCloseEvent) -> None:
         if (OptionsHandler.get_option("TrayIcon") == 1):
             event.ignore()
             self.hide()
@@ -111,22 +112,10 @@ class MainWindow(QtWidgets.QMainWindow):
             )
 
     def init_app(self):
-    #     #Controlla se c'è stato un aggiornamento della versione del programma
-    #     if (fileUtils.check_file("PostUpdate.txt")):
-    #         fp = open("PostUpdate.txt", "r")
-    #         line = fp.readlines()
-    #         pid = str(line[0]).replace("\n", "")
-    #         ver = str(line[1]).replace("\n", "")
-    #         fp.close()
-    #         name = r'Warframe Alert ' + ver + ".exe"
-    #         try:
-    #             subprocess.call("taskkill /PID " + pid)
-    #             time.sleep(1)
-    #             os.remove(name)
-    #         except Exception as er:
-    #             warframe.stampa_errore("Impossibile cancellare/chiudere la vecchia versione del programma\n" + str(er))
-    #         os.remove("PostUpdate.txt")
-    #
+        # Check if there is a new version downloaded
+        if (fileUtils.check_file("PostUpdate.txt")):
+            update_program()
+
         # Download files if it's the first init
         if (OptionsHandler.get_option("FirstInit") == 0):
             if not check_connection():
@@ -243,28 +232,18 @@ class MainWindow(QtWidgets.QMainWindow):
     #         self.update(path[0])
 
 
-    # def open_update(self):
-    #     warframeData.gestore_update.open_update()
-    #
-    # def get_actual_version(self):
-    #     return warframeData.gestore_update.get_actual_version()
-    #
-    # def retrieve_version(self):
-    #     return warframeData.gestore_update.retrieve_version()
-
 app = QtWidgets.QApplication(sys.argv)
 app.setStyle('Fusion')
 
 main = MainWindow()
-# ver = main.get_actual_version()
-# ver2 = main.retrieve_version()
-# if (float(ver) < float(ver2)):
-#     main.open_update()
-# else:
-#     try:
-#         main.start_update()
-#     except Exception as er:
-#         print(er)
-#
-main.start_update()
-sys.exit(app.exec_())
+ver = get_actual_version()
+ver2 = retrieve_version()
+if (float(ver) < float(ver2)):
+    main.updateProgramService.open_update()
+else:
+    try:
+        main.start_update()
+    except Exception as er:
+        print(er)
+
+sys.exit(app.exec())

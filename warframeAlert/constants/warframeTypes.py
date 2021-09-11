@@ -91,8 +91,12 @@ Alerts = List[AlertData]
 
 
 class ConstructionProject(TypedDict, total=False):
+    Activation: DateType
+    Node: str
     Tag: str
+    HunterBoostTask: str
     Tasks: List[str]
+    ToolTips: List[str]
 
 
 ConstructionProjects = List[ConstructionProject]
