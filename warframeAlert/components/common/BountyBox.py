@@ -79,7 +79,8 @@ class BountyBox():
         if (rew == ""):
             self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " N/D")
         else:
-            self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " " + rew[-8])
+            reward_type = rew[-8] if (rew[-8] in ["A", "B", "C"]) else "A"
+            self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " " + reward_type)
 
     # TODO: user | instead of Union
     def set_syndicate(self, syn: str, num: Union[int, str], use_token: bool) -> None:
@@ -111,7 +112,8 @@ class BountyBox():
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropGhoul"))
         elif ('Eidolon' in self.reward):
             reward = get_bounty_reward(self.reward, "cetus")
-            drop.set_drop(3, name, reward)
+            drop_num = 1 if ("Plague" in self.reward) else 3
+            drop.set_drop(drop_num, name, reward)
             self.viewDropWidget.setWindowTitle(translate("bountyBox", "dropCetus"))
         elif ('Deimos' in self.reward):
             reward = get_bounty_reward(self.reward, "deimos")

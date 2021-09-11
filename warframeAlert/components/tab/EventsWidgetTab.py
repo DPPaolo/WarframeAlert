@@ -110,7 +110,7 @@ class EventsWidgetTab():
         return self.eventsWidget
 
     def get_length(self) -> int:
-        return self.alertWidget.get_lenght() + len(self.alerts['Goals'])
+        return self.alertWidget.get_length() + len(self.alerts['Goals'])
 
     def update_alert_mission(self, data: Alerts) -> None:
         if (OptionsHandler.get_option("Tab/TactAll") == 1):
@@ -194,7 +194,7 @@ class EventsWidgetTab():
             i -= 1
 
     def update_tab(self) -> None:
-        alerts_lenght = self.alertWidget.get_lenght()
+        alerts_lenght = self.alertWidget.get_length()
         events_lenght = len(self.alerts['Goals'])
         self.EventTabber.insertTab(0, self.AlertScrollBar, translate("eventsWidget", "alerts"))
         if (not (alerts_lenght > 0)):

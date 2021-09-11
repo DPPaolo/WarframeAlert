@@ -49,11 +49,13 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/widget/RelicWidget.py \
                warframeAlert/components/widget/SearchRelicWidget.py \
                warframeAlert/components/widget/TwitchPromoWidget.py \
+               warframeAlert/components/widget/UpdateProgramWidget.py \
                warframeAlert/services/networkService.py \
                warframeAlert/services/notificationService.py \
                warframeAlert/services/tabService.py \
                warframeAlert/services/trayService.py \
                warframeAlert/services/updateFileService.py \
+               warframeAlert/services/updateProgramService.py \
                warframeAlert/services/updateService.py \
                warframeAlert/utils/commonUtils.py \
                warframeAlert/utils/gameTranslationUtils.py \

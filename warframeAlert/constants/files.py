@@ -5,7 +5,7 @@ DEFAULT_SITE_IMAGE = "http://content.warframe.com/PublicExport"
 DEFAULT_MANIFEST_SITE = "http://content.warframe.com/PublicExport/Manifest/"
 MOBILE_MANIFEST_ID_SITE = "http://content.warframe.com/PublicExport/index_en.txt.lzma"
 
-DEFAULT_ALERT_IMAGE = "/Lotus/Interface/Icons/Store/CorpusCreditCardHigh.png"
+DEFAULT_ALERT_IMAGE = "CorpusCreditCardHigh.png"
 UPDATE_SITE = "http://deathmt2.altervista.org/warframe/"
 
 

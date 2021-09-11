@@ -11,26 +11,26 @@ from warframeAlert.utils.gameTranslationUtils import get_item_name
 
 
 class AlertWidget():
-    AllerteWidget = None
+    AlertsWidget = None
 
     def __init__(self) -> None:
 
         self.alerts = {'Alerts': []}
 
-        self.AllerteWidget = QtWidgets.QWidget()
+        self.AlertsWidget = QtWidgets.QWidget()
 
         self.NoAlert = QtWidgets.QLabel(translate("alertWidget", "noAlert"))
         self.NoAlert.setAlignment(QtCore.Qt.AlignCenter)
 
-        self.gridAllerte = QtWidgets.QGridLayout(self.AllerteWidget)
-        self.gridAllerte.setAlignment(QtCore.Qt.AlignTop)
-        self.gridAllerte.addWidget(self.NoAlert, 0, 0)
-        self.AllerteWidget.setLayout(self.gridAllerte)
+        self.alertGrid = QtWidgets.QGridLayout(self.AlertsWidget)
+        self.alertGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.alertGrid.addWidget(self.NoAlert, 0, 0)
+        self.AlertsWidget.setLayout(self.alertGrid)
 
     def get_widget(self) -> QtWidgets.QWidget:
-        return self.AllerteWidget
+        return self.AlertsWidget
 
-    def get_lenght(self) -> int:
+    def get_length(self) -> int:
         return len(self.alerts['Alerts'])
 
     def parse_alert_data(self, data: Alerts):
@@ -79,7 +79,7 @@ class AlertWidget():
     def add_alerts(self, n_alert: int) -> None:
         for i in range(n_alert, len(self.alerts['Alerts'])):
             if (not self.alerts['Alerts'][i].is_expired()):
-                self.gridAllerte.addLayout(self.alerts['Alerts'][i].AlertBox, self.gridAllerte.count(), 0)
+                self.alertGrid.addLayout(self.alerts['Alerts'][i].AlertBox, self.alertGrid.count(), 0)
                 NotificationService.send_notification(
                         self.alerts['Alerts'][i].get_title(),
                         self.alerts['Alerts'][i].to_string(),

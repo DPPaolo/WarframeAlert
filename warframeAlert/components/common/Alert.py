@@ -5,7 +5,7 @@ from PyQt5.QtCore import Qt
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.EmptySpace import EmptySpace
-from warframeAlert.constants.files import DEFAULT_SITE_IMAGE, DEFAULT_ALERT_IMAGE, IMAGE_NAME
+from warframeAlert.constants.files import DEFAULT_ALERT_IMAGE, IMAGE_NAME
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
@@ -189,7 +189,7 @@ class Alert():
         self.image = image_name
 
     def set_default_alert_image(self) -> None:
-        image_name = "images" + get_separator() + get_last_item_with_backslash(DEFAULT_ALERT_IMAGE)
-        self.AlertImg.set_image(image_name, DEFAULT_SITE_IMAGE + DEFAULT_ALERT_IMAGE)
+        image_name = "assets" + get_separator() + "image" + get_separator() + DEFAULT_ALERT_IMAGE
+        self.AlertImg.set_image(image_name)
         self.AlertImg.set_image_dimension(80, 80, Qt.KeepAspectRatio)
         self.image = image_name

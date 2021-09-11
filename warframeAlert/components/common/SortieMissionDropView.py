@@ -37,7 +37,7 @@ class SortieMissionDropView():
 
 class SortieMissionDropRow():
 
-    def __init__(self, drop: List[str, str, str]) -> None:
+    def __init__(self, drop: List[str]) -> None:
 
         self.ViewDrop1 = QtWidgets.QLabel(drop[0])
         self.ViewDrop2 = QtWidgets.QLabel(drop[1])

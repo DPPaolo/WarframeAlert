@@ -18,6 +18,10 @@ def is_linux_os() -> bool:
     return get_os_type() == "Linux"
 
 
+def is_window_os() -> bool:
+    return not is_mac_os() and not is_linux_os()
+
+
 def get_separator() -> str:
     sep = "\\"  # Windows default separator
     if (is_mac_os() or is_linux_os()):  # the OS is a MacOs or Linux
@@ -93,4 +97,3 @@ def decompress_lzma(data: bytes) -> bytes:
         if not decomp.eof:
             raise lzma.LZMAError("Compressed data ended before the end-of-stream marker was reached")
     return b"".join(results)
-

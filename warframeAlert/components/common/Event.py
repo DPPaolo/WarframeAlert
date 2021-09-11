@@ -6,11 +6,12 @@ from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
-from warframeAlert.constants.files import DEFAULT_SITE_IMAGE
+from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
+from warframeAlert.utils.gameTranslationUtils import get_item_name_en
 
 
 class EventType(Enum):
@@ -103,8 +104,8 @@ class Event():
         self.TAInfoBox.addLayout(self.TADescbox5)
         self.TAInfoBox.addStretch()
 
-        self.TABaseInfoBox.addLayout(self.TAInfoBox, 2)
         self.TABaseInfoBox.addWidget(self.EventImg.image)
+        self.TABaseInfoBox.addLayout(self.TAInfoBox, 2)
 
         self.TADescvbox.addLayout(self.TABaseInfoBox)
 
@@ -119,7 +120,7 @@ class Event():
     def set_event_name(self, name: str, desc: str, tooltip: str, icon: str) -> None:
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
-            self.EventImg.set_image(image_name, DEFAULT_SITE_IMAGE + icon)
+            self.EventImg.set_image(image_name, UPDATE_SITE + icon)
             self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
             self.icon = image_name
         else:
@@ -138,9 +139,9 @@ class Event():
         self.EventEnd.start()
         name_tooltip = translate("event", "numEvent") + " " + str(count+1)
         if (transmission != ""):
-            name_tooltip += " " + translate("event", "transmission") + ": " + transmission
+            name_tooltip += "\n" + translate("event", "transmission") + ": " + transmission
         if (community):
-            name_tooltip += " " + translate("event", "community") + ": " + community
+            name_tooltip += "\n" + translate("event", "community") + ": " + community
         self.EventNameLab.setToolTip(name_tooltip)
         self.EventName.setToolTip(name_tooltip)
         self.EventPer.setText(personal)
@@ -149,34 +150,39 @@ class Event():
 
     def set_optional_field(self, regions: str, success: str, faction: str,
                            item_required: str, roaming_vip: str, req_mis: List[str]) -> None:
-        self.EventRegion.setText(regions)
-        self.EventSuccess.setText(success)
-        self.EventFaction.setText(faction)
-        self.EventReqItem.setText(item_required)
-        self.EventRoamingVip.setText(roaming_vip)
-        if (req_mis != []):
+        if (regions == ""):
+            self.EventRegionLab.hide()
+            self.EventRegion.hide()
+        else:
+            self.EventRegion.setText(regions)
+        if (success == ""):
+            self.EventSuccessLab.hide()
+            self.EventSuccess.hide()
+        else:
+            self.EventSuccess.setText(success)
+        if (faction == ""):
+            self.EventFactionLab.hide()
+            self.EventFaction.hide()
+        else:
+            self.EventFaction.setText(faction)
+        if (item_required == ""):
+            self.EventReqItemLab.hide()
+            self.EventReqItem.hide()
+        else:
+            self.EventReqItem.setText(get_item_name_en(item_required))
+        if (roaming_vip == ""):
+            self.EventRoamingVipLab.hide()
+            self.EventRoamingVip.hide()
+        else:
+            self.EventRoamingVip.setText(roaming_vip)
+        if (req_mis == []):
+            self.EventReqMisLab.hide()
+            self.EventReqMis.hide()
+        else:
             req_mission = ""
             for mission in req_mis:
                 req_mission += mission + " "
                 self.EventReqMis.setText(req_mission)
-        if (regions == ""):
-            self.EventRegionLab.hide()
-            self.EventRegion.hide()
-        if (success == ""):
-            self.EventSuccessLab.hide()
-            self.EventSuccess.hide()
-        if (faction == ""):
-            self.EventFactionLab.hide()
-            self.EventFaction.hide()
-        if (item_required == ""):
-            self.EventReqItemLab.hide()
-            self.EventReqItem.hide()
-        if (roaming_vip == ""):
-            self.EventRoamingVipLab.hide()
-            self.EventRoamingVip.hide()
-        if (req_mis == ""):
-            self.EventReqMisLab.hide()
-            self.EventReqMis.hide()
 
     def get_event_id(self) -> str:
         return self.event_id
