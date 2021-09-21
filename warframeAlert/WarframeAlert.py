@@ -86,16 +86,15 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
         self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
 
-        self.init_app()
-
         self.tabService.update_tabber()
+
+        self.resize(680, 450)
+
+        self.init_app()
 
         update_cycle = OptionsHandler.get_option("Update/Cycle")
         if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
             self.tabService.update("")
-            self.show()
-
-        self.resize(680, 450)
 
     def start_update(self) -> None:
         self.resize(680, 450)
@@ -111,14 +110,14 @@ class MainWindow(QtWidgets.QMainWindow):
                 None
             )
 
-    def init_app(self):
+    def init_app(self) -> None:
         # Check if there is a new version downloaded
         if (fileUtils.check_file("PostUpdate.txt")):
             update_program()
 
         # Download files if it's the first init
         if (OptionsHandler.get_option("FirstInit") == 0):
-            if not check_connection():
+            if (not check_connection()):
                 MessageBox(translate("main", "noConnection"),
                            translate("main", "noConnectionFirstInit"),
                            MessageBoxType.ERROR)
@@ -126,8 +125,6 @@ class MainWindow(QtWidgets.QMainWindow):
 
             create_default_folder()
             self.optionHandler.create_config()
-
-            #warframeData.gestore_update.open_update_file()
 
             if (not fileUtils.is_linux_os() and not fileUtils.is_mac_os()):
                 if getattr(sys, 'frozen', False):

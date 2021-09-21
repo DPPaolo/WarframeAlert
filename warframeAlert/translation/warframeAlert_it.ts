@@ -423,7 +423,7 @@
     </message>
     <message>
         <location filename="../components/common/DailyDeals.py" line="65"/>
-        <source>prepare_restart</source>
+        <source>start</source>
         <translation>Iniziato il</translation>
     </message>
 </context>
@@ -1039,11 +1039,6 @@
 <context>
     <name>hubEvent</name>
     <message>
-        <location filename="../components/common/HubEvent.py" line="18"/>
-        <source>prepare_restart</source>
-        <translation>Iniziato il</translation>
-    </message>
-    <message>
         <location filename="../components/common/HubEvent.py" line="20"/>
         <source>end</source>
         <translation>Termina tra</translation>
@@ -1092,6 +1087,11 @@
         <location filename="../components/widget/RelayStationWidget.py" line="76"/>
         <source>event</source>
         <translation>Evento su</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="18"/>
+        <source>start</source>
+        <translation>Iniziato il</translation>
     </message>
 </context>
 <context>
@@ -1219,12 +1219,12 @@
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="172"/>
+        <location filename="../WarframeAlert.py" line="171"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="173"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
@@ -1234,42 +1234,42 @@
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="154"/>
+        <location filename="../WarframeAlert.py" line="153"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="155"/>
+        <location filename="../WarframeAlert.py" line="154"/>
         <source>dataMenu</source>
         <translation>Dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="156"/>
+        <location filename="../WarframeAlert.py" line="155"/>
         <source>toolsMenu</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="157"/>
+        <location filename="../WarframeAlert.py" line="156"/>
         <source>helpMenu</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="179"/>
         <source>updateFileMenu</source>
         <translation>Aggiorna file Allerte</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="182"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenuDesc</source>
         <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="186"/>
+        <location filename="../WarframeAlert.py" line="185"/>
         <source>updateFilesMenu</source>
         <translation>Aggiorna file secondari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="188"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFilesMenuDesc</source>
         <translation>Aggiorna tutti ifile secondari necessari</translation>
     </message>
@@ -1290,12 +1290,12 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="125"/>
+        <location filename="../services/networkService.py" line="113"/>
         <source>connectionError</source>
         <translation>Errore di connessione durante il download del file</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="86"/>
+        <location filename="../services/networkService.py" line="58"/>
         <source>versionCheckError</source>
         <translation>Impossibile verificare la versione del programma</translation>
     </message>
@@ -1647,11 +1647,6 @@
 <context>
     <name>pvpWidgetTab</name>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="122"/>
-        <source>prepare_restart</source>
-        <translation>Iniziato il</translation>
-    </message>
-    <message>
         <location filename="../components/tab/PvPWidgetTab.py" line="34"/>
         <source>end</source>
         <translation>Finisce tra</translation>
@@ -1690,6 +1685,11 @@
         <location filename="../components/tab/PvPWidgetTab.py" line="77"/>
         <source>pvpMissionUpdateError</source>
         <translation>Errore nel parsing delle missioni pvp</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/PvPWidgetTab.py" line="122"/>
+        <source>start</source>
+        <translation>Iniziato il</translation>
     </message>
 </context>
 <context>
@@ -1812,11 +1812,6 @@
         <translation>Visibile</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="68"/>
-        <source>prepare_restart</source>
-        <translation>Iniziato il</translation>
-    </message>
-    <message>
         <location filename="../components/common/SalesBox.py" line="69"/>
         <source>bogobuy</source>
         <translation>Bogobuy</translation>
@@ -1835,6 +1830,11 @@
         <location filename="../components/common/SalesBox.py" line="73"/>
         <source>popular</source>
         <translation>Popolare</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="68"/>
+        <source>start</source>
+        <translation>Iniziato il</translation>
     </message>
 </context>
 <context>
@@ -2421,22 +2421,22 @@
 <context>
     <name>updateProgramService</name>
     <message>
-        <location filename="../services/updateProgramService.py" line="21"/>
+        <location filename="../services/updateProgramService.py" line="19"/>
         <source>title</source>
         <translation>Aggiornamento Programma</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="91"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="99"/>
         <source>versionDownloadError</source>
         <translation>Impossibile scaricare la nuova versione del programma</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="41"/>
+        <location filename="../services/updateProgramService.py" line="24"/>
         <source>updateFileTitle</source>
         <translation>Aggiornamento File Necessari</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="36"/>
+        <location filename="../services/networkService.py" line="80"/>
         <source>newVersionError</source>
         <translation>Impossibile cancellare/chiudere la vecchia versione del programma</translation>
     </message>
@@ -2449,44 +2449,49 @@
         <translation>Note di Rilascio</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="27"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="29"/>
         <source>updateProgram</source>
         <translation>Aggiorna Programma</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="43"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="39"/>
         <source>errorDownloadChangelog</source>
         <translation>Impossibile scaricare il file delle note di rilascio</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="53"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="74"/>
         <source>noChangelog</source>
         <translation>Nessuna Nota di Rilascio Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="54"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="75"/>
         <source>cantReadChangelog</source>
         <translation>Impossibile aprire il file delle note di rilascio</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="72"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
         <source>lastVersionTitle</source>
         <translation>Porgramma Aggiornato</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="72"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
         <source>lastVersionDesc</source>
         <translation>Possiedi l&apos;ultima versione disponibile</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
         <source>title</source>
         <translation>Aggiornamento Programma</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
         <source>versionDownloadError</source>
         <translation>Impossibile scaricare la nuova versione del programma</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="28"/>
+        <source>loading</source>
+        <translation>Caricamento</translation>
     </message>
 </context>
 <context>
@@ -2505,6 +2510,11 @@
         <location filename="../services/updateFileService.py" line="66"/>
         <source>downloadFinished</source>
         <translation>Download terminato</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="39"/>
+        <source>noConnection</source>
+        <translation>Connessione ad Internet assente. Impossibile aggiornare i file</translation>
     </message>
 </context>
 <context>

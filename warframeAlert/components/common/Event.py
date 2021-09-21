@@ -117,10 +117,20 @@ class Event():
     def add_event_widget(self, layout: QtWidgets) -> None:
         self.TADescvbox.addWidget(layout)
 
-    def set_event_name(self, name: str, desc: str, tooltip: str, icon: str) -> None:
+    def set_event_name(self, name: str, desc: str, tooltip: str, icon: str, stratos_present: bool) -> None:
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
             self.EventImg.set_image(image_name, UPDATE_SITE + icon)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
+            self.icon = image_name
+        elif (stratos_present):
+            image_name = "images/StratosEmblem.png"
+            self.EventImg.set_image(image_name, UPDATE_SITE + image_name)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
+            self.icon = image_name
+        elif (name == "HeatFissure"):
+            image_name = "images/ThermiaFractureEmblem.png"
+            self.EventImg.set_image(image_name, UPDATE_SITE + image_name)
             self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
             self.icon = image_name
         else:

@@ -238,6 +238,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     req_item = roaming_vip = mission_map_rotation = ""
     personal = clamp_score = emblem = "No"
     mission_interval = 0
+    stratos_present = False
     req_mis: List[str] = []
     init = timeUtils.get_time(event['Activation']['$date']['$numberLong'])
     end = event['Expiry']['$date']['$numberLong']
@@ -275,6 +276,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     if ('ClampNodeScores' in event):
         clamp_score = bool_to_yes_no(event['ClampNodeScores'])
     if ('Bounty' in event):
+        stratos_present = event['Bounty']
         emblem = bool_to_yes_no(event['Bounty'])
     if ('Success' in event):
         success = bool_to_yes_no(event['Success'])
@@ -393,7 +395,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     else:
         temp = Event(event_id)
 
-    temp.set_event_name(name, desc, tooltip, icon)
+    temp.set_event_name(name, desc, tooltip, icon, stratos_present)
     temp.set_event_info(init, end, count, personal, clamp_score, emblem, transmission, community)
     temp.set_optional_field(regions, success, faction, req_item, roaming_vip, req_mis)
 

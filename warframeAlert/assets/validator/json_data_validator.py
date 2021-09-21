@@ -711,11 +711,27 @@ construction_projects_schema = {
             "type": "object",
             "additionalProperties": False,
             "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
                 "Tag": {"type": "string"},
+                "Node": {"type": "string"},
+                "HunterBoostTask": {"type": "string"},
                 "Tasks": {"type": "array",
                           "items": {"type": "string"}},
+                "ToolTips": {"type": "array",
+                             "items": {"type": "string"}},
             },
-            "required": [],
+            "required": ["Activation", "Tasks", "Node", "Tag", "HunterBoostTask"],
         }
     }
 }

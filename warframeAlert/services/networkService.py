@@ -6,9 +6,8 @@ import time
 import urllib.request
 from urllib.error import URLError
 
-from PyQt5 import QtCore
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QThread
-from PyQt5.QtWidgets import QProgressBar
 
 from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -116,14 +115,14 @@ class Downloader(QThread):
 class ProgressBarDownloader(QThread):
     download_completed = QtCore.pyqtSignal()
 
-    def __init__(self, progress_bar: QProgressBar, url: str, path: str) -> None:
+    def __init__(self, progress_bar: QtWidgets.QProgressBar, url: str, path: str) -> None:
         QThread.__init__(self)
         self.progressBar = progress_bar
         self.url: str = url
         self.path: str = path
 
     def run(self) -> None:
-        fp = open(self.path, 'wb')
+        fp = open(self.path, "wb")
         response = urllib.request.urlopen(self.url)
         downloaded = 0
         self.progressBar.setProperty("value", 0.0)

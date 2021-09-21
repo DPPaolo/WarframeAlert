@@ -423,7 +423,7 @@
     </message>
     <message>
         <location filename="../components/common/DailyDeals.py" line="65"/>
-        <source>prepare_restart</source>
+        <source>start</source>
         <translation>Started at</translation>
     </message>
 </context>
@@ -1039,11 +1039,6 @@
 <context>
     <name>hubEvent</name>
     <message>
-        <location filename="../components/common/HubEvent.py" line="18"/>
-        <source>prepare_restart</source>
-        <translation>Started at</translation>
-    </message>
-    <message>
         <location filename="../components/common/HubEvent.py" line="20"/>
         <source>end</source>
         <translation>Expires in</translation>
@@ -1092,6 +1087,11 @@
         <location filename="../components/widget/RelayStationWidget.py" line="76"/>
         <source>event</source>
         <translation>Event on</translation>
+    </message>
+    <message>
+        <location filename="../components/common/HubEvent.py" line="18"/>
+        <source>start</source>
+        <translation>Started at</translation>
     </message>
 </context>
 <context>
@@ -1219,12 +1219,12 @@
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="172"/>
+        <location filename="../WarframeAlert.py" line="171"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="173"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
@@ -1234,42 +1234,42 @@
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="154"/>
+        <location filename="../WarframeAlert.py" line="153"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="155"/>
+        <location filename="../WarframeAlert.py" line="154"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="156"/>
+        <location filename="../WarframeAlert.py" line="155"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="157"/>
+        <location filename="../WarframeAlert.py" line="156"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="179"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="182"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="186"/>
+        <location filename="../WarframeAlert.py" line="185"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="188"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
     </message>
@@ -1290,12 +1290,12 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="125"/>
+        <location filename="../services/networkService.py" line="113"/>
         <source>connectionError</source>
         <translation>Connetion error during downloading file</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="86"/>
+        <location filename="../services/networkService.py" line="58"/>
         <source>versionCheckError</source>
         <translation>Error during the check of the version of the program</translation>
     </message>
@@ -1647,11 +1647,6 @@
 <context>
     <name>pvpWidgetTab</name>
     <message>
-        <location filename="../components/tab/PvPWidgetTab.py" line="122"/>
-        <source>prepare_restart</source>
-        <translation>Started at</translation>
-    </message>
-    <message>
         <location filename="../components/tab/PvPWidgetTab.py" line="34"/>
         <source>end</source>
         <translation>Ends in</translation>
@@ -1690,6 +1685,11 @@
         <location filename="../components/tab/PvPWidgetTab.py" line="77"/>
         <source>pvpMissionUpdateError</source>
         <translation>Error during parsing pvp missions</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/PvPWidgetTab.py" line="122"/>
+        <source>start</source>
+        <translation>Started at</translation>
     </message>
 </context>
 <context>
@@ -1812,11 +1812,6 @@
         <translation>Visible</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="68"/>
-        <source>prepare_restart</source>
-        <translation>Started at</translation>
-    </message>
-    <message>
         <location filename="../components/common/SalesBox.py" line="69"/>
         <source>bogobuy</source>
         <translation>Bogobuy</translation>
@@ -1835,6 +1830,11 @@
         <location filename="../components/common/SalesBox.py" line="73"/>
         <source>popular</source>
         <translation>Popular</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="68"/>
+        <source>start</source>
+        <translation>Started at</translation>
     </message>
 </context>
 <context>
@@ -2421,22 +2421,22 @@
 <context>
     <name>updateProgramService</name>
     <message>
-        <location filename="../services/updateProgramService.py" line="21"/>
+        <location filename="../services/updateProgramService.py" line="19"/>
         <source>title</source>
         <translation>Program Updater</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="91"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="99"/>
         <source>versionDownloadError</source>
         <translation>Error during the download of the new program</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="41"/>
+        <location filename="../services/updateProgramService.py" line="24"/>
         <source>updateFileTitle</source>
         <translation>Download Mandatory Files</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="36"/>
+        <location filename="../services/networkService.py" line="80"/>
         <source>newVersionError</source>
         <translation>Error during the removing of old version</translation>
     </message>
@@ -2449,44 +2449,49 @@
         <translation>Changelog</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="27"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="29"/>
         <source>updateProgram</source>
         <translation>Update Program</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="43"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="39"/>
         <source>errorDownloadChangelog</source>
         <translation>Error during the download of the changelog file</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="53"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="74"/>
         <source>noChangelog</source>
         <translation>No changelog available</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="54"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="75"/>
         <source>cantReadChangelog</source>
         <translation>Can&apos;t open the changelog</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="72"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
         <source>lastVersionTitle</source>
         <translation>Program Updated</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="72"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
         <source>lastVersionDesc</source>
         <translation>You have already the last version available</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
         <source>title</source>
         <translation>Program Updater</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
         <source>versionDownloadError</source>
         <translation>Error during the download of the new program</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="28"/>
+        <source>loading</source>
+        <translation>Loading</translation>
     </message>
 </context>
 <context>
@@ -2505,6 +2510,11 @@
         <location filename="../services/updateFileService.py" line="66"/>
         <source>downloadFinished</source>
         <translation>Download Finished</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="39"/>
+        <source>noConnection</source>
+        <translation>No Connection available. Can&apos;t download required files</translation>
     </message>
 </context>
 <context>
