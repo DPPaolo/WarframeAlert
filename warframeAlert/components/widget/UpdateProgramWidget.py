@@ -5,8 +5,8 @@ from PyQt5 import QtWidgets, QtGui
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.constants.files import UPDATE_SITE
-from warframeAlert.services.networkService import download, check_connection, retrieve_version, get_actual_version, \
-    ProgressBarDownloader
+from warframeAlert.services.networkService import check_connection, retrieve_version, get_actual_version, \
+    ProgressBarDownloader, Downloader
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
@@ -24,36 +24,19 @@ class UpdateProgramWidget():
 
         self.UpdateTitleLabel = QtWidgets.QLabel(translate("updateProgramWidget", "changelog") + ":")
         self.textEditUpdate = QtWidgets.QTextEdit(self.UpdateWidget)
+        self.textEditUpdate.setReadOnly(True)
+        self.textEditUpdate.setText(translate("updateProgramWidget", "loading") + "...")
         self.UpdatePButton = QtWidgets.QPushButton(translate("updateProgramWidget", "updateProgram"))
         self.UpdatePer = QtWidgets.QProgressBar()
         self.UpdatePer.hide()
         try:
             if (is_window_os()):
-                download(UPDATE_SITE + "changelog.txt", "changelog_temp.txt")
-                fp2 = open("changelog_temp.txt", "r")
-                out = open("../changelog.txt", "w")
-                for line in fp2.readlines():
-                    out.write(line)
-                out.flush()
-                out.close()
-                fp2.close()
-                os.remove("changelog_temp.txt")
+                downloader = Downloader(UPDATE_SITE + "changelog.txt", "changelog_temp.txt")
+                downloader.start()
+                downloader.download_completed.connect(lambda: self.update_changelog_screen())
         except Exception as er:  # UnicodeDecodeError
             LogHandler.err(translate("updateProgramWidget", "errorDownloadChangelog") + ": " + str(er))
             commonUtils.print_traceback(translate("updateProgramWidget", "errorDownloadChangelog") + ": " + str(er))
-        try:
-            if (is_window_os()):
-                fp = open("../changelog.txt", "r")
-                for line in fp.readlines():
-                    line = line.replace("\n", "")
-                    self.textEditUpdate.append(line)
-                fp.close()
-        except Exception as er:
-            self.textEditUpdate.setText(translate("updateProgramWidget", "noChangelog"))
-            LogHandler.err(translate("updateProgramWidget", "noChangelog") + ": " + str(er))
-            commonUtils.print_traceback(translate("updateProgramWidget", "cantReadChangelog") + ": " + str(er))
-        self.textEditUpdate.setReadOnly(True)
-        self.textEditUpdate.moveCursor(QtGui.QTextCursor.Start)
         self.textEditUpdate.ensureCursorVisible()
         self.gridAupdate = QtWidgets.QGridLayout(self.UpdateWidget)
 
@@ -68,6 +51,28 @@ class UpdateProgramWidget():
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.UpdateWidget
+
+    def update_changelog_screen(self) -> None:
+        try:
+            fp2 = open("changelog_temp.txt", "r")
+            out = open("../changelog.txt", "w")
+            for line in fp2.readlines():
+                out.write(line)
+            out.flush()
+            out.close()
+            fp2.close()
+            os.remove("changelog_temp.txt")
+            fp = open("../changelog.txt", "r")
+            self.textEditUpdate.setText("")
+            for line in fp.readlines():
+                line = line.replace("\n", "")
+                self.textEditUpdate.append(line)
+            fp.close()
+            self.textEditUpdate.moveCursor(QtGui.QTextCursor.Start)
+        except Exception as er:
+            self.textEditUpdate.setText(translate("updateProgramWidget", "noChangelog"))
+            LogHandler.err(translate("updateProgramWidget", "noChangelog") + ": " + str(er))
+            commonUtils.print_traceback(translate("updateProgramWidget", "cantReadChangelog") + ": " + str(er))
 
     def check_download_program(self) -> None:
         if (retrieve_version() == get_actual_version()):
@@ -93,7 +98,6 @@ class UpdateProgramWidget():
                        MessageBoxType.ERROR)
             commonUtils.print_traceback(translate("updateProgramService", "versionDownloadError") + "\n" + str(er))
             LogHandler.err(str(er))
-            return
 
     def prepare_restart(self, ver: str, name: str) -> None:
         d = get_cur_dir()

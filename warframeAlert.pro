@@ -50,6 +50,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/widget/SearchRelicWidget.py \
                warframeAlert/components/widget/TwitchPromoWidget.py \
                warframeAlert/components/widget/UpdateProgramWidget.py \
+               warframeAlert/components/widget/UpdateRequiredFilesWidget.py \
                warframeAlert/services/networkService.py \
                warframeAlert/services/notificationService.py \
                warframeAlert/services/tabService.py \

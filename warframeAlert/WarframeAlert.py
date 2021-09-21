@@ -15,7 +15,7 @@ from warframeAlert.services.trayService import TrayService
 from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.services.updateProgramService import UpdateProgramService
 from warframeAlert.services.updateService import UpdateService
-from warframeAlert.utils import fileUtils
+from warframeAlert.utils import fileUtils, timeUtils
 from warframeAlert.utils.fileUtils import create_default_folder, get_separator, \
     copy_bundled_files_to_current_dir
 from warframeAlert.utils.logUtils import LogHandler
@@ -131,23 +131,20 @@ class MainWindow(QtWidgets.QMainWindow):
                     copy_bundled_files_to_current_dir()
             OptionsHandler.set_option("FirstInit", 1)
 
-        # Copy bundled files if missing
-        #TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
-        if not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False):
-            copy_bundled_files_to_current_dir()
+            self.updateProgramService.open_and_update_file()
+        else:
+            # Copy bundled files if missing
+            #TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
+            if (not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False)):
+                copy_bundled_files_to_current_dir()
 
-    #     #aggiorna i file necessari al funzionamento
-    #     if (OptionsHandler.get_option("Update/Cycle") != 0):
-    #         warframeData.gestore_update_file.update_alert_file_only(True)
-    #
-    #
-    #     date = OptionsHandler.get_option("Update/AutoUpdateAll")
-    #     att_date = int(timeUtils.get_local_time())
-    #     if ((att_date - date) > 604800):
-    #         OptionsHandler.set_option("Update/AutoUpdateAll", att_date)
-    #         warframeData.gestore_update.open_update_file()
+            old_update_date = OptionsHandler.get_option("Update/AutoUpdateAll")
+            actual_date = int(timeUtils.get_local_time())
+            if ((actual_date - old_update_date) > 604800 and check_connection()):
+                OptionsHandler.set_option("Update/AutoUpdateAll", actual_date)
+                self.updateProgramService.open_and_update_file()
 
-    def create_menu(self):
+    def create_menu(self) -> None:
         file = self.navBarMenu.addMenu('&' + translate("main", "fileMenu"))
         debug = self.navBarMenu.addMenu('&' + translate("main", "dataMenu"))
         tool = self.navBarMenu.addMenu('&' + translate("main", "toolsMenu"))
