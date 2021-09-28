@@ -45,8 +45,6 @@ class EventsWidgetTab():
 
         self.eventGrid = QtWidgets.QGridLayout(self.eventsWidget)
 
-        self.eventGrid.setAlignment(QtCore.Qt.AlignTop)
-
         self.AlertScrollBar = QtWidgets.QScrollArea()
         self.EventScrollBarA = QtWidgets.QScrollArea()
         self.EventScrollBarB = QtWidgets.QScrollArea()
@@ -103,6 +101,7 @@ class EventsWidgetTab():
         self.EventTabber = QtWidgets.QTabWidget(self.eventsWidget)
 
         self.eventGrid.addWidget(self.EventTabber, 0, 0)
+        self.eventGrid.setAlignment(QtCore.Qt.AlignTop)
 
         self.eventsWidget.setLayout(self.eventGrid)
 

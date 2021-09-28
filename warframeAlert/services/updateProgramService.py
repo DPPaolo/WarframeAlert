@@ -3,6 +3,7 @@
 from PyQt5 import QtCore
 
 from warframeAlert.components.widget.UpdateProgramWidget import UpdateProgramWidget
+from warframeAlert.components.widget.UpdateRequiredFilesWidget import UpdateRequiredFilesWidget
 from warframeAlert.services.translationService import translate
 
 
@@ -18,9 +19,7 @@ class UpdateProgramService(QtCore.QObject):
         self.AutoUpdate.setWindowTitle(translate("updateProgramService", "title"))
         self.AutoUpdate.show()
 
-    def open_update_file(self) -> None:
-        self.UpdateFileWidget, obj = warframeUI.widget_update_file(self)
+    def open_and_update_file(self) -> None:
+        self.UpdateFileWidget = UpdateRequiredFilesWidget().get_widget()
         self.UpdateFileWidget.setWindowTitle(translate("updateProgramService", "updateFileTitle"))
         self.UpdateFileWidget.show()
-        warframeData.gestore_update_file.download_program_file(obj)
-

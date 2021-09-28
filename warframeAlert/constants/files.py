@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-DEFAULT_SITE_IMAGE = "http://content.warframe.com/PublicExport"
+DEFAULT_DOWNLOAD_SITE = "http://content.warframe.com/PublicExport"
 
-DEFAULT_MANIFEST_SITE = "http://content.warframe.com/PublicExport/Manifest/"
-MOBILE_MANIFEST_ID_SITE = "http://content.warframe.com/PublicExport/index_en.txt.lzma"
+DEFAULT_MANIFEST_SITE = DEFAULT_DOWNLOAD_SITE + "/Manifest/"
+MOBILE_MANIFEST_ID_SITE = DEFAULT_DOWNLOAD_SITE + "/index_en.txt.lzma"
 
 DEFAULT_ALERT_IMAGE = "CorpusCreditCardHigh.png"
 UPDATE_SITE = "http://deathmt2.altervista.org/warframe/"

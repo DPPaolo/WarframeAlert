@@ -480,12 +480,12 @@
         <translation>Required Item for the event</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="140"/>
+        <location filename="../components/common/Event.py" line="150"/>
         <source>numEvent</source>
         <translation>Re-presentation of the event number</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="142"/>
+        <location filename="../components/common/Event.py" line="152"/>
         <source>transmission</source>
         <translation>Active Transmission</translation>
     </message>
@@ -500,7 +500,7 @@
         <translation>Event/Mission required</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="144"/>
+        <location filename="../components/common/Event.py" line="154"/>
         <source>community</source>
         <translation>Community Event</translation>
     </message>
@@ -626,27 +626,27 @@
         <translation>Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="434"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="436"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="425"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="427"/>
         <source>oldBounty</source>
         <translation>Previous Bounty</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="405"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
         <source>razorbackHubEvent</source>
         <translation>Hub Event: Razorback Armada</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="409"/>
         <source>fomorianHubEvent</source>
         <translation>Hub Event: Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="409"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="411"/>
         <source>hubEvent</source>
         <translation>Hub Event: Event</translation>
     </message>
@@ -1204,74 +1204,92 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="108"/>
+        <location filename="../WarframeAlert.py" line="106"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="122"/>
+        <location filename="../WarframeAlert.py" line="120"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="122"/>
+        <location filename="../WarframeAlert.py" line="120"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="171"/>
+        <location filename="../WarframeAlert.py" line="164"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="173"/>
+        <location filename="../WarframeAlert.py" line="166"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="108"/>
+        <location filename="../WarframeAlert.py" line="106"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="153"/>
+        <location filename="../WarframeAlert.py" line="146"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="154"/>
+        <location filename="../WarframeAlert.py" line="147"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="155"/>
+        <location filename="../WarframeAlert.py" line="148"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="156"/>
+        <location filename="../WarframeAlert.py" line="149"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="179"/>
+        <location filename="../WarframeAlert.py" line="172"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="181"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="185"/>
+        <location filename="../WarframeAlert.py" line="178"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="187"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="214"/>
+        <source>infoHelpMenu</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="216"/>
+        <source>infoHelpMenuTooltip</source>
+        <translation>Program Information</translation>
+    </message>
+</context>
+<context>
+    <name>menuService</name>
+    <message>
+        <location filename="../services/menuService.py" line="26"/>
+        <source>infoTitle</source>
+        <translation>Info</translation>
     </message>
 </context>
 <context>
@@ -1290,12 +1308,12 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="113"/>
+        <location filename="../services/networkService.py" line="112"/>
         <source>connectionError</source>
         <translation>Connetion error during downloading file</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="58"/>
+        <location filename="../services/networkService.py" line="57"/>
         <source>versionCheckError</source>
         <translation>Error during the check of the version of the program</translation>
     </message>
@@ -2436,7 +2454,7 @@
         <translation>Download Mandatory Files</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="80"/>
+        <location filename="../services/networkService.py" line="79"/>
         <source>newVersionError</source>
         <translation>Error during the removing of old version</translation>
     </message>
@@ -2512,7 +2530,7 @@
         <translation>Download Finished</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="39"/>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="41"/>
         <source>noConnection</source>
         <translation>No Connection available. Can&apos;t download required files</translation>
     </message>

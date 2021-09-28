@@ -1,6 +1,7 @@
 # coding=utf-8
 import json
 from itertools import groupby
+from json import JSONDecodeError
 from typing import List, Tuple
 
 from PyQt5 import QtWidgets
@@ -157,7 +158,7 @@ def read_drop_file(name: str) -> dict:
     fp.close()
     try:
         return json.loads(data[0])
-    except IndexError or Exception:
+    except IndexError or JSONDecodeError:
         return {}
 
 

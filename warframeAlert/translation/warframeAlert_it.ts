@@ -480,12 +480,12 @@
         <translation>Item Richiesto per l&apos;evento</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="140"/>
+        <location filename="../components/common/Event.py" line="150"/>
         <source>numEvent</source>
         <translation>Riproposizione dell&apos;evento numero</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="142"/>
+        <location filename="../components/common/Event.py" line="152"/>
         <source>transmission</source>
         <translation>Trasmissione Attiva</translation>
     </message>
@@ -500,7 +500,7 @@
         <translation>Evento/Missione richiesta</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="144"/>
+        <location filename="../components/common/Event.py" line="154"/>
         <source>community</source>
         <translation>Evento di comunità</translation>
     </message>
@@ -626,27 +626,27 @@
         <translation>Invasione Sentient</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="434"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="436"/>
         <source>event</source>
         <translation>Evento</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="425"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="427"/>
         <source>oldBounty</source>
         <translation>Taglia precedente</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="405"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
         <source>razorbackHubEvent</source>
         <translation>Evento Hub: Razorback Armada</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="409"/>
         <source>fomorianHubEvent</source>
         <translation>Evento Hub: Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="409"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="411"/>
         <source>hubEvent</source>
         <translation>Evento Hub: Evento</translation>
     </message>
@@ -1204,74 +1204,92 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="108"/>
+        <location filename="../WarframeAlert.py" line="106"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="122"/>
+        <location filename="../WarframeAlert.py" line="120"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="122"/>
+        <location filename="../WarframeAlert.py" line="120"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="171"/>
+        <location filename="../WarframeAlert.py" line="164"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="173"/>
+        <location filename="../WarframeAlert.py" line="166"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="108"/>
+        <location filename="../WarframeAlert.py" line="106"/>
         <source>closeToTray</source>
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="153"/>
+        <location filename="../WarframeAlert.py" line="146"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="154"/>
+        <location filename="../WarframeAlert.py" line="147"/>
         <source>dataMenu</source>
         <translation>Dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="155"/>
+        <location filename="../WarframeAlert.py" line="148"/>
         <source>toolsMenu</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="156"/>
+        <location filename="../WarframeAlert.py" line="149"/>
         <source>helpMenu</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="179"/>
+        <location filename="../WarframeAlert.py" line="172"/>
         <source>updateFileMenu</source>
         <translation>Aggiorna file Allerte</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="181"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>updateFileMenuDesc</source>
         <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="185"/>
+        <location filename="../WarframeAlert.py" line="178"/>
         <source>updateFilesMenu</source>
         <translation>Aggiorna file secondari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="187"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>updateFilesMenuDesc</source>
         <translation>Aggiorna tutti ifile secondari necessari</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="214"/>
+        <source>infoHelpMenu</source>
+        <translation>Informazioni</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="216"/>
+        <source>infoHelpMenuTooltip</source>
+        <translation>Informazioni sul Programma</translation>
+    </message>
+</context>
+<context>
+    <name>menuService</name>
+    <message>
+        <location filename="../services/menuService.py" line="26"/>
+        <source>infoTitle</source>
+        <translation>Informazioni</translation>
     </message>
 </context>
 <context>
@@ -1290,12 +1308,12 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="113"/>
+        <location filename="../services/networkService.py" line="112"/>
         <source>connectionError</source>
         <translation>Errore di connessione durante il download del file</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="58"/>
+        <location filename="../services/networkService.py" line="57"/>
         <source>versionCheckError</source>
         <translation>Impossibile verificare la versione del programma</translation>
     </message>
@@ -2436,7 +2454,7 @@
         <translation>Aggiornamento File Necessari</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="80"/>
+        <location filename="../services/networkService.py" line="79"/>
         <source>newVersionError</source>
         <translation>Impossibile cancellare/chiudere la vecchia versione del programma</translation>
     </message>
@@ -2512,7 +2530,7 @@
         <translation>Download terminato</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="39"/>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="41"/>
         <source>noConnection</source>
         <translation>Connessione ad Internet assente. Impossibile aggiornare i file</translation>
     </message>
