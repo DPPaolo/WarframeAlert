@@ -121,16 +121,16 @@ def get_simaris_target(simaris_target: str) -> str:
         return get_last_item_with_backslash(simaris_target)
 
 
-def get_invasion_loctag(loctag: str) -> str:
-    if (loctag in INVASION_LOCTAG):
-        return INVASION_LOCTAG[loctag][OptionsHandler.get_option("Language", str)]
+def get_invasion_loc_tag(loc_tag: str) -> str:
+    if (loc_tag in INVASION_LOCTAG):
+        return INVASION_LOCTAG[loc_tag][OptionsHandler.get_option("Language", str)]
     else:
-        print(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
-        LogHandler.err(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loctag)
-        return get_last_item_with_backslash(loctag)
+        print(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loc_tag)
+        LogHandler.err(translate("gameTranslation", "unknownInvasionLocTag") + ": " + loc_tag)
+        return get_last_item_with_backslash(loc_tag)
 
 
-def get_accolyte_name(name: str) -> str:
+def get_acolyte_name(name: str) -> str:
     if (name in ACCOLYTE_NAME):
         return ACCOLYTE_NAME[name]
     else:
@@ -143,8 +143,8 @@ def get_upgrade_type(upgrade: str) -> str:
     if (upgrade in UPGRADE_TYPE):
         return UPGRADE_TYPE[upgrade][OptionsHandler.get_option("Language", str)]
     else:
-        print(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
-        LogHandler.err(translate("gameTranslation", "unknownupgradeType") + ": " + str(upgrade))
+        print(translate("gameTranslation", "unknownUpgradeType") + ": " + str(upgrade))
+        LogHandler.err(translate("gameTranslation", "unknownUpgradeType") + ": " + str(upgrade))
         return upgrade
 
 

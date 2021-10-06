@@ -9,7 +9,7 @@ from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils, timeUtils
 from warframeAlert.utils.commonUtils import remove_widget, create_pixmap
-from warframeAlert.utils.gameTranslationUtils import get_node, get_faction, get_invasion_loctag
+from warframeAlert.utils.gameTranslationUtils import get_node, get_faction, get_invasion_loc_tag
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.warframeUtils import parse_reward
 
@@ -153,7 +153,7 @@ class InvasionWidgetTab():
                     continue
 
                 node, planet = get_node(invasion['Node'])
-                loc_tag = get_invasion_loctag(invasion['LocTag'])
+                loc_tag = get_invasion_loc_tag(invasion['LocTag'])
                 if (len(invasion['AttackerReward']) > 0):
                     attacker_reward_item = invasion['AttackerReward']['countedItems'][0]['ItemType']
                     attacker_reward = parse_reward(invasion['AttackerReward'])

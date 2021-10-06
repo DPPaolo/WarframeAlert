@@ -42,47 +42,47 @@ class Alert():
         self.AlertFaction.setFont(self.Font)
         self.AlertRew.setFont(self.Font)
 
-        self.Alerthbox0 = QtWidgets.QHBoxLayout()
-        self.Alerthbox1 = QtWidgets.QHBoxLayout()
-        self.Alerthbox2 = QtWidgets.QHBoxLayout()
-        self.Alerthbox3 = QtWidgets.QHBoxLayout()
-        self.Alerthbox4 = QtWidgets.QHBoxLayout()
-        self.Alerthbox5 = QtWidgets.QHBoxLayout()
-        self.Alertvbox = QtWidgets.QVBoxLayout()
+        self.AlertHBox0 = QtWidgets.QHBoxLayout()
+        self.AlertHBox1 = QtWidgets.QHBoxLayout()
+        self.AlertHBox2 = QtWidgets.QHBoxLayout()
+        self.AlertHBox3 = QtWidgets.QHBoxLayout()
+        self.AlertHBox4 = QtWidgets.QHBoxLayout()
+        self.AlertHBox5 = QtWidgets.QHBoxLayout()
+        self.AlertVBox = QtWidgets.QVBoxLayout()
 
         self.AlertBox = QtWidgets.QHBoxLayout()
 
-        self.Alerthbox1.addStretch(1)
-        self.Alerthbox1.addWidget(self.AlertHide)
+        self.AlertHBox1.addStretch(1)
+        self.AlertHBox1.addWidget(self.AlertHide)
 
-        self.Alerthbox2.addWidget(self.AlertNode)
-        self.Alerthbox2.addWidget(self.AlertPlanet)
-        self.Alerthbox2.addStretch(1)
-        self.Alerthbox2.addWidget(self.AlertLevel)
-        self.Alerthbox2.addStretch(1)
-        self.Alerthbox2.addWidget(self.AlertTime.TimeLab)
+        self.AlertHBox2.addWidget(self.AlertNode)
+        self.AlertHBox2.addWidget(self.AlertPlanet)
+        self.AlertHBox2.addStretch(1)
+        self.AlertHBox2.addWidget(self.AlertLevel)
+        self.AlertHBox2.addStretch(1)
+        self.AlertHBox2.addWidget(self.AlertTime.TimeLab)
 
-        self.Alerthbox3.addWidget(self.AlertMis)
-        self.Alerthbox3.addWidget(self.AlertFaction)
-        self.Alerthbox3.addStretch(1)
-        self.Alerthbox3.addWidget(self.AlertWave)
-        self.Alerthbox3.addStretch(1)
-        self.Alerthbox3.addWidget(self.AlertLoc)
+        self.AlertHBox3.addWidget(self.AlertMis)
+        self.AlertHBox3.addWidget(self.AlertFaction)
+        self.AlertHBox3.addStretch(1)
+        self.AlertHBox3.addWidget(self.AlertWave)
+        self.AlertHBox3.addStretch(1)
+        self.AlertHBox3.addWidget(self.AlertLoc)
 
-        self.Alerthbox4.addWidget(self.AlertRewLab)
-        self.Alerthbox4.addWidget(self.AlertRew)
-        self.Alerthbox4.addWidget(self.AlertSpace)
+        self.AlertHBox4.addWidget(self.AlertRewLab)
+        self.AlertHBox4.addWidget(self.AlertRew)
+        self.AlertHBox4.addWidget(self.AlertSpace)
 
-        self.Alertvbox.addLayout(self.Alerthbox0)
-        self.Alertvbox.addLayout(self.Alerthbox1)
-        self.Alertvbox.addLayout(self.Alerthbox2)
-        self.Alertvbox.addLayout(self.Alerthbox3)
-        self.Alertvbox.addLayout(self.Alerthbox4)
-        self.Alertvbox.addLayout(self.Alerthbox5)
-        self.Alertvbox.addLayout(EmptySpace().SpaceBox)
+        self.AlertVBox.addLayout(self.AlertHBox0)
+        self.AlertVBox.addLayout(self.AlertHBox1)
+        self.AlertVBox.addLayout(self.AlertHBox2)
+        self.AlertVBox.addLayout(self.AlertHBox3)
+        self.AlertVBox.addLayout(self.AlertHBox4)
+        self.AlertVBox.addLayout(self.AlertHBox5)
+        self.AlertVBox.addLayout(EmptySpace().SpaceBox)
 
         self.AlertBox.addWidget(self.AlertImg.image)
-        self.AlertBox.addLayout(self.Alertvbox)
+        self.AlertBox.addLayout(self.AlertVBox)
 
         self.AlertTime.TimeOut.connect(self.hide)
         self.AlertHide.clicked.connect(self.hide_alert_data)
@@ -153,7 +153,7 @@ class Alert():
     def is_expired(self) -> bool:
         return (int(self.AlertTime.get_time()) - int(timeUtils.get_local_time())) < 0
 
-    def is_hided(self) -> bool:
+    def is_hidden(self) -> bool:
         return self.HIDE
 
     def hide(self) -> None:

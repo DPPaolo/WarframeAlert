@@ -75,7 +75,7 @@ class ReconstructionRelayEvent(Event):
         self.TAReconstructionBox.addWidget(self.TATask3)
         self.TAReconstructionBox.addWidget(self.TATask4)
 
-        self.TADescvbox.addLayout(self.TAReconstructionBox)
+        self.TADescVBox.addLayout(self.TAReconstructionBox)
 
         self.TARegion4.hide()
         self.TATask4.hide()

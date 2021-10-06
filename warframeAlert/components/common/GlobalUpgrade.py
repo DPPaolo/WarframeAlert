@@ -25,19 +25,19 @@ class GlobalUpgrade():
 
         self.UpgradeText.setFont(font)
 
-        self.Upgradehbox = QtWidgets.QHBoxLayout()
-        self.Upgradevbox = QtWidgets.QVBoxLayout()
+        self.UpgradeHBox = QtWidgets.QHBoxLayout()
+        self.UpgradeVBox = QtWidgets.QVBoxLayout()
 
         self.UpgradeBox = QtWidgets.QHBoxLayout()
 
-        self.Upgradehbox.addWidget(self.UpgradeInit)
-        self.Upgradehbox.addWidget(self.UpgradeEnd.TimeLab)
+        self.UpgradeHBox.addWidget(self.UpgradeInit)
+        self.UpgradeHBox.addWidget(self.UpgradeEnd.TimeLab)
 
-        self.Upgradevbox.addLayout(self.Upgradehbox)
-        self.Upgradevbox.addWidget(self.UpgradeText)
+        self.UpgradeVBox.addLayout(self.UpgradeHBox)
+        self.UpgradeVBox.addWidget(self.UpgradeText)
 
         self.UpgradeBox.addWidget(self.UpgradeImage.image)
-        self.UpgradeBox.addLayout(self.Upgradevbox)
+        self.UpgradeBox.addLayout(self.UpgradeVBox)
         self.UpgradeBox.addStretch(1)
 
     def set_upgrade_data(self, init: str, end: int, upgrade_type: str,
@@ -84,7 +84,7 @@ class GlobalUpgrade():
         if (upgrade_type in UPGRADE_TYPE_IMAGE):
             image = UPGRADE_TYPE_IMAGE[upgrade_type]
         else:
-            LogHandler.debug(translate("gameTranslation", "unknownupgradeType"))
+            LogHandler.debug(translate("gameTranslation", "unknownUpgradeType"))
             return
 
         image_name = "assets" + get_separator() + "image" + get_separator() + image

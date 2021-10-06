@@ -120,15 +120,15 @@ class FissureWidgetTab():
                     None)
 
     def reset_fissure(self) -> None:
-        canc = []
+        cancelled_fissure = []
         for i in range(0, len(self.alerts['ActiveMissions'])):
             if (self.alerts['ActiveMissions'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled_fissure.append(i)
+        i = len(cancelled_fissure)
         while i > 0:
-            self.alerts['ActiveMissions'][canc[i - 1]].hide()
-            remove_widget(self.alerts['ActiveMissions'][canc[i - 1]].FisBox)
-            del self.alerts['ActiveMissions'][canc[i - 1]]
+            self.alerts['ActiveMissions'][cancelled_fissure[i - 1]].hide()
+            remove_widget(self.alerts['ActiveMissions'][cancelled_fissure[i - 1]].FisBox)
+            del self.alerts['ActiveMissions'][cancelled_fissure[i - 1]]
             i -= 1
 
     def open_relics(self) -> None:

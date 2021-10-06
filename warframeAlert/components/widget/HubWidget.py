@@ -64,13 +64,13 @@ class HubWidget:
 
     def reset_hub_event(self) -> None:
         self.NoHubLab.show()
-        canc = []
+        cancelled_hub_event = []
         for i in range(0, len(self.data['HubEvents'])):
             if (self.data['HubEvents'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled_hub_event.append(i)
+        i = len(cancelled_hub_event)
         while i > 0:
-            self.data['HubEvents'][canc[i-1]].hide()
-            remove_widget(self.data['HubEvents'][canc[i-1]].HubBox)
-            del self.data['HubEvents'][canc[i-1]]
+            self.data['HubEvents'][cancelled_hub_event[i-1]].hide()
+            remove_widget(self.data['HubEvents'][cancelled_hub_event[i-1]].HubBox)
+            del self.data['HubEvents'][cancelled_hub_event[i-1]]
             i -= 1

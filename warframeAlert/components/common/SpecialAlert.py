@@ -34,7 +34,7 @@ class SpecialAlert(Alert):
         self.AlerthExtraBox0.addWidget(self.AlertExtraInfo)
         self.AlerthExtraBox0.addStretch(1)
 
-        self.Alerthbox0.addLayout(self.AlerthExtraBox0)
+        self.AlertHBox0.addLayout(self.AlerthExtraBox0)
 
     def set_alert_title_info(self, desc: str) -> None:
         if (desc != ""):

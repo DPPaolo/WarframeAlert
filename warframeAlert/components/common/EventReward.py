@@ -19,35 +19,35 @@ class EventReward():
         self.TAScoreReqLab = QtWidgets.QLabel(translate("eventReward", "scoreRequiredUnlock") + ":")
         self.TAScoreReq = QtWidgets.QLabel("0")
 
-        self.Nmis = mis
+        self.N_mis = mis
 
         self.TAItem.setFont(self.Font)
         self.TANode.setFont(self.Font)
         self.TAMisNumDesc.setFont(self.Font)
 
-        self.TAbox1 = QtWidgets.QHBoxLayout()
-        self.TAbox2 = QtWidgets.QHBoxLayout()
-        self.TAbox3 = QtWidgets.QHBoxLayout()
-        self.TAvbox = QtWidgets.QVBoxLayout()
+        self.TABox1 = QtWidgets.QHBoxLayout()
+        self.TABox2 = QtWidgets.QHBoxLayout()
+        self.TABox3 = QtWidgets.QHBoxLayout()
+        self.TAVBox = QtWidgets.QVBoxLayout()
 
-        self.TAbox1.addWidget(self.TAMisNumDesc)
-        self.TAbox1.addWidget(self.TANode)
+        self.TABox1.addWidget(self.TAMisNumDesc)
+        self.TABox1.addWidget(self.TANode)
 
-        self.TAbox2.addWidget(self.TAScoreDesc)
-        self.TAbox2.addWidget(self.TAScore)
-        self.TAbox2.addWidget(self.TAScoreReqLab)
-        self.TAbox2.addWidget(self.TAScoreReq)
+        self.TABox2.addWidget(self.TAScoreDesc)
+        self.TABox2.addWidget(self.TAScore)
+        self.TABox2.addWidget(self.TAScoreReqLab)
+        self.TABox2.addWidget(self.TAScoreReq)
 
-        self.TAbox3.addWidget(self.TAItemDesc)
-        self.TAbox3.addWidget(self.TAItem)
+        self.TABox3.addWidget(self.TAItemDesc)
+        self.TABox3.addWidget(self.TAItem)
 
-        self.TAvbox.addLayout(self.TAbox1)
-        self.TAvbox.addLayout(self.TAbox2)
-        self.TAvbox.addLayout(self.TAbox3)
+        self.TAVBox.addLayout(self.TABox1)
+        self.TAVBox.addLayout(self.TABox2)
+        self.TAVBox.addLayout(self.TABox3)
 
     def set_reward_data(self, item: str, node: tuple[str, str], score: int, req: int,
                         mission_interval: int, mission_map_rotation: str) -> None:
-        self.TAMisNumDesc.setText(translate("eventReward", "mission") + " " + str(self.Nmis))
+        self.TAMisNumDesc.setText(translate("eventReward", "mission") + " " + str(self.N_mis))
         self.TAItem.setText(item)
         self.TANode.setText(translate("eventReward", "node") + ": " + node[0] + " " + node[1])
         self.TAScore.setText(str(score))

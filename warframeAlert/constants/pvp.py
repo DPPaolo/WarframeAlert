@@ -5,8 +5,8 @@ PVP_MISSION_POINT = (500, 1500, 3000)
 PVP_MISSION_TYPE = {
     "PVPMODE_NONE": {"it": "Nessuno", "en": "None"},
     "PVPMODE_ALL": {"it": "Tutti", "en": "All"},
-    "PVPMODE_DEATHMATCH": {"it": "Annientamento", "en": "Deathmatch"},
-    "PVPMODE_TEAMDEATHMATCH": {"it": "Annientamento a Squadre", "en": "Team Deathmatch"},
+    "PVPMODE_DEATHMATCH": {"it": "Annientamento", "en": "Death Match"},
+    "PVPMODE_TEAMDEATHMATCH": {"it": "Annientamento a Squadre", "en": "Team Death Match"},
     "PVPMODE_CAPTURETHEFLAG": {"it": "Cattura Cephalon", "en": "Capture the Cephalon"},
     "PVPMODE_SPEEDBALL": {"it": "Lunaro", "en": "Lunaro"},
     "PVPChallengeTypeCategory_WEEKLY_ROOT": {"it": "Nessuna", "en": "None"},

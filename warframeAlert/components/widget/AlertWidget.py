@@ -70,7 +70,7 @@ class AlertWidget():
                     else:
                         temp.set_default_alert_image()
 
-                    if (not temp.is_hided()):
+                    if (not temp.is_hidden()):
                         self.alerts['Alerts'].append(temp)
                     del temp
 
@@ -89,13 +89,13 @@ class AlertWidget():
 
     def reset_alerts(self) -> None:
         self.NoAlert.show()
-        canc = []
+        cancelled_alerts = []
         for i in range(0, len(self.alerts['Alerts'])):
             if (self.alerts['Alerts'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled_alerts.append(i)
+        i = len(cancelled_alerts)
         while i > 0:
-            self.alerts['Alerts'][canc[i-1]].hide()
-            remove_widget(self.alerts['Alerts'][canc[i-1]].AlertBox)
-            del self.alerts['Alerts'][canc[i-1]]
+            self.alerts['Alerts'][cancelled_alerts[i-1]].hide()
+            remove_widget(self.alerts['Alerts'][cancelled_alerts[i-1]].AlertBox)
+            del self.alerts['Alerts'][cancelled_alerts[i-1]]
             i -= 1

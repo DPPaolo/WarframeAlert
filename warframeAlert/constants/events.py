@@ -29,8 +29,8 @@ UPGRADE_TYPE = {
     "GAMEPLAY_PICKUP_AMOUNT": {"it": "Bonus Drop Risorse", "en": "Resource Drop Chance"},
     "GAMEPLAY_MONEY_REWARD_AMOUNT": {"it": "Bonus Guadagno Crediti", "en": "Credit Drop Boost"},
     "GAMEPLAY_MONEY_PICKUP_AMOUNT": {"it": "Bonus Raccolta Crediti", "en": "Credit Drop Chance"},
-    "GAMEPLAY_KILL_XP_AMOUNT": {"it": "Bonus Guadagno Affinita", "en": "Affinity Booster"},
-    "/Lotus/Types/Items/MiscItems/ResourceItem": {"it": "Risorse", "en": "Resoure"},
+    "GAMEPLAY_KILL_XP_AMOUNT": {"it": "Bonus Guadagno Affinità", "en": "Affinity Booster"},
+    "/Lotus/Types/Items/MiscItems/ResourceItem": {"it": "Risorse", "en": "Resource"},
 }
 
 UPGRADE_TYPE_IMAGE = {

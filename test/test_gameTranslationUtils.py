@@ -3,7 +3,7 @@ import unittest
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.utils.gameTranslationUtils import get_node, get_enemy_name, get_simaris_target, get_item_name, \
-    get_faction, get_invasion_loctag, get_accolyte_name, get_region, get_upgrade_type
+    get_faction, get_invasion_loc_tag, get_acolyte_name, get_region, get_upgrade_type
 
 
 class TestGameTranslationsUtils(unittest.TestCase):
@@ -105,35 +105,35 @@ class TestGameTranslationsUtils(unittest.TestCase):
         self.assertEqual(self.FACTION_NAME_NOT_FOUND, res)
 
     def test_get_loc_tag_it_found(self):
-        res = get_invasion_loctag(self.LOC_TAG_NAME_IT)
+        res = get_invasion_loc_tag(self.LOC_TAG_NAME_IT)
         self.assertEqual(self.LOC_TAG_NAME_IT_TRANSLATED, res)
 
     def test_get_loc_tag_it_not_found(self):
-        res = get_invasion_loctag(self.LOC_TAG_NAME_UNKNOWN)
+        res = get_invasion_loc_tag(self.LOC_TAG_NAME_UNKNOWN)
         self.assertEqual(self.LOC_TAG_NAME_NOT_FOUND, res)
 
     def test_get_loc_tag_en_found(self):
         OptionsHandler.set_option("Language", "en")
-        res = get_invasion_loctag(self.LOC_TAG_NAME_EN)
+        res = get_invasion_loc_tag(self.LOC_TAG_NAME_EN)
         self.assertEqual(self.LOC_TAG_NAME_EN_TRANSLATED, res)
         OptionsHandler.set_option("Language", "it")
 
     def test_get_loc_tag_en_not_found(self):
         OptionsHandler.set_option("Language", "en")
-        res = get_invasion_loctag(self.LOC_TAG_NAME_UNKNOWN)
+        res = get_invasion_loc_tag(self.LOC_TAG_NAME_UNKNOWN)
         self.assertEqual(self.LOC_TAG_NAME_NOT_FOUND, res)
         OptionsHandler.set_option("Language", "it")
 
     def test_get_accolyte_name_found(self):
         self.ACCOLYTE_NAME = "/Lotus/Types/Enemies/Acolytes/StrikerAcolyteAgent"
         self.ACCOLYTE_NAME_TRANSLATED = "Angst"
-        res = get_accolyte_name(self.ACCOLYTE_NAME)
+        res = get_acolyte_name(self.ACCOLYTE_NAME)
         self.assertEqual(self.ACCOLYTE_NAME_TRANSLATED, res)
 
     def test_get_accolyte_name_not_found(self):
         self.ACCOLYTE_NAME_UNKNOWN = "/Lotus/Types/Enemies/Acolytes/GuardianAcolyteAgent"
         self.ACCOLYTE_NAME_NOT_FOUND = "GuardianAcolyteAgent"
-        res = get_accolyte_name(self.ACCOLYTE_NAME_UNKNOWN)
+        res = get_acolyte_name(self.ACCOLYTE_NAME_UNKNOWN)
         self.assertEqual(self.ACCOLYTE_NAME_NOT_FOUND, res)
 
     def test_get_region_it_found(self):

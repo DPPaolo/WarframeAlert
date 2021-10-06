@@ -8,7 +8,7 @@ from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import remove_widget, print_traceback, bool_to_yes_no, create_pixmap
-from warframeAlert.utils.gameTranslationUtils import get_accolyte_name, get_node, get_region
+from warframeAlert.utils.gameTranslationUtils import get_acolyte_name, get_node, get_region
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -67,7 +67,7 @@ class AcolyteWidgetTab():
             if (found == 0):
                 ticket = bool_to_yes_no(acc['UseTicketing'])
                 loc_tag = acc['LocTag']
-                name = get_accolyte_name(acc['AgentType'])
+                name = get_acolyte_name(acc['AgentType'])
                 icon = acc['Icon']
                 level = acc['Rank']
                 flee = acc['FleeDamage']

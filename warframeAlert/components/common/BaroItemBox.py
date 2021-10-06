@@ -28,19 +28,19 @@ class BaroItemBox():
 
         self.BaroBox = QtWidgets.QVBoxLayout()
         self.BaroImageBox = QtWidgets.QHBoxLayout()
-        self.BarohBox = QtWidgets.QHBoxLayout()
+        self.BaroHBox = QtWidgets.QHBoxLayout()
 
         self.BaroImageBox.addStretch(1)
         self.BaroImageBox.addWidget(self.BaroImage.image)
         self.BaroImageBox.addStretch(1)
 
-        self.BarohBox.addLayout(self.BaroDucat.LabelWithImage)
-        self.BarohBox.addStretch(1)
-        self.BarohBox.addLayout(self.BaroCredit.LabelWithImage)
+        self.BaroHBox.addLayout(self.BaroDucat.LabelWithImage)
+        self.BaroHBox.addStretch(1)
+        self.BaroHBox.addLayout(self.BaroCredit.LabelWithImage)
 
         self.BaroBox.addLayout(self.BaroImageBox)
         self.BaroBox.addWidget(self.BaroName)
-        self.BaroBox.addLayout(self.BarohBox)
+        self.BaroBox.addLayout(self.BaroHBox)
 
     def get_item_name(self) -> str:
         return self.BaroName.text()

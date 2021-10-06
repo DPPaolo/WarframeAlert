@@ -82,18 +82,18 @@ def copy_bundled_files_to_current_dir() -> None:
 def decompress_lzma(data: bytes) -> bytes:
     results = []
     while True:
-        decomp = lzma.LZMADecompressor(lzma.FORMAT_AUTO, None, None)
+        decompressor = lzma.LZMADecompressor(lzma.FORMAT_AUTO, None, None)
         try:
-            res = decomp.decompress(data)
+            res = decompressor.decompress(data)
         except lzma.LZMAError:
             if results:
                 break  # Leftover data is not a valid LZMA/XZ stream; ignore it.
             else:
                 raise  # Error on the first iteration; bail out.
         results.append(res)
-        data = decomp.unused_data
+        data = decompressor.unused_data
         if not data:
             break
-        if not decomp.eof:
+        if not decompressor.eof:
             raise lzma.LZMAError("Compressed data ended before the end-of-stream marker was reached")
     return b"".join(results)

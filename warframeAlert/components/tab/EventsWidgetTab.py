@@ -188,7 +188,7 @@ class EventsWidgetTab():
         i = len(canc)
         while i > 0:
             self.alerts['Goals'][canc[i - 1]].hide()
-            remove_widget(self.alerts['Goals'][canc[i - 1]].TADescvbox)
+            remove_widget(self.alerts['Goals'][canc[i - 1]].TADescVBox)
             del self.alerts['Goals'][canc[i - 1]]
             i -= 1
 
@@ -494,7 +494,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
         for i in range(0, g_len):
             event_rew = EventReward(i + 1)
             event_rew.set_reward_data(rew[i], node[i], goal[i], req[i], mission_interval, mission_map_rotation)
-            temp.add_event_object(event_rew.TAvbox)
+            temp.add_event_object(event_rew.TAVBox)
             temp.add_event_object(EmptySpace().SpaceBox)
 
     # LogHandler.debug("Evento: " + name)

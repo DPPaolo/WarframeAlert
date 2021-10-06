@@ -30,8 +30,8 @@ class SquadLinkEvent(Event):
 
         self.TASquadLinkbox2.addWidget(self.TASquadExtra)
 
-        self.TADescvbox.addLayout(self.TASquadLinkbox1)
-        self.TADescvbox.addLayout(self.TASquadLinkbox2)
+        self.TADescVBox.addLayout(self.TASquadLinkbox1)
+        self.TADescVBox.addLayout(self.TASquadLinkbox2)
 
     def set_squad_link_data(self, init: int, end: int, next_init: int, next_end: int) -> None:
         wave_init = translate("squadLinkEvent", "waveInit") + ": " + timeUtils.get_time(init[:10])

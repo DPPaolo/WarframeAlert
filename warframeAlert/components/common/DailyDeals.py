@@ -32,15 +32,15 @@ class DailyDeals:
 
         self.DealsBox = QtWidgets.QVBoxLayout()
 
-        self.Dealshbox1 = QtWidgets.QHBoxLayout()
-        self.Dealshbox2 = QtWidgets.QHBoxLayout()
+        self.DealsHBox1 = QtWidgets.QHBoxLayout()
+        self.DealsHBox2 = QtWidgets.QHBoxLayout()
         self.DealsPriceBox = QtWidgets.QHBoxLayout()
 
-        self.Dealshbox1.addWidget(self.DealsLab)
-        self.Dealshbox1.addStretch(1)
-        self.Dealshbox1.addWidget(self.Deals)
-        self.Dealshbox1.addStretch(1)
-        self.Dealshbox1.addWidget(self.DealsEnd.TimeLab)
+        self.DealsHBox1.addWidget(self.DealsLab)
+        self.DealsHBox1.addStretch(1)
+        self.DealsHBox1.addWidget(self.Deals)
+        self.DealsHBox1.addStretch(1)
+        self.DealsHBox1.addWidget(self.DealsEnd.TimeLab)
 
         if (is_mac_os()):
             self.DealsPriceBox.addWidget(self.DealsSpace1)
@@ -48,14 +48,14 @@ class DailyDeals:
             self.DealsPriceBox.addWidget(self.DealsOriginalPrice)
         self.DealsPriceBox.addLayout(self.DealsPrice.LabelWithImage)
 
-        self.Dealshbox2.addWidget(self.DealsAmount)
-        self.Dealshbox2.addStretch(1)
-        self.Dealshbox2.addLayout(self.DealsPriceBox)
-        self.Dealshbox2.addStretch(1)
-        self.Dealshbox2.addWidget(self.DealsSales)
+        self.DealsHBox2.addWidget(self.DealsAmount)
+        self.DealsHBox2.addStretch(1)
+        self.DealsHBox2.addLayout(self.DealsPriceBox)
+        self.DealsHBox2.addStretch(1)
+        self.DealsHBox2.addWidget(self.DealsSales)
 
-        self.DealsBox.addLayout(self.Dealshbox1)
-        self.DealsBox.addLayout(self.Dealshbox2)
+        self.DealsBox.addLayout(self.DealsHBox1)
+        self.DealsBox.addLayout(self.DealsHBox2)
 
     def set_deals_data(self, init: int, end: int, item: str, q_sold: int, q_total: int,
                        original_price: int, sales: int, price_sales: int) -> None:

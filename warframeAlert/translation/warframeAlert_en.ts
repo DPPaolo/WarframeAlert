@@ -741,7 +741,7 @@
     </message>
     <message>
         <location filename="../utils/gameTranslationUtils.py" line="147"/>
-        <source>unknownupgradeType</source>
+        <source>unknownUpgradeType</source>
         <translation>Unkown Upgrade Type</translation>
     </message>
     <message>
