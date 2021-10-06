@@ -134,8 +134,8 @@ def get_accolyte_name(name: str) -> str:
     if (name in ACCOLYTE_NAME):
         return ACCOLYTE_NAME[name]
     else:
-        print(translate("gameTranslation", "unknownAccolyte") + ": " + name)
-        LogHandler.err(translate("gameTranslation", "unknownAccolyte") + ": " + name)
+        print(translate("gameTranslation", "unknownAcolyte") + ": " + name)
+        LogHandler.err(translate("gameTranslation", "unknownAcolyte") + ": " + name)
         return get_last_item_with_backslash(name)
 
 

@@ -39,39 +39,39 @@ class BountyBox():
         self.BountyRewardType.setFont(self.Font)
         self.BountySyn.setFont(self.Font)
 
-        bountyhbox1 = QtWidgets.QHBoxLayout()
-        bountyhbox2 = QtWidgets.QHBoxLayout()
+        self.bountyHBox1 = QtWidgets.QHBoxLayout()
+        self.bountyHBox2 = QtWidgets.QHBoxLayout()
 
-        bountyvbox1 = QtWidgets.QVBoxLayout()
-        bountyvbox2 = QtWidgets.QVBoxLayout()
+        self.bountyVBox1 = QtWidgets.QVBoxLayout()
+        self.bountyVBox2 = QtWidgets.QVBoxLayout()
 
         self.BountyBox = QtWidgets.QHBoxLayout()
 
-        bountyhbox1.addWidget(self.BountyJob)
-        bountyhbox1.addWidget(self.BountyLevel)
+        self.bountyHBox1.addWidget(self.BountyJob)
+        self.bountyHBox1.addWidget(self.BountyLevel)
 
-        bountyhbox2.addWidget(self.BountyXPLab)
-        bountyhbox2.addWidget(self.BountyXP)
-        bountyhbox2.addWidget(self.BountyRewardType)
+        self.bountyHBox2.addWidget(self.BountyXPLab)
+        self.bountyHBox2.addWidget(self.BountyXP)
+        self.bountyHBox2.addWidget(self.BountyRewardType)
 
-        bountyvbox1.addWidget(self.BountyNumber)
-        bountyvbox1.addLayout(bountyhbox1)
-        bountyvbox1.addWidget(self.BountyDesc)
+        self.bountyVBox1.addWidget(self.BountyNumber)
+        self.bountyVBox1.addLayout(self.bountyHBox1)
+        self.bountyVBox1.addWidget(self.BountyDesc)
 
-        bountyvbox2.addLayout(bountyhbox2)
-        bountyvbox2.addWidget(self.BountyReward)
-        bountyvbox2.addWidget(self.BountySyn)
+        self.bountyVBox2.addLayout(self.bountyHBox2)
+        self.bountyVBox2.addWidget(self.BountyReward)
+        self.bountyVBox2.addWidget(self.BountySyn)
 
-        self.BountyBox.addLayout(bountyvbox1)
-        self.BountyBox.addLayout(bountyvbox2)
+        self.BountyBox.addLayout(self.bountyVBox1)
+        self.BountyBox.addLayout(self.bountyVBox2)
 
         self.BountyReward.clicked.connect(lambda: self.open_drop_bounty())
 
-    def set_bounty_mission(self, job: str, rew: str, minlv: int, maxlv: int, xp: List[int]) -> None:
+    def set_bounty_mission(self, job: str, rew: str, min_lv: int, max_lv: int, xp: List[int]) -> None:
         self.reward = rew
         self.BountyJob.setText(get_last_item_with_backslash(get_bounty_job(job)))
         self.BountyDesc.setText(divide_message(get_bounty_job_desc(job)))
-        self.BountyLevel.setText(translate("bountyBox", "level") + ": " + str(minlv) + " - " + str(maxlv))
+        self.BountyLevel.setText(translate("bountyBox", "level") + ": " + str(min_lv) + " - " + str(max_lv))
         affinity = 0
         for i in range(0, len(xp)):
             affinity += int(xp[i])
@@ -138,11 +138,11 @@ class BountyBox():
 def create_bounty_box(job: SyndicateJobs) -> BountyBox:
     xp: List[int] = []
     job_type = rew = ""
-    minlv = maxlv = 0
+    min_lv = max_lv = 0
     if ('maxEnemyLevel' in job):
-        maxlv = job['maxEnemyLevel']
+        max_lv = job['maxEnemyLevel']
     if ('minEnemyLevel' in job):
-        minlv = job['minEnemyLevel']
+        min_lv = job['minEnemyLevel']
     if ('rewards' in job):
         rew = job['rewards']
     if ('xpAmounts' in job):
@@ -151,5 +151,5 @@ def create_bounty_box(job: SyndicateJobs) -> BountyBox:
     if ('jobType' in job):
         job_type = job['jobType']
     bounty = BountyBox()
-    bounty.set_bounty_mission(job_type, rew, minlv, maxlv, xp)
+    bounty.set_bounty_mission(job_type, rew, min_lv, max_lv, xp)
     return bounty

@@ -7,7 +7,7 @@ from PyQt5.QtWidgets import QTabWidget
 from jsonschema import ValidationError
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.components.tab.AccolyteWidgetTab import AccolyteWidgetTab
+from warframeAlert.components.tab.AcolyteWidgetTab import AcolyteWidgetTab
 from warframeAlert.components.tab.BaroWidgetTab import BaroWidgetTab
 from warframeAlert.components.tab.BountyWidgetTab import BountyWidgetTab
 from warframeAlert.components.tab.EventsWidgetTab import EventsWidgetTab
@@ -45,7 +45,7 @@ class TabService(QtCore.QObject):
         self.fissure_tab: FissureWidgetTab = FissureWidgetTab()
         self.baro_tab: BaroWidgetTab = BaroWidgetTab()
         self.pvp_tab: PvPWidgetTab = PvPWidgetTab()
-        self.accolyte_tab: AccolyteWidgetTab = AccolyteWidgetTab()
+        self.accolyte_tab: AcolyteWidgetTab = AcolyteWidgetTab()
         self.sales_tab: SalesWidgetTab = SalesWidgetTab()
         self.other_tab: OtherWidgetTab = OtherWidgetTab()
 
@@ -66,7 +66,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
         n_event: int = self.event_tab.get_length()
-        n_acc: int = self.accolyte_tab.get_lenght()
+        n_acc: int = self.accolyte_tab.get_length()
 
         if (not OptionsHandler.get_option("Tab/News") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.news_tab.get_widget()))
@@ -74,7 +74,7 @@ class TabService(QtCore.QObject):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.nightwave_tab.get_widget()))
         if (not (n_event > 0) or not OptionsHandler.get_option("Tab/TactAll") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.event_tab.get_widget()))
-        if (not (n_acc > 0) or not OptionsHandler.get_option("Tab/Accolyt") == 1):
+        if (not (n_acc > 0) or not OptionsHandler.get_option("Tab/Acolyte") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.accolyte_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Cetus") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.bounty_tab.get_widget()))
@@ -151,7 +151,7 @@ class TabService(QtCore.QObject):
         self.pvp_tab.update_pvp_tournament(json_data['PVPActiveTournaments'])
         self.pvp_tab.update_pvp_alternative_mission(json_data['PVPAlternativeModes'])
         self.pvp_tab.update_pvp_mission(json_data['PVPChallengeInstances'])
-        self.accolyte_tab.update_accolyte(json_data['PersistentEnemies'])
+        self.accolyte_tab.update_acolyte(json_data['PersistentEnemies'])
         self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'])
         self.invasion_tab.update_invasion_project(json_data['ProjectPct'])
         if ('SeasonInfo' in json_data):

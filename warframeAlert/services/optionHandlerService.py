@@ -20,7 +20,7 @@ class OptionsHandler(QtCore.QObject):
         # All Tabs are active by default
         "Tab/News": 1,
         "Tab/TactAll": 1,
-        "Tab/Accolyt": 1,
+        "Tab/Acolyte": 1,
         "Tab/Cetus": 1,
         "Tab/Invasion": 1,
         "Tab/Sortie": 1,

@@ -2,72 +2,72 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en">
 <context>
-    <name>accolyt</name>
+    <name>acolyte</name>
     <message>
-        <location filename="../components/common/Accolyte.py" line="71"/>
+        <location filename="../components/common/Acolyte.py" line="71"/>
         <source>level</source>
         <translation>Level</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="72"/>
+        <location filename="../components/common/Acolyte.py" line="72"/>
         <source>damageFlee</source>
         <translation>Damage before flee</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="78"/>
+        <location filename="../components/common/Acolyte.py" line="78"/>
         <source>init</source>
         <translation>Spawned on</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="88"/>
+        <location filename="../components/common/Acolyte.py" line="88"/>
         <source>found?</source>
         <translation>Found?</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="94"/>
+        <location filename="../components/common/Acolyte.py" line="94"/>
         <source>founded</source>
         <translation>Founded on</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="96"/>
+        <location filename="../components/common/Acolyte.py" line="96"/>
         <source>positionUnknown</source>
         <translation>Position Unknown</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="130"/>
-        <source>accolytDead</source>
-        <translation>Accolyt Dead</translation>
+        <location filename="../components/common/Acolyte.py" line="130"/>
+        <source>acolyteDead</source>
+        <translation>Acolyte Dead</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="133"/>
+        <location filename="../components/common/Acolyte.py" line="133"/>
         <source>health</source>
         <translation>Remaining Health</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="70"/>
+        <location filename="../components/common/Acolyte.py" line="70"/>
         <source>inGameName</source>
         <translation>In Game code name</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="73"/>
+        <location filename="../components/common/Acolyte.py" line="73"/>
         <source>useTicket?</source>
         <translation>Need ticket to access?</translation>
     </message>
 </context>
 <context>
-    <name>accolyteWidgetTab</name>
+    <name>acolyteWidgetTab</name>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="51"/>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="51"/>
         <source>noRegion</source>
         <translation>None</translation>
     </message>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="39"/>
-        <source>accolyteParsingError</source>
-        <translation>Error during parsing accolytes</translation>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="39"/>
+        <source>acolyteParsingError</source>
+        <translation>Error during parsing acolytes</translation>
     </message>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="53"/>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="53"/>
         <source>noDiscovered</source>
         <translation>Not discovered yet</translation>
     </message>
@@ -721,8 +721,8 @@
     </message>
     <message>
         <location filename="../utils/gameTranslationUtils.py" line="138"/>
-        <source>unknownAccolyte</source>
-        <translation>Unkown Accolyte Name</translation>
+        <source>unknownAcolyte</source>
+        <translation>Unkown Acolyte Name</translation>
     </message>
     <message>
         <location filename="../utils/gameTranslationUtils.py" line="157"/>

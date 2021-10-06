@@ -2,72 +2,72 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="it">
 <context>
-    <name>accolyt</name>
+    <name>acolyte</name>
     <message>
-        <location filename="../components/common/Accolyte.py" line="71"/>
+        <location filename="../components/common/Acolyte.py" line="71"/>
         <source>level</source>
         <translation>Livello</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="72"/>
+        <location filename="../components/common/Acolyte.py" line="72"/>
         <source>damageFlee</source>
         <translation>Danno prima che scappi</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="78"/>
+        <location filename="../components/common/Acolyte.py" line="78"/>
         <source>init</source>
         <translation>Apparso il</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="88"/>
+        <location filename="../components/common/Acolyte.py" line="88"/>
         <source>found?</source>
         <translation>Scoperto?</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="94"/>
+        <location filename="../components/common/Acolyte.py" line="94"/>
         <source>founded</source>
         <translation>Trovato su</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="96"/>
+        <location filename="../components/common/Acolyte.py" line="96"/>
         <source>positionUnknown</source>
         <translation>Posizione Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="130"/>
-        <source>accolytDead</source>
+        <location filename="../components/common/Acolyte.py" line="130"/>
+        <source>acolyteDead</source>
         <translation>Accolito Morto</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="133"/>
+        <location filename="../components/common/Acolyte.py" line="133"/>
         <source>health</source>
         <translation>Vita Rimanente</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="70"/>
+        <location filename="../components/common/Acolyte.py" line="70"/>
         <source>inGameName</source>
         <translation>Codice Nome</translation>
     </message>
     <message>
-        <location filename="../components/common/Accolyte.py" line="73"/>
+        <location filename="../components/common/Acolyte.py" line="73"/>
         <source>useTicket?</source>
         <translation>Serve un biglietto per accedere?</translation>
     </message>
 </context>
 <context>
-    <name>accolyteWidgetTab</name>
+    <name>acolyteWidgetTab</name>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="51"/>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="51"/>
         <source>noRegion</source>
         <translation>Nessuna</translation>
     </message>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="39"/>
-        <source>accolyteParsingError</source>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="39"/>
+        <source>acolyteParsingError</source>
         <translation>Errore negli Accoliti</translation>
     </message>
     <message>
-        <location filename="../components/tab/AccolyteWidgetTab.py" line="53"/>
+        <location filename="../components/tab/AcolyteWidgetTab.py" line="53"/>
         <source>noDiscovered</source>
         <translation>Non ancora scoperto</translation>
     </message>
@@ -721,7 +721,7 @@
     </message>
     <message>
         <location filename="../utils/gameTranslationUtils.py" line="138"/>
-        <source>unknownAccolyte</source>
+        <source>unknownAcolyte</source>
         <translation>Accolito Non Trovato</translation>
     </message>
     <message>

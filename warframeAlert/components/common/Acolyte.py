@@ -9,7 +9,7 @@ from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.gameTranslationUtils import get_mission_from_starchart
 
 
-class Accolyte():
+class Acolyte():
 
     def __init__(self, acc_id: str) -> None:
         self.acc_id = acc_id
@@ -23,7 +23,7 @@ class Accolyte():
         self.AccPlanet = QtWidgets.QLabel("N/D")
         self.AccMis = QtWidgets.QLabel("N/D")
         self.AccLevel = QtWidgets.QLabel("N/D")
-        self.AccTimeLabel = QtWidgets.QLabel(translate("accolyt", "init") + " ")
+        self.AccTimeLabel = QtWidgets.QLabel(translate("acolyte", "init") + " ")
         self.AccTime = QtWidgets.QLabel("")
         self.AccFound = QtWidgets.QLabel("N/D")
         self.AccFlee = QtWidgets.QLabel("N/D")
@@ -37,45 +37,45 @@ class Accolyte():
         self.AccPlanet.setFont(font)
         self.AccName.setFont(font)
 
-        self.Acchbox1 = QtWidgets.QHBoxLayout()
-        self.Acchbox2 = QtWidgets.QHBoxLayout()
-        self.Acchbox3 = QtWidgets.QHBoxLayout()
-        self.Acchbox4 = QtWidgets.QHBoxLayout()
-        self.Accvbox = QtWidgets.QVBoxLayout()
+        self.AccHBox1 = QtWidgets.QHBoxLayout()
+        self.AccHBox2 = QtWidgets.QHBoxLayout()
+        self.AccHBox3 = QtWidgets.QHBoxLayout()
+        self.AccHBox4 = QtWidgets.QHBoxLayout()
+        self.AccVBox = QtWidgets.QVBoxLayout()
 
         self.AccBox = QtWidgets.QHBoxLayout()
 
-        self.Acchbox1.addWidget(self.AccName)
+        self.AccHBox1.addWidget(self.AccName)
 
-        self.Acchbox2.addWidget(self.AccLevel)
-        self.Acchbox2.addWidget(self.AccNode)
-        self.Acchbox2.addWidget(self.AccMis)
+        self.AccHBox2.addWidget(self.AccLevel)
+        self.AccHBox2.addWidget(self.AccNode)
+        self.AccHBox2.addWidget(self.AccMis)
 
-        self.Acchbox3.addWidget(self.AccTime)
-        self.Acchbox3.addWidget(self.AccFound)
-        self.Acchbox3.addWidget(self.AccFlee)
+        self.AccHBox3.addWidget(self.AccTime)
+        self.AccHBox3.addWidget(self.AccFound)
+        self.AccHBox3.addWidget(self.AccFlee)
 
-        self.Acchbox4.addWidget(self.AccPer)
+        self.AccHBox4.addWidget(self.AccPer)
 
-        self.Accvbox.addLayout(self.Acchbox1)
-        self.Accvbox.addLayout(self.Acchbox2)
-        self.Accvbox.addLayout(self.Acchbox3)
-        self.Accvbox.addLayout(self.Acchbox4)
+        self.AccVBox.addLayout(self.AccHBox1)
+        self.AccVBox.addLayout(self.AccHBox2)
+        self.AccVBox.addLayout(self.AccHBox3)
+        self.AccVBox.addLayout(self.AccHBox4)
 
         self.AccBox.addWidget(self.AccImg.image)
-        self.AccBox.addLayout(self.Accvbox)
+        self.AccBox.addLayout(self.AccVBox)
 
-    def set_acc_data(self, name: str, level: float, icon: str, flee: float, ticket: str, loctag: str) -> None:
+    def set_acc_data(self, name: str, level: float, icon: str, flee: float, ticket: str, loc_tag: str) -> None:
         self.AccName.setText(name)
-        self.AccName.setToolTip(translate("accolyt", "inGameName") + " : " + loctag)
-        self.AccLevel.setText(translate("accolyt", "level") + " : " + str(level))
-        self.AccFlee.setText(translate("accolyt", "damageFlee") + " : " + str(flee))
-        self.AccNode.setToolTip(translate("accolyt", "useTicket?") + " " + ticket)
+        self.AccName.setToolTip(translate("acolyte", "inGameName") + " : " + loc_tag)
+        self.AccLevel.setText(translate("acolyte", "level") + " : " + str(level))
+        self.AccFlee.setText(translate("acolyte", "damageFlee") + " : " + str(flee))
+        self.AccNode.setToolTip(translate("acolyte", "useTicket?") + " " + ticket)
         self.set_acc_image(icon)
 
-    def set_acc_position(self, per: float, time: str, discoved: str, node: str, planet: str, region: str) -> None:
+    def set_acc_position(self, per: float, time: str, discovered: str, node: str, planet: str, region: str) -> None:
         change_detected = 0
-        self.AccTime.setText(translate("accolyt", "init") + " " + time)
+        self.AccTime.setText(translate("acolyte", "init") + " " + time)
         self.AccPer.reset()
         self.acc_health = per
         if (per <= 0):
@@ -85,15 +85,15 @@ class Accolyte():
             self.AccPer.setValue(int(per * 100))
             self.AccPer.setToolTip(str(per * 100) + "%")
         old_found_node = self.AccFound.text()
-        self.AccFound.setText(translate("accolyt", "found?") + " " + discoved)
+        self.AccFound.setText(translate("acolyte", "found?") + " " + discovered)
         if (old_found_node != "N/D" and old_found_node != self.AccFound.text()):
             change_detected = 1
         old_found_node = self.AccNode.text()
-        if (discoved == translate("commonUtils", "no")):
-            if (region != translate("accolyteWidgetTab", "noRegion")):
-                self.AccNode.setText(translate("accolyt", "founded") + " " + region)
+        if (discovered == translate("commonUtils", "no")):
+            if (region != translate("acolyteWidgetTab", "noRegion")):
+                self.AccNode.setText(translate("acolyte", "founded") + " " + region)
             else:
-                self.AccNode.setText(translate("accolyt", "positionUnknown"))
+                self.AccNode.setText(translate("acolyte", "positionUnknown"))
                 self.AccMis.setText("")
         else:
             self.AccNode.setText(node + " " + planet)
@@ -127,10 +127,10 @@ class Accolyte():
 
     def to_string(self) -> str:
         if (self.is_dead()):
-            return translate("accolyt", "accolytDead")
+            return translate("acolyte", "acolyteDead")
         else:
             text = self.AccNode.text() + " " + self.AccMis.text() + "\n"
-            text += translate("accolyt", "health") + ": " + str(self.AccPer.value()) + "%"
+            text += translate("acolyte", "health") + ": " + str(self.AccPer.value()) + "%"
             return text
 
     def get_image(self) -> str:

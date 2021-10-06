@@ -52,7 +52,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.app = QtCore.QCoreApplication.instance()
         self.app.setApplicationName(translate("main", "title"))
-        self.app.setOrganizationName("Onniscente")
+        self.app.setOrganizationName("Onnisciente")
         self.setWindowIcon(QtGui.QIcon("assets" + get_separator() + "icon" + get_separator() + "Warframe.ico"))
 
         self.mainWidget = QtWidgets.QWidget(self)

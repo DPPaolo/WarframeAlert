@@ -1,4 +1,4 @@
-SOURCES      = warframeAlert/components/common/Accolyte.py \
+SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/common/Alert.py \
                warframeAlert/components/common/BountyBox.py \
                warframeAlert/components/common/ClanEvent.py \
@@ -26,7 +26,7 @@ SOURCES      = warframeAlert/components/common/Accolyte.py \
                warframeAlert/components/common/SquadLinkEvent.py \
                warframeAlert/components/common/SyndicateBox.py \
                warframeAlert/components/common/TwitchBox.py \
-               warframeAlert/components/tab/AccolyteWidgetTab.py \
+               warframeAlert/components/tab/AcolyteWidgetTab.py \
                warframeAlert/components/tab/BaroWidgetTab.py \
                warframeAlert/components/tab/BountyWidgetTab.py \
                warframeAlert/components/tab/EventsWidgetTab.py \
