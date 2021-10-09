@@ -119,7 +119,7 @@ class RelicBox():
         drop = MissionDropView()
         drop.set_drop(3, name, [reward[0], reward[1], reward[2]])
 
-        self.ViewDropWidget = MissionDropViewWidget(None, drop).get_widget()
+        self.ViewDropWidget = MissionDropViewWidget(drop).get_widget()
         self.ViewDropWidget.setWindowTitle(translate("relicBox", "missionDrop") + ' ' + self.name)
         self.ViewDropWidget.show()
 

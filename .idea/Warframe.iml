@@ -10,7 +10,7 @@
       <excludeFolder url="file://$MODULE_DIR$/warframeAlert/data" />
       <excludeFolder url="file://$MODULE_DIR$/warframeAlert/images" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.9 (WarframeAlert)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.10 (WarframeAlert)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">
