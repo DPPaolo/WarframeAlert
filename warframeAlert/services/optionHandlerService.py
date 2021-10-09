@@ -1,6 +1,6 @@
 # coding=utf-8
 import time
-from typing import Any, Type, Union
+from typing import Any, Type
 
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import QWidget
@@ -55,9 +55,8 @@ class OptionsHandler(QtCore.QObject):
     def get_first_init(cls) -> bool:
         return cls.first_init
 
-    # TODO: use | instead of Union
     @classmethod
-    def get_option(cls, option: str, option_type: Union[Type[int], Type[str]] = int) -> Union[str, int]:
+    def get_option(cls, option: str, option_type: Type[int] | Type[str] = int) -> Union[str, int]:
         val = cls.setting.value(option, cls.default_value[option], type=option_type)
         if (option_type == int):
             if (str(val).isdigit()):

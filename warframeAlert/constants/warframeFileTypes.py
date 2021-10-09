@@ -62,7 +62,7 @@ class MissionFileRewardData(TypedDict):
 class MissionFileData(TypedDict):
     gameMode: str
     isEvent: bool
-    rewards: Union[List[MissionFileRewardData], dict[str, List[MissionFileRewardData]]]  # TODO: cambiare Union con |
+    rewards: Union[List[MissionFileRewardData], dict[str, List[MissionFileRewardData]]]
 
 
 class MissionFile(TypedDict):

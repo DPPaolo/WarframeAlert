@@ -166,20 +166,13 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
     language = OptionsHandler.get_option("Language", str)
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
     prefix = ""
-    if (file_name == "cetus"):
-        prefix = "cetusBountyRewards"
-    elif (file_name == "fortuna"):
-        prefix = "solarisBountyRewards"
-    elif (file_name == "deimos"):
-        prefix = "deimosRewards"
-    #  TODO: implement then python 3.10 release
-    # match file_name:
-    #     case "cetus":
-    #         prefix = "cetusBountyRewards"
-    #     case "fortuna":
-    #         prefix = "solarisBountyRewards"
-    #     case "deimos":
-    #         prefix = "deimosRewards"
+    match file_name:
+        case "cetus":
+            prefix = "cetusBountyRewards"
+        case "fortuna":
+            prefix = "solarisBountyRewards"
+        case "deimos":
+            prefix = "deimosRewards"
     try:
         json_data: List[BountyFileData] = read_drop_file(file_name + "_" + language)[prefix]
     except KeyError or Exception:
@@ -349,73 +342,39 @@ def get_all_relic_from_file() -> List[RelicFileData]:
 def get_relic_rarity_from_percent(rarity: float, relic_type: str) -> str:
     rarity = str(rarity)
 
-    if (relic_type == "Intact"):
-        if (rarity == "2"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "11"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 25.33
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Exceptional"):
-        if (rarity == "4"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "13"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 23.33
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Flawless"):
-        if (rarity == "6"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "17"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 20
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    elif (relic_type == "Radiant"):
-        if (rarity == "10"):
-            return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-        elif (rarity == "20"):
-            return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-        else:
-            # 16.67
-            return translate("warframeUtils", "common") + " (" + rarity + "%)"
-
-    #  TODO: implement then python 3.10 release
-    # match relic_type:
-    #     case "Intact":
-    #         match rarity:
-    #             case "2":
-    #                 return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-    #             case "11":
-    #                 return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-    #             case _:  # 25.33
-    #                 return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    #     case  "Exceptional":
-    #         match rarity:
-    #             case "4":
-    #                 return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-    #             case "13":
-    #                 return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-    #             case _:  # 23.33
-    #                 return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    #     case "Flawless":
-    #         match rarity:
-    #             case "6":
-    #                 return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-    #             case "17":
-    #                 return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-    #             case _:  # 20
-    #                 return translate("warframeUtils", "common") + " (" + rarity + "%)"
-    #     case"Radiant":
-    #         match rarity:
-    #             case "10":
-    #                 return translate("warframeUtils", "rare") + " (" + rarity + "%)"
-    #             case "20":
-    #                 return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
-    #             case _:  # 16.67
-    #                 return translate("warframeUtils", "common") + " (" + rarity + "%)"
+    match relic_type:
+        case "Intact":
+            match rarity:
+                case "2":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "11":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 25.33
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case  "Exceptional":
+            match rarity:
+                case "4":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "13":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 23.33
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case "Flawless":
+            match rarity:
+                case "6":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "17":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 20
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
+        case"Radiant":
+            match rarity:
+                case "10":
+                    return translate("warframeUtils", "rare") + " (" + rarity + "%)"
+                case "20":
+                    return translate("warframeUtils", "notCommon") + " (" + rarity + "%)"
+                case _:  # 16.67
+                    return translate("warframeUtils", "common") + " (" + rarity + "%)"
 
 
 def get_relic_drop(relic_name: str) -> str:

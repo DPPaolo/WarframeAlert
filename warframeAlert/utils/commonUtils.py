@@ -1,7 +1,6 @@
 # coding=utf-8
 import sys
 import traceback
-from typing import Union
 
 from PyQt5 import QtGui
 from PyQt5.QtCore import QObject
@@ -29,8 +28,7 @@ def create_pixmap(image_name: str) -> QPixmap:
     return image
 
 
-# TODO: use | instead of Union
-def bool_to_yes_no(boolean: Union[bool, int]) -> str:
+def bool_to_yes_no(boolean: bool | int) -> str:
     if (boolean):
         return translate("commonUtils", "yes")
     else:

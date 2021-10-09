@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import Union, List
+from typing import List
 
 from PyQt5 import QtGui, QtWidgets
 
@@ -82,8 +82,7 @@ class BountyBox():
             reward_type = rew[-8] if (rew[-8] in ["A", "B", "C"]) else "A"
             self.BountyRewardType.setText(translate("bountyBox", "rewardType") + " " + reward_type)
 
-    # TODO: user | instead of Union
-    def set_syndicate(self, syn: str, num: Union[int, str], use_token: bool) -> None:
+    def set_syndicate(self, syn: str, num: int | str, use_token: bool) -> None:
         self.BountySyn.setText(translate("bountyBox", "syndicate") + ": " + syn)
         self.BountyNumber.setText(translate("bountyBox", "bountyName") + " " + str(num))
         if (use_token):

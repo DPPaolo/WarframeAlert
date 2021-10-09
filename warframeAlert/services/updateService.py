@@ -39,28 +39,17 @@ class UpdateService(QtCore.QObject):
 
     def download_alert_file(self, download_only: bool = False) -> None:
         opt: int = OptionsHandler.get_option("Update/Console")
-        if (opt == 0):
-            url: str = DATA_SITE["PC"]
-        elif (opt == 1):
-            url: str = DATA_SITE["PS4"]
-        elif (opt == 2):
-            url: str = DATA_SITE["XBOX"]
-        elif (opt == 3):
-            url: str = DATA_SITE["SWITCH"]
-        else:
-            url: str = DATA_SITE["PC"]
-        #  TODO: implement then python 3.10 release
-        # match opt:
-        #     case 0:
-        #         url: str = DATA_SITE["PC"]
-        #     case 1:
-        #         url: str = DATA_SITE["PS4"]
-        #     case 2:
-        #         url: str = DATA_SITE["XBOX"]
-        #     case 3:
-        #         url: str = DATA_SITE["SWITCH"]
-        #     case _:
-        #         url: str = DATA_SITE["PC"]
+        match opt:
+            case 0:
+                url: str = DATA_SITE["PC"]
+            case 1:
+                url: str = DATA_SITE["PS4"]
+            case 2:
+                url: str = DATA_SITE["XBOX"]
+            case 3:
+                url: str = DATA_SITE["SWITCH"]
+            case _:
+                url: str = DATA_SITE["PC"]
 
         try:
             path = "data" + get_separator() + "allerte.json"

@@ -1,6 +1,4 @@
 # coding=utf-8
-from typing import Union
-
 from PyQt5 import QtGui, QtWidgets
 
 from warframeAlert.components.common.Alert import Alert
@@ -83,8 +81,7 @@ class SpecialAlert(Alert):
         self.AlertExtraInfo.hide()
 
 
-#  TODO: change Union with |
-def create_alert(alert: AlertMissionInfo, alert_id: str) -> Union[None, Alert, SpecialAlert]:
+def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert | None:
     wave = ""
     if (alert):
         # Base Data

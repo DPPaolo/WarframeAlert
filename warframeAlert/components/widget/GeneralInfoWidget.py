@@ -1,6 +1,4 @@
 # coding=utf-8
-from typing import Union
-
 from PyQt5 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -100,8 +98,7 @@ class GeneralInfoWidget():
                 guild[tier - 1] = (name, dojo_id, alliance_id)
             self.set_featured_dojo(guild)
 
-    # TODO: use | instead of Union
-    def set_featured_dojo(self, dojo:  list[Union[str, tuple[str, str, str]]]) -> None:
+    def set_featured_dojo(self, dojo:  list[str | tuple[str, str, str]]) -> None:
         data = tooltip = ""
         if (dojo[0] != ''):
             data += translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"

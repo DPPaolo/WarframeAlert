@@ -1,6 +1,6 @@
 # coding=utf-8
 import time
-from typing import Optional, Tuple, List, Union
+from typing import Optional, Tuple, List
 
 from PyQt5 import QtCore, QtGui
 from PyQt5.QtWidgets import QSystemTrayIcon
@@ -27,10 +27,9 @@ class NotificationService(QtCore.QThread):
         if (not OptionsHandler.get_first_init() and OptionsHandler.get_option("Update/Notify")):
             cls.notif_queue.append((title, message, icon))
 
-    # TODO: use | instead of Union
     def show_notif(self, title: str,
                    message: str,
-                   icon: Union[None, QSystemTrayIcon.MessageIcon, QtGui.QIcon]) -> None:
+                   icon: QSystemTrayIcon.MessageIcon | QtGui.QIcon | None) -> None:
         if (icon is None):
             icon = QSystemTrayIcon.Information
         self.tray_icon.showMessage(title, message, icon, 3000)

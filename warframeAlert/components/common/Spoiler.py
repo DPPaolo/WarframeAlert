@@ -1,6 +1,4 @@
 # coding=utf-8
-from typing import Union
-
 from PyQt5 import QtWidgets, QtCore
 from PyQt5.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation
 from PyQt5.QtWidgets import QSizePolicy
@@ -62,8 +60,7 @@ class Spoiler(QtWidgets.QWidget):
         self.toggleAnimation.start()
         self.checked = not self.checked
 
-    # TODO: Use | instead of Union
-    def set_content_layout(self, spoiler_content: Union[QtWidgets.QHBoxLayout, QtWidgets.QVBoxLayout]):
+    def set_content_layout(self, spoiler_content: QtWidgets.QHBoxLayout | QtWidgets.QVBoxLayout):
         self.contentArea.setLayout(spoiler_content)
 
         collapsed_height = self.mainLaoyut.sizeHint().height() - self.contentArea.maximumHeight()

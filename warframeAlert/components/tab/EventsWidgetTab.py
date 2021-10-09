@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import List, Tuple, Union
+from typing import List, Tuple
 
 from PyQt5 import QtWidgets, QtCore, QtGui
 
@@ -29,9 +29,8 @@ from warframeAlert.utils.warframeUtils import parse_reward
 
 class EventsWidgetTab():
 
-    # TODO: use | instead of Union
     def __init__(self) -> None:
-        self.alerts: dict[str, List[Union[Event, ScoreEvent, ClanEvent, ReconstructionRelayEvent, SquadLinkEvent]]] \
+        self.alerts: dict[str, List[Event | ScoreEvent | ClanEvent | ReconstructionRelayEvent | SquadLinkEvent]] \
             = {'Goals': []}
 
         self.eventsWidget = QtWidgets.QWidget()
@@ -84,12 +83,6 @@ class EventsWidgetTab():
         self.EventCetusgrid.setAlignment(QtCore.Qt.AlignTop)
         self.EventRelaygrid.setAlignment(QtCore.Qt.AlignTop)
         self.EventSquadLinkgrid.setAlignment(QtCore.Qt.AlignTop)
-
-        self.eventWidget.setLayout(self.Eventgrid)
-        self.eventRazorWidget.setLayout(self.EventRazorgrid)
-        self.eventCetusWidget.setLayout(self.EventCetusgrid)
-        self.eventRelayWidget.setLayout(self.EventRelaygrid)
-        self.eventSquadLinkWidget.setLayout(self.EventSquadLinkgrid)
 
         self.AlertScrollBar.setWidget(self.alertWidget.get_widget())
         self.EventScrollBarA.setWidget(self.eventWidget)
@@ -230,9 +223,8 @@ class EventsWidgetTab():
                 self.EventTabber.removeTab(self.EventTabber.indexOf(self.EventScrollBarE))
 
 
-# TODO: use | instead of Union
 def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
-        -> Union[Event, ScoreEvent, ClanEvent, ReconstructionRelayEvent, SquadLinkEvent]:
+        -> Event | ScoreEvent | ClanEvent | ReconstructionRelayEvent | SquadLinkEvent:
     icon = tooltip = success = regions = faction = ""
     req_item = roaming_vip = mission_map_rotation = ""
     personal = clamp_score = emblem = "No"

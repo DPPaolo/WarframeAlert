@@ -1,6 +1,6 @@
 # coding=utf-8
 import json
-from typing import Tuple, Union
+from typing import Tuple
 
 from warframeAlert import warframeData
 from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON_RESTRICTION, MAP_TYPE, \
@@ -148,8 +148,7 @@ def get_upgrade_type(upgrade: str) -> str:
         return upgrade
 
 
-# TODO: use | instead of Union
-def get_region(region: Union[int, str]) -> str:
+def get_region(region: int | str) -> str:
     if (region in REGION_MAP):
         return REGION_MAP[int(region)][OptionsHandler.get_option("Language", str)]
     else:
