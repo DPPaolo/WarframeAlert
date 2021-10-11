@@ -104,24 +104,6 @@ class TransientFile(TypedDict):
     transientRewards: List[TransientFileData]
 
 
-class MiscFileItemData(TypedDict):
-    _id: str
-    itemName: str
-    rarity: str
-    chance: float
-
-
-class MiscFileData(TypedDict):
-    _id: str
-    enemyName: str
-    enemyItemDropChance: str
-    items: List[MiscFileItemData]
-
-
-class MiscFile(TypedDict):
-    miscItems: List[MiscFileData]
-
-
 class BpByItemFileEnemyData(TypedDict):
     _id: str
     enemyName: str

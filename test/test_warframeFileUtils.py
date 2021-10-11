@@ -4,7 +4,7 @@ import unittest
 from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.utils.fileUtils import get_separator, check_file, delete_file
 from warframeAlert.utils.warframeFileUtils import translate_sortie_drop, translate_free_roam_drop, \
-    translate_relic_drop, translate_mission_drop, translate_key_drop, translate_transient_drop, translate_misc_drop, \
+    translate_relic_drop, translate_mission_drop, translate_key_drop, translate_transient_drop, \
     translate_bp_by_item_drop, translate_bp_by_source_drop, translate_mod_by_item_drop, translate_mod_by_source_drop, \
     decompress_export_manifest_index
 
@@ -76,13 +76,6 @@ class TestWarframeUtils(unittest.TestCase):
         translate_transient_drop()
 
         self.assertEqual(check_file("transient_it.json"), True)
-
-    def test_translate_misc_drop(self):
-        delete_file("data" + get_separator() + "misc_it.json")
-
-        translate_misc_drop()
-
-        self.assertEqual(check_file("misc_it.json"), True)
 
     def test_translate_bp_by_item_drop(self):
         delete_file("data" + get_separator() + "bp_by_item_it.json")

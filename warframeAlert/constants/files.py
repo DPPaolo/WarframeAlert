@@ -32,7 +32,6 @@ OTHER_FILE_SITE = (
     "https://raw.githubusercontent.com/WFCD/warframe-drop-data/main/data/modLocations.json",
     "https://raw.githubusercontent.com/WFCD/warframe-drop-data/main/data/enemyBlueprintTables.json",
     "https://raw.githubusercontent.com/WFCD/warframe-drop-data/main/data/blueprintLocations.json",
-    "https://raw.githubusercontent.com/WFCD/warframe-drop-data/main/data/miscItems.json",
 )
 
 OTHER_FILE_NAME = (
@@ -51,7 +50,6 @@ OTHER_FILE_NAME = (
     "mod_by_item_en.json",
     "bp_by_source_en.json",
     "bp_by_item_en.json",
-    "misc_en.json",
 )
 
 IMAGE_NAME = {

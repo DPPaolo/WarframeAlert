@@ -8,7 +8,7 @@ import requests as requests
 
 from warframeAlert.constants.files import MOBILE_MANIFEST_ID_SITE
 from warframeAlert.constants.warframeFileTypes import RelicFile, BountyFileData, SortieFileData, \
-    MissionFile, TransientFile, KeyFile, MiscFile, BpByItemFile, BpBySourceFile, ModByItemFile, ModBySourceFile
+    MissionFile, TransientFile, KeyFile, BpByItemFile, BpBySourceFile, ModByItemFile, ModBySourceFile
 from warframeAlert.utils.fileUtils import get_separator, decompress_lzma
 from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file, \
     translate_mission_type_from_drop_file
@@ -44,7 +44,6 @@ def write_json_drop() -> None:
     translate_mission_drop()
     translate_key_drop()
     translate_transient_drop()
-    translate_misc_drop()
     translate_bp_by_item_drop()
     translate_bp_by_source_drop()
     translate_mod_by_item_drop()
@@ -229,29 +228,6 @@ def translate_transient_drop() -> None:
 
     json_data: str = json.dumps(new_json_data)
     fp = open("data" + get_separator() + "transient_it.json", "w")
-    fp.write(json_data)
-    fp.flush()
-    fp.close()
-
-
-def translate_misc_drop() -> None:
-    json_data: MiscFile = read_drop_file("misc_en")
-    new_json_data = {'miscItems': []}
-
-    for misc_drop in json_data['miscItems']:
-        rewards_list = []
-
-        for reward in misc_drop['items']:
-            new_reward = reward
-            new_reward['itemName'] = translate_item_from_drop_file(reward['itemName'].upper())
-            rewards_list.append(new_reward)
-
-        misc_drop['items'] = rewards_list
-
-        new_json_data['miscItems'].append(misc_drop)
-
-    json_data: str = json.dumps(new_json_data)
-    fp = open("data" + get_separator() + "misc_it.json", "w")
     fp.write(json_data)
     fp.flush()
     fp.close()

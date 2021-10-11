@@ -12,7 +12,7 @@ from warframeAlert.constants.files import IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
 from warframeAlert.constants.warframeFileTypes import SortieFileRewards, BountyFileData, RelicFileData,  \
-    MissionFileData, TransientFileData, KeyFileData, MiscFileData
+    MissionFileData, TransientFileData, KeyFileData
 from warframeAlert.constants.warframeTypes import MissionReward
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -386,7 +386,6 @@ def get_relic_drop(relic_name: str) -> str:
         json_mission: dict[str, dict[str, MissionFileData]] = read_drop_file('mission_' + language)['missionRewards']
         json_key: List[KeyFileData] = read_drop_file('key_' + language)['keyRewards']
         json_transient: List[TransientFileData] = read_drop_file('transient_' + language)['transientRewards']
-        json_misc: List[MiscFileData] = read_drop_file('misc_' + language)['miscItems']
     except Exception as ex:
         LogHandler.err(translate("warframeUtils", "errorDropRelic") + ":\n " + str(ex))
         print_traceback(translate("warframeUtils", "errorDropRelic") + ":\n  " + str(ex))
@@ -457,14 +456,6 @@ def get_relic_drop(relic_name: str) -> str:
             rotation = translate("warframeUtils", "rotation") + " " + translate("warframeUtils", "noRotation")
             if (item == relic_name):
                 mis += mission_name + " (" + rotation + ")\n"
-                found = 1
-
-    for misc_mission in json_misc:
-        mission_name = misc_mission['enemyName']
-        for misc_rewards in misc_mission['items']:
-            item = misc_rewards['itemName']
-            if (item == relic_name):
-                mis += mission_name + "\n"
                 found = 1
 
     if (found == 0):
