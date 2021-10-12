@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate

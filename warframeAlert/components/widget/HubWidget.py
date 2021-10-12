@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.HubEvent import create_hub_event
 from warframeAlert.constants.warframeTypes import HubEvents
@@ -22,8 +22,8 @@ class HubWidget:
 
         self.gridHub.addWidget(self.NoHubLab, 0, 0)
 
-        self.NoHubLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.gridHub.setAlignment(QtCore.Qt.AlignTop)
+        self.NoHubLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.gridHub.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.hubWidget.setLayout(self.gridHub)
 

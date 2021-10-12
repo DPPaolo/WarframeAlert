@@ -1,5 +1,6 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt6 import QtWidgets, QtGui, QtCore
+from PyQt6.QtCore import Qt
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.services.notificationService import NotificationService
@@ -18,7 +19,7 @@ class Acolyte():
 
         self.AccImg = CommonImages()
         self.AccName = QtWidgets.QLabel("N/D")
-        self.AccName.setAlignment(QtCore.Qt.AlignCenter)
+        self.AccName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.AccNode = QtWidgets.QLabel("N/D")
         self.AccPlanet = QtWidgets.QLabel("N/D")
         self.AccMis = QtWidgets.QLabel("N/D")
@@ -113,7 +114,7 @@ class Acolyte():
     def set_acc_image(self, url_image: str) -> None:
         image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(url_image)
         self.AccImg.set_image(image_name)
-        self.AccImg.set_image_dimension(120, 120, QtCore.Qt.KeepAspectRatio)
+        self.AccImg.set_image_dimension(120, 120, Qt.AspectRatioMode.KeepAspectRatio)
         self.acc_image = image_name
 
     def get_acc_id(self) -> str:

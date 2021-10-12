@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtGui
+from PyQt6 import QtWidgets, QtGui
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.gameTranslationUtils import get_simaris_target

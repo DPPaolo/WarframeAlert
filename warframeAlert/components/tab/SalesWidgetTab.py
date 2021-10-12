@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.SalesBox import SalesBox
 from warframeAlert.constants.warframeTypes import FlashSales
@@ -32,11 +32,11 @@ class SalesWidgetTab():
 
         self.FeaturedSalesScrollBar = QtWidgets.QScrollArea()
         self.FeaturedSalesScrollBar.setWidgetResizable(True)
-        self.FeaturedSalesScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.FeaturedSalesScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.DiscountedSalesScrollBar = QtWidgets.QScrollArea()
         self.DiscountedSalesScrollBar.setWidgetResizable(True)
-        self.DiscountedSalesScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.DiscountedSalesScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.FeaturedWidget.setLayout(self.gridFeaturedSales)
         self.DiscountedWidget.setLayout(self.gridDiscountedSales)
@@ -49,7 +49,7 @@ class SalesWidgetTab():
 
         self.gridSales = QtWidgets.QGridLayout(self.SalesWidget)
         self.gridSales.addWidget(self.salesTabber, 0, 0)
-        self.gridSales.setAlignment(QtCore.Qt.AlignTop)
+        self.gridSales.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.SalesWidget.setLayout(self.gridSales)
 

@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import Tuple
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.BountyBox import create_bounty_box
 from warframeAlert.constants.warframeTypes import SyndicateMission
@@ -19,11 +19,11 @@ class BountyWidget:
         self.bountyEnd: int = 0
         self.BountyWidget = QtWidgets.QWidget()
         self.NoBountyMission = QtWidgets.QLabel(translate("bountyWidget", "noBounty"))
-        self.NoBountyMission.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoBountyMission.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.BountyGrid = QtWidgets.QGridLayout(self.BountyWidget)
         self.BountyGrid.addWidget(self.NoBountyMission, 0, 0)
-        self.BountyGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.BountyGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.BountyWidget.setLayout(self.BountyGrid)
 

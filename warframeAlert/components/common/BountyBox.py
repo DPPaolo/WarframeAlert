@@ -1,7 +1,9 @@
 # coding=utf-8
+from __future__ import annotations
+
 from typing import List
 
-from PyQt5 import QtGui, QtWidgets
+from PyQt6 import QtGui, QtWidgets
 
 from warframeAlert.components.common.MissionDropView import MissionDropView
 from warframeAlert.components.widget.MissionDropViewWidget import MissionDropViewWidget

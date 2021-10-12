@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.Event import Event
@@ -25,10 +25,10 @@ class ReconstructionRelayEvent(Event):
         super().__init__(event_id)
 
         self.TARelayNode = QtWidgets.QLabel("N/D")
-        self.TARelayNode.setAlignment(QtCore.Qt.AlignCenter)
+        self.TARelayNode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.TAListRegion = QtWidgets.QLabel(translate("reconstrutionEvent", "resourcePlanet") + ":")
-        self.TAListRegion.setAlignment(QtCore.Qt.AlignCenter)
+        self.TAListRegion.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.TARegion0 = QtWidgets.QLabel("N/D")
         self.TARegion1 = QtWidgets.QLabel("N/D")
@@ -36,11 +36,11 @@ class ReconstructionRelayEvent(Event):
         self.TARegion3 = QtWidgets.QLabel("N/D")
         self.TARegion4 = QtWidgets.QLabel("N/D")
 
-        self.TARegion0.setAlignment(QtCore.Qt.AlignCenter)
-        self.TARegion1.setAlignment(QtCore.Qt.AlignCenter)
-        self.TARegion2.setAlignment(QtCore.Qt.AlignCenter)
-        self.TARegion3.setAlignment(QtCore.Qt.AlignCenter)
-        self.TARegion4.setAlignment(QtCore.Qt.AlignCenter)
+        self.TARegion0.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TARegion1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TARegion2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TARegion3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TARegion4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.TATask0 = QtWidgets.QLabel("N/D")
         self.TATask1 = QtWidgets.QLabel("N/D")
@@ -48,11 +48,11 @@ class ReconstructionRelayEvent(Event):
         self.TATask3 = QtWidgets.QLabel("N/D")
         self.TATask4 = QtWidgets.QLabel("N/D")
 
-        self.TATask0.setAlignment(QtCore.Qt.AlignCenter)
-        self.TATask1.setAlignment(QtCore.Qt.AlignCenter)
-        self.TATask2.setAlignment(QtCore.Qt.AlignCenter)
-        self.TATask3.setAlignment(QtCore.Qt.AlignCenter)
-        self.TATask4.setAlignment(QtCore.Qt.AlignCenter)
+        self.TATask0.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TATask1.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TATask2.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TATask3.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.TATask4.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.TAReconstructionBox = QtWidgets.QVBoxLayout()
 

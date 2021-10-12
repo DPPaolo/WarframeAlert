@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Acolyte import Acolyte
 from warframeAlert.constants.warframeTypes import PersistentEnemies
@@ -22,7 +22,7 @@ class AcolyteWidgetTab():
 
         self.acolyteWidget.setLayout(self.gridAcc)
 
-        self.gridAcc.setAlignment(QtCore.Qt.AlignTop)
+        self.gridAcc.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.acolyteWidget

@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.PvPAlternativeMissionBox import PvPAlternativeMissionBox
 from warframeAlert.constants.warframeTypes import PVPAlternativeModes
@@ -19,12 +19,12 @@ class PvPAlternativeWidget():
 
         self.gridPvPAlt = QtWidgets.QGridLayout(self.PvPAlternativeWidget)
         self.NoPvPAltLab = QtWidgets.QLabel(translate("pvpAlternativeWidget", "noOtherMission"))
-        self.NoPvPAltLab.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoPvPAltLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.gridPvPAlt.addWidget(self.NoPvPAltLab, 0, 0)
 
         self.PvPAlternativeWidget.setLayout(self.gridPvPAlt)
 
-        self.gridPvPAlt.setAlignment(QtCore.Qt.AlignTop)
+        self.gridPvPAlt.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.PvPAlternativeWidget

@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.TwitchBox import TwitchBox
 from warframeAlert.constants.warframeTypes import TwitchPromos
@@ -24,8 +24,8 @@ class TwitchPromoWidget():
 
         self.gridTwitch.addWidget(self.NoTwitchLab, 0, 0)
 
-        self.NoTwitchLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.gridTwitch.setAlignment(QtCore.Qt.AlignTop)
+        self.NoTwitchLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.gridTwitch.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.twitchPromoWidget.setLayout(self.gridTwitch)
 

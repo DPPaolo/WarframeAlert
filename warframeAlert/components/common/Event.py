@@ -2,7 +2,7 @@
 from enum import Enum
 from typing import List
 
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.Countdown import Countdown
@@ -121,17 +121,17 @@ class Event():
         if (icon != ""):
             image_name = "images" + get_separator() + get_last_item_with_backslash(icon)
             self.EventImg.set_image(image_name, UPDATE_SITE + "images/" + get_last_item_with_backslash(icon))
-            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
             self.icon = image_name
         elif (stratos_present):
             image_name = "images" + get_separator() + "StratosEmblem.png"
             self.EventImg.set_image(image_name, UPDATE_SITE + "images/StratosEmblem.png")
-            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
             self.icon = image_name
         elif (name == "HeatFissure"):
             image_name = "images" + get_separator() + "ThermiaFractureEmblem.png"
             self.EventImg.set_image(image_name, UPDATE_SITE + "images/ThermiaFractureEmblem.png")
-            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.KeepAspectRatio)
+            self.EventImg.set_image_dimension(80, 80, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
             self.icon = image_name
         else:
             self.EventImg.hide()

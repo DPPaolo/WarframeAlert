@@ -1,7 +1,7 @@
 # coding=utf-8
 from itertools import groupby
 
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.RelicBox import RelicBox
 from warframeAlert.components.widget.SearchRelicWidget import SearchRelicWidget
@@ -45,11 +45,11 @@ class RelicWidget():
         self.RelScrollBar4.setWidgetResizable(True)
         self.RelScrollBar5.setWidgetResizable(True)
 
-        self.RelScrollBar1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.RelScrollBar2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.RelScrollBar3.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.RelScrollBar4.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.RelScrollBar5.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.RelScrollBar1.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.RelScrollBar2.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.RelScrollBar3.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.RelScrollBar4.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.RelScrollBar5.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.LithWidget.setLayout(self.gridLith)
         self.MesoWidget.setLayout(self.gridMeso)

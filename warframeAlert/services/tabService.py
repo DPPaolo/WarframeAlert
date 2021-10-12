@@ -2,8 +2,7 @@
 import json
 import sys
 
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QTabWidget
+from PyQt6 import QtCore, QtWidgets
 from jsonschema import ValidationError
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
@@ -31,9 +30,9 @@ from warframeAlert.utils.validatorUtils import check_json_data
 
 class TabService(QtCore.QObject):
 
-    def __init__(self, tabber: QTabWidget):
+    def __init__(self, tabber: QtWidgets.QTabWidget):
         super().__init__()
-        self.mainTabber: QTabWidget = tabber
+        self.mainTabber: QtWidgets.QTabWidget = tabber
 
         self.news_tab: NewsWidgetTab = NewsWidgetTab()
         self.nightwave_tab: NightwaveWidgetTab = NightwaveWidgetTab()

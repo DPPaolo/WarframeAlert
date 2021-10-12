@@ -1,14 +1,16 @@
 # coding=utf-8
+from __future__ import annotations
+
 import time
 from typing import Any, Type
 
-from PyQt5 import QtCore
-from PyQt5.QtWidgets import QWidget
+from PyQt6 import QtCore
+from PyQt6.QtWidgets import QWidget
 
 
 class OptionsHandler(QtCore.QObject):
     #UpdateTabber = QtCore.pyqtSignal()
-    setting: QtCore.QSettings = QtCore.QSettings("config.ini", QtCore.QSettings.IniFormat)
+    setting: QtCore.QSettings = QtCore.QSettings("config.ini", QtCore.QSettings.Format.IniFormat)
     first_init: bool = True
     default_value = {
         "Language": "it",       # App Language
@@ -56,7 +58,7 @@ class OptionsHandler(QtCore.QObject):
         return cls.first_init
 
     @classmethod
-    def get_option(cls, option: str, option_type: Type[int] | Type[str] = int) -> Union[str, int]:
+    def get_option(cls, option: str, option_type: Type[int] | Type[str] = int) -> str | int:
         val = cls.setting.value(option, cls.default_value[option], type=option_type)
         if (option_type == int):
             if (str(val).isdigit()):

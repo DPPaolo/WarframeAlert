@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.RelicBox import RelicBox
 from warframeAlert.services.translationService import translate
@@ -13,11 +13,11 @@ class SearchRelicWidget():
         self.SearchRelicWidget = QtWidgets.QWidget()
 
         self.SearchRelicLab = QtWidgets.QLabel(translate("searchRelicWidget", "searchRelic"))
-        self.SearchRelicLab.setAlignment(QtCore.Qt.AlignLeft)
+        self.SearchRelicLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
         self.RelicDrops = QtWidgets.QTextEdit(self.SearchRelicWidget)
         self.RelicDrops.setReadOnly(True)
         self.SearchRelicByItemLab = QtWidgets.QLabel(translate("searchRelicWidget", "searchByItem"))
-        self.SearchRelicByItemLab.setAlignment(QtCore.Qt.AlignLeft)
+        self.SearchRelicByItemLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
         self.ItemsRelicText = QtWidgets.QTextEdit(self.SearchRelicWidget)
         self.ItemsRelicText.setReadOnly(True)
         self.RelicBox = RelicBox(1)

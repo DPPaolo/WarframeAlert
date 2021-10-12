@@ -1,7 +1,7 @@
 # coding=utf-8
 import webbrowser
 
-from PyQt5 import QtGui, QtWidgets, QtCore
+from PyQt6 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.utils.fileUtils import get_separator
@@ -18,12 +18,12 @@ class CommonImageButton():
         self.common_image = CommonImages()
 
         self.palette = QtGui.QPalette()
-        self.palette.setColor(QtGui.QPalette.Button, QtGui.QColor(255, 255, 255))
+        self.palette.setColor(QtGui.QPalette.ColorRole.Button, QtGui.QColor(255, 255, 255))
 
         self.news_button = QtWidgets.QPushButton()
         self.newsLabel = QtWidgets.QLabel("")
         self.newsLabel.setFont(font)
-        self.newsLabel.setAlignment(QtCore.Qt.AlignLeft)
+        self.newsLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
 
         self.news_button.setFixedSize(300, 150)
         self.news_button.setPalette(self.palette)

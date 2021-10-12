@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from warframeAlert.components.common.Event import Event
 from warframeAlert.services.translationService import translate

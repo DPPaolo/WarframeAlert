@@ -1,6 +1,6 @@
 # coding=utf-8
 
-from PyQt5 import QtCore
+from PyQt6 import QtCore
 
 from warframeAlert.components.widget.UpdateProgramWidget import UpdateProgramWidget
 from warframeAlert.components.widget.UpdateRequiredFilesWidget import UpdateRequiredFilesWidget

@@ -1,8 +1,8 @@
 # coding=utf-8
 import time
 
-from PyQt5 import QtCore, QtWidgets, sip
-from PyQt5.QtCore import QThread
+from PyQt6 import QtCore, QtWidgets, sip
+from PyQt6.QtCore import QThread
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils, commonUtils

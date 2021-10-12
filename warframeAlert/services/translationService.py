@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtCore
+from PyQt6 import QtCore
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.utils.fileUtils import get_cur_dir, get_separator

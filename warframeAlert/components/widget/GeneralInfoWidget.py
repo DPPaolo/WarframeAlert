@@ -1,5 +1,7 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore, QtGui
+from __future__ import annotations
+
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAvailability, PrimeVaultAvailabilities
@@ -55,7 +57,7 @@ class GeneralInfoWidget():
         self.gridOther.addWidget(self.FeaturedDojo, 7, 1)
 
         self.generalInfoWidget.setLayout(self.gridOther)
-        self.gridOther.setAlignment(QtCore.Qt.AlignTop)
+        self.gridOther.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.calculate_earth_time()
 
     def get_widget(self) -> QtWidgets.QWidget:

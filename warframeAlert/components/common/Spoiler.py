@@ -1,7 +1,9 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
-from PyQt5.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation
-from PyQt5.QtWidgets import QSizePolicy
+from __future__ import annotations
+
+from PyQt6 import QtWidgets, QtCore
+from PyQt6.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation, Qt
+from PyQt6.QtWidgets import QSizePolicy
 
 
 class Spoiler(QtWidgets.QWidget):
@@ -12,8 +14,8 @@ class Spoiler(QtWidgets.QWidget):
 
         self.toggleButton = QtWidgets.QToolButton()
         self.toggleButton.setStyleSheet("QToolButton { border: none; }")
-        self.toggleButton.setToolButtonStyle(QtCore.Qt.ToolButtonTextBesideIcon)
-        self.toggleButton.setArrowType(QtCore.Qt.RightArrow)
+        self.toggleButton.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.toggleButton.setArrowType(Qt.ArrowType.RightArrow)
 
         self.toggleButton.setText(title)
         self.toggleButton.setCheckable(True)
@@ -21,14 +23,14 @@ class Spoiler(QtWidgets.QWidget):
 
         self.headerLine = QtWidgets.QFrame()
 
-        self.headerLine.setFrameShape(QtWidgets.QFrame.HLine)
-        self.headerLine.setFrameShadow(QtWidgets.QFrame.Sunken)
-        self.headerLine.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Maximum)
+        self.headerLine.setFrameShape(QtWidgets.QFrame.Shape.HLine)
+        self.headerLine.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
+        self.headerLine.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
 
         self.contentArea = QtWidgets.QScrollArea()
 
         self.contentArea.setStyleSheet("QScrollArea { background-color: white; border: none; }")
-        self.contentArea.setSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
+        self.contentArea.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.contentArea.setWidgetResizable(True)
 
         # start outcollapsed
@@ -46,7 +48,7 @@ class Spoiler(QtWidgets.QWidget):
         self.mainLaoyut.setVerticalSpacing(0)
         self.mainLaoyut.setContentsMargins(0, 0, 0, 0)
 
-        self.mainLaoyut.addWidget(self.toggleButton, 0, 0, 1, 1, QtCore.Qt.AlignLeft)
+        self.mainLaoyut.addWidget(self.toggleButton, 0, 0, 1, 1, QtCore.Qt.AlignmentFlag.AlignLeft)
         self.mainLaoyut.addWidget(self.headerLine, 1, 2, 1, 1)
         self.mainLaoyut.addWidget(self.contentArea, 1, 0, 1, 3)
 
@@ -55,8 +57,9 @@ class Spoiler(QtWidgets.QWidget):
         self.toggleButton.clicked.connect(self.spoiler_clicked)
 
     def spoiler_clicked(self) -> None:
-        self.toggleButton.setArrowType(QtCore.Qt.DownArrow if self.checked else QtCore.Qt.RightArrow)
-        self.toggleAnimation.setDirection(QAbstractAnimation.Forward if self.checked else QAbstractAnimation.Backward)
+        self.toggleButton.setArrowType(Qt.ArrowType.DownArrow if self.checked else Qt.ArrowType.RightArrow)
+        direction = QAbstractAnimation.Direction.Forward if self.checked else QAbstractAnimation.Direction.Backward
+        self.toggleAnimation.setDirection(direction)
         self.toggleAnimation.start()
         self.checked = not self.checked
 

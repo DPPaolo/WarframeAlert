@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Invasion import Invasion
 from warframeAlert.components.common.InvasionNode import InvasionNode
@@ -59,15 +59,15 @@ class InvasionWidgetTab():
         self.InvScrollBarC.setWidgetResizable(True)
         self.InvScrollBarI.setWidgetResizable(True)
         self.InvScrollBarO.setWidgetResizable(True)
-        self.InvScrollBarG.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.InvScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.InvScrollBarI.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.InvScrollBarO.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.InvScrollBarG.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.InvScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.InvScrollBarI.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.InvScrollBarO.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.InvScrollBarG.setBackgroundRole(QtGui.QPalette.NoRole)
-        self.InvScrollBarC.setBackgroundRole(QtGui.QPalette.NoRole)
-        self.InvScrollBarI.setBackgroundRole(QtGui.QPalette.NoRole)
-        self.InvScrollBarO.setBackgroundRole(QtGui.QPalette.NoRole)
+        self.InvScrollBarG.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.InvScrollBarC.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.InvScrollBarI.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.InvScrollBarO.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
 
         self.InvGrineerWidget.setLayout(self.gridGInv)
         self.InvCorpusWidget.setLayout(self.gridCInv)
@@ -90,12 +90,12 @@ class InvasionWidgetTab():
         self.gridInv2.addWidget(self.RazorLabel, 0, 2)
         self.gridInv2.addWidget(self.RazorPer, 0, 3)
         self.gridInv2.addWidget(self.Invtabber, 1, 0, 1, 4)
-        self.gridInv2.setAlignment(QtCore.Qt.AlignTop)
+        self.gridInv2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
-        self.gridGInv.setAlignment(QtCore.Qt.AlignTop)
-        self.gridCInv.setAlignment(QtCore.Qt.AlignTop)
-        self.gridIInv.setAlignment(QtCore.Qt.AlignTop)
-        self.gridOccInv.setAlignment(QtCore.Qt.AlignTop)
+        self.gridGInv.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridCInv.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridIInv.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridOccInv.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.InvasionWidget.setLayout(self.gridInv2)
 

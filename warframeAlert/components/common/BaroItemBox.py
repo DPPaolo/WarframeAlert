@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtGui, QtWidgets, QtCore
+from PyQt6 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWithImage
@@ -24,7 +24,7 @@ class BaroItemBox():
         self.BaroCredit = CommonLabelWithImage(credit_image, "???")
 
         self.BaroName.setFont(self.Font)
-        self.BaroName.setAlignment(QtCore.Qt.AlignCenter)
+        self.BaroName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.BaroBox = QtWidgets.QVBoxLayout()
         self.BaroImageBox = QtWidgets.QHBoxLayout()

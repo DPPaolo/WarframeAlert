@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtCore
+from PyQt6 import QtCore
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.constants.files import OTHER_FILE_SITE, OTHER_FILE_NAME, DEFAULT_MANIFEST_SITE
@@ -51,7 +51,6 @@ class UpdateFileService(QtCore.QObject):
         self.downloader_thread[11].download_completed.connect(lambda: self.download_finished(11))
         self.downloader_thread[12].download_completed.connect(lambda: self.download_finished(12))
         self.downloader_thread[13].download_completed.connect(lambda: self.download_finished(13))
-        self.downloader_thread[14].download_completed.connect(lambda: self.download_finished(14))
 
     def download_finished(self, index: int) -> None:
         self.num_files_downloaded += 1

@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt6 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.services.translationService import translate
@@ -14,12 +14,12 @@ class PvPAlternativeMissionBox():
 
         self.PvPAltName = QtWidgets.QLabel(name)
         self.PvPAltMode = QtWidgets.QLabel(translate("pvpAlternativeMissionBox", "modality") + ": N/D")
-        self.PvPAltName.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltMode.setAlignment(QtCore.Qt.AlignCenter)
+        self.PvPAltName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltMode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.PvPAltName.setFont(self.Font)
         self.PvPAltMode.setFont(self.Font)
         self.PvPAltDesc = QtWidgets.QLabel("")
-        self.PvPAltDesc.setAlignment(QtCore.Qt.AlignCenter)
+        self.PvPAltDesc.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.PvPAltdisAmmo = QtWidgets.QLabel(translate("pvpAlternativeMissionBox", "ammoPickup") + ": N/D")
         self.PvPAltdisEnergy = QtWidgets.QLabel(translate("pvpAlternativeMissionBox", "energyPickup") + ": N/D")
@@ -40,14 +40,14 @@ class PvPAlternativeMissionBox():
         self.PvPAltMeleeLab = QtWidgets.QLabel(translate("pvpAlternativeMissionBox", "meleePermitted"))
         self.PvPAltMelee = QtWidgets.QLabel("N/D")
 
-        self.PvPAltPrimaryLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltPrimary.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltSecondaryLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltSecondary.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltMeleeLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltMelee.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltWarframeLab.setAlignment(QtCore.Qt.AlignCenter)
-        self.PvPAltWarframe.setAlignment(QtCore.Qt.AlignCenter)
+        self.PvPAltPrimaryLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltPrimary.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltSecondaryLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltSecondary.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltMeleeLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltMelee.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltWarframeLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.PvPAltWarframe.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.PvPAltbox0 = QtWidgets.QHBoxLayout()
         self.PvPAltbox1 = QtWidgets.QHBoxLayout()

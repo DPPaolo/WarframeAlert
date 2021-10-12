@@ -1,7 +1,7 @@
 # coding=utf-8
 import copy
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.widget.BountyWidget import BountyWidget
@@ -44,7 +44,7 @@ class BountyWidgetTab():
         self.BountiesTabber.insertTab(3, self.DeimosVaultWidget.get_widget(),
                                       translate("bountyWidgetTab", "hiveMindVault"))
 
-        self.BountiesGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.BountiesGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.BountiesWidget.setLayout(self.BountiesGrid)
 

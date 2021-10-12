@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.SeasonBox import SeasonBox
@@ -22,7 +22,7 @@ class NightwaveWidgetTab():
         self.ChallengeWidget = QtWidgets.QWidget()
 
         self.SeasonEnd = Countdown(" " + translate("nightwaveWidgetTab", "end") + " ")
-        self.SeasonEnd.set_alignment(QtCore.Qt.AlignRight)
+        self.SeasonEnd.set_alignment(QtCore.Qt.AlignmentFlag.AlignRight)
 
         self.SeasonData = QtWidgets.QLabel("??? " +
                                            translate("nightwaveWidgetTab", "season") +
@@ -31,19 +31,19 @@ class NightwaveWidgetTab():
                                            " N/D")
         self.SeasonParam = QtWidgets.QLabel("")
         self.SeasonSpace = QtWidgets.QLabel(" ")
-        self.SeasonData.setAlignment(QtCore.Qt.AlignLeft)
-        self.SeasonParam.setAlignment(QtCore.Qt.AlignLeft)
+        self.SeasonData.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.SeasonParam.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
 
         self.NoSeason = QtWidgets.QLabel(translate("nightwaveWidgetTab", "noNightwave"))
-        self.NoSeason.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoSeason.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.NightwaveGrid = QtWidgets.QGridLayout(self.ChallengeWidget)
         self.NightwaveGrid.addWidget(self.NoSeason, 0, 0)
-        self.NightwaveGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.NightwaveGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.SeasonScrollBar = QtWidgets.QScrollArea()
         self.SeasonScrollBar.setWidgetResizable(True)
-        self.SeasonScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.SeasonScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.SeasonScrollBar.setWidget(self.ChallengeWidget)
 
@@ -57,7 +57,7 @@ class NightwaveWidgetTab():
         self.SeasonGrid.addWidget(self.SeasonSpace, 0, 2)
         self.SeasonGrid.addWidget(self.SeasonEnd.TimeLab, 0, 3)
         self.SeasonGrid.addWidget(self.SeasonTabber, 1, 0, 1, 4)
-        self.SeasonGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.SeasonGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.nightwaveWidget.setLayout(self.SeasonGrid)
 

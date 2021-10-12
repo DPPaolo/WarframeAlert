@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 
 class MissionDropView():
@@ -16,12 +16,12 @@ class MissionDropView():
         self.ViewDrop2 = QtWidgets.QLabel("N/D")
         self.ViewDrop3 = QtWidgets.QLabel("N/D")
 
-        self.ViewDropLabel1.setAlignment(QtCore.Qt.AlignTop)
-        self.ViewDropLabel2.setAlignment(QtCore.Qt.AlignTop)
-        self.ViewDropLabel3.setAlignment(QtCore.Qt.AlignTop)
-        self.ViewDrop1.setAlignment(QtCore.Qt.AlignTop)
-        self.ViewDrop2.setAlignment(QtCore.Qt.AlignTop)
-        self.ViewDrop3.setAlignment(QtCore.Qt.AlignTop)
+        self.ViewDropLabel1.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.ViewDropLabel2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.ViewDropLabel3.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.ViewDrop1.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.ViewDrop2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.ViewDrop3.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         droprotbox1 = QtWidgets.QVBoxLayout()
         droprotbox2 = QtWidgets.QVBoxLayout()

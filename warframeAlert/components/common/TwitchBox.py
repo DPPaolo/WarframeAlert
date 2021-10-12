@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtGui, QtWidgets, QtCore
+from PyQt6 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
@@ -22,7 +22,7 @@ class TwitchBox:
         self.TwitchType = QtWidgets.QLabel(translate("twitchBox", "promo_type") + " N/D")
 
         self.TwitchType.setFont(font)
-        self.TwitchType.setAlignment(QtCore.Qt.AlignCenter)
+        self.TwitchType.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         twitchbox = QtWidgets.QHBoxLayout()
 

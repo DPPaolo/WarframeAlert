@@ -1,8 +1,8 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import Qt
+from PyQt6 import QtWidgets
+from PyQt6.QtCore import Qt
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.EmptySpace import EmptySpace
@@ -160,7 +160,7 @@ class Invasion():
             image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
             self.InvAttackerImg.set_image(image_name)
             self.image = image_name
-            self.InvAttackerImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
+            self.InvAttackerImg.set_image_dimension(50, 50, Qt.AspectRatioMode.KeepAspectRatio)
         else:
             self.InvAttackerImg.hide()
 
@@ -180,7 +180,7 @@ class Invasion():
         self.InvDefenderImg.set_image(image_name)
         if (not self.image):
             self.image = image_name
-        self.InvDefenderImg.set_image_dimension(50, 50, Qt.KeepAspectRatio)
+        self.InvDefenderImg.set_image_dimension(50, 50, Qt.AspectRatioMode.KeepAspectRatio)
 
     def hide(self) -> None:
         self.InvDesc.hide()

@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.widget.GeneralInfoWidget import GeneralInfoWidget
 from warframeAlert.components.widget.HubWidget import HubWidget
@@ -34,7 +34,7 @@ class OtherWidgetTab():
 
         self.otherWidget.setLayout(self.otherGrid)
 
-        self.otherGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.otherGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.otherWidget

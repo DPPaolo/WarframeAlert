@@ -1,10 +1,11 @@
 # coding=utf-8
+from __future__ import annotations
+
 import sys
 import traceback
 
-from PyQt5 import QtGui
-from PyQt5.QtCore import QObject
-from PyQt5.QtGui import QPixmap
+from PyQt6 import QtGui
+from PyQt6.QtCore import QObject
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.fileUtils import get_cur_dir, get_separator
@@ -22,7 +23,7 @@ def get_last_item_with_backslash(text: str) -> str:
     return text[len(text) - 1]
 
 
-def create_pixmap(image_name: str) -> QPixmap:
+def create_pixmap(image_name: str) -> QtGui.QPixmap:
     image = QtGui.QPixmap()
     image.load(get_cur_dir() + get_separator() + image_name)
     return image

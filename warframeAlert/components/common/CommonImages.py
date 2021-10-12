@@ -1,6 +1,6 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtGui
-from PyQt5.QtCore import Qt
+from PyQt6 import QtWidgets, QtGui
+from PyQt6.QtCore import Qt
 
 from warframeAlert.services import networkService
 from warframeAlert.utils.fileUtils import get_cur_dir, get_separator, check_file, delete_file
@@ -14,8 +14,8 @@ class CommonImages():
         self.image.setPixmap(self.pixmap)
         self.width = 50
         self.height = 50
-        self.aspect_ratio = Qt.IgnoreAspectRatio
-        self.transform = Qt.SmoothTransformation
+        self.aspect_ratio = Qt.AspectRatioMode.IgnoreAspectRatio
+        self.transform = Qt.TransformationMode.SmoothTransformation
         self.downloader_thread = None
 
     def set_image(self, path_image: str, url_download_image: str = None) -> bool:
@@ -43,8 +43,8 @@ class CommonImages():
             return res
 
     def set_image_dimension(self, width: int, height: int,
-                            aspect_ratio: Qt.IgnoreAspectRatio = Qt.IgnoreAspectRatio,
-                            transform: Qt.TransformationMode = Qt.SmoothTransformation) -> None:
+                            aspect_ratio: Qt.AspectRatioMode = Qt.AspectRatioMode.IgnoreAspectRatio,
+                            transform: Qt.TransformationMode = Qt.TransformationMode.SmoothTransformation) -> None:
         self.width = width
         self.height = height
         self.aspect_ratio = aspect_ratio

@@ -1,7 +1,7 @@
 # coding=utf-8
 import os
 
-from PyQt5 import QtWidgets, QtGui
+from PyQt6 import QtWidgets, QtGui
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.constants.files import UPDATE_SITE

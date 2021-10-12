@@ -4,7 +4,7 @@ from itertools import groupby
 from json import JSONDecodeError
 from typing import List, Tuple
 
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from warframeAlert import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE

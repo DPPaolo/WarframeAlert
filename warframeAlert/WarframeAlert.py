@@ -1,9 +1,9 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-from PyQt5 import QtGui, QtCore, QtWidgets
-
 import sys
+
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
@@ -163,7 +163,7 @@ class MainWindow(QtWidgets.QMainWindow):
     #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())
     #     file.addAction(opzioni)
 
-        exit_menu = QtWidgets.QAction(translate("main", "exitMenu"), file)
+        exit_menu = QtGui.QAction(translate("main", "exitMenu"), file)
         exit_menu.setShortcut("Ctrl+Q")
         exit_menu.setStatusTip(translate("main", "exitMenuDesc"))
         exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
@@ -171,13 +171,13 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Data Menu
 
-        update_file = QtWidgets.QAction(translate("main", "updateFileMenu"), debug)
+        update_file = QtGui.QAction(translate("main", "updateFileMenu"), debug)
         update_file.setShortcut("Ctrl+U")
         update_file.setStatusTip(translate("main", "updateFileMenuDesc"))
         update_file.triggered.connect(lambda: self.update_service.download_alert_file(True))
         debug.addAction(update_file)
 
-        update_only_file = QtWidgets.QAction(translate("main", "updateFilesMenu"), debug)
+        update_only_file = QtGui.QAction(translate("main", "updateFilesMenu"), debug)
         update_only_file.setShortcut("Ctrl+T")
         update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc"))
         update_only_file.triggered.connect(lambda: self.update_file_service.download_all_file())

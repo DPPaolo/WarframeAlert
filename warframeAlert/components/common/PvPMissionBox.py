@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtWidgets, QtGui
+from PyQt6 import QtWidgets, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.constants.pvp import PVP_MISSION_POINT

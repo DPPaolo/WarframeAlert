@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtCore, QtWidgets
+from PyQt6 import QtCore, QtWidgets
 
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.SimarisTarget import SimarisTarget
@@ -38,7 +38,7 @@ class RelayStationWidget:
         self.gridRelay.addWidget(self.RelayOtherLabelDesc, 7, 0)
         self.gridRelay.addWidget(self.RelayOtherLabel, 8, 0)
 
-        self.gridRelay.setAlignment(QtCore.Qt.AlignTop)
+        self.gridRelay.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.relayStationWidget.setLayout(self.gridRelay)
 

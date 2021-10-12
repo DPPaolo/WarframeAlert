@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtGui, QtWidgets, QtCore
+from PyQt6 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
@@ -22,7 +22,7 @@ class FissureBox():
         self.seed = seed
         self.region = ""
 
-        self.FisTier.setAlignment(QtCore.Qt.AlignRight)
+        self.FisTier.setAlignment(QtCore.Qt.AlignmentFlag.AlignRight)
 
         self.FisMis.setFont(self.Font)
         self.FisTier.setFont(self.Font)

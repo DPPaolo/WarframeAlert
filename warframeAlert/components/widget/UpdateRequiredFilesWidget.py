@@ -1,7 +1,7 @@
 # coding=utf-8
 
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import QTimer
+from PyQt6 import QtWidgets
+from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.constants.files import OTHER_FILE_SITE, OTHER_FILE_NAME

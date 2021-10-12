@@ -1,6 +1,6 @@
 # coding=utf-8
 from enum import Enum
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from warframeAlert.services.translationService import translate
 

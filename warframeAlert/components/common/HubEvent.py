@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt6 import QtWidgets, QtGui, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.constants.warframeTypes import HubEventData
@@ -30,7 +30,7 @@ class HubEvent():
         self.HubTrasmissionLab = QtWidgets.QLabel(translate("hubEvent", "transmission") + ": ")
         self.HubTrasmission = QtWidgets.QLabel("N/D")
 
-        self.HubName.setAlignment(QtCore.Qt.AlignCenter)
+        self.HubName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.HubName.setFont(font)
 
         self.HubBox = QtWidgets.QVBoxLayout()

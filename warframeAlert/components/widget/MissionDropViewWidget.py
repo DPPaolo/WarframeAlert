@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtGui, QtCore
+from PyQt6 import QtWidgets, QtGui, QtCore
 
 from warframeAlert.components.common import MissionDropView
 
@@ -15,7 +15,7 @@ class MissionDropViewWidget:
         self.gridViewDrop.addLayout(drop.DropBox, 0, 0)
 
         self.viewDropWidget.setLayout(self.gridViewDrop)
-        self.gridViewDrop.setAlignment(QtCore.Qt.AlignTop)
+        self.gridViewDrop.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.viewDropWidget

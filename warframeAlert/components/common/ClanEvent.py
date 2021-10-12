@@ -1,7 +1,9 @@
 # coding=utf-8
+from __future__ import annotations
+
 from typing import List, Tuple
 
-from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt6 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.components.common.Event import Event
 from warframeAlert.services.translationService import translate
@@ -29,7 +31,7 @@ class ClanEvent(Event):
         self.TAVRank4 = QtWidgets.QLabel("N/D")
         self.TAVRank5 = QtWidgets.QLabel("N/D")
 
-        self.TASDesc.setAlignment(QtCore.Qt.AlignCenter)
+        self.TASDesc.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.TASDesc.setFont(self.Font)
 
         self.TAClanBox1 = QtWidgets.QHBoxLayout()

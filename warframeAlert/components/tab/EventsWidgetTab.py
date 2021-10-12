@@ -1,7 +1,9 @@
 # coding=utf-8
+from __future__ import annotations
+
 from typing import List, Tuple
 
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.BountyBox import create_bounty_box
 from warframeAlert.components.common.ClanEvent import ClanEvent
@@ -58,19 +60,19 @@ class EventsWidgetTab():
         self.EventScrollBarD.setWidgetResizable(True)
         self.EventScrollBarE.setWidgetResizable(True)
 
-        self.AlertScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.EventScrollBarA.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.EventScrollBarB.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.EventScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.EventScrollBarD.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.EventScrollBarE.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.AlertScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarA.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarB.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarD.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarE.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.AlertScrollBar.setBackgroundRole(QtGui.QPalette.Light)
-        self.EventScrollBarA.setBackgroundRole(QtGui.QPalette.Light)
-        self.EventScrollBarB.setBackgroundRole(QtGui.QPalette.Light)
-        self.EventScrollBarC.setBackgroundRole(QtGui.QPalette.Light)
-        self.EventScrollBarD.setBackgroundRole(QtGui.QPalette.Light)
-        self.EventScrollBarE.setBackgroundRole(QtGui.QPalette.Light)
+        self.AlertScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarA.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarB.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarC.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarD.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarE.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
 
         self.Eventgrid = QtWidgets.QGridLayout(self.eventWidget)
         self.EventRazorgrid = QtWidgets.QGridLayout(self.eventRazorWidget)
@@ -78,11 +80,11 @@ class EventsWidgetTab():
         self.EventRelaygrid = QtWidgets.QGridLayout(self.eventRelayWidget)
         self.EventSquadLinkgrid = QtWidgets.QGridLayout(self.eventSquadLinkWidget)
 
-        self.Eventgrid.setAlignment(QtCore.Qt.AlignTop)
-        self.EventRazorgrid.setAlignment(QtCore.Qt.AlignTop)
-        self.EventCetusgrid.setAlignment(QtCore.Qt.AlignTop)
-        self.EventRelaygrid.setAlignment(QtCore.Qt.AlignTop)
-        self.EventSquadLinkgrid.setAlignment(QtCore.Qt.AlignTop)
+        self.Eventgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventRazorgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventCetusgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventRelaygrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventSquadLinkgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.AlertScrollBar.setWidget(self.alertWidget.get_widget())
         self.EventScrollBarA.setWidget(self.eventWidget)
@@ -94,7 +96,7 @@ class EventsWidgetTab():
         self.EventTabber = QtWidgets.QTabWidget(self.eventsWidget)
 
         self.eventGrid.addWidget(self.EventTabber, 0, 0)
-        self.eventGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.eventGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.eventsWidget.setLayout(self.eventGrid)
 

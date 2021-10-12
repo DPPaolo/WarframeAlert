@@ -1,7 +1,7 @@
 # coding=utf-8
 import json
 
-from PyQt5 import QtWidgets
+from PyQt6 import QtWidgets
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.Event import Event

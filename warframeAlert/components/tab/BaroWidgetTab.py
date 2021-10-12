@@ -1,7 +1,7 @@
 # coding=utf-8
 from enum import Enum
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.BaroItemBox import BaroItemBox
 from warframeAlert.components.common.Countdown import Countdown
@@ -36,24 +36,24 @@ class BaroWidgetTab():
         self.BaroTabber = QtWidgets.QTabWidget()
 
         self.BaroDesc = QtWidgets.QLabel("")
-        self.BaroDesc.setAlignment(QtCore.Qt.AlignLeft)
+        self.BaroDesc.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
         self.BaroEnd = Countdown()
-        self.BaroEnd.TimeLab.setAlignment(QtCore.Qt.AlignCenter)
+        self.BaroEnd.TimeLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.BaroConDesc = QtWidgets.QLabel("")
-        self.BaroConDesc.setAlignment(QtCore.Qt.AlignLeft)
+        self.BaroConDesc.setAlignment(QtCore.Qt.AlignmentFlag.AlignLeft)
         self.BaroConEnd = Countdown()
-        self.BaroConEnd.TimeLab.setAlignment(QtCore.Qt.AlignCenter)
+        self.BaroConEnd.TimeLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.NoBaro = QtWidgets.QLabel(translate("baroWidget", "noBaro"))
-        self.NoBaro.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoBaro.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.gridBaroItems = QtWidgets.QGridLayout(self.ItemBaroWidget)
         self.gridBaroItems.addWidget(self.NoBaro, 0, 0, 1, 6)
 
         self.BaroScrollBar = QtWidgets.QScrollArea()
         self.BaroScrollBar.setWidgetResizable(True)
-        self.BaroScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.BaroScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.ItemBaroWidget.setLayout(self.gridBaroItems)
 
@@ -67,7 +67,7 @@ class BaroWidgetTab():
         self.gridBaro.addWidget(self.BaroConDesc, 1, 0)
         self.gridBaro.addWidget(self.BaroConEnd.TimeLab, 1, 1)
         self.gridBaro.addWidget(self.BaroTabber, 2, 0, 1, 2)
-        self.gridBaro.setAlignment(QtCore.Qt.AlignTop)
+        self.gridBaro.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.BaroWidget.setLayout(self.gridBaro)
 

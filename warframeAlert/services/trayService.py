@@ -1,6 +1,6 @@
 # coding=utf-8
-from PyQt5 import QtCore, QtWidgets, QtGui
-from PyQt5.QtWidgets import QSystemTrayIcon, QAction, QMenu
+from PyQt6 import QtCore, QtWidgets, QtGui
+from PyQt6.QtWidgets import QSystemTrayIcon, QMenu
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.fileUtils import get_asset_path, get_separator
@@ -15,13 +15,13 @@ class TrayService():
         self.tray_icon: QSystemTrayIcon = QtWidgets.QSystemTrayIcon(self.app)
         self.tray_icon.setIcon(QtGui.QIcon(get_asset_path() + "icon" + get_separator() + "Warframe.ico"))
 
-        show_app: QAction = QtWidgets.QAction(translate("trayService", "open"), self.app)
+        show_app: QtGui.QAction = QtGui.QAction(translate("trayService", "open"), self.app)
         show_app.triggered.connect(self.app.show)
 
-        hide_app: QAction = QtWidgets.QAction(translate("trayService", "hide"), self.app)
+        hide_app: QtGui.QAction = QtGui.QAction(translate("trayService", "hide"), self.app)
         hide_app.triggered.connect(self.app.hide)
 
-        quit_app: QAction = QtWidgets.QAction(translate("trayService", "exit"), self.app)
+        quit_app: QtGui.QAction = QtGui.QAction(translate("trayService", "exit"), self.app)
         quit_app.triggered.connect(QtCore.QCoreApplication.quit)
 
         tray_menu: QMenu = QtWidgets.QMenu()

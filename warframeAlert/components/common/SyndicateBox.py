@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtGui, QtWidgets, QtCore
+from PyQt6 import QtGui, QtWidgets, QtCore
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.gameTranslationUtils import get_node, get_syndicate_rank
@@ -68,7 +68,7 @@ class SyndicateBox():
         self.SynGrid.addWidget(self.Mis62, 9, 1)
         self.SynGrid.addWidget(self.Mis7, 9, 2)
 
-        self.SynGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.SynGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_syn_id(self) -> str:
         return self.syn_id

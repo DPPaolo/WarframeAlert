@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.SpecialAlert import create_alert
 from warframeAlert.constants.warframeTypes import Alerts
@@ -20,10 +20,10 @@ class AlertWidget():
         self.AlertsWidget = QtWidgets.QWidget()
 
         self.NoAlert = QtWidgets.QLabel(translate("alertWidget", "noAlert"))
-        self.NoAlert.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoAlert.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.alertGrid = QtWidgets.QGridLayout(self.AlertsWidget)
-        self.alertGrid.setAlignment(QtCore.Qt.AlignTop)
+        self.alertGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.alertGrid.addWidget(self.NoAlert, 0, 0)
         self.AlertsWidget.setLayout(self.alertGrid)
 

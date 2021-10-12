@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.constants.warframeTypes import PVPActiveTournaments
 from warframeAlert.services.translationService import translate
@@ -16,13 +16,13 @@ class PvPTournamentWidget():
         self.TournamentPvPWidget = QtWidgets.QWidget()
 
         self.NoPvPTourLab = QtWidgets.QLabel(translate("pvpTournamentWidget", "noTournament"))
-        self.NoPvPTourLab.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoPvPTourLab.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.gridPvPTour = QtWidgets.QGridLayout(self.TournamentPvPWidget)
         self.gridPvPTour.addWidget(self.NoPvPTourLab, 0, 0)
 
         self.TournamentPvPWidget.setLayout(self.gridPvPTour)
 
-        self.gridPvPTour.setAlignment(QtCore.Qt.AlignTop)
+        self.gridPvPTour.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.TournamentPvPWidget

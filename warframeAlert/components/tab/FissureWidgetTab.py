@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import Tuple
 
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.FissureBox import FissureBox
 from warframeAlert.components.widget.RelicWidget import RelicWidget
@@ -39,8 +39,8 @@ class FissureWidgetTab():
 
         self.FissureWidget.setLayout(self.gridFissureWidget)
 
-        self.gridFissure.setAlignment(QtCore.Qt.AlignTop)
-        self.gridFissureWidget.setAlignment(QtCore.Qt.AlignTop)
+        self.gridFissure.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridFissureWidget.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.FissureWidget

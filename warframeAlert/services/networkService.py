@@ -6,8 +6,8 @@ import time
 import urllib.request
 from urllib.error import URLError
 
-from PyQt5 import QtCore, QtWidgets
-from PyQt5.QtCore import QThread
+from PyQt6 import QtCore, QtWidgets
+from PyQt6.QtCore import QThread
 
 from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.optionHandlerService import OptionsHandler

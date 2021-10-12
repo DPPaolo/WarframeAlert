@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.common.PvPMissionBox import PvPMissionBox
@@ -43,8 +43,8 @@ class PvPWidgetTab():
         self.gridDayPvP.addWidget(self.PvPDayInit, 0, 0)
         self.gridDayPvP.addWidget(self.PvPDayFin.TimeLab, 0, 1)
 
-        self.gridWeekPvP.setAlignment(QtCore.Qt.AlignTop)
-        self.gridDayPvP.setAlignment(QtCore.Qt.AlignTop)
+        self.gridWeekPvP.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridDayPvP.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.PvPtabber.insertTab(0, self.DayPvPWidget, translate("pvpWidgetTab", "dailyMission"))
         self.PvPtabber.insertTab(1, self.WeekPvPWidget, translate("pvpWidgetTab", "weeklyMission"))
@@ -53,7 +53,7 @@ class PvPWidgetTab():
 
         grid_pvp = QtWidgets.QGridLayout(self.PvPWidget)
         grid_pvp.addWidget(self.PvPtabber, 0, 0)
-        grid_pvp.setAlignment(QtCore.Qt.AlignTop)
+        grid_pvp.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.PvPWidget.setLayout(grid_pvp)
 
     def get_widget(self) -> QtWidgets.QWidget:

@@ -1,5 +1,5 @@
 # coding=utf-8
-from PyQt5 import QtWidgets, QtCore, QtGui
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.CommonImageButton import CommonImageButton
 from warframeAlert.components.common.GlobalUpgrade import GlobalUpgrade
@@ -55,11 +55,11 @@ class NewsWidgetTab():
         self.NewsScrollBar.setWidgetResizable(True)
         self.NewsScrollBarC.setWidgetResizable(True)
 
-        self.NewsScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
-        self.NewsScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAlwaysOff)
+        self.NewsScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.NewsScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
-        self.NewsScrollBar.setBackgroundRole(QtGui.QPalette.NoRole)
-        self.NewsScrollBarC.setBackgroundRole(QtGui.QPalette.NoRole)
+        self.NewsScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.NewsScrollBarC.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
 
         self.NewsWidget.setLayout(self.grid)
         self.ContestWidget.setLayout(self.gridC)
@@ -75,8 +75,8 @@ class NewsWidgetTab():
         self.NoNewsLabel = QtWidgets.QLabel(translate("newsWidgetTab", "noNews"))
         self.NoNewsOtherLabel = QtWidgets.QLabel(translate("newsWidgetTab", "noContest"))
 
-        self.NoNewsLabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.NoNewsOtherLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.NoNewsLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
+        self.NoNewsOtherLabel.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.grid.addWidget(self.NoNewsLabel, 0, 0)
         self.gridC.addWidget(self.NoNewsOtherLabel, 0, 0)
@@ -88,7 +88,7 @@ class NewsWidgetTab():
         self.gridNews.addWidget(self.GlobalUpgrade, 0, 0, 1, 3)
         self.gridNews.addWidget(self.NewsLabel, 1, 0, 1, 3)
         self.gridNews.addWidget(self.Newstabber, 2, 0, 1, 3)
-        self.gridNews.setAlignment(QtCore.Qt.AlignTop)
+        self.gridNews.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.NewsWidgetTab.setLayout(self.gridNews)
 

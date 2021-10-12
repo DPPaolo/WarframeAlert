@@ -1,7 +1,7 @@
 # coding=utf-8
 from typing import List
 
-from PyQt5 import QtCore, QtWidgets, QtGui
+from PyQt6 import QtCore, QtWidgets, QtGui
 
 from warframeAlert.components.common.CommonImages import CommonImages
 from warframeAlert.components.common.EmptySpace import EmptySpace
