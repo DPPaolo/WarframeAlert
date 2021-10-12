@@ -1,62 +1,52 @@
 # coding=utf-8
 
-from PyQt6 import QtWidgets
+from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.constants.files import OTHER_FILE_SITE, OTHER_FILE_NAME
-from warframeAlert.services.networkService import check_connection, ProgressBarDownloader
-from warframeAlert.services.optionHandlerService import OptionsHandler
+from warframeAlert.services.networkService import check_connection
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils import commonUtils, warframeFileUtils
-from warframeAlert.utils.fileUtils import get_separator
+from warframeAlert.services.updateFileService import UpdateFileService
+from warframeAlert.utils import commonUtils
 from warframeAlert.utils.logUtils import LogHandler
 
 
-class UpdateRequiredFilesWidget():
+class UpdateRequiredFilesWidget(QtCore.QObject):
+    all_file_downloaded = QtCore.pyqtSignal()
     UpdateFileWidget = None
 
-    def __init__(self) -> None:
+    def __init__(self, service: UpdateFileService) -> None:
+        super().__init__()
+        self.update_file_service = service
         self.UpdateFileWidget = QtWidgets.QWidget()
-
-        self.UpdateFileTitleLabel = QtWidgets.QLabel(translate("updateProgramService", "updateFileTitle") + ":")
-        self.UpdateFilePer = QtWidgets.QProgressBar()
+        self.UpdateFileTitleLabel = QtWidgets.QLabel(translate("updateProgramService", "updateFileTitle") + "....")
 
         self.gridFileUpdate = QtWidgets.QGridLayout(self.UpdateFileWidget)
 
         self.gridFileUpdate.addWidget(self.UpdateFileTitleLabel, 0, 0)
-        self.gridFileUpdate.addWidget(self.UpdateFilePer, 1, 0)
 
         self.UpdateFileWidget.setLayout(self.gridFileUpdate)
 
         self.UpdateFileWidget.resize(350, 50)
 
-        QTimer.singleShot(1500, lambda: self.download_other_file(self.UpdateFilePer, self.UpdateFileTitleLabel, 0))
+        QTimer.singleShot(1500, lambda: self.download_program_file())
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.UpdateFileWidget
+
+    def close(self) -> None:
+        self.all_file_downloaded.emit()
+        self.UpdateFileWidget.close()
 
     def download_program_file(self) -> None:
         if not check_connection():
             commonUtils.print_traceback(translate("updateService", "noConnection"))
             return
         try:
-            self.download_other_file(self.UpdateFilePer, self.UpdateFileTitleLabel, 0)
+            self.update_file_service.download_all_file()
+            self.update_file_service.file_downloaded.connect(lambda: self.close())
         except Exception as er:
             MessageBox(translate("updateService", "saveError"), str(er), MessageBoxType.ERROR)
             LogHandler.err(translate("updateService", "saveError"))
             LogHandler.err(str(er))
             commonUtils.print_traceback(translate("updateService", "saveError") + " " + str(er))
-
-    def download_other_file(self, progress_bar: QtWidgets.QProgressBar, label: QtWidgets.QLabel, index: int) -> None:
-        i = index
-        if (i >= len(OTHER_FILE_NAME)):
-            warframeFileUtils.write_json_drop()
-            OptionsHandler.set_option("FirstInit", 1)
-            self.UpdateFileWidget.close()
-            return
-        label.setText(translate("updateProgramService", "updateFileTitle") + ": " + OTHER_FILE_NAME[i])
-        path = "data" + get_separator() + OTHER_FILE_NAME[i]
-        downloader = ProgressBarDownloader(progress_bar, OTHER_FILE_SITE[i], path)
-        downloader.download_completed.connect(lambda: self.download_other_file(progress_bar, label, i + 1))
-        downloader.start()

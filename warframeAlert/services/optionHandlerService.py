@@ -11,7 +11,7 @@ from PyQt6.QtWidgets import QWidget
 class OptionsHandler(QtCore.QObject):
     #UpdateTabber = QtCore.pyqtSignal()
     setting: QtCore.QSettings = QtCore.QSettings("config.ini", QtCore.QSettings.Format.IniFormat)
-    first_init: bool = True
+    during_init: bool = True
     default_value = {
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
@@ -50,12 +50,12 @@ class OptionsHandler(QtCore.QObject):
             self.set_option(key, self.default_value[key])
 
     @classmethod
-    def set_first_init(cls, value: Any) -> None:
-        cls.first_init = value
+    def set_during_init(cls, value: Any) -> None:
+        cls.during_init = value
 
     @classmethod
-    def get_first_init(cls) -> bool:
-        return cls.first_init
+    def is_during_init(cls) -> bool:
+        return cls.during_init
 
     @classmethod
     def get_option(cls, option: str, option_type: Type[int] | Type[str] = int) -> str | int:

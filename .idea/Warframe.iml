@@ -7,8 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/venv" />
       <excludeFolder url="file://$MODULE_DIR$/venvMac" />
       <excludeFolder url="file://$MODULE_DIR$/venvVecchioPortatile" />
-      <excludeFolder url="file://$MODULE_DIR$/warframeAlert/data" />
       <excludeFolder url="file://$MODULE_DIR$/warframeAlert/images" />
+      <excludeFolder url="file://$MODULE_DIR$/warframeAlert/data" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (WarframeAlert)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -4,6 +4,7 @@
 import sys
 
 from PyQt6 import QtWidgets, QtCore, QtGui
+from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
@@ -16,8 +17,7 @@ from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.services.updateProgramService import UpdateProgramService
 from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils, timeUtils
-from warframeAlert.utils.fileUtils import create_default_folder, get_separator, \
-    copy_bundled_files_to_current_dir
+from warframeAlert.utils.fileUtils import create_default_folder, get_separator, copy_bundled_files_to_current_dir
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -81,7 +81,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         #gestore_opzioni.UpdateTabber.connect(self.update_tab)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
-        self.update_service.fist_init_completed.connect(self.show)
+        if (OptionsHandler.get_option("FirstInit") != 0):
+            self.update_service.fist_init_completed.connect(self.show)
 
         self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
         self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
@@ -129,9 +130,10 @@ class MainWindow(QtWidgets.QMainWindow):
             if (not fileUtils.is_linux_os() and not fileUtils.is_mac_os()):
                 if getattr(sys, 'frozen', False):
                     copy_bundled_files_to_current_dir()
-            OptionsHandler.set_option("FirstInit", 1)
 
-            self.updateProgramService.open_and_update_file()
+            self.updateProgramService.open_and_update_file(self.update_file_service)
+            self.updateProgramService.UpdateFile.all_file_downloaded.connect(self.show_after_first_init)
+            OptionsHandler.set_option("FirstInit", 1)
         else:
             # Copy bundled files if missing
             #TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
@@ -142,7 +144,11 @@ class MainWindow(QtWidgets.QMainWindow):
             actual_date = int(timeUtils.get_local_time())
             if ((actual_date - old_update_date) > 604800 and check_connection()):
                 OptionsHandler.set_option("Update/AutoUpdateAll", actual_date)
-                self.updateProgramService.open_and_update_file()
+                QTimer.singleShot(60 * 1000, lambda: self.update_file_service.download_all_file())
+
+    def show_after_first_init(self) -> None:
+        self.tabService.update("")
+        self.show()
 
     def create_menu(self) -> None:
         file = self.navBarMenu.addMenu('&' + translate("main", "fileMenu"))

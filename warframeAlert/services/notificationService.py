@@ -25,14 +25,14 @@ class NotificationService(QtCore.QThread):
                           title: str,
                           message: str,
                           icon: QtWidgets.QSystemTrayIcon | None) -> None:
-        if (not OptionsHandler.get_first_init() and OptionsHandler.get_option("Update/Notify")):
+        if (not OptionsHandler.is_during_init() and OptionsHandler.get_option("Update/Notify")):
             cls.notif_queue.append((title, message, icon))
 
     def show_notif(self, title: str,
                    message: str,
                    icon: QtWidgets.QSystemTrayIcon.MessageIcon | QtGui.QIcon | None) -> None:
         if (icon is None):
-            icon = QtWidgets.QSystemTrayIcon.Information
+            icon = QtWidgets.QSystemTrayIcon.MessageIcon.Information
         self.tray_icon.showMessage(title, message, icon, 3000)
 
     def run(self) -> None:

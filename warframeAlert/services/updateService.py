@@ -70,4 +70,4 @@ class UpdateService(QtCore.QObject):
             self.start()
         else:
             self.fist_init_completed.emit()
-            OptionsHandler.set_first_init(False)
+            OptionsHandler.set_during_init(False)
