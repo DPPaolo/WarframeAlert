@@ -71,13 +71,20 @@ def translate_sortie_drop() -> None:
 
 def translate_free_roam_drop(file_name: str) -> None:
     prefix = ""
-    match file_name:
-        case "cetus":
-            prefix = "cetusBountyRewards"
-        case "fortuna":
-            prefix = "solarisBountyRewards"
-        case "deimos":
-            prefix = "deimosRewards"
+    if (file_name == "cetus"):
+        prefix = "cetusBountyRewards"
+    elif (file_name == "fortuna"):
+        prefix = "solarisBountyRewards"
+    elif (file_name == "deimos"):
+        prefix = "deimosRewards"
+    # TODO: decomment when python 3.10 is ready
+    # match file_name:
+    #     case "cetus":
+    #         prefix = "cetusBountyRewards"
+    #     case "fortuna":
+    #         prefix = "solarisBountyRewards"
+    #     case "deimos":
+    #         prefix = "deimosRewards"
     json_data: List[BountyFileData] = read_drop_file(file_name + "_en")[prefix]
 
     new_json_data = {prefix: []}

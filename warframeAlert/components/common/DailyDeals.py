@@ -5,7 +5,7 @@ from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWith
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.fileUtils import is_mac_os, get_separator
-from warframeAlert.utils.stringUtils import set_barred
+from warframeAlert.utils.stringUtils import set_strike_text
 from warframeAlert.utils.timeUtils import get_time
 
 
@@ -73,7 +73,7 @@ class DailyDeals:
             self.DealsOriginalPrice.setText(str(original_price))
             self.DealsPrice.set_before_text(str(price_sales) + " Platinum")
         else:
-            price = set_barred(str(original_price)) + "  " + str(price_sales)
+            price = set_strike_text(str(original_price)) + "  " + str(price_sales)
 
             self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
             self.DealsPrice.set_before_text(translate("dailyDeals", "price") + ": " + str(price) + " Platinum")
