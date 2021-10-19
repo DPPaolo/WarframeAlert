@@ -13,7 +13,6 @@ class Spoiler(QtWidgets.QWidget):
         self.checked = True
 
         self.toggleButton = QtWidgets.QToolButton()
-        self.toggleButton.setStyleSheet("QToolButton { border: none; }")
         self.toggleButton.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.toggleButton.setArrowType(Qt.ArrowType.RightArrow)
 

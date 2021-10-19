@@ -136,8 +136,9 @@ class MainWindow(QtWidgets.QMainWindow):
             OptionsHandler.set_option("FirstInit", 1)
         else:
             # Copy bundled files if missing
-            #TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
-            if (not fileUtils.check_file("assets/icon/Warframe.ico") and getattr(sys, 'frozen', False)):
+            # TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
+            warframe_icon = "assets" + get_separator() + "icon" + get_separator() + "Warframe.ico"
+            if (not fileUtils.check_file(warframe_icon) and getattr(sys, 'frozen', False)):
                 copy_bundled_files_to_current_dir()
 
             old_update_date = OptionsHandler.get_option("Update/AutoUpdateAll")

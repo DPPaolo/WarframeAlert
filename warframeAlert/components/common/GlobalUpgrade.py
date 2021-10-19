@@ -89,5 +89,5 @@ class GlobalUpgrade():
 
         image_name = "assets" + get_separator() + "image" + get_separator() + image
         self.UpgradeImage.set_image(image_name)
-        self.UpgradeImage.set_image_dimension(32, 32, QtCore.Qt.KeepAspectRatio)
+        self.UpgradeImage.set_image_dimension(32, 32, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         self.upgrade_image = image_name

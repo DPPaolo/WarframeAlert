@@ -99,7 +99,7 @@ class RelicBox():
         image_name = "assets" + get_separator() + "image" + get_separator() + image
 
         self.RelicImg.set_image(image_name)
-        self.RelicImg.set_image_dimension(60, 60, QtCore.Qt.KeepAspectRatio)
+        self.RelicImg.set_image_dimension(60, 60, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
 
     def set_relic_tier(self, tier: int) -> None:
         self.tier = tier

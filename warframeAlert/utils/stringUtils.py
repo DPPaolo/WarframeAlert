@@ -5,7 +5,7 @@ from typing import List, Optional
 def divide_for_n(message: str, num=1, divide="\n") -> Optional[List[str]]:
     if (divide == ""):
         return None
-    data = []
+    data: list[str] = []
     for i in range(0, num):
         data.append("")
     i = 0

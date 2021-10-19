@@ -68,7 +68,7 @@ class UpdateProgramWidget():
                 line = line.replace("\n", "")
                 self.textEditUpdate.append(line)
             fp.close()
-            self.textEditUpdate.moveCursor(QtGui.QTextCursor.Start)
+            self.textEditUpdate.moveCursor(QtGui.QTextCursor.MoveOperation.Start)
         except Exception as er:
             self.textEditUpdate.setText(translate("updateProgramWidget", "noChangelog"))
             LogHandler.err(translate("updateProgramWidget", "noChangelog") + ": " + str(er))
