@@ -1,6 +1,4 @@
 # coding=utf-8
-from __future__ import annotations
-
 from PyQt6 import QtWidgets, QtCore
 from PyQt6.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation, Qt
 from PyQt6.QtWidgets import QSizePolicy

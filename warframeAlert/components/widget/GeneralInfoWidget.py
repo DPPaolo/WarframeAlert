@@ -1,6 +1,4 @@
 # coding=utf-8
-from __future__ import annotations
-
 from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown

@@ -1,6 +1,4 @@
 # coding=utf-8
-from __future__ import annotations
-
 from PyQt6 import QtGui, QtWidgets
 
 from warframeAlert.components.common.Alert import Alert
