@@ -65,7 +65,7 @@ class BaroItemBox():
 
         image_path = "images" + get_separator() + image_name
         self.BaroImage.set_image(image_path, site)
-        self.BaroImage.set_image_dimension(65, 65, QtCore.Qt.KeepAspectRatio)
+        self.BaroImage.set_image_dimension(65, 65, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
 
     def hide(self) -> None:
         self.BaroName.hide()

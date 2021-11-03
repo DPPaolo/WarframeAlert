@@ -129,13 +129,13 @@ class Invasion():
             if ((value * 100 / perc[1]) >= 100):
                 self.InvPer.setValue(100)
             else:
-                self.InvPer.setValue(value)
+                self.InvPer.setValue(int(value))
             self.InvPer.setToolTip(str(value * 100 / perc[1]) + "%")
         else:
             if ((value * 100 / perc[1]) >= 100):
                 self.InvPer.setValue(100)
             else:
-                self.InvPer.setValue(value)
+                self.InvPer.setValue(int(value))
             self.InvPer.setToolTip(str(value * 100 / perc[1]) + "%")
 
     def set_invasion_image(self, attacker_reward: str, defender_reward: str,

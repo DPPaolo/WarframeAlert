@@ -20,20 +20,13 @@ class MessageBox():
         else:
             self.messageBox.setText(message)
 
-        if (message_type == MessageBoxType.INFO):
-            self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Information)
-            self.messageBox.setWindowTitle(translate("messageBox", "info"))
-        elif (message_type == MessageBoxType.ERROR):
-            self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Critical)
-            self.messageBox.setWindowTitle(translate("messageBox", "error"))
-        # TODO: decomment when python 3.10 is ready
-        # match message_type:
-        #     case MessageBoxType.INFO:
-        #         self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Information)
-        #         self.messageBox.setWindowTitle(translate("messageBox", "info"))
-        #     case MessageBoxType.ERROR:
-        #         self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Critical)
-        #         self.messageBox.setWindowTitle(translate("messageBox", "error"))
+        match message_type:
+            case MessageBoxType.INFO:
+                self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Information)
+                self.messageBox.setWindowTitle(translate("messageBox", "info"))
+            case MessageBoxType.ERROR:
+                self.messageBox.setIcon(QtWidgets.QMessageBox.Icon.Critical)
+                self.messageBox.setWindowTitle(translate("messageBox", "error"))
 
         self.messageBox.setStandardButtons(QtWidgets.QMessageBox.StandardButton.Ok)
         self.messageBox.exec()

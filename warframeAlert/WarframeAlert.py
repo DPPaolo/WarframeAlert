@@ -79,7 +79,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Start the program service updater
         self.updateProgramService = UpdateProgramService()
 
-        #gestore_opzioni.UpdateTabber.connect(self.update_tab)
+        # gestore_opzioni.UpdateTabber.connect(self.update_tab)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
         if (OptionsHandler.get_option("FirstInit") != 0):
             self.update_service.fist_init_completed.connect(self.show)
@@ -96,6 +96,7 @@ class MainWindow(QtWidgets.QMainWindow):
         update_cycle = OptionsHandler.get_option("Update/Cycle")
         if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
             self.tabService.update("")
+            self.show()
 
     def start_update(self) -> None:
         self.resize(680, 450)
@@ -158,17 +159,17 @@ class MainWindow(QtWidgets.QMainWindow):
         info = self.navBarMenu.addMenu('&' + translate("main", "helpMenu"))
 
         # Files Menu
-    #     open_alert = QtWidgets.QAction("Apri...", file)
-    #     open_alert.setShortcut("Ctrl+A")
-    #     open_alert.setStatusTip("Apri un file json contenente dati di allerte precedenti")
-    #     open_alert.triggered.connect(self.open_old_allert)
-    #     file.addAction(open_alert)
-    #
-    #     opzioni = QtWidgets.QAction("Opzioni", file)
-    #     opzioni.setShortcut("Ctrl+O")
-    #     opzioni.setStatusTip("Opzioni dell'Applicazione")
-    #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())
-    #     file.addAction(opzioni)
+        #     open_alert = QtWidgets.QAction("Apri...", file)
+        #     open_alert.setShortcut("Ctrl+A")
+        #     open_alert.setStatusTip("Apri un file json contenente dati di allerte precedenti")
+        #     open_alert.triggered.connect(self.open_old_allert)
+        #     file.addAction(open_alert)
+        #
+        #     opzioni = QtWidgets.QAction("Opzioni", file)
+        #     opzioni.setShortcut("Ctrl+O")
+        #     opzioni.setStatusTip("Opzioni dell'Applicazione")
+        #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())wea
+        #     file.addAction(opzioni)
 
         exit_menu = QtGui.QAction(translate("main", "exitMenu"), file)
         exit_menu.setShortcut("Ctrl+Q")
@@ -189,13 +190,13 @@ class MainWindow(QtWidgets.QMainWindow):
         update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc"))
         update_only_file.triggered.connect(lambda: self.update_file_service.download_all_file())
         debug.addAction(update_only_file)
-    #
-    #         parse_file = QtWidgets.QAction("Parserizza il File", debug)
-    #         parse_file.setShortcut("Ctrl+P")
-    #         parse_file.setStatusTip("Traduce le Allerte a Schermo")
-    #         parse_file.triggered.connect(lambda: self.update(False))
-    #         debug.addAction(parse_file)
-    #       togliere non serve mappa stellare
+        #
+        #         parse_file = QtWidgets.QAction("Parserizza il File", debug)
+        #         parse_file.setShortcut("Ctrl+P")
+        #         parse_file.setStatusTip("Traduce le Allerte a Schermo")
+        #         parse_file.triggered.connect(lambda: self.update(False))
+        #         debug.addAction(parse_file)
+        #       togliere non serve mappa stellare
 
     #     #Menu Strumenti
     #     self.MSTool = QtWidgets.QAction("Mappa Stellare", tool)

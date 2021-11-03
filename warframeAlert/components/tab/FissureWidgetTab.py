@@ -137,33 +137,18 @@ class FissureWidgetTab():
 
 
 def get_relic_tier(tier: str) -> Tuple[int, str]:
-    if (tier[-1] == "1"):
-        return 1, "T1 Lith"
-    elif (tier[-1] == "2"):
-        return 2, "T2 Meso"
-    elif (tier[-1] == "3"):
-        return 3, "T3 Neo"
-    elif (tier[-1] == "4"):
-        return 4, "T4 Axi"
-    elif (tier[-1] == "5"):
-        return 5, "T5 Requiem"
-    else:
-        print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-        LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-        return int(tier[-1]), tier
-    # TODO: decomment when python 3.10 is ready
-    # match tier[-1]:
-    #     case "1":
-    #         return 1, "T1 Lith"
-    #     case "2":
-    #         return 2, "T2 Meso"
-    #     case "3":
-    #         return 3, "T3 Neo"
-    #     case "4":
-    #         return 4, "T4 Axi"
-    #     case "5":
-    #         return 5, "T5 Requiem"
-    #     case _:
-    #         print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-    #         LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)
-    #         return int(tier[-1]), tier
+    match tier[-1]:
+        case "1":
+            return 1, "T1 Lith"
+        case "2":
+            return 2, "T2 Meso"
+        case "3":
+            return 3, "T3 Neo"
+        case "4":
+            return 4, "T4 Axi"
+        case "5":
+            return 5, "T5 Requiem"
+        case _:
+            print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
+            LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)
+            return int(tier[-1]), tier
