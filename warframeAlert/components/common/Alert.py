@@ -9,7 +9,7 @@ from warframeAlert.constants.files import DEFAULT_ALERT_IMAGE, IMAGE_NAME
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash
-from warframeAlert.utils.fileUtils import get_separator
+from warframeAlert.utils.fileUtils import get_separator, check_assets_file
 from warframeAlert.utils.logUtils import LogHandler, LOG_FILE
 
 
@@ -186,6 +186,8 @@ class Alert():
         image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
         self.AlertImg.set_image(image_name)
         self.AlertImg.set_image_dimension(80, 80, Qt.AspectRatioMode.KeepAspectRatio)
+        if (not check_assets_file(get_last_item_with_backslash(img))):
+            self.set_default_alert_image()
         self.image = image_name
 
     def set_default_alert_image(self) -> None:

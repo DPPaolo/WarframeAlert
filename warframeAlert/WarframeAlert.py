@@ -7,6 +7,7 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
+from warframeAlert.services.menuService import MenuService
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -61,6 +62,9 @@ class MainWindow(QtWidgets.QMainWindow):
         # Start the tab Service
         self.mainTabber = QtWidgets.QTabWidget(self.mainWidget)
         self.tabService = TabService(self.mainTabber)
+
+        # Create service used on the menu on top of the tabs
+        self.menuService = MenuService()
 
         # Create the nav bar menu on top of the tabs
         self.navBarMenu = self.menuBar()
