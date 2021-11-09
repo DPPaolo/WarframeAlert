@@ -70,6 +70,7 @@ ALERT_INFO = {
     "/Lotus/Language/Alerts/DefenseDesc21": {"it": "Ricerca Compromessa", "en": "Research Compromised"},
     "/Lotus/Language/Alerts/SurvivalDesc1": {"it": "Sopravvivi o Muori", "en": "Survive or Die"},
     "/Lotus/Language/Alerts/SpeedRun": {"it": "Sfida a Tempo", "en": "Speed Run"},
+    "CONQUERA": {"it": "Conquera", "en": "Conquera"},
 }
 
 ALERT_WEAPON_RESTRICTION = {

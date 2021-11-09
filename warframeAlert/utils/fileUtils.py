@@ -52,6 +52,16 @@ def check_file(name: str) -> bool:
     return os.path.exists(path) or os.path.exists(image_path) or os.path.exists(files_path) or os.path.exists(news_path)
 
 
+def check_assets_file(name: str) -> bool:
+    if ("." not in name):
+        name += ".png"
+    d = get_cur_dir()
+    icon_path = d + get_separator() + "assets" + get_separator() + "icon" + get_separator() + name
+    image_path = d + get_separator() + "assets" + get_separator() + "image" + get_separator() + name
+    validator_path = d + get_separator() + "assets" + get_separator() + "validator" + get_separator() + name
+    return os.path.exists(icon_path) or os.path.exists(image_path) or os.path.exists(validator_path)
+
+
 def check_folder(name: str) -> bool:
     d = get_cur_dir()
     return os.path.isdir(d + get_separator() + name)

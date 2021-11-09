@@ -4,52 +4,52 @@
 <context>
     <name>acolyte</name>
     <message>
-        <location filename="../components/common/Acolyte.py" line="71"/>
+        <location filename="../components/common/Acolyte.py" line="72"/>
         <source>level</source>
         <translation>Level</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="72"/>
+        <location filename="../components/common/Acolyte.py" line="73"/>
         <source>damageFlee</source>
         <translation>Damage before flee</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="78"/>
+        <location filename="../components/common/Acolyte.py" line="79"/>
         <source>init</source>
         <translation>Spawned on</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="88"/>
+        <location filename="../components/common/Acolyte.py" line="89"/>
         <source>found?</source>
         <translation>Found?</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="94"/>
+        <location filename="../components/common/Acolyte.py" line="95"/>
         <source>founded</source>
         <translation>Founded on</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="96"/>
+        <location filename="../components/common/Acolyte.py" line="97"/>
         <source>positionUnknown</source>
         <translation>Position Unknown</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="130"/>
+        <location filename="../components/common/Acolyte.py" line="131"/>
         <source>acolyteDead</source>
         <translation>Acolyte Dead</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="133"/>
+        <location filename="../components/common/Acolyte.py" line="134"/>
         <source>health</source>
         <translation>Remaining Health</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="70"/>
+        <location filename="../components/common/Acolyte.py" line="71"/>
         <source>inGameName</source>
         <translation>In Game code name</translation>
     </message>
     <message>
-        <location filename="../components/common/Acolyte.py" line="73"/>
+        <location filename="../components/common/Acolyte.py" line="74"/>
         <source>useTicket?</source>
         <translation>Need ticket to access?</translation>
     </message>
@@ -184,7 +184,7 @@
 <context>
     <name>bountyBox</name>
     <message>
-        <location filename="../components/common/BountyBox.py" line="88"/>
+        <location filename="../components/common/BountyBox.py" line="87"/>
         <source>bountyName</source>
         <translation>Bounty</translation>
     </message>
@@ -199,7 +199,7 @@
         <translation>View Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="87"/>
+        <location filename="../components/common/BountyBox.py" line="86"/>
         <source>syndicate</source>
         <translation>Affiliated syndycate</translation>
     </message>
@@ -209,37 +209,37 @@
         <translation>Level</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="101"/>
+        <location filename="../components/common/BountyBox.py" line="100"/>
         <source>rewardType</source>
         <translation>Reward Type</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="108"/>
+        <location filename="../components/common/BountyBox.py" line="107"/>
         <source>dropFortuna</source>
         <translation>Orb Vallis Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="112"/>
+        <location filename="../components/common/BountyBox.py" line="111"/>
         <source>dropGhoul</source>
         <translation>Ghoul Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="117"/>
+        <location filename="../components/common/BountyBox.py" line="116"/>
         <source>dropCetus</source>
         <translation>Cetus Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="123"/>
+        <location filename="../components/common/BountyBox.py" line="122"/>
         <source>noBountyRewardFound</source>
         <translation>Unkown bounty reward</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="121"/>
+        <location filename="../components/common/BountyBox.py" line="120"/>
         <source>dropDeimos</source>
         <translation>Deimos Bounty Drop</translation>
     </message>
     <message>
-        <location filename="../components/common/BountyBox.py" line="90"/>
+        <location filename="../components/common/BountyBox.py" line="89"/>
         <source>token</source>
         <translation>Total Token</translation>
     </message>
@@ -255,37 +255,37 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="114"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="92"/>
         <source>newSynJobs</source>
         <translation>New Syndicate Jobs for</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="111"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
         <source>bountiesError</source>
         <translation>Error on bounties</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="161"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="139"/>
         <source>bountyInit</source>
         <translation>Bounties Start</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="130"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="108"/>
         <source>cetusDay</source>
         <translation>Cetus - Night in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="132"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="110"/>
         <source>cetusNight</source>
         <translation>Cetus - Day in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="140"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="118"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Cold in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="142"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="120"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Warn in</translation>
     </message>
@@ -310,12 +310,12 @@
         <translation>Deimos</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="151"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="129"/>
         <source>deimosFass</source>
         <translation>Deimos - Vome in</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="153"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="131"/>
         <source>deimosVome</source>
         <translation>Deimos - Fass in</translation>
     </message>
@@ -328,42 +328,42 @@
 <context>
     <name>clanEvent</name>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="19"/>
+        <location filename="../components/common/ClanEvent.py" line="18"/>
         <source>clanScore</source>
         <translation>Score required for clans</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="20"/>
+        <location filename="../components/common/ClanEvent.py" line="19"/>
         <source>solo</source>
         <translation>Solo</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="21"/>
+        <location filename="../components/common/ClanEvent.py" line="20"/>
         <source>ghost</source>
         <translation>Ghost</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="22"/>
+        <location filename="../components/common/ClanEvent.py" line="21"/>
         <source>shadow</source>
         <translation>Shadow</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="23"/>
+        <location filename="../components/common/ClanEvent.py" line="22"/>
         <source>storm</source>
         <translation>Storm</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="24"/>
+        <location filename="../components/common/ClanEvent.py" line="23"/>
         <source>mountain</source>
         <translation>Mountain</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="25"/>
+        <location filename="../components/common/ClanEvent.py" line="24"/>
         <source>moon</source>
         <translation>Moon</translation>
     </message>
     <message>
-        <location filename="../components/common/ClanEvent.py" line="74"/>
+        <location filename="../components/common/ClanEvent.py" line="72"/>
         <source>unlockScore</source>
         <translation>With the score the clan unlock</translation>
     </message>
@@ -371,12 +371,12 @@
 <context>
     <name>commonUtils</name>
     <message>
-        <location filename="../utils/commonUtils.py" line="35"/>
+        <location filename="../utils/commonUtils.py" line="32"/>
         <source>yes</source>
         <translation>Yes</translation>
     </message>
     <message>
-        <location filename="../utils/commonUtils.py" line="37"/>
+        <location filename="../utils/commonUtils.py" line="34"/>
         <source>no</source>
         <translation>No</translation>
     </message>
@@ -425,6 +425,69 @@
         <location filename="../components/common/DailyDeals.py" line="65"/>
         <source>start</source>
         <translation>Started at</translation>
+    </message>
+</context>
+<context>
+    <name>eelogWidget</name>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="20"/>
+        <source>title</source>
+        <translation>Inspect EE.log</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="24"/>
+        <source>browse</source>
+        <translation>Browse</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="25"/>
+        <source>openFile</source>
+        <translation>Open Path</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="29"/>
+        <source>pathDesc</source>
+        <translation>EE.log path</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="41"/>
+        <source>all</source>
+        <translation>All</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="88"/>
+        <source>selectFile</source>
+        <translation>Select EE.log file</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="105"/>
+        <source>errorTitle</source>
+        <translation>File not found</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="108"/>
+        <source>errorFileNotFound</source>
+        <translation>EE.log not found</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="105"/>
+        <source>errorCheckPath</source>
+        <translation>Check the correct path</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="128"/>
+        <source>errorTitleReadError</source>
+        <translation>Errore reading file</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="131"/>
+        <source>errorReadErrorLine</source>
+        <translation>Error reading EE.log at line</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/EELogWidget.py" line="131"/>
+        <source>errorLineDesc</source>
+        <translation>with error</translation>
     </message>
 </context>
 <context>
@@ -556,97 +619,97 @@
 <context>
     <name>eventsWidget</name>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="121"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="113"/>
         <source>alertError</source>
         <translation>Error on the alert</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="132"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="124"/>
         <source>eventsError</source>
         <translation>Error on the events</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="158"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="150"/>
         <source>newEvent</source>
         <translation>New Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="165"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="157"/>
         <source>newRazorbackEvent</source>
         <translation>Razorback Attack</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="167"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="159"/>
         <source>newFomorianEvent</source>
         <translation>Fomorian Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="170"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="162"/>
         <source>newCetusEvent</source>
         <translation>New Event on Cetus</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="173"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="165"/>
         <source>newRecostructionEvent</source>
         <translation>New Relay Recostruction Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="199"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="191"/>
         <source>alerts</source>
         <translation>Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="204"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="196"/>
         <source>genericEvent</source>
         <translation>Tactical Alerts</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="205"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="197"/>
         <source>fomorian</source>
         <translation>Razorback and Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="206"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="198"/>
         <source>ghoul</source>
         <translation>Ghoul</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="207"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="199"/>
         <source>recostruction</source>
         <translation>Relay Recostruction</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="177"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="169"/>
         <source>newsquadLinkEvent</source>
         <translation>New Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="208"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="200"/>
         <source>squadLink</source>
         <translation>Sentient Invasion</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="436"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="427"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="427"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="418"/>
         <source>oldBounty</source>
         <translation>Previous Bounty</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="407"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="398"/>
         <source>razorbackHubEvent</source>
         <translation>Hub Event: Razorback Armada</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="409"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="400"/>
         <source>fomorianHubEvent</source>
         <translation>Hub Event: Fomorian</translation>
     </message>
     <message>
-        <location filename="../components/tab/EventsWidgetTab.py" line="411"/>
+        <location filename="../components/tab/EventsWidgetTab.py" line="402"/>
         <source>hubEvent</source>
         <translation>Hub Event: Event</translation>
     </message>
@@ -700,7 +763,7 @@
         <translation>Unknown Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="358"/>
+        <location filename="../utils/gameTranslationUtils.py" line="357"/>
         <source>errorFileLanguage</source>
         <translation>Error during reading Language.json file</translation>
     </message>
@@ -715,7 +778,7 @@
         <translation>Unknown Invasion Location Tag</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="238"/>
+        <location filename="../utils/gameTranslationUtils.py" line="237"/>
         <source>errorFileSolNodes</source>
         <translation>Error during reading SolNodes.json file</translation>
     </message>
@@ -725,17 +788,17 @@
         <translation>Unkown Acolyte Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="157"/>
+        <location filename="../utils/gameTranslationUtils.py" line="156"/>
         <source>unknownRegion</source>
         <translation>Unknown Region</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="204"/>
+        <location filename="../utils/gameTranslationUtils.py" line="203"/>
         <source>errorFileStarchart</source>
         <translation>Error during reading starchart.txt file</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="227"/>
+        <location filename="../utils/gameTranslationUtils.py" line="226"/>
         <source>noStarchartNode</source>
         <translation>No Mission Type found for node</translation>
     </message>
@@ -745,102 +808,102 @@
         <translation>Unkown Upgrade Type</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="169"/>
+        <location filename="../utils/gameTranslationUtils.py" line="168"/>
         <source>unknownMissionType</source>
         <translation>Unkown Mission Type</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="342"/>
+        <location filename="../utils/gameTranslationUtils.py" line="341"/>
         <source>unknownMapType</source>
         <translation>Unknown Map Type</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="178"/>
+        <location filename="../utils/gameTranslationUtils.py" line="177"/>
         <source>unknownAlertInfo</source>
         <translation>Unknown Alert Info</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="187"/>
+        <location filename="../utils/gameTranslationUtils.py" line="186"/>
         <source>unknownWeaponRestriction</source>
         <translation>Unknown Weapon Restriction</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="329"/>
+        <location filename="../utils/gameTranslationUtils.py" line="328"/>
         <source>unknownJob</source>
         <translation>Unknown Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="341"/>
+        <location filename="../utils/gameTranslationUtils.py" line="340"/>
         <source>unknownJobDesc</source>
         <translation>Unkonown Bounty Description</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="304"/>
+        <location filename="../utils/gameTranslationUtils.py" line="303"/>
         <source>unknownSyndicate</source>
         <translation>Unkown Syndicate</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="371"/>
+        <location filename="../utils/gameTranslationUtils.py" line="370"/>
         <source>unknownChallengeType</source>
         <translation>Unkown Nightwave Challenge Type</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="264"/>
+        <location filename="../utils/gameTranslationUtils.py" line="263"/>
         <source>unknownAuraType</source>
         <translation>Unkown Mission Aura</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="273"/>
+        <location filename="../utils/gameTranslationUtils.py" line="272"/>
         <source>unknownFXType</source>
         <translation>Unkown Mission FX</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="286"/>
+        <location filename="../utils/gameTranslationUtils.py" line="285"/>
         <source>unknownVipType</source>
         <translation>Unkown Vip Mission</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="295"/>
+        <location filename="../utils/gameTranslationUtils.py" line="294"/>
         <source>unknownReconstructionTaskType</source>
         <translation>Unkown Reconstruction Task</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="313"/>
+        <location filename="../utils/gameTranslationUtils.py" line="312"/>
         <source>unknownSyndicateRank</source>
         <translation>Unkown Syndicate Rank Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="389"/>
+        <location filename="../utils/gameTranslationUtils.py" line="388"/>
         <source>unknownSortieBoss</source>
         <translation>Unkown Sortie Boss</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="398"/>
+        <location filename="../utils/gameTranslationUtils.py" line="397"/>
         <source>unknownBountyStage</source>
         <translation>Unkown Stage Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="407"/>
+        <location filename="../utils/gameTranslationUtils.py" line="406"/>
         <source>unknownRarity</source>
         <translation>Unkown Rarity</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="416"/>
+        <location filename="../utils/gameTranslationUtils.py" line="415"/>
         <source>unknownPvPCategory</source>
         <translation>Unknown pvp category</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="427"/>
+        <location filename="../utils/gameTranslationUtils.py" line="426"/>
         <source>unknownPvPMissionName</source>
         <translation>Unknown PvP Mission Name</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="439"/>
+        <location filename="../utils/gameTranslationUtils.py" line="438"/>
         <source>unknownPvPDesc</source>
         <translation>Unkown PvP Mission Desc</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="448"/>
+        <location filename="../utils/gameTranslationUtils.py" line="447"/>
         <source>unknownPvPAlternativeDesc</source>
         <translation>Unkown PvP Alternative Mission Desc</translation>
     </message>
@@ -848,177 +911,177 @@
 <context>
     <name>generalWidget</name>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="25"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="23"/>
         <source>earthTime</source>
         <translation>Time on Earth</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="79"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="77"/>
         <source>fileVersion</source>
         <translation>File Version</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="80"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="78"/>
         <source>mobileFileVersion</source>
         <translation>Mobile File Version</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
         <source>worldSeed</source>
         <translation>World Seed</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
         <source>primeAccessState</source>
         <translation>Prime Access State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="34"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
         <source>primeVaultState</source>
         <translation>Prime Vault State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="36"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="34"/>
         <source>featuredDojo</source>
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="69"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
         <source>earthTimeDay</source>
         <translation>Time on Earth : Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="68"/>
         <source>timeToNight</source>
         <translation>Time until Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="72"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
         <source>earthTimeNight</source>
         <translation>Time on Earth : Night</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="73"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="71"/>
         <source>timeToDay</source>
         <translation>Time until Day</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="107"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="104"/>
         <source>tier1</source>
         <translation>Ghost Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="109"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="106"/>
         <source>tier2</source>
         <translation>Shadow Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="108"/>
         <source>tier3</source>
         <translation>Storm Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="110"/>
         <source>tier4</source>
         <translation>Mountain Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="112"/>
         <source>tier5</source>
         <translation>Moon Clan</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="97"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="95"/>
         <source>noAlliance</source>
         <translation>no alliance</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="114"/>
         <source>tier1Id</source>
         <translation>Ghost Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
         <source>guildAllianceId</source>
         <translation>Alliance ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
         <source>tier2Id</source>
         <translation>Shadow Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="123"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
         <source>tier3Id</source>
         <translation>Storm Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="126"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="123"/>
         <source>tier4Id</source>
         <translation>Mountain Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="129"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="126"/>
         <source>tier5Id</source>
         <translation>Moon Clan ID</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
         <source>primeState1</source>
         <translation>Women</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="142"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="139"/>
         <source>primeState2</source>
         <translation>Man</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
         <source>primeStateUnknown</source>
         <translation>Unknown Prime State</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
         <source>morePrimeVault</source>
         <translation>There are more Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>vault0</source>
         <translation>Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
         <source>vault1</source>
         <translation>Frost and Ember Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="153"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
         <source>vault2</source>
         <translation>Rhino and Mag Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="154"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>vault3</source>
         <translation>Ember, Frost and Loki Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
         <source>vault4</source>
         <translation>Nyx e Rhino Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="81"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="79"/>
         <source>forceLogoutVersion</source>
         <translation>Force Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="141"/>
         <source>comingSoon</source>
         <translation>Coming Soon</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="82"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="80"/>
         <source>DTLSActivated</source>
         <translation>DTLS active</translation>
     </message>
@@ -1204,103 +1267,118 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="106"/>
+        <location filename="../WarframeAlert.py" line="109"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="120"/>
+        <location filename="../WarframeAlert.py" line="123"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="120"/>
+        <location filename="../WarframeAlert.py" line="123"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="164"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="166"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="106"/>
+        <location filename="../WarframeAlert.py" line="109"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="146"/>
+        <location filename="../WarframeAlert.py" line="156"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="147"/>
+        <location filename="../WarframeAlert.py" line="157"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="148"/>
+        <location filename="../WarframeAlert.py" line="158"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="149"/>
+        <location filename="../WarframeAlert.py" line="159"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="172"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="178"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="214"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>infoHelpMenu</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="216"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Program Information</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="201"/>
+        <source>readEELog</source>
+        <translation>Inspect EE.log</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="201"/>
+        <source>toolHelpMenuEELog</source>
+        <translation>Open the form to inspect EE.log file</translation>
     </message>
 </context>
 <context>
     <name>menuService</name>
     <message>
-        <location filename="../services/menuService.py" line="26"/>
+        <location filename="../services/menuService.py" line="16"/>
         <source>infoTitle</source>
         <translation>Info</translation>
+    </message>
+    <message>
+        <location filename="../services/menuService.py" line="9"/>
+        <source>createdBy</source>
+        <translation>App create by</translation>
     </message>
 </context>
 <context>
     <name>messageBox</name>
     <message>
-        <location filename="../components/common/MessageBox.py" line="25"/>
+        <location filename="../components/common/MessageBox.py" line="26"/>
         <source>info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../components/common/MessageBox.py" line="28"/>
+        <location filename="../components/common/MessageBox.py" line="29"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
@@ -1457,7 +1535,7 @@
 <context>
     <name>notificationService</name>
     <message>
-        <location filename="../services/notificationService.py" line="48"/>
+        <location filename="../services/notificationService.py" line="46"/>
         <source>sendNotifError</source>
         <translation>Error when sending the notification</translation>
     </message>
@@ -1797,7 +1875,7 @@
         <translation>Relics Info</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="152"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="153"/>
         <source>unknownRelicTier</source>
         <translation>Unkown Relic Tier</translation>
     </message>
@@ -1993,7 +2071,7 @@
         <translation>Possible reward from the sorties</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="255"/>
+        <location filename="../utils/warframeUtils.py" line="249"/>
         <source>noReward</source>
         <translation>No Rewards Available</translation>
     </message>
@@ -2022,82 +2100,82 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="106"/>
+        <location filename="../components/common/SpecialAlert.py" line="103"/>
         <source>minutes</source>
         <translation>Minutes</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <location filename="../components/common/SpecialAlert.py" line="105"/>
         <source>waves</source>
         <translation>Waves</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="111"/>
+        <location filename="../components/common/SpecialAlert.py" line="108"/>
         <source>terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="113"/>
+        <location filename="../components/common/SpecialAlert.py" line="110"/>
         <source>terminals</source>
         <translation>Terminals</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="115"/>
+        <location filename="../components/common/SpecialAlert.py" line="112"/>
         <source>rounds</source>
         <translation>Rounds</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="119"/>
+        <location filename="../components/common/SpecialAlert.py" line="116"/>
         <source>pipe</source>
         <translation>Conduits</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="121"/>
+        <location filename="../components/common/SpecialAlert.py" line="118"/>
         <source>unkownWaveType</source>
         <translation>maxWaveNum not found for the mission type</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="54"/>
+        <location filename="../components/common/SpecialAlert.py" line="52"/>
         <source>requiredItem</source>
         <translation>Required Item</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="57"/>
+        <location filename="../components/common/SpecialAlert.py" line="55"/>
         <source>itemConsumed</source>
         <translation>Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="59"/>
+        <location filename="../components/common/SpecialAlert.py" line="57"/>
         <source>itemNotConsumed</source>
         <translation>Not Used</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="50"/>
+        <location filename="../components/common/SpecialAlert.py" line="48"/>
         <source>restriction</source>
         <translation>Restriction</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="67"/>
+        <location filename="../components/common/SpecialAlert.py" line="65"/>
         <source>leaderAllowed</source>
         <translation>Miniboss allowed</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="69"/>
+        <location filename="../components/common/SpecialAlert.py" line="67"/>
         <source>advancedSpawn</source>
         <translation>Advanced spawn</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="71"/>
+        <location filename="../components/common/SpecialAlert.py" line="69"/>
         <source>vipAgent</source>
         <translation>Extra special enemy</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="73"/>
+        <location filename="../components/common/SpecialAlert.py" line="71"/>
         <source>missionAura</source>
         <translation>Extra mission aura</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="75"/>
+        <location filename="../components/common/SpecialAlert.py" line="73"/>
         <source>fx</source>
         <translation>Mission FX</translation>
     </message>
@@ -2249,77 +2327,77 @@
 <context>
     <name>tabService</name>
     <message>
-        <location filename="../services/tabService.py" line="54"/>
+        <location filename="../services/tabService.py" line="53"/>
         <source>news</source>
         <translation>News</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="55"/>
+        <location filename="../services/tabService.py" line="54"/>
         <source>nightwave</source>
         <translation>Nightwave</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="56"/>
+        <location filename="../services/tabService.py" line="55"/>
         <source>events</source>
         <translation>Events</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="57"/>
+        <location filename="../services/tabService.py" line="56"/>
         <source>acolyte</source>
         <translation>acolytes</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="58"/>
+        <location filename="../services/tabService.py" line="57"/>
         <source>bounty</source>
         <translation>Bounties</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="59"/>
+        <location filename="../services/tabService.py" line="58"/>
         <source>invasion</source>
         <translation>Invasions</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="60"/>
+        <location filename="../services/tabService.py" line="59"/>
         <source>sortie</source>
         <translation>Sortie</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="61"/>
+        <location filename="../services/tabService.py" line="60"/>
         <source>syndicate</source>
         <translation>Syndycates</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="62"/>
+        <location filename="../services/tabService.py" line="61"/>
         <source>fissure</source>
         <translation>Void Fissure</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="63"/>
+        <location filename="../services/tabService.py" line="62"/>
         <source>baro</source>
         <translation>Baro Ki&apos;Teer</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="64"/>
+        <location filename="../services/tabService.py" line="63"/>
         <source>sales</source>
         <translation>Sales</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="65"/>
+        <location filename="../services/tabService.py" line="64"/>
         <source>pvp</source>
         <translation>PvP</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="66"/>
+        <location filename="../services/tabService.py" line="65"/>
         <source>other</source>
         <translation>Other</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="115"/>
+        <location filename="../services/tabService.py" line="114"/>
         <source>alertError</source>
         <translation>Error during reading file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/tabService.py" line="126"/>
+        <location filename="../services/tabService.py" line="125"/>
         <source>validationError</source>
         <translation>Errore in the validation of file allerte.json</translation>
     </message>
@@ -2327,27 +2405,27 @@
 <context>
     <name>timeUtils</name>
     <message>
-        <location filename="../utils/timeUtils.py" line="23"/>
+        <location filename="../utils/timeUtils.py" line="20"/>
         <source>Timed Out</source>
         <translation>Timed Out</translation>
     </message>
     <message>
-        <location filename="../utils/timeUtils.py" line="50"/>
+        <location filename="../utils/timeUtils.py" line="47"/>
         <source>Day</source>
         <translation>Day</translation>
     </message>
     <message>
-        <location filename="../utils/timeUtils.py" line="52"/>
+        <location filename="../utils/timeUtils.py" line="49"/>
         <source>Days</source>
         <translation>Days</translation>
     </message>
     <message>
-        <location filename="../utils/timeUtils.py" line="88"/>
+        <location filename="../utils/timeUtils.py" line="85"/>
         <source>error_get_cetus_time</source>
         <translation>Error during calculation of time for Cetus</translation>
     </message>
     <message>
-        <location filename="../utils/timeUtils.py" line="108"/>
+        <location filename="../utils/timeUtils.py" line="105"/>
         <source>error_get_fortuna_time</source>
         <translation>Error during calculation of time for Fortuna</translation>
     </message>
@@ -2439,7 +2517,7 @@
 <context>
     <name>updateProgramService</name>
     <message>
-        <location filename="../services/updateProgramService.py" line="19"/>
+        <location filename="../services/updateProgramService.py" line="21"/>
         <source>title</source>
         <translation>Program Updater</translation>
     </message>
@@ -2449,7 +2527,7 @@
         <translation>Error during the download of the new program</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="24"/>
+        <location filename="../services/updateProgramService.py" line="27"/>
         <source>updateFileTitle</source>
         <translation>Download Mandatory Files</translation>
     </message>
@@ -2515,22 +2593,22 @@
 <context>
     <name>updateService</name>
     <message>
-        <location filename="../services/updateService.py" line="74"/>
+        <location filename="../services/updateService.py" line="63"/>
         <source>saveError</source>
         <translation>Can&apos;t save file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/updateService.py" line="78"/>
+        <location filename="../services/updateService.py" line="67"/>
         <source>downloaded</source>
         <translation>downloaded</translation>
     </message>
     <message>
-        <location filename="../services/updateFileService.py" line="66"/>
+        <location filename="../services/updateFileService.py" line="65"/>
         <source>downloadFinished</source>
         <translation>Download Finished</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="41"/>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="43"/>
         <source>noConnection</source>
         <translation>No Connection available. Can&apos;t download required files</translation>
     </message>
@@ -2538,132 +2616,132 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="27"/>
+        <location filename="../utils/warframeUtils.py" line="28"/>
         <source>randomItem</source>
         <translation>Random item from</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="54"/>
+        <location filename="../utils/warframeUtils.py" line="55"/>
         <source>affinity</source>
         <translation>affinity</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="61"/>
+        <location filename="../utils/warframeUtils.py" line="62"/>
         <source>credits</source>
         <translation>credits</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="105"/>
+        <location filename="../utils/warframeUtils.py" line="106"/>
         <source>weaponPartsNotFound</source>
         <translation>Weapon Parts not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="129"/>
+        <location filename="../utils/warframeUtils.py" line="130"/>
         <source>weaponTypeNotFound</source>
         <translation>Weapon Type not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="138"/>
+        <location filename="../utils/warframeUtils.py" line="139"/>
         <source>operationTypeNotFound</source>
         <translation>Operation type not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="154"/>
+        <location filename="../utils/warframeUtils.py" line="155"/>
         <source>jsonFileNotFound</source>
         <translation>.json not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="166"/>
+        <location filename="../utils/warframeUtils.py" line="167"/>
         <source>noBountyReward</source>
         <translation>No Reward Available</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="190"/>
+        <location filename="../utils/warframeUtils.py" line="184"/>
         <source>bountyRewardNotFound</source>
         <translation>Bounty Reward not found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="253"/>
+        <location filename="../utils/warframeUtils.py" line="247"/>
         <source>sortieRewardReadingError</source>
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="542"/>
+        <location filename="../utils/warframeUtils.py" line="493"/>
         <source>profit</source>
         <translation>Profit</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="544"/>
+        <location filename="../utils/warframeUtils.py" line="495"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="433"/>
+        <location filename="../utils/warframeUtils.py" line="392"/>
         <source>errorDropRelic</source>
         <translation>Error during reading relic drop</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="438"/>
+        <location filename="../utils/warframeUtils.py" line="397"/>
         <source>relic</source>
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="446"/>
+        <location filename="../utils/warframeUtils.py" line="405"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="497"/>
+        <location filename="../utils/warframeUtils.py" line="456"/>
         <source>rotation</source>
         <translation>Rotation</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="377"/>
+        <location filename="../utils/warframeUtils.py" line="373"/>
         <source>rare</source>
         <translation>Rare</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="379"/>
+        <location filename="../utils/warframeUtils.py" line="375"/>
         <source>notCommon</source>
         <translation>Not Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="382"/>
+        <location filename="../utils/warframeUtils.py" line="377"/>
         <source>common</source>
         <translation>Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="511"/>
+        <location filename="../utils/warframeUtils.py" line="462"/>
         <source>primeVault</source>
         <translation>Relic in Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="511"/>
+        <location filename="../utils/warframeUtils.py" line="462"/>
         <source>relicDrop</source>
         <translation>No mission drops this relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="532"/>
+        <location filename="../utils/warframeUtils.py" line="483"/>
         <source>missionTypeNotFound</source>
         <translation>Mission Type Translation Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="463"/>
+        <location filename="../utils/warframeUtils.py" line="422"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="522"/>
+        <location filename="../utils/warframeUtils.py" line="473"/>
         <source>planetNotFound</source>
         <translation>Planet Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="729"/>
+        <location filename="../utils/warframeUtils.py" line="680"/>
         <source>primeNotFound</source>
         <translation>Prime Parts Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="497"/>
+        <location filename="../utils/warframeUtils.py" line="456"/>
         <source>noRotation</source>
         <translation>None</translation>
     </message>

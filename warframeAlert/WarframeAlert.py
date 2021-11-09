@@ -69,12 +69,8 @@ class MainWindow(QtWidgets.QMainWindow):
         # Create a status bar under the tabs
         self.statusBar()
 
-
-        #Crea il menu e le sue schede
-        #self.tab_menu = warframeClass.tab_menu()
-
-        #Crea la finestra delle opzioni
-        #gestore_opzioni.create_config_widget()
+        # Crea la finestra delle opzioni
+        # gestore_opzioni.create_config_widget()
 
         # Start the program service updater
         self.updateProgramService = UpdateProgramService()
