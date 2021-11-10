@@ -188,6 +188,7 @@ class Alert():
         self.AlertImg.set_image_dimension(80, 80, Qt.AspectRatioMode.KeepAspectRatio)
         if (not check_assets_file(get_last_item_with_backslash(img))):
             self.set_default_alert_image()
+            LogHandler.debug(translate("alert", "alertImgNotFound") + ": " + image_name)
         self.image = image_name
 
     def set_default_alert_image(self) -> None:

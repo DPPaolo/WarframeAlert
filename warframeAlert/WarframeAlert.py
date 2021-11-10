@@ -171,30 +171,24 @@ class MainWindow(QtWidgets.QMainWindow):
         #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())wea
         #     file.addAction(opzioni)
 
-        exit_menu = QtGui.QAction(translate("main", "exitMenu"), file,
-                                  shortcut="Ctrl+Q",
-                                  statusTip=translate("main", "exitMenuDesc"),
-                                  triggered=QtCore.QCoreApplication.quit
-                                  )
-
-        #exit_menu = QtGui.QAction(translate("main", "exitMenu"), file)
-        #exit_menu.setShortcut("Ctrl+Q")
-        #exit_menu.setStatusTip(translate("main", "exitMenuDesc"))
-        #exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
-
+        exit_menu = QtGui.QAction(translate("main", "exitMenu"), file)
+        exit_menu.setShortcut("Ctrl+Q")
+        exit_menu.setStatusTip(translate("main", "exitMenuDesc"))
+        exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
         file.addAction(exit_menu)
 
         # Data Menu
-        update_file = QtGui.QAction(translate("main", "updateFileMenu"), debug,
-                                    shortcut="Ctrl+U",
-                                    statusTip=translate("main", "updateFileMenuDesc"),
-                                    triggered=lambda: self.update_service.download_alert_file(True))
+
+        update_file = QtGui.QAction(translate("main", "updateFileMenu"), debug)
+        update_file.setShortcut("Ctrl+U")
+        update_file.setStatusTip(translate("main", "updateFileMenuDesc"))
+        update_file.triggered.connect(lambda: self.update_service.download_alert_file(True))
         debug.addAction(update_file)
 
-        update_only_file = QtGui.QAction(translate("main", "updateFilesMenu"), debug,
-                                         shortcut="Ctrl+T",
-                                         statusTip=translate("main", "updateFilesMenuDesc"),
-                                         triggered=lambda: self.update_file_service.download_all_file())
+        update_only_file = QtGui.QAction(translate("main", "updateFilesMenu"), debug)
+        update_only_file.setShortcut("Ctrl+T")
+        update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc"))
+        update_only_file.triggered.connect(lambda: self.update_file_service.download_all_file())
         debug.addAction(update_only_file)
         #
         #         parse_file = QtWidgets.QAction("Parserizza il File", debug)
@@ -204,19 +198,34 @@ class MainWindow(QtWidgets.QMainWindow):
         #         debug.addAction(parse_file)
         #       togliere non serve mappa stellare
 
-        # Tools Menu
-        read_log = QtGui.QAction(translate("main", "readEELog"), tool,
-                                 shortcut="Ctrl+E",
-                                 statusTip=translate("main", "toolHelpMenuEELog"),
-                                 triggered=self.menuService.open_window_read_warframe_log)
-        tool.addAction(read_log)
-
-        # Info Menu
-        copyright_info = QtGui.QAction(translate("main", "infoHelpMenu"), info,
-                                       shortcut="Ctrl+I",
-                                       statusTip=translate("main", "infoHelpMenuTooltip"),
-                                       triggered=lambda: self.menuService.show_info)
-        info.addAction(copyright_info)
+    #     #Menu Strumenti
+    #     self.MSTool = QtWidgets.QAction("Mappa Stellare", tool)
+    #     self.MSTool.setShortcut("Ctrl+M")
+    #     self.MSTool.setStatusTip("Consente di Vedere Tutti i Nodi della Mappa Stellare")
+    #     self.MSTool.triggered.connect(self.tab_menu.open_window_mappa_stellare)
+    #     tool.addAction(self.MSTool)
+    #
+    #     self.MDTool = QtWidgets.QAction("Drop Missioni", tool)
+    #     self.MDTool.setShortcut("Ctrl+S")
+    #     self.MDTool.setStatusTip("Consente di Vedere i Drop di ogni Missione")
+    #     self.MDTool.triggered.connect(self.tab_menu.open_window_mission_deck)
+    #     tool.addAction(self.MDTool)
+    #
+    #     EELog = QtWidgets.QAction("Leggi EE.log", tool)
+    #     EELog.setShortcut("Ctrl+E")
+    #     EELog.setStatusTip("Apre la finestra per la lettura dell'EE.log")
+    #     EELog.triggered.connect(self.tab_menu.open_window_EELog)
+    #     tool.addAction(EELog)
+    #
+    #     warframeData.MSTool = self.MSTool
+    #     warframeData.MDTool = self.MDTool
+    #
+    #     #Menu Aiuto
+    #     info = QtWidgets.QAction("Informazioni", aiuto)
+    #     info.setShortcut("Ctrl+I")
+    #     info.setStatusTip("Informazioni sul Programma")
+    #     info.triggered.connect(self.tab_menu.info)
+    #     aiuto.addAction(info)
 
     # def open_old_allert(self):
     #     path = get_cur_dir()
