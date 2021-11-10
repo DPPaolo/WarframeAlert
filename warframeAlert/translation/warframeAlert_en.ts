@@ -124,6 +124,11 @@
         <source>extra_enemy_type</source>
         <translation>Type of extra enemies that you encounter</translation>
     </message>
+    <message>
+        <location filename="../components/common/Alert.py" line="191"/>
+        <source>alertImgNotFound</source>
+        <translation>Alert Image not Found</translation>
+    </message>
 </context>
 <context>
     <name>alertWidget</name>
@@ -460,32 +465,32 @@
         <translation>Select EE.log file</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="105"/>
+        <location filename="../components/widget/EELogWidget.py" line="106"/>
         <source>errorTitle</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="108"/>
+        <location filename="../components/widget/EELogWidget.py" line="109"/>
         <source>errorFileNotFound</source>
         <translation>EE.log not found</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="105"/>
+        <location filename="../components/widget/EELogWidget.py" line="106"/>
         <source>errorCheckPath</source>
         <translation>Check the correct path</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="128"/>
+        <location filename="../components/widget/EELogWidget.py" line="129"/>
         <source>errorTitleReadError</source>
         <translation>Errore reading file</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="131"/>
+        <location filename="../components/widget/EELogWidget.py" line="133"/>
         <source>errorReadErrorLine</source>
         <translation>Error reading EE.log at line</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="131"/>
+        <location filename="../components/widget/EELogWidget.py" line="133"/>
         <source>errorLineDesc</source>
         <translation>with error</translation>
     </message>
@@ -1317,42 +1322,42 @@
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="181"/>
+        <location filename="../WarframeAlert.py" line="188"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="181"/>
+        <location filename="../WarframeAlert.py" line="188"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="187"/>
+        <location filename="../WarframeAlert.py" line="194"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="187"/>
+        <location filename="../WarframeAlert.py" line="194"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="208"/>
+        <location filename="../WarframeAlert.py" line="215"/>
         <source>infoHelpMenu</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="208"/>
+        <location filename="../WarframeAlert.py" line="215"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Program Information</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="201"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>readEELog</source>
         <translation>Inspect EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="201"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>toolHelpMenuEELog</source>
         <translation>Open the form to inspect EE.log file</translation>
     </message>
