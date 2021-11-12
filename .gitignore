@@ -134,3 +134,5 @@ warframeAlert/images/
 warframeAlert/data/
 warframeAlert/qt.conf
 warframeAlert/config.ini
+warframeAlert/test/data/
+warframeAlert/test/images/

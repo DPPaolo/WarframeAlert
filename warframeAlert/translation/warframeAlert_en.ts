@@ -1372,7 +1372,7 @@
     <message>
         <location filename="../services/menuService.py" line="9"/>
         <source>createdBy</source>
-        <translation>App create by</translation>
+        <translation>App created by</translation>
     </message>
 </context>
 <context>

@@ -73,6 +73,7 @@ class MainWindow(QtWidgets.QMainWindow):
         # Create a status bar under the tabs
         self.statusBar()
 
+        # TODO: add config widget
         # Crea la finestra delle opzioni
         # gestore_opzioni.create_config_widget()
 
@@ -198,34 +199,19 @@ class MainWindow(QtWidgets.QMainWindow):
         #         debug.addAction(parse_file)
         #       togliere non serve mappa stellare
 
-    #     #Menu Strumenti
-    #     self.MSTool = QtWidgets.QAction("Mappa Stellare", tool)
-    #     self.MSTool.setShortcut("Ctrl+M")
-    #     self.MSTool.setStatusTip("Consente di Vedere Tutti i Nodi della Mappa Stellare")
-    #     self.MSTool.triggered.connect(self.tab_menu.open_window_mappa_stellare)
-    #     tool.addAction(self.MSTool)
-    #
-    #     self.MDTool = QtWidgets.QAction("Drop Missioni", tool)
-    #     self.MDTool.setShortcut("Ctrl+S")
-    #     self.MDTool.setStatusTip("Consente di Vedere i Drop di ogni Missione")
-    #     self.MDTool.triggered.connect(self.tab_menu.open_window_mission_deck)
-    #     tool.addAction(self.MDTool)
-    #
-    #     EELog = QtWidgets.QAction("Leggi EE.log", tool)
-    #     EELog.setShortcut("Ctrl+E")
-    #     EELog.setStatusTip("Apre la finestra per la lettura dell'EE.log")
-    #     EELog.triggered.connect(self.tab_menu.open_window_EELog)
-    #     tool.addAction(EELog)
-    #
-    #     warframeData.MSTool = self.MSTool
-    #     warframeData.MDTool = self.MDTool
-    #
-    #     #Menu Aiuto
-    #     info = QtWidgets.QAction("Informazioni", aiuto)
-    #     info.setShortcut("Ctrl+I")
-    #     info.setStatusTip("Informazioni sul Programma")
-    #     info.triggered.connect(self.tab_menu.info)
-    #     aiuto.addAction(info)
+        # Tools Menu
+        read_log = QtGui.QAction(translate("main", "readEELog"), tool)
+        read_log.setShortcut("Ctrl+E")
+        read_log.setStatusTip(translate("main", "toolHelpMenuEELog"))
+        read_log.triggered.connect(self.menuService.open_window_read_warframe_log)
+        tool.addAction(read_log)
+
+        # Info Menu
+        copyright_info = QtGui.QAction(translate("main", "infoHelpMenu"), info)
+        copyright_info.setShortcut("Ctrl+I")
+        copyright_info.setStatusTip(translate("main", "infoHelpMenuTooltip"))
+        copyright_info.triggered.connect(self.menuService.show_info)
+        info.addAction(copyright_info)
 
     # def open_old_allert(self):
     #     path = get_cur_dir()
