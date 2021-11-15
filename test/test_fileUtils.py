@@ -1,31 +1,29 @@
 # coding=utf-8
-import unittest
-
 from warframeAlert.utils.fileUtils import check_file, check_folder
 
 
-class TestFileUtils(unittest.TestCase):
+class TestFileUtils():
 
-    def test_check_file_not_exist(self):
+    def test_check_file_not_exist(self) -> None:
         exist = check_file("test2_commonUtils.py")
-        self.assertFalse(exist)
+        assert not exist
 
-    def test_check_file_exist(self):
+    def test_check_file_exist(self) -> None:
         exist = check_file("test_commonUtils.py")
-        self.assertTrue(exist)
+        assert exist
 
-    def test_check_file_data_not_exist(self):
+    def test_check_file_data_not_exist(self) -> None:
         exist = check_file("test2_commonUtils.py")
-        self.assertFalse(exist)
+        assert not exist
 
-    def test_check_file_data_exist(self):
+    def test_check_file_data_exist(self) -> None:
         exist = check_file("Language.json")
-        self.assertTrue(exist)
+        assert exist
 
-    def test_check_folder_not_exist(self):
+    def test_check_folder_not_exist(self) -> None:
         exist = check_folder("datas")
-        self.assertFalse(exist)
+        assert not exist
 
-    def test_check_folder_exist(self):
+    def test_check_folder_exist(self) -> None:
         exist = check_folder("data")
-        self.assertTrue(exist)
+        assert exist

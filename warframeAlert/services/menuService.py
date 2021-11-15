@@ -6,7 +6,7 @@ from warframeAlert.services.translationService import translate
 
 
 class MenuService():
-    COPYRIGHT = translate("menuService", "createdBy") + "Onniscente\n\n" + \
+    COPYRIGHT = translate("menuService", "createdBy") + " Onniscente\n\n" + \
                 "Warframe's Content and Materials are Trademarks and Copyrights of Digital Extremes."
 
     def __init__(self) -> None:

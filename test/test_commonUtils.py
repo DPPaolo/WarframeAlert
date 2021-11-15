@@ -1,37 +1,35 @@
 # coding=utf-8
-import unittest
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, bool_to_yes_no, bool_to_int
 
 
-class TestCommonUtils(unittest.TestCase):
+class TestCommonUtils():
 
-    def test_get_last_item_with_backslash(self):
+    def test_get_last_item_with_backslash(self) -> None:
         text = "/Lotus/Types/Enemies/Grineer/Vip/CaptainVorBossAgent"
         res = get_last_item_with_backslash(text)
-        self.assertEqual("CaptainVorBossAgent", res)
+        assert "CaptainVorBossAgent" == res
 
-    def test_get_last_item_with_backslash_with_multiple_slash(self):
+    def test_get_last_item_with_backslash_with_multiple_slash(self) -> None:
         text = "/Lotus/Types/Enemies/Grineer/Vip//CaptainVorBossAgent"
         res = get_last_item_with_backslash(text)
-        self.assertEqual("CaptainVorBossAgent", res)
+        assert "CaptainVorBossAgent" == res
 
-    def test_bool_to_yes_no_True(self):
+    def test_bool_to_yes_no_with_true(self) -> None:
         res = bool_to_yes_no(True)
-        self.assertEqual("yes", res)
+        assert "yes" == res
 
-    def test_bool_to_yes_no_false(self):
+    def test_bool_to_yes_no_with_false(self) -> None:
         res = bool_to_yes_no(False)
-        self.assertEqual("no", res)
+        assert "no" == res
 
-    def test_bool_to_yes_no_string(self):
-        res = bool_to_yes_no("true")
-        self.assertEqual("yes", res)
+    def test_bool_to_yes_no_with_int(self) -> None:
+        res = bool_to_yes_no(1)
+        assert "yes" == res
 
-    def test_bool_to_int_true(self):
+    def test_bool_to_int_true(self) -> None:
         res = bool_to_int(True)
-        self.assertEqual(1, res)
+        assert 1 == res
 
-    def test_bool_to_int_false(self):
+    def test_bool_to_int_false(self) -> None:
         res = bool_to_int(False)
-        self.assertEqual(0, res)
-
+        assert 0 == res

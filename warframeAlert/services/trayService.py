@@ -33,7 +33,7 @@ class TrayService():
         self.tray_icon.activated[QtWidgets.QSystemTrayIcon.ActivationReason].connect(self.show_tray)
 
     def show_tray(self, event: QtWidgets.QSystemTrayIcon.ActivationReason) -> None:
-        if (event == QtWidgets.QSystemTrayIcon.DoubleClick):
+        if (event == QtWidgets.QSystemTrayIcon.ActivationReason.DoubleClick):
             self.app.show()
 
     def get_tray_icon(self) -> QSystemTrayIcon:

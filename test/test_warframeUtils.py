@@ -1,11 +1,10 @@
 # coding=utf-8
-import unittest
-
+from warframeAlert.constants.warframeTypes import MissionReward
 from warframeAlert.utils.warframeUtils import get_image_path_from_name, get_weapon_part, get_weapon_type, \
     parse_reward, get_operation_type, get_bounty_reward
 
 
-class TestWarframeUtils(unittest.TestCase):
+class TestWarframeUtils():
     IMAGE_NAME = "Stock"
     IMAGE_NAME_FOUND = "/Lotus/Interface/Icons/Store/GenericGunStock.png"
     IMAGE_NAME_UNKNOWN = "Sword"
@@ -18,20 +17,22 @@ class TestWarframeUtils(unittest.TestCase):
     WEAPON_TYPE_FOUND = "Karak Wraith"
     WEAPON_TYPE_UNKOWN = "/Lotus/Interface/Icons/Store/GlaxionVandal.png"
     WEAPON_TYPE_NOT_FOUND = "Unknown"
-    REWARDS_COUNTED_ITEMS_ONLY = {'countedItems': [{'ItemType': '/Lotus/Types/Items/Research/EnergyComponent',
-                                                    'ItemCount': 3}]}
-    REWARDS_CREDITS_ONLY = {'credits': 3000}
-    REWARDS_ITEMS_ONLY = {'items': ['/Lotus/StoreItems/Weapons/Tenno/Pistols/DexFuris/DexFuris']}
-    REWARDS_ALMOUST_COMPLETE = {'credits': 0,
-                                'xp': 0,
-                                'items': ['/Lotus/StoreItems/Upgrades/Mods/DualSource/Shotgun/ShotgunMedicMod',
-                                          '/Lotus/StoreItems/Upgrades/Mods/DualSource/Rifle/SerratedRushMod'],
-                                'countedItems': []}
-    REWARDS_COMPLETE = {
-                    "credits": 0,
-                    "xp": 0,
-                    "items": ["/Lotus/StoreItems/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG"],
-                    "countedItems": [{"ItemType": "/Lotus/Types/Items/Research/EnergyComponent", "ItemCount": 3}]}
+    REWARDS_COUNTED_ITEMS_ONLY: MissionReward = {'countedItems': [
+                                                    {'ItemType': '/Lotus/Types/Items/Research/EnergyComponent',
+                                                     'ItemCount': 3}]}
+    REWARDS_CREDITS_ONLY: MissionReward = {'credits': 3000}
+    REWARDS_ITEMS_ONLY: MissionReward = {'items': ['/Lotus/StoreItems/Weapons/Tenno/Pistols/DexFuris/DexFuris']}
+    REWARDS_ALMOUST_COMPLETE: MissionReward = {'credits': 0,
+                                               'xp': 0,
+                                               'items': [
+                                                   '/Lotus/StoreItems/Upgrades/Mods/DualSource/Shotgun/ShotgunMedicMod',
+                                                   '/Lotus/StoreItems/Upgrades/Mods/DualSource/Rifle/SerratedRushMod'],
+                                               'countedItems': []}
+    REWARDS_COMPLETE: MissionReward = {
+        "credits": 0,
+        "xp": 0,
+        "items": ["/Lotus/StoreItems/Weapons/Corpus/LongGuns/CrpBFG/Vandal/VandalCrpBFG"],
+        "countedItems": [{"ItemType": "/Lotus/Types/Items/Research/EnergyComponent", "ItemCount": 3}]}
     REWARDS_COUNTED_ITEMS_ONLY_TRANSLATED = "3 x Fieldron"
     REWARDS_CREDITS_ONLY_TRANSLATED = "3000 credits"
     REWARDS_ITEMS_ONLY_TRANSLATED = "Dex Furis"
@@ -40,62 +41,62 @@ class TestWarframeUtils(unittest.TestCase):
     OPERATION_TYPE = "MULTIPLY"
     OPERATION_TYPE_UNKNOWN = "ADD"
 
-    def test_get_operation_type(self):
+    def test_get_operation_type(self) -> None:
         res = get_operation_type(self.OPERATION_TYPE)
-        self.assertEqual(" x ", res)
+        assert " x " == res
 
-    def test_get_operation_type_UNKOWN(self):
+    def test_get_operation_type_unknown(self) -> None:
         res = get_operation_type(self.OPERATION_TYPE_UNKNOWN)
-        self.assertEqual(self.OPERATION_TYPE_UNKNOWN, res)
+        assert self.OPERATION_TYPE_UNKNOWN == res
 
-    def test_parse_reward_only_counted_complete(self):
+    def test_parse_reward_only_counted_complete(self) -> None:
         res = parse_reward(self.REWARDS_COUNTED_ITEMS_ONLY)
-        self.assertEqual(self.REWARDS_COUNTED_ITEMS_ONLY_TRANSLATED, res)
+        assert self.REWARDS_COUNTED_ITEMS_ONLY_TRANSLATED == res
 
-    def test_parse_reward_only_credits(self):
+    def test_parse_reward_only_credits(self) -> None:
         res = parse_reward(self.REWARDS_CREDITS_ONLY)
-        self.assertEqual(self.REWARDS_CREDITS_ONLY_TRANSLATED, res)
+        assert self.REWARDS_CREDITS_ONLY_TRANSLATED == res
 
-    def test_parse_reward_only_items(self):
+    def test_parse_reward_only_items(self) -> None:
         res = parse_reward(self.REWARDS_ITEMS_ONLY)
-        self.assertEqual(self.REWARDS_ITEMS_ONLY_TRANSLATED, res)
+        assert self.REWARDS_ITEMS_ONLY_TRANSLATED == res
 
-    def test_parse_reward_almoust_complete(self):
+    def test_parse_reward_almoust_complete(self) -> None:
         res = parse_reward(self.REWARDS_ALMOUST_COMPLETE)
-        self.assertEqual(self.REWARDS_ALMOUST_COMPLETE_TRANSLATED, res)
+        assert self.REWARDS_ALMOUST_COMPLETE_TRANSLATED == res
 
-    def test_parse_reward_complete(self):
+    def test_parse_reward_complete(self) -> None:
         res = parse_reward(self.REWARDS_COMPLETE)
-        self.assertEqual(self.REWARDS_COMPLETE_TRANSLATED, res)
+        assert self.REWARDS_COMPLETE_TRANSLATED == res
 
-    def test_get_image_path_from_name_found(self):
+    def test_get_image_path_from_name_found(self) -> None:
         res = get_image_path_from_name(self.IMAGE_NAME)
-        self.assertEqual(self.IMAGE_NAME_FOUND, res)
+        assert self.IMAGE_NAME_FOUND == res
 
-    def test_get_image_path_from_name_not_found(self):
+    def test_get_image_path_from_name_not_found(self) -> None:
         res = get_image_path_from_name(self.IMAGE_NAME_UNKNOWN)
-        self.assertEqual(self.IMAGE_NAME_NOT_FOUND, res)
+        assert self.IMAGE_NAME_NOT_FOUND == res
 
-    def test_get_weapon_part(self):
+    def test_get_weapon_part(self) -> None:
         res = get_weapon_part(self.WEAPON_PART)
-        self.assertEqual(self.WEAPON_PART_FOUND, res)
+        assert self.WEAPON_PART_FOUND == res
 
-    def test_get_weapon_part_not_found(self):
+    def test_get_weapon_part_not_found(self) -> None:
         res = get_weapon_part(self.WEAPON_PART_UNKOWN)
-        self.assertEqual(self.WEAPON_PART_NOT_FOUND, res)
+        assert self.WEAPON_PART_NOT_FOUND == res
 
-    def test_get_weapon_part_not_weapon(self):
+    def test_get_weapon_part_not_weapon(self) -> None:
         res = get_weapon_part(self.IMAGE_NAME)
-        self.assertEqual("", res)
+        assert "" == res
 
-    def test_get_weapon_type(self):
+    def test_get_weapon_type(self) -> None:
         res = get_weapon_type(self.WEAPON_TYPE)
-        self.assertEqual(self.WEAPON_TYPE_FOUND, res)
+        assert self.WEAPON_TYPE_FOUND == res
 
-    def test_get_weapon_type_not_found(self):
+    def test_get_weapon_type_not_found(self) -> None:
         res = get_weapon_type(self.WEAPON_TYPE_UNKOWN)
-        self.assertEqual(self.WEAPON_TYPE_NOT_FOUND, res)
+        assert self.WEAPON_TYPE_NOT_FOUND == res
 
-    def test_get_bounty_reward(self):
+    def test_get_bounty_reward(self) -> None:
         res = get_bounty_reward("/Lotus/Types/Game/MissionDecks/EidolonJobMissionRewards/TierATableBRewards", "cetus")
-        self.assertEqual(len(res), 3)
+        assert 3 == len(res)
