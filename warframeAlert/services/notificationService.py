@@ -3,6 +3,7 @@ import time
 from typing import Optional, Tuple, List
 
 from PyQt6 import QtCore, QtWidgets, QtGui
+from PyQt6.QtGui import QPixmap
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -22,7 +23,7 @@ class NotificationService(QtCore.QThread):
     def send_notification(cls,
                           title: str,
                           message: str,
-                          icon: QtWidgets.QSystemTrayIcon | None) -> None:
+                          icon: QtWidgets.QSystemTrayIcon | QPixmap | None) -> None:
         if (not OptionsHandler.is_during_init() and OptionsHandler.get_option("Update/Notify")):
             cls.notif_queue.append((title, message, icon))
 

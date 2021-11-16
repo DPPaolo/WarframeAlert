@@ -7,7 +7,7 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.services.menuService import MenuService
+from warframeAlert.services.menuService import MenuService, open_old_allert
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -160,12 +160,12 @@ class MainWindow(QtWidgets.QMainWindow):
         info = self.navBarMenu.addMenu('&' + translate("main", "helpMenu"))
 
         # Files Menu
-        #     open_alert = QtWidgets.QAction("Apri...", file)
-        #     open_alert.setShortcut("Ctrl+A")
-        #     open_alert.setStatusTip("Apri un file json contenente dati di allerte precedenti")
-        #     open_alert.triggered.connect(self.open_old_allert)
-        #     file.addAction(open_alert)
-        #
+        open_alert = QtGui.QAction(translate("main", "openOldFile") + "...", file)
+        open_alert.setShortcut("Ctrl+O")
+        open_alert.setStatusTip(translate("main", "openOldFileTip"))
+        open_alert.triggered.connect(lambda: open_old_allert(self.tabService))
+        file.addAction(open_alert)
+
         #     opzioni = QtWidgets.QAction("Opzioni", file)
         #     opzioni.setShortcut("Ctrl+O")
         #     opzioni.setStatusTip("Opzioni dell'Applicazione")
@@ -179,7 +179,6 @@ class MainWindow(QtWidgets.QMainWindow):
         file.addAction(exit_menu)
 
         # Data Menu
-
         update_file = QtGui.QAction(translate("main", "updateFileMenu"), debug)
         update_file.setShortcut("Ctrl+U")
         update_file.setStatusTip(translate("main", "updateFileMenuDesc"))
@@ -197,7 +196,6 @@ class MainWindow(QtWidgets.QMainWindow):
         #         parse_file.setStatusTip("Traduce le Allerte a Schermo")
         #         parse_file.triggered.connect(lambda: self.update(False))
         #         debug.addAction(parse_file)
-        #       togliere non serve mappa stellare
 
         # Tools Menu
         read_log = QtGui.QAction(translate("main", "readEELog"), tool)
@@ -212,12 +210,6 @@ class MainWindow(QtWidgets.QMainWindow):
         copyright_info.setStatusTip(translate("main", "infoHelpMenuTooltip"))
         copyright_info.triggered.connect(self.menuService.show_info)
         info.addAction(copyright_info)
-
-    # def open_old_allert(self):
-    #     path = get_cur_dir()
-    #     path = QtWidgets.QFileDialog.getOpenFileName(self, "Seleziona allerta precedente", path, "JSON (*.json)")
-    #     if (path[0]):
-    #         self.update(path[0])
 
 
 app = QtWidgets.QApplication(sys.argv)

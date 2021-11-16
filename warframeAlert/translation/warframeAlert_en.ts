@@ -1272,107 +1272,122 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="109"/>
+        <location filename="../WarframeAlert.py" line="110"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="123"/>
+        <location filename="../WarframeAlert.py" line="124"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="123"/>
+        <location filename="../WarframeAlert.py" line="124"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="175"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="177"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="109"/>
+        <location filename="../WarframeAlert.py" line="110"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="156"/>
+        <location filename="../WarframeAlert.py" line="157"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="157"/>
+        <location filename="../WarframeAlert.py" line="158"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="158"/>
+        <location filename="../WarframeAlert.py" line="159"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="159"/>
+        <location filename="../WarframeAlert.py" line="160"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="188"/>
+        <location filename="../WarframeAlert.py" line="182"/>
         <source>updateFileMenu</source>
         <translation>Update alert file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="188"/>
+        <location filename="../WarframeAlert.py" line="184"/>
         <source>updateFileMenuDesc</source>
         <translation>Update alets file only to update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="194"/>
+        <location filename="../WarframeAlert.py" line="188"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="194"/>
+        <location filename="../WarframeAlert.py" line="190"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="215"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>infoHelpMenu</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="215"/>
+        <location filename="../WarframeAlert.py" line="210"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Program Information</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="208"/>
+        <location filename="../WarframeAlert.py" line="201"/>
         <source>readEELog</source>
         <translation>Inspect EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="208"/>
+        <location filename="../WarframeAlert.py" line="203"/>
         <source>toolHelpMenuEELog</source>
         <translation>Open the form to inspect EE.log file</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="165"/>
+        <source>openOldFileTip</source>
+        <translation>Open a json file with old alert data</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="163"/>
+        <source>openOldFile</source>
+        <translation>Open</translation>
     </message>
 </context>
 <context>
     <name>menuService</name>
     <message>
-        <location filename="../services/menuService.py" line="16"/>
+        <location filename="../services/menuService.py" line="19"/>
         <source>infoTitle</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../services/menuService.py" line="9"/>
+        <location filename="../services/menuService.py" line="12"/>
         <source>createdBy</source>
         <translation>App created by</translation>
+    </message>
+    <message>
+        <location filename="../services/menuService.py" line="26"/>
+        <source>selectAlertFile</source>
+        <translation>Select alert file</translation>
     </message>
 </context>
 <context>
