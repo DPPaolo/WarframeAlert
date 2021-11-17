@@ -27,12 +27,13 @@ def check_json_data(json_data: JsonData) -> None:
     validate_persistent_enemies(json_data['PersistentEnemies'])
     validate_prime_access_availabilities(json_data['PrimeAccessAvailability'])
     validate_prime_vault_availabilities(json_data['PrimeVaultAvailabilities'])
+    validate_prime_vault_traders(json_data['PrimeVaultTraders'])
     validate_invasion_project(json_data['ProjectPct'])
     if ('SeasonInfo' in json_data):
         validate_nightwave(json_data['SeasonInfo'])
     validate_sortie(json_data['Sorties'])
     validate_syndicate(json_data['SyndicateMissions'])
-    validate_twich_promos(json_data['TwitchPromos'])
+    validate_twitch_promos(json_data['TwitchPromos'])
     validate_void_traders(json_data['VoidTraders'])
     validate_void_storm(json_data['VoidStorms'])
     validate_version(json_data['Version'])
@@ -100,6 +101,10 @@ def validate_node_overrides(json_data: NodeOverrides) -> None:
     validate(instance={'NodeOverrides': json_data}, schema=node_overrides_schema)
 
 
+def validate_prime_vault_traders(json_data: PVPActiveTournaments) -> None:
+    validate(instance={'PrimeVaultTraders': json_data}, schema=prime_vault_traders)
+
+
 def validate_pvp_tournament(json_data: PVPActiveTournaments) -> None:
     validate(instance={'PVPActiveTournaments': json_data}, schema=pvp_tournament_schema)
 
@@ -140,7 +145,7 @@ def validate_syndicate(json_data: SyndicateMissions) -> None:
     validate(instance={'SyndicateMissions': json_data}, schema=syndicate_schema)
 
 
-def validate_twich_promos(json_data: TwitchPromos) -> None:
+def validate_twitch_promos(json_data: TwitchPromos) -> None:
     validate(instance={'TwitchPromos': json_data}, schema=twitch_promos_schema)
 
 

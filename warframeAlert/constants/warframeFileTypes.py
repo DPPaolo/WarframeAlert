@@ -171,7 +171,7 @@ class ModBySourceFileModsData(TypedDict):
 class ModBySourceFileData(TypedDict):
     _id: str
     enemyName: str
-    ememyModDropChance: str
+    enemyModDropChance: str
     enemyModDropChance: str
     mods: List[ModBySourceFileModsData]
 

@@ -44,7 +44,7 @@ class TabService(QtCore.QObject):
         self.fissure_tab: FissureWidgetTab = FissureWidgetTab()
         self.baro_tab: BaroWidgetTab = BaroWidgetTab()
         self.pvp_tab: PvPWidgetTab = PvPWidgetTab()
-        self.accolyte_tab: AcolyteWidgetTab = AcolyteWidgetTab()
+        self.acolyte_tab: AcolyteWidgetTab = AcolyteWidgetTab()
         self.sales_tab: SalesWidgetTab = SalesWidgetTab()
         self.other_tab: OtherWidgetTab = OtherWidgetTab()
 
@@ -53,7 +53,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(0, self.news_tab.get_widget(), translate("tabService", "news"))
         self.mainTabber.insertTab(1, self.nightwave_tab.get_widget(), translate("tabService", "nightwave"))
         self.mainTabber.insertTab(2, self.event_tab.get_widget(), translate("tabService", "events"))
-        self.mainTabber.insertTab(3, self.accolyte_tab.get_widget(), translate("tabService", "acolyte"))
+        self.mainTabber.insertTab(3, self.acolyte_tab.get_widget(), translate("tabService", "acolyte"))
         self.mainTabber.insertTab(4, self.bounty_tab.get_widget(), translate("tabService", "bounty"))
         self.mainTabber.insertTab(5, self.invasion_tab.get_widget(), translate("tabService", "invasion"))
         self.mainTabber.insertTab(6, self.sortie_tab.get_widget(), translate("tabService", "sortie"))
@@ -65,7 +65,7 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
 
         n_event: int = self.event_tab.get_length()
-        n_acc: int = self.accolyte_tab.get_length()
+        n_acc: int = self.acolyte_tab.get_length()
 
         if (not OptionsHandler.get_option("Tab/News") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.news_tab.get_widget()))
@@ -74,7 +74,7 @@ class TabService(QtCore.QObject):
         if (not (n_event > 0) or not OptionsHandler.get_option("Tab/TactAll") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.event_tab.get_widget()))
         if (not (n_acc > 0) or not OptionsHandler.get_option("Tab/Acolyte") == 1):
-            self.mainTabber.removeTab(self.mainTabber.indexOf(self.accolyte_tab.get_widget()))
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.acolyte_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Cetus") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.bounty_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Invasion") == 1):
@@ -150,7 +150,7 @@ class TabService(QtCore.QObject):
         self.pvp_tab.update_pvp_tournament(json_data['PVPActiveTournaments'])
         self.pvp_tab.update_pvp_alternative_mission(json_data['PVPAlternativeModes'])
         self.pvp_tab.update_pvp_mission(json_data['PVPChallengeInstances'])
-        self.accolyte_tab.update_acolyte(json_data['PersistentEnemies'])
+        self.acolyte_tab.update_acolyte(json_data['PersistentEnemies'])
         self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'])
         self.invasion_tab.update_invasion_project(json_data['ProjectPct'])
         if ('SeasonInfo' in json_data):

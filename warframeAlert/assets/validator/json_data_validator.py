@@ -31,7 +31,9 @@ all_json_schema = {
                 "PVPChallengeInstances": {"type": "array"},
                 "PersistentEnemies": {"type": "array"},
                 "PrimeAccessAvailability": {"type": "object"},
+                "PrimeTokenAvailability": {"type": "boolean"},
                 "PrimeVaultAvailabilities": {"type": "array"},
+                "PrimeVaultTraders": {"type": "array"},
                 "ProjectPct": {"type": "array"},
                 "SeasonInfo": {"type": "object"},
                 "Sorties": {"type": "array"},
@@ -56,6 +58,107 @@ all_json_schema = {
         },
     },
 }
+
+prime_vault_traders = {
+    "type": "object",
+    "properties": {
+        "PrimeVaultTraders": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/primeVaultTraders"},
+        }
+    },
+    "required": ["PrimeVaultTraders"],
+    "definitions": {
+        "primeVaultTraders": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "InitialStartDate": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Completed": {"type": "boolean"},
+                "Node": {"type": "string"},
+                "Manifest": {"type": "array",
+                             "items": {
+                                 "type": "object",
+                                 "additionalProperties": False,
+                                 "properties": {
+                                     "ItemType": {"type": "string"},
+                                     "RegularPrice": {"type": "integer"},
+                                     "PrimePrice": {"type": "integer"},
+                                 }
+                             }},
+                "ScheduleInfo": {"type": "array",
+                                 "items": {
+                                     "type": "object",
+                                     "additionalProperties": False,
+                                     "properties": {
+                                         "Expiry": {
+                                             "type": "object",
+                                             "additionalProperties": False,
+                                             "properties": {
+                                                 "$date": {"type": "object"},
+                                                 "items": {
+                                                     "type": "object",
+                                                     "properties": {
+                                                         "$numberLong": {"type": "integer"}
+                                                     }
+                                                 }
+                                             }
+                                         },
+                                         "FeaturedItem": {"type": "string"},
+                                     }
+                                 }},
+            },
+            "required": ["_id", "Activation", "Expiry", "InitialStartDate", "Completed", "Node",
+                         "Manifest", "ScheduleInfo"],
+        }
+    }
+}
+
 
 pvp_tournament_schema = {
     "type": "object",

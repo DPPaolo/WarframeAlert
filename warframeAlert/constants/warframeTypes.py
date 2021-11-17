@@ -413,6 +413,33 @@ PrimeVaultAvailabilities = List[bool]
 ProjectPcts = List[float]
 
 
+class PrimeVaultManifestInfo(TypedDict, total=False):
+    ItemType: str
+    RegularPrice: int
+    PrimePrice: int
+
+
+class PrimeVaultScheduleInfo(TypedDict, total=False):
+    Expiry: DateType
+    FeaturedItem: str
+
+
+class PrimeVaultTradersData(TypedDict, total=False):
+    _id: IdType
+    Activation: DateType
+    Expiry: DateType
+    InitialStartDate: DateType
+    Completed: bool
+    Node: str
+    Manifest: List[PrimeVaultManifestInfo]
+    ScheduleInfo: List[PrimeVaultScheduleInfo]
+    Params: str
+    Phase: int
+
+
+PrimeVaultTraders = List[PrimeVaultTradersData]
+
+
 class NightwaweChallenge(TypedDict):
     _id: IdType
     Activation: DateType
@@ -533,7 +560,9 @@ class JsonData(TypedDict, total=False):
     PVPChallengeInstances: PVPChallengeInstances
     PersistentEnemies: PersistentEnemies
     PrimeAccessAvailability: PrimeAccessAvailability
+    PrimeTokenAvailability: bool
     PrimeVaultAvailabilities: PrimeVaultAvailabilities
+    PrimeVaultTraders: PrimeVaultTraders
     ProjectPct: ProjectPcts
     SeasonInfo: SeasonInfo
     Sorties: Sorties

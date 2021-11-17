@@ -143,15 +143,15 @@ class NightwaveWidgetTab():
 
     def reset_season(self) -> None:
         self.NoSeason.show()
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['SeasonInfo'])):
             if (self.alerts['SeasonInfo'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['SeasonInfo'][canc[i - 1]].hide()
-            remove_widget(self.alerts['SeasonInfo'][canc[i - 1]].SeasonBox)
-            del self.alerts['SeasonInfo'][canc[i - 1]]
+            self.alerts['SeasonInfo'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['SeasonInfo'][cancelled[i - 1]].SeasonBox)
+            del self.alerts['SeasonInfo'][cancelled[i - 1]]
             i -= 1
 
     def season_not_available(self) -> None:

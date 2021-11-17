@@ -2,39 +2,97 @@
   <dictionary name="dipy9">
     <words>
       <w>affector</w>
+      <w>agnesis</w>
       <w>alad</w>
       <w>ambulas</w>
+      <w>anasa</w>
       <w>archwing</w>
+      <w>auroxium</w>
+      <w>ayatan</w>
       <w>baro</w>
+      <w>capacitatore</w>
       <w>cephalon</w>
+      <w>charc</w>
+      <w>condrod</w>
+      <w>cordatus</w>
+      <w>cryotic</w>
       <w>darvo</w>
       <w>dera</w>
+      <w>detonite</w>
+      <w>devar</w>
+      <w>dtls</w>
+      <w>elettrociti</w>
+      <w>esher</w>
       <w>exilus</w>
       <w>fass</w>
+      <w>fersteel</w>
+      <w>fieldron</w>
+      <w>giromag</w>
+      <w>glassmaker</w>
+      <w>glinty</w>
+      <w>goopolla</w>
+      <w>gorgaricus</w>
+      <w>granum</w>
+      <w>gravimag</w>
+      <w>grokdrul</w>
       <w>gustrag</w>
       <w>heatsink</w>
+      <w>hexenon</w>
+      <w>hexis</w>
       <w>imageproxy</w>
+      <w>inaros</w>
+      <w>iradite</w>
       <w>jordas</w>
       <w>karak</w>
+      <w>kavat</w>
       <w>kela</w>
+      <w>khut</w>
       <w>kril</w>
+      <w>kuaca</w>
+      <w>kubrow</w>
       <w>kuva</w>
       <w>latron</w>
+      <w>lavos</w>
       <w>lephantis</w>
       <w>linx</w>
       <w>liset</w>
       <w>lith</w>
+      <w>loka</w>
       <w>lunaro</w>
+      <w>maprico</w>
       <w>maroo</w>
+      <w>mawfish</w>
       <w>meso</w>
       <w>miniboss</w>
+      <w>morfidi</w>
+      <w>mortus</w>
+      <w>mortuus</w>
       <w>mutualist</w>
+      <w>mytocardia</w>
+      <w>nanospore</w>
+      <w>naramon</w>
       <w>naut</w>
+      <w>necraloid</w>
+      <w>necramech</w>
+      <w>neurode</w>
+      <w>neurottiche</w>
       <w>nightwave</w>
+      <w>nightwawe</w>
+      <w>nistlepod</w>
+      <w>nitain</w>
+      <w>norg</w>
+      <w>odima</w>
+      <w>offworlder</w>
       <w>orokin</w>
       <w>ostron</w>
+      <w>outworlder</w>
       <w>oxium</w>
       <w>palladino</w>
+      <w>palpatori</w>
+      <w>perrin</w>
+      <w>pherliac</w>
+      <w>pustulite</w>
+      <w>pyrotic</w>
       <w>pyrus</w>
       <w>railjack</w>
       <w>rell</w>
@@ -54,12 +112,24 @@
       <w>tabber</w>
       <w>tabook</w>
       <w>tennocon</w>
+      <w>teroglobe</w>
       <w>teshin</w>
       <w>thaym</w>
       <w>thermia</w>
+      <w>tralok</w>
+      <w>unairu</w>
+      <w>valana</w>
       <w>vallis</w>
+      <w>vaya</w>
+      <w>vazarin</w>
       <w>ven'kra</w>
+      <w>ventkids</w>
+      <w>veridos</w>
       <w>vome</w>
+      <w>whozit</w>
+      <w>xiphos</w>
+      <w>yogwun</w>
+      <w>zenurik</w>
     </words>
   </dictionary>
 </component>

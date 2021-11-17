@@ -30,7 +30,7 @@ class Spoiler(QtWidgets.QWidget):
         self.contentArea.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.contentArea.setWidgetResizable(True)
 
-        # start outcollapsed
+        # start auto collapsed
         self.contentArea.setMaximumHeight(0)
         self.contentArea.setMinimumHeight(0)
 
@@ -41,15 +41,15 @@ class Spoiler(QtWidgets.QWidget):
         self.toggleAnimation.addAnimation(QPropertyAnimation(self.contentArea, b"maximumHeight"))
 
         # don't waste space
-        self.mainLaoyut = QtWidgets.QGridLayout()
-        self.mainLaoyut.setVerticalSpacing(0)
-        self.mainLaoyut.setContentsMargins(0, 0, 0, 0)
+        self.mainLayout = QtWidgets.QGridLayout()
+        self.mainLayout.setVerticalSpacing(0)
+        self.mainLayout.setContentsMargins(0, 0, 0, 0)
 
-        self.mainLaoyut.addWidget(self.toggleButton, 0, 0, 1, 1, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.mainLaoyut.addWidget(self.headerLine, 1, 2, 1, 1)
-        self.mainLaoyut.addWidget(self.contentArea, 1, 0, 1, 3)
+        self.mainLayout.addWidget(self.toggleButton, 0, 0, 1, 1, QtCore.Qt.AlignmentFlag.AlignLeft)
+        self.mainLayout.addWidget(self.headerLine, 1, 2, 1, 1)
+        self.mainLayout.addWidget(self.contentArea, 1, 0, 1, 3)
 
-        self.setLayout(self.mainLaoyut)
+        self.setLayout(self.mainLayout)
 
         self.toggleButton.clicked.connect(self.spoiler_clicked)
 
@@ -63,7 +63,7 @@ class Spoiler(QtWidgets.QWidget):
     def set_content_layout(self, spoiler_content: QtWidgets.QHBoxLayout | QtWidgets.QVBoxLayout):
         self.contentArea.setLayout(spoiler_content)
 
-        collapsed_height = self.mainLaoyut.sizeHint().height() - self.contentArea.maximumHeight()
+        collapsed_height = self.mainLayout.sizeHint().height() - self.contentArea.maximumHeight()
         content_height = spoiler_content.sizeHint().height()
         for i in range(self.toggleAnimation.animationCount() - 1):
             spoiler_animation = self.toggleAnimation.animationAt(i)

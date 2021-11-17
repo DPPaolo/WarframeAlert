@@ -38,12 +38,12 @@ class UpdateProgramWidget():
             LogHandler.err(translate("updateProgramWidget", "errorDownloadChangelog") + ": " + str(er))
             commonUtils.print_traceback(translate("updateProgramWidget", "errorDownloadChangelog") + ": " + str(er))
         self.textEditUpdate.ensureCursorVisible()
-        self.gridAupdate = QtWidgets.QGridLayout(self.UpdateWidget)
+        self.gridUpdate = QtWidgets.QGridLayout(self.UpdateWidget)
 
-        self.gridAupdate.addWidget(self.UpdateTitleLabel, 0, 1)
-        self.gridAupdate.addWidget(self.textEditUpdate, 1, 0, 1, 3)
-        self.gridAupdate.addWidget(self.UpdatePButton, 2, 2)
-        self.gridAupdate.addWidget(self.UpdatePer, 3, 0, 1, 3)
+        self.gridUpdate.addWidget(self.UpdateTitleLabel, 0, 1)
+        self.gridUpdate.addWidget(self.textEditUpdate, 1, 0, 1, 3)
+        self.gridUpdate.addWidget(self.UpdatePButton, 2, 2)
+        self.gridUpdate.addWidget(self.UpdatePer, 3, 0, 1, 3)
 
         self.UpdatePButton.clicked.connect(lambda: self.check_download_program())
 
