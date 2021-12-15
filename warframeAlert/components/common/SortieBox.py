@@ -49,8 +49,6 @@ class SortieBox():
         self.SortieBox.addLayout(self.SortieBox3.SortieMissionBox)
         self.SortieBox.addLayout(EmptySpace().SpaceBox)
 
-        self.SortieRewardBox = QtWidgets.QVBoxLayout()
-
         self.SortieReward = SortieMissionDropView()
 
         self.spoiler = Spoiler(translate("sortieBox", "reward"))

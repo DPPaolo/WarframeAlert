@@ -178,6 +178,7 @@ class FlashSale(TypedDict, total=False):
     PremiumOverride: int
     RegularOverride: int
     ShowInMarket: bool
+    ShowWithRecommended: bool
     Featured: bool
     Popular: bool
     TypeName: str
@@ -410,7 +411,7 @@ class PrimeAccessAvailability(TypedDict, total=False):
 
 PrimeVaultAvailabilities = List[bool]
 
-ProjectPcts = List[float]
+ProjectPoints = List[float]
 
 
 class PrimeVaultManifestInfo(TypedDict, total=False):
@@ -518,7 +519,7 @@ class VoidStorm(TypedDict, total=False):
 VoidStorms = List[VoidStorm]
 
 
-class VoidTraiderItem(TypedDict):
+class VoidTraderItem(TypedDict):
     ItemType: str
     PrimePrice: int
     RegularPrice: int
@@ -530,7 +531,7 @@ class VoidTrader(TypedDict, total=False):
     Expiry: DateType
     Node: str
     Character: str
-    Manifest: List[VoidTraiderItem]
+    Manifest: List[VoidTraderItem]
 
 
 VoidTraders = List[VoidTrader]
@@ -563,7 +564,7 @@ class JsonData(TypedDict, total=False):
     PrimeTokenAvailability: bool
     PrimeVaultAvailabilities: PrimeVaultAvailabilities
     PrimeVaultTraders: PrimeVaultTraders
-    ProjectPct: ProjectPcts
+    ProjectPct: ProjectPoints
     SeasonInfo: SeasonInfo
     Sorties: Sorties
     SyndicateMissions: SyndicateMissions

@@ -8,6 +8,7 @@ from warframeAlert.components.common.ClanEvent import ClanEvent
 from warframeAlert.components.common.EmptySpace import EmptySpace
 from warframeAlert.components.common.Event import EventType, Event
 from warframeAlert.components.common.EventReward import EventReward
+from warframeAlert.components.common.EventVaultTrader import EventVaultTrader
 from warframeAlert.components.common.HubEvent import create_hub_event
 from warframeAlert.components.common.ReconstructionRelayEvent import ReconstructionRelayEvent, get_reconstruction_task
 from warframeAlert.components.common.ScoreEvent import ScoreEvent
@@ -15,14 +16,15 @@ from warframeAlert.components.common.SpecialAlert import create_alert
 from warframeAlert.components.common.Spoiler import Spoiler
 from warframeAlert.components.common.SquadLinkEvent import SquadLinkEvent
 from warframeAlert.components.widget.AlertWidget import AlertWidget
-from warframeAlert.constants.warframeTypes import Goals, ConstructionProjects, Alerts, Goal
+from warframeAlert.constants.warframeTypes import Goals, ConstructionProjects, Alerts, Goal, PrimeVaultTraders, \
+    PrimeVaultTradersData
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils, gameTranslationUtils
 from warframeAlert.utils.commonUtils import print_traceback, remove_widget, get_last_item_with_backslash, bool_to_yes_no
 from warframeAlert.utils.gameTranslationUtils import get_node, get_region, get_syndicate, get_faction, \
-    get_item_name_en, get_item_name, get_vip_agent
+    get_item_name_en, get_item_name, get_vip_agent, get_node_it
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.warframeUtils import parse_reward
 
@@ -32,6 +34,7 @@ class EventsWidgetTab():
     def __init__(self) -> None:
         self.alerts: dict[str, List[Event | ScoreEvent | ClanEvent | ReconstructionRelayEvent | SquadLinkEvent]] \
             = {'Goals': []}
+        self.vault_traders: dict[str, List[EventVaultTrader]] = {'VaultTraders': []}
 
         self.eventsWidget = QtWidgets.QWidget()
 
@@ -41,6 +44,7 @@ class EventsWidgetTab():
         self.eventCetusWidget = QtWidgets.QWidget()
         self.eventRelayWidget = QtWidgets.QWidget()
         self.eventSquadLinkWidget = QtWidgets.QWidget()
+        self.eventVaultTraderWidget = QtWidgets.QWidget()
 
         self.eventGrid = QtWidgets.QGridLayout(self.eventsWidget)
 
@@ -50,6 +54,7 @@ class EventsWidgetTab():
         self.EventScrollBarC = QtWidgets.QScrollArea()
         self.EventScrollBarD = QtWidgets.QScrollArea()
         self.EventScrollBarE = QtWidgets.QScrollArea()
+        self.EventScrollBarF = QtWidgets.QScrollArea()
 
         self.AlertScrollBar.setWidgetResizable(True)
         self.EventScrollBarA.setWidgetResizable(True)
@@ -57,6 +62,7 @@ class EventsWidgetTab():
         self.EventScrollBarC.setWidgetResizable(True)
         self.EventScrollBarD.setWidgetResizable(True)
         self.EventScrollBarE.setWidgetResizable(True)
+        self.EventScrollBarF.setWidgetResizable(True)
 
         self.AlertScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.EventScrollBarA.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
@@ -64,6 +70,7 @@ class EventsWidgetTab():
         self.EventScrollBarC.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.EventScrollBarD.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
         self.EventScrollBarE.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.EventScrollBarF.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
         self.AlertScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
         self.EventScrollBarA.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
@@ -71,18 +78,21 @@ class EventsWidgetTab():
         self.EventScrollBarC.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
         self.EventScrollBarD.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
         self.EventScrollBarE.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
+        self.EventScrollBarF.setBackgroundRole(QtGui.QPalette.ColorRole.Light)
 
-        self.Eventgrid = QtWidgets.QGridLayout(self.eventWidget)
-        self.EventRazorgrid = QtWidgets.QGridLayout(self.eventRazorWidget)
-        self.EventCetusgrid = QtWidgets.QGridLayout(self.eventCetusWidget)
-        self.EventRelaygrid = QtWidgets.QGridLayout(self.eventRelayWidget)
-        self.EventSquadLinkgrid = QtWidgets.QGridLayout(self.eventSquadLinkWidget)
+        self.EventGrid = QtWidgets.QGridLayout(self.eventWidget)
+        self.EventRazorGrid = QtWidgets.QGridLayout(self.eventRazorWidget)
+        self.EventCetusGrid = QtWidgets.QGridLayout(self.eventCetusWidget)
+        self.EventRelayGrid = QtWidgets.QGridLayout(self.eventRelayWidget)
+        self.EventSquadLinkGrid = QtWidgets.QGridLayout(self.eventSquadLinkWidget)
+        self.EventVaultTraderGrid = QtWidgets.QGridLayout(self.eventVaultTraderWidget)
 
-        self.Eventgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
-        self.EventRazorgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
-        self.EventCetusgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
-        self.EventRelaygrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
-        self.EventSquadLinkgrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventRazorGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventCetusGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventRelayGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventSquadLinkGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.EventVaultTraderGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.AlertScrollBar.setWidget(self.alertWidget.get_widget())
         self.EventScrollBarA.setWidget(self.eventWidget)
@@ -90,6 +100,7 @@ class EventsWidgetTab():
         self.EventScrollBarC.setWidget(self.eventCetusWidget)
         self.EventScrollBarD.setWidget(self.eventRelayWidget)
         self.EventScrollBarE.setWidget(self.eventSquadLinkWidget)
+        self.EventScrollBarF.setWidget(self.eventVaultTraderWidget)
 
         self.EventTabber = QtWidgets.QTabWidget(self.eventsWidget)
 
@@ -140,7 +151,6 @@ class EventsWidgetTab():
 
                 if (found == 0):
                     temp = create_event(event_id, events, relay)
-
                     self.alerts['Goals'].append(temp)
                     del temp
 
@@ -150,23 +160,23 @@ class EventsWidgetTab():
         title = translate("eventsWidget", "newEvent")
         for i in range(n_event, len(self.alerts['Goals'])):
             if (self.alerts['Goals'][i].get_event_type() == EventType.GENERAL):
-                self.Eventgrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.Eventgrid.count(), 0)
+                self.EventGrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventGrid.count(), 0)
             elif (self.alerts['Goals'][i].get_event_type() == EventType.FOMORIAN):
-                self.EventRazorgrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventRazorgrid.count(), 0)
+                self.EventRazorGrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventRazorGrid.count(), 0)
                 if (self.alerts['Goals'][i].get_faction() == "Corpus"):
                     title = translate("eventsWidget", "newRazorbackEvent")
                 else:
                     title = translate("eventsWidget", "newFomorianEvent")
             elif (self.alerts['Goals'][i].get_event_type() == EventType.GHOUL):
-                self.EventCetusgrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventCetusgrid.count(), 0)
+                self.EventCetusGrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventCetusGrid.count(), 0)
                 title = translate("eventsWidget", "newCetusEvent")
             elif (self.alerts['Goals'][i].get_event_type() == EventType.RECOSTRUCTION):
-                self.EventRelaygrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventRelaygrid.count(), 0)
-                title = translate("eventsWidget", "newRecostructionEvent")
+                self.EventRelayGrid.addLayout(self.alerts['Goals'][i].TAEventBox, self.EventRelayGrid.count(), 0)
+                title = translate("eventsWidget", "newReconstructionEvent")
             elif (self.alerts['Goals'][i].get_event_type() == EventType.SQUAD_LINK):
-                self.EventSquadLinkgrid.addLayout(self.alerts['Goals'][i].TAEventBox,
-                                                  self.EventSquadLinkgrid.count(), 0)
-                title = translate("eventsWidget", "newsquadLinkEvent")
+                self.EventSquadLinkGrid.addLayout(self.alerts['Goals'][i].TAEventBox,
+                                                  self.EventSquadLinkGrid.count(), 0)
+                title = translate("eventsWidget", "newSquadLinkEvent")
 
             NotificationService.send_notification(
                 title,
@@ -174,33 +184,73 @@ class EventsWidgetTab():
                 self.alerts['Goals'][i].get_image())
 
     def reset_events(self) -> None:
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['Goals'])):
             if (self.alerts['Goals'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['Goals'][canc[i - 1]].hide()
-            remove_widget(self.alerts['Goals'][canc[i - 1]].TADescVBox)
-            del self.alerts['Goals'][canc[i - 1]]
+            self.alerts['Goals'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['Goals'][cancelled[i - 1]].TAEventBox)
+            del self.alerts['Goals'][cancelled[i - 1]]
+            i -= 1
+
+    def parse_prime_vault_traders(self, data: PrimeVaultTraders) -> None:
+        self.reset_prime_vault_traders()
+        if (data):
+            n_event = len(self.vault_traders['VaultTraders'])
+            for trade_event in data:
+                event_id = trade_event['_id']['$oid']
+                found = 0
+                for event in self.vault_traders['VaultTraders']:
+                    if (event.get_event_id() == event_id):
+                        found = 1
+                if (found == 0):
+                    temp = create_prime_vault_trader(event_id, trade_event)
+                    self.vault_traders['VaultTraders'].append(temp)
+                    del temp
+            self.add_vault_events(n_event)
+
+    def add_vault_events(self, n_event: int) -> None:
+        for i in range(n_event, len(self.vault_traders['VaultTraders'])):
+
+            self.EventVaultTraderGrid.addLayout(self.vault_traders['VaultTraders'][i].TAEventBox,
+                                                self.EventVaultTraderGrid.count(), 0)
+
+            NotificationService.send_notification(
+                translate("eventsWidget", "newVaultEvent"),
+                self.vault_traders['VaultTraders'][i].get_title(),
+                None)
+
+    def reset_prime_vault_traders(self) -> None:
+        cancelled = []
+        for i in range(0, len(self.vault_traders['VaultTraders'])):
+            if (self.vault_traders['VaultTraders'][i].is_expired()):
+                cancelled.append(i)
+        i = len(cancelled)
+        while i > 0:
+            self.vault_traders['VaultTraders'][cancelled[i - 1]].hide()
+            remove_widget(self.vault_traders['VaultTraders'][cancelled[i - 1]].TAEventBox)
+            del self.vault_traders['VaultTraders'][cancelled[i - 1]]
             i -= 1
 
     def update_tab(self) -> None:
-        alerts_lenght = self.alertWidget.get_length()
-        events_lenght = len(self.alerts['Goals'])
+        alerts_length = self.alertWidget.get_length()
+        events_length = len(self.alerts['Goals'])
+        vault_events_length = len(self.vault_traders['VaultTraders'])
         self.EventTabber.insertTab(0, self.AlertScrollBar, translate("eventsWidget", "alerts"))
-        if (not (alerts_lenght > 0)):
+        if (not (alerts_length > 0)):
             self.EventTabber.removeTab(self.EventTabber.indexOf(self.AlertScrollBar))
 
-        if (events_lenght > 0):
+        if (events_length > 0):
             self.EventTabber.insertTab(1, self.EventScrollBarA, translate("eventsWidget", "genericEvent"))
             self.EventTabber.insertTab(2, self.EventScrollBarB, translate("eventsWidget", "fomorian"))
             self.EventTabber.insertTab(3, self.EventScrollBarC, translate("eventsWidget", "ghoul"))
-            self.EventTabber.insertTab(4, self.EventScrollBarD, translate("eventsWidget", "recostruction"))
+            self.EventTabber.insertTab(4, self.EventScrollBarD, translate("eventsWidget", "reconstruction"))
             self.EventTabber.insertTab(5, self.EventScrollBarE, translate("eventsWidget", "squadLink"))
 
             n_events = n_fomorian = n_cetus = n_relay = n_squad_link = 0
-            for i in range(0, events_lenght):
+            for i in range(0, events_length):
                 if (self.alerts['Goals'][i].get_event_type() == EventType.GENERAL):
                     n_events += 1
                 elif (self.alerts['Goals'][i].get_event_type() == EventType.FOMORIAN):
@@ -221,6 +271,10 @@ class EventsWidgetTab():
                 self.EventTabber.removeTab(self.EventTabber.indexOf(self.EventScrollBarD))
             if (not (n_squad_link > 0)):
                 self.EventTabber.removeTab(self.EventTabber.indexOf(self.EventScrollBarE))
+
+        self.EventTabber.insertTab(6, self.EventScrollBarF, translate("eventsWidget", "vaultTrader"))
+        if (not (vault_events_length > 0)):
+            self.EventTabber.removeTab(self.EventTabber.indexOf(self.EventScrollBarF))
 
 
 def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
@@ -453,8 +507,8 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
         goal.append(event['Goal'])
 
     if ('InterimRewards' in event):
-        for temprew in event['InterimRewards']:
-            rew.append(parse_reward(temprew))
+        for tempReward in event['InterimRewards']:
+            rew.append(parse_reward(tempReward))
     if ('Reward' in event):
         rew.append(parse_reward(event['Reward']))
     if ('BonusReward' in event):
@@ -494,5 +548,24 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     # LogHandler.debug("Numero Nodi: " + str(n_len))
     # LogHandler.debug("Numero Ricompense: " + str(r_len))
     # LogHandler.debug("Numero Requisiti: " + str(req_len))
+
+    return temp
+
+
+def create_prime_vault_trader(event_id: str, event: PrimeVaultTradersData) -> EventVaultTrader:
+    init = timeUtils.get_time(event['Activation']['$date']['$numberLong'])
+    end = event['Expiry']['$date']['$numberLong']
+    initial_init = timeUtils.get_time(event['InitialStartDate']['$date']['$numberLong'])
+    completed = bool_to_yes_no(event['Completed'])
+    node = get_node_it(event['Node'])
+    params = event['Params'] if ('Params' in event) else ""
+    phase = event['Phase'] if ('Phase' in event) else 0
+    manifest = event['Manifest']
+    schedule_info = event['ScheduleInfo']
+
+    temp = EventVaultTrader(event_id)
+    temp.set_event_info(init, end, initial_init, completed, node[0], params, phase)
+    temp.set_manifest_data(manifest)
+    temp.set_schedule_data(schedule_info)
 
     return temp

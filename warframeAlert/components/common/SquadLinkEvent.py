@@ -20,18 +20,18 @@ class SquadLinkEvent(Event):
         self.TANextWaveInit = Countdown()
         self.TASquadExtra = QtWidgets.QLabel("")
 
-        self.TASquadLinkbox1 = QtWidgets.QHBoxLayout()
-        self.TASquadLinkbox2 = QtWidgets.QHBoxLayout()
+        self.TASquadLinkBox1 = QtWidgets.QHBoxLayout()
+        self.TASquadLinkBox2 = QtWidgets.QHBoxLayout()
 
-        self.TASquadLinkbox1.addWidget(self.TAWaveEndLab)
-        self.TASquadLinkbox1.addWidget(self.TAWaveEnd.TimeLab)
-        self.TASquadLinkbox1.addWidget(self.TANextWaveInitLab)
-        self.TASquadLinkbox1.addWidget(self.TANextWaveInit.TimeLab)
+        self.TASquadLinkBox1.addWidget(self.TAWaveEndLab)
+        self.TASquadLinkBox1.addWidget(self.TAWaveEnd.TimeLab)
+        self.TASquadLinkBox1.addWidget(self.TANextWaveInitLab)
+        self.TASquadLinkBox1.addWidget(self.TANextWaveInit.TimeLab)
 
-        self.TASquadLinkbox2.addWidget(self.TASquadExtra)
+        self.TASquadLinkBox2.addWidget(self.TASquadExtra)
 
-        self.TADescVBox.addLayout(self.TASquadLinkbox1)
-        self.TADescVBox.addLayout(self.TASquadLinkbox2)
+        self.TADescVBox.addLayout(self.TASquadLinkBox1)
+        self.TADescVBox.addLayout(self.TASquadLinkBox2)
 
     def set_squad_link_data(self, init: int, end: int, next_init: int, next_end: int) -> None:
         wave_init = translate("squadLinkEvent", "waveInit") + ": " + timeUtils.get_time(init[:10])
@@ -70,7 +70,7 @@ class SquadLinkEvent(Event):
             extra_text += str(ground_tier[len(ground_tier) - 1]) + "\n"
 
         extra_text += translate("squadLinkEvent", "epoch_number") + ": " + str(epoch_number) + "\t"
-        extra_text += translate("squadLinkEvent", "completitionBonus") + ": "
+        extra_text += translate("squadLinkEvent", "completionBonus") + ": "
         for num in range(len(completion_bonus) - 1):
             extra_text += str(completion_bonus[num]) + ", "
         extra_text += str(completion_bonus[len(completion_bonus) - 1]) + "\t"

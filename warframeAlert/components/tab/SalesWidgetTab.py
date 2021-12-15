@@ -133,23 +133,23 @@ class SalesWidgetTab():
                                                    self.gridDiscountedSales.count(), 0)
 
     def reset_sales(self) -> None:
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['FlashSales']['Featured'])):
             if (self.alerts['FlashSales']['Featured'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['FlashSales']['Featured'][canc[i - 1]].hide()
-            remove_widget(self.alerts['FlashSales']['Featured'][canc[i - 1]].MerBox)
-            del self.alerts['FlashSales']['Featured'][canc[i - 1]]
+            self.alerts['FlashSales']['Featured'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['FlashSales']['Featured'][cancelled[i - 1]].MerBox)
+            del self.alerts['FlashSales']['Featured'][cancelled[i - 1]]
             i -= 1
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['FlashSales']['Discount'])):
             if (self.alerts['FlashSales']['Discount'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['FlashSales']['Discount'][canc[i - 1]].hide()
-            remove_widget(self.alerts['FlashSales']['Discount'][canc[i - 1]].MerBox)
-            del self.alerts['FlashSales']['Discount'][canc[i - 1]]
+            self.alerts['FlashSales']['Discount'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['FlashSales']['Discount'][cancelled[i - 1]].MerBox)
+            del self.alerts['FlashSales']['Discount'][cancelled[i - 1]]
             i -= 1

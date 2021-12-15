@@ -27,7 +27,7 @@ class PvPTournamentWidget():
     def get_widget(self) -> QtWidgets.QWidget:
         return self.TournamentPvPWidget
 
-    def get_lenght(self) -> int:
+    def get_length(self) -> int:
         return len(self.alerts['PvPTournament'])
 
     def parse_pvp_tournament(self, data: PVPActiveTournaments) -> None:
@@ -47,15 +47,15 @@ class PvPTournamentWidget():
 
     def reset_pvp_tournament(self) -> None:
         self.NoPvPTourLab.show()
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['PvPTournament'])):
             if (self.alerts['PvPTournament'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['PvPTournament'][canc[i - 1]].hide()
-            remove_widget(self.alerts['PvPTournament'][canc[i - 1]].PvPBox)
-            del self.alerts['PvPTournament'][canc[i - 1]]
+            self.alerts['PvPTournament'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['PvPTournament'][cancelled[i - 1]].PvPBox)
+            del self.alerts['PvPTournament'][cancelled[i - 1]]
             i -= 1
 
     def pvp_tournament_not_available(self) -> None:

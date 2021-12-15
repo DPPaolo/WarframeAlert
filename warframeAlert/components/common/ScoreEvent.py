@@ -20,19 +20,19 @@ class ScoreEvent(Event):
 
         self.TAPerAtt = QtWidgets.QProgressBar()
 
-        self.TABarbox1 = QtWidgets.QHBoxLayout()
-        self.TABarbox2 = QtWidgets.QHBoxLayout()
+        self.TABarBox1 = QtWidgets.QHBoxLayout()
+        self.TABarBox2 = QtWidgets.QHBoxLayout()
 
-        self.TABarbox1.addWidget(self.TAScoreLab)
-        self.TABarbox1.addWidget(self.TAScore)
-        self.TABarbox1.addWidget(self.TABestLab)
-        self.TABarbox1.addWidget(self.TABest)
+        self.TABarBox1.addWidget(self.TAScoreLab)
+        self.TABarBox1.addWidget(self.TAScore)
+        self.TABarBox1.addWidget(self.TABestLab)
+        self.TABarBox1.addWidget(self.TABest)
 
-        self.TABarbox2.addWidget(self.TAPerAtt)
-        self.TABarbox2.addWidget(self.TANodeAtt)
+        self.TABarBox2.addWidget(self.TAPerAtt)
+        self.TABarBox2.addWidget(self.TANodeAtt)
 
-        self.TADescVBox.addLayout(self.TABarbox1)
-        self.TADescVBox.addLayout(self.TABarbox2)
+        self.TADescVBox.addLayout(self.TABarBox1)
+        self.TADescVBox.addLayout(self.TABarBox2)
 
     def set_perc_att(self, per: int, att_node: List[str]):
         self.TAPerAtt.reset()

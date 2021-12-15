@@ -127,7 +127,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithHeadshots": (
         "Tiratore Scelto", "Uccidi 40 Nemici con Colpi alla Testa", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithMelee": (
-        "Danza delle Spade", "Uccidi 150 Nemici con un'amra corpo a corpo", 1000),
+        "Danza delle Spade", "Uccidi 150 Nemici con un'arma corpo a corpo", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithRadiation": (
         "Reattore", "Uccidi 150 Nemici con Danno Radiazione", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithPrimary": (
@@ -206,7 +206,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRarePlainsResources": (
         "Minatore Terra", "Estrai 6 Gemme Rare sulle Piane di Eidolon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRareVenusResources": (
-        "Minatore Venere", "Etrai 6 Gemme Rare su Orb Vallis", 4500),
+        "Minatore Venere", "Estrai 6 Gemme Rare su Orb Vallis", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVenusBounties": (
         "Cacciatore di Taglie su Venere", "Completa 8 Taglie su Orb Vallis", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteClemMission": (
@@ -245,7 +245,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillArchgunEnemies": (
         "Armamento Pesante", "Uccidi 500 nemici con un Archgun", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBoardingPartyNoDamage": (
-        "Impeccabile", "Elimina un grupp d'abbordaggio del Railjack senza che il tuo Warframe subisca danni", 4500),
+        "Impeccabile", "Elimina un gruppo d'abbordaggio del Railjack senza che il tuo Warframe subisca danni", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyDestroyCrewshipArtillery": (
         "Lungimiranza", "Distruggi un Trasporto Armato con l'Artiglieria Frontale", 4500),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyRailjackHijackDestroyThree": (

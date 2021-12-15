@@ -3,7 +3,7 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Invasion import Invasion
 from warframeAlert.components.common.InvasionNode import InvasionNode
-from warframeAlert.constants.warframeTypes import ProjectPcts, NodeOverrides, Invasions
+from warframeAlert.constants.warframeTypes import ProjectPoints, NodeOverrides, Invasions
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -31,24 +31,24 @@ class InvasionWidgetTab():
         self.gridIInv = QtWidgets.QGridLayout()
         self.gridOccInv = QtWidgets.QGridLayout()
 
-        self.Invtabber = QtWidgets.QTabWidget()
+        self.InvTabber = QtWidgets.QTabWidget()
 
         self.NoInvG = QtWidgets.QLabel(translate("invasionWidget", "NoGrineerInvasion"))
         self.NoInvC = QtWidgets.QLabel(translate("invasionWidget", "NoCorpusInvasion"))
         self.NoInvI = QtWidgets.QLabel(translate("invasionWidget", "NoInfestedInvasion"))
-        self.NoInvOcc = QtWidgets.QLabel(translate("invasionWidget", "NoNodeOccuped"))
+        self.NoInvOcc = QtWidgets.QLabel(translate("invasionWidget", "NoNodeOccupied"))
 
         self.gridGInv.addWidget(self.NoInvG, 0, 0)
         self.gridCInv.addWidget(self.NoInvC, 0, 0)
         self.gridIInv.addWidget(self.NoInvI, 0, 0)
         self.gridOccInv.addWidget(self.NoInvOcc, 0, 0)
 
-        self.FomorLabel = QtWidgets.QLabel(translate("invasionWidget", "fomorian") + " :")
+        self.FomorianLabel = QtWidgets.QLabel(translate("invasionWidget", "fomorian") + " :")
         self.RazorLabel = QtWidgets.QLabel(translate("invasionWidget", "razorback") + " :")
-        self.FomorPer = QtWidgets.QProgressBar(self.InvasionWidget)
-        self.RazorPer = QtWidgets.QProgressBar(self.InvasionWidget)
-        self.FomorPer.setMaximum(100)
-        self.FomorPer.setMaximum(100)
+        self.FomorianPer = QtWidgets.QProgressBar(self.InvasionWidget)
+        self.RazorbackPer = QtWidgets.QProgressBar(self.InvasionWidget)
+        self.FomorianPer.setMaximum(100)
+        self.FomorianPer.setMaximum(100)
 
         self.InvScrollBarG = QtWidgets.QScrollArea()
         self.InvScrollBarC = QtWidgets.QScrollArea()
@@ -79,17 +79,17 @@ class InvasionWidgetTab():
         self.InvScrollBarI.setWidget(self.InvInfestedWidget)
         self.InvScrollBarO.setWidget(self.InvOccWidget)
 
-        self.Invtabber.insertTab(0, self.InvScrollBarG, translate("invasionWidget", "GrineerInvasion"))
-        self.Invtabber.insertTab(1, self.InvScrollBarC, translate("invasionWidget", "CorpusInvasion"))
-        self.Invtabber.insertTab(2, self.InvScrollBarI, translate("invasionWidget", "InfestedInvasion"))
-        self.Invtabber.insertTab(3, self.InvScrollBarO, translate("invasionWidget", "OccupiedNode"))
+        self.InvTabber.insertTab(0, self.InvScrollBarG, translate("invasionWidget", "GrineerInvasion"))
+        self.InvTabber.insertTab(1, self.InvScrollBarC, translate("invasionWidget", "CorpusInvasion"))
+        self.InvTabber.insertTab(2, self.InvScrollBarI, translate("invasionWidget", "InfestedInvasion"))
+        self.InvTabber.insertTab(3, self.InvScrollBarO, translate("invasionWidget", "OccupiedNode"))
 
         self.gridInv2 = QtWidgets.QGridLayout(self.InvasionWidget)
-        self.gridInv2.addWidget(self.FomorLabel, 0, 0)
-        self.gridInv2.addWidget(self.FomorPer, 0, 1)
+        self.gridInv2.addWidget(self.FomorianLabel, 0, 0)
+        self.gridInv2.addWidget(self.FomorianPer, 0, 1)
         self.gridInv2.addWidget(self.RazorLabel, 0, 2)
-        self.gridInv2.addWidget(self.RazorPer, 0, 3)
-        self.gridInv2.addWidget(self.Invtabber, 1, 0, 1, 4)
+        self.gridInv2.addWidget(self.RazorbackPer, 0, 3)
+        self.gridInv2.addWidget(self.InvTabber, 1, 0, 1, 4)
         self.gridInv2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.gridGInv.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
@@ -103,10 +103,10 @@ class InvasionWidgetTab():
         return self.InvasionWidget
 
     def update_tab(self) -> None:
-        self.Invtabber.insertTab(3, self.InvScrollBarO, translate("invasionWidget", "OccupiedNode"))
+        self.InvTabber.insertTab(3, self.InvScrollBarO, translate("invasionWidget", "OccupiedNode"))
 
         if (not len(self.alerts['NodeOverrides']) > 0):
-            self.Invtabber.removeTab(self.Invtabber.indexOf(self.InvScrollBarO))
+            self.InvTabber.removeTab(self.InvTabber.indexOf(self.InvScrollBarO))
 
     def update_invasion(self, data: Invasions) -> None:
         if (OptionsHandler.get_option("Tab/Invasion") == 1):
@@ -211,18 +211,18 @@ class InvasionWidgetTab():
         self.NoInvI.show()
         inv = self.alerts['Invasions']
         for temp in [inv['Grineer'], inv['Corpus'], inv['Infested']]:
-            canc = []
+            cancelled = []
             for i in range(0, len(temp)):
                 if (temp[i].is_completed()):
-                    canc.append(i)
-            i = len(canc)
+                    cancelled.append(i)
+            i = len(cancelled)
             while i > 0:
-                temp[canc[i-1]].hide()
-                remove_widget(temp[canc[i-1]].InvasionBox)
-                del temp[canc[i-1]]
+                temp[cancelled[i-1]].hide()
+                remove_widget(temp[cancelled[i-1]].InvasionBox)
+                del temp[cancelled[i-1]]
                 i -= 1
 
-    def update_node_ovveride(self, data: NodeOverrides) -> None:
+    def update_node_override(self, data: NodeOverrides) -> None:
         if (OptionsHandler.get_option("Tab/Invasion") == 1):
             try:
                 self.parse_node_override(data)
@@ -270,18 +270,18 @@ class InvasionWidgetTab():
 
     def reset_invasion_node(self) -> None:
         self.NoInvOcc.show()
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['NodeOverrides'])):
             if (self.alerts['NodeOverrides'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['NodeOverrides'][canc[i-1]].hide()
-            remove_widget(self.alerts['NodeOverrides'][canc[i-1]].InvasionNodeBox)
-            del self.alerts['NodeOverrides'][canc[i-1]]
+            self.alerts['NodeOverrides'][cancelled[i-1]].hide()
+            remove_widget(self.alerts['NodeOverrides'][cancelled[i-1]].InvasionNodeBox)
+            del self.alerts['NodeOverrides'][cancelled[i-1]]
             i -= 1
 
-    def update_invasion_project(self, data: ProjectPcts) -> None:
+    def update_invasion_project(self, data: ProjectPoints) -> None:
         try:
             self.parse_invasion_project(data)
         except Exception as er:
@@ -289,25 +289,25 @@ class InvasionWidgetTab():
             commonUtils.print_traceback(translate("invasionWidget", "invasionProjectUpdateError") + ": " + str(er))
             self.reset_invasion_project()
 
-    def parse_invasion_project(self, data: ProjectPcts) -> None:
+    def parse_invasion_project(self, data: ProjectPoints) -> None:
         self.reset_invasion_project()
-        fomor = data[0]
-        razor = data[1]
+        fomorian = data[0]
+        razorback = data[1]
         unk = data[2]
         if (unk != 0):
             LogHandler.debug(translate("invasionWidget", "unknownInvasionProject") + str(unk))
-        self.set_invasion_project(float(fomor), float(razor))
+        self.set_invasion_project(float(fomorian), float(razorback))
 
-    def set_invasion_project(self, fomor: float, razor: float) -> None:
-        self.FomorPer.setToolTip(str(fomor) + "%")
-        self.RazorPer.setToolTip(str(razor) + "%")
-        if (fomor >= 100):
-            fomor = 100
-        if (razor >= 100):
-            razor = 100
-        self.FomorPer.setValue(int(fomor))
-        self.RazorPer.setValue(int(razor))
+    def set_invasion_project(self, fomorian: float, razorback: float) -> None:
+        self.FomorianPer.setToolTip(str(fomorian) + "%")
+        self.RazorbackPer.setToolTip(str(razorback) + "%")
+        if (fomorian >= 100):
+            fomorian = 100
+        if (razorback >= 100):
+            razorback = 100
+        self.FomorianPer.setValue(int(fomorian))
+        self.RazorbackPer.setValue(int(razorback))
 
     def reset_invasion_project(self) -> None:
-        self.FomorPer.reset()
-        self.RazorPer.reset()
+        self.FomorianPer.reset()
+        self.RazorbackPer.reset()

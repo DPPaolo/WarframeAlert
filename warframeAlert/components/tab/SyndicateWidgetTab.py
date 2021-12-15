@@ -81,8 +81,8 @@ class SyndicateWidgetTab():
             self.syndicate_not_available()
 
     def parse_syndicate(self, data: SyndicateMissions) -> None:
-        sydicates = ['ArbitersSyndicate', 'CephalonSudaSyndicate', 'NewLokaSyndicate',
-                     'SteelMeridianSyndicate', 'PerrinSyndicate', 'RedVeilSyndicate']
+        syndicates = ['ArbitersSyndicate', 'CephalonSudaSyndicate', 'NewLokaSyndicate',
+                      'SteelMeridianSyndicate', 'PerrinSyndicate', 'RedVeilSyndicate']
         syndicate_updated = False
 
         for syn in data:
@@ -92,7 +92,7 @@ class SyndicateWidgetTab():
             seed = syn['Seed']
             tag = syn['Tag']
             node = syn['Nodes']
-            if (tag in sydicates):
+            if (tag in syndicates):
                 if (self.alerts['SyndicateMissions'][tag].get_syn_id() != syndicate_id):
                     self.alerts['SyndicateMissions'][tag].set_syndicate(tag, syndicate_id, seed)
                     self.alerts['SyndicateMissions'][tag].set_syndicate_mission(node)

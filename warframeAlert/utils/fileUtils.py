@@ -24,7 +24,7 @@ def is_window_os() -> bool:
 
 def get_separator() -> str:
     sep = "\\"  # Windows default separator
-    if (is_mac_os() or is_linux_os()):  # the OS is a MacOs or Linux
+    if (is_mac_os() or is_linux_os()):  # the OS is a macOS or Linux
         sep = "/"
     return sep
 

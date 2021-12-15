@@ -105,9 +105,9 @@ class Invasion():
         self.InvAttacker.setStyleSheet(get_invasion_color(defender_faction))
         self.InvDefender.setStyleSheet(get_invasion_color(attacker_faction))
 
-    def set_invasion_info(self, init: int, loctag: str, perc: List[int]):
+    def set_invasion_info(self, init: int, loc_tag: str, perc: List[int]):
         self.InvStart.setText(translate("invasion", "invasionInit") + " " + get_date_time(init))
-        self.InvDesc.setText(loctag)
+        self.InvDesc.setText(loc_tag)
         self.set_invasion_perc(perc)
 
     def set_invasion_reward(self, attacker_reward: str, defender_reward: str,

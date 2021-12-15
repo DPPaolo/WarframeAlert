@@ -23,24 +23,24 @@ class MissionDropView():
         self.ViewDrop2.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.ViewDrop3.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
-        droprotbox1 = QtWidgets.QVBoxLayout()
-        droprotbox2 = QtWidgets.QVBoxLayout()
-        droprotbox3 = QtWidgets.QVBoxLayout()
+        drop_rot_box1 = QtWidgets.QVBoxLayout()
+        drop_rot_box2 = QtWidgets.QVBoxLayout()
+        drop_rot_box3 = QtWidgets.QVBoxLayout()
 
         self.DropBox = QtWidgets.QHBoxLayout()
 
-        droprotbox1.addWidget(self.ViewDropLabel1)
-        droprotbox1.addWidget(self.ViewDrop1)
+        drop_rot_box1.addWidget(self.ViewDropLabel1)
+        drop_rot_box1.addWidget(self.ViewDrop1)
 
-        droprotbox2.addWidget(self.ViewDropLabel2)
-        droprotbox2.addWidget(self.ViewDrop2)
+        drop_rot_box2.addWidget(self.ViewDropLabel2)
+        drop_rot_box2.addWidget(self.ViewDrop2)
 
-        droprotbox3.addWidget(self.ViewDropLabel3)
-        droprotbox3.addWidget(self.ViewDrop3)
+        drop_rot_box3.addWidget(self.ViewDropLabel3)
+        drop_rot_box3.addWidget(self.ViewDrop3)
 
-        self.DropBox.addLayout(droprotbox1)
-        self.DropBox.addLayout(droprotbox2)
-        self.DropBox.addLayout(droprotbox3)
+        self.DropBox.addLayout(drop_rot_box1)
+        self.DropBox.addLayout(drop_rot_box2)
+        self.DropBox.addLayout(drop_rot_box3)
 
     def set_drop(self, num: int, names: List[str], drop: List[str]) -> None:
         self.ViewDrop1.setText(drop[0])

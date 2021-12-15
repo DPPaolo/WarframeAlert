@@ -20,7 +20,7 @@ class TwitchPromoWidget():
 
         self.gridTwitch = QtWidgets.QGridLayout(self.twitchPromoWidget)
 
-        self.NoTwitchLab = QtWidgets.QLabel(translate("twitchPromoWidget", "no_Twich_Promo"))
+        self.NoTwitchLab = QtWidgets.QLabel(translate("twitchPromoWidget", "noTwitchPromo"))
 
         self.gridTwitch.addWidget(self.NoTwitchLab, 0, 0)
 
@@ -64,26 +64,26 @@ class TwitchPromoWidget():
                         self.data['TwitchPromos'].append(temp)
                         del temp
 
-            self.add_twich_promo(n_promo)
+            self.add_twitch_promo(n_promo)
 
-    def add_twich_promo(self, n_twitch_promo: int) -> None:
+    def add_twitch_promo(self, n_twitch_promo: int) -> None:
         for i in range(n_twitch_promo, len(self.data['TwitchPromos'])):
             self.gridTwitch.addLayout(self.data['TwitchPromos'][i].TwitchBox, self.gridTwitch.count(), 0)
             self.n_twitch_promo += 1
 
         if (len(self.data['TwitchPromos']) > 0):
             self.NoTwitchLab.hide()
-            LogHandler.debug(translate("twitchPromoWidget", "active_twich_promo"))
+            LogHandler.debug(translate("twitchPromoWidget", "activeTwitchPromo"))
 
     def reset_twitch_promo(self) -> None:
         self.NoTwitchLab.show()
-        canc = []
+        cancelled = []
         for i in range(0, len(self.data['TwitchPromos'])):
             if (self.data['TwitchPromos'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.data['TwitchPromos'][canc[i-1]].hide()
-            remove_widget(self.data['TwitchPromos'][canc[i-1]].TwitchBox)
-            del self.data['TwitchPromos'][canc[i-1]]
+            self.data['TwitchPromos'][cancelled[i-1]].hide()
+            remove_widget(self.data['TwitchPromos'][cancelled[i-1]].TwitchBox)
+            del self.data['TwitchPromos'][cancelled[i-1]]
             i -= 1

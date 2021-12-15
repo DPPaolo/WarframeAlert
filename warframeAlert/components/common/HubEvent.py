@@ -27,54 +27,54 @@ class HubEvent():
         self.HubCycle = QtWidgets.QLabel("N/D")
         self.HubRepeatCycleLab = QtWidgets.QLabel(translate("hubEvent", "repeatCycle") + ": ")
         self.HubRepeatCycle = QtWidgets.QLabel("N/D")
-        self.HubTrasmissionLab = QtWidgets.QLabel(translate("hubEvent", "transmission") + ": ")
-        self.HubTrasmission = QtWidgets.QLabel("N/D")
+        self.HubTransmissionLab = QtWidgets.QLabel(translate("hubEvent", "transmission") + ": ")
+        self.HubTransmission = QtWidgets.QLabel("N/D")
 
         self.HubName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.HubName.setFont(font)
 
         self.HubBox = QtWidgets.QVBoxLayout()
 
-        hubhbox1 = QtWidgets.QHBoxLayout()
-        hubhbox2 = QtWidgets.QHBoxLayout()
-        hubhbox3 = QtWidgets.QHBoxLayout()
-        hubhbox4 = QtWidgets.QHBoxLayout()
+        hub_h_box1 = QtWidgets.QHBoxLayout()
+        hub_h_box2 = QtWidgets.QHBoxLayout()
+        hub_h_box3 = QtWidgets.QHBoxLayout()
+        hub_h_box4 = QtWidgets.QHBoxLayout()
 
-        hubhbox1.addWidget(self.HubInitLab)
-        hubhbox1.addWidget(self.HubInit)
-        hubhbox1.addWidget(self.HubEndLab)
-        hubhbox1.addWidget(self.HubEnd.TimeLab)
+        hub_h_box1.addWidget(self.HubInitLab)
+        hub_h_box1.addWidget(self.HubInit)
+        hub_h_box1.addWidget(self.HubEndLab)
+        hub_h_box1.addWidget(self.HubEnd.TimeLab)
 
-        hubhbox2.addWidget(self.HubNodeLab)
-        hubhbox2.addWidget(self.HubNode)
-        hubhbox2.addWidget(self.HubCinematicLab)
-        hubhbox2.addWidget(self.HubCinematic)
+        hub_h_box2.addWidget(self.HubNodeLab)
+        hub_h_box2.addWidget(self.HubNode)
+        hub_h_box2.addWidget(self.HubCinematicLab)
+        hub_h_box2.addWidget(self.HubCinematic)
 
-        hubhbox3.addWidget(self.HubCycleLab)
-        hubhbox3.addWidget(self.HubCycle)
-        hubhbox3.addWidget(self.HubRepeatCycleLab)
-        hubhbox3.addWidget(self.HubRepeatCycle)
+        hub_h_box3.addWidget(self.HubCycleLab)
+        hub_h_box3.addWidget(self.HubCycle)
+        hub_h_box3.addWidget(self.HubRepeatCycleLab)
+        hub_h_box3.addWidget(self.HubRepeatCycle)
 
-        hubhbox4.addWidget(self.HubTrasmissionLab)
-        hubhbox4.addWidget(self.HubTrasmission)
-        hubhbox4.addStretch(1)
+        hub_h_box4.addWidget(self.HubTransmissionLab)
+        hub_h_box4.addWidget(self.HubTransmission)
+        hub_h_box4.addStretch(1)
 
         self.HubBox.addWidget(self.HubName)
-        self.HubBox.addLayout(hubhbox1)
-        self.HubBox.addLayout(hubhbox2)
-        self.HubBox.addLayout(hubhbox3)
-        self.HubBox.addLayout(hubhbox4)
+        self.HubBox.addLayout(hub_h_box1)
+        self.HubBox.addLayout(hub_h_box2)
+        self.HubBox.addLayout(hub_h_box3)
+        self.HubBox.addLayout(hub_h_box4)
         self.HubEnd.TimeOut.connect(self.hide)
 
-    def set_hubevent_data(self, init: str, end: int, tag: str, node: tuple[str, str],
-                          cinematic: str, interval: int, cycle: int, trasmission: str) -> None:
+    def set_hub_event_data(self, init: str, end: int, tag: str, node: tuple[str, str],
+                           cinematic: str, interval: int, cycle: int, trasmission: str) -> None:
         self.HubInit.setText(init)
         self.HubName.setText(tag)
         self.HubNode.setText(node[0] + " " + node[1])
         self.HubCinematic.setText(cinematic)
         self.HubRepeatCycle.setText(str(interval) + " " + translate("hubEvent", "seconds"))
         self.HubCycle.setText(str(cycle) + " " + translate("hubEvent", "seconds"))
-        self.HubTrasmission.setText(trasmission)
+        self.HubTransmission.setText(trasmission)
 
         self.HubEnd.set_countdown(end[:10])
         self.HubEnd.start()
@@ -99,8 +99,8 @@ class HubEvent():
         self.HubRepeatCycle.hide()
         self.HubCycleLab.hide()
         self.HubCycle.hide()
-        self.HubTrasmissionLab.hide()
-        self.HubTrasmission.hide()
+        self.HubTransmissionLab.hide()
+        self.HubTransmission.hide()
 
     def is_expired(self) -> bool:
         return (int(self.HubEnd.get_time()) - int(timeUtils.get_local_time())) < 0
@@ -131,12 +131,12 @@ def create_hub_event(hub: HubEventData) -> HubEvent:
     else:
         cycle = 0
     if ('Transmissions' in hub):
-        trasmission = hub['Transmissions'][0]
+        transmission = hub['Transmissions'][0]
         for i in range(1, len(hub['Transmissions'])):
-            trasmission += "\n" + hub['Transmissions'][i]
+            transmission += "\n" + hub['Transmissions'][i]
     else:
-        trasmission = hub['Transmission']
+        transmission = hub['Transmission']
 
     temp = HubEvent()
-    temp.set_hubevent_data(init, end, tag, node, cinematic, interval, cycle, trasmission)
+    temp.set_hub_event_data(init, end, tag, node, cinematic, interval, cycle, transmission)
     return temp

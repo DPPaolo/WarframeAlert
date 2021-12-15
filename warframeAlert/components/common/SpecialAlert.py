@@ -115,7 +115,7 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
             elif (alert['missionType'] == "MT_ARTIFACT"):
                 wave += " " + translate("specialAlert", "pipe")
             else:
-                LogHandler.debug(translate("specialAlert", "unkownWaveType") + " " + alert['missionType'])
+                LogHandler.debug(translate("specialAlert", "unknownWaveType") + " " + alert['missionType'])
         difficulty = alert['difficulty']*100
         enemy_spec = alert['enemySpec']
 

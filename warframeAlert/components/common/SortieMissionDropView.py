@@ -20,7 +20,6 @@ def get_sortie_reward_color(rarity: float) -> str:
 class SortieMissionDropView():
 
     def __init__(self) -> None:
-
         self.DropBox = QtWidgets.QVBoxLayout()
 
     def set_drop(self, drop: List[str]) -> None:

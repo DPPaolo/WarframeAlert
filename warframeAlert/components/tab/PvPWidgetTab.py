@@ -33,7 +33,7 @@ class PvPWidgetTab():
         self.PvPDayInit = QtWidgets.QLabel(translate("pvpWidgetTab", "start") + " N/D")
         self.PvPDayFin = Countdown(translate("pvpWidgetTab", "end"))
 
-        self.PvPtabber = QtWidgets.QTabWidget(self.PvPWidget)
+        self.PvPTabber = QtWidgets.QTabWidget(self.PvPWidget)
 
         self.gridDayPvP = QtWidgets.QGridLayout(self.DayPvPWidget)
         self.gridWeekPvP = QtWidgets.QGridLayout(self.WeekPvPWidget)
@@ -46,13 +46,13 @@ class PvPWidgetTab():
         self.gridWeekPvP.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.gridDayPvP.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
-        self.PvPtabber.insertTab(0, self.DayPvPWidget, translate("pvpWidgetTab", "dailyMission"))
-        self.PvPtabber.insertTab(1, self.WeekPvPWidget, translate("pvpWidgetTab", "weeklyMission"))
-        self.PvPtabber.insertTab(2, self.OtherPvPWidget.get_widget(), translate("pvpWidgetTab", "alternativeMission"))
-        self.PvPtabber.insertTab(3, self.TournamentWidget.get_widget(), translate("pvpWidgetTab", "tournamentMission"))
+        self.PvPTabber.insertTab(0, self.DayPvPWidget, translate("pvpWidgetTab", "dailyMission"))
+        self.PvPTabber.insertTab(1, self.WeekPvPWidget, translate("pvpWidgetTab", "weeklyMission"))
+        self.PvPTabber.insertTab(2, self.OtherPvPWidget.get_widget(), translate("pvpWidgetTab", "alternativeMission"))
+        self.PvPTabber.insertTab(3, self.TournamentWidget.get_widget(), translate("pvpWidgetTab", "tournamentMission"))
 
         grid_pvp = QtWidgets.QGridLayout(self.PvPWidget)
-        grid_pvp.addWidget(self.PvPtabber, 0, 0)
+        grid_pvp.addWidget(self.PvPTabber, 0, 0)
         grid_pvp.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.PvPWidget.setLayout(grid_pvp)
 
@@ -60,13 +60,13 @@ class PvPWidgetTab():
         return self.PvPWidget
 
     def update_tab(self) -> None:
-        self.PvPtabber.insertTab(2, self.OtherPvPWidget.get_widget(), translate("pvpWidgetTab", "alternativeMission"))
-        self.PvPtabber.insertTab(3, self.TournamentWidget.get_widget(), translate("pvpWidgetTab", "tournamentMission"))
+        self.PvPTabber.insertTab(2, self.OtherPvPWidget.get_widget(), translate("pvpWidgetTab", "alternativeMission"))
+        self.PvPTabber.insertTab(3, self.TournamentWidget.get_widget(), translate("pvpWidgetTab", "tournamentMission"))
 
-        if (not (self.OtherPvPWidget.get_lenght() > 0)):
-            self.PvPtabber.removeTab(self.PvPtabber.indexOf(self.OtherPvPWidget.get_widget()))
-        if (not (self.TournamentWidget.get_lenght() > 0)):
-            self.PvPtabber.removeTab(self.PvPtabber.indexOf(self.TournamentWidget.get_widget()))
+        if (not (self.OtherPvPWidget.get_length() > 0)):
+            self.PvPTabber.removeTab(self.PvPTabber.indexOf(self.OtherPvPWidget.get_widget()))
+        if (not (self.TournamentWidget.get_length() > 0)):
+            self.PvPTabber.removeTab(self.PvPTabber.indexOf(self.TournamentWidget.get_widget()))
 
     def update_pvp_mission(self, data: PVPChallengeInstances) -> None:
         if (OptionsHandler.get_option("Tab/PVP") == 1):
@@ -206,23 +206,23 @@ class PvPWidgetTab():
             self.pvp_mission_not_available()
 
     def reset_pvp_mission(self) -> None:
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['PvPMission']['Daily'])):
             if (self.alerts['PvPMission']['Daily'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['PvPMission']['Daily'][canc[i - 1]].hide()
-            remove_widget(self.alerts['PvPMission']['Daily'][canc[i - 1]].PvPMissionBox)
-            del self.alerts['PvPMission']['Daily'][canc[i - 1]]
+            self.alerts['PvPMission']['Daily'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['PvPMission']['Daily'][cancelled[i - 1]].PvPMissionBox)
+            del self.alerts['PvPMission']['Daily'][cancelled[i - 1]]
             i -= 1
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['PvPMission']['Weekly'])):
             if (self.alerts['PvPMission']['Weekly'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['PvPMission']['Weekly'][canc[i - 1]].hide()
-            remove_widget(self.alerts['PvPMission']['Weekly'][canc[i - 1]].PvPMissionBox)
-            del self.alerts['PvPMission']['Weekly'][canc[i - 1]]
+            self.alerts['PvPMission']['Weekly'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['PvPMission']['Weekly'][cancelled[i - 1]].PvPMissionBox)
+            del self.alerts['PvPMission']['Weekly'][cancelled[i - 1]]
             i -= 1

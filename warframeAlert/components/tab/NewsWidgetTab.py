@@ -44,7 +44,7 @@ class NewsWidgetTab():
         self.NewsWidget = QtWidgets.QWidget()
         self.ContestWidget = QtWidgets.QWidget()
 
-        self.Newstabber = QtWidgets.QTabWidget()
+        self.NewsTabber = QtWidgets.QTabWidget()
 
         self.grid = QtWidgets.QGridLayout(self.NewsWidget)
         self.gridC = QtWidgets.QGridLayout(self.ContestWidget)
@@ -67,8 +67,8 @@ class NewsWidgetTab():
         self.NewsScrollBar.setWidget(self.NewsWidget)
         self.NewsScrollBarC.setWidget(self.ContestWidget)
 
-        self.Newstabber.insertTab(0, self.NewsScrollBar, translate("newsWidgetTab", "newsLabel"))
-        self.Newstabber.insertTab(1, self.NewsScrollBarC, translate("newsWidgetTab", "communityLabel"))
+        self.NewsTabber.insertTab(0, self.NewsScrollBar, translate("newsWidgetTab", "newsLabel"))
+        self.NewsTabber.insertTab(1, self.NewsScrollBarC, translate("newsWidgetTab", "communityLabel"))
 
         self.NewsLabel = QtWidgets.QLabel("")
 
@@ -87,7 +87,7 @@ class NewsWidgetTab():
         self.gridNews = QtWidgets.QGridLayout(self.NewsWidgetTab)
         self.gridNews.addWidget(self.GlobalUpgrade, 0, 0, 1, 3)
         self.gridNews.addWidget(self.NewsLabel, 1, 0, 1, 3)
-        self.gridNews.addWidget(self.Newstabber, 2, 0, 1, 3)
+        self.gridNews.addWidget(self.NewsTabber, 2, 0, 1, 3)
         self.gridNews.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.NewsWidgetTab.setLayout(self.gridNews)
@@ -321,13 +321,13 @@ class NewsWidgetTab():
             self.NoNewsOtherLabel.show()
 
     def reset_global_upgrades(self) -> None:
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['GlobalUpgrades'])):
             if (self.alerts['GlobalUpgrades'][i].is_expired()):
-                canc.append(i)
-        i = len(canc)
+                cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['GlobalUpgrades'][canc[i - 1]].hide()
-            remove_widget(self.alerts['GlobalUpgrades'][canc[i - 1]].UpgradeBox)
-            del self.alerts['GlobalUpgrades'][canc[i - 1]]
+            self.alerts['GlobalUpgrades'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['GlobalUpgrades'][cancelled[i - 1]].UpgradeBox)
+            del self.alerts['GlobalUpgrades'][cancelled[i - 1]]
             i -= 1

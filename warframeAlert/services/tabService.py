@@ -146,11 +146,14 @@ class TabService(QtCore.QObject):
         self.invasion_tab.update_invasion(json_data['Invasions'])
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
         self.other_tab.update_relay_station(json_data['NodeOverrides'])
-        self.invasion_tab.update_node_ovveride(json_data['NodeOverrides'])
+        self.invasion_tab.update_node_override(json_data['NodeOverrides'])
         self.pvp_tab.update_pvp_tournament(json_data['PVPActiveTournaments'])
         self.pvp_tab.update_pvp_alternative_mission(json_data['PVPAlternativeModes'])
         self.pvp_tab.update_pvp_mission(json_data['PVPChallengeInstances'])
         self.acolyte_tab.update_acolyte(json_data['PersistentEnemies'])
+        if ('PrimeTokenAvailability' in json_data and json_data['PrimeTokenAvailability']):
+            self.event_tab.parse_prime_vault_traders(json_data['PrimeVaultTraders'])
+
         self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'])
         self.invasion_tab.update_invasion_project(json_data['ProjectPct'])
         if ('SeasonInfo' in json_data):

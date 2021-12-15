@@ -29,7 +29,7 @@ class PvPAlternativeWidget():
     def get_widget(self) -> QtWidgets.QWidget:
         return self.PvPAlternativeWidget
 
-    def get_lenght(self) -> int:
+    def get_length(self) -> int:
         return len(self.alerts['PvPAlternative'])
 
     def parse_pvp_alternative_mission(self, data: PVPAlternativeModes) -> None:
@@ -65,13 +65,13 @@ class PvPAlternativeWidget():
                     else:
                         player = "Standard"
                     if ('MaxTeamCountDifferenceOverride' in pvp):
-                        maxteam = pvp['MaxTeamCountDifferenceOverride']
+                        max_team = pvp['MaxTeamCountDifferenceOverride']
                     else:
-                        maxteam = "Standard"
+                        max_team = "Standard"
                     if ('MinPlayersPerTeamOverride' in pvp):
-                        minplayer = pvp['MinPlayersPerTeamOverride']
+                        min_players = pvp['MinPlayersPerTeamOverride']
                     else:
-                        minplayer = "Standard"
+                        min_players = "Standard"
                     mode = get_pvp_mission_type(pvp['TargetMode'])
                     weapon = []
                     for loadout in pvp['ForcedLoadouts'][0]['WeaponOverrides']:
@@ -84,7 +84,7 @@ class PvPAlternativeWidget():
                             weapon.append(translate("pvpAlternativeWidget", "any").upper())
 
                     temp = PvPAlternativeMissionBox(name)
-                    temp.set_pvp_data_match(time, player, maxteam, minplayer, mode, desc)
+                    temp.set_pvp_data_match(time, player, max_team, min_players, mode, desc)
                     temp.set_disabled_data(disable_ammo, disable_energy, disable_energy_surge,
                                            disable_hud_weapon, disable_change_weapon)
                     temp.set_pvp_weapon_restriction(weapon[0], weapon[2], weapon[1], weapon[3])
@@ -103,14 +103,14 @@ class PvPAlternativeWidget():
 
     def reset_pvp_alternative(self) -> None:
         self.NoPvPAltLab.show()
-        canc = []
+        cancelled = []
         for i in range(0, len(self.alerts['PvPAlternative'])):
-            canc.append(i)
-        i = len(canc)
+            cancelled.append(i)
+        i = len(cancelled)
         while i > 0:
-            self.alerts['PvPAlternative'][canc[i - 1]].hide()
-            remove_widget(self.alerts['PvPAlternative'][canc[i - 1]].PvPAltBox)
-            del self.alerts['PvPAlternative'][canc[i - 1]]
+            self.alerts['PvPAlternative'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['PvPAlternative'][cancelled[i - 1]].PvPAltBox)
+            del self.alerts['PvPAlternative'][cancelled[i - 1]]
             i -= 1
 
     def pvp_alternative_mission_not_available(self) -> None:

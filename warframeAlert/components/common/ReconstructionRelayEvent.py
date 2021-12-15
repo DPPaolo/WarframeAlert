@@ -27,7 +27,7 @@ class ReconstructionRelayEvent(Event):
         self.TARelayNode = QtWidgets.QLabel("N/D")
         self.TARelayNode.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
-        self.TAListRegion = QtWidgets.QLabel(translate("reconstrutionEvent", "resourcePlanet") + ":")
+        self.TAListRegion = QtWidgets.QLabel(translate("reconstructionEvent", "resourcePlanet") + ":")
         self.TAListRegion.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
         self.TARegion0 = QtWidgets.QLabel("N/D")
@@ -56,18 +56,18 @@ class ReconstructionRelayEvent(Event):
 
         self.TAReconstructionBox = QtWidgets.QVBoxLayout()
 
-        self.TAReconstructionhbox = QtWidgets.QHBoxLayout()
+        self.TAReconstructionHBox = QtWidgets.QHBoxLayout()
 
-        self.TAReconstructionhbox.addWidget(self.TARegion0)
-        self.TAReconstructionhbox.addWidget(self.TARegion1)
-        self.TAReconstructionhbox.addWidget(self.TARegion2)
-        self.TAReconstructionhbox.addWidget(self.TARegion3)
-        self.TAReconstructionhbox.addWidget(self.TARegion4)
+        self.TAReconstructionHBox.addWidget(self.TARegion0)
+        self.TAReconstructionHBox.addWidget(self.TARegion1)
+        self.TAReconstructionHBox.addWidget(self.TARegion2)
+        self.TAReconstructionHBox.addWidget(self.TARegion3)
+        self.TAReconstructionHBox.addWidget(self.TARegion4)
 
         self.TAReconstructionBox.addWidget(self.TARelayNode)
         self.TAReconstructionBox.addLayout(EmptySpace().SpaceBox)
         self.TAReconstructionBox.addWidget(self.TAListRegion)
-        self.TAReconstructionBox.addLayout(self.TAReconstructionhbox)
+        self.TAReconstructionBox.addLayout(self.TAReconstructionHBox)
         self.TAReconstructionBox.addLayout(EmptySpace().SpaceBox)
         self.TAReconstructionBox.addWidget(self.TATask0)
         self.TAReconstructionBox.addWidget(self.TATask1)
@@ -82,21 +82,21 @@ class ReconstructionRelayEvent(Event):
 
     def add_relay_reconstruction(self, region: str, node: str, task: List[str]) -> None:
         node = get_node(node)
-        self.TARelayNode.setText(translate("reconstrutionEvent", "reconstructionNode") + " " + node[0] + " " + node[1])
-        region_lenght = len(region)
+        self.TARelayNode.setText(translate("reconstructionEvent", "reconstructionNode") + " " + node[0] + " " + node[1])
+        region_length = len(region)
         self.TARegion0.setText(get_region(region[0]))
         self.TARegion1.setText(get_region(region[1]))
         self.TARegion2.setText(get_region(region[2]))
         self.TARegion3.setText(get_region(region[3]))
-        if (region_lenght > 4):
+        if (region_length > 4):
             self.TARegion4.show()
             self.TARegion4.setText(get_region(region[4]))
-        task_lenght = len(task)
+        task_length = len(task)
         self.TATask0.setText(str(task[0][1]) + "x " + task[0][0])
         self.TATask1.setText(str(task[1][1]) + "x " + task[1][0])
         self.TATask2.setText(str(task[2][1]) + "x " + task[2][0])
         self.TATask3.setText(str(task[3][1]) + "x " + task[3][0])
-        if (task_lenght > 4):
+        if (task_length > 4):
             self.TATask4.show()
             self.TATask4.setText(str(task[4][1]) + "x " + task[4][0])
 

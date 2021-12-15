@@ -21,22 +21,22 @@ class SeasonBox():
         self.ChallengeTitle.setFont(self.Font)
         self.ChallengeEnd = Countdown()
 
-        self.Seasonhbox1 = QtWidgets.QHBoxLayout()
-        self.Seasonhbox2 = QtWidgets.QHBoxLayout()
+        self.SeasonHBox1 = QtWidgets.QHBoxLayout()
+        self.SeasonHBox2 = QtWidgets.QHBoxLayout()
 
         self.SeasonBox = QtWidgets.QVBoxLayout()
 
-        self.Seasonhbox1.addWidget(self.ChallengeTitle)
-        self.Seasonhbox1.addStretch(1)
-        self.Seasonhbox1.addWidget(self.ChallengeType)
+        self.SeasonHBox1.addWidget(self.ChallengeTitle)
+        self.SeasonHBox1.addStretch(1)
+        self.SeasonHBox1.addWidget(self.ChallengeType)
 
-        self.Seasonhbox2.addWidget(self.ChallengeEnd.TimeLab)
-        self.Seasonhbox2.addStretch(1)
-        self.Seasonhbox2.addWidget(self.ChallengePoint)
+        self.SeasonHBox2.addWidget(self.ChallengeEnd.TimeLab)
+        self.SeasonHBox2.addStretch(1)
+        self.SeasonHBox2.addWidget(self.ChallengePoint)
 
-        self.SeasonBox.addLayout(self.Seasonhbox1)
+        self.SeasonBox.addLayout(self.SeasonHBox1)
         self.SeasonBox.addWidget(self.ChallengeDesc)
-        self.SeasonBox.addLayout(self.Seasonhbox2)
+        self.SeasonBox.addLayout(self.SeasonHBox2)
         self.SeasonBox.setContentsMargins(10, 10, 10, 10)
 
     def get_challenge_id(self) -> str:
@@ -68,7 +68,7 @@ class SeasonBox():
         elif (challenge[2] == 7000):
             temp = translate("seasonBox", "weeklyElite").upper()
         else:
-            temp = translate("seasonBox", "unkown").upper()
+            temp = translate("seasonBox", "unknown").upper()
         self.ChallengeType.setText(temp)
 
     def hide(self) -> None:

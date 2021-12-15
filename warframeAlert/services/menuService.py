@@ -22,7 +22,7 @@ class MenuService():
         self.EELogViewWidget.get_widget().show()
 
 
-def open_old_allert(tab_service: TabService) -> None:
+def open_old_alert(tab_service: TabService) -> None:
     path = get_cur_dir()
     path = QtWidgets.QFileDialog.getOpenFileName(QtWidgets.QWidget(),
                                                  translate("menuService", "selectAlertFile"),

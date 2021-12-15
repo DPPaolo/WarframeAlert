@@ -63,8 +63,8 @@ class SortieWidgetTab():
                     mission = get_mission_type(variant['missionType'])
                     modifier = get_sortie_modifier(variant['modifierType'])
                     node, planet = get_node(variant['node'])
-                    tileset = get_map_type(variant['tileset'])
-                    self.SortieBox.set_mission_data(num, mission, modifier, node, planet, tileset)
+                    tile_set = get_map_type(variant['tileset'])
+                    self.SortieBox.set_mission_data(num, mission, modifier, node, planet, tile_set)
 
                 self.alerts['Sorties'] = actual_sortie_id
 

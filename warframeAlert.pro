@@ -6,6 +6,7 @@ SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/common/DailyDeals.py \
                warframeAlert/components/common/Event.py \
                warframeAlert/components/common/EventReward.py \
+               warframeAlert/components/common/EventVaultTrader.py \
                warframeAlert/components/common/FissureBox.py \
                warframeAlert/components/common/GlobalUpgrade.py \
                warframeAlert/components/common/HubEvent.py \
@@ -26,6 +27,8 @@ SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/common/SquadLinkEvent.py \
                warframeAlert/components/common/SyndicateBox.py \
                warframeAlert/components/common/TwitchBox.py \
+               warframeAlert/components/common/VaultItemBox.py \
+               warframeAlert/components/common/VaultScheduleBox.py \
                warframeAlert/components/tab/AcolyteWidgetTab.py \
                warframeAlert/components/tab/BaroWidgetTab.py \
                warframeAlert/components/tab/BountyWidgetTab.py \

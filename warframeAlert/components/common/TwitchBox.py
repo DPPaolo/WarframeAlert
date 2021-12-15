@@ -24,14 +24,14 @@ class TwitchBox:
         self.TwitchType.setFont(font)
         self.TwitchType.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
-        twitchbox = QtWidgets.QHBoxLayout()
+        twitchBox = QtWidgets.QHBoxLayout()
 
         self.TwitchBox = QtWidgets.QVBoxLayout()
 
-        twitchbox.addWidget(self.TwitchInit)
-        twitchbox.addWidget(self.TwitchEnd.TimeLab)
+        twitchBox.addWidget(self.TwitchInit)
+        twitchBox.addWidget(self.TwitchEnd.TimeLab)
 
-        self.TwitchBox.addLayout(twitchbox)
+        self.TwitchBox.addLayout(twitchBox)
         self.TwitchBox.addWidget(self.TwitchType)
 
         self.TwitchEnd.TimeOut.connect(self.hide)

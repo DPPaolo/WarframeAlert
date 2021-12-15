@@ -129,7 +129,7 @@ def validate_prime_vault_availabilities(json_data: PrimeVaultAvailabilities) -> 
     validate(instance={'PrimeVaultAvailabilities': json_data}, schema=prime_vault_availabilities_schema)
 
 
-def validate_invasion_project(json_data: ProjectPcts) -> None:
+def validate_invasion_project(json_data: ProjectPoints) -> None:
     validate(instance={'ProjectPct': json_data}, schema=invasion_project_schema)
 
 
