@@ -24,4 +24,3 @@ class VaultScheduleBox():
 
         self.ScheduleBox.addWidget(self.VaultScheduleName)
         self.ScheduleBox.addWidget(self.VaultScheduleEnd.TimeLab)
-

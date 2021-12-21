@@ -654,7 +654,7 @@
         <translation>Event Schedule</translation>
     </message>
     <message>
-        <location filename="../components/common/EventVaultTrader.py" line="92"/>
+        <location filename="../components/common/EventVaultTrader.py" line="90"/>
         <source>eventVaultName</source>
         <translation>Prime Resurgence</translation>
     </message>
@@ -971,12 +971,12 @@
     <message>
         <location filename="../components/widget/GeneralInfoWidget.py" line="77"/>
         <source>fileVersion</source>
-        <translation>File Version</translation>
+        <translation>API Version</translation>
     </message>
     <message>
         <location filename="../components/widget/GeneralInfoWidget.py" line="78"/>
         <source>mobileFileVersion</source>
-        <translation>Mobile File Version</translation>
+        <translation>Warframe Nexus Version</translation>
     </message>
     <message>
         <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
@@ -1976,29 +1976,34 @@
         <translation>Visible</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="69"/>
+        <location filename="../components/common/SalesBox.py" line="70"/>
         <source>bogobuy</source>
         <translation>Bogobuy</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="70"/>
+        <location filename="../components/common/SalesBox.py" line="71"/>
         <source>bogoget</source>
         <translation>Bogoget</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="72"/>
+        <location filename="../components/common/SalesBox.py" line="73"/>
         <source>featured</source>
         <translation>Featured</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="73"/>
+        <location filename="../components/common/SalesBox.py" line="74"/>
         <source>popular</source>
         <translation>Popular</translation>
     </message>
     <message>
-        <location filename="../components/common/SalesBox.py" line="68"/>
+        <location filename="../components/common/SalesBox.py" line="69"/>
         <source>start</source>
         <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="75"/>
+        <source>showWithRecommended</source>
+        <translation>Show with recommended</translation>
     </message>
 </context>
 <context>

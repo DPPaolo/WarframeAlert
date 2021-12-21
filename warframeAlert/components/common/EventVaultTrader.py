@@ -76,14 +76,12 @@ class EventVaultTrader():
         self.TADescBox4.addWidget(self.EventSuccessLab)
         self.TADescBox4.addWidget(self.EventSuccess)
 
-        self.TAInfoBox.addStretch()
         self.TAInfoBox.addLayout(self.TADescBox1)
         self.TAInfoBox.addLayout(self.TADescBox2)
         self.TAInfoBox.addLayout(self.TADescBox3)
         self.TAInfoBox.addLayout(self.TADescBox4)
         self.TAInfoBox.addWidget(self.scheduleSpoiler)
         self.TAInfoBox.addWidget(self.manifestSpoiler)
-        self.TAInfoBox.addStretch()
 
         self.TAEventBox.addLayout(self.TAInfoBox)
 

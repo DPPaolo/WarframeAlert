@@ -108,10 +108,11 @@ class SalesWidgetTab():
                     plat = sales['PremiumOverride']
                     credit = sales['RegularOverride']
                     is_show = sales['ShowInMarket']
+                    show_with_recommended = sales['ShowWithRecommended'] if ('ShowWithRecommended' in sales) else False
 
                     temp = SalesBox(index)
                     temp.set_sales_data(item, credit, plat, discount, end, is_show)
-                    temp.set_other_sales_data(bogobuy, bogoget, featured, popular, init)
+                    temp.set_other_sales_data(bogobuy, bogoget, featured, popular, init, show_with_recommended)
 
                     if (discount > 0):
                         self.alerts['FlashSales']['Discount'].append(temp)

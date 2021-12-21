@@ -494,6 +494,7 @@ flash_sales_schema = {
                 "PremiumOverride": {"type": "integer"},
                 "RegularOverride": {"type": "integer"},
                 "ShowInMarket": {"type": "boolean"},
+                "ShowWithRecommended": {"type": "boolean"},
                 "Featured": {"type": "boolean"},
                 "Popular": {"type": "boolean"},
                 "TypeName": {"type": "string"},
