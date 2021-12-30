@@ -515,10 +515,10 @@ def translate_item_from_drop_file(data: str) -> str:
         return translate_special_weapon(data)
     elif (is_prime_part(data)):
         return translate_prime_part(data)
-    elif (is_weapon_parts(data)):
-        return translate_weapon_parts(data)
     elif (is_warframe_parts(data)):
         return translate_warframe_part(data)
+    elif (is_weapon_parts(data)):
+        return translate_weapon_parts(data)
     elif (is_railjack_weapon(data)):
         return translate_generic_item(data)
     else:
@@ -565,7 +565,7 @@ def is_item(item: str) -> bool:
 
 
 def is_arcane_item(item: str) -> bool:
-    return "ARCANE" in item
+    return "ARCANE" in item or "THEOREM" in item or "RESIDUAL" in item
 
 
 def is_special_weapon(item: str) -> bool:
@@ -650,7 +650,7 @@ def translate_warframe_part(item: str) -> str:
         j += 1
         if (j != len(warframe_parts)):
             parts_translated += " "
-    return warframe.capitalize() + "  " + parts_translated
+    return warframe.capitalize() + " " + parts_translated
 
 
 def is_weapon_parts(item: str) -> bool:
@@ -659,7 +659,7 @@ def is_weapon_parts(item: str) -> bool:
     for i in range(0, len(item_parts)):
         if (item_parts[i] in warframeData.ITEM_PARTS and i != 0):
             equal_parts += 1
-    return equal_parts == 1
+    return equal_parts >= 1
 
 
 def translate_weapon_parts(item: str) -> str:

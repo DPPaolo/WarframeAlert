@@ -9,14 +9,14 @@ from warframeAlert.utils.fileUtils import get_cur_dir
 
 
 class MenuService():
-    COPYRIGHT = translate("menuService", "createdBy") + " Onniscente\n\n" + \
-                "Warframe's Content and Materials are Trademarks and Copyrights of Digital Extremes."
+    COPYRIGHT = " Onniscente\n\nWarframe's Content and Materials are Trademarks and Copyrights of Digital Extremes."
 
     def __init__(self) -> None:
         self.EELogViewWidget = EELogWidget()
 
     def show_info(self) -> None:
-        MessageBox(translate("menuService", "infoTitle"), self.COPYRIGHT, MessageBoxType.INFO)
+        copyright_text = translate("menuService", "createdBy") + self.COPYRIGHT
+        MessageBox(translate("menuService", "infoTitle"), copyright_text, MessageBoxType.INFO)
 
     def open_window_read_warframe_log(self) -> None:
         self.EELogViewWidget.get_widget().show()
