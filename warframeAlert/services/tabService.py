@@ -170,6 +170,8 @@ class TabService(QtCore.QObject):
         world_seed: str = json_data['WorldSeed']
         force_logout_version: int = json_data['ForceLogoutVersion']
         dtls: bool = json_data['DTLS'] if ('DTLS' in json_data) else False
-        self.other_tab.set_other_datas(version, mobile_version, world_seed, force_logout_version, dtls)
+        sentient_anomalies = json_data['Tmp']
+        self.other_tab.set_other_datas(version, mobile_version, world_seed,
+                                       force_logout_version, dtls, sentient_anomalies)
 
         self.update_tabber()

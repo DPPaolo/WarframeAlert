@@ -6,6 +6,7 @@ from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAva
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import bool_to_yes_no
+from warframeAlert.utils.gameTranslationUtils import get_node
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.stringUtils import divide_message
 
@@ -25,6 +26,7 @@ class GeneralInfoWidget():
         self.MobVersion = QtWidgets.QLabel(translate("generalWidget", "mobileFileVersion") + ": N/D")
         self.ForceLogoutVersion = QtWidgets.QLabel(translate("generalWidget", "forceLogoutVersion") + ": N/D")
         self.DTLDSActivated = QtWidgets.QLabel(translate("generalWidget", "DTLSActivated") + ": N/D")
+        self.SentientAnomalies = QtWidgets.QLabel(translate("generalWidget", "sentienAnomalies") + ": N/D")
         self.WorldSeedLab = QtWidgets.QLabel(translate("generalWidget", "worldSeed") + ": ")
         self.WorldSeed = QtWidgets.QLabel("N/D")
         self.PrimeAccessLab = QtWidgets.QLabel(translate("generalWidget", "primeAccessState") + ": ")
@@ -45,14 +47,15 @@ class GeneralInfoWidget():
         self.gridOther.addWidget(self.MobVersion, 1, 1)
         self.gridOther.addWidget(self.ForceLogoutVersion, 2, 0)
         self.gridOther.addWidget(self.DTLDSActivated, 2, 1)
-        self.gridOther.addWidget(self.WorldSeedLab, 3, 0)
-        self.gridOther.addWidget(self.WorldSeed, 4, 0, 1, 2)
-        self.gridOther.addWidget(self.PrimeAccessLab, 5, 0)
-        self.gridOther.addWidget(self.PrimeAccess, 5, 1)
-        self.gridOther.addWidget(self.PrimeVaultLab, 6, 0)
-        self.gridOther.addWidget(self.PrimeVault, 6, 1)
-        self.gridOther.addWidget(self.FeaturedDojoLab, 7, 0)
-        self.gridOther.addWidget(self.FeaturedDojo, 7, 1)
+        self.gridOther.addWidget(self.SentientAnomalies, 3, 0)
+        self.gridOther.addWidget(self.WorldSeedLab, 4, 0)
+        self.gridOther.addWidget(self.WorldSeed, 5, 0, 1, 2)
+        self.gridOther.addWidget(self.PrimeAccessLab, 6, 0)
+        self.gridOther.addWidget(self.PrimeAccess, 6, 1)
+        self.gridOther.addWidget(self.PrimeVaultLab, 7, 0)
+        self.gridOther.addWidget(self.PrimeVault, 7, 1)
+        self.gridOther.addWidget(self.FeaturedDojoLab, 8, 0)
+        self.gridOther.addWidget(self.FeaturedDojo, 8, 1)
 
         self.generalInfoWidget.setLayout(self.gridOther)
         self.gridOther.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
@@ -73,16 +76,20 @@ class GeneralInfoWidget():
         self.EarthTime.set_countdown(int(timeUtils.get_local_time()) + earth_time)
         self.EarthTime.start()
 
-    def set_other_datas(self, version: int, mob_version: str, world_seed: str, force_logout: int, dtls: bool) -> None:
+    def set_other_datas(self, version: int, mob_version: str, world_seed: str,
+                        force_logout: int, dtls: bool, sentient_anomalies: str) -> None:
         version_text = translate("generalWidget", "fileVersion") + ": " + str(version)
         mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
         dtls_active_text = translate("generalWidget", "DTLSActivated") + ": " + bool_to_yes_no(dtls)
+        sentient_anomalies_node = "CrewBattleNode" + sentient_anomalies.split(":")[1].split("}")[0]
+        anomalies_text = translate("generalWidget", "sentienAnomalies") + ": " + get_node(sentient_anomalies_node)[0]
         self.Version.setText(version_text)
         self.MobVersion.setText(mobile_version_text)
         self.ForceLogoutVersion.setText(force_logout_text)
         self.DTLDSActivated.setText(dtls_active_text)
         self.WorldSeed.setText(divide_message(world_seed, 100))
+        self.SentientAnomalies.setText(anomalies_text)
 
     def parse_featured_dojo(self, data: FeaturedGuilds) -> None:
         guild = ["", "", "", "", ""]

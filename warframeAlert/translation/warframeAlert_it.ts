@@ -964,179 +964,184 @@
 <context>
     <name>generalWidget</name>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="23"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="24"/>
         <source>earthTime</source>
         <translation>Ora sulla Terra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="77"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="81"/>
         <source>fileVersion</source>
         <translation>Versione API</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="78"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="82"/>
         <source>mobileFileVersion</source>
         <translation>Versione Warframe Nexus</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="28"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
         <source>worldSeed</source>
         <translation>World Seed</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="30"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
         <source>primeAccessState</source>
         <translation>Stato Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="32"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="34"/>
         <source>primeVaultState</source>
         <translation>Stato Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="34"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="36"/>
         <source>featuredDojo</source>
         <translation>Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="67"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
         <source>earthTimeDay</source>
         <translation>Ora sulla Terra : Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="68"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="71"/>
         <source>timeToNight</source>
         <translation>Tempo per la Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="70"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="73"/>
         <source>earthTimeNight</source>
         <translation>Ora sulla Terra : Notte</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="71"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="74"/>
         <source>timeToDay</source>
         <translation>Tempo per il Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="104"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
         <source>tier1</source>
         <translation>Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="106"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
         <source>tier2</source>
         <translation>Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="108"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
         <source>tier3</source>
         <translation>Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="110"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
         <source>tier4</source>
         <translation>Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="112"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
         <source>tier5</source>
         <translation>Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="95"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="102"/>
         <source>noAlliance</source>
         <translation>senza alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="114"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
         <source>tier1Id</source>
         <translation>ID Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
         <source>guildAllianceId</source>
         <translation>ID Alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
         <source>tier2Id</source>
         <translation>ID Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
         <source>tier3Id</source>
         <translation>ID Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="123"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
         <source>tier4Id</source>
         <translation>ID Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="126"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
         <source>tier5Id</source>
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="139"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="154"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="156"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="157"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="79"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="83"/>
         <source>forceLogoutVersion</source>
         <translation>Obbligo di Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="141"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>comingSoon</source>
         <translation>Prossimamente</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="80"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="84"/>
         <source>DTLSActivated</source>
         <translation>DTLS attivo</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="86"/>
+        <source>sentienAnomalies</source>
+        <translation>Anomalia Sentient</translation>
     </message>
 </context>
 <context>

@@ -48,8 +48,9 @@ class OtherWidgetTab():
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
     def set_other_datas(self, version: int, mob_version: str, world_seed: str,
-                        force_logout_version: int, dtls: bool) -> None:
-        self.generalWidget.set_other_datas(version, mob_version, world_seed, force_logout_version, dtls)
+                        force_logout_version: int, dtls: bool, sentient_anomalies: str) -> None:
+        self.generalWidget.set_other_datas(version, mob_version, world_seed,
+                                           force_logout_version, dtls, sentient_anomalies)
 
     def update_prime_access(self, prime_access: PrimeAccessAvailability,
                             prime_available: PrimeVaultAvailabilities) -> None:
