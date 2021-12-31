@@ -6,7 +6,7 @@ from typing import List, Tuple
 
 from PyQt6 import QtWidgets
 
-from warframeAlert import warframeData
+from warframeAlert.constants import warframeData
 from warframeAlert.constants.events import OPERATION_TYPE
 from warframeAlert.constants.files import IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
@@ -501,6 +501,8 @@ def translate_item_from_drop_file(data: str) -> str:
         for i in item[1:]:
             data_new = data_new + i + " "
         return item[0].replace("X", " x") + " " + translate_item_from_drop_file(data_new)
+    if (data in warframeData.EXCLUDED_ITEM_TRANSLATION):
+        return warframeData.EXCLUDED_ITEM_TRANSLATION[data]
     if (is_relic(item[0])):
         return translate_relic(data)
     elif (is_lens(item[0])):

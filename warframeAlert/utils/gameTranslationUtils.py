@@ -2,7 +2,7 @@
 import json
 from typing import Tuple
 
-from warframeAlert import warframeData
+from warframeAlert.constants import warframeData
 from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON_RESTRICTION, MAP_TYPE, \
     ALERT_LEVEL_AURA, ALERT_FX, ALERT_BOSS, ALERT_VIP_AGENT
 from warframeAlert.constants.events import ACCOLYTE_NAME, TASK_TYPE, UPGRADE_TYPE
@@ -17,7 +17,6 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import get_last_item_with_backslash, print_traceback
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
-from warframeAlert.warframeData import RARITY
 
 
 def get_node(name: str) -> Tuple[str, str]:
@@ -399,8 +398,8 @@ def get_stage_name(stage: str) -> str:
 
 
 def get_rarity(rarity: str) -> str:
-    if (rarity in RARITY):
-        return RARITY[rarity][OptionsHandler.get_option("Language", str)]
+    if (rarity in warframeData.RARITY):
+        return warframeData.RARITY[rarity][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownRarity") + ": " + rarity)
         LogHandler.err(translate("gameTranslation", "unknownRarity") + ": " + rarity)
