@@ -243,7 +243,13 @@ BOUNTY_JOB_NAME = {
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty": "Recupero dell'Anomalia",
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty": "Ritrovamento",
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty": "Rivendica ciò che ti spetta",
-    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessPurifyBounty": "Caccia all'artefatto (infinita)"
+    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessPurifyBounty": "Caccia all'artefatto (infinita)",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AssassinateBountyAss": "Ascesa e Discesa (Narmer)",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AttritionBountyLib": "Portali a Casa (Narmer)",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AttritionBountyExt": "Per Unum (Narmer)",
+    "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusCullJobExterminate": "Distruggi il culto (Narmer)",
+    "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusCullJobAssassinate": "La voce del Maestro (Narmer)",
+    "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusTheftJobExcavation": "Scavando per Narmer (Narmer)"
 }
 
 BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Description Available"},
@@ -432,6 +438,34 @@ BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Descripti
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessPurifyBounty": {
                       "it": "I manufatti di Deimos hanno una domanda molto alta. Recuperane più che puoi.",
                       "en": "Deimos artifacts are always in demand. Bring back as many as you can."},
+                   "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AssassinateBountyAss": {
+                       "it": "I Narmer sono su di giri. Hanno appena promosso un seguace al grado di comandante. Vai "
+                             "e degradalo a morto",
+                       "en": "Narmer are all fired up. They just promoted a cultis to Commander rank. Go and demote "
+                             "him to death."},
+                   "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AttritionBountyLib": {
+                       "it": "I Narmer stanno reclutando con la forza. Hanno preso uno dei nostri e stanno "
+                             "organizzando una cerimonia del Velo. Fermali.",
+                       "en": "Narmer are recruiting by force. They've taken one of our own and are planning a veiling "
+                             "ceremony. Stop them."},
+                   "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AttritionBountyExt": {
+                       "it": "I numeri Narmer sono in aumento. Stanno progettando qualcosa di grosso. Abbattili prima "
+                             "che marcino di nuovo su Cetus",
+                       "en": "Narmer numbers are rising. They're planning something big. Cut them down before they "
+                             "march on Cetus again"},
+                   "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusCullJobExterminate": {
+                       "it": "Narmer sta facendo una campagna di reclutamento. Se non reagiamo, si consoliderà.",
+                       "en": "Narmer are on a recruitment drive. If we don't kick back hard, they'll entrench."},
+                   "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusCullJobAssassinate": {
+                       "it": "Un nuovo supervisore Raknoid Narmer funge da stazione di comunicazione per il velo. "
+                             "Eliminalo e indeboliremo la loro presa",
+                       "en": "A new Narmer Raknoid overseer is in place, acting as a veil comms relay. Take it out "
+                             "and we weaken their grip"},
+                   "/Lotus/Types/Gameplay/Venus/Jobs/Narmer/NarmerVenusTheftJobExcavation": {
+                       "it": "I seguaci Narmer controllano un giacimento minerario in modo da poter fabbricare Veli. "
+                             "Dobbiamo fermarli.",
+                       "en": "Narmer cultists have staked out a mineral field so they can manufacture Veils. We need "
+                             "to stop them."}
                    }
 
 BOUNTY_RANK_LEVEL = {"EidolonJobMissionRewards/TierATableA": "Level 5 - 15 Cetus Bounty",

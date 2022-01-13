@@ -444,7 +444,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Weapons/Grineer/Pistols/GrineerBulbousSMG/Prisma/PrismaTwinGremlinsWeapon":
         "Prisma Twin Gremlins",
     "/Lotus/StoreItems/Weapons/ClanTech/Chemical/FlameThrowerWraith": "Ignis Wraith",
-    "/Lotus/StoreItems/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/PrismaGrinlokWeapon": "Prisma Grinlock",
+    "/Lotus/StoreItems/Weapons/Grineer/LongGuns/GrineerLeverActionRifle/PrismaGrinlokWeapon": "Prisma Grinlok",
     "/Lotus/StoreItems/Types/Recipes/Weapons/InfWarFanBlueprint": "Arum Spinosa (Schema)",
     "/Lotus/StoreItems/Types/Recipes/Weapons/InfSniperRifleBlueprint": "Sporothrix (Schema)",
     "/Lotus/StoreItems/Weapons/Tenno/Archwing/Primary/ArchwingHeavyPistols/Prisma/PrismaArchHeavyPistols":
@@ -541,7 +541,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponCritDamageModExpert": "Primed Ravage",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponFireDamageModExpert": "Primed Heated Charge",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponImpactDamageModExpert": "Primed Heavy Trauma",
-    "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponDamageAmountModExpert": "Prime Point Blank",
+    "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponDamageAmountModExpert": "Primed Point Blank",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeRangeIncModExpert": "Primed Reach",
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponReloadSpeedModExpert": "Primed Fast Hands",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeDamageModExpert": "Primed Pressure Point",
@@ -852,6 +852,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/Deimos/PlushyMoonMonsterCommon": "Fluff Vome",
     "/Lotus/StoreItems/Types/Items/ShipDecos/HeartOfDeimosAlbumCoverPoster": "Rhapsody in Blu",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerCutter": "Decorazione Caccia Cutter",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerFlak": "Decorazione Caccia Flak",
 
 
     # Sentinels
