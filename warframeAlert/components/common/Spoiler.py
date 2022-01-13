@@ -8,28 +8,26 @@ class Spoiler(QtWidgets.QWidget):
 
     def __init__(self, title: str = "") -> None:
         super().__init__()
-        self.checked = True
 
+        # toggle button to open/close the spoiler
         self.toggleButton = QtWidgets.QToolButton()
         self.toggleButton.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
         self.toggleButton.setArrowType(Qt.ArrowType.RightArrow)
-
         self.toggleButton.setText(title)
         self.toggleButton.setCheckable(True)
         self.toggleButton.setChecked(False)
 
+        # header line for more visibility
         self.headerLine = QtWidgets.QFrame()
-
         self.headerLine.setFrameShape(QtWidgets.QFrame.Shape.HLine)
         self.headerLine.setFrameShadow(QtWidgets.QFrame.Shadow.Sunken)
         self.headerLine.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Maximum)
 
+        # content area of the spoiler
         self.contentArea = QtWidgets.QScrollArea()
-
         self.contentArea.setStyleSheet("QScrollArea { background-color: white; border: none; }")
         self.contentArea.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.contentArea.setWidgetResizable(True)
-
         # start auto collapsed
         self.contentArea.setMaximumHeight(0)
         self.contentArea.setMinimumHeight(0)
@@ -46,19 +44,19 @@ class Spoiler(QtWidgets.QWidget):
         self.mainLayout.setContentsMargins(0, 0, 0, 0)
 
         self.mainLayout.addWidget(self.toggleButton, 0, 0, 1, 1, QtCore.Qt.AlignmentFlag.AlignLeft)
-        self.mainLayout.addWidget(self.headerLine, 1, 2, 1, 1)
+        self.mainLayout.addWidget(self.headerLine, 0, 2, 1, 1)
         self.mainLayout.addWidget(self.contentArea, 1, 0, 1, 3)
 
         self.setLayout(self.mainLayout)
 
         self.toggleButton.clicked.connect(self.spoiler_clicked)
 
-    def spoiler_clicked(self) -> None:
-        self.toggleButton.setArrowType(Qt.ArrowType.DownArrow if self.checked else Qt.ArrowType.RightArrow)
-        direction = QAbstractAnimation.Direction.Forward if self.checked else QAbstractAnimation.Direction.Backward
+    def spoiler_clicked(self, checked) -> None:
+        arrow_type = Qt.ArrowType.DownArrow if checked else Qt.ArrowType.RightArrow
+        self.toggleButton.setArrowType(arrow_type)
+        direction = QAbstractAnimation.Direction.Forward if checked else QAbstractAnimation.Direction.Backward
         self.toggleAnimation.setDirection(direction)
         self.toggleAnimation.start()
-        self.checked = not self.checked
 
     def set_content_layout(self, spoiler_content: QtWidgets.QHBoxLayout | QtWidgets.QVBoxLayout):
         self.contentArea.setLayout(spoiler_content)
@@ -77,3 +75,4 @@ class Spoiler(QtWidgets.QWidget):
         content_animation.setEndValue(content_height)
 
         self.contentArea.resize(self.contentArea.maximumHeight(), self.contentArea.maximumWidth())
+    

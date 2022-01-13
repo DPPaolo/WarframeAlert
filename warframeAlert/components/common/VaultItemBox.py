@@ -31,3 +31,4 @@ class VaultItemBox():
         self.VaultItemLayoutBox.addWidget(self.VaultItemName)
         self.VaultItemLayoutBox.addLayout(self.VaultItemPriceRegalAya.LabelWithImage)
         self.VaultItemLayoutBox.addLayout(self.VaultItemPriceAya.LabelWithImage)
+        self.VaultItemLayoutBox.addStretch()
