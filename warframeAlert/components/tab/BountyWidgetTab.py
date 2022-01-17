@@ -1,7 +1,7 @@
 # coding=utf-8
 import copy
 
-from PyQt6 import QtWidgets, QtCore
+from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.components.widget.BountyWidget import BountyWidget
@@ -38,11 +38,40 @@ class BountyWidgetTab():
         self.BountiesGrid.addWidget(self.DeimosTime.TimeLab, 1, 2)
         self.BountiesGrid.addWidget(self.BountiesTabber, 2, 0, 1, 3)
 
-        self.BountiesTabber.insertTab(0, self.OstronWidget.get_widget(), translate("bountyWidgetTab", "ostron"))
-        self.BountiesTabber.insertTab(1, self.FortunaWidget.get_widget(), translate("bountyWidgetTab", "fortuna"))
-        self.BountiesTabber.insertTab(2, self.DeimosWidget.get_widget(), translate("bountyWidgetTab", "hiveMind"))
-        self.BountiesTabber.insertTab(3, self.DeimosVaultWidget.get_widget(),
-                                      translate("bountyWidgetTab", "hiveMindVault"))
+        self.OstronScrollBar = QtWidgets.QScrollArea()
+        self.FortunaScrollBar = QtWidgets.QScrollArea()
+        self.DeimosScrollBar = QtWidgets.QScrollArea()
+        self.DeimosVaultScrollBar = QtWidgets.QScrollArea()
+
+        self.OstronScrollBar.setWidgetResizable(True)
+        self.FortunaScrollBar.setWidgetResizable(True)
+        self.DeimosScrollBar.setWidgetResizable(True)
+        self.DeimosVaultScrollBar.setWidgetResizable(True)
+
+        self.OstronScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.FortunaScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.DeimosScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        self.DeimosVaultScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+
+        self.OstronScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.FortunaScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.DeimosScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+        self.DeimosVaultScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
+
+        self.OstronWidget.get_widget().setLayout(self.BountiesGrid)
+        self.FortunaWidget.get_widget().setLayout(self.BountiesGrid)
+        self.DeimosWidget.get_widget().setLayout(self.BountiesGrid)
+        self.DeimosVaultWidget.get_widget().setLayout(self.BountiesGrid)
+
+        self.OstronScrollBar.setWidget(self.OstronWidget.get_widget())
+        self.FortunaScrollBar.setWidget(self.FortunaWidget.get_widget())
+        self.DeimosScrollBar.setWidget(self.DeimosWidget.get_widget())
+        self.DeimosVaultScrollBar.setWidget(self.DeimosVaultWidget.get_widget())
+
+        self.BountiesTabber.insertTab(0, self.OstronScrollBar, translate("bountyWidgetTab", "ostron"))
+        self.BountiesTabber.insertTab(1, self.FortunaScrollBar, translate("bountyWidgetTab", "fortuna"))
+        self.BountiesTabber.insertTab(2, self.DeimosScrollBar, translate("bountyWidgetTab", "hiveMind"))
+        self.BountiesTabber.insertTab(3, self.DeimosVaultScrollBar, translate("bountyWidgetTab", "hiveMindVault"))
 
         self.BountiesGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 

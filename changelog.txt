@@ -1,0 +1,671 @@
+Versione 13.3 - Risorgenza Sentient
+
+- Aggiunto nodo con Anomalia Sentient nella Scheda Altro
+- Aggiunta la gestione per gli eventi di Risorgenza Prime
+- Aggiornato modulo grafico a PyQt 6
+- Migliorata la gestione per la lettura del file EE.log, allerte precedenti e copyright
+- Aggiunta una barra di scorrimento alle Taglie
+
+
+Versione 13.2 - Void Storm
+
+- Aggiunte missioni Void Storm nella scheda delle Fratture Void
+- Migliorata ed ottimizzata gestione di Baro Ki'Teer e delle immagini
+- Aggiunto meccaniscmo di download ritardato delle immagini per gli oggetti di Baro Ki'Teer
+- Aggiunto timer for Baro Ki Teer del TennoCon Relay
+- Migliorata la gestione dell'auto aggiornamento dei dati generali
+- Aggiunto meccanismo di riduzione ad icona
+
+Versione 13.1 - Hive Mind
+
+- Ottimizzata gestione delle taglie
+- Risolto raro problema in cui apparivano più di 5 taglie
+- Aggiunta scheda per le taglie del misterioso nuovo sindacato HiveMind
+- Migliorata la gestione delle allerte e degli eventi
+- Migliorata la gestione delle immagini corrotte
+- Aggiunta immagine (se presente) per gli eventi
+- Aggiunto meccanismo di download ritardato delle immagini per gli accoliti
+- Aggiunta opzione per il cambio della lingua (disponibile italiano e inglese)
+
+Versione 13.0 - Scarlet Spear
+
+- Aggiunta nuova scheda per l'evento Scarlet Spear
+- Aggiunti nuovi dati per l'evento dei Ghoul
+- Aggiunto meccanismo di download ritardato delle immagini per news, invasioni e allerte
+- Migliorata la gestione dei timer
+
+Versione 12.6 - Pyqt
+
+- Aggiornato modulo grafico Pyqt alla versione 5
+- Migliorata la precisione della formula per il calcolo del tempo caldo/freddo su Fortuna
+- La schermata Mappa Stellare visualizzera' automaticamente Mercurio invece di una stringa vuota
+- Ottimizzata la funzione di lettura del file EE.log
+- Fixato crash relativo alla lettura del file EE.log
+- Fixato errore nella schermata di autoaggiornamento in assenza di connessione ad internet
+
+Versione 12.5 - Buried Debts
+
+- Aggiunto tempo caldo/freddo di Orb Vallis
+- Aggiunto info sul nodo (se presente) ai booster globlali
+- Ottimizzato il codice della gestione del download dei file
+- Adesso si vedranno massimo 5 Taglie alla volta
+- Fixato errore negli eventi
+
+Versione 12.4 - Nightwave
+
+- Aggiunte le missioni Nightwave nella scheda Nightwave 
+- Spostate le allerte sotto la scheda Eventi
+- Eliminate opzioni dei filtri
+- Fixato errore nell'auto aggiornamento
+- Fixato errore nelle Promozioni Twitch
+
+Versione 12.3 - Nintenno
+
+- Aggiunta Nintendo Switch come piattaforma 
+- Fixato errore con i booster speciali
+- Fixato errore con i Featured Dojo
+- Fixato errore con la gestione dei nomi delle allerte
+
+Versione 12.2 - 4TUNA
+
+- Aggiunte taglie di Fortuna
+- Aggiunti Featured Dojo nella scheda Altro
+- Fixato errore negli sconti di Darvo
+- Fixato errore nel download di alcune immagini particolari
+
+Versione 12.1 - Update Chimera
+
+- Aggiunta compatibilita' all'update 23.10 Chimera
+- Ottimizzato il codice delle schede presenti nel menu
+- Aggiunta gestione degli eventi di ricostruzione delle stazioni
+- Ridotto il problema di crash improvviso del programma
+- Aggiunti tipi di Prime Vault
+- Fixato errore nell'apertura del file EE.log
+- Fixato errore nei Prime Vault
+
+Versione 12.0 - The New Warframe Alert!
+
+- Riscritto e ottimizzato il codice di ogni scheda
+- Aggiunti avvisi per booster attivati
+- Adesso le schede seguenti sono a scomparsa se non vi sono presenti elementi:
+  Nodi Occupati, Quills, Hub Event, Twitch Drop, PvP Alternativi e Tornei PvP
+- Fixata notifica continua per Baro Ki'Teer
+- Sistemata distribuzione delle missioni in cui si droppano certe reliquie
+
+Versione 11.7 - Notifiche
+
+- Aggiunta opzione per attivare o disattivare le notifiche
+- Aggiunta notifica per le allerte, news, eventi, sortie, invasioni, fissure, baro, accoliti
+- Aggiunti filtri per le allerte (non attivi al momento)
+- Fixato problema con Baro Ki'Teer
+
+Versione 11.6 - Tray Icon
+
+- Aggiunta icona nella barra delle applicazioni
+- Aggiunta nuova opzione per indicare se si vuole lasciare l'app avviata in background ad icona o chiudersi
+- Aggiunte nuove informazioni alle allerte
+- Aggiunta barra di scorrimento alla scheda delle allerte
+- Aggiunto avviso di errore in caso di primo avvio senza connessione ad internet
+- Fixato problema relativo alla GUI quando mancava la connessione ad internet
+- Fixato problema relativo all'icona del programma che non appariva nelle finestre
+
+Versione 11.5 - Fortuna
+
+- Cambiato nome scheda Cetus in Mappe Aperte per la nuova espansione Fortuna
+- Aggiunta Scheda Fortuna in preparazione per la nuova espansione
+- Divise le schede degli sconti in oggetti in evidenza ed oggetti in sconto
+- Fixato errore nella scheda Baro Ki'Teer in cui gli oggetti uscivano fuori dalla schermata
+- Fixato errore nella scheda eventi in cui non apparivano le missioni
+
+Versione 11.4 - Altro
+
+- Aggiunta scheda Promozioni di Twitch in Altro
+- Aggiunto messaggio quando non sono presenti Taglie su Cetus
+- Aggiunti nodi speciali e stato prime access nella scheda Altro
+- Fixato errore nel link alla immagine di default per le news
+- Fixato errore nel calcolo del world_seed nella scheda Altro
+- Fixato errore nell'autoaggiornamento
+
+Versione 11.3 - Duel?
+
+- Ottimizzata e reinserita la scheda delle missioni PvP
+- Aggiunta scheda per le missioni PvP Alternative
+- Migliorato il supporto per i file di allerte più vecchie
+- Fixato bug nella ricerca della missione che droppa una reliquia
+
+Versione 11.2 - Troppi Eventi!
+
+- Suddivisi gli eventi in 3 schede separate
+- Inserita barra di scorrimento in caso di tanti eventi
+- Eliminato avviso scaricamento file richiesti al primo avvio
+
+Versione 11.1 - Tempi Relativi
+
+- Sistemato orario su Cetus, adesso si basa sul tempo delle bounty
+- Sistemate Taglie che non si resettavano correttamente
+- Aggiunto tempo del ciclo della Terra in Altro
+- Sistemato Layout degli sconti di Darvo in Altro
+- Velocizzato leggermente l'avvio del programma in condizioni di internet assente
+- Fixato errore durante l'aggiornamento
+- Fixato errore nelle reliquie per il primo avvio
+
+Versione 11.0 - Allerte con Info
+
+- Ottimizzata la scheda delle Allerte
+- Rimossi Memory Leak dalle Allerte
+- Rimosso sfondo grigio per la scheda Allerte
+- Migliorata gestione dell'auto aggiornamento
+- Aggiunta ricerca missione in cui si droppano le reliquie
+- Reso l'aggiornamento delle allerte in un thread
+- Fixato errore nel check_box nell'opzione di auto aggiornamento
+
+Versione 10.9 - Seguaci
+
+- Se una delle cartelle data o images viene cancellata, sara' ricreata instantaneamente
+- Ottimizzata scheda degli Accoliti
+- Aggiunte nuove info agli Accoliti
+- Aggiunto drop per le Taglie
+- Gli oggetti di Baro Ki'Teer sono distributiti in 4 colonne
+
+Versione 10.8 - Cambiamenti
+
+- Cambiato il supporto per i dati dei drop
+- Ottimizzata scheda dei Nodi Occupati
+- Ottimizzata ricerca dei nomi e immagini
+- Ottimizzata schermata di visualizzazione e ricerca delle Reliquie
+- Fixati errori alla scadenza degli eventi
+
+Versione 10.7 - Associazioni
+
+- Ottimizzate schede dei Sindacati e di Cetus
+- Rimossi Memory Leak per Cetus
+- Aggiunta Associazione Assassins (non implementata in gioco)
+- Aggiunte info per Sconto di Darvo e Bersagli di Simaris
+- Aggiunte informazioni aggiuntive in Altro
+- Fixato errore nei countdown, appariva 60s invece di 0s
+
+Versione 10.6 - Refactoring 2.0
+
+- Ottimizzate schede per le Sortie, Invasioni e Baro
+- Rimossi Memory Leak nelle Sortie, Invasioni e Baro
+- Ampliato supporto per gli eventi
+- Aggiunte nuove info agli eventi e Sortie
+- Sistemato ritardo di 9 minuti nel tempo di Cetus
+
+Versione 10.5 - Refactoring
+
+- Aggiunto supporto per piu' di un evento attivo contermporaneamente
+- Aggiunte ricompense agli eventi
+- Resi piu' generici gli eventi
+- Aggiunte nuove informazioni nella scheda Eventi
+- Aggunta informazione extra alle Taglie
+- Fixato errore nell'aggiornamento
+
+Versione 10.4 - Plague Star
+
+- Aggiunte nuove info per eventi con Bounty
+- Ottimizzate schede degli Sconti, News, Hub Event e alcuni Eventi
+- Aggiunto tempo che scorre negli Sconti, Hub Event e alcuni Eventi
+- Rimossi Memory Leak negli Sconti, News, Hub Event e alcuni Eventi
+- Tolte lettere accentate nel changelog
+- Spostato nuovamente il bottone Visualizza Reliquie in basso
+
+Versione 10.3 - Tempo che Scorre!
+
+- Aggiunto tempo che scorre per le Fissure
+- Ottimizzato codice delle Fissure
+- Rimossi molti Memory Leak dalle Fissure
+- Aggiunti Hub Event
+- Fixate rarita' dei pezzi delle reliquie scambiate
+
+Versione 10.2 - Notte e Giorno
+
+- Aggiunto tempo per la notte e per il giorno su Cetus
+- Aggiunta nuova schermata di aggiornamento dei file
+- Fixato errore nel primo avvio
+
+Versione 10.1 - Le Taglie degli Ostronesi (o Cetusiani?)
+
+- Aggiunta scheda Cetus (abilitala nelle opzion per vederla)
+- Cambiata la finestra in cui si vedono i drop delle reliquie
+- Ottimizzato leggermente il codice
+- Fixati Sindacati che non apparivano
+
+Versione 10.0 - Le Non-Pianure di Eidolon
+
+- Aggiunto supporto per Plains of Eidolon
+- Ottimizzato codice di varie schede
+- Aggiunta finestra di aggiornamento dei file
+
+Versione 9.5 - Emergency Update!
+
+- Aggiunta icona alla schermata delle opzioni e reliquie
+- Fixata analisi del file dei Drop
+
+Versione 9.4 - Hydroid Prime
+
+- Aggiunta traduzione in inglese (se possibile) degli oggetti in sconto
+- Aggiunto pulsante per aprire file di allerte precedenti
+- Aggiunto intervallo di 30 secondi per l'auto-aggiornamento delle allerte
+- Nascosto il tasto Debug se l'opzione Debug è settata su off
+- Fixata info errata nel numero di ondate nelle allerte
+- Fixato un raro crash del programma se aperto 1 minuto prima del rinnovo delle sortie
+- Fixato un errore di scrittura nella scheda eventi
+
+Versione 9.3 - Drop
+
+- Aggiunto di nuovo il supporto per i Drop delle Missioni
+- Riabilitata lista dei pianeti che droppano le reliquie
+- Reso più leggibile il Changelog.txt e il file starchart.txt
+- Riscritta visualizzazione degli orari nelle allerte e fissure
+- Fixato bug con gli orari delle allerte superiori ad un'ora
+- Fixato bug in cui quando si nascondeva un allerta non sparivano tutte le info correlate
+- Fixato bug con certe informazioni nelle allerte
+
+Versione 9.2 - File Support
+
+- Aggiunto di nuovo il supporto per la Mappa Stellare
+- Aggiunto di nuovo il supporto per le Reliquie
+- Disabilitato momentaneamente lista dei pianeti che droppano le reliquie
+- Aggiornate ricompense delle Sortie
+
+Versione 9.1 - TennoCon
+
+- Implementato Auto Resize della finestra in caso di cambiamento della sua dimensione
+- Quando presente un aggiornamento apparira' solo la schermata di download
+- Dopo l'aggiornamento del programma si riavviera' automaticamente
+- Fixato errore nel caso di eventi senza missioni (Tenno Con)
+- Fixato bug visivo con la scheda Eventi in caso di allerta tattica
+- Fixato download multiplo delle immagini degli item di Baro Ki'Teer
+- Fixati immagine e nome errati per la Skin Mantis Prisma
+
+Versione 9.0 - Quality of Life
+
+- Rimossi download dal repository di Void_Glitch
+- Disattivate le funzioni di Mappa Stellare, Lista Missioni e Reliquie per nuove installazioni
+- Ottimizzato il codice di aggiornamento delle schede
+- Ottimizzato il codice di controllo delle schede
+- Riscritta la gestione degli errori per aggiungere maggiori informazioni
+- Aumentate leggermente le dimensioni di default del programma
+- Fixato bug che non faceva apparire i messaggi di errore
+- Fixato bug con i nomi delle news
+
+Versione 8.5 - PvP
+
+- Aggiunte missioni PvP Settimanali e Giornaliere
+- Aggiunta data di scadenza per gli sconti
+- Invertiti nome delle armi Prisma
+- Fixato bug con la scheda Eventi
+- Fixata scritta DONO DI LOTUS che non appariva
+- Fixato Bug con le percuali dei Progetti Invasioni
+
+Versione 8.4 - Toooooo Looooong!
+
+- Aggiunta percentuale come tooltip nelle invasioni
+- Aggiunta percentuale alla scheda Eventi se presente
+- Fixate scritte non nascoste nelle allerte nascoste
+- Rimosso allungamento del programma in caso di troppi sconti
+- Fixato problema in caso di molti item su Baro Ki'Teer
+- Fixato spazio in più nella scheda eventi
+- Fixate % superiori al 100 nelle barre di avanzamento
+
+Versione 8.3 - Dojo ed Eventi
+
+- Aggiunte info per i punteggi di clan per gli Eventi
+- Aggiunte info extra per Allerte Speciali come i "Dono di Lotus"
+- Aggiunti tooltip con extra informazioni alle immagini delle news (passa il  mouse sopra)
+- Separate le news in due schede
+- Fixato errore nel caso non siano presenti allerte
+- Fixato errore nella scheda Eventi
+- Fixata schermata che si allungava troppo
+
+Versione 8.2 - E pure Darvo!
+
+- Aggiunta la scheda Sconti
+
+Versione 8.1 - Baro Ki'Teer è arrivato!
+
+- Aggiunta scheda per Baro Ki'Teer
+- Resa permanente la rimozione di una allerta dopo pressione del tasto Nascondi
+- Fixato errore nel pulsante di download di una nuova versione
+- Fixato errore nell'auto-download di tutti i file
+- Fixate scritte news che non apparivano
+- Fixato errore nelle allerte Tattiche che non faceva apparire le informazioni generiche
+
+Versione 8 - Warframe Alert 2.0
+
+- Riscritto il codice di tutte le schede, i vari dati verranno aggiunti a run-time
+- Le schede modificate sono: news, allerte, eventi, accoliti, invasioni e fissure
+- Rimosso limite massimo di oggetti visualizzabili in una volta
+- Il limite e' stato rimosso alle schede : news, allerte, eventi, accoliti, invasioni e fissure
+- Aggiunto pulsante per nascondere allerte gia' completate
+- Aggiunto auto download di tutti i file dopo un certo lasso di tempo
+- Fixati nomi delle news che venivano troncati se troppo lunghi
+
+Versione 7 - Do you have a matching relic?
+
+- Aggiunta ricerca degli oggetti prime per reliquia
+- Aggiunta ricerca di dove si droppa una reliquia
+- Aggiunto pulsante per visualizzare drop della reliquia
+- Fixate reliquie che non apparivano
+- Fixato errore nel nome del nodo nella scheda degli Accoliti
+- Fixato errore nella non scomparsa delle schede Eventi e/o Accoliti
+- Fixato errore nel nome delle ricompense negli Eventi
+- Fixati vari errori di traduzione
+
+Versione 6.9 - ...e Reliquie
+
+- Aggiunta schermata di visualizzazione delle Reliquie nella scheda delle Fissure
+- Aggunta barra di scorrimento nella scheda delle Stazioni Distrutte
+- Migiorata la visibilita' delle info nella scheda delle Stazioni Distrutte
+- Aggiunti colori alle invasioni per maggiore visibilita'
+- Fixati errori ripetitivi nel file log
+
+Versione 6.8 - ...Eventi...
+
+- Riscritto il codice della scheda Eventi
+- Aggiunte nuove informazioni alla scheda Eventi
+- Messe in evidenza le informazioni della scheda Eventi
+- Corretto calcolo del numero di missioni degli eventi
+- Aggiunte altre immagini alle invasioni
+- Corretto il funzionamento del pulsante di aggiornamento del programma
+- Prima implementazione della visualizzazione delle Reliquie
+
+Versione 6.7 - Fratture...
+
+- Aggiunte le Fissure
+- Resi alcuni errori più leggibili
+- Fixata visualizzazione delle ricompense delle Sortie
+- Fixato raro errore nelle invasioni
+
+Versione 6.6 -  Più foto, meno problemi
+
+- Aggiunte immagini delle ricompense delle invasioni per maggiore visibilita'
+- Spostato testo delle ricompense delle invasioni
+- Aggiunto messaggio in caso non ci siano allerte
+- Ridotta dimensione immagini nelle allerte
+
+Versione 6.5 - Cartelle e File
+
+- Ridotto peso del programma della meta' (di nuovo) (21 Mb -> 12 Mb)
+- Fixato problema nella verifica e creazione delle cartelle data e images
+- Fixato problema nel visualizzare le immagini scaricate
+
+Versione 6.4.1
+
+- Fixato problema con le schede durante l'aggiornamento dei dati
+
+Versione 6.4 - La vendetta delle Invasioni
+
+- Dimezzata la dimensione del programma (39 Mb -> 21 Mb)
+- Riscritto il codice delle invasioni
+- Adesso le invasioni saranno a tutto schermo
+- La barra di scorrimento nelle invasioni apparira' solo se necessario
+- Centrato Nome dell'accolito e testo delle News
+- Eliminato codice superfluo nelle varie schede
+- Fixato bug con il salvataggio delle opzioni delle schede
+- Fixato bug con l'apparizione/scomparsa delle schede
+
+Versione 6.3 - Warframe.exe has crashed!
+
+- Fixato problema con i Nodi Occupati
+- Velocizzato avvio dell'aggiornamento del programma
+- Aggiunti piu' controlli per gli errori per evitare crash
+
+Versione 6.2.1
+
+- Ingrandita la schermata degli accoliti
+- Fixato nome errato di alcuni nodi
+- Fixato problema nella visualizzazione di più accoliti
+
+Versione 6.2 - Accoliti
+
+- Aggiunta scheda degli accoliti al programma
+
+Versione 6.1 - Download in corso...
+
+- Aggiunta schermata di avviso per l'aggiornamento del programma
+
+Versione 6.0 - Riavvia per ricevere
+
+- Inserito autoaggiornamento del programma in caso di nuova versione
+- Inserita opzione di aggiornamento manuale
+- Inserita opzione per disattivare l'autoaggiornamento
+- Fixato errore nel calcolo del tempo
+- Fixato errore nel parsing dei file
+
+Versione 5.0 - Image, i see you!
+
+- Corretta la visualizzazione delle immagini della versione EXE del programma
+- Aggiunta icona al programma
+- Aggiunta opzione per rifare la prima installazione dei file
+- Messe in grassetto alcune informazioni importanti
+
+Versione 4.4 - Drop, Drop everywhere!
+
+- Aggiunta creazione del file Lista Drop.txt
+- Aggiunte informazioni sui Progetti delle Invasioni
+- Ridotta nuovamente la dimensione delle immagini delle allerte
+
+Versione 4.3 - Sorteggiamo!
+
+- Aggiornate le Sortie con la nuova versione
+- Aggiunta compatibilita' per le sortie vecchie
+- Fixato bug con la scheda Altro nelle opzioni
+- Aumentata dimensioni delle immagini delle allerte a 128px
+
+Versione 4.2 - Image, puoi!
+
+- Aggiunte icone per armi, elmi, skin, mod per le allerte
+- Aggiunti avvisi in caso di assenza di sorti e associazioni
+- Fixati crash in caso di assenza di sortie e associazioni 
+- Fixato bug relativo alle missioni delle sortie
+- Fixato bug relativo ale immagini delle news
+
+Versione 4.1.1
+
+- Aggiunta scritta in caso di mancanza di invasioni e nodi occupati
+- Velocizzato il calcolo de dati relativi alle allerte
+- Corretti altri dati relativi alle Sortie
+
+Versione 4.1 - Logging
+
+- Aggiunto sistema di log per gli errori e debugging
+- Ottimizzata gestione del file delle opzioni
+- Fixato bug nell'aggiornamento dei file
+- Fixato bug con il calcolo della difficolta' delle allerte
+- Fixato bug con la scritta del tipo di versione
+
+Versione 4 - Rise of the Tab!
+
+- Le schede appariranno e scomparanno in tempo reale
+- La scheda delle Stazioni Distrutte conterra' i nodi occupati delle vecchie invasioni (pre TWW)
+- Riscritta e ottimizzata la finestra delle Opzioni
+- Rinominata scheda Settori Oscuri in PvP
+- Aggiunta scheda Fissure
+- Le opzioni sono state divise per categorie
+- Fixata scheda Eventi per gli eventi precedenti
+- Fixato bug del reset dell'opzione console ad ogni riavvio
+
+Versione 3 - The Rewrite Gambit!
+
+- Ristrutturato l'intero codice del programma
+- Ottimizzato aggiornamento delle schede
+- Dimezzato numero di thread usati
+- Migliorato download dei file
+- Centrate scritte delle News
+- Aggiunta compatibilita' per versioni molto vecchie di allerte
+- Aumentato numero di Nodi Occupati visualizzati
+- Fixati errori nel tipo della missione nelle Sortie
+
+Versione 2.1 - Warframe's Creed : Syndicates
+
+- Aggiunta scheda Associazioni
+- Aggiunta Barra di Progresso per le Invasioni in corso
+- Completata la scheda dei nodi occupati
+- Aggiunto elenco delle stazioni distrutte nella scheda Altro
+
+Versione 2 - A New Beginning!
+
+- Aggiornata la visuale della scheda degli Eventi
+- Aggiunta prima implementazione della scheda Nodi Occupati per la vittoria di una invasione
+- Aggiunta prima implementazione della scheda Associazione
+- Aggiunte nuove opzioni nel file config
+- Risolti vari problemi con la scheda degli eventi
+- Fixato errore delle label nelle opzioni
+- Fixato errore nella scheda delle News
+
+Versione 1.10 - Fix Incoming!
+
+- Aggiunta traduzione italiana alle news (se presente)
+- Migliorata precisione missioni delle Sortie
+- Divise le schede delle Invasioni in tre sotto schede, ognuna per Fazione
+- Aggiunta linea divisoria nelle allerte
+- Aggiunta info sulle Archwing Sottomarine alla Mappa Stellare
+- Fixate ricompense delle invasioni invertite
+- Fixato bug nelle ricompense delle Sortie
+- Fixato bug nella traduzione della Mappa Stellare e della Lista Missioni
+- Fixato bug nel download della Mappa Stellare
+- Fixati bug minori
+- Fixati errori di localizzazione
+
+Versione 1.9.2
+
+- Fixato Bug con la scrittura del file Lista Missioni.txt
+- Fixato Bug con la visualizzazione delle ricompense delle Sortie
+- Aggiunta la visualizzazione delle ore al timer delle allerte
+
+Versione 1.9.1
+
+- Fixata scheda Invasoni dopo le modifiche di The War Within
+- Corretta scheda Sortie dopo le modifiche di The War Within
+
+Versione 1.9 - L'invasione delle Invasioni
+
+- Prima implementazione delle Invasioni
+- Aggiunta scritta speciale per le allerte scadute
+
+Versione 1.8.2
+
+- Fixato tempo scadenza allerte
+- Ottimizzato codice per la ricerca del tipo di mappa
+- Risolti alcuni errori nella scheda delle Sortie
+
+Versione 1.8.1
+
+- Aggiunto di defult la visualizzazione della scheda delle sortie
+- Aggiunte nuove info alla scheda Allerte
+- Ridotte dimensioni immagini Allerte
+
+Versione 1.8 - Le Incursioni
+
+- Aggiunta scheda Sortie
+- Aggiunto tasto per scaricare solo le allerte
+- Velocizzato l'aggiornameto delle allerte
+- Fixato bug dell'inversione del tipo di console
+- Fixato bug con la visualizzazione delle allerte
+- Fixati bug minori
+
+Versione 1.7.3
+
+- Ficato bug con alcuni nomi di oggetti nelle allerte
+- Fixato bug per le news senza link al forum
+- Fixato bug nella conversione di alcuni file
+- Velocizzata la conversione dei nomi delle ricompense delle allerte
+
+Versione 1.7.2
+
+- Fixato bug con la visualizzazione dell'immagine del 6° News
+- Invertito ordine di alcune informazioni nelle schede di Allerte e Eventi
+- Fixati bug relativi alla scheda delle Allerte
+- Fixato bug nel download delle immagini nella scheda delle Allerte
+- Fixato bug nel download dei file
+
+Versione 1.7.1
+
+- Fixata visualizzazione della difficolta' nella scheda delle Allerte
+- Rinominata scheda Allerte Tattiche in Eventi
+- Fixato bug nella scheda Eventi quando non erano presenti missioni
+- Aggiunti altri nodi alla scheda delle Allerte
+
+Versione 1.7 - Una nuova allerta è arrivata!
+
+- Rinnovato Layout per la scheda delle Allerte
+- Aggiunta prima visualizzazione frezza delle allerte
+
+Versione 1.6 - L'Aggiornamento Interno
+
+- Aggiunta funzionalita' di auto aggiornamento delle allerte
+- Aggiunta Opzione timer di 0 secondi (le allerte si devono aggiornare manualmente)
+- Fixato bug con le immagini nella scheda delle allerte normali e tattiche
+- Fixati errori minori
+
+Versione 1.5.4
+
+- Aggiunta Opzione per non scaricare Lista Missione.txt
+- Cambiata opzione di default per la lettura dei file Lista Missione.txt e Mappa Stellare.txt
+- Fixato bug nella compilazione del file Lista Missione.txt
+- Fixato numero missione allerta tattica che appariva con la virgola invece che intero
+
+Versione 1.5.3
+
+- Aggiornata la struttura scheda delle Allerte Tattiche
+- Aggiunta icona nella scheda Allerte Tattiche
+- Limitato numero missioni Allerte Tattiche a 5 per questioni di spazio
+
+Versione 1.5.2
+
+- Fixato Bug con le immagini delle news
+- Riaggunta la possibilita' di scaricare il file Mappa Stellare.txt
+- Ridotto tempo download immagini bottoni News
+
+Versione 1.5.1
+
+- Fixato bug con i pulsanti delle 5° e 6° news che non aprivano la pagina correttamente
+
+Versione 1.5 - L'ombra delle News
+
+- Aggiunta Immagine di Default in caso di errori nel download per le news
+- Aggunto supporto per allerte delle altre console
+- Riscritto codice per i pulsanti delle News
+- Aggiunte eventuali 5° e 6° news
+
+Versione 1.4 - Downloading
+
+- Rivisitato il sistema di download delle immagini delle news
+- Aggiunte varie stringhe di debug
+- Aggiunta opzione di selezione aggiornamento delle allerte (non attiva)
+- Aggiunta opzione per la lettura del file Mappa Stellare (disattivata di default)
+- Fixato messaggio di errore errato
+
+Versione 1.3.1
+
+- Rimosso download Mappa Stellare.txt
+
+Versione 1.3 - Nuove Opzioni Disponibili
+
+- Aggiunta schermata delle Opzioni (File->Opzioni)
+- L'aggiornamento dei file non blocchera' più il programma
+- Fixato un bug nell'aggiornamento dei pulsanti delle News
+
+Versione 1.2 - Hold on!
+
+- Aggiunti bottoni alle news nella scheda delle News
+- Aggiunto file di configurazione per le schede
+- Fixato bug nella schermata dell'EE.log
+
+Versione 1.1.1
+
+- Prima implementazione della schermata delle Allerte
+- Cambiata la cartella dei file da "file" a "data"
+
+Versione 1.1 - Decrypting Events
+
+- Aggiunta scheda Allerta Tattica
+- Spostato l'ordine di alcune schede
+- Dimezzato il tempo di dowload dei file
+- Fixati alcuni errori nell'apertura dei file
+
+Versione 1 - Program Deployed!
+
+- Prima Release
