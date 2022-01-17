@@ -28,4 +28,7 @@ def open_old_alert(tab_service: TabService) -> None:
                                                  translate("menuService", "selectAlertFile"),
                                                  path, "JSON (*.json)")
     if (path[0]):
-        tab_service.update(path[0])
+        try:
+            tab_service.update(path[0])
+        except Exception as ex:
+            MessageBox("", translate("menuService", "alertError") + ".\n" + str(ex), MessageBoxType.ERROR)

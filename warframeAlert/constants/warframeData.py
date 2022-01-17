@@ -853,6 +853,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/HeartOfDeimosAlbumCoverPoster": "Rhapsody in Blu",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerCutter": "Decorazione Caccia Cutter",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerFlak": "Decorazione Caccia Flak",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerTaktis": "Decorazione Caccia Tactis",
 
 
     # Sentinels

@@ -796,167 +796,167 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="37"/>
+        <location filename="../utils/gameTranslationUtils.py" line="36"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="111"/>
+        <location filename="../utils/gameTranslationUtils.py" line="110"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="120"/>
+        <location filename="../utils/gameTranslationUtils.py" line="119"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="83"/>
+        <location filename="../utils/gameTranslationUtils.py" line="82"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="357"/>
+        <location filename="../utils/gameTranslationUtils.py" line="356"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="66"/>
+        <location filename="../utils/gameTranslationUtils.py" line="65"/>
         <source>unknownFaction</source>
         <translation>Fazione non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="129"/>
+        <location filename="../utils/gameTranslationUtils.py" line="128"/>
         <source>unknownInvasionLocTag</source>
         <translation>Location Tag Invasione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="237"/>
+        <location filename="../utils/gameTranslationUtils.py" line="236"/>
         <source>errorFileSolNodes</source>
         <translation>Errore nella lettura del file SolNodes.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="138"/>
+        <location filename="../utils/gameTranslationUtils.py" line="137"/>
         <source>unknownAcolyte</source>
         <translation>Accolito Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="156"/>
+        <location filename="../utils/gameTranslationUtils.py" line="155"/>
         <source>unknownRegion</source>
         <translation>Regione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="203"/>
+        <location filename="../utils/gameTranslationUtils.py" line="202"/>
         <source>errorFileStarchart</source>
         <translation>Impossibile aprire il file starchart.txt</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="226"/>
+        <location filename="../utils/gameTranslationUtils.py" line="225"/>
         <source>noStarchartNode</source>
         <translation>Tipo Missione non trovata per il Nodo</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="147"/>
+        <location filename="../utils/gameTranslationUtils.py" line="146"/>
         <source>unknownUpgradeType</source>
         <translation>Tipo Upgrade sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="168"/>
+        <location filename="../utils/gameTranslationUtils.py" line="167"/>
         <source>unknownMissionType</source>
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="341"/>
+        <location filename="../utils/gameTranslationUtils.py" line="340"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="177"/>
+        <location filename="../utils/gameTranslationUtils.py" line="176"/>
         <source>unknownAlertInfo</source>
         <translation>Info Allerta sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="186"/>
+        <location filename="../utils/gameTranslationUtils.py" line="185"/>
         <source>unknownWeaponRestriction</source>
         <translation>Restrizione Arma Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="328"/>
+        <location filename="../utils/gameTranslationUtils.py" line="327"/>
         <source>unknownJob</source>
         <translation>Taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="340"/>
+        <location filename="../utils/gameTranslationUtils.py" line="339"/>
         <source>unknownJobDesc</source>
         <translation>Descrizione taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="303"/>
+        <location filename="../utils/gameTranslationUtils.py" line="302"/>
         <source>unknownSyndicate</source>
         <translation>Associazione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="370"/>
+        <location filename="../utils/gameTranslationUtils.py" line="369"/>
         <source>unknownChallengeType</source>
         <translation>Sfida Nightwave sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="263"/>
+        <location filename="../utils/gameTranslationUtils.py" line="262"/>
         <source>unknownAuraType</source>
         <translation>Aura Missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="272"/>
+        <location filename="../utils/gameTranslationUtils.py" line="271"/>
         <source>unknownFXType</source>
         <translation>FX missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="285"/>
+        <location filename="../utils/gameTranslationUtils.py" line="284"/>
         <source>unknownVipType</source>
         <translation>Vip missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="294"/>
+        <location filename="../utils/gameTranslationUtils.py" line="293"/>
         <source>unknownReconstructionTaskType</source>
         <translation>Obiettivo Ricostruzione Stazione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="312"/>
+        <location filename="../utils/gameTranslationUtils.py" line="311"/>
         <source>unknownSyndicateRank</source>
         <translation>Nome Rango Associazione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="388"/>
+        <location filename="../utils/gameTranslationUtils.py" line="387"/>
         <source>unknownSortieBoss</source>
         <translation>Boss Incursioni Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="397"/>
+        <location filename="../utils/gameTranslationUtils.py" line="396"/>
         <source>unknownBountyStage</source>
         <translation>Stage Taglia Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="406"/>
+        <location filename="../utils/gameTranslationUtils.py" line="405"/>
         <source>unknownRarity</source>
         <translation>Rarità Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="415"/>
+        <location filename="../utils/gameTranslationUtils.py" line="414"/>
         <source>unknownPvPCategory</source>
         <translation>Tipo Missione PvP Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="426"/>
+        <location filename="../utils/gameTranslationUtils.py" line="425"/>
         <source>unknownPvPMissionName</source>
         <translation>Nome Missione PvP Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="438"/>
+        <location filename="../utils/gameTranslationUtils.py" line="437"/>
         <source>unknownPvPDesc</source>
         <translation>Descrizione Missione PvP Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="447"/>
+        <location filename="../utils/gameTranslationUtils.py" line="446"/>
         <source>unknownPvPAlternativeDesc</source>
         <translation>Descrizione Missione PvP Alternativa Sconosciuta</translation>
     </message>
@@ -1019,107 +1019,107 @@
         <translation>Tempo per il Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="111"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="114"/>
         <source>tier1</source>
         <translation>Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="113"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="116"/>
         <source>tier2</source>
         <translation>Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
         <source>tier3</source>
         <translation>Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
         <source>tier4</source>
         <translation>Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
         <source>tier5</source>
         <translation>Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="102"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="105"/>
         <source>noAlliance</source>
         <translation>senza alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
         <source>tier1Id</source>
         <translation>ID Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
         <source>guildAllianceId</source>
         <translation>ID Alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
         <source>tier2Id</source>
         <translation>ID Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
         <source>tier3Id</source>
         <translation>ID Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
         <source>tier4Id</source>
         <translation>ID Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
         <source>tier5Id</source>
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="144"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="146"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="154"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="154"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="157"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="156"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="157"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="160"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="161"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="162"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
@@ -1129,7 +1129,7 @@
         <translation>Obbligo di Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>comingSoon</source>
         <translation>Prossimamente</translation>
     </message>
@@ -1139,7 +1139,7 @@
         <translation>DTLS attivo</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="86"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="89"/>
         <source>sentienAnomalies</source>
         <translation>Anomalia Sentient</translation>
     </message>
@@ -1433,7 +1433,7 @@
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../services/menuService.py" line="12"/>
+        <location filename="../services/menuService.py" line="18"/>
         <source>createdBy</source>
         <translation>App creata dall&apos;</translation>
     </message>
@@ -1441,6 +1441,11 @@
         <location filename="../services/menuService.py" line="27"/>
         <source>selectAlertFile</source>
         <translation>Seleziona file allerte</translation>
+    </message>
+    <message>
+        <location filename="../services/menuService.py" line="34"/>
+        <source>alertError</source>
+        <translation>Errore nella lettura del file</translation>
     </message>
 </context>
 <context>
@@ -1636,42 +1641,42 @@
         <translation>Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="60"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="61"/>
         <source>primeAccessUpdateError</source>
         <translation>Errore nel Prime Access</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="97"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="98"/>
         <source>featureDojoUpdateError</source>
         <translation>Errore nei Featured Dojo</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="105"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="106"/>
         <source>hubEventUpdateError</source>
         <translation>Errore negli Eventi Hub</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="89"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="90"/>
         <source>twitchPromoUpdateError</source>
         <translation>Errore nelle Promo di Twitch</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="68"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="69"/>
         <source>simarisUpdateError</source>
         <translation>Errore nei Bersagli di Simaris</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="75"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="76"/>
         <source>dailyDealsUpdateError</source>
         <translation>Errore negli Sconti Giornalieri</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="82"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="83"/>
         <source>relayStationUpdateError</source>
         <translation>Errore nelle Stazioni</translation>
     </message>
     <message>
-        <location filename="../components/tab/OtherWidgetTab.py" line="115"/>
+        <location filename="../components/tab/OtherWidgetTab.py" line="116"/>
         <source>experimentUpdateError</source>
         <translation>Errore negli esperimenti raccomandati</translation>
     </message>
@@ -2814,7 +2819,7 @@
         <translation>Pianeta Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="680"/>
+        <location filename="../utils/warframeUtils.py" line="682"/>
         <source>primeNotFound</source>
         <translation>Parte Prime Non Trovata</translation>
     </message>
