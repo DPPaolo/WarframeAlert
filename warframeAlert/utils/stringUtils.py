@@ -2,7 +2,7 @@
 from typing import List, Optional
 
 
-def divide_for_n(message: str, num=1, divide="\n") -> Optional[List[str]]:
+def divide_for_n(message: str, num: int = 1, divide: str = "\n") -> Optional[List[str]]:
     if (divide == ""):
         return None
     data: list[str] = []
@@ -17,13 +17,13 @@ def divide_for_n(message: str, num=1, divide="\n") -> Optional[List[str]]:
     return data
 
 
-def divide_message(mess: str, dim_line=50) -> str:
+def divide_message(mess: str, dim_line: int = 50, sep: str = " ") -> str:
     if (dim_line <= 0):
         return mess
     space = -1
     if (len(mess) > dim_line):
         for i in range(0, len(mess)):
-            if (mess[i] == " "):
+            if (mess[i] == sep):
                 space = i
             if (i >= dim_line):
                 if (space == -1):

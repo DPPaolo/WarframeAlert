@@ -21,46 +21,53 @@ class SpecialAlert(Alert):
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
+        self.extra_data_text = ""
         self.extra_text = ""
+
+        self.AlertExtraData = QtWidgets.QLabel("")
+        self.AlertExtraData.setFont(self.Font)
 
         self.AlertExtraInfo = QtWidgets.QLabel("")
         self.AlertExtraInfo.setFont(self.Font)
 
-        self.AlerthExtraBox0 = QtWidgets.QHBoxLayout()
+        self.AlertHExtraBox0 = QtWidgets.QHBoxLayout()
 
-        self.AlerthExtraBox0.addStretch(1)
-        self.AlerthExtraBox0.addWidget(self.AlertExtraInfo)
-        self.AlerthExtraBox0.addStretch(1)
+        self.AlertVExtraBox0 = QtWidgets.QVBoxLayout()
 
-        self.AlertHBox0.addLayout(self.AlerthExtraBox0)
+        self.AlertVExtraBox0.addWidget(self.AlertExtraData)
+        self.AlertVExtraBox0.addWidget(self.AlertExtraInfo)
+
+        self.AlertHExtraBox0.addStretch(1)
+        self.AlertHExtraBox0.addLayout(self.AlertVExtraBox0)
+        self.AlertHExtraBox0.addStretch(1)
+
+        self.AlertHBox0.addLayout(self.AlertHExtraBox0)
 
     def set_alert_title_info(self, desc: str) -> None:
         if (desc != ""):
-            self.extra_text += desc.upper() + ""
+            self.extra_data_text += desc.upper() + ""
 
     def set_alert_info(self, reqitem: str, consume_item: str, weapon: str) -> None:
         add_bracket_end = False
         info = reqitem or consume_item or weapon
-        if (info and self.extra_text != ""):
-            self.extra_text += " ("
+        if (info and self.extra_data_text != ""):
+            self.extra_data_text += " ("
             add_bracket_end = True
         if (weapon != ""):
-            self.extra_text += translate("specialAlert", "restriction") + ": " + str(weapon)
+            self.extra_data_text += translate("specialAlert", "restriction") + ": " + str(weapon)
         if (reqitem != ""):
             if (weapon != ""):
-                self.extra_text += "\t"
-            self.extra_text += translate("specialAlert", "requiredItem") + ": " + str(reqitem)
+                self.extra_data_text += "\t"
+            self.extra_data_text += translate("specialAlert", "requiredItem") + ": " + str(reqitem)
             if (consume_item != ""):
                 if (consume_item == translate("commonUtils", "yes")):
-                    self.extra_text += " " + translate("specialAlert", "itemConsumed")
+                    self.extra_data_text += " (" + translate("specialAlert", "itemConsumed") + ")"
                 else:
-                    self.extra_text += " " + translate("specialAlert", "itemNotConsumed")
+                    self.extra_data_text += " (" + translate("specialAlert", "itemNotConsumed") + ")"
         if (add_bracket_end):
-            self.extra_text += ")"
+            self.extra_data_text += ")"
 
     def set_alert_other_info(self, leader: str, advanced_spawn: str, aura: str, vip: str, fx: str) -> None:
-        if (self.extra_text != ""):
-            self.extra_text += "\n"
         if (leader != ""):
             self.extra_text += translate("specialAlert", "leaderAllowed") + "? " + str(leader)
         if (advanced_spawn != ""):
@@ -73,11 +80,13 @@ class SpecialAlert(Alert):
             self.extra_text += "\t" + translate("specialAlert", "fx") + ": " + str(fx)
 
     def set_extra_info(self) -> None:
-        text = divide_message(self.extra_text, 110)
+        self.AlertExtraData.setText(self.extra_data_text)
+        text = divide_message(self.extra_text, 80, "\t")
         self.AlertExtraInfo.setText(text)
 
     def hide(self) -> None:
         super().hide()
+        self.AlertExtraData.hide()
         self.AlertExtraInfo.hide()
 
 
