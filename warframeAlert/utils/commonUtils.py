@@ -41,6 +41,13 @@ def bool_to_int(boolean: bool) -> int:
         return 0
 
 
+def int_to_bool(value: int) -> bool:
+    if (value == 0):
+        return False
+    else:
+        return True
+
+
 def remove_widget(layout: QObject) -> None:
     for i in reversed(range(layout.count())):
         if (layout.itemAt(i) is not None):

@@ -197,7 +197,8 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
                     for drop in stage_rewards:
                         item = drop['itemName']
                         rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        rew_a += item + " (" + rar + ")\n"
+                        if (item):
+                            rew_a += item + " (" + rar + ")\n"
                     rew_a += "\n"
 
             if ('B' in bounty_level['rewards']):
@@ -210,7 +211,8 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
                     for drop in stage_rewards:
                         item = drop['itemName']
                         rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        rew_b += item + " (" + rar + ")\n"
+                        if (item):
+                            rew_b += item + " (" + rar + ")\n"
                     rew_b += "\n"
 
             if ('C' in bounty_level['rewards']):
@@ -223,7 +225,8 @@ def get_bounty_reward(reward: str, file_name: str) -> List[str]:
                     for drop in stage_rewards:
                         item = drop['itemName']
                         rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        rew_c += item + " (" + rar + ")\n"
+                        if (item):
+                            rew_c += item + " (" + rar + ")\n"
                     rew_c += "\n"
 
     if (rew_a == ""):

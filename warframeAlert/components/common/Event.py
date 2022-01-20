@@ -108,6 +108,7 @@ class Event():
         self.TABaseInfoBox.addLayout(self.TAInfoBox, 2)
 
         self.TADescVBox.addLayout(self.TABaseInfoBox)
+        self.TADescVBox.addStretch(2)
 
         self.TAEventBox.addLayout(self.TADescVBox)
 
