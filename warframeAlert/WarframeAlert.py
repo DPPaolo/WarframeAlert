@@ -7,6 +7,7 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
+from warframeAlert.components.widget.OptionsWidget import OptionsWidget
 from warframeAlert.services.menuService import MenuService, open_old_alert
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
 from warframeAlert.services.notificationService import NotificationService
@@ -73,14 +74,14 @@ class MainWindow(QtWidgets.QMainWindow):
         # Create a status bar under the tabs
         self.statusBar()
 
-        # TODO: add config widget
-        # Crea la finestra delle opzioni
-        # gestore_opzioni.create_config_widget()
+        # Create the options screen
+        self.options = OptionsHandler()
+        self.options.set_config_widget(OptionsWidget().get_widget())
 
         # Start the program service updater
         self.updateProgramService = UpdateProgramService()
 
-        # gestore_opzioni.UpdateTabber.connect(self.update_tab)
+        self.options.UpdateTabber.connect(self.tabService.update_tabber)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
         if (OptionsHandler.get_option("FirstInit") != 0):
             self.update_service.fist_init_completed.connect(self.show)
@@ -166,11 +167,11 @@ class MainWindow(QtWidgets.QMainWindow):
         open_alert.triggered.connect(lambda: open_old_alert(self.tabService))
         file.addAction(open_alert)
 
-        #     opzioni = QtWidgets.QAction("Opzioni", file)
-        #     opzioni.setShortcut("Ctrl+O")
-        #     opzioni.setStatusTip("Opzioni dell'Applicazione")
-        #     opzioni.triggered.connect(lambda: gestore_opzioni.open_option())wea
-        #     file.addAction(opzioni)
+        option = QtGui.QAction(translate("main", "options"), file)
+        option.setShortcut("Ctrl+O")
+        option.setStatusTip(translate("main", "openOptionsTip"))
+        option.triggered.connect(lambda: self.options.open_option())
+        file.addAction(option)
 
         exit_menu = QtGui.QAction(translate("main", "exitMenu"), file)
         exit_menu.setShortcut("Ctrl+Q")
@@ -178,7 +179,7 @@ class MainWindow(QtWidgets.QMainWindow):
         exit_menu.triggered.connect(QtCore.QCoreApplication.quit)
         file.addAction(exit_menu)
 
-        # Data Menu
+        # Debug Menu
         update_file = QtGui.QAction(translate("main", "updateFileMenu"), debug)
         update_file.setShortcut("Ctrl+U")
         update_file.setStatusTip(translate("main", "updateFileMenuDesc"))
@@ -190,12 +191,12 @@ class MainWindow(QtWidgets.QMainWindow):
         update_only_file.setStatusTip(translate("main", "updateFilesMenuDesc"))
         update_only_file.triggered.connect(lambda: self.update_file_service.download_all_file())
         debug.addAction(update_only_file)
-        #
-        #         parse_file = QtWidgets.QAction("Parserizza il File", debug)
-        #         parse_file.setShortcut("Ctrl+P")
-        #         parse_file.setStatusTip("Traduce le Allerte a Schermo")
-        #         parse_file.triggered.connect(lambda: self.update(False))
-        #         debug.addAction(parse_file)
+
+        parse_file = QtGui.QAction(translate("main", "parseUpdateFilesMenu"), debug)
+        parse_file.setShortcut("Ctrl+P")
+        parse_file.setStatusTip(translate("main", "parseUpdateFilesMenuTip"))
+        parse_file.triggered.connect(lambda: self.tabService.update(""))
+        debug.addAction(parse_file)
 
         # Tools Menu
         read_log = QtGui.QAction(translate("main", "readEELog"), tool)

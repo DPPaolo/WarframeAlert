@@ -7,13 +7,13 @@ from PyQt6.QtWidgets import QWidget
 
 
 class OptionsHandler(QtCore.QObject):
-    #UpdateTabber = QtCore.pyqtSignal()
+    UpdateTabber = QtCore.pyqtSignal()
     setting: QtCore.QSettings = QtCore.QSettings("config.ini", QtCore.QSettings.Format.IniFormat)
     during_init: bool = True
     default_value = {
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
-        "SubVersion": "2",      # Program Sub Version
+        "SubVersion": "4",      # Program Sub Version
         "FirstInit": 0,         # First Installation
         "TrayIcon": 0,          # Tray Icon Disable
         "Debug": 0,             # Debug Messages Disabled
@@ -41,7 +41,7 @@ class OptionsHandler(QtCore.QObject):
     def __init__(self) -> None:
         super().__init__()
         self.setting.setFallbacksEnabled(False)
-        self.ConfWidget = None
+        self.ConfigWidget = None
 
     def create_config(self) -> None:
         for key in self.default_value:
@@ -71,19 +71,19 @@ class OptionsHandler(QtCore.QObject):
         cls.setting.setValue(option, value)
 
     def get_widget(self) -> QWidget:
-        return self.ConfWidget
+        return self.ConfigWidget
 
-    # def create_config_widget(self):
-    #     self.ConfWidget = warframeUI.widget_config(self)
-    #     self.ConfWidget.setWindowTitle('Opzioni')
+    def open_option(self) -> None:
+        self.ConfigWidget.show()
 
-    # def update_conf_checkbox(self, tipo, obj):
-    #     self.set_option(tipo, warframe.booltoint(obj.isChecked()))
+    def set_config_widget(self, widget: QWidget) -> None:
+        self.ConfigWidget = widget
 
-    # def update_conf_tab(self, tipo, obj):
-    #     self.update_conf_checkbox(tipo, obj)
-    #     self.UpdateTabber.emit()
-    #
+    @classmethod
+    def update_config_tab(cls, option: str, value: bool):
+        cls.set_option(option, value)
+        cls.UpdateTabber.emit()
+
     # #@pyqtSlot()
     # def update_console_agg(self, ConsoleIndex):
     #     self.set_option("Update/Console", ConsoleIndex)
@@ -99,6 +99,3 @@ class OptionsHandler(QtCore.QObject):
 
     # def update_conf(self):
     #     self.AutoUpConf.setChecked(warframe.inttobool(self.get_option("Update/AutoUpdate")))
-
-    # def open_option(self):
-    #     self.ConfWidget.show()

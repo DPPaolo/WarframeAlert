@@ -260,37 +260,37 @@
 <context>
     <name>bountyWidgetTab</name>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="92"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="121"/>
         <source>newSynJobs</source>
         <translation>Nuove taglie per il sindacato</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="89"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="118"/>
         <source>bountiesError</source>
         <translation>Errore nelle taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="139"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="168"/>
         <source>bountyInit</source>
         <translation>Inizio Taglie</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="108"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="137"/>
         <source>cetusDay</source>
         <translation>Cetus - Notte tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="110"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="139"/>
         <source>cetusNight</source>
         <translation>Cetus - Giorno tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="118"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="147"/>
         <source>fortunaHot</source>
         <translation>Fortuna - Freddo tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="120"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="149"/>
         <source>fortunaCold</source>
         <translation>Fortuna - Caldo tra</translation>
     </message>
@@ -300,32 +300,32 @@
         <translation>Scadono tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="41"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="71"/>
         <source>ostron</source>
         <translation>Ostron</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="42"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="72"/>
         <source>fortuna</source>
         <translation>Fortuna</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="43"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="73"/>
         <source>hiveMind</source>
         <translation>Deimos</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="129"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="158"/>
         <source>deimosFass</source>
         <translation>Deimos - Vome tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="131"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="160"/>
         <source>deimosVome</source>
         <translation>Deimos - Fass tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/BountyWidgetTab.py" line="44"/>
+        <location filename="../components/tab/BountyWidgetTab.py" line="74"/>
         <source>hiveMindVault</source>
         <translation>Vault Deimos</translation>
     </message>
@@ -384,6 +384,14 @@
         <location filename="../utils/commonUtils.py" line="34"/>
         <source>no</source>
         <translation>No</translation>
+    </message>
+</context>
+<context>
+    <name>configTabWidget</name>
+    <message>
+        <location filename="../components/widget/ConfigTabWidget.py" line="16"/>
+        <source>activeTabs</source>
+        <translation>Schede Attive</translation>
     </message>
 </context>
 <context>
@@ -548,12 +556,12 @@
         <translation>Item Richiesto per l&apos;evento</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="150"/>
+        <location filename="../components/common/Event.py" line="151"/>
         <source>numEvent</source>
         <translation>Riproposizione dell&apos;evento numero</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="152"/>
+        <location filename="../components/common/Event.py" line="153"/>
         <source>transmission</source>
         <translation>Trasmissione Attiva</translation>
     </message>
@@ -568,7 +576,7 @@
         <translation>Evento/Missione richiesta</translation>
     </message>
     <message>
-        <location filename="../components/common/Event.py" line="154"/>
+        <location filename="../components/common/Event.py" line="155"/>
         <source>community</source>
         <translation>Evento di comunità</translation>
     </message>
@@ -1325,104 +1333,124 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="110"/>
+        <location filename="../WarframeAlert.py" line="111"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="124"/>
+        <location filename="../WarframeAlert.py" line="125"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="124"/>
+        <location filename="../WarframeAlert.py" line="125"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="175"/>
+        <location filename="../WarframeAlert.py" line="176"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="177"/>
+        <location filename="../WarframeAlert.py" line="178"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="110"/>
+        <location filename="../WarframeAlert.py" line="111"/>
         <source>closeToTray</source>
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="157"/>
+        <location filename="../WarframeAlert.py" line="158"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="158"/>
+        <location filename="../WarframeAlert.py" line="159"/>
         <source>dataMenu</source>
         <translation>Dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="159"/>
+        <location filename="../WarframeAlert.py" line="160"/>
         <source>toolsMenu</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="160"/>
+        <location filename="../WarframeAlert.py" line="161"/>
         <source>helpMenu</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="182"/>
+        <location filename="../WarframeAlert.py" line="183"/>
         <source>updateFileMenu</source>
         <translation>Aggiorna file Allerte</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="184"/>
+        <location filename="../WarframeAlert.py" line="185"/>
         <source>updateFileMenuDesc</source>
         <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="188"/>
+        <location filename="../WarframeAlert.py" line="189"/>
         <source>updateFilesMenu</source>
         <translation>Aggiorna file secondari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="190"/>
+        <location filename="../WarframeAlert.py" line="191"/>
         <source>updateFilesMenuDesc</source>
         <translation>Aggiorna tutti ifile secondari necessari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="208"/>
+        <location filename="../WarframeAlert.py" line="209"/>
         <source>infoHelpMenu</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="210"/>
+        <location filename="../WarframeAlert.py" line="211"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Informazioni sul Programma</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="201"/>
+        <location filename="../WarframeAlert.py" line="202"/>
         <source>readEELog</source>
         <translation>Ispeziona EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="203"/>
+        <location filename="../WarframeAlert.py" line="204"/>
         <source>toolHelpMenuEELog</source>
         <translation>Apre la scheda per ispezionare l&apos;EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="165"/>
+        <location filename="../WarframeAlert.py" line="166"/>
         <source>openOldFileTip</source>
         <translation>Apri un file json contenente dati di allerte precedenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="163"/>
+        <location filename="../WarframeAlert.py" line="164"/>
         <source>openOldFile</source>
         <translation>Apri</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="170"/>
+        <source>options</source>
+        <translation>Opzioni</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="172"/>
+        <source>openOptionsTip</source>
+        <translation>Apre la schermata delle opzioni dell&apos;applicazione</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="195"/>
+        <source>parseUpdateFilesMenu</source>
+        <translation>Analizza file</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="197"/>
+        <source>parseUpdateFilesMenuTip</source>
+        <translation>Avvia l&apos;analisi del file di dati presente</translation>
     </message>
 </context>
 <context>
@@ -1616,6 +1644,14 @@
         <location filename="../services/notificationService.py" line="47"/>
         <source>sendNotifError</source>
         <translation>Errore inviando la notifica</translation>
+    </message>
+</context>
+<context>
+    <name>optionsWidget</name>
+    <message>
+        <location filename="../components/widget/OptionsWidget.py" line="26"/>
+        <source>tab</source>
+        <translation>Schede</translation>
     </message>
 </context>
 <context>
@@ -2154,7 +2190,7 @@
         <translation>Ricompense possibili delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="249"/>
+        <location filename="../utils/warframeUtils.py" line="252"/>
         <source>noReward</source>
         <translation>Nessuna Ricompensa Disponibile</translation>
     </message>
@@ -2183,82 +2219,82 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="103"/>
+        <location filename="../components/common/SpecialAlert.py" line="112"/>
         <source>minutes</source>
         <translation>Minuti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="105"/>
+        <location filename="../components/common/SpecialAlert.py" line="114"/>
         <source>waves</source>
         <translation>Ondate</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="108"/>
+        <location filename="../components/common/SpecialAlert.py" line="117"/>
         <source>terminal</source>
         <translation>Terminale</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="110"/>
+        <location filename="../components/common/SpecialAlert.py" line="119"/>
         <source>terminals</source>
         <translation>Terminali</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <location filename="../components/common/SpecialAlert.py" line="121"/>
         <source>rounds</source>
         <translation>Round</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="116"/>
+        <location filename="../components/common/SpecialAlert.py" line="125"/>
         <source>pipe</source>
         <translation>Condutture</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="118"/>
+        <location filename="../components/common/SpecialAlert.py" line="127"/>
         <source>unknownWaveType</source>
         <translation>maxWaveNum non trovato per la missione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="52"/>
+        <location filename="../components/common/SpecialAlert.py" line="61"/>
         <source>requiredItem</source>
         <translation>Item Richiesto</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="55"/>
+        <location filename="../components/common/SpecialAlert.py" line="64"/>
         <source>itemConsumed</source>
         <translation>Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="57"/>
+        <location filename="../components/common/SpecialAlert.py" line="66"/>
         <source>itemNotConsumed</source>
         <translation>Non Consumato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="48"/>
+        <location filename="../components/common/SpecialAlert.py" line="57"/>
         <source>restriction</source>
         <translation>Restrizione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="65"/>
+        <location filename="../components/common/SpecialAlert.py" line="72"/>
         <source>leaderAllowed</source>
         <translation>Miniboss presenti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="67"/>
+        <location filename="../components/common/SpecialAlert.py" line="74"/>
         <source>advancedSpawn</source>
         <translation>Spawn avanzato</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="69"/>
+        <location filename="../components/common/SpecialAlert.py" line="76"/>
         <source>vipAgent</source>
         <translation>Nemico speciale extra</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="71"/>
+        <location filename="../components/common/SpecialAlert.py" line="78"/>
         <source>missionAura</source>
         <translation>Aura extra missione</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="73"/>
+        <location filename="../components/common/SpecialAlert.py" line="80"/>
         <source>fx</source>
         <translation>FX missione</translation>
     </message>
@@ -2744,87 +2780,87 @@
         <translation>Ricompensa Taglia non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="247"/>
+        <location filename="../utils/warframeUtils.py" line="250"/>
         <source>sortieRewardReadingError</source>
         <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="493"/>
+        <location filename="../utils/warframeUtils.py" line="496"/>
         <source>profit</source>
         <translation>Profitto</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="495"/>
+        <location filename="../utils/warframeUtils.py" line="498"/>
         <source>return</source>
         <translation>Guadagno</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="392"/>
+        <location filename="../utils/warframeUtils.py" line="395"/>
         <source>errorDropRelic</source>
         <translation>Errore nella lettura dei drop delle reliquie</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="397"/>
+        <location filename="../utils/warframeUtils.py" line="400"/>
         <source>relic</source>
         <translation>Reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="405"/>
+        <location filename="../utils/warframeUtils.py" line="408"/>
         <source>bounty</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="456"/>
+        <location filename="../utils/warframeUtils.py" line="459"/>
         <source>rotation</source>
         <translation>Rotazione</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="373"/>
+        <location filename="../utils/warframeUtils.py" line="376"/>
         <source>rare</source>
         <translation>Raro</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="375"/>
+        <location filename="../utils/warframeUtils.py" line="378"/>
         <source>notCommon</source>
         <translation>Non Comune</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="377"/>
+        <location filename="../utils/warframeUtils.py" line="380"/>
         <source>common</source>
         <translation>Comune</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="462"/>
+        <location filename="../utils/warframeUtils.py" line="465"/>
         <source>primeVault</source>
         <translation>Reliquia nel Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="462"/>
+        <location filename="../utils/warframeUtils.py" line="465"/>
         <source>relicDrop</source>
         <translation>Nessuna missione droppa questa reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="483"/>
+        <location filename="../utils/warframeUtils.py" line="486"/>
         <source>missionTypeNotFound</source>
         <translation>Tradutione Tipo Missione Non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="422"/>
+        <location filename="../utils/warframeUtils.py" line="425"/>
         <source>event</source>
         <translation>Evento</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="473"/>
+        <location filename="../utils/warframeUtils.py" line="476"/>
         <source>planetNotFound</source>
         <translation>Pianeta Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="682"/>
+        <location filename="../utils/warframeUtils.py" line="685"/>
         <source>primeNotFound</source>
         <translation>Parte Prime Non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="456"/>
+        <location filename="../utils/warframeUtils.py" line="459"/>
         <source>noRotation</source>
         <translation>Nessuna</translation>
     </message>

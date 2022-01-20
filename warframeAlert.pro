@@ -44,9 +44,14 @@ SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/tab/SyndicateWidgetTab.py \
                warframeAlert/components/widget/AlertWidget.py \
                warframeAlert/components/widget/BountyWidget.py \
+               warframeAlert/components/widget/ConfigOtherWidget.py \
+               warframeAlert/components/widget/ConfigTabWidget.py \
+               warframeAlert/components/widget/ConfigUpdateTabWidget.py \
                warframeAlert/components/widget/EELogWidget.py \
                warframeAlert/components/widget/GeneralInfoWidget.py \
                warframeAlert/components/widget/HubWidget.py \
+               warframeAlert/components/widget/MissionDropViewWidget.py \
+               warframeAlert/components/widget/OptionsWidget.py \
                warframeAlert/components/widget/PvPAlternativeWidget.py \
                warframeAlert/components/widget/PvPTournamentWidget.py \
                warframeAlert/components/widget/RelayStationWidget.py \
