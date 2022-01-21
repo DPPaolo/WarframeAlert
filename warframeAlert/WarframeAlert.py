@@ -7,11 +7,11 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
-from warframeAlert.components.widget.OptionsWidget import OptionsWidget
 from warframeAlert.services.menuService import MenuService, open_old_alert
 from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
+from warframeAlert.services.optionService import OptionService
 from warframeAlert.services.tabService import TabService
 from warframeAlert.services.translationService import Translator, translate
 from warframeAlert.services.trayService import TrayService
@@ -75,13 +75,11 @@ class MainWindow(QtWidgets.QMainWindow):
         self.statusBar()
 
         # Create the options screen
-        self.options = OptionsHandler()
-        self.options.set_config_widget(OptionsWidget().get_widget())
+        self.options = OptionService(self.tabService)
 
         # Start the program service updater
         self.updateProgramService = UpdateProgramService()
 
-        self.options.UpdateTabber.connect(self.tabService.update_tabber)
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
         if (OptionsHandler.get_option("FirstInit") != 0):
             self.update_service.fist_init_completed.connect(self.show)

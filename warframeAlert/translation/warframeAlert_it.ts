@@ -387,11 +387,97 @@
     </message>
 </context>
 <context>
+    <name>configOtherWidget</name>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="24"/>
+        <source>extraOptions</source>
+        <translation>Opzioni Extra</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="25"/>
+        <source>debugOptions</source>
+        <translation>Opzioni di Debug</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="26"/>
+        <source>alertPt1</source>
+        <translation>Le modifiche du queste opzioni richiedono</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="26"/>
+        <source>alertPt2</source>
+        <translation>un riavvio dell&apos;app per essere effettive</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="30"/>
+        <source>firstInstallation</source>
+        <translation>Prima Installazione</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="31"/>
+        <source>minimizeOnClose</source>
+        <translation>Minimizza ad icona alla chiusura</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="33"/>
+        <source>language</source>
+        <translation>Lingua App</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="34"/>
+        <source>languageTooltip</source>
+        <translation>Alcuni testi potrebbero non essere tradotti</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="38"/>
+        <source>it</source>
+        <translation>Italiano</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="39"/>
+        <source>en</source>
+        <translation>Inglese</translation>
+    </message>
+</context>
+<context>
     <name>configTabWidget</name>
     <message>
         <location filename="../components/widget/ConfigTabWidget.py" line="16"/>
         <source>activeTabs</source>
         <translation>Schede Attive</translation>
+    </message>
+</context>
+<context>
+    <name>configUpdateTabWidget</name>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="17"/>
+        <source>updateApp</source>
+        <translation>Aggiorna App</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="19"/>
+        <source>updateDataLabel</source>
+        <translation>Aggiornamento Dati</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="20"/>
+        <source>updateDataSec</source>
+        <translation>Frequenza di Aggiornamento (in secondi)</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="21"/>
+        <source>platform</source>
+        <translation>Piattaforma</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="25"/>
+        <source>activeAutoUpdate</source>
+        <translation>Abilita Auto Aggiornamento App</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/ConfigUpdateTabWidget.py" line="26"/>
+        <source>activeNotification</source>
+        <translation>Notifiche Attive</translation>
     </message>
 </context>
 <context>
@@ -513,7 +599,7 @@
     <message>
         <location filename="../components/common/Event.py" line="34"/>
         <source>stratosEmblem</source>
-        <translation>Stratos Emblem</translation>
+        <translation>Emblema Stratos</translation>
     </message>
     <message>
         <location filename="../components/common/EventVaultTrader.py" line="26"/>
@@ -1333,122 +1419,122 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="111"/>
+        <location filename="../WarframeAlert.py" line="109"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="125"/>
+        <location filename="../WarframeAlert.py" line="123"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="125"/>
+        <location filename="../WarframeAlert.py" line="123"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="176"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="178"/>
+        <location filename="../WarframeAlert.py" line="176"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="111"/>
+        <location filename="../WarframeAlert.py" line="109"/>
         <source>closeToTray</source>
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="158"/>
+        <location filename="../WarframeAlert.py" line="156"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="159"/>
+        <location filename="../WarframeAlert.py" line="157"/>
         <source>dataMenu</source>
         <translation>Dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="160"/>
+        <location filename="../WarframeAlert.py" line="158"/>
         <source>toolsMenu</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="161"/>
+        <location filename="../WarframeAlert.py" line="159"/>
         <source>helpMenu</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="183"/>
+        <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenu</source>
         <translation>Aggiorna file Allerte</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="185"/>
+        <location filename="../WarframeAlert.py" line="183"/>
         <source>updateFileMenuDesc</source>
         <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="189"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFilesMenu</source>
         <translation>Aggiorna file secondari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="191"/>
+        <location filename="../WarframeAlert.py" line="189"/>
         <source>updateFilesMenuDesc</source>
         <translation>Aggiorna tutti ifile secondari necessari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="209"/>
+        <location filename="../WarframeAlert.py" line="207"/>
         <source>infoHelpMenu</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="211"/>
+        <location filename="../WarframeAlert.py" line="209"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Informazioni sul Programma</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="202"/>
+        <location filename="../WarframeAlert.py" line="200"/>
         <source>readEELog</source>
         <translation>Ispeziona EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="204"/>
+        <location filename="../WarframeAlert.py" line="202"/>
         <source>toolHelpMenuEELog</source>
         <translation>Apre la scheda per ispezionare l&apos;EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="166"/>
+        <location filename="../WarframeAlert.py" line="164"/>
         <source>openOldFileTip</source>
         <translation>Apri un file json contenente dati di allerte precedenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="164"/>
+        <location filename="../WarframeAlert.py" line="162"/>
         <source>openOldFile</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="170"/>
+        <location filename="../WarframeAlert.py" line="168"/>
         <source>options</source>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="172"/>
+        <location filename="../WarframeAlert.py" line="170"/>
         <source>openOptionsTip</source>
         <translation>Apre la schermata delle opzioni dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="195"/>
+        <location filename="../WarframeAlert.py" line="193"/>
         <source>parseUpdateFilesMenu</source>
         <translation>Analizza file</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="197"/>
+        <location filename="../WarframeAlert.py" line="195"/>
         <source>parseUpdateFilesMenuTip</source>
         <translation>Avvia l&apos;analisi del file di dati presente</translation>
     </message>
@@ -1652,6 +1738,16 @@
         <location filename="../components/widget/OptionsWidget.py" line="26"/>
         <source>tab</source>
         <translation>Schede</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/OptionsWidget.py" line="27"/>
+        <source>other</source>
+        <translation>Altro</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/OptionsWidget.py" line="25"/>
+        <source>update</source>
+        <translation>Aggiornamento</translation>
     </message>
 </context>
 <context>

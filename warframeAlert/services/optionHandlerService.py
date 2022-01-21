@@ -3,7 +3,6 @@ import time
 from typing import Any, Type
 
 from PyQt6 import QtCore
-from PyQt6.QtWidgets import QWidget
 
 
 class OptionsHandler(QtCore.QObject):
@@ -41,7 +40,6 @@ class OptionsHandler(QtCore.QObject):
     def __init__(self) -> None:
         super().__init__()
         self.setting.setFallbacksEnabled(False)
-        self.ConfigWidget = None
 
     def create_config(self) -> None:
         for key in self.default_value:
@@ -69,33 +67,3 @@ class OptionsHandler(QtCore.QObject):
     @classmethod
     def set_option(cls, option: str, value: Any) -> None:
         cls.setting.setValue(option, value)
-
-    def get_widget(self) -> QWidget:
-        return self.ConfigWidget
-
-    def open_option(self) -> None:
-        self.ConfigWidget.show()
-
-    def set_config_widget(self, widget: QWidget) -> None:
-        self.ConfigWidget = widget
-
-    @classmethod
-    def update_config_tab(cls, option: str, value: bool):
-        cls.set_option(option, value)
-        cls.UpdateTabber.emit()
-
-    # #@pyqtSlot()
-    # def update_console_agg(self, ConsoleIndex):
-    #     self.set_option("Update/Console", ConsoleIndex)
-
-    # @pyqtSlot()
-    #def update_lang_agg(self, ConsoleIndex):
-    #    self.set_option("Language", ConsoleIndex)
-
-    # #@pyqtSlot()
-    # def update_cycle_agg(self, ComboBoxText):
-    #     self.set_option("Update/Cycle", int(ComboBoxText))
-    #     warframeData.gestore_update.set_timer()
-
-    # def update_conf(self):
-    #     self.AutoUpConf.setChecked(warframe.inttobool(self.get_option("Update/AutoUpdate")))

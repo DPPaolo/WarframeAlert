@@ -24,7 +24,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils, gameTranslationUtils
 from warframeAlert.utils.commonUtils import print_traceback, remove_widget, get_last_item_with_backslash, bool_to_yes_no
 from warframeAlert.utils.gameTranslationUtils import get_node, get_region, get_syndicate, get_faction, \
-    get_item_name_en, get_item_name, get_vip_agent, get_node_it
+    get_item_name_en, get_item_name, get_vip_agent
 from warframeAlert.utils.logUtils import LogHandler
 from warframeAlert.utils.warframeUtils import parse_reward
 
@@ -557,7 +557,7 @@ def create_prime_vault_trader(event_id: str, event: PrimeVaultTradersData) -> Ev
     end = event['Expiry']['$date']['$numberLong']
     initial_init = timeUtils.get_time(event['InitialStartDate']['$date']['$numberLong'])
     completed = bool_to_yes_no(event['Completed'])
-    node = get_node_it(event['Node'])
+    node = get_node(event['Node'])
     params = event['Params'] if ('Params' in event) else ""
     phase = event['Phase'] if ('Phase' in event) else 0
     manifest = event['Manifest']

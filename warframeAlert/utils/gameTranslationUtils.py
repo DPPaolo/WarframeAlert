@@ -50,7 +50,10 @@ def get_node_en(name: str) -> Tuple[str, str]:
     json_data = json.loads(data)
     found = 0
     if (name in json_data):
-        data = json_data[name]['value'].replace("\n", "").split(" ")
+        data = json_data[name]['value'].replace("\n", "")
+        if (" " not in data):
+            return data, "(????)"
+        data = data.split(" ")
         return data[0], data[1]
     if (found == 0):
         return name, "(????)"

@@ -3,13 +3,13 @@ from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import int_to_bool
+from warframeAlert.utils.commonUtils import int_to_bool, bool_to_int
 
 
 class ConfigTabWidget():
     ConfigTabWidget = None
 
-    def __init__(self) -> None:
+    def __init__(self, option_service) -> None:
         self.ConfigTabWidget = QtWidgets.QWidget()
         self.gridConfTab = QtWidgets.QGridLayout(self.ConfigTabWidget)
 
@@ -62,31 +62,31 @@ class ConfigTabWidget():
         self.OtherConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Other")))
 
         self.NewsConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/News", self.NewsConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/News", bool_to_int(self.NewsConfig.isChecked())))
         self.SeasonConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Nightwave", self.SeasonConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Nightwave", bool_to_int(self.SeasonConfig.isChecked())))
         self.TAConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/TactAll", self.TAConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/TactAll", bool_to_int(self.TAConfig.isChecked())))
         self.AcolyteConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Acolyte", self.AcolyteConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Acolyte", bool_to_int(self.AcolyteConfig.isChecked())))
         self.BountyConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Cetus", self.BountyConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Cetus", bool_to_int(self.BountyConfig.isChecked())))
         self.InvasionConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Invasion", self.InvasionConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Invasion", bool_to_int(self.InvasionConfig.isChecked())))
         self.SortieConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Sortie", self.SortieConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Sortie", bool_to_int(self.SortieConfig.isChecked())))
         self.SyndicateConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Syndicate", self.SyndicateConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Syndicate", bool_to_int(self.SyndicateConfig.isChecked())))
         self.FissureConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Fissure", self.FissureConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Fissure", bool_to_int(self.FissureConfig.isChecked())))
         self.BaroConfif.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Baro", self.BaroConfif.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Baro", bool_to_int(self.BaroConfif.isChecked())))
         self.SalesConfif.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Market", self.SalesConfif.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Market", bool_to_int(self.SalesConfif.isChecked())))
         self.PVPConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/PVP", self.PVPConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/PVP", bool_to_int(self.PVPConfig.isChecked())))
         self.OtherConfig.clicked.connect(
-            lambda: OptionsHandler.update_config_tab("Tab/Other", self.OtherConfig.isChecked()))
+            lambda: option_service.update_config_tab("Tab/Other", bool_to_int(self.OtherConfig.isChecked())))
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.ConfigTabWidget
