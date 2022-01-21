@@ -3,8 +3,7 @@ from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import int_to_bool
-
+from warframeAlert.utils.commonUtils import int_to_bool, bool_to_int
 
 LANGUAGE_TYPE = {
     0: "it",
@@ -56,9 +55,12 @@ class ConfigOtherWidget():
         self.InitConfig.setChecked(int_to_bool(OptionsHandler.get_option("FirstInit")))
         self.TrayConfig.setChecked(int_to_bool(OptionsHandler.get_option("TrayIcon")))
 
-        self.DebugConfig.clicked.connect(lambda: OptionsHandler.set_option("Debug", self.DebugConfig.isChecked()))
-        self.InitConfig.clicked.connect(lambda: OptionsHandler.set_option("FirstInit", self.InitConfig.isChecked()))
-        self.TrayConfig.clicked.connect(lambda: OptionsHandler.set_option("TrayIcon", self.TrayConfig.isChecked()))
+        self.DebugConfig.clicked.connect(
+            lambda: OptionsHandler.set_option("Debug", bool_to_int(self.DebugConfig.isChecked())))
+        self.InitConfig.clicked.connect(
+        lambda: OptionsHandler.set_option("FirstInit", bool_to_int(self.InitConfig.isChecked())))
+        self.TrayConfig.clicked.connect(
+            lambda: OptionsHandler.set_option("TrayIcon", bool_to_int(self.TrayConfig.isChecked())))
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.ConfigOtherWidget
@@ -71,5 +73,5 @@ def find_language_index() -> int:
             return language_type
 
 
-def update_language_app(language_index) -> None:
+def update_language_app(language_index: int) -> None:
     OptionsHandler.set_option("Language", LANGUAGE_TYPE[language_index])

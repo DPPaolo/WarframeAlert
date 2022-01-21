@@ -401,7 +401,7 @@
     <message>
         <location filename="../components/widget/ConfigOtherWidget.py" line="26"/>
         <source>alertPt1</source>
-        <translation>Le modifiche du queste opzioni richiedono</translation>
+        <translation>Le modifiche di queste opzioni richiedono</translation>
     </message>
     <message>
         <location filename="../components/widget/ConfigOtherWidget.py" line="26"/>

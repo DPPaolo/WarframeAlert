@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-
 import sys
 
 from PyQt6 import QtWidgets, QtCore, QtGui
@@ -64,6 +63,9 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mainTabber = QtWidgets.QTabWidget(self.mainWidget)
         self.tabService = TabService(self.mainTabber)
 
+        # Start the program service updater
+        self.updateProgramService = UpdateProgramService()
+
         # Create service used on the menu on top of the tabs
         self.menuService = MenuService()
 
@@ -75,10 +77,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.statusBar()
 
         # Create the options screen
-        self.options = OptionService(self.tabService)
-
-        # Start the program service updater
-        self.updateProgramService = UpdateProgramService()
+        self.options = OptionService(self.tabService, self.update_service, self.updateProgramService)
 
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
         if (OptionsHandler.get_option("FirstInit") != 0):

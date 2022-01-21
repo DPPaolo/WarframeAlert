@@ -6,14 +6,18 @@ from PyQt6.QtWidgets import QWidget
 from warframeAlert.components.widget.OptionsWidget import OptionsWidget
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.tabService import TabService
+from warframeAlert.services.updateProgramService import UpdateProgramService
+from warframeAlert.services.updateService import UpdateService
 
 
 class OptionService(QtCore.QObject):
-    UpdateTabber = QtCore.pyqtSignal()
 
-    def __init__(self, tab_service: TabService) -> None:
+    def __init__(self, tab_service: TabService, update_service: UpdateService,
+                 update_program_service: UpdateProgramService) -> None:
         super().__init__()
         self.tab_service = tab_service
+        self.update_service = update_service
+        self.update_program_service = update_program_service
         self.ConfigWidget = OptionsWidget(self).get_widget()
 
     def get_widget(self) -> QWidget:
@@ -29,14 +33,10 @@ class OptionService(QtCore.QObject):
         OptionsHandler.set_option(option, value)
         self.tab_service.update_tabber()
 
-    # #@pyqtSlot()
-    # def update_console_agg(self, ConsoleIndex):
-    #     OptionHandler.set_option("Update/Console", ConsoleIndex)
+    def open_update(self) -> None:
+        self.update_program_service.open_update()
 
-    # #@pyqtSlot()
-    # def update_cycle_agg(self, ComboBoxText):
-    #     OptionsHandler.set_option("Update/Cycle", int(ComboBoxText))
-    #     warframeData.gestore_update.set_timer()
-
-    # def update_conf(self):
-    #     self.AutoUpConf.setChecked(int_to_bool(OptionsHandler.get_option("Update/AutoUpdate")))
+    def update_cycle_update(self, cycle_text: str) -> None:
+        OptionsHandler.set_option("Update/Cycle", int(cycle_text))
+        self.update_service.stop()
+        self.update_service.start()
