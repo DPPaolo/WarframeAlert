@@ -7,7 +7,6 @@ import urllib.request
 from urllib.error import URLError
 
 from PyQt6 import QtCore, QtWidgets
-from PyQt6.QtCore import QThread
 
 from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -80,11 +79,11 @@ def update_program() -> None:
     os.remove("PostUpdate.txt")
 
 
-class Downloader(QThread):
+class Downloader(QtCore.QThread):
     download_completed = QtCore.pyqtSignal()
 
     def __init__(self, url: str, path: str, time_to_sleep: int = 10) -> None:
-        QThread.__init__(self)
+        QtCore.QThread.__init__(self)
         self.url: str = url
         self.path: str = path
         self.time_to_sleep: int = time_to_sleep
@@ -112,11 +111,11 @@ class Downloader(QThread):
                 LogHandler.err(translate("networkService", "connectionError") + ": " + self.url + "\n" + str(ex))
 
 
-class ProgressBarDownloader(QThread):
+class ProgressBarDownloader(QtCore.QThread):
     download_completed = QtCore.pyqtSignal()
 
     def __init__(self, progress_bar: QtWidgets.QProgressBar, url: str, path: str) -> None:
-        QThread.__init__(self)
+        QtCore.QThread.__init__(self)
         self.progressBar = progress_bar
         self.url: str = url
         self.path: str = path

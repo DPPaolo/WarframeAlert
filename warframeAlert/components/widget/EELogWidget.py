@@ -111,7 +111,6 @@ class EELogWidget():
         for line in fp.readlines():
             try:
                 line = line.replace("\n", "")
-                # TODO: optimize this function, remove unnecessary cycle???
                 match choice:
                     case 1:
                         if ("[Error]" in line or "[Warning]" in line):

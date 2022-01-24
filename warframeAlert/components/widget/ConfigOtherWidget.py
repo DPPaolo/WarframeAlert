@@ -37,7 +37,7 @@ class ConfigOtherWidget():
         self.ComboBoxLangage.addItem(translate("configOtherWidget", "en"))
 
         self.ComboBoxLangage.setCurrentIndex(find_language_index())
-        self.ComboBoxLangage.currentIndexChanged[int].connect(update_language_app)
+        self.ComboBoxLangage.currentIndexChanged.connect(update_language_app)
 
         self.gridOtherConfig.addWidget(self.ConfifOtherLabel, 0, 0)
         self.gridOtherConfig.addWidget(self.WarningConfigLabel, 1, 0, 1, 2)
@@ -58,7 +58,7 @@ class ConfigOtherWidget():
         self.DebugConfig.clicked.connect(
             lambda: OptionsHandler.set_option("Debug", bool_to_int(self.DebugConfig.isChecked())))
         self.InitConfig.clicked.connect(
-        lambda: OptionsHandler.set_option("FirstInit", bool_to_int(self.InitConfig.isChecked())))
+            lambda: OptionsHandler.set_option("FirstInit", bool_to_int(self.InitConfig.isChecked())))
         self.TrayConfig.clicked.connect(
             lambda: OptionsHandler.set_option("TrayIcon", bool_to_int(self.TrayConfig.isChecked())))
 

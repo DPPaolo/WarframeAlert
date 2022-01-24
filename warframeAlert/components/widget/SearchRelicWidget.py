@@ -39,8 +39,8 @@ class SearchRelicWidget():
         self.gridSearchRelic.addWidget(self.ItemComboBox, 2, 1)
         self.gridSearchRelic.addWidget(self.ItemsRelicText, 3, 0, 1, 3)
 
-        self.RelicComboBox.currentIndexChanged[int].connect(self.search_by_relic)
-        self.ItemComboBox.currentIndexChanged[int].connect(self.search_by_item)
+        self.RelicComboBox.currentIndexChanged.connect(self.search_by_relic)
+        self.ItemComboBox.currentIndexChanged.connect(self.search_by_item)
 
         self.SearchRelicWidget.setLayout(self.gridSearchRelic)
 

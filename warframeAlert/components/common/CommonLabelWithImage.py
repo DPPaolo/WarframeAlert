@@ -1,6 +1,5 @@
 # coding=utf-8
-from PyQt6 import QtWidgets
-from PyQt6.QtCore import Qt
+from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.CommonImages import CommonImages
 
@@ -30,7 +29,8 @@ class CommonLabelWithImage():
         self.Image.set_image(url_image)
 
     def set_image_dimension(self, width: int, height: int,
-                            aspect_ratio: Qt.AspectRatioMode = Qt.AspectRatioMode.IgnoreAspectRatio) -> None:
+                            aspect_ratio: QtCore.Qt.AspectRatioMode = QtCore.Qt.AspectRatioMode.IgnoreAspectRatio
+                            ) -> None:
         self.Image.set_image_dimension(width, height, aspect_ratio)
 
     def hide(self) -> None:

@@ -1,6 +1,6 @@
 # coding=utf-8
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation, Qt
+from PyQt6.QtCore import QParallelAnimationGroup, QPropertyAnimation, QAbstractAnimation
 from PyQt6.QtWidgets import QSizePolicy
 
 
@@ -11,8 +11,8 @@ class Spoiler(QtWidgets.QWidget):
 
         # toggle button to open/close the spoiler
         self.toggleButton = QtWidgets.QToolButton()
-        self.toggleButton.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
-        self.toggleButton.setArrowType(Qt.ArrowType.RightArrow)
+        self.toggleButton.setToolButtonStyle(QtCore.Qt.ToolButtonStyle.ToolButtonTextBesideIcon)
+        self.toggleButton.setArrowType(QtCore.Qt.ArrowType.RightArrow)
         self.toggleButton.setText(title)
         self.toggleButton.setCheckable(True)
         self.toggleButton.setChecked(False)
@@ -52,7 +52,7 @@ class Spoiler(QtWidgets.QWidget):
         self.toggleButton.clicked.connect(self.spoiler_clicked)
 
     def spoiler_clicked(self, checked) -> None:
-        arrow_type = Qt.ArrowType.DownArrow if checked else Qt.ArrowType.RightArrow
+        arrow_type = QtCore.Qt.ArrowType.DownArrow if checked else QtCore.Qt.ArrowType.RightArrow
         self.toggleButton.setArrowType(arrow_type)
         direction = QAbstractAnimation.Direction.Forward if checked else QAbstractAnimation.Direction.Backward
         self.toggleAnimation.setDirection(direction)

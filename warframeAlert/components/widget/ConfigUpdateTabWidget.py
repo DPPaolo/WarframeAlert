@@ -60,8 +60,8 @@ class ConfigUpdateTabWidget():
         self.AutoUpConfig.setChecked(int_to_bool(OptionsHandler.get_option("Update/AutoUpdate")))
         self.NotificationConfig.setChecked(int_to_bool(OptionsHandler.get_option("Update/Notify")))
 
-        self.CycleComboBox.currentTextChanged[str].connect(option_service.update_cycle_update)
-        self.PlatformComboBox.currentIndexChanged[int].connect(update_platform_type)
+        self.CycleComboBox.currentTextChanged.connect(option_service.update_cycle_update)
+        self.PlatformComboBox.currentIndexChanged.connect(update_platform_type)
         self.AutoUpConfig.clicked.connect(
             lambda: OptionsHandler.set_option("Update/AutoUpdate", bool_to_int(self.AutoUpConfig.isChecked())))
         self.NotificationConfig.clicked.connect(

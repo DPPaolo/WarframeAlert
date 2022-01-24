@@ -2,19 +2,18 @@
 import time
 
 from PyQt6 import QtCore, QtWidgets, sip
-from PyQt6.QtCore import QThread
 
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils, commonUtils
 from warframeAlert.utils.logUtils import LogHandler
 
 
-class Countdown(QThread):
+class Countdown(QtCore.QThread):
     TimeOut = QtCore.pyqtSignal()
     time = 0
 
     def __init__(self, *name) -> None:
-        QThread.__init__(self)
+        QtCore.QThread.__init__(self)
         self.deleted = 0
         self.stop = 0
         if name:

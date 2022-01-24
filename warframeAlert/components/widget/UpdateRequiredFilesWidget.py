@@ -1,7 +1,6 @@
 # coding=utf-8
 
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.networkService import check_connection
@@ -29,7 +28,7 @@ class UpdateRequiredFilesWidget(QtCore.QObject):
 
         self.UpdateFileWidget.resize(350, 50)
 
-        QTimer.singleShot(1500, lambda: self.download_program_file())
+        QtCore.QTimer.singleShot(1500, lambda: self.download_program_file())
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.UpdateFileWidget

@@ -1,7 +1,6 @@
 # coding=utf-8
 
-from PyQt6 import QtCore
-from PyQt6.QtWidgets import QWidget
+from PyQt6 import QtCore, QtWidgets
 
 from warframeAlert.components.widget.OptionsWidget import OptionsWidget
 from warframeAlert.services.optionHandlerService import OptionsHandler
@@ -20,13 +19,13 @@ class OptionService(QtCore.QObject):
         self.update_program_service = update_program_service
         self.ConfigWidget = OptionsWidget(self).get_widget()
 
-    def get_widget(self) -> QWidget:
+    def get_widget(self) -> QtWidgets.QWidget:
         return self.ConfigWidget
 
     def open_option(self) -> None:
         self.ConfigWidget.show()
 
-    def set_config_widget(self, widget: QWidget) -> None:
+    def set_config_widget(self, widget: QtWidgets.QWidget) -> None:
         self.ConfigWidget = widget
 
     def update_config_tab(self, option: str, value: int):

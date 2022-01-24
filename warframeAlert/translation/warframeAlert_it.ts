@@ -1471,12 +1471,12 @@
     <message>
         <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenu</source>
-        <translation>Aggiorna file Allerte</translation>
+        <translation>Aggiorna il file dei dati</translation>
     </message>
     <message>
         <location filename="../WarframeAlert.py" line="183"/>
         <source>updateFileMenuDesc</source>
-        <translation>Aggiorna solo il file allerte.json per aggiornare tutte le schede</translation>
+        <translation>Aggiorna solo il file dei dati e  aggiorna tutte le schede</translation>
     </message>
     <message>
         <location filename="../WarframeAlert.py" line="187"/>

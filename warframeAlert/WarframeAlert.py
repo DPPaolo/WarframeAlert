@@ -3,7 +3,6 @@
 import sys
 
 from PyQt6 import QtWidgets, QtCore, QtGui
-from PyQt6.QtCore import QTimer
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.menuService import MenuService, open_old_alert
@@ -145,7 +144,7 @@ class MainWindow(QtWidgets.QMainWindow):
             actual_date = int(timeUtils.get_local_time())
             if ((actual_date - old_update_date) > 604800 and check_connection()):
                 OptionsHandler.set_option("Update/AutoUpdateAll", actual_date)
-                QTimer.singleShot(60 * 1000, lambda: self.update_file_service.download_all_file())
+                QtCore.QTimer.singleShot(60 * 1000, lambda: self.update_file_service.download_all_file())
 
     def show_after_first_init(self) -> None:
         self.tabService.update("")

@@ -1471,12 +1471,12 @@
     <message>
         <location filename="../WarframeAlert.py" line="181"/>
         <source>updateFileMenu</source>
-        <translation>Update alert file only</translation>
+        <translation>Update data file only</translation>
     </message>
     <message>
         <location filename="../WarframeAlert.py" line="183"/>
         <source>updateFileMenuDesc</source>
-        <translation>Update alets file only to update all the tabs</translation>
+        <translation>Update data file only and update all the tabs</translation>
     </message>
     <message>
         <location filename="../WarframeAlert.py" line="187"/>
