@@ -4,8 +4,7 @@ from PyQt6 import QtWidgets, QtGui
 from warframeAlert.components.common.CommonLabelWithImage import CommonLabelWithImage
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.fileUtils import is_mac_os, get_separator
-from warframeAlert.utils.stringUtils import set_strike_text
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.timeUtils import get_time
 
 
@@ -17,7 +16,6 @@ class DailyDeals:
         self.DealsLab = QtWidgets.QLabel(translate("dailyDeals", "dailyDeals") + ": ")
         self.Deals = QtWidgets.QLabel("N/D")
         self.DealsEnd = Countdown(translate("dailyDeals", "end"))
-        self.DealsSpace1 = QtWidgets.QLabel("")
 
         self.DealsAmount = QtWidgets.QLabel("N/D")
         self.DealsOriginalPriceLab = QtWidgets.QLabel(translate("dailyDeals", "price") + ": ")
@@ -42,10 +40,8 @@ class DailyDeals:
         self.DealsHBox1.addStretch(1)
         self.DealsHBox1.addWidget(self.DealsEnd.TimeLab)
 
-        if (is_mac_os()):
-            self.DealsPriceBox.addWidget(self.DealsSpace1)
-            self.DealsPriceBox.addWidget(self.DealsOriginalPriceLab)
-            self.DealsPriceBox.addWidget(self.DealsOriginalPrice)
+        self.DealsPriceBox.addWidget(self.DealsOriginalPriceLab)
+        self.DealsPriceBox.addWidget(self.DealsOriginalPrice)
         self.DealsPriceBox.addLayout(self.DealsPrice.LabelWithImage)
 
         self.DealsHBox2.addWidget(self.DealsAmount)
@@ -62,18 +58,18 @@ class DailyDeals:
         self.DealsEnd.set_countdown(end[:10])
         self.DealsEnd.start()
 
+        strike_out_font = QtGui.QFont()
+        strike_out_font.setStrikeOut(True)
+
         self.DealsLab.setToolTip(translate("dailyDeals", "start") + get_time(init))
 
         self.Deals.setText(item)
 
         self.DealsSales.setText(translate("dailyDeals", "sale") + " " + str(sales) + "%")
 
-        if (is_mac_os()):
-            self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
-            self.DealsOriginalPrice.setText(str(original_price))
-            self.DealsPrice.set_before_text(str(price_sales) + " Platinum")
-        else:
-            price = set_strike_text(str(original_price)) + "  " + str(price_sales)
+        self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
 
-            self.DealsAmount.setText(translate("dailyDeals", "sold") + ": " + str(q_sold) + " / " + str(q_total))
-            self.DealsPrice.set_before_text(translate("dailyDeals", "price") + ": " + str(price) + " Platinum")
+        self.DealsOriginalPrice.setText(str(original_price))
+        self.DealsOriginalPrice.setFont(strike_out_font)
+
+        self.DealsPrice.set_before_text(str(price_sales) + " Platinum")

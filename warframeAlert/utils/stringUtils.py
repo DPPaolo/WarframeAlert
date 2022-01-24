@@ -33,8 +33,3 @@ def divide_message(mess: str, dim_line: int = 50, sep: str = " ") -> str:
         return mess
     else:
         return mess
-
-
-def set_strike_text(text: str) -> str:
-    # TODO: fix PyQt6 not working striked text
-    return ''.join([u'\u0336{}'.format(c) for c in text])
