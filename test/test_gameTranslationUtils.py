@@ -135,7 +135,7 @@ class TestGameTranslationsUtils():
         assert self.ACCOLYTE_NAME_NOT_FOUND == res
 
     def test_get_region_it_found(self) -> None:
-        res = get_region(4)
+        res = get_region(5)
         assert "Giove" == res
 
     def test_get_region_it_not_found(self) -> None:
@@ -144,7 +144,7 @@ class TestGameTranslationsUtils():
 
     def test_get_region_en_found(self) -> None:
         OptionsHandler.set_option("Language", "en")
-        res = get_region(4)
+        res = get_region(5)
         assert "Jupiter" == res
         OptionsHandler.set_option("Language", "it")
 

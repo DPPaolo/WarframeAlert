@@ -30,6 +30,5 @@ def divide_message(mess: str, dim_line: int = 50, sep: str = " ") -> str:
                     return mess[:dim_line] + "\n" + divide_message(mess[dim_line:], dim_line)
                 else:
                     return mess[:space] + "\n" + divide_message(mess[space + 1:], dim_line)
-        return mess
     else:
         return mess
