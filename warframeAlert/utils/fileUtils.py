@@ -1,4 +1,5 @@
 # coding=utf-8
+import filecmp
 import lzma
 import os
 import platform
@@ -74,19 +75,68 @@ def delete_file(path: str) -> None:
 
 def create_default_folder() -> None:
     d = get_cur_dir()
+    # default folders for downloaded content
     if (not check_folder("images")):
         os.makedirs(d + get_separator() + "images")
     if (not check_folder("images" + get_separator() + "news")):
         os.makedirs(d + get_separator() + "images" + get_separator() + "news")
     if (not check_folder("data")):
         os.makedirs(d + get_separator() + "data")
+    # default folders for mandatory files
+    if (not check_folder("assets")):
+        os.makedirs(d + get_separator() + "assets")
+    if (not check_folder("assets" + get_separator() + "icon")):
+        os.makedirs(d + get_separator() + "assets" + get_separator() + "icon")
+    if (not check_folder("assets" + get_separator() + "image")):
+        os.makedirs(d + get_separator() + "assets" + get_separator() + "image")
+    if (not check_folder("translation")):
+        os.makedirs(d + get_separator() + "translation")
 
 
-def copy_bundled_files_to_current_dir() -> None:
+def check_mandatory_files() -> None:
+    create_default_folder()
+
+    # Copy bundled files if missing
+    if (getattr(sys, 'frozen', False)):
+        check_bundled_files_missing()
+
+
+def check_bundled_files_missing() -> None:
     path = getattr(sys, '_MEIPASS', os.getcwd())
-    shutil.copytree(path + get_separator() + "assets" + get_separator() + "icon", "assets" + get_separator() + "icon")
-    shutil.copytree(path + get_separator() + "assets" + get_separator() + "image", "assets" + get_separator() + "image")
-    shutil.copytree(path + get_separator() + "translation", "translation")
+    if (not are_dir_trees_equal(path + get_separator() + "assets", "assets")):
+        shutil.copytree(path + get_separator() + "assets" + get_separator() + "icon",
+                        "assets" + get_separator() + "icon", dirs_exist_ok=True)
+        shutil.copytree(path + get_separator() + "assets" + get_separator() + "image",
+                        "assets" + get_separator() + "image", dirs_exist_ok=True)
+    if (not are_dir_trees_equal(path + get_separator() + "translation", "translation")):
+        shutil.copytree(path + get_separator() + "translation", "translation", dirs_exist_ok=True)
+
+
+def are_dir_trees_equal(directory1: str, directory2: str) -> bool:
+    """
+    Compare two directories recursively. Files in each directory are
+    assumed to be equal if their names and contents are equal.
+
+    @param directory1: First directory path
+    @param directory2: Second directory path
+
+    @return: True if the directory trees are the same and
+        there were no errors while accessing the directories or files,
+        False otherwise.
+   """
+
+    dirs_cmp = filecmp.dircmp(directory1, directory2)
+    if len(dirs_cmp.left_only) > 0 or len(dirs_cmp.right_only) > 0 or len(dirs_cmp.funny_files) > 0:
+        return False
+    (_, mismatch, errors) = filecmp.cmpfiles(directory1, directory2, dirs_cmp.common_files, shallow=False)
+    if len(mismatch) > 0 or len(errors) > 0:
+        return False
+    for common_dir in dirs_cmp.common_dirs:
+        new_dir1 = os.path.join(directory1, common_dir)
+        new_dir2 = os.path.join(directory2, common_dir)
+        if not are_dir_trees_equal(new_dir1, new_dir2):
+            return False
+    return True
 
 
 def decompress_lzma(data: bytes) -> bytes:

@@ -17,7 +17,7 @@ from warframeAlert.services.updateFileService import UpdateFileService
 from warframeAlert.services.updateProgramService import UpdateProgramService
 from warframeAlert.services.updateService import UpdateService
 from warframeAlert.utils import fileUtils, timeUtils
-from warframeAlert.utils.fileUtils import create_default_folder, get_separator, copy_bundled_files_to_current_dir
+from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -25,6 +25,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
+
+        # Copy mandatory files if missing
+        fileUtils.check_mandatory_files()
 
         # Start the log handler
         self.logHandler = LogHandler()
@@ -123,23 +126,12 @@ class MainWindow(QtWidgets.QMainWindow):
                            MessageBoxType.ERROR)
                 sys.exit()
 
-            create_default_folder()
             self.optionHandler.create_config()
-
-            if (not fileUtils.is_linux_os() and not fileUtils.is_mac_os()):
-                if getattr(sys, 'frozen', False):
-                    copy_bundled_files_to_current_dir()
 
             self.updateProgramService.open_and_update_file(self.update_file_service)
             self.updateProgramService.UpdateFile.all_file_downloaded.connect(self.show_after_first_init)
             OptionsHandler.set_option("FirstInit", 1)
         else:
-            # Copy bundled files if missing
-            # TODO: sistemare e farlo fare solo se manca un file in quelle cartelle
-            warframe_icon = "assets" + get_separator() + "icon" + get_separator() + "Warframe.ico"
-            if (not fileUtils.check_file(warframe_icon) and getattr(sys, 'frozen', False)):
-                copy_bundled_files_to_current_dir()
-
             old_update_date = OptionsHandler.get_option("Update/AutoUpdateAll")
             actual_date = int(timeUtils.get_local_time())
             if ((actual_date - old_update_date) > 604800 and check_connection()):
