@@ -32,6 +32,8 @@ class ScoreEvent(Event):
         self.TABarBox2.addWidget(self.TANodeAtt)
 
         self.TAInfoBox.addLayout(self.TABarBox1)
+        self.TAInfoBox.addStretch()
+
         self.TADescVBox.addLayout(self.TABarBox2)
 
     def set_perc_att(self, per: int, att_node: List[str]):

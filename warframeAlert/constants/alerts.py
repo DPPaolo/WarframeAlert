@@ -97,7 +97,7 @@ ALERT_ENEMY = {
 }
 
 ALERT_BOSS = {
-    "/Lotus/Types/Enemies/Grineer/Vip/CaptainVorBossAgent": {"it": "Capitano Vor", "en": "Captain Vot"},
+    "/Lotus/Types/Enemies/Grineer/Vip/CaptainVorBossAgent": {"it": "Capitano Vor", "en": "Captain Vor"},
     "/Lotus/Types/Enemies/Corpus/QuadRobot/QuadRobotAgent": {"it": "Jackal", "en": "Jackal"},
     "/Lotus/Types/Enemies/Grineer/Vip/Hek/HekBipedAgent": {"it": "Vay Hek", "en": "Vay Hek"},
     "/Lotus/Types/Enemies/Grineer/Vip/BossLechKrilAgent": {"it": "Lt. Lech Kril", "en": "Lt. Lech Kril"},

@@ -1,5 +1,5 @@
 # coding=utf-8
-from typing import List
+from typing import List, Tuple
 
 from PyQt6 import QtWidgets, QtCore
 
@@ -10,7 +10,7 @@ from warframeAlert.services.translationService import translate
 from warframeAlert.utils.gameTranslationUtils import get_region, get_node, get_task_type
 
 
-def get_reconstruction_task(name: str, cons_relay: List[ConstructionProject]):
+def get_reconstruction_task(name: str, cons_relay: List[ConstructionProject]) -> List[Tuple[str, int]]:
     task = []
     for data in cons_relay:
         tag = data['Tag']
@@ -80,17 +80,17 @@ class ReconstructionRelayEvent(Event):
         self.TARegion4.hide()
         self.TATask4.hide()
 
-    def add_relay_reconstruction(self, region: str, node: str, task: List[str]) -> None:
+    def add_relay_reconstruction(self, region: str, node: str, task: List[Tuple[str, int]]) -> None:
         node = get_node(node)
         self.TARelayNode.setText(translate("reconstructionEvent", "reconstructionNode") + " " + node[0] + " " + node[1])
         region_length = len(region)
-        self.TARegion0.setText(get_region(region[0]))
-        self.TARegion1.setText(get_region(region[1]))
-        self.TARegion2.setText(get_region(region[2]))
-        self.TARegion3.setText(get_region(region[3]))
+        self.TARegion0.setText(get_region(int(region[0]) + 1))
+        self.TARegion1.setText(get_region(int(region[1]) + 1))
+        self.TARegion2.setText(get_region(int(region[2]) + 1))
+        self.TARegion3.setText(get_region(int(region[3]) + 1))
         if (region_length > 4):
             self.TARegion4.show()
-            self.TARegion4.setText(get_region(region[4]))
+            self.TARegion4.setText(get_region(int(region[4]) + 1))
         task_length = len(task)
         self.TATask0.setText(str(task[0][1]) + "x " + task[0][0])
         self.TATask1.setText(str(task[1][1]) + "x " + task[1][0])

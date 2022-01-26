@@ -12,9 +12,10 @@ from warframeAlert.constants.other_missions import SIMARIS_TARGET, SEASON_CHALLE
 from warframeAlert.constants.pvp import PVP_MISSION_TYPE, PVP_CHALLENGE_TYPE, PVP_CHALLENGE_DESC, PVP_ALT_DESC
 from warframeAlert.constants.syndicates import SYNDICATE_NAME, BOUNTY_JOB_NAME, BOUNTY_JOB_DESC, BOUNTY_STAGE, \
     SYNDICATE_RANK_NAME
+from warframeAlert.constants.warframeData import RARITY
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
-from warframeAlert.utils.commonUtils import get_last_item_with_backslash, print_traceback
+from warframeAlert.utils.commonUtils import get_last_item_with_backslash
 from warframeAlert.utils.fileUtils import get_separator
 from warframeAlert.utils.logUtils import LogHandler
 
@@ -50,10 +51,12 @@ def get_node_en(name: str) -> Tuple[str, str]:
     json_data = json.loads(data)
     found = 0
     if (name in json_data):
-        data = json_data[name]['value'].replace("\n", "")
-        if (" " not in data):
-            return data, "(????)"
-        data = data.split(" ")
+        value = json_data[name]['value'].replace("\n", "")
+        if (" " not in value):
+            return value, "(????)"
+        data = value.split(" ")
+        if (len(data) >= 2 and "(" not in value):
+            return value, "(????)"
         return data[0], data[1]
     if (found == 0):
         return name, "(????)"
@@ -189,47 +192,7 @@ def get_alert_weapon_restriction(weapon: str) -> str:
         return get_last_item_with_backslash(weapon)
 
 
-def get_mission_from_starchart(node: str, planet: str) -> str:
-    if (OptionsHandler.get_option("Language", str) == "it"):
-        return get_mission_from_starchart_it(node, planet)
-    else:
-        return get_mission_from_starchart_en(node + " (" + planet + ")")
-
-
-def get_mission_from_starchart_it(node: str, planet: str) -> str:
-    file_path = "data" + get_separator() + "starchart.txt"
-    try:
-        fp = open(file_path)
-    except Exception as er:
-        LogHandler.err(str(er))
-        print_traceback(translate("gameTranslation", "errorFileStarchart") + str(er))
-        return ""
-    found = 0
-    for line in fp.readlines():
-        line = line.replace("\n", "")
-        if ("[" in line):
-            line = line.replace("]", "")
-            data = line.split("[Pianeta ")
-            if (data[1] == planet[1:-1]):
-                found = 1
-        elif (found == 1):
-            line = line.split(":")
-            if (line[0] == "Nome Nodo"):
-                if (line[1] == " " + node):
-                    found = 2
-        elif (found == 2):
-            line = line.split(":")
-            if (line[0] == "Tipo Missione"):
-                fp.close()
-                return line[1][1:]
-    fp.close()
-    if (found == 0):
-        print(translate("gameTranslation", "noStarchartNode") + ": " + node)
-        LogHandler.err(translate("gameTranslation", "noStarchartNode") + ": " + node)
-        return ""
-
-
-def get_mission_from_starchart_en(node: str) -> str:
+def get_mission_from_starchart(node: str) -> str:
     translation_path = "data" + get_separator() + "SolNodes.json"
     try:
         fp = open(translation_path)
@@ -242,7 +205,7 @@ def get_mission_from_starchart_en(node: str) -> str:
     json_data = json.loads(data)
     for elem in json_data:
         name = json_data[elem]['value']
-        if (name == node):
+        if (node in name):
             return json_data[elem]['type']
     return ""
 
@@ -288,13 +251,13 @@ def get_vip_agent(vip_agent: str) -> str:
         return get_last_item_with_backslash(vip_agent)
 
 
-def get_task_type(task: str) -> str:
+def get_task_type(task: str) -> Tuple[str, int]:
     if (task in TASK_TYPE):
         return TASK_TYPE[task][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
         LogHandler.err(translate("gameTranslation", "unknownReconstructionTaskType") + ": " + task)
-        return get_last_item_with_backslash(task)
+        return (get_last_item_with_backslash(task), 0)
 
 
 def get_syndicate(syn: str) -> str:
@@ -366,7 +329,6 @@ def get_nightwave_challenge(challenge: str) -> Tuple[str, str, int]:
                 return (json_data[name_lower]['value'], json_data[name_lower]['desc'], challenge_type[2])
             if (found == 0):
                 return ("???", get_last_item_with_backslash(challenge), 0)
-
     else:
         print(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
         LogHandler.err(translate("gameTranslation", "unknownChallengeType") + ": " + challenge)
@@ -386,8 +348,8 @@ def get_sortie_modifier(modifier: str) -> str:
     if (modifier in SORTIE_MODIFIER):
         return SORTIE_MODIFIER[modifier][OptionsHandler.get_option("Language", str)]
     else:
-        print(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
-        LogHandler.err(translate("gameTranslation", "unknownSortieBoss") + ": " + modifier)
+        print(translate("gameTranslation", "unknownSortieModifier") + ": " + modifier)
+        LogHandler.err(translate("gameTranslation", "unknownSortieModifier") + ": " + modifier)
         return modifier
 
 
@@ -401,8 +363,8 @@ def get_stage_name(stage: str) -> str:
 
 
 def get_rarity(rarity: str) -> str:
-    if (rarity in warframeData.RARITY):
-        return warframeData.RARITY[rarity][OptionsHandler.get_option("Language", str)]
+    if (rarity in RARITY):
+        return RARITY[rarity][OptionsHandler.get_option("Language", str)]
     else:
         print(translate("gameTranslation", "unknownRarity") + ": " + rarity)
         LogHandler.err(translate("gameTranslation", "unknownRarity") + ": " + rarity)
@@ -418,7 +380,7 @@ def get_pvp_mission_type(mission: str) -> str:
         return mission.upper()
 
 
-def get_pvp_mission_name(name: str) -> str:
+def get_pvp_mission_name(name: str, complete_name: str) -> str:
     language = OptionsHandler.get_option("Language", str)
     if (language == "it"):
         if (name in PVP_CHALLENGE_TYPE):
@@ -428,7 +390,7 @@ def get_pvp_mission_name(name: str) -> str:
             LogHandler.err(translate("gameTranslation", "unknownPvPMissionName") + ": " + name)
             return name
     else:
-        return get_item_name_en(name)
+        return get_item_name_en(complete_name)
 
 
 def get_pvp_desc(challenge: str, num: str) -> str:

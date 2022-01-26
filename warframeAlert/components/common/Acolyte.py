@@ -100,7 +100,7 @@ class Acolyte():
             if (planet == ""):
                 self.AccMis.setText("")
             else:
-                self.AccMis.setText(get_mission_from_starchart(node, planet))
+                self.AccMis.setText(get_mission_from_starchart(node))
         if (old_found_node != "N/D" and old_found_node != self.AccNode.text()):
             change_detected = 1
         if (change_detected):

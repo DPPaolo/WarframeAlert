@@ -29,16 +29,10 @@ def get_alert_time(timer: int | str) -> str:
         if (timer - 3600 >= 0):
             hour += 1
             timer -= 3600
-            if (hour >= 24):
-                hour = 0
-                day += 1
             continue
         if (timer - 60 >= 0):
             minute += 1
             timer -= 60
-            if (minute >= 60):
-                minute = 0
-                hour += 1
             continue
         else:
             sec = timer
@@ -83,7 +77,7 @@ def get_cetus_time(bounty_end_time) -> Tuple[int, bool]:
         return cycle_remaining_sec, day
     except Exception as err:
         commonUtils.print_traceback(translate("timeUtils", "error_get_cetus_time") + ":\n  " + str(err))
-        return int(time.time()), False
+        return 946684800, False
 
 
 def get_fortuna_time() -> Tuple[int, bool]:
@@ -103,4 +97,4 @@ def get_fortuna_time() -> Tuple[int, bool]:
         return cycle_sec, heat_moment
     except Exception as err:
         commonUtils.print_traceback(translate("timeUtils", "error_get_fortuna_time") + ":\n  " + str(err))
-        return int(time.time()), False
+        return 946684800, False

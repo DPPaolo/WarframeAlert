@@ -46,7 +46,7 @@ class AcolyteWidgetTab():
         for acc in data:
             acc_id = acc['_id']['$oid']
             try:
-                region = get_region(acc['Region'])
+                region = get_region(acc['Region'] + 1)
             except KeyError:
                 region = translate("acolyteWidgetTab", "noRegion")
             if (acc['LastDiscoveredLocation'] == ""):

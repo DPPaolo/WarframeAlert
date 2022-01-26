@@ -82,6 +82,7 @@ SORTIE_MODIFIER = {"SORTIE_MODIFIER_LOW_ENERGY": {"it": "Riduzione Energia", "en
                    }
 
 SEASON_CHALLENGE = {
+    "": ("ND", "ND", 0),
     # DAILY
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployGlyph": ("Graffiti", "Piazza un Glifo", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCodexScan": (

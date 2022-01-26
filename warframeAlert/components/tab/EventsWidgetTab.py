@@ -327,13 +327,13 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
         success = bool_to_yes_no(event['Success'])
     if ('Regions' in event):
         for index, region in enumerate(event['Regions']):
-            regions += get_region(region)
+            regions += get_region(region + 1)
             if (index < (len(event['Regions']) - 1)):
                 regions += ", "
     if ('RegionIdx' in event):
         if (regions != ""):
             regions += ", "
-        regions += get_region(event['RegionIdx'])
+        regions += get_region(event['RegionIdx'] + 1)
     if ('Faction' in event):
         faction = get_faction(event['Faction'])
     if ('InstructionalItem' in event):

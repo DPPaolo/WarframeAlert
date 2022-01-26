@@ -175,7 +175,7 @@ class PvPWidgetTab():
                         elif ("HARD" in challenge):
                             difficulty = 2
                             challenge = challenge[:-4]
-                        name = get_pvp_mission_name(challenge)
+                        name = get_pvp_mission_name(challenge, pvp['challengeTypeRefID'])
                         mission = get_pvp_mission_type(pvp['PVPMode'])
                         param = pvp['params'][0]
                         desc = get_pvp_desc(challenge, str(param['v']))

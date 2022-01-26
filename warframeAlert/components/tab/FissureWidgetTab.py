@@ -78,7 +78,7 @@ class FissureWidgetTab():
 
                     n_tier, tier = get_relic_tier(fissure['Modifier'])
                     seed = fissure['Seed']
-                    region = get_region(fissure['Region'])
+                    region = get_region(fissure['Region'] + 1)
 
                     temp = FissureBox(fissure_id, seed)
                     temp.set_fissure_data(node, plan, mis, init, end, tier, region)
