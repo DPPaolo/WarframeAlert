@@ -11,8 +11,8 @@ from warframeAlert.constants.events import OPERATION_TYPE
 from warframeAlert.constants.files import IMAGE_NAME
 from warframeAlert.constants.maps import MISSION_TYPE, REGION_MAP
 from warframeAlert.constants.syndicates import BOUNTY_RANK_LEVEL
-from warframeAlert.constants.warframeFileTypes import SortieFileRewards, BountyFileData, RelicFileData,  \
-    MissionFileData, TransientFileData, KeyFileData
+from warframeAlert.constants.warframeFileTypes import SortieFileRewards, BountyFileData, RelicFileData, \
+    MissionFileData, TransientFileData, KeyFileData, BountyFileRotationRewardsData
 from warframeAlert.constants.warframeTypes import MissionReward
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -22,10 +22,22 @@ from warframeAlert.utils.gameTranslationUtils import get_item_name, get_stage_na
 from warframeAlert.utils.logUtils import LogHandler
 
 
+def get_bounty_file_name_prefix(file_name: str) -> str:
+    prefix = ""
+    match file_name:
+        case "cetus":
+            prefix = "cetusBountyRewards"
+        case "fortuna":
+            prefix = "solarisBountyRewards"
+        case "deimos":
+            prefix = "deimosRewards"
+    return prefix
+
+
 def parse_reward(data: MissionReward) -> str:
     temp_rew = ""
     if ('randomizedItems' in data):
-        temp_rew += translate("warframeUtils", "randomItem") + " " + data['randomizedItems']
+        temp_rew += translate("warframeUtils", "randomItem") + " " + data['randomizedItems'] + " "
 
     if ('items' in data):
         len_data = len(data['items'])
@@ -46,6 +58,8 @@ def parse_reward(data: MissionReward) -> str:
     if ('countedStoreItems' in data):
         len_data = len(data['countedStoreItems'])
         if (len_data > 0):
+            if ("items" in data and len(data['items']) > 0):
+                temp_rew += " + "
             for i in range(0, len_data):
                 temp_rew += str(data['countedStoreItems'][i]['ItemCount']) + " x "
                 temp_rew += get_item_name(data['countedStoreItems'][i]['StoreItem'])
@@ -165,77 +179,61 @@ def read_drop_file(name: str) -> dict:
 def get_bounty_reward(reward: str, file_name: str) -> List[str]:
     language = OptionsHandler.get_option("Language", str)
     no_reward = translate("warframeUtils", "noBountyReward").replace(" ", "\n")
-    prefix = ""
-    match file_name:
-        case "cetus":
-            prefix = "cetusBountyRewards"
-        case "fortuna":
-            prefix = "solarisBountyRewards"
-        case "deimos":
-            prefix = "deimosRewards"
+    prefix = get_bounty_file_name_prefix(file_name)
     try:
         json_data: List[BountyFileData] = read_drop_file(file_name + "_" + language)[prefix]
     except KeyError or Exception:
         return [no_reward, no_reward, no_reward]
-    reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1][:-7]
+
+    reward_type = reward.split("/Lotus/Types/Game/MissionDecks/")[1]
+    if (reward_type[-7:] == "Rewards"):
+        reward_type = reward_type[:-7]
+
     if (reward_type in BOUNTY_RANK_LEVEL):
         reward_type = BOUNTY_RANK_LEVEL[reward_type]
     else:
         print(translate("warframeUtils", "bountyRewardNotFound") + " " + reward_type)
         return [no_reward, no_reward, no_reward]
 
-    rew_a = rew_b = rew_c = no_reward
+    reward_a = reward_b = reward_c = no_reward
     for bounty_level in json_data:
         if (bounty_level['bountyLevel'] == reward_type):
             if ('A' in bounty_level['rewards']):
-                rot_a = bounty_level['rewards']['A']
-                rot_a.sort(key=lambda x: x['stage'])
-                rew_a = ""
-                for stage, stage_rewards in groupby(rot_a, key=lambda x: x['stage']):
-                    stage_translated = stage if (language == "en") else get_stage_name(stage)
-                    rew_a += stage_translated + "\n\n"
-                    for drop in stage_rewards:
-                        item = drop['itemName']
-                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        if (item):
-                            rew_a += item + " (" + rar + ")\n"
-                    rew_a += "\n"
+                rotation_a = bounty_level['rewards']['A']
+                rotation_a.sort(key=lambda x: x['stage'])
+                reward_a = get_reward_from_bounty_file_rotation(rotation_a, language)
 
             if ('B' in bounty_level['rewards']):
-                rot_b = bounty_level['rewards']['B']
-                rot_b.sort(key=lambda x: x['stage'])
-                rew_b = ""
-                for stage, stage_rewards in groupby(rot_b, key=lambda x: x['stage']):
-                    stage_translated = stage if (language == "en") else get_stage_name(stage)
-                    rew_b += stage_translated + "\n\n"
-                    for drop in stage_rewards:
-                        item = drop['itemName']
-                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        if (item):
-                            rew_b += item + " (" + rar + ")\n"
-                    rew_b += "\n"
+                rotation_b = bounty_level['rewards']['B']
+                rotation_b.sort(key=lambda x: x['stage'])
+                reward_b = get_reward_from_bounty_file_rotation(rotation_b, language)
 
             if ('C' in bounty_level['rewards']):
-                rot_c = bounty_level['rewards']['C']
-                rot_c.sort(key=lambda x: x['stage'])
-                rew_c = ""
-                for stage, stage_rewards in groupby(rot_c, key=lambda x: x['stage']):
-                    stage_translated = stage if (language == "en") else get_stage_name(stage)
-                    rew_c += stage_translated + "\n\n"
-                    for drop in stage_rewards:
-                        item = drop['itemName']
-                        rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
-                        if (item):
-                            rew_c += item + " (" + rar + ")\n"
-                    rew_c += "\n"
+                rotation_c = bounty_level['rewards']['C']
+                rotation_c.sort(key=lambda x: x['stage'])
+                reward_c = get_reward_from_bounty_file_rotation(rotation_c, language)
 
-    if (rew_a == ""):
-        rew_a = no_reward
-    if (rew_b == ""):
-        rew_b = no_reward
-    if (rew_c == ""):
-        rew_c = no_reward
-    reward = [rew_a, rew_b, rew_c]
+    if (reward_a == ""):
+        reward_a = no_reward
+    if (reward_b == ""):
+        reward_b = no_reward
+    if (reward_c == ""):
+        reward_c = no_reward
+    reward = [reward_a, reward_b, reward_c]
+    return reward
+
+
+def get_reward_from_bounty_file_rotation(rotation: list[BountyFileRotationRewardsData], language: str) -> str:
+    reward = ""
+    for stage, stage_rewards in groupby(rotation, key=lambda x: x['stage']):
+        stage_translated = stage if (language == "en") else get_stage_name(stage)
+        reward += stage_translated + "\n\n"
+        for drop in stage_rewards:
+            item = drop['itemName']
+            rar = get_rarity(drop['rarity'].upper()) + " " + str(drop['chance']) + "%"
+            if (item):
+                reward += item + " (" + rar + ")\n"
+        reward += "\n"
     return reward
 
 
@@ -399,18 +397,17 @@ def get_relic_drop(relic_name: str) -> str:
     else:
         relic_name = translate("warframeUtils", "relic") + " " + relic_name
     mis = ""
+    relic_name = relic_name.lower()
 
     for bounty in json_cetus + json_fortuna + json_deimos:
         bounty_lv = bounty['bountyLevel']
         for rotation in bounty['rewards']:
             for bounty_reward in bounty['rewards'][rotation]:
-                if (bounty_reward['itemName'] == relic_name):
+                item = bounty_reward['itemName'].lower()
+                if (item == relic_name):
                     drop_text = translate("warframeUtils", "bounty") + " " + get_stage_name(bounty_lv) + " ("
                     drop_text += translate("warframeUtils", "rotation")
-                    if (rotation in ["A", "B", "C"]):
-                        drop_text += " " + rotation
-                    else:
-                        drop_text += " " + get_stage_name(bounty_reward['stage'])
+                    drop_text += " " + rotation
                     drop_text += " " + get_stage_name(bounty_reward['stage']) + ")\n"
                     mis += drop_text
                     found = 1
@@ -431,13 +428,13 @@ def get_relic_drop(relic_name: str) -> str:
                 if (is_rotation and mission_rewards in ["A", "B", "C"]):
                     rotation_items = mission_data['rewards'][mission_rewards]
                     for rotation_reward in rotation_items:
-                        item = rotation_reward['itemName']
+                        item = rotation_reward['itemName'].lower()
                         if (item == relic_name):
                             mis += mission_name + " (" + translated_planet + ") (" + mission_type + " " + \
                                    translate("warframeUtils", "rotation") + " " + mission_rewards + ")\n"
                             found = 1
                 else:
-                    item = mission_rewards['itemName']
+                    item = mission_rewards['itemName'].lower()
                     if (item == relic_name):
                         mis += mission + " (" + translated_planet + ") (" + mission_type + ")\n"
                         found = 1
@@ -447,7 +444,7 @@ def get_relic_drop(relic_name: str) -> str:
         for key_rewards in key_mission['rewards']:
             rotation_items = key_mission['rewards'][key_rewards]
             for rotation_reward in rotation_items:
-                item = rotation_reward['itemName']
+                item = rotation_reward['itemName'].lower()
                 if (item == relic_name):
                     mis += mission_name + " (" + translate("warframeUtils", "rotation") + " " + key_rewards + ")\n"
                     found = 1
@@ -455,7 +452,7 @@ def get_relic_drop(relic_name: str) -> str:
     for transient_mission in json_transient:
         mission_name = transient_mission['objectiveName']
         for transient_rewards in transient_mission['rewards']:
-            item = transient_rewards['itemName']
+            item = transient_rewards['itemName'].lower()
             rotation = translate("warframeUtils", "rotation") + " " + translate("warframeUtils", "noRotation")
             if (item == relic_name):
                 mis += mission_name + " (" + rotation + ")\n"
@@ -490,10 +487,6 @@ def translate_mission_type_from_drop_file(mission_type: str) -> str:
 def translate_item_from_drop_file(data: str) -> str:
     if (data[-1] == " "):
         data = data[:-1]
-    if (data[0] == " "):
-        data = data[0:]
-    if ("PROFIT:" in data):
-        return translate("warframeUtils", "profit") + ": " + data.split(' ')[1]
     if ('RETURN:' in data):
         return translate("warframeUtils", "return") + ": " + data.split(' ')[1]
     item = data.split(" ")
@@ -515,7 +508,7 @@ def translate_item_from_drop_file(data: str) -> str:
     elif (is_item(data)):
         return warframeData.ITEMS[data]
     elif (is_arcane_item(data)):
-        translate_generic_item(data)
+        return translate_generic_item(data)
     elif (is_special_weapon(data)):
         return translate_special_weapon(data)
     elif (is_prime_part(data)):
@@ -554,7 +547,7 @@ def translate_focus_lens(focus_lens: str) -> str:
         elif (len(focus_lens) == 4):
             return "Lente Eidolon " + str.capitalize(focus_lens[1]) + " (Schema)"
     if ("LUA" in focus_lens):
-        "Lente Lua (Schema)"
+        return "Lente Lua (Schema)"
     elif (len(focus_lens) == 2):
         return "Lente " + str.capitalize(focus_lens[0])
     elif (len(focus_lens) == 3):
@@ -587,7 +580,7 @@ def translate_special_weapon(item: str) -> str:
     elif ("WRAITH" in item):
         return translate_prime_part(item, "WRAITH")
     elif ("CARMINE" in item):
-        return translate_carmine_part(item)
+        return translate_prime_part(item, "CARMINE")
 
 
 def is_prime_part(item: str) -> bool:
@@ -595,40 +588,26 @@ def is_prime_part(item: str) -> bool:
 
 
 def translate_prime_part(item: str, separator: str = "PRIME") -> str:
-    prime_item = item.split(" " + separator + " ")[0]
-    prime_parts = item.split(" " + separator + " ")[1].split(" ")
+    split_text = separator + " "
+    if (separator != "CARMINE"):
+        split_text = " " + split_text
+    prime_item = item.split(split_text)[0]
+    prime_parts = item.split(split_text)[1].split(" ")
     parts_translated = ""
     j = 0
     for i in range(0, len(prime_parts)):
-        if (prime_parts[i] not in warframeData.ITEM_PARTS):
-            print(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
-            LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
-        else:
-            parts_translated = parts_translated + warframeData.ITEM_PARTS[prime_parts[i]]
-        j += 1
-        if (j != len(prime_parts)):
-            parts_translated += " "
-    return prime_item.capitalize() + " " + warframeData.ITEM_PARTS[separator] + " " + parts_translated
-
-
-def translate_carmine_part(item: str) -> str:
-    separator = "CARMINE"
-    prime_item = item.split(separator + " ")[0]
-    prime_parts = item.split(separator + " ")[1].split(" ")
-    parts_translated = ""
-    j = 0
-    for i in range(0, len(prime_parts)):
-        if (i == 0):
+        if (i == 0 and separator == "CARMINE"):
             parts_translated += prime_parts[i].capitalize()
         elif (prime_parts[i] not in warframeData.ITEM_PARTS):
             print(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
             LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + prime_parts[i])
+            parts_translated += prime_parts[i]
         else:
             parts_translated += warframeData.ITEM_PARTS[prime_parts[i]]
         j += 1
         if (j != len(prime_parts)):
             parts_translated += " "
-    return prime_item.capitalize() + " " + warframeData.ITEM_PARTS[separator] + " " + parts_translated
+    return prime_item.capitalize() + " " + warframeData.ITEM_PARTS[separator] + " " + parts_translated.rstrip()
 
 
 def is_warframe_parts(item: str) -> bool:
@@ -650,12 +629,13 @@ def translate_warframe_part(item: str) -> str:
         if (warframe_parts[i] not in warframeData.ITEM_PARTS):
             print(translate("warframeUtils", "primeNotFound") + ": " + warframe_parts[i])
             LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + warframe_parts[i])
+            parts_translated += warframe_parts[i]
         else:
             parts_translated += warframeData.ITEM_PARTS[warframe_parts[i]]
         j += 1
         if (j != len(warframe_parts)):
             parts_translated += " "
-    return warframe.capitalize() + " " + parts_translated
+    return warframe.capitalize() + " " + parts_translated.rstrip()
 
 
 def is_weapon_parts(item: str) -> bool:
@@ -668,27 +648,35 @@ def is_weapon_parts(item: str) -> bool:
 
 
 def translate_weapon_parts(item: str) -> str:
-    weapon = item.split(" ")[0]
-    weapon_parts = item.split(weapon + " ")[1].split(" ")
     parts_translated = ""
 
     item_parts = item.split(" ")
-    equal_parts = 0
+    weapon_name_parts_index = len(item_parts)
     for i in range(0, len(item_parts)):
-        if (item_parts[i] in warframeData.ITEM_PARTS and i != 0):
-            equal_parts = i
+        if (item_parts[i] in warframeData.ITEM_PARTS and i != 0 and i < weapon_name_parts_index):
+            weapon_name_parts_index = i
+
+    if (weapon_name_parts_index == len(item_parts)):
+        weapon_name_parts_index += -1
+
+    weapon_parts_translated = ""
+    for i in range(0, weapon_name_parts_index):
+        weapon_parts_translated += item_parts[i].capitalize() + " "
 
     j = 0
-    for i in range(equal_parts, len(weapon_parts)):
-        if (weapon_parts[i] not in warframeData.ITEM_PARTS):
+    k = weapon_name_parts_index
+    while(k < len(item_parts)):
+        if (item_parts[k] not in warframeData.ITEM_PARTS):
             print(translate("warframeUtils", "primeNotFound") + ": " + item)
             LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + item)
+            parts_translated += item_parts[k]
         else:
-            parts_translated += warframeData.ITEM_PARTS[weapon_parts[i]]
+            parts_translated += warframeData.ITEM_PARTS[item_parts[k]]
         j += 1
-        if (j != len(weapon_parts)):
+        if (j != len(item_parts)):
             parts_translated += " "
-    return weapon.capitalize() + "  " + parts_translated
+        k += 1
+    return weapon_parts_translated + parts_translated.rstrip()
 
 
 def is_railjack_weapon(item: str) -> bool:
@@ -709,4 +697,4 @@ def translate_generic_item(item: str) -> str:
         if (j != len(item_parts)):
             parts_translated += " "
 
-    return parts_translated
+    return parts_translated.rstrip()

@@ -890,172 +890,162 @@
 <context>
     <name>gameTranslation</name>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="36"/>
+        <location filename="../utils/gameTranslationUtils.py" line="37"/>
         <source>unknownNode</source>
         <translation>Nodo Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="113"/>
+        <location filename="../utils/gameTranslationUtils.py" line="116"/>
         <source>unknownEnemy</source>
         <translation>Nemico Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="122"/>
+        <location filename="../utils/gameTranslationUtils.py" line="125"/>
         <source>unknownSimarisTarget</source>
         <translation>Bersaglio Simaris non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="85"/>
+        <location filename="../utils/gameTranslationUtils.py" line="88"/>
         <source>unknownItemName</source>
         <translation>Oggetto non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="359"/>
+        <location filename="../utils/gameTranslationUtils.py" line="322"/>
         <source>errorFileLanguage</source>
         <translation>Errore nella lettura del file Language.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="68"/>
+        <location filename="../utils/gameTranslationUtils.py" line="71"/>
         <source>unknownFaction</source>
         <translation>Fazione non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="131"/>
+        <location filename="../utils/gameTranslationUtils.py" line="134"/>
         <source>unknownInvasionLocTag</source>
         <translation>Location Tag Invasione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="239"/>
+        <location filename="../utils/gameTranslationUtils.py" line="202"/>
         <source>errorFileSolNodes</source>
         <translation>Errore nella lettura del file SolNodes.json</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="140"/>
+        <location filename="../utils/gameTranslationUtils.py" line="143"/>
         <source>unknownAcolyte</source>
         <translation>Accolito Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="158"/>
+        <location filename="../utils/gameTranslationUtils.py" line="161"/>
         <source>unknownRegion</source>
         <translation>Regione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="205"/>
-        <source>errorFileStarchart</source>
-        <translation>Impossibile aprire il file starchart.txt</translation>
-    </message>
-    <message>
-        <location filename="../utils/gameTranslationUtils.py" line="228"/>
-        <source>noStarchartNode</source>
-        <translation>Tipo Missione non trovata per il Nodo</translation>
-    </message>
-    <message>
-        <location filename="../utils/gameTranslationUtils.py" line="149"/>
+        <location filename="../utils/gameTranslationUtils.py" line="152"/>
         <source>unknownUpgradeType</source>
         <translation>Tipo Upgrade sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="170"/>
+        <location filename="../utils/gameTranslationUtils.py" line="173"/>
         <source>unknownMissionType</source>
         <translation>Tipo Missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="343"/>
+        <location filename="../utils/gameTranslationUtils.py" line="306"/>
         <source>unknownMapType</source>
         <translation>Tipo Mappa sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="179"/>
+        <location filename="../utils/gameTranslationUtils.py" line="182"/>
         <source>unknownAlertInfo</source>
         <translation>Info Allerta sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="188"/>
+        <location filename="../utils/gameTranslationUtils.py" line="191"/>
         <source>unknownWeaponRestriction</source>
         <translation>Restrizione Arma Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="330"/>
+        <location filename="../utils/gameTranslationUtils.py" line="293"/>
         <source>unknownJob</source>
         <translation>Taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="342"/>
+        <location filename="../utils/gameTranslationUtils.py" line="305"/>
         <source>unknownJobDesc</source>
         <translation>Descrizione taglia sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="305"/>
+        <location filename="../utils/gameTranslationUtils.py" line="268"/>
         <source>unknownSyndicate</source>
         <translation>Associazione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="372"/>
+        <location filename="../utils/gameTranslationUtils.py" line="334"/>
         <source>unknownChallengeType</source>
         <translation>Sfida Nightwave sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="265"/>
+        <location filename="../utils/gameTranslationUtils.py" line="228"/>
         <source>unknownAuraType</source>
         <translation>Aura Missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="274"/>
+        <location filename="../utils/gameTranslationUtils.py" line="237"/>
         <source>unknownFXType</source>
         <translation>FX missione sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="287"/>
+        <location filename="../utils/gameTranslationUtils.py" line="250"/>
         <source>unknownVipType</source>
         <translation>Vip missione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="296"/>
+        <location filename="../utils/gameTranslationUtils.py" line="259"/>
         <source>unknownReconstructionTaskType</source>
         <translation>Obiettivo Ricostruzione Stazione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="314"/>
+        <location filename="../utils/gameTranslationUtils.py" line="277"/>
         <source>unknownSyndicateRank</source>
         <translation>Nome Rango Associazione sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="381"/>
+        <location filename="../utils/gameTranslationUtils.py" line="343"/>
         <source>unknownSortieBoss</source>
         <translation>Boss Incursioni Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="399"/>
+        <location filename="../utils/gameTranslationUtils.py" line="361"/>
         <source>unknownBountyStage</source>
         <translation>Stage Taglia Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="408"/>
+        <location filename="../utils/gameTranslationUtils.py" line="370"/>
         <source>unknownRarity</source>
         <translation>Rarità Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="417"/>
+        <location filename="../utils/gameTranslationUtils.py" line="379"/>
         <source>unknownPvPCategory</source>
         <translation>Tipo Missione PvP Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="428"/>
+        <location filename="../utils/gameTranslationUtils.py" line="390"/>
         <source>unknownPvPMissionName</source>
         <translation>Nome Missione PvP Sconosciuto</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="440"/>
+        <location filename="../utils/gameTranslationUtils.py" line="402"/>
         <source>unknownPvPDesc</source>
         <translation>Descrizione Missione PvP Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="449"/>
+        <location filename="../utils/gameTranslationUtils.py" line="411"/>
         <source>unknownPvPAlternativeDesc</source>
         <translation>Descrizione Missione PvP Alternativa Sconosciuta</translation>
     </message>
     <message>
-        <location filename="../utils/gameTranslationUtils.py" line="390"/>
+        <location filename="../utils/gameTranslationUtils.py" line="352"/>
         <source>unknownSortieModifier</source>
         <translation>Modificatore Incursioni Sconosciuto</translation>
     </message>
@@ -1424,124 +1414,134 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="110"/>
+        <location filename="../WarframeAlert.py" line="111"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="124"/>
+        <location filename="../WarframeAlert.py" line="125"/>
         <source>noConnection</source>
         <translation>Nessuna Connessione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="124"/>
+        <location filename="../WarframeAlert.py" line="125"/>
         <source>noConnectionFirstInit</source>
         <translation>Il primo avvio dell&apos;applicazione necessita di una connessione ad internet. Assicurati di essere connesso alla rete</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="164"/>
+        <location filename="../WarframeAlert.py" line="165"/>
         <source>exitMenu</source>
         <translation>Esci</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="166"/>
+        <location filename="../WarframeAlert.py" line="167"/>
         <source>exitMenuDesc</source>
         <translation>Esci dall&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="110"/>
+        <location filename="../WarframeAlert.py" line="111"/>
         <source>closeToTray</source>
         <translation>L&apos;applicazione verrà ridotta ad icona</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="146"/>
+        <location filename="../WarframeAlert.py" line="147"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="147"/>
+        <location filename="../WarframeAlert.py" line="148"/>
         <source>dataMenu</source>
         <translation>Dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="148"/>
+        <location filename="../WarframeAlert.py" line="149"/>
         <source>toolsMenu</source>
         <translation>Strumenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="149"/>
+        <location filename="../WarframeAlert.py" line="150"/>
         <source>helpMenu</source>
         <translation>Aiuto</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="171"/>
+        <location filename="../WarframeAlert.py" line="172"/>
         <source>updateFileMenu</source>
         <translation>Aggiorna il file dei dati</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="173"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>updateFileMenuDesc</source>
         <translation>Aggiorna solo il file dei dati e  aggiorna tutte le schede</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="177"/>
+        <location filename="../WarframeAlert.py" line="178"/>
         <source>updateFilesMenu</source>
         <translation>Aggiorna file secondari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="179"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>updateFilesMenuDesc</source>
         <translation>Aggiorna tutti ifile secondari necessari</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="197"/>
+        <location filename="../WarframeAlert.py" line="198"/>
         <source>infoHelpMenu</source>
         <translation>Informazioni</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="199"/>
+        <location filename="../WarframeAlert.py" line="200"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Informazioni sul Programma</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="190"/>
+        <location filename="../WarframeAlert.py" line="191"/>
         <source>readEELog</source>
         <translation>Ispeziona EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="192"/>
+        <location filename="../WarframeAlert.py" line="193"/>
         <source>toolHelpMenuEELog</source>
         <translation>Apre la scheda per ispezionare l&apos;EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="154"/>
+        <location filename="../WarframeAlert.py" line="155"/>
         <source>openOldFileTip</source>
         <translation>Apri un file json contenente dati di allerte precedenti</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="152"/>
+        <location filename="../WarframeAlert.py" line="153"/>
         <source>openOldFile</source>
         <translation>Apri</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="158"/>
+        <location filename="../WarframeAlert.py" line="159"/>
         <source>options</source>
         <translation>Opzioni</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="160"/>
+        <location filename="../WarframeAlert.py" line="161"/>
         <source>openOptionsTip</source>
         <translation>Apre la schermata delle opzioni dell&apos;applicazione</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="183"/>
+        <location filename="../WarframeAlert.py" line="184"/>
         <source>parseUpdateFilesMenu</source>
         <translation>Analizza file</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="185"/>
+        <location filename="../WarframeAlert.py" line="186"/>
         <source>parseUpdateFilesMenuTip</source>
         <translation>Avvia l&apos;analisi del file di dati presente</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="209"/>
+        <source>updateProgramTitleBox</source>
+        <translation>Aggiornamento Disponibile</translation>
+    </message>
+    <message>
+        <location filename="../WarframeAlert.py" line="209"/>
+        <source>updateProgramDescBox</source>
+        <translation>Una nuova versione del programma è disponibile! Puoi aggiornare subito o dopo dalle opzioni</translation>
     </message>
 </context>
 <context>
@@ -1570,14 +1570,19 @@
 <context>
     <name>messageBox</name>
     <message>
-        <location filename="../components/common/MessageBox.py" line="26"/>
+        <location filename="../components/common/MessageBox.py" line="38"/>
         <source>info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../components/common/MessageBox.py" line="29"/>
+        <location filename="../components/common/MessageBox.py" line="34"/>
         <source>error</source>
         <translation>Errore</translation>
+    </message>
+    <message>
+        <location filename="../components/common/MessageBox.py" line="39"/>
+        <source>update</source>
+        <translation>Aggiorna</translation>
     </message>
 </context>
 <context>
@@ -2291,7 +2296,7 @@
         <translation>Ricompense possibili delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="252"/>
+        <location filename="../utils/warframeUtils.py" line="250"/>
         <source>noReward</source>
         <translation>Nessuna Ricompensa Disponibile</translation>
     </message>
@@ -2836,132 +2841,132 @@
 <context>
     <name>warframeUtils</name>
     <message>
-        <location filename="../utils/warframeUtils.py" line="28"/>
+        <location filename="../utils/warframeUtils.py" line="40"/>
         <source>randomItem</source>
         <translation>Item casuale da</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="55"/>
+        <location filename="../utils/warframeUtils.py" line="69"/>
         <source>affinity</source>
         <translation>affinità</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="62"/>
+        <location filename="../utils/warframeUtils.py" line="76"/>
         <source>credits</source>
         <translation>crediti</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="106"/>
+        <location filename="../utils/warframeUtils.py" line="120"/>
         <source>weaponPartsNotFound</source>
         <translation>Parte Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="130"/>
+        <location filename="../utils/warframeUtils.py" line="144"/>
         <source>weaponTypeNotFound</source>
         <translation>Tipo Arma non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="139"/>
+        <location filename="../utils/warframeUtils.py" line="153"/>
         <source>operationTypeNotFound</source>
         <translation>Tipo Operazione non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="155"/>
+        <location filename="../utils/warframeUtils.py" line="169"/>
         <source>jsonFileNotFound</source>
         <translation>.json non trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="167"/>
+        <location filename="../utils/warframeUtils.py" line="181"/>
         <source>noBountyReward</source>
         <translation>Nessuna Ricompensa Disponibile</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="184"/>
+        <location filename="../utils/warframeUtils.py" line="195"/>
         <source>bountyRewardNotFound</source>
         <translation>Ricompensa Taglia non trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="250"/>
+        <location filename="../utils/warframeUtils.py" line="248"/>
         <source>sortieRewardReadingError</source>
         <translation>Errore durante la lettura dei dati delle incursioni</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="496"/>
+        <location filename="../utils/warframeUtils.py" line="492"/>
         <source>profit</source>
         <translation>Profitto</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="498"/>
+        <location filename="../utils/warframeUtils.py" line="494"/>
         <source>return</source>
         <translation>Guadagno</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="395"/>
+        <location filename="../utils/warframeUtils.py" line="393"/>
         <source>errorDropRelic</source>
         <translation>Errore nella lettura dei drop delle reliquie</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="400"/>
+        <location filename="../utils/warframeUtils.py" line="398"/>
         <source>relic</source>
         <translation>Reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="408"/>
+        <location filename="../utils/warframeUtils.py" line="406"/>
         <source>bounty</source>
         <translation>Taglia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="459"/>
+        <location filename="../utils/warframeUtils.py" line="457"/>
         <source>rotation</source>
         <translation>Rotazione</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="376"/>
+        <location filename="../utils/warframeUtils.py" line="374"/>
         <source>rare</source>
         <translation>Raro</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="378"/>
+        <location filename="../utils/warframeUtils.py" line="376"/>
         <source>notCommon</source>
         <translation>Non Comune</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="380"/>
+        <location filename="../utils/warframeUtils.py" line="378"/>
         <source>common</source>
         <translation>Comune</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="465"/>
+        <location filename="../utils/warframeUtils.py" line="463"/>
         <source>primeVault</source>
         <translation>Reliquia nel Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="465"/>
+        <location filename="../utils/warframeUtils.py" line="463"/>
         <source>relicDrop</source>
         <translation>Nessuna missione droppa questa reliquia</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="486"/>
+        <location filename="../utils/warframeUtils.py" line="484"/>
         <source>missionTypeNotFound</source>
         <translation>Tradutione Tipo Missione Non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="425"/>
+        <location filename="../utils/warframeUtils.py" line="423"/>
         <source>event</source>
         <translation>Evento</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="476"/>
+        <location filename="../utils/warframeUtils.py" line="474"/>
         <source>planetNotFound</source>
         <translation>Pianeta Non Trovato</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="685"/>
+        <location filename="../utils/warframeUtils.py" line="681"/>
         <source>primeNotFound</source>
         <translation>Parte Prime Non Trovata</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="459"/>
+        <location filename="../utils/warframeUtils.py" line="457"/>
         <source>noRotation</source>
         <translation>Nessuna</translation>
     </message>

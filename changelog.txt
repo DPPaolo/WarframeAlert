@@ -1,3 +1,12 @@
+Versione 13.4 - Poter Scegliere
+
+- Migliorata la gestione delle opzioni
+- Migliorta la gestione delle opzioni di cambio scheda
+- Migliorta la gestione delle opzioni di aggiornamento
+- Migliorta la gestione delle altre opzioni
+- Aggiunto controllo per file mancanti all'avvio
+
+
 Versione 13.3 - Risorgenza Sentient
 
 - Aggiunto nodo con Anomalia Sentient nella Scheda Altro
@@ -10,16 +19,16 @@ Versione 13.3 - Risorgenza Sentient
 Versione 13.2 - Void Storm
 
 - Aggiunte missioni Void Storm nella scheda delle Fratture Void
-- Migliorata ed ottimizzata gestione di Baro Ki'Teer e delle immagini
+- Migliorata e ottimizzata gestione di Baro Ki'Teer e delle immagini
 - Aggiunto meccaniscmo di download ritardato delle immagini per gli oggetti di Baro Ki'Teer
 - Aggiunto timer for Baro Ki Teer del TennoCon Relay
 - Migliorata la gestione dell'auto aggiornamento dei dati generali
-- Aggiunto meccanismo di riduzione ad icona
+- Aggiunto meccanismo di riduzione a icona
 
 Versione 13.1 - Hive Mind
 
 - Ottimizzata gestione delle taglie
-- Risolto raro problema in cui apparivano più di 5 taglie
+- Risolto raro problema in cui apparivano più volte le stesse taglie
 - Aggiunta scheda per le taglie del misterioso nuovo sindacato HiveMind
 - Migliorata la gestione delle allerte e degli eventi
 - Migliorata la gestione delle immagini corrotte
@@ -41,14 +50,14 @@ Versione 12.6 - Pyqt
 - La schermata Mappa Stellare visualizzera' automaticamente Mercurio invece di una stringa vuota
 - Ottimizzata la funzione di lettura del file EE.log
 - Fixato crash relativo alla lettura del file EE.log
-- Fixato errore nella schermata di autoaggiornamento in assenza di connessione ad internet
+- Fixato errore nella schermata di autoaggiornamento in assenza di connessione a internet
 
 Versione 12.5 - Buried Debts
 
 - Aggiunto tempo caldo/freddo di Orb Vallis
 - Aggiunto info sul nodo (se presente) ai booster globlali
 - Ottimizzato il codice della gestione del download dei file
-- Adesso si vedranno massimo 5 Taglie alla volta
+- Adesso si vedranno massimo cinque taglie alla volta
 - Fixato errore negli eventi
 
 Versione 12.4 - Nightwave
@@ -102,18 +111,18 @@ Versione 11.7 - Notifiche
 Versione 11.6 - Tray Icon
 
 - Aggiunta icona nella barra delle applicazioni
-- Aggiunta nuova opzione per indicare se si vuole lasciare l'app avviata in background ad icona o chiudersi
+- Aggiunta nuova opzione per indicare se si vuole lasciare l'app avviata in background a icona o chiudersi
 - Aggiunte nuove informazioni alle allerte
 - Aggiunta barra di scorrimento alla scheda delle allerte
-- Aggiunto avviso di errore in caso di primo avvio senza connessione ad internet
-- Fixato problema relativo alla GUI quando mancava la connessione ad internet
+- Aggiunto avviso di errore in caso di primo avvio senza connessione a internet
+- Fixato problema relativo alla GUI quando mancava la connessione a internet
 - Fixato problema relativo all'icona del programma che non appariva nelle finestre
 
 Versione 11.5 - Fortuna
 
 - Cambiato nome scheda Cetus in Mappe Aperte per la nuova espansione Fortuna
 - Aggiunta Scheda Fortuna in preparazione per la nuova espansione
-- Divise le schede degli sconti in oggetti in evidenza ed oggetti in sconto
+- Divise le schede degli sconti in oggetti in evidenza e oggetti in sconto
 - Fixato errore nella scheda Baro Ki'Teer in cui gli oggetti uscivano fuori dalla schermata
 - Fixato errore nella scheda eventi in cui non apparivano le missioni
 
@@ -145,7 +154,7 @@ Versione 11.1 - Tempi Relativi
 - Sistemate Taglie che non si resettavano correttamente
 - Aggiunto tempo del ciclo della Terra in Altro
 - Sistemato Layout degli sconti di Darvo in Altro
-- Velocizzato leggermente l'avvio del programma in condizioni di internet assente
+- Velocizzato leggermente l'avvio del programma in condizioni d'internet assente
 - Fixato errore durante l'aggiornamento
 - Fixato errore nelle reliquie per il primo avvio
 
@@ -258,7 +267,7 @@ Versione 9.3 - Drop
 - Riabilitata lista dei pianeti che droppano le reliquie
 - Reso più leggibile il Changelog.txt e il file starchart.txt
 - Riscritta visualizzazione degli orari nelle allerte e fissure
-- Fixato bug con gli orari delle allerte superiori ad un'ora
+- Fixato bug con gli orari delle allerte superiori a un'ora
 - Fixato bug in cui quando si nascondeva un allerta non sparivano tutte le info correlate
 - Fixato bug con certe informazioni nelle allerte
 
@@ -313,7 +322,7 @@ Versione 8.3 - Dojo ed Eventi
 
 - Aggiunte info per i punteggi di clan per gli Eventi
 - Aggiunte info extra per Allerte Speciali come i "Dono di Lotus"
-- Aggiunti tooltip con extra informazioni alle immagini delle news (passa il  mouse sopra)
+- Aggiunti tooltip con extra informazioni alle immagini delle news (passa il mouse sopra)
 - Separate le news in due schede
 - Fixato errore nel caso non siano presenti allerte
 - Fixato errore nella scheda Eventi
@@ -337,8 +346,8 @@ Versione 8 - Warframe Alert 2.0
 - Riscritto il codice di tutte le schede, i vari dati verranno aggiunti a run-time
 - Le schede modificate sono: news, allerte, eventi, accoliti, invasioni e fissure
 - Rimosso limite massimo di oggetti visualizzabili in una volta
-- Il limite e' stato rimosso alle schede : news, allerte, eventi, accoliti, invasioni e fissure
-- Aggiunto pulsante per nascondere allerte gia' completate
+- Il limite è stato rimosso alle schede: news, allerte, eventi, accoliti, invasioni e fissure
+- Aggiunto pulsante per nascondere allerte già completate
 - Aggiunto auto download di tutti i file dopo un certo lasso di tempo
 - Fixati nomi delle news che venivano troncati se troppo lunghi
 
@@ -357,8 +366,8 @@ Versione 6.9 - ...e Reliquie
 
 - Aggiunta schermata di visualizzazione delle Reliquie nella scheda delle Fissure
 - Aggunta barra di scorrimento nella scheda delle Stazioni Distrutte
-- Migiorata la visibilita' delle info nella scheda delle Stazioni Distrutte
-- Aggiunti colori alle invasioni per maggiore visibilita'
+- Migiorata la visibilità delle info nella scheda delle Stazioni Distrutte
+- Aggiunti colori alle invasioni per maggiore visibilità
 - Fixati errori ripetitivi nel file log
 
 Versione 6.8 - ...Eventi...
@@ -378,16 +387,16 @@ Versione 6.7 - Fratture...
 - Fixata visualizzazione delle ricompense delle Sortie
 - Fixato raro errore nelle invasioni
 
-Versione 6.6 -  Più foto, meno problemi
+Versione 6.6 - Più foto, meno problemi
 
-- Aggiunte immagini delle ricompense delle invasioni per maggiore visibilita'
+- Aggiunte immagini delle ricompense delle invasioni per maggiore visibilità
 - Spostato testo delle ricompense delle invasioni
 - Aggiunto messaggio in caso non ci siano allerte
 - Ridotta dimensione immagini nelle allerte
 
 Versione 6.5 - Cartelle e File
 
-- Ridotto peso del programma della meta' (di nuovo) (21 Mb -> 12 Mb)
+- Ridotto peso del programma della metà (di nuovo) (21 Mb -> 12 Mb)
 - Fixato problema nella verifica e creazione delle cartelle data e images
 - Fixato problema nel visualizzare le immagini scaricate
 
@@ -400,7 +409,7 @@ Versione 6.4 - La vendetta delle Invasioni
 - Dimezzata la dimensione del programma (39 Mb -> 21 Mb)
 - Riscritto il codice delle invasioni
 - Adesso le invasioni saranno a tutto schermo
-- La barra di scorrimento nelle invasioni apparira' solo se necessario
+- La barra di scorrimento nelle invasioni apparirà solo se necessario
 - Centrato Nome dell'accolito e testo delle News
 - Eliminato codice superfluo nelle varie schede
 - Fixato bug con il salvataggio delle opzioni delle schede
@@ -410,7 +419,7 @@ Versione 6.3 - Warframe.exe has crashed!
 
 - Fixato problema con i Nodi Occupati
 - Velocizzato avvio dell'aggiornamento del programma
-- Aggiunti piu' controlli per gli errori per evitare crash
+- Aggiunti più controlli per gli errori per evitare crash
 
 Versione 6.2.1
 
@@ -450,7 +459,7 @@ Versione 4.4 - Drop, Drop everywhere!
 Versione 4.3 - Sorteggiamo!
 
 - Aggiornate le Sortie con la nuova versione
-- Aggiunta compatibilita' per le sortie vecchie
+- Aggiunta compatibilità per le sortie vecchie
 - Fixato bug con la scheda Altro nelle opzioni
 - Aumentata dimensioni delle immagini delle allerte a 128px
 
@@ -479,7 +488,7 @@ Versione 4.1 - Logging
 Versione 4 - Rise of the Tab!
 
 - Le schede appariranno e scomparanno in tempo reale
-- La scheda delle Stazioni Distrutte conterra' i nodi occupati delle vecchie invasioni (pre TWW)
+- La scheda delle Stazioni Distrutte conterrà i nodi occupati delle vecchie invasioni (pre TWW)
 - Riscritta e ottimizzata la finestra delle Opzioni
 - Rinominata scheda Settori Oscuri in PvP
 - Aggiunta scheda Fissure
@@ -616,7 +625,7 @@ Versione 1.5.3
 Versione 1.5.2
 
 - Fixato Bug con le immagini delle news
-- Riaggunta la possibilita' di scaricare il file Mappa Stellare.txt
+- Riaggunta la possibilità di scaricare il file Mappa Stellare.txt
 - Ridotto tempo download immagini bottoni News
 
 Versione 1.5.1
@@ -645,7 +654,7 @@ Versione 1.3.1
 Versione 1.3 - Nuove Opzioni Disponibili
 
 - Aggiunta schermata delle Opzioni (File->Opzioni)
-- L'aggiornamento dei file non blocchera' più il programma
+- L'aggiornamento dei file non bloccherà più il programma
 - Fixato un bug nell'aggiornamento dei pulsanti delle News
 
 Versione 1.2 - Hold on!

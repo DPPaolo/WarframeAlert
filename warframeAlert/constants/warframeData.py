@@ -271,7 +271,25 @@ EXCLUDED_ITEM_TRANSLATION = {
     "EQUINOX NIGHT CHASSIS BLUEPRINT": "Schema Chassis Notte Equinox",
     "EQUINOX NIGHT NEUROPTICS BLUEPRINT": "Schema Neurottiche Notte Equinox",
     "EQUINOX NIGHT SYSTEMS BLUEPRINT": "Schema Sistemi Notte Equinox",
-    "VITAL SYSTEMS BYPASS": "VITAL SYSTEMS BYPASS"
+    "VITAL SYSTEMS BYPASS": "VITAL SYSTEMS BYPASS",
+    "AMMO CHAIN": "AMMO CHAIN",
+    "AMMO STOCK": "AMMO STOCK",
+    "CATALYZER LINK": "CATALYZER LINK",
+    "CARNIS CARAPACE": "CARNIS CARAPACE",
+    "JUGULUS CARAPACE": "JUGULUS CARAPACE",
+    "SAXUM CARAPACE": "SAXUM CARAPACE",
+    "NARROW BARREL": "NARROW BARREL",
+    "REFLEX GUARD": "REFLEX GUARD",
+    "CONDUCTIVE BLADE": "CONDUCTIVE BLADE",
+    "TEMPERED BLADE": "TEMPERED BLADE",
+    "HYDRAULIC BARREL": "HYDRAULIC BARREL",
+    "ELECTRIFIED BARREL": "ELECTRIFIED BARREL",
+    "RUBEDO-LINED BARREL": "RUBEDO-LINED BARREL",
+    "SPRING-LOADED CHAMBER": "SPRING-LOADED CHAMBER",
+    "SPRING-LOADED BLADE": "SPRING-LOADED BLADE",
+    "EMPOWERED BLADES": "EMPOWERED BLADES",
+    "SHOCK COLLAR": "SHOCK COLLAR",
+    "LUA BALCONY SCENE": "Scenario Balcone Lunare"
 }
 
 
@@ -605,6 +623,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Clan/MechEventEmblemItem": "Emblema Orphix Venom",
     "/Lotus/StoreItems/Types/Items/FusionTreasures/OroFusexJ": "Statua Ayatan Hemakara",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2021EmblemItem": "Emblema Bue Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2022EmblemItem": "Emblema Tigre Rinnovo Lunare",
 
 
     # Sigils
@@ -623,6 +642,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/BaroKavatSigil": "Sigillo Glaring",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusSigil": "Sigillo Prisma Lotus",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearOxSigil": "Sigillo Bue Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearFreeTigerSigil": "Sigillo Tigre Rinnovo Lunare",
 
 
     # Gliphs
@@ -705,6 +725,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Hoverboard/HoverboardStickerBaroA": "Scarabocchio K-Drive Ki'teer Safari Blu",
     "/Lotus/StoreItems/Upgrades/Skins/Hoverboard/HoverboardStickerBaroB": "Scarabocchio K-Drive Ki'Teer Safari Verde",
     "/Lotus/StoreItems/Upgrades/Skins/Necramech/MechWeapon/MechEventMausolonSkin": "Skin Mausolon Supulchrax",
+    "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/AshLeverianLiosPistol": "Skin Pistola De Nas",
+    "/Lotus/StoreItems/Upgrades/Skins/Glass/GaraAlternateSkin": "Skin Gara Immortal",
 
     # Sugatra
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/BaroInarosMeleeDangle": "Sugatra Anpu",

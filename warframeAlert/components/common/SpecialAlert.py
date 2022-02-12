@@ -130,8 +130,8 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
 
         # Extra Data
         extra = 0
-        desc = reqitem = consume_item = weapon = extra_enemy_spec = ""
-        leaderallowed = advanced_spawners = vip = aura = fx = icon = ""
+        desc = required_item = consume_item = weapon = extra_enemy_spec = ""
+        leader_allowed = advanced_spawners = vip = aura = fx = icon = ""
 
         if ('descText' in alert):
             desc = get_alert_info(alert['descText'])
@@ -147,10 +147,10 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
                 advanced_spawners += get_last_item_with_backslash(spawn) + " "
         if ('requiredItems' in alert):
             for req_i in alert['requiredItems']:
-                reqitem += get_item_name(req_i) + " "
+                required_item += get_item_name(req_i) + " "
             extra = 1
         if ('requiredItemsCounts' in alert):
-            reqitem = str(alert['requiredItemsCounts']) + "x " + reqitem
+            required_item = str(alert['requiredItemsCounts']) + "x " + required_item
             extra = 1
         if ('consumeRequiredItems' in alert):
             consume_item = bool_to_yes_no(alert['consumeRequiredItems'])
@@ -159,7 +159,7 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
             weapon = get_alert_weapon_restriction(alert['exclusiveWeapon'])
             extra = 1
         if ('leadersAlwaysAllowed' in alert):
-            leaderallowed = bool_to_yes_no(alert['leadersAlwaysAllowed'])
+            leader_allowed = bool_to_yes_no(alert['leadersAlwaysAllowed'])
             extra = 1
         if ('levelAuras' in alert):
             if (alert['levelAuras']):
@@ -185,8 +185,8 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
     else:
         temp = SpecialAlert(alert_id)
         temp.set_alert_title_info(desc)
-        temp.set_alert_info(reqitem, consume_item, weapon)
-        temp.set_alert_other_info(leaderallowed, advanced_spawners, aura, vip, fx)
+        temp.set_alert_info(required_item, consume_item, weapon)
+        temp.set_alert_other_info(leader_allowed, advanced_spawners, aura, vip, fx)
         temp.set_extra_info()
 
     temp.set_alert_data(node, plan, level, mis_type, faction, item, wave, mis_level)

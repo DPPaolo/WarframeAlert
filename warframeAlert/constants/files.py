@@ -59,7 +59,7 @@ IMAGE_NAME = {
     "Strun Wraith": "/Lotus/Interface/Icons/Store/VandalStrun.png",
     "Twin Vipers Wraith": "/Lotus/Interface/Icons/Store/WraithTwinVipers.png",
     "Dera Vandal": "/Lotus/Interface/Icons/Store/DeraVandal.png",
-    "Snipetron Vandal": "/Lotus/Interface/Icons/Store/SnipertronVandal.png",
+    "Snipetron Vandal": "/Lotus/Interface/Icons/Store/SnipetronVandal.png",
     "Sheev": "/Lotus/Interface/Icons/Store/GrineerCombatKnife.png",
 
     # Weapon Parts for Invasion

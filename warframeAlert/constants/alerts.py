@@ -1,10 +1,12 @@
 # -*- coding: utf-8 -*-
 
 MAP_TYPE = {
+    "OrokinDerelict": {"it": "Relitto Orokin", "en": "Orokin Derelict"},
+    "OrokinTowerDerelict": {"it": "Relitto Orokin", "en": "Orokin Derelict"},
+
     "OrokinTower": {"it": "Torre Orokin", "en": "Orokin Tower"},
     "OrokinMoon": {"it": "Luna", "en": "Moon"},
     "OrokinVoid": {"it": "Void", "en": "Void"},
-    "OrokinDerelict": {"it": "Relitto Orokin", "en": "Orokin Derelict"},
 
     "CorpusShip": {"it": "Nave Corpus", "en": "Corpus Ship"},
     "CorpusGasCity": {"it": "Città di Gas Corpus", "en": "Corpus Gas City"},

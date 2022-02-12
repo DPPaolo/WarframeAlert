@@ -11,7 +11,7 @@ from warframeAlert.constants.warframeFileTypes import RelicFile, BountyFileData,
     MissionFile, TransientFile, KeyFile, BpByItemFile, BpBySourceFile, ModByItemFile, ModBySourceFile
 from warframeAlert.utils.fileUtils import get_separator, decompress_lzma
 from warframeAlert.utils.warframeUtils import translate_item_from_drop_file, read_drop_file, \
-    translate_mission_type_from_drop_file
+    translate_mission_type_from_drop_file, get_bounty_file_name_prefix
 
 
 def decompress_export_manifest_index() -> str:
@@ -48,6 +48,7 @@ def write_json_drop() -> None:
     translate_bp_by_source_drop()
     translate_mod_by_item_drop()
     translate_mod_by_source_drop()
+    print("Traduzione Completata")
 
 
 def translate_sortie_drop() -> None:
@@ -70,14 +71,7 @@ def translate_sortie_drop() -> None:
 
 
 def translate_free_roam_drop(file_name: str) -> None:
-    prefix = ""
-    match file_name:
-        case "cetus":
-            prefix = "cetusBountyRewards"
-        case "fortuna":
-            prefix = "solarisBountyRewards"
-        case "deimos":
-            prefix = "deimosRewards"
+    prefix = get_bounty_file_name_prefix(file_name)
     json_data: List[BountyFileData] = read_drop_file(file_name + "_en")[prefix]
 
     new_json_data = {prefix: []}
