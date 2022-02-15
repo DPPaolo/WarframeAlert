@@ -8,18 +8,18 @@ import sys
 
 
 def get_os_type() -> str:
-    return platform.system()
+    return platform.system().lower()
 
 
 def is_mac_os() -> bool:
-    return get_os_type() == "Darwin"
+    return get_os_type() == "darwin"
 
 
 def is_linux_os() -> bool:
-    return get_os_type() == "Linux"
+    return get_os_type() == "linux"
 
 
-def is_window_os() -> bool:
+def is_windows_os() -> bool:
     return not is_mac_os() and not is_linux_os()
 
 

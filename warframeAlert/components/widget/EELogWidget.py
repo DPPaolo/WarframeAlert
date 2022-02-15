@@ -1,12 +1,13 @@
 # coding=utf-8
 import os
+import subprocess
 
 from PyQt6 import QtWidgets, QtGui
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
-from warframeAlert.utils.fileUtils import get_separator, is_window_os
+from warframeAlert.utils.fileUtils import get_separator, is_windows_os, is_linux_os, is_mac_os
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -23,8 +24,6 @@ class EELogWidget():
 
         self.selPath = QtWidgets.QPushButton(translate("eelogWidget", "browse"))
         self.openEE = QtWidgets.QPushButton(translate("eelogWidget", "openFile"))
-        if (not is_window_os()):
-            self.openEE.setDisabled(True)
 
         self.PathLabel = QtWidgets.QLabel(translate("eelogWidget", "pathDesc") + ': ', self.EELogViewWidget)
 
@@ -35,7 +34,7 @@ class EELogWidget():
         self.textEditEE2.setMaximumWidth(self.PathLabel.sizeHint().width() * 6)
         self.textEditEE2.setReadOnly(True)
         default_path = get_separator() + "Warframe" + get_separator() + "EE.log"
-        if (not is_window_os):
+        if (not is_windows_os):
             self.textEditEE2.setText(os.getenv('LOCALAPPDATA') + default_path)
 
         self.radio1 = QtWidgets.QRadioButton(translate("eelogWidget", "all"), self.EELogViewWidget)
@@ -97,6 +96,12 @@ class EELogWidget():
         if (path == ""):
             path = "C:\\"
         os.startfile(path, "open")
+        if (is_windows_os()):
+            os.startfile(path, "open")
+        elif (is_linux_os()):
+            subprocess.call(["xdg-open", path])
+        elif (is_mac_os()):
+            subprocess.call(["open", path])
 
     def view_eelog(self, path: str, choice: int) -> None:
         self.textEditEE.clear()

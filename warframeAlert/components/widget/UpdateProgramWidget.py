@@ -1,5 +1,6 @@
 # coding=utf-8
 import os
+import subprocess
 
 from PyQt6 import QtWidgets, QtGui
 
@@ -10,7 +11,7 @@ from warframeAlert.services.networkService import check_connection, retrieve_ver
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
-from warframeAlert.utils.fileUtils import get_separator, is_window_os, get_cur_dir
+from warframeAlert.utils.fileUtils import get_separator, is_windows_os, get_cur_dir, is_linux_os, is_mac_os
 from warframeAlert.utils.logUtils import LogHandler
 
 
@@ -30,7 +31,7 @@ class UpdateProgramWidget():
         self.UpdatePer = QtWidgets.QProgressBar()
         self.UpdatePer.hide()
         try:
-            if (is_window_os()):
+            if (is_windows_os()):
                 downloader = Downloader(UPDATE_SITE + "changelog.txt", "changelog_temp.txt")
                 downloader.start()
                 downloader.download_completed.connect(lambda: self.update_changelog_screen())
@@ -111,4 +112,9 @@ class UpdateProgramWidget():
         fp.write(ver_at)
         fp.flush()
         fp.close()
-        os.startfile(d + get_separator() + name, "open")
+        if (is_windows_os()):
+            os.startfile(d + get_separator() + name, "open")
+        elif (is_linux_os()):
+            subprocess.call(["xdg-open", d + get_separator() + name])
+        elif (is_mac_os()):
+            subprocess.call(["open", d + get_separator() + name])
