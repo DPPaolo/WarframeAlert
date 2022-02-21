@@ -34,7 +34,7 @@ class EELogWidget():
         self.textEditEE2.setMaximumWidth(self.PathLabel.sizeHint().width() * 6)
         self.textEditEE2.setReadOnly(True)
         default_path = get_separator() + "Warframe" + get_separator() + "EE.log"
-        if (not is_windows_os):
+        if (is_windows_os):
             self.textEditEE2.setText(os.getenv('LOCALAPPDATA') + default_path)
 
         self.radio1 = QtWidgets.QRadioButton(translate("eelogWidget", "all"), self.EELogViewWidget)

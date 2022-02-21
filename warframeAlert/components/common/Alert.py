@@ -183,12 +183,13 @@ class Alert():
             else:
                 img = item
         image_name = "assets" + get_separator() + "image" + get_separator() + get_last_item_with_backslash(img)
-        self.AlertImg.set_image(image_name)
-        self.AlertImg.set_image_dimension(80, 80, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
         if (not check_assets_file(get_last_item_with_backslash(img))):
             self.set_default_alert_image()
             LogHandler.debug(translate("alert", "alertImgNotFound") + ": " + image_name)
-        self.image = image_name
+        else:
+            self.AlertImg.set_image(image_name)
+            self.AlertImg.set_image_dimension(80, 80, QtCore.Qt.AspectRatioMode.KeepAspectRatio)
+            self.image = image_name
 
     def set_default_alert_image(self) -> None:
         image_name = "assets" + get_separator() + "image" + get_separator() + DEFAULT_ALERT_IMAGE

@@ -3,6 +3,7 @@
 import sys
 
 from PyQt6 import QtWidgets, QtCore, QtGui
+from PyQt6.QtWidgets import QMenuBar
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.menuService import MenuService, open_old_alert
@@ -22,6 +23,18 @@ from warframeAlert.utils.logUtils import LogHandler
 
 
 class MainWindow(QtWidgets.QMainWindow):
+    logHandler: LogHandler = None
+    optionHandler: OptionsHandler = None
+    translator: Translator = None
+    tray: TrayService = None
+    notification_service: NotificationService = None
+    update_service: UpdateService = None
+    update_file_service: UpdateFileService = None
+    tabService: TabService = None
+    updateProgramService: UpdateProgramService = None
+    menuService = MenuService = None
+    navBarMenu: QMenuBar = None
+    options: OptionService = None
 
     def __init__(self) -> None:
         super().__init__()
@@ -38,19 +51,6 @@ class MainWindow(QtWidgets.QMainWindow):
         # Start the translation Service
         self.translator = Translator()
 
-        # Start the tray Service
-        self.tray = TrayService(self)
-
-        # Start the notification Service
-        self.notification_service = NotificationService(self.tray.get_tray_icon())
-        self.notification_service.start()
-
-        # Start the update service
-        self.update_service = UpdateService()
-
-        # Start the file update service
-        self.update_file_service = UpdateFileService()
-
         self.setWindowTitle(translate("main", "title"))
 
         self.app = QtCore.QCoreApplication.instance()
@@ -61,12 +61,44 @@ class MainWindow(QtWidgets.QMainWindow):
         self.mainWidget = QtWidgets.QWidget(self)
         self.setCentralWidget(self.mainWidget)
 
+        self.resize(680, 450)
+
+        # Check if there is a new version downloaded
+        if (fileUtils.check_file("PostUpdate.txt")):
+            update_program()
+
+    def start_main_services(self) -> None:
         # Start the tab Service
-        self.mainTabber = QtWidgets.QTabWidget(self.mainWidget)
-        self.tabService = TabService(self.mainTabber)
+        main_tabber = QtWidgets.QTabWidget(self.mainWidget)
+        self.tabService = TabService(main_tabber)
+
+        main_grid = QtWidgets.QGridLayout(self.mainWidget)
+        main_grid.addWidget(main_tabber, 0, 0, 1, 1)
+
+        self.tabService.update_tabber()
+
+        # Start the update service
+        self.update_service = UpdateService()
+
+        self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
 
         # Start the program service updater
         self.updateProgramService = UpdateProgramService()
+
+        # Start the file update service
+        self.update_file_service = UpdateFileService()
+
+        if (OptionsHandler.get_option("FirstInit") == 0):
+            # Download files if it's the first init
+            self.init_app()
+        else:
+            self.show()
+
+        update_cycle = OptionsHandler.get_option("Update/Cycle")
+        if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
+            self.tabService.update("")
+
+    def start_other_services(self) -> None:
 
         # Create service used on the menu on top of the tabs
         self.menuService = MenuService()
@@ -81,27 +113,16 @@ class MainWindow(QtWidgets.QMainWindow):
         # Create the options screen
         self.options = OptionService(self.tabService, self.update_service, self.updateProgramService)
 
-        self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
-        if (OptionsHandler.get_option("FirstInit") != 0):
-            self.update_service.fist_init_completed.connect(self.show)
+        # Start the tray Service
+        self.tray = TrayService(self)
 
-        self.mainGrid = QtWidgets.QGridLayout(self.mainWidget)
-        self.mainGrid.addWidget(self.mainTabber, 0, 0, 1, 1)
-
-        self.tabService.update_tabber()
-
-        self.resize(680, 450)
-
-        self.init_app()
-
-        update_cycle = OptionsHandler.get_option("Update/Cycle")
-        if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
-            self.tabService.update("")
-            self.show()
+        # Start the notification Service
+        self.notification_service = NotificationService(self.tray.get_tray_icon())
+        self.notification_service.start()
 
     def start_update(self) -> None:
-        self.resize(680, 450)
         self.update_service.start()
+        QtCore.QTimer.singleShot(1000*60, lambda: check_for_update())
 
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:
         if (OptionsHandler.get_option("TrayIcon") == 1):
@@ -114,33 +135,24 @@ class MainWindow(QtWidgets.QMainWindow):
             )
 
     def init_app(self) -> None:
-        # Check if there is a new version downloaded
-        if (fileUtils.check_file("PostUpdate.txt")):
-            update_program()
+        if (not check_connection()):
+            MessageBox(translate("main", "noConnection"),
+                       translate("main", "noConnectionFirstInit"),
+                       MessageBoxType.ERROR)
+            sys.exit()
 
-        # Download files if it's the first init
-        if (OptionsHandler.get_option("FirstInit") == 0):
-            if (not check_connection()):
-                MessageBox(translate("main", "noConnection"),
-                           translate("main", "noConnectionFirstInit"),
-                           MessageBoxType.ERROR)
-                sys.exit()
+        self.optionHandler.create_config()
 
-            self.optionHandler.create_config()
+        self.updateProgramService.open_and_update_file(self.update_file_service)
+        self.updateProgramService.UpdateFile.all_file_downloaded.connect(self.show)
+        OptionsHandler.set_option("FirstInit", 1)
 
-            self.updateProgramService.open_and_update_file(self.update_file_service)
-            self.updateProgramService.UpdateFile.all_file_downloaded.connect(self.show_after_first_init)
-            OptionsHandler.set_option("FirstInit", 1)
-        else:
-            old_update_date = OptionsHandler.get_option("Update/AutoUpdateAll")
-            actual_date = int(timeUtils.get_local_time())
-            if ((actual_date - old_update_date) > 604800 and check_connection()):
-                OptionsHandler.set_option("Update/AutoUpdateAll", actual_date)
-                QtCore.QTimer.singleShot(60 * 1000, lambda: self.update_file_service.download_all_file())
-
-    def show_after_first_init(self) -> None:
-        self.tabService.update("")
-        self.show()
+    def schedule_update_secondary_files(self) -> None:
+        old_update_date = OptionsHandler.get_option("Update/AutoUpdateAll")
+        actual_date = int(timeUtils.get_local_time())
+        if ((actual_date - old_update_date) > 604800 and check_connection()):
+            OptionsHandler.set_option("Update/AutoUpdateAll", actual_date)
+            QtCore.QTimer.singleShot(45 * 1000, lambda: self.update_file_service.download_all_file())
 
     def create_menu(self) -> None:
         file = self.navBarMenu.addMenu('&' + translate("main", "fileMenu"))
@@ -201,18 +213,23 @@ class MainWindow(QtWidgets.QMainWindow):
         info.addAction(copyright_info)
 
 
+def check_for_update() -> None:
+    actual_version = get_actual_version()
+    online_version = retrieve_version()
+    if (float(actual_version) < float(online_version)):
+        MessageBox(translate("main", "updateProgramTitleBox"), translate("main", "updateProgramDescBox"),
+                   MessageBoxType.INFO_WITH_LINK, main.options.open_update)
+
+
 app = QtWidgets.QApplication(sys.argv)
 app.setStyle('Fusion')
 
-main = MainWindow()
-ver = get_actual_version()
-ver2 = retrieve_version()
-if (float(ver) < float(ver2)):
-    main.updateProgramService.open_update()
-else:
-    try:
-        main.start_update()
-    except Exception as er:
-        print(er)
+try:
+    main = MainWindow()
+    main.start_main_services()
+    main.start_other_services()
+    main.start_update()
+except Exception as er:
+    print(er)
 
 sys.exit(app.exec())

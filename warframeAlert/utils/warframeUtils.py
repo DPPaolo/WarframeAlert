@@ -485,7 +485,7 @@ def translate_mission_type_from_drop_file(mission_type: str) -> str:
 
 
 def translate_item_from_drop_file(data: str) -> str:
-    if (data[-1] == " "):
+    if (data != "" and data[-1] == " "):
         data = data[:-1]
     if ('RETURN:' in data):
         return translate("warframeUtils", "return") + ": " + data.split(' ')[1]

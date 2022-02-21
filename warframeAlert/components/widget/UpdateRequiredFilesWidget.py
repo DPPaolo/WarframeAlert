@@ -1,4 +1,5 @@
 # coding=utf-8
+import sys
 
 from PyQt6 import QtWidgets, QtCore
 
@@ -49,3 +50,4 @@ class UpdateRequiredFilesWidget(QtCore.QObject):
             LogHandler.err(translate("updateService", "saveError"))
             LogHandler.err(str(er))
             commonUtils.print_traceback(translate("updateService", "saveError") + " " + str(er))
+            sys.exit()

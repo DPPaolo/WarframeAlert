@@ -13,7 +13,6 @@ from warframeAlert.utils.logUtils import LogHandler
 
 class UpdateService(QtCore.QObject):
     file_downloaded = QtCore.pyqtSignal()
-    fist_init_completed = QtCore.pyqtSignal()
 
     def __init__(self) -> None:
         super().__init__()
@@ -38,8 +37,8 @@ class UpdateService(QtCore.QObject):
         self.update_timer.deleteLater()
 
     def download_alert_file(self, download_only: bool = False) -> None:
-        opt: int = OptionsHandler.get_option("Update/Console")
-        match opt:
+        console_option: int = OptionsHandler.get_option("Update/Console")
+        match console_option:
             case 0:
                 url: str = DATA_SITE["PC"]
             case 1:
@@ -66,8 +65,7 @@ class UpdateService(QtCore.QObject):
         if (OptionsHandler.get_option("Debug") == 1):
             LogHandler.debug("allerte.json" + " " + translate("updateService", "downloaded"))
         self.file_downloaded.emit()
-        if (not download_only):
-            self.start()
-        else:
-            self.fist_init_completed.emit()
+        if (download_only):
             OptionsHandler.set_during_init(False)
+        else:
+            self.start()
