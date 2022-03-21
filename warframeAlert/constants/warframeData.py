@@ -319,6 +319,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
     "/Lotus/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
     "/Lotus/StoreItems/Types/Recipes/Components/WeaponUtilityUnlockerBlueprint": "Adattatore Exilus Arma (Schema)",
+    "/Lotus/Types/Items/MiscItems/RivenIdentifier": "Cipher Riven Non Identificato",
     "/Lotus/StoreItems/Types/Game/KubrowPet/Eggs/KubrowEgg": "Uovo Kubrow",
     "/Lotus/Types/Game/CatbrowPet/CatbrowGeneticSignature": "Codice Genetico Kavat",
     "/Lotus/Types/StoreItems/Packages/OrokinReactorAndCatalystBundle": "Pacchetto Potenziamento Orokin",
@@ -392,6 +393,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/RailJackMiscItems/TitaniumRailJackItem": "Titanium",
     "/Lotus/Types/Items/MiscItems/NoraWolfCreds": "Wolf Cred",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFourCreds": "Cred Nora's Choice",
+    "/Lotus/Types/Items/MiscItems/NoraIntermissionFiveCreds": "Cred Mix di Nora Vol. 1",
 
 
     # Weapon Parts
@@ -602,6 +604,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponReloadSpeedModExpert": "Primed Tactical Pump",
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponClipMaxModExpert": "Primed Magazine Warp",
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponClipMaxModExpert": "Primed Ammo Stock",
+    "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert": "Primed Sniper Ammo Mutation",
 
 
     # Emblems
@@ -877,6 +880,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerCutter": "Decorazione Caccia Cutter",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerFlak": "Decorazione Caccia Flak",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerTaktis": "Decorazione Caccia Tactis",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/EraHypnosisPoster": "Poster Don't Be Afraid",
 
 
     # Sentinels

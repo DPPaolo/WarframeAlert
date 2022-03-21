@@ -124,18 +124,12 @@ class Invasion():
             value = perc[1] / 2 + perc[0] / 2
         if (value > perc[1] * 2 or value < 0):
             value = 0
-        if (perc[2] == 1):
-            if ((value * 100 / perc[1]) >= 100):
-                self.InvPer.setValue(100)
-            else:
-                self.InvPer.setValue(int(value))
-            self.InvPer.setToolTip(str(value * 100 / perc[1]) + "%")
+        percentage = value * 100 / perc[1]
+        if (percentage >= 100):
+            self.InvPer.setValue(100)
         else:
-            if ((value * 100 / perc[1]) >= 100):
-                self.InvPer.setValue(100)
-            else:
-                self.InvPer.setValue(int(value))
-            self.InvPer.setToolTip(str(value * 100 / perc[1]) + "%")
+            self.InvPer.setValue(int(value))
+        self.InvPer.setToolTip(str(percentage) + "%")
 
     def set_invasion_image(self, attacker_reward: str, defender_reward: str,
                            attacker_reward_item: str, defender_reward_item: str) -> None:

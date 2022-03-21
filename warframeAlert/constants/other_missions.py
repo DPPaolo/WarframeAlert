@@ -120,7 +120,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemies": (
         "Colpo d'Avvertimento", "Uccidi 200  Nemici", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithViral": (
-        "Condividere è Amare", "Uccidi 150 Nemici con Danno Virale", 1000),
+        "Vai Virale", "Uccidi 150 Nemici con Danno Virale", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlayEmote": ("Espressivo", "Utilizza una Emote", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlaceMarker": ("Comunicatore", "Segnala 5 Mod o Risorse", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithSecondary": (

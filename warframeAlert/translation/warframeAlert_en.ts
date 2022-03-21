@@ -125,7 +125,7 @@
         <translation>Type of extra enemies that you encounter</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="190"/>
+        <location filename="../components/common/Alert.py" line="189"/>
         <source>alertImgNotFound</source>
         <translation>Alert Image not Found</translation>
     </message>
@@ -146,7 +146,7 @@
 <context>
     <name>baroWidget</name>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="175"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="166"/>
         <source>end</source>
         <translation>Leave in</translation>
     </message>
@@ -176,7 +176,7 @@
         <translation>Baro Ki&apos;Teer is arrived</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="185"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="176"/>
         <source>init</source>
         <translation>Arrives in</translation>
     </message>
@@ -529,62 +529,62 @@
 <context>
     <name>eelogWidget</name>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="20"/>
+        <location filename="../components/widget/EELogWidget.py" line="21"/>
         <source>title</source>
         <translation>Inspect EE.log</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="24"/>
+        <location filename="../components/widget/EELogWidget.py" line="25"/>
         <source>browse</source>
         <translation>Browse</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="25"/>
+        <location filename="../components/widget/EELogWidget.py" line="26"/>
         <source>openFile</source>
         <translation>Open Path</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="29"/>
+        <location filename="../components/widget/EELogWidget.py" line="28"/>
         <source>pathDesc</source>
         <translation>EE.log path</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="41"/>
+        <location filename="../components/widget/EELogWidget.py" line="40"/>
         <source>all</source>
         <translation>All</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="88"/>
+        <location filename="../components/widget/EELogWidget.py" line="87"/>
         <source>selectFile</source>
         <translation>Select EE.log file</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="106"/>
+        <location filename="../components/widget/EELogWidget.py" line="111"/>
         <source>errorTitle</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="109"/>
+        <location filename="../components/widget/EELogWidget.py" line="114"/>
         <source>errorFileNotFound</source>
         <translation>EE.log not found</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="106"/>
+        <location filename="../components/widget/EELogWidget.py" line="111"/>
         <source>errorCheckPath</source>
         <translation>Check the correct path</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="128"/>
+        <location filename="../components/widget/EELogWidget.py" line="133"/>
         <source>errorTitleReadError</source>
         <translation>Errore reading file</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="132"/>
+        <location filename="../components/widget/EELogWidget.py" line="137"/>
         <source>errorReadErrorLine</source>
         <translation>Error reading EE.log at line</translation>
     </message>
     <message>
-        <location filename="../components/widget/EELogWidget.py" line="132"/>
+        <location filename="../components/widget/EELogWidget.py" line="137"/>
         <source>errorLineDesc</source>
         <translation>with error</translation>
     </message>
@@ -1414,132 +1414,132 @@
 <context>
     <name>main</name>
     <message>
-        <location filename="../WarframeAlert.py" line="111"/>
+        <location filename="../WarframeAlert.py" line="135"/>
         <source>title</source>
         <translation>Warframe Alert</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="125"/>
+        <location filename="../WarframeAlert.py" line="143"/>
         <source>noConnection</source>
         <translation>No Connection</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="125"/>
+        <location filename="../WarframeAlert.py" line="143"/>
         <source>noConnectionFirstInit</source>
         <translation>The first init need an internet connection. Please retry again</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="165"/>
+        <location filename="../WarframeAlert.py" line="180"/>
         <source>exitMenu</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="167"/>
+        <location filename="../WarframeAlert.py" line="182"/>
         <source>exitMenuDesc</source>
         <translation>Close the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="111"/>
+        <location filename="../WarframeAlert.py" line="135"/>
         <source>closeToTray</source>
         <translation>The application will be minimized</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="147"/>
+        <location filename="../WarframeAlert.py" line="162"/>
         <source>fileMenu</source>
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="148"/>
+        <location filename="../WarframeAlert.py" line="163"/>
         <source>dataMenu</source>
         <translation>Data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="149"/>
+        <location filename="../WarframeAlert.py" line="164"/>
         <source>toolsMenu</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="150"/>
+        <location filename="../WarframeAlert.py" line="165"/>
         <source>helpMenu</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="172"/>
+        <location filename="../WarframeAlert.py" line="187"/>
         <source>updateFileMenu</source>
         <translation>Update data file only</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="174"/>
+        <location filename="../WarframeAlert.py" line="189"/>
         <source>updateFileMenuDesc</source>
         <translation>Update data file only and update all the tabs</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="178"/>
+        <location filename="../WarframeAlert.py" line="193"/>
         <source>updateFilesMenu</source>
         <translation>Updat secondary files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="180"/>
+        <location filename="../WarframeAlert.py" line="195"/>
         <source>updateFilesMenuDesc</source>
         <translation>Update all the seconday files</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="198"/>
+        <location filename="../WarframeAlert.py" line="213"/>
         <source>infoHelpMenu</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="200"/>
+        <location filename="../WarframeAlert.py" line="215"/>
         <source>infoHelpMenuTooltip</source>
         <translation>Program Information</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="191"/>
+        <location filename="../WarframeAlert.py" line="206"/>
         <source>readEELog</source>
         <translation>Inspect EE.log</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="193"/>
+        <location filename="../WarframeAlert.py" line="208"/>
         <source>toolHelpMenuEELog</source>
         <translation>Open the form to inspect EE.log file</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="155"/>
+        <location filename="../WarframeAlert.py" line="170"/>
         <source>openOldFileTip</source>
         <translation>Open a json file with old alert data</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="153"/>
+        <location filename="../WarframeAlert.py" line="168"/>
         <source>openOldFile</source>
         <translation>Open</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="159"/>
+        <location filename="../WarframeAlert.py" line="174"/>
         <source>options</source>
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="161"/>
+        <location filename="../WarframeAlert.py" line="176"/>
         <source>openOptionsTip</source>
         <translation>Open the options screen of the application</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="184"/>
+        <location filename="../WarframeAlert.py" line="199"/>
         <source>parseUpdateFilesMenu</source>
         <translation>Parse file</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="186"/>
+        <location filename="../WarframeAlert.py" line="201"/>
         <source>parseUpdateFilesMenuTip</source>
         <translation>Start the parsing of the actual data file</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="209"/>
+        <location filename="../WarframeAlert.py" line="224"/>
         <source>updateProgramTitleBox</source>
         <translation>Update Available</translation>
     </message>
     <message>
-        <location filename="../WarframeAlert.py" line="209"/>
+        <location filename="../WarframeAlert.py" line="224"/>
         <source>updateProgramDescBox</source>
         <translation>A new version of the program is available! You can update now or later througth the option</translation>
     </message>
@@ -1570,17 +1570,17 @@
 <context>
     <name>messageBox</name>
     <message>
-        <location filename="../components/common/MessageBox.py" line="38"/>
+        <location filename="../components/common/MessageBox.py" line="36"/>
         <source>info</source>
         <translation>Info</translation>
     </message>
     <message>
-        <location filename="../components/common/MessageBox.py" line="34"/>
+        <location filename="../components/common/MessageBox.py" line="33"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="../components/common/MessageBox.py" line="39"/>
+        <location filename="../components/common/MessageBox.py" line="37"/>
         <source>update</source>
         <translation>Update</translation>
     </message>
@@ -1588,14 +1588,9 @@
 <context>
     <name>networkService</name>
     <message>
-        <location filename="../services/networkService.py" line="111"/>
+        <location filename="../services/networkService.py" line="105"/>
         <source>connectionError</source>
         <translation>Connetion error during downloading file</translation>
-    </message>
-    <message>
-        <location filename="../services/networkService.py" line="56"/>
-        <source>versionCheckError</source>
-        <translation>Error during the check of the version of the program</translation>
     </message>
 </context>
 <context>
@@ -2742,22 +2737,22 @@
 <context>
     <name>updateProgramService</name>
     <message>
-        <location filename="../services/updateProgramService.py" line="21"/>
+        <location filename="../services/updateProgramService.py" line="19"/>
         <source>title</source>
         <translation>Program Updater</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="99"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="91"/>
         <source>versionDownloadError</source>
         <translation>Error during the download of the new program</translation>
     </message>
     <message>
-        <location filename="../services/updateProgramService.py" line="27"/>
+        <location filename="../services/updateProgramService.py" line="23"/>
         <source>updateFileTitle</source>
         <translation>Download Mandatory Files</translation>
     </message>
     <message>
-        <location filename="../services/networkService.py" line="78"/>
+        <location filename="../services/networkService.py" line="73"/>
         <source>newVersionError</source>
         <translation>Error during the removing of old version</translation>
     </message>
@@ -2765,52 +2760,47 @@
 <context>
     <name>updateProgramWidget</name>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="25"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="28"/>
         <source>changelog</source>
         <translation>Changelog</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="29"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="32"/>
         <source>updateProgram</source>
         <translation>Update Program</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="39"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="66"/>
         <source>errorDownloadChangelog</source>
         <translation>Error during the download of the changelog file</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="74"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="64"/>
         <source>noChangelog</source>
         <translation>No changelog available</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="75"/>
-        <source>cantReadChangelog</source>
-        <translation>Can&apos;t open the changelog</translation>
-    </message>
-    <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="74"/>
         <source>lastVersionTitle</source>
         <translation>Program Updated</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="79"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="74"/>
         <source>lastVersionDesc</source>
         <translation>You have already the last version available</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
         <source>title</source>
         <translation>Program Updater</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="96"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="88"/>
         <source>versionDownloadError</source>
         <translation>Error during the download of the new program</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateProgramWidget.py" line="28"/>
+        <location filename="../components/widget/UpdateProgramWidget.py" line="31"/>
         <source>loading</source>
         <translation>Loading</translation>
     </message>
@@ -2818,12 +2808,12 @@
 <context>
     <name>updateService</name>
     <message>
-        <location filename="../services/updateService.py" line="63"/>
+        <location filename="../services/updateService.py" line="62"/>
         <source>saveError</source>
         <translation>Can&apos;t save file allerte.json</translation>
     </message>
     <message>
-        <location filename="../services/updateService.py" line="67"/>
+        <location filename="../services/updateService.py" line="66"/>
         <source>downloaded</source>
         <translation>downloaded</translation>
     </message>
@@ -2833,7 +2823,7 @@
         <translation>Download Finished</translation>
     </message>
     <message>
-        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="42"/>
+        <location filename="../components/widget/UpdateRequiredFilesWidget.py" line="45"/>
         <source>noConnection</source>
         <translation>No Connection available. Can&apos;t download required files</translation>
     </message>
@@ -2891,12 +2881,7 @@
         <translation>Error during reading sortie data</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="492"/>
-        <source>profit</source>
-        <translation>Profit</translation>
-    </message>
-    <message>
-        <location filename="../utils/warframeUtils.py" line="494"/>
+        <location filename="../utils/warframeUtils.py" line="491"/>
         <source>return</source>
         <translation>Return</translation>
     </message>
@@ -2911,12 +2896,12 @@
         <translation>Relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="406"/>
+        <location filename="../utils/warframeUtils.py" line="408"/>
         <source>bounty</source>
         <translation>Bounty</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="457"/>
+        <location filename="../utils/warframeUtils.py" line="456"/>
         <source>rotation</source>
         <translation>Rotation</translation>
     </message>
@@ -2936,37 +2921,37 @@
         <translation>Common</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="463"/>
+        <location filename="../utils/warframeUtils.py" line="462"/>
         <source>primeVault</source>
         <translation>Relic in Prime Vault</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="463"/>
+        <location filename="../utils/warframeUtils.py" line="462"/>
         <source>relicDrop</source>
         <translation>No mission drops this relic</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="484"/>
+        <location filename="../utils/warframeUtils.py" line="483"/>
         <source>missionTypeNotFound</source>
         <translation>Mission Type Translation Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="423"/>
+        <location filename="../utils/warframeUtils.py" line="422"/>
         <source>event</source>
         <translation>Event</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="474"/>
+        <location filename="../utils/warframeUtils.py" line="473"/>
         <source>planetNotFound</source>
         <translation>Planet Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="681"/>
+        <location filename="../utils/warframeUtils.py" line="671"/>
         <source>primeNotFound</source>
         <translation>Prime Parts Not Found</translation>
     </message>
     <message>
-        <location filename="../utils/warframeUtils.py" line="457"/>
+        <location filename="../utils/warframeUtils.py" line="456"/>
         <source>noRotation</source>
         <translation>None</translation>
     </message>

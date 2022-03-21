@@ -658,7 +658,8 @@ syndicate_schema = {
                              "SolarisSyndicate", "RadioLegionSyndicate", "RadioLegionIntermissionSyndicate",
                              "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
                              "RadioLegion3Syndicate", "RadioLegionIntermission3Syndicate", "EntratiSyndicate",
-                             "NecraloidSyndicate", "RadioLegionIntermission4Syndicate"]
+                             "NecraloidSyndicate", "RadioLegionIntermission4Syndicate",
+                             "RadioLegionIntermission5Syndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -1061,9 +1062,10 @@ goals_schema = {
                                            "RepeatInterval": {
                                                "type": "integer"
                                            },
-                                           "Transmission": {"type": "string"}
+                                           "Transmission": {"type": "string"},
+                                           "Transmissions": {"type": "array"}
                                        },
-                                       "required": ["Expiry", "Activation", "RepeatInterval", "Transmission"]
+                                       "required": ["Expiry", "Activation", "RepeatInterval"]
                                        },
 
                 "MissionInfo": {

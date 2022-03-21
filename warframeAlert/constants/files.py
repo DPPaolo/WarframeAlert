@@ -89,6 +89,7 @@ IMAGE_NAME = {
     "Forma": "/Lotus/Interface/Icons/Store/GenericComponent.png",
     "Adattatore Exilus (Schema)": "/Lotus/Interface/Icons/Store/UtilityModule.png",
     "Adattatore Exilus": "/Lotus/Interface/Icons/Store/UtilityModule.png",
+    "Cipher Riven Non Identificato": "/Lotus/Types/Items/MiscItems/RivenIdentifier.png",
     "Lith": "VoidProjectionsIron.png",
     "Meso": "VoidProjectionsBronze.png",
     "Neo": "VoidProjectionsSilver.png",
