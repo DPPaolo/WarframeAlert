@@ -17,17 +17,20 @@ from warframeAlert.utils.warframeUtils import get_operation_type
 
 
 def get_news_type(message: str, url: str) -> int:
+    url = url.lower().replace("\n", "")
     if (url == ""):  # No URL available
         return 2
     elif ("www.youtube.com" in url):  # YouTube
         return 2
     elif ("prime" in url and "access" in url):  # Prime Access
         return 1
-    elif ("tennocon" in url.lower()):  # Tennocon
+    elif ("tennocon" in url):  # Tennocon
         return 1
     elif ("contest" in url or "contest" in message):  # Contest
         return 2
     elif ("forums.warframe.com" in url):  # Hotfix and in Game Events
+        return 1
+    elif ("update" in url):
         return 1
     else:
         return 2

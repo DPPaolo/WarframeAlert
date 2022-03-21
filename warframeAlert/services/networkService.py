@@ -6,13 +6,14 @@ import time
 import urllib.request
 from urllib.error import URLError
 
-from PyQt6 import QtCore, QtWidgets
+import requests
+from PyQt6 import QtCore
 
 from warframeAlert.constants.files import UPDATE_SITE
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
-from warframeAlert.utils.fileUtils import create_default_folder, get_separator
+from warframeAlert.utils.fileUtils import create_default_folder
 from warframeAlert.utils.logUtils import LogHandler
 
 try:
@@ -44,39 +45,32 @@ def get_actual_version() -> str:
     return str(major_version) + "." + str(minor_version)
 
 
-def retrieve_version() -> str:
-    ver = "0.0"
+def retrieve_text_file(file_name: str, default_value: str = "") -> str:
+    text = default_value
     if not check_connection():
-        return ver
-    try:
-        download(UPDATE_SITE + "version.txt", "data" + get_separator() + "version.txt")
-    except Exception as er:
-        LogHandler.err(translate("networkService", "versionCheckError") + " " + str(er))
-        print(translate("networkService", "versionCheckError") + " " + str(er))
-        commonUtils.print_traceback(translate("networkService", "versionCheckError"))
-        return ver
-    fp = open("data" + get_separator() + "version.txt", "r")
-    for line in fp.readlines():
-        ver = line.replace("\n", "")
-    fp.close()
-    os.remove('data' + get_separator() + 'version.txt')
-    return ver
+        return text
+    else:
+        response = requests.get(UPDATE_SITE + file_name)
+        if (response.status_code == 200):
+            response.encoding = "windows-1252"
+            text = response.text
+    return text
 
 
-def update_program() -> None:
+def clean_update_program() -> None:
     fp = open("PostUpdate.txt", "r")
     line = fp.readlines()
     pid = str(line[0]).replace("\n", "")
     ver = str(line[1]).replace("\n", "")
     fp.close()
+    os.remove("PostUpdate.txt")
     name = r'Warframe Alert ' + ver + ".exe"
     try:
-        subprocess.call("taskkill /PID " + pid)
+        subprocess.call("taskkill /f /PID " + pid)
         time.sleep(2)
         os.remove(name)
     except Exception as er:
         LogHandler.err(translate("updateProgramService", "newVersionError") + ":\n" + str(er))
-    os.remove("PostUpdate.txt")
 
 
 class Downloader(QtCore.QThread):
@@ -113,10 +107,10 @@ class Downloader(QtCore.QThread):
 
 class ProgressBarDownloader(QtCore.QThread):
     download_completed = QtCore.pyqtSignal()
+    updated_value = QtCore.pyqtSignal(float)
 
-    def __init__(self, progress_bar: QtWidgets.QProgressBar, url: str, path: str) -> None:
+    def __init__(self, url: str, path: str) -> None:
         QtCore.QThread.__init__(self)
-        self.progressBar = progress_bar
         self.url: str = url
         self.path: str = path
 
@@ -124,7 +118,6 @@ class ProgressBarDownloader(QtCore.QThread):
         fp = open(self.path, "wb")
         response = urllib.request.urlopen(self.url)
         downloaded = 0
-        self.progressBar.setProperty("value", 0.0)
         try:
             size = int(response.info()['Content-Length'])
             while True:
@@ -134,7 +127,7 @@ class ProgressBarDownloader(QtCore.QThread):
                 downloaded += len(chunk)
                 fp.write(chunk)
                 per = (float(downloaded) / size) * 100
-                self.progressBar.setProperty("value", per)
+                self.updated_value.emit(per)
         except Exception as er:
             print(str(er))
             commonUtils.print_traceback(str(er))

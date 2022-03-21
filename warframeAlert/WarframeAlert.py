@@ -7,7 +7,8 @@ from PyQt6.QtWidgets import QMenuBar
 
 from warframeAlert.components.common.MessageBox import MessageBox, MessageBoxType
 from warframeAlert.services.menuService import MenuService, open_old_alert
-from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_version, update_program
+from warframeAlert.services.networkService import check_connection, get_actual_version, retrieve_text_file, \
+    clean_update_program
 from warframeAlert.services.notificationService import NotificationService
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.optionService import OptionService
@@ -65,7 +66,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # Check if there is a new version downloaded
         if (fileUtils.check_file("PostUpdate.txt")):
-            update_program()
+            clean_update_program()
 
     def start_main_services(self) -> None:
         # Start the tab Service
@@ -82,21 +83,21 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.update_service.file_downloaded.connect(lambda: self.tabService.update(""))
 
-        # Start the program service updater
-        self.updateProgramService = UpdateProgramService()
-
         # Start the file update service
         self.update_file_service = UpdateFileService()
+
+        # Start the program service updater
+        self.updateProgramService = UpdateProgramService(self.update_file_service)
 
         if (OptionsHandler.get_option("FirstInit") == 0):
             # Download files if it's the first init
             self.init_app()
         else:
-            self.show()
+            update_cycle = OptionsHandler.get_option("Update/Cycle")
+            if ((not str(update_cycle).isdigit() or int(update_cycle) < 30) and not check_connection()):
+                self.tabService.update("")
 
-        update_cycle = OptionsHandler.get_option("Update/Cycle")
-        if (not str(update_cycle).isdigit() or int(update_cycle) < 30):
-            self.tabService.update("")
+        self.show()
 
     def start_other_services(self) -> None:
 
@@ -143,8 +144,8 @@ class MainWindow(QtWidgets.QMainWindow):
 
         self.optionHandler.create_config()
 
-        self.updateProgramService.open_and_update_file(self.update_file_service)
-        self.updateProgramService.UpdateFile.all_file_downloaded.connect(self.show)
+        self.updateProgramService.open_and_update_file()
+        self.updateProgramService.UpdateFile.all_file_downloaded.connect(lambda: self.tabService.update(""))
         OptionsHandler.set_option("FirstInit", 1)
 
     def schedule_update_secondary_files(self) -> None:
@@ -215,7 +216,7 @@ class MainWindow(QtWidgets.QMainWindow):
 
 def check_for_update() -> None:
     actual_version = get_actual_version()
-    online_version = retrieve_version()
+    online_version = retrieve_text_file("version.txt", actual_version)
     if (float(actual_version) < float(online_version)):
         MessageBox(translate("main", "updateProgramTitleBox"), translate("main", "updateProgramDescBox"),
                    MessageBoxType.INFO_WITH_LINK, main.options.open_update)

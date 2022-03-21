@@ -1,28 +1,23 @@
 # coding=utf-8
 
-from PyQt6 import QtCore
-
 from warframeAlert.components.widget.UpdateProgramWidget import UpdateProgramWidget
 from warframeAlert.components.widget.UpdateRequiredFilesWidget import UpdateRequiredFilesWidget
 from warframeAlert.services.translationService import translate
 from warframeAlert.services.updateFileService import UpdateFileService
 
 
-class UpdateProgramService(QtCore.QObject):
+class UpdateProgramService():
     AutoUpdate = None
     UpdateFile = None
-    UpdateFileWidget = None
 
-    def __init__(self) -> None:
-        super().__init__()
+    def __init__(self, service: UpdateFileService) -> None:
+        self.AutoUpdate = UpdateProgramWidget()
+        self.UpdateFile = UpdateRequiredFilesWidget(service)
 
     def open_update(self) -> None:
-        self.AutoUpdate = UpdateProgramWidget().get_widget()
-        self.AutoUpdate.setWindowTitle(translate("updateProgramService", "title"))
-        self.AutoUpdate.show()
+        self.AutoUpdate.get_widget().setWindowTitle(translate("updateProgramService", "title"))
+        self.AutoUpdate.show_widget()
 
-    def open_and_update_file(self, service: UpdateFileService) -> None:
-        self.UpdateFile = UpdateRequiredFilesWidget(service)
-        self.UpdateFileWidget = self.UpdateFile.get_widget()
-        self.UpdateFileWidget.setWindowTitle(translate("updateProgramService", "updateFileTitle"))
-        self.UpdateFileWidget.show()
+    def open_and_update_file(self) -> None:
+        self.UpdateFile.get_widget().setWindowTitle(translate("updateProgramService", "updateFileTitle"))
+        self.UpdateFile.show_widget()

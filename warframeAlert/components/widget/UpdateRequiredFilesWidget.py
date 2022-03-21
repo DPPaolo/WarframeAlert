@@ -29,10 +29,12 @@ class UpdateRequiredFilesWidget(QtCore.QObject):
 
         self.UpdateFileWidget.resize(350, 50)
 
-        QtCore.QTimer.singleShot(1500, lambda: self.download_program_file())
-
     def get_widget(self) -> QtWidgets.QWidget:
         return self.UpdateFileWidget
+
+    def show_widget(self) -> None:
+        self.UpdateFileWidget.show()
+        self.download_program_file()
 
     def close(self) -> None:
         self.all_file_downloaded.emit()
