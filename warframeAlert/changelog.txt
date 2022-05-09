@@ -1,3 +1,11 @@
+Versione 13.5 - L'oscurità e luce della Zariman
+
+- Implementato un tema scuro e chiaro. Alcune schermate potrebbero non vedersi  in modo ottimale.
+- Ottimizzata la schermata di aggiornamento del programma
+- Ottimizzato l'avvio del programma
+- Migliorato controllo file mancanti all'avvio
+- Fixati diversi bug nelle varie schede
+
 Versione 13.4 - Poter Scegliere
 
 - Migliorata la gestione delle opzioni
