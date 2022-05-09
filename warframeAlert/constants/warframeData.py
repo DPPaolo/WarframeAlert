@@ -117,6 +117,9 @@ RESOURCES = {
         "CARBIDES": "Carburi",
         "GALLOS RODS": "Barre di Gallos",
         "KOMMS": "Trasmettitori",
+        "VOIDGEL ORB": "Sfera Voidgel",
+        "ENTRATI LANTHORNS": "Lanterna Entrati",
+        "THRAX PLAAM": "Plasma Thrax"
         }
 
 
@@ -391,6 +394,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Gameplay/Eidolon/Resources/CetusWispItem": "Cetus Wisp",
     "/Lotus/Types/Items/MiscItems/WaterFightBucks": "Perle Nakak",
     "/Lotus/Types/Items/RailJackMiscItems/TitaniumRailJackItem": "Titanium",
+    "/Lotus/Types/Gameplay/InfestedMicroplanet/Resources/Necraloids/NecraloidStandingRareItem": "Matrice Animus Orokin",
     "/Lotus/Types/Items/MiscItems/NoraWolfCreds": "Wolf Cred",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFourCreds": "Cred Nora's Choice",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFiveCreds": "Cred Mix di Nora Vol. 1",
@@ -581,7 +585,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorruptedExpert": "Primed Expel Corrupted",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageCorpusExpert": "Primed Expel Corpus",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageGrineerExpert": "Primed Expel Grineer",
-    "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageInfestedExpert": "Primed Expecl Infested",
+    "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageInfestedExpert": "Primed Expel Infested",
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageGrineerExpert": "Primed Cleanse Grineer",
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageCorpusExpert": "Primed Cleanse Corpus",
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageInfestedExpert":
@@ -591,7 +595,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageInfestedExpert": "Primed Smite Infested",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageGrineerExpert": "Primed Smite Grineer",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageCorruptedExpert": "Primed Smite Corrupted",
-    "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageCorpusExpert": "Primed Smite Copus",
+    "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageCorpusExpert": "Primed Smite Corpus",
     "/Lotus/StoreItems/Upgrades/Mods/Sentinel/SentinelLootRadarEnemyRadarExpertMod": "Primed Animal Instinct",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponReloadSpeedModExpert": "Primed Quickdraw",
     "/Lotus/StoreItems/Upgrades/Mods/Sentinel/Kubrow/Expert/KubrowPackLeaderExpertMod": "Primed Pack Leader",
@@ -731,6 +735,9 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Necramech/MechWeapon/MechEventMausolonSkin": "Skin Mausolon Supulchrax",
     "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/AshLeverianLiosPistol": "Skin Pistola De Nas",
     "/Lotus/StoreItems/Upgrades/Skins/Glass/GaraAlternateSkin": "Skin Gara Immortal",
+    "/Lotus/StoreItems/Upgrades/Skins/Leverian/NezhaLeverian/NezhaLeverianPolearm": "Skin Lancia Reshantur Cult",
+    "/Lotus/StoreItems/Upgrades/Skins/Rhino/RhinoDexSkin": "Skin Dex Rhino",
+
 
     # Sugatra
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/BaroInarosMeleeDangle": "Sugatra Anpu",
@@ -753,6 +760,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/SolsticeGrnBannerScarf": "Stendardo Vanquished Solstice",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/FurisArmor/SolsticeFurisAArmor": "Syandana Centuria Solstice",
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/SolsticeNelumboCape": "Syandana Wintercrest",
+    "/Lotus/StoreItems/Upgrades/Skins/Scarves/NezhaLeverianCape": "Syandana Reshantur Cult",
 
 
     # Armour Cosmetics
@@ -881,6 +889,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerFlak": "Decorazione Caccia Flak",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropGrineerTaktis": "Decorazione Caccia Tactis",
     "/Lotus/StoreItems/Types/Items/ShipDecos/EraHypnosisPoster": "Poster Don't Be Afraid",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/BoredTennoPoster": "Poster Class of Ten Zero",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusBasilisk": "Decorazione - Caccia Basilisk",
 
 
     # Sentinels

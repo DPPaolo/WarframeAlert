@@ -34,6 +34,7 @@ REGION_MAP = {
     21: {"it": "Fortuna", "en": "Fortuna"},
     22: {"it": "Santuario", "en": "Sanctuary"},
     23: {"it": "Veil", "en": "Veil"},
+    24: {"it": "Zariman", "en": "Zariman"}
 }
 
 MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
@@ -71,6 +72,9 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_RAILJACK_VOLATILE": {"it": "Volatile (Railjack)", "en": "Volatile  (Railjack)"},
                 "MT_RAILJACK_SPY": {"it": "Spionaggio (Railjack)", "en": "Spy  (Railjack)"},
                 "MT_RAILJACK_SURVIVAL": {"it": "Sopravvivenza (Railjack)", "en": "Survival  (Railjack)"},
+                "MT_ARMAGEDDON": {"it": "Armageddon Void", "en": "Void Armageddon"},
+                "MT_VOID_CASCADE": {"it": "Cascata Void", "en": "Void Cascade"},
+                "MT_CORRUPTION": {"it": "Marea Void", "en": "Void Flood"},
                 }
 
 NODE_NAME_IT = {
@@ -303,6 +307,12 @@ NODE_NAME_IT = {
     "SolNode227": ("Verdi", "Mercurio"),
     "SolNode228": ("Pianure di Eidolon", "Terra"),
     "SolNode229": ("Cambion Drift", "Deimos"),
+    "SolNode230": ("Everview Arc", "Zariman"),
+    "SolNode231": ("Halako Perimeter", "Zariman"),
+    "SolNode233": ("Oro Works", "Zariman"),
+    "SolNode232": ("Tuvul Commons", "Zariman"),
+    "SolNode234": ("Dormizon", "Zariman"),
+    "SolNode235": ("The Greenway", "Zariman"),
 
     "SolNode300": ("Plato", "Luna"),
     "SolNode301": ("Grimaldi", "Luna"),
@@ -553,6 +563,8 @@ NODE_NAME_IT = {
     "IronwakeHUB": ("Iron Wake", "Terra"),
 
     "ScenarioEventHub5": ("Scarlet Spear", "Terra"),
+
+    "ZarimanHub_HUB": ("ChrysaLith", "Zariman"),
 
     "DojoHub_HUB": ("Dojo", "Sistema Solare"),
 

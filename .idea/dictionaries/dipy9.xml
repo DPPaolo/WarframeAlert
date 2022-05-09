@@ -15,21 +15,27 @@
       <w>archgun</w>
       <w>archsword</w>
       <w>archwing</w>
+      <w>asra</w>
       <w>auroxium</w>
       <w>ayatan</w>
+      <w>ballas</w>
       <w>balor</w>
       <w>baro</w>
       <w>brokk</w>
       <w>burston</w>
       <w>cambion</w>
       <w>capacitatore</w>
+      <w>carnis</w>
       <w>catbrow</w>
+      <w>catbrows</w>
       <w>cephalon</w>
       <w>cerere</w>
       <w>charc</w>
+      <w>coccyst</w>
       <w>condrod</w>
       <w>conquera</w>
       <w>cordatus</w>
+      <w>cornu</w>
       <w>crewship</w>
       <w>cryotic</w>
       <w>cydonia</w>
@@ -42,6 +48,7 @@
       <w>devar</w>
       <w>diag</w>
       <w>dtls</w>
+      <w>dvad</w>
       <w>eelog</w>
       <w>electro</w>
       <w>elettrociti</w>
@@ -56,11 +63,14 @@
       <w>fersteel</w>
       <w>feyarch</w>
       <w>fieldron</w>
+      <w>flagellocanth</w>
+      <w>floof</w>
       <w>fluctus</w>
       <w>foros</w>
       <w>fragor</w>
       <w>furis</w>
       <w>fusers</w>
+      <w>gaundao</w>
       <w>giromag</w>
       <w>glaive</w>
       <w>glassmaker</w>
@@ -76,6 +86,7 @@
       <w>grokdrul</w>
       <w>grustrag</w>
       <w>guandao</w>
+      <w>gunblade</w>
       <w>gustrag</w>
       <w>hackera</w>
       <w>hackerando</w>
@@ -83,10 +94,12 @@
       <w>harkonar</w>
       <w>heatsink</w>
       <w>helminth</w>
+      <w>hemakara</w>
       <w>hexenon</w>
       <w>hexis</w>
       <w>hikou</w>
       <w>hildrin</w>
+      <w>holdfast</w>
       <w>hydrolyst</w>
       <w>imageproxy</w>
       <w>inaros</w>
@@ -94,6 +107,8 @@
       <w>ironwake</w>
       <w>ivara</w>
       <w>jordas</w>
+      <w>jugulus</w>
+      <w>kamas</w>
       <w>karak</w>
       <w>kavat</w>
       <w>kela</w>
@@ -106,6 +121,7 @@
       <w>kubrow</w>
       <w>kubrows</w>
       <w>kuva</w>
+      <w>kymaeros</w>
       <w>latron</w>
       <w>latrox</w>
       <w>lavos</w>
@@ -118,10 +134,12 @@
       <w>lith</w>
       <w>loadout</w>
       <w>loadouts</w>
+      <w>lobotriscid</w>
       <w>loka</w>
       <w>lunaro</w>
       <w>luxxum</w>
       <w>machette</w>
+      <w>mahd</w>
       <w>maprico</w>
       <w>maroo</w>
       <w>mausolon</w>
@@ -147,19 +165,23 @@
       <w>necra</w>
       <w>necralisk</w>
       <w>necraloid</w>
+      <w>necraloids</w>
       <w>necramech</w>
       <w>negator</w>
       <w>nekros</w>
+      <w>nelumbo</w>
       <w>neurode</w>
       <w>neurottiche</w>
       <w>nidus</w>
       <w>nightwave</w>
       <w>nightwawe</w>
       <w>nikana</w>
+      <w>nistlebrush</w>
       <w>nistlepod</w>
       <w>nitain</w>
       <w>noggle</w>
       <w>norg</w>
+      <w>nouchali</w>
       <w>odima</w>
       <w>odonata</w>
       <w>offworlder</w>
@@ -173,7 +195,9 @@
       <w>palladino</w>
       <w>palpatori</w>
       <w>paracesis</w>
+      <w>paracyst</w>
       <w>parazon</w>
+      <w>pedistal</w>
       <w>perrin</w>
       <w>pherliac</w>
       <w>phorid</w>
@@ -184,29 +208,37 @@
       <w>polearm</w>
       <w>powersuits</w>
       <w>prereq</w>
+      <w>puspa</w>
       <w>pustulite</w>
       <w>pyrotic</w>
       <w>pyrus</w>
+      <w>rahk</w>
       <w>railjack</w>
       <w>raknoid</w>
       <w>raksaka</w>
       <w>rell</w>
       <w>replicants</w>
+      <w>reshantur</w>
       <w>revenant</w>
       <w>ropalolyst</w>
+      <w>rostam</w>
       <w>royale</w>
       <w>rubedo</w>
       <w>sargas</w>
       <w>saryn</w>
+      <w>saxum</w>
       <w>scannerizza</w>
       <w>scannerizzazioni</w>
+      <w>scissus</w>
       <w>sealab</w>
+      <w>sekhara</w>
       <w>sentients</w>
       <w>servofish</w>
       <w>sevagoth</w>
       <w>sharkwing</w>
       <w>sheev</w>
       <w>shinai</w>
+      <w>sigil</w>
       <w>simaris</w>
       <w>skana</w>
       <w>snipertron</w>
@@ -214,15 +246,18 @@
       <w>sonicor</w>
       <w>spazz</w>
       <w>speedball</w>
+      <w>sporothrix</w>
       <w>stratos</w>
       <w>strun</w>
       <w>sugatra</w>
+      <w>supulchrax</w>
       <w>syandana</w>
       <w>sybaris</w>
       <w>symaris</w>
       <w>synthula</w>
       <w>tabber</w>
       <w>tabook</w>
+      <w>tactis</w>
       <w>taktis</w>
       <w>tannukai</w>
       <w>teer</w>
@@ -232,6 +267,7 @@
       <w>teshin</w>
       <w>thaym</w>
       <w>thermia</w>
+      <w>thermite</w>
       <w>thetra</w>
       <w>tiberon</w>
       <w>tileset</w>
@@ -241,8 +277,10 @@
       <w>valana</w>
       <w>valkyr</w>
       <w>vallis</w>
+      <w>vastilok</w>
       <w>vaya</w>
       <w>vazarin</w>
+      <w>velocipod</w>
       <w>ven'kra</w>
       <w>ventkids</w>
       <w>veridos</w>
@@ -251,11 +289,14 @@
       <w>vulkar</w>
       <w>wetwork</w>
       <w>whozit</w>
+      <w>wintercrest</w>
       <w>wyrmius</w>
       <w>xaku</w>
       <w>xiphos</w>
+      <w>yamako</w>
       <w>yogwun</w>
       <w>zanuka</w>
+      <w>zariman</w>
       <w>zenurik</w>
       <w>zoren</w>
       <w>zylok</w>

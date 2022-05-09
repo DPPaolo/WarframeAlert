@@ -17,6 +17,7 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                   "SolarisSyndicate": {"it": "Solaris", "en": "Solaris"},
                   "EntratiSyndicate": {"it": "Entrati", "en": "Entrati"},
                   "NecraloidSyndicate": {"it": "Necraloid", "en": "Necraloid"},
+                  "ZarimanSyndicate": {"it": "Holdfast", "en": "Holdfast"},
                   "RadioLegionSyndicate": {"it": "Nightwave - Wolf", "en": "Nightwave - The Wolf"},
                   "RadioLegion2Syndicate": {"it": "Nightwave - L'emissario", "en": "Nightwave - The Emissary"},
                   "RadioLegion3Syndicate": {"it": "Nightwave - Il Vetraio", "en": "Nightwave - The Glassmaker"},
@@ -192,6 +193,19 @@ SYNDICATE_RANK_NAME = {
          "en": ("Clearance: Agnesis",
                 "Clearance: Modus",
                 "Clearance: Odima")},
+    'ZarimanSyndicate':
+        {"it": ("Neutrale",
+                "Caduto",
+                "Testimone",
+                "Guardiano",
+                "Serafino",
+                "Angelo"),
+         "en": ("Neutral",
+                "Fallen",
+                "Watcher",
+                "Guardian",
+                "Seraph",
+                "Angel")},
 }
 
 BOUNTY_JOB_NAME = {
