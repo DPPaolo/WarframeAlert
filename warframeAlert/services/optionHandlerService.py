@@ -13,6 +13,7 @@ class OptionsHandler(QtCore.QObject):
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
         "SubVersion": "5",      # Program Sub Version
+        "Theme": 0,             # Theme
         "FirstInit": 0,         # First Installation
         "TrayIcon": 0,          # Tray Icon Disable
         "Debug": 0,             # Debug Messages Disabled

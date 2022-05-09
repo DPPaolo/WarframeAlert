@@ -176,7 +176,29 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWhileOnKDrive": (
         "In Pista!", "Uccidi 20 nemici mentre sei a bordo di un K-Drive", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPilotFallenMech": (
-        "Rianimatore", "Trova e pilota un Necramech abbattuto su Deimos", 10000),
+        "Rianimatore", "Trova e pilota un Necramech abbattuto su Deimos", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyMedic": ("Medico", "Rianima un Tenno on un compagno", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyThePersonalTouch": (
+        "Tocco Personale", "Posiziona 1 decorazione nel tuo Orbiter", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyLiquidation": (
+        "Liquidazione", "Vendi qualsiasi oggetto nel tuo inventario per Crediti", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyStayOnTop": (
+        "Dall'Alto", "Uccidi 20 nemici usando un Necramech mentre sei in volo", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyAFirmShake": (
+        "Una Stretta Decisa", "Stringi la mano a un compagno Tenno usando l'emote Stretta di Mano", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTwoForOne": (
+        "Due per Uno", "Perfora e uccidi 2 o più nemici con un singolo tiro di arco", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyBuildersTouch": (
+        "Tocco del Costruttore", "Riscatta un oggetto dalla tua fucina", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeathFromAbove": (
+        "Morte dall'Alto", "Uccidi 10 nemici con gli schianti a terra", 1000),    
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySwatter": (
+        "Schiacciamosche", "Uccidi 3 Osprey o Droni con la tua Arma Corpo a Corpo", 1000),    
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyAugmentation": (
+        "Potenziamento", "Installa un Mod Potenziamento sul tuo Warframe", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyToppingOffTheTank": (
+        "Serbatoio Pieno", "Difendi con successo una Scavatrice evitando che esaurisca l'energia", 1000),
+
     # WEEKLY
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions": (
         "Invasore", "Completa 9 Missioni di invasione qualsiasi", 4500),
@@ -217,7 +239,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSabotage": (
         "Sabotatore", "Completa 3 missioni sabotaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockDragonVaults": (
-        "Saccheggiatore di Camere", "Apri 4 Caveau Orokin su Deimos", 4500),
+        "Saccheggiatore di Camere", "Apri 4 Caveau Chiave di Drago su Deimos", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSpy": (
         "Operativo", "Completa 3 missioni spionaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRarePlainsFish": (
@@ -259,6 +281,17 @@ SEASON_CHALLENGE = {
         "Nutri la Bestia", "Nutri l'Helminth con qualsiasi risorsa", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesInMech": (
         "Necralizzatore", "Uccidi 100 nemici con un Necramech", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyTheOldWays": (
+        "Alla Vecchia Maniera", "Completa una missione con solo una pistola e un glaive equipaggiati", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBloodthirsty": (
+        "Sanguinario", "Uccidi 20 nemici in 5 secondi", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyNightAndDay": (
+        "Fedeltà", "Ottieni un totale di 5000 Reputazione con qualsiasi Associazione", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyLoyalty": (
+        "Notte e Giorno", "Raccogli 15 Residui Vome o Fass su Cambion Drift", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMadLab": (
+      "Scienziato Pazzo", "Saccheggia uno dei laboratori segreti di Alad V su Giove", 4500),
+
     # WEEKLY ELITE
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus": (
         "Giustiziere Eximus", "Uccidi 100 Eximus", 7000),
@@ -268,7 +301,7 @@ SEASON_CHALLENGE = {
         "Soggetto di Prova Elite", "Completa 8 Zone della Carneficina al Santuario Elite", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKuvaSurvivalNoCapsules": (
         "Trattieni il Respiro",
-        "Sopravvivi per 30 minuti senza usare Capsule di Supporto Vitale nella Sopravvivenza Kuva",
+        "Sopravvivi per 30 minuti nella Sopravvivenza Kuva",
         7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardExterminateNoAlarm": (
         "Eliminatore Silenzioso", "Completa una missione Sterminio con nemici di livello 30+ senza farti scoprire",
@@ -315,5 +348,13 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteSteelPathMissions": (
         "Il Percorso Meno Abbattuto", "Completa 5 missioni Percorso d'Acciaio", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCollectUniqueResources": (
-        "Razziatore di Risorse", "Raccogli 20 tipi diversi di risorse", 7000)
+        "Razziatore di Risorse", "Raccogli 20 tipi diversi di risorse", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardRiseOfTheMachine": (
+        "L'Ascesa delle Macchine", "Uccidi 300 nemici usando un Necramech senza che venga distrutto", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardAntiquarian": (
+        "Antiquario", "Apri 4 Reliquie per ogni era/livello (Lith, Meso, Neo, Axi)", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTerminated": (
+       "Distrutti", "Distruggi 3 Necramech guardiani del Vault", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom": (
+       "Il Prezzo della Libertà", "Libera un Solaris Catturato utilizzando una Corona Granum", 7000),
 }
