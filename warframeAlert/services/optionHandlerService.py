@@ -12,7 +12,7 @@ class OptionsHandler(QtCore.QObject):
     default_value = {
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
-        "SubVersion": "5",      # Program Sub Version
+        "SubVersion": "6",      # Program Sub Version
         "Theme": 0,             # Theme
         "FirstInit": 0,         # First Installation
         "TrayIcon": 0,          # Tray Icon Disable

@@ -357,4 +357,7 @@ SEASON_CHALLENGE = {
        "Distrutti", "Distruggi 3 Necramech guardiani del Vault", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom": (
        "Il Prezzo della Libertà", "Libera un Solaris Catturato utilizzando una Corona Granum", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTheManyMadeWhole": (
+        "L'Unione Fa la Forza", "Converti 10 Schegge Riven in un Riven Mod", 7000
+    ),
 }

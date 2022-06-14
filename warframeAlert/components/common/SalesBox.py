@@ -65,7 +65,7 @@ class SalesBox():
             self.SalePricePlatinum.hide()
 
     def set_other_sales_data(self, bogobuy: int, bogoget: int, featured: bool, popular: bool,
-                             init: str, show_with_recommended: bool) -> None:
+                             init: str, show_with_recommended: bool, is_supporter_pack: bool) -> None:
         self.SaleTime.set_tooltip(translate("salesBox", "start") + ": " + init)
         name_tooltip = translate("salesBox", "bogobuy") + ": " + str(bogobuy) + "\n"
         name_tooltip += translate("salesBox", "bogoget") + ": " + str(bogoget)
@@ -73,6 +73,7 @@ class SalesBox():
         is_show_tooltip = translate("salesBox", "featured") + ": " + bool_to_yes_no(featured) + "\n"
         is_show_tooltip += translate("salesBox", "popular") + ": " + bool_to_yes_no(popular) + "\n"
         is_show_tooltip += translate("salesBox", "showWithRecommended") + ": " + bool_to_yes_no(show_with_recommended)
+        is_show_tooltip += translate("salesBox", "isSupporterPack") + ": " + bool_to_yes_no(is_supporter_pack)
         self.SaleIsShow.setToolTip(is_show_tooltip)
 
     def get_item_name(self) -> str:

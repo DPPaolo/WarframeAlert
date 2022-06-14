@@ -446,7 +446,7 @@
     <message>
         <location filename="../components/widget/ConfigOtherWidget.py" line="51"/>
         <source>themeTooltip</source>
-        <translation>Tema dell&apos;app. Alcune schermate potrebbero non vedersi in modo ottimale. Selezionare &quot;Standard&quot; e riavviare per rimuovere il tema selezionato</translation>
+        <translation>Tema dell&apos;app. Alcune schermate potrebbero non vedersi in modo ottimale. Selezionare &amp;quot;Standard&amp;quot; e riavviare per rimuovere il tema selezionato</translation>
     </message>
 </context>
 <context>
@@ -2161,6 +2161,11 @@
         <location filename="../components/common/SalesBox.py" line="75"/>
         <source>showWithRecommended</source>
         <translation>Mostrato con i raccomandati</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SalesBox.py" line="76"/>
+        <source>isSupporterPack</source>
+        <translation>Pacchetto Supporter</translation>
     </message>
 </context>
 <context>

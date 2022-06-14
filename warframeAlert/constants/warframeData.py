@@ -891,6 +891,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/EraHypnosisPoster": "Poster Don't Be Afraid",
     "/Lotus/StoreItems/Types/Items/ShipDecos/BoredTennoPoster": "Poster Class of Ten Zero",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusBasilisk": "Decorazione - Caccia Basilisk",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusWeaver": "Decorazione - Caccia Weaver",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusHarpi": "Decorazione - Caccia Harpi",
 
 
     # Sentinels

@@ -179,6 +179,7 @@ class FlashSale(TypedDict, total=False):
     RegularOverride: int
     ShowInMarket: bool
     ShowWithRecommended: bool
+    SupporterPack: bool
     Featured: bool
     Popular: bool
     TypeName: str
@@ -238,6 +239,7 @@ class Goal(TypedDict, total=False):
     MissionKeyName: str
     MissionKeyRotationInterval: int
     ConcurrentMissionKeyNames: List[str]
+    NightLevel: str
     Success: int
     Faction: str
     InstructionalItem: str
