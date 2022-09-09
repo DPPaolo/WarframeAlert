@@ -157,7 +157,6 @@ prime_vault_traders = {
     }
 }
 
-
 pvp_tournament_schema = {
     "type": "object",
     "properties": {
@@ -415,6 +414,7 @@ fissure_schema = {
                 "Modifier": {"type": "string"},
                 "Node": {"type": "string"},
                 "MissionType": {"type": "string"},
+                "Hard": {"type": "boolean"},
             },
             "required": ["Activation", "Expiry", "_id", "Seed", "Region", "Modifier", "Node", "MissionType"],
         }
@@ -1321,7 +1321,7 @@ alerts_schema = {
                         "archwingRequired": {"type": "boolean"},
                         "isSharkwingMission": {"type": "boolean"},
                         "maxWaveNum": {"type": "integer"},
-                        "nightmare": {"type": "integer"},
+                        "nightmare": {"type": "boolean"},
                         "difficulty": {"type": "integer"},
                         "missionReward": {
                             "type": "object",
@@ -1509,10 +1509,12 @@ events_schema = {
                 },
                 "EventLiveUrl": {"type": "string"},
                 "Prop": {"type": "string"},
+                "HideEndDateModifier": {"type": "boolean"},
                 "Priority": {"type": "boolean"},
                 "Community": {"type": "boolean"},
                 "MobileOnly": {"type": "boolean"},
                 "ImageUrl": {"type": "string"},
+                "Icon": {"type": "string"},
                 "Messages": {
                     "type": "array",
                     "items": {

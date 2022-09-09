@@ -37,11 +37,12 @@ class FissureBox():
 
         self.FisTime.TimeOut.connect(self.hide)
 
-    def set_fissure_data(self, node: str, plan: str, mis: str, init: int, end: int, tier: str, region: str) -> None:
+    def set_fissure_data(self, node: str, planet: str, mission: str, init: int, end: int,
+                         tier: str, region: str) -> None:
         self.region = region
         self.FisNode.setText(node)
-        self.FisPlan.setText(plan)
-        self.FisMis.setText(mis)
+        self.FisPlan.setText(planet)
+        self.FisMis.setText(mission)
         self.FisTier.setText(tier)
 
         self.FisTime.set_countdown(end[:10])

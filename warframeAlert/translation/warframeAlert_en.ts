@@ -146,7 +146,7 @@
 <context>
     <name>baroWidget</name>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="175"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="178"/>
         <source>end</source>
         <translation>Leave in</translation>
     </message>
@@ -161,22 +161,22 @@
         <translation>Error on Baro Ki&apos;Teer</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="99"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="100"/>
         <source>arrived</source>
         <translation>Arrives on</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="100"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="101"/>
         <source>on</source>
         <translation>at the</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="156"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="157"/>
         <source>baroArrived</source>
         <translation>Baro Ki&apos;Teer is arrived</translation>
     </message>
     <message>
-        <location filename="../components/tab/BaroWidgetTab.py" line="185"/>
+        <location filename="../components/tab/BaroWidgetTab.py" line="188"/>
         <source>init</source>
         <translation>Arrives in</translation>
     </message>
@@ -874,12 +874,12 @@
 <context>
     <name>fissureBox</name>
     <message>
-        <location filename="../components/common/FissureBox.py" line="55"/>
+        <location filename="../components/common/FissureBox.py" line="56"/>
         <source>newFissure</source>
         <translation>New Void Fissure</translation>
     </message>
     <message>
-        <location filename="../components/common/FissureBox.py" line="48"/>
+        <location filename="../components/common/FissureBox.py" line="49"/>
         <source>fissureStart</source>
         <translation>Started at</translation>
     </message>
@@ -887,14 +887,44 @@
 <context>
     <name>fissureWidgetTab</name>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="28"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="72"/>
         <source>viewRelics</source>
         <translation>View Relics</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="54"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="94"/>
         <source>errorRelics</source>
         <translation>Error during parsing fissure</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="35"/>
+        <source>NoFissure</source>
+        <translation>No Fissure Available</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="36"/>
+        <source>NoHardFissure</source>
+        <translation>No Steel Path Fissure Available</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="37"/>
+        <source>NoVoidStorms</source>
+        <translation>No Void Storms Available</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="67"/>
+        <source>NormalFissure</source>
+        <translation>Fissure</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="68"/>
+        <source>HardFissure</source>
+        <translation>Steel Path Fissure</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/FissureWidgetTab.py" line="69"/>
+        <source>VoidStorm</source>
+        <translation>Void Storm</translation>
     </message>
 </context>
 <context>
@@ -1626,32 +1656,32 @@
         <translation>Error on the news</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="226"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="233"/>
         <source>version</source>
         <translation>Version</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="227"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="234"/>
         <source>build</source>
         <translation>Build</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="254"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="261"/>
         <source>globalUpgradeError</source>
         <translation>Error on global upgrades</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="228"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="235"/>
         <source>time</source>
         <translation>Last Update</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="311"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="318"/>
         <source>newBooster!</source>
         <translation>New Booster Activated!</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="243"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="250"/>
         <source>newNews!</source>
         <translation>New News Available!</translation>
     </message>
@@ -1661,27 +1691,27 @@
         <translation>Started at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="181"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="188"/>
         <source>eventInit</source>
         <translation>Event starts at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="187"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="194"/>
         <source>eventEnd</source>
         <translation>Event ends at</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="189"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="196"/>
         <source>newsSite</source>
         <translation>News Site</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="192"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="199"/>
         <source>priority</source>
         <translation>With priority</translation>
     </message>
     <message>
-        <location filename="../components/tab/NewsWidgetTab.py" line="193"/>
+        <location filename="../components/tab/NewsWidgetTab.py" line="200"/>
         <source>onlyMobile</source>
         <translation>Only for Mobile</translation>
     </message>
@@ -2100,7 +2130,7 @@
         <translation>Relics Info</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="153"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="200"/>
         <source>unknownRelicTier</source>
         <translation>Unkown Relic Tier</translation>
     </message>

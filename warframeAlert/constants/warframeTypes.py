@@ -44,6 +44,7 @@ class ActiveMission(TypedDict, total=False):
     Node: str
     Region: int
     Seed: int
+    Hard: bool
 
 
 ActiveMissions = List[ActiveMission]
@@ -133,10 +134,12 @@ class Event(TypedDict, total=False):
     EventEndDate: DateType
     EventLiveUrl: str
     Prop: str
+    HideEndDateModifier: bool
     Priority: bool
     Community: bool
     MobileOnly: bool
     ImageUrl: str
+    Icon: str
     Messages: List[NewsMessage]
     Links: List[NewsLinksMessage]
 
