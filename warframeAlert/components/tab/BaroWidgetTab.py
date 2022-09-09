@@ -93,6 +93,7 @@ class BaroWidgetTab():
         for baro in data:
             baro_id = baro['_id']['$oid']
             init = timeUtils.get_time(baro['Activation']['$date']['$numberLong'])
+            start = baro['Activation']['$date']['$numberLong']
             end = baro['Expiry']['$date']['$numberLong']
             node, planet = get_node(baro['Node'])
 
@@ -101,10 +102,10 @@ class BaroWidgetTab():
 
             if ('TennoCon' in node):
                 self.BaroConDesc.setToolTip("ID " + baro['Character'] + ": " + str(baro_id))
-                self.set_tennocon_time(desc, end[:10])
+                self.set_tennocon_time(desc, start[:10], end[:10])
             else:
                 self.BaroDesc.setToolTip("ID " + baro['Character'] + ": " + str(baro_id))
-                self.set_time(desc, end[:10])
+                self.set_time(desc, start[:10], end[:10])
 
             if ('Manifest' in baro):
                 manifest_empty += 1
@@ -159,21 +160,23 @@ class BaroWidgetTab():
                 None)
             self.baro_con_arrived = BaroState.BARO_ITEM_COMPLETED
 
-    def set_time(self, desc: str, end: int) -> None:
-        time = int(end) - int(timeUtils.get_local_time())
+    def set_time(self, desc: str, start: int, end: int) -> None:
+        local_time = int(timeUtils.get_local_time())
+        time = (int(start) - local_time) if (int(start) >= local_time) else (int(end) - local_time)
         if (time > 0):
             self.BaroEnd.set_name(translate("baroWidget", "end") + " ")
-            self.BaroEnd.set_countdown(end)
+            self.BaroEnd.set_countdown(start if (int(start) >= local_time) else end)
             self.BaroEnd.start()
         else:
             self.BaroEnd.hide()
         self.BaroDesc.setText(desc)
 
-    def set_tennocon_time(self, desc: str, end: int) -> None:
-        time = int(end) - int(timeUtils.get_local_time())
+    def set_tennocon_time(self, desc: str, start: int, end: int) -> None:
+        local_time = int(timeUtils.get_local_time())
+        time = (int(start) - local_time) if (int(start) >= local_time) else (int(end) - local_time)
         if (time > 0):
             self.BaroConEnd.set_name(translate("baroWidget", "end") + " ")
-            self.BaroConEnd.set_countdown(end)
+            self.BaroConEnd.set_countdown(start if (int(start) >= local_time) else end)
             self.BaroConEnd.start()
         else:
             self.BaroConEnd.hide()

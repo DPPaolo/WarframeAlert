@@ -60,7 +60,7 @@ class AlertMissionInfo(TypedDict):
     archwingRequired: bool
     isSharkwingMission: bool
     maxWaveNum: int
-    nightmare: int
+    nightmare: bool
     difficulty: int
     missionReward: MissionReward
     descText: str

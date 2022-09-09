@@ -322,6 +322,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
     "/Lotus/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
     "/Lotus/StoreItems/Types/Recipes/Components/WeaponUtilityUnlockerBlueprint": "Adattatore Exilus Arma (Schema)",
+    "/Lotus/Types/Items/MiscItems/WeaponUtilityUnlocker": "Adattatore Exilus Arma",
     "/Lotus/Types/Items/MiscItems/RivenIdentifier": "Cipher Riven Non Identificato",
     "/Lotus/StoreItems/Types/Game/KubrowPet/Eggs/KubrowEgg": "Uovo Kubrow",
     "/Lotus/Types/Game/CatbrowPet/CatbrowGeneticSignature": "Codice Genetico Kavat",
@@ -392,6 +393,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/MiscItems/Kuva": "Kuva",
     "/Lotus/StoreItems/Types/Items/MiscItems/Alertium": "Nitain",
     "/Lotus/Types/Gameplay/Eidolon/Resources/CetusWispItem": "Cetus Wisp",
+    "/Lotus/Types/Gameplay/Eidolon/Resources/SentientShards/SentientShardBrilliantItem": "Scheggia Eidolon Luminosa",
     "/Lotus/Types/Items/MiscItems/WaterFightBucks": "Perle Nakak",
     "/Lotus/Types/Items/RailJackMiscItems/TitaniumRailJackItem": "Titanium",
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Resources/Necraloids/NecraloidStandingRareItem": "Matrice Animus Orokin",
@@ -555,6 +557,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/BowMultiShotOnHitMod": "Split Flight",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/WeaponGlaiveSecondaryHeadshotKillMod": "Combo Killer",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/WeaponGlaiveOnSixKillsBuffSecondary": "Mark of the Beast",
+    "/Lotus/StoreItems/Upgrades/CosmeticEnhancers/Peculiars/EvilSpiritMod": "Peculiar Audience",
 
     # Primed Mods
     "/Lotus/StoreItems/Upgrades/Mods/Warframe/Expert/AvatarAbilityDurationModExpert": "Primed Continuity",
@@ -650,9 +653,10 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusSigil": "Sigillo Prisma Lotus",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearOxSigil": "Sigillo Bue Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearFreeTigerSigil": "Sigillo Tigre Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/EnergySigilA": "Sigillo Rift",
 
 
-    # Gliphs
+    # Glyphs
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/ImageGrendelVED": "Glifo Grendel in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/Winter2016VariantGlyph": "Glifo Conclave Solstice",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/ImageBaroKiteer": "Glifo Baro Ki'Teer",
@@ -672,6 +676,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageSevagothAction": "Glifo Sevagoth in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/ImageCalibanInAction": "Glifo Caliban in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/TwinSnakesGlyph": "Glifo Vome-Fass",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageHarrowAction": "Glifo Harrow in Azione",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageOctaviaAction": "Glifo Octavia in Azione",
 
 
     # Skins
@@ -737,6 +743,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Glass/GaraAlternateSkin": "Skin Gara Immortal",
     "/Lotus/StoreItems/Upgrades/Skins/Leverian/NezhaLeverian/NezhaLeverianPolearm": "Skin Lancia Reshantur Cult",
     "/Lotus/StoreItems/Upgrades/Skins/Rhino/RhinoDexSkin": "Skin Dex Rhino",
+    "/Lotus/StoreItems/Upgrades/Skins/Archwing/GrendelArchwingSkin": "Skin Archwing Exo-Sac",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/JaviExecutionHood": "Cappuccio Operatore Trasmutatore",
 
 
     # Sugatra
@@ -761,6 +769,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Armor/FurisArmor/SolsticeFurisAArmor": "Syandana Centuria Solstice",
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/SolsticeNelumboCape": "Syandana Wintercrest",
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/NezhaLeverianCape": "Syandana Reshantur Cult",
+    "/Lotus/StoreItems/Upgrades/Skins/Scarves/BaroCape3Scarf": "Syandana Ki'Teer Straed",
 
 
     # Armour Cosmetics
@@ -834,6 +843,10 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Armor/TnShinaiArmor/TnShinaiArmorA": "Spallacci Tannukai",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/TnShinaiArmor/TnShinaiArmorC": "Pettorina Tannukai",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/TnShinaiArmor/TnShinaiArmorL": "Gambali Tannukai",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeA": "Spallacci Ki'Teer Greth",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeC": "Pettoria Ki'Teer Greth",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeL": "Gambali Ki'Teer Greth",
+
 
 
     # Ephemera
@@ -893,6 +906,12 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusBasilisk": "Decorazione - Caccia Basilisk",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusWeaver": "Decorazione - Caccia Weaver",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCorpusHarpi": "Decorazione - Caccia Harpi",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Leverian/IvaraLeverianPovisRecordsDecoration":
+        "Replica della Storia Segreta",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/TNWTeshinBobbleHead": "Statuetta Noggle: La Nuova Guerra - Tenshin",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/TNWVesoBobbleHead": "Statuetta Noggle: La Nuova Guerra - Veso-R",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/OwlOrdisStatue": "Statua Ordis Reificato",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/ErraBobbleHead": "Statuetta Noggle: Erra",
 
 
     # Sentinels

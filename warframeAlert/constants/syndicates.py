@@ -31,6 +31,8 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                                                         "en": "Nightwawe - Nora’s Choice"},
                   "RadioLegionIntermission5Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 1",
                                                         "en": "Nightwawe - Nora's Mix Volume 1"},
+                  "RadioLegionIntermission6Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 2",
+                                                        "en": "Nightwawe - Nora's Mix Volume 2"},
                   }
 
 SYNDICATE_RANK_NAME = {

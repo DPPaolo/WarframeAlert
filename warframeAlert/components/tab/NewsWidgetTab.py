@@ -171,6 +171,13 @@ class NewsWidgetTab():
                             if (url[i] == "?"):
                                 url = url[:i]
                                 break
+                elif ('Icon' in news):
+                    url = news['Icon'].replace(" ", "")
+                    if ("?" in url):
+                        for i in range(0, len(url)):
+                            if (url[i] == "?"):
+                                url = url[:i]
+                                break
                 else:
                     url = get_cur_dir() + get_separator() + self.DEFAULT_IMAGE_PATH
                 if ('EventStartDate' in news):

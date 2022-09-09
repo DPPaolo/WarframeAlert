@@ -291,6 +291,12 @@ SEASON_CHALLENGE = {
         "Notte e Giorno", "Raccogli 15 Residui Vome o Fass su Cambion Drift", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMadLab": (
       "Scienziato Pazzo", "Saccheggia uno dei laboratori segreti di Alad V su Giove", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyEternalGuardian": (
+      "Guardiano Eterno", "Completa 3 missioni Void Armageddon", 4500),    
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHighGround": (
+      "In Alto", "Completa 3 missioni Marea Void", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyZarimanBountyHunter": (
+      "Cacciatore di Taglie Zariman", "Completa 4 Taglie differenti sulla Zariman", 4500),
 
     # WEEKLY ELITE
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus": (
@@ -358,6 +364,8 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom": (
        "Il Prezzo della Libertà", "Libera un Solaris Catturato utilizzando una Corona Granum", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTheManyMadeWhole": (
-        "L'Unione Fa la Forza", "Converti 10 Schegge Riven in un Riven Mod", 7000
-    ),
+        "L'Unione Fa la Forza", "Converti 10 Schegge Riven in un Riven Mod", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFallenAngel": (
+        "Angelo Caduto", "Sconfiggi 5 Angeli del Void nella Zariman", 7000),
+
 }

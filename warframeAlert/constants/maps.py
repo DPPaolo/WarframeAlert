@@ -8,6 +8,7 @@ FACTION = {"FC_GRINEER": "Grineer",
            "FC_OROKIN": "Orokin",
            "FC_SENTIENT": "Sentient",
            "FC_RED_VEIL": "Red Veil",
+           "FC_NARMER": "Narmer"
            }
 
 REGION_MAP = {
