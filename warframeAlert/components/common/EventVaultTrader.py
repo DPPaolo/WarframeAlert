@@ -110,7 +110,7 @@ class EventVaultTrader():
 
     def set_schedule_data(self, schedule: List[PrimeVaultScheduleInfo]) -> None:
         for elem in schedule:
-            item = get_last_item_with_backslash(elem['FeaturedItem'])
+            item = get_last_item_with_backslash(elem['FeaturedItem']) if ('PreviewHiddenUntil' not in elem) else "????"
             end = elem['Expiry']['$date']['$numberLong']
 
             vault_schedule = VaultScheduleBox(item, end)

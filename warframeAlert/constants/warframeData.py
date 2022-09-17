@@ -745,6 +745,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Rhino/RhinoDexSkin": "Skin Dex Rhino",
     "/Lotus/StoreItems/Upgrades/Skins/Archwing/GrendelArchwingSkin": "Skin Archwing Exo-Sac",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/JaviExecutionHood": "Cappuccio Operatore Trasmutatore",
+    "/Lotus/StoreItems/Upgrades/Skins/Wisp/WispAlternateSkin": "Skin Wisp Immortal",
+    "/Lotus/StoreItems/Upgrades/Skins/Pacifist/BaruukImmortalSkin": "Skin Baruk Immortal",
 
 
     # Sugatra

@@ -33,6 +33,7 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                                                         "en": "Nightwawe - Nora's Mix Volume 1"},
                   "RadioLegionIntermission6Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 2",
                                                         "en": "Nightwawe - Nora's Mix Volume 2"},
+                  "KahlSyndicate": {"it": "Kahl", "en": "Kahl"},
                   }
 
 SYNDICATE_RANK_NAME = {
@@ -208,6 +209,17 @@ SYNDICATE_RANK_NAME = {
                 "Guardian",
                 "Seraph",
                 "Angel")},
+    'KahlSyndicate':
+        {"it": ("Rifugio",
+                "Accampamento",
+                "Forte",
+                "Insediamento",
+                "Casa"),
+         "en": ("Shelter",
+                "Encampment",
+                "Fort",
+                "Settlement",
+                "Home")},
 }
 
 BOUNTY_JOB_NAME = {

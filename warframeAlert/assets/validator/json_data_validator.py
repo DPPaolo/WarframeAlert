@@ -24,6 +24,7 @@ all_json_schema = {
                 "HubEvents": {"type": "array"},
                 "Invasions": {"type": "array"},
                 "LibraryInfo": {"type": "object"},
+                "LiteSorties": {"type": "array"},
                 "MobileVersion": {"type": "string"},
                 "NodeOverrides": {"type": "array"},
                 "PVPActiveTournaments": {"type": "array"},
@@ -46,15 +47,77 @@ all_json_schema = {
                 "VoidStorms": {"type": "array"},
                 "WorldSeed": {"type": "string"},
             },
-            "required": ["ActiveMissions", "Alerts", "BuildLabel", "ConstructionProjects",
-                         "DailyDeals", "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion",
-                         "GlobalUpgrades", "Goals", "HubEvents", "Invasions", "LibraryInfo", "MobileVersion",
+            "required": ["ActiveMissions", "Alerts", "BuildLabel", "ConstructionProjects", "DailyDeals",
+                         "Events", "FeaturedGuilds", "FlashSales", "ForceLogoutVersion", "GlobalUpgrades",
+                         "Goals", "HubEvents", "Invasions", "LibraryInfo", "LiteSorties", "MobileVersion",
                          "NodeOverrides", "PVPActiveTournaments", "PVPAlternativeModes", "PVPChallengeInstances",
                          "PersistentEnemies", "PrimeAccessAvailability", "PrimeVaultAvailabilities", "ProjectPct",
                          "Sorties", "SyndicateMissions", "Time", "Tmp", "TwitchPromos", "Version", "VoidTraders",
                          "WorldSeed"]
         },
     },
+}
+
+lite_sortie_schema = {
+    "type": "object",
+    "properties": {
+        "LiteSorties": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/liteSortie"},
+        }
+    },
+    "required": ["LiteSorties"],
+    "definitions": {
+        "liteSortie": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "_id": {
+                    "type": "object",
+                    "properties": {
+                        "$oid": {"type": "string"}
+                    }
+                },
+                "Seed": {"type": "integer"},
+                "Boss": {"type": "string"},
+                "Reward": {"type": "string"},
+                "Missions": {"type": "array",
+                             "items": {"type": "object",
+                                       "additionalProperties": False,
+                                       "properties": {
+                                           "missionType": {"type": "string"},
+                                           "node": {"type": "string"}
+                                       },
+                                       "required": ["missionType", "node"]
+                                       }}
+            },
+            "required": ["_id", "Activation", "Expiry", "Seed", "Boss", "Reward", "Missions"],
+        }
+    }
 }
 
 prime_vault_traders = {
@@ -129,12 +192,35 @@ prime_vault_traders = {
                                      "PrimePrice": {"type": "integer"},
                                  }
                              }},
+                "EvergreenManifest": {"type": "array",
+                                      "items": {
+                                          "type": "object",
+                                          "additionalProperties": False,
+                                          "properties": {
+                                              "ItemType": {"type": "string"},
+                                              "RegularPrice": {"type": "integer"},
+                                              "PrimePrice": {"type": "integer"},
+                                          }
+                                      }},
                 "ScheduleInfo": {"type": "array",
                                  "items": {
                                      "type": "object",
                                      "additionalProperties": False,
                                      "properties": {
                                          "Expiry": {
+                                             "type": "object",
+                                             "additionalProperties": False,
+                                             "properties": {
+                                                 "$date": {"type": "object"},
+                                                 "items": {
+                                                     "type": "object",
+                                                     "properties": {
+                                                         "$numberLong": {"type": "integer"}
+                                                     }
+                                                 }
+                                             }
+                                         },
+                                         "PreviewHiddenUntil": {
                                              "type": "object",
                                              "additionalProperties": False,
                                              "properties": {
@@ -660,7 +746,7 @@ syndicate_schema = {
                              "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
                              "RadioLegion3Syndicate", "RadioLegionIntermission3Syndicate", "EntratiSyndicate",
                              "NecraloidSyndicate", "RadioLegionIntermission4Syndicate", "ZarimanSyndicate",
-                             "RadioLegionIntermission5Syndicate"]
+                             "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate"]
                 },
                 "Activation": {
                     "type": "object",

@@ -317,6 +317,24 @@ class Invasion(TypedDict, total=False):
 Invasions = List[Invasion]
 
 
+class LiteSortieMission(TypedDict, total=False):
+    missionType: str
+    node: str
+
+
+class LiteSortie(TypedDict, total=False):
+    _id: IdType
+    Activation: DateType
+    Expiry: DateType
+    Boss: str
+    Missions: List[LiteSortieMission]
+    Seed: int
+    Reward: str
+
+
+LiteSorties = List[LiteSortie]
+
+
 class LibraryInfo(TypedDict, total=False):
     LastCompletedTargetType: str
 
@@ -428,6 +446,7 @@ class PrimeVaultManifestInfo(TypedDict, total=False):
 class PrimeVaultScheduleInfo(TypedDict, total=False):
     Expiry: DateType
     FeaturedItem: str
+    PreviewHiddenUntil: DateType
 
 
 class PrimeVaultTradersData(TypedDict, total=False):
@@ -438,6 +457,7 @@ class PrimeVaultTradersData(TypedDict, total=False):
     Completed: bool
     Node: str
     Manifest: List[PrimeVaultManifestInfo]
+    EvergreenManifest: List[PrimeVaultManifestInfo]
     ScheduleInfo: List[PrimeVaultScheduleInfo]
     Params: str
     Phase: int
@@ -559,6 +579,7 @@ class JsonData(TypedDict, total=False):
     HubEvents: HubEvents
     Invasions: Invasions
     LibraryInfo: LibraryInfo
+    LiteSorties: LiteSorties
     MobileVersion: str
     NodeOverrides: NodeOverrides
     PVPActiveTournaments: PVPActiveTournaments

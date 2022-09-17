@@ -113,7 +113,7 @@ class EventsWidgetTab():
         return self.eventsWidget
 
     def get_length(self) -> int:
-        return self.alertWidget.get_length() + len(self.alerts['Goals'])
+        return self.alertWidget.get_length() + len(self.alerts['Goals']) + len(self.vault_traders['VaultTraders'])
 
     def update_alert_mission(self, data: Alerts) -> None:
         if (OptionsHandler.get_option("Tab/TactAll") == 1):
@@ -561,11 +561,13 @@ def create_prime_vault_trader(event_id: str, event: PrimeVaultTradersData) -> Ev
     params = event['Params'] if ('Params' in event) else ""
     phase = event['Phase'] if ('Phase' in event) else 0
     manifest = event['Manifest']
+    evergreen_manifest = event['EvergreenManifest']
     schedule_info = event['ScheduleInfo']
 
     temp = EventVaultTrader(event_id)
     temp.set_event_info(init, end, initial_init, completed, node[0], params, phase)
     temp.set_manifest_data(manifest)
+    temp.set_manifest_data(evergreen_manifest)
     temp.set_schedule_data(schedule_info)
 
     return temp

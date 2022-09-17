@@ -20,6 +20,7 @@ def check_json_data(json_data: JsonData) -> None:
     validate_hub_events(json_data['HubEvents'])
     validate_invasions(json_data['Invasions'])
     validate_library_info(json_data['LibraryInfo'])
+    validate_lite_sortie(json_data['LiteSorties'])
     validate_node_overrides(json_data['NodeOverrides'])
     validate_pvp_tournament(json_data['PVPActiveTournaments'])
     validate_pvp_alternative_mission(json_data['PVPAlternativeModes'])
@@ -95,6 +96,10 @@ def validate_invasions(json_data: Invasions) -> None:
 
 def validate_library_info(json_data: LibraryInfo) -> None:
     validate(instance={'LibraryInfo': json_data}, schema=library_info_schema)
+
+
+def validate_lite_sortie(json_data: LiteSorties) -> None:
+    validate(instance={'LiteSorties': json_data}, schema=lite_sortie_schema)
 
 
 def validate_node_overrides(json_data: NodeOverrides) -> None:
