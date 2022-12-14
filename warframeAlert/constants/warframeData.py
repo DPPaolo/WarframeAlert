@@ -317,6 +317,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/MiscItems/FormaUmbra": "Forma Umbra",
     "/Lotus/Types/Items/MiscItems/FormaUmbra": "Forma Umbra",
     "/Lotus/StoreItems/Types/Recipes/Components/UmbraFormaBlueprint": "Umbra Forma (Schema)",
+    "/Lotus/Types/Items/MiscItems/FormaStance": "Forma Stile",
     "/Lotus/StoreItems/Types/Recipes/Components/UtilityUnlockerBlueprint": "Adattatore Exilus (Schema)",
     "/Lotus/Types/Recipes/Components/UtilityUnlockerBlueprint": "Adattatore Exilus (Schema)",
     "/Lotus/StoreItems/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
@@ -431,6 +432,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Recipes/Weapons/WeaponParts/GrineerCombatKnifeHeatsink": "Sheev Dissipatore",
     "/Lotus/Types/Recipes/Weapons/WeaponParts/GrineerCombatKnifeHilt": "Sheev Elsa",
     "/Lotus/Types/Recipes/Weapons/WeaponParts/GrineerCombatKnifeBlade": "Sheev Lama",
+    "/Lotus/StoreItems/Weapons/Tenno/Melee/Warfan/TnMoonWarfan/MoonWarfanWeapon": "Vericres",
 
 
     # Weapons
@@ -487,6 +489,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/FusionBundles/NightwatchFusionBundle": "800 Endo",
     "/Lotus/StoreItems/Upgrades/Mods/Randomized/LotusRifleRandomModRare": "Riven Fucile",
     "/Lotus/StoreItems/Upgrades/Mods/Randomized/PlayerRifleWeaponRandomModRare": "Riven Fucile",
+    "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawRifleRandomMod": "Riven Fucile",
     "/Lotus/StoreItems/Upgrades/Mods/Randomized/LotusShotgunRandomModRare": "Riven Shotgun",
     "/Lotus/StoreItems/Upgrades/Mods/Randomized/PlayerShotgunWeaponRandomModRare": "Riven Shotgun",
     "/Lotus/StoreItems/Upgrades/Mods/Randomized/LotusPistolRandomModRare": "Riven Pistola",
@@ -754,6 +757,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/FireMeleeDangle": "Pyra Sugatra",
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/InfestedMeleeDangle": "Coccyst Sugatra",
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/BaroMeleeDangle": "Ki'Teer Sugatra",
+    "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/MoonWarfanSugatraMeleeDangle": "Sugatra Renayla",
 
 
     # Syandanas
@@ -848,6 +852,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeA": "Spallacci Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeC": "Pettoria Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeL": "Gambali Ki'Teer Greth",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodNovaEngineer": "Cappuccio Tuta Equipaggio Masker's Theodelite",
 
 
 
@@ -914,6 +919,9 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/TNWVesoBobbleHead": "Statuetta Noggle: La Nuova Guerra - Veso-R",
     "/Lotus/StoreItems/Types/Items/ShipDecos/OwlOrdisStatue": "Statua Ordis Reificato",
     "/Lotus/StoreItems/Types/Items/ShipDecos/ErraBobbleHead": "Statuetta Noggle: Erra",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/DomsFinalDrink": "Claret Invecchiato di DeNas",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/OstronHeadStatue": "Danza della Morte Telamon",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/BekranZaftBucketBroom": "Equipaggiamento di Bekran Zaft",
 
 
     # Sentinels

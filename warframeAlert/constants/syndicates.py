@@ -33,6 +33,8 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                                                         "en": "Nightwawe - Nora's Mix Volume 1"},
                   "RadioLegionIntermission6Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 2",
                                                         "en": "Nightwawe - Nora's Mix Volume 2"},
+                  "RadioLegionIntermission7Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 3",
+                                                        "en": "Nightwawe - Nora's Mix Volume 3"},
                   "KahlSyndicate": {"it": "Kahl", "en": "Kahl"},
                   }
 

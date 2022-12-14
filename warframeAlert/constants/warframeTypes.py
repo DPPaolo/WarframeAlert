@@ -157,6 +157,7 @@ ExperimentRecommended = List[Experiment]
 class FeaturedGuild(TypedDict, total=False):
     Name: str
     Tier: int
+    Emblem: bool
     _id: IdType
     AllianceId: IdType
 
@@ -181,7 +182,9 @@ class FlashSale(TypedDict, total=False):
     PremiumOverride: int
     RegularOverride: int
     ShowInMarket: bool
+    HideFromMarket: bool
     ShowWithRecommended: bool
+    VoidEclipse: bool
     SupporterPack: bool
     Featured: bool
     Popular: bool
@@ -205,6 +208,21 @@ class GlobalUpgrade(TypedDict, total=False):
 
 
 GlobalUpgrades = List[GlobalUpgrade]
+
+
+class InGameMarketLandingPageCategory(TypedDict, total=False):
+    CategoryName: str
+    Icon: str
+    Name: str
+    Items: List[str]
+
+
+class InGameMarketLandingPage(TypedDict, total=False):
+    Categories: List[InGameMarketLandingPageCategory]
+
+
+class InGameMarket(TypedDict, total=False):
+    LandingPage: InGameMarketLandingPage
 
 
 class HubEventData(TypedDict, total=False):
@@ -577,6 +595,7 @@ class JsonData(TypedDict, total=False):
     GlobalUpgrades: GlobalUpgrades
     Goals: Goals
     HubEvents: HubEvents
+    InGameMarket: InGameMarket
     Invasions: Invasions
     LibraryInfo: LibraryInfo
     LiteSorties: LiteSorties

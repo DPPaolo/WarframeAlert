@@ -22,6 +22,7 @@ all_json_schema = {
                 "GlobalUpgrades": {"type": "array"},
                 "Goals": {"type": "array"},
                 "HubEvents": {"type": "array"},
+                "InGameMarket": {"type": "object"},
                 "Invasions": {"type": "array"},
                 "LibraryInfo": {"type": "object"},
                 "LiteSorties": {"type": "array"},
@@ -56,6 +57,43 @@ all_json_schema = {
                          "WorldSeed"]
         },
     },
+}
+
+game_market_schema = {
+    "type": "object",
+    "properties": {
+        "InGameMarket": {
+            "type": "object",
+            "required": ["LandingPage"],
+            "additionalProperties": False,
+            "properties": {
+                "LandingPage": {
+                    "type": "object",
+                    "required": ["Categories"],
+                    "additionalProperties": False,
+                    "properties": {
+                        "Categories": {
+                            "type": "array",
+                            "items": {"$ref": "#/definitions/inGameMarketCategories"},
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "inGameMarketCategories": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "CategoryName": {"type": "string"},
+                "Icon": {"type": "string"},
+                "Name": {"type": "string"},
+                "Items": {"type": "array",
+                          "items": {"type": "string"}}
+            }
+        }
+    }
 }
 
 lite_sortie_schema = {
@@ -578,9 +616,11 @@ flash_sales_schema = {
                 "PremiumOverride": {"type": "integer"},
                 "RegularOverride": {"type": "integer"},
                 "ShowInMarket": {"type": "boolean"},
+                "HideFromMarket": {"type": "boolean"},
                 "SupporterPack": {"type": "boolean"},
                 "ShowWithRecommended": {"type": "boolean"},
                 "Featured": {"type": "boolean"},
+                "VoidEclipse": {"type": "boolean"},
                 "Popular": {"type": "boolean"},
                 "TypeName": {"type": "string"},
             },
@@ -746,7 +786,8 @@ syndicate_schema = {
                              "RadioLegion2Syndicate", "RadioLegionIntermission2Syndicate", "EventSyndicate",
                              "RadioLegion3Syndicate", "RadioLegionIntermission3Syndicate", "EntratiSyndicate",
                              "NecraloidSyndicate", "RadioLegionIntermission4Syndicate", "ZarimanSyndicate",
-                             "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate"]
+                             "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
+                             "RadioLegionIntermission7Syndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -1892,6 +1933,9 @@ featured_guilds_schema = {
                 },
                 "Tier": {
                     "type": "integer"
+                },
+                "Emblem": {
+                    "type": "boolean"
                 },
                 "_id": {
                     "type": "object",

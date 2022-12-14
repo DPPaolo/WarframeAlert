@@ -108,6 +108,8 @@ class SalesWidgetTab():
                     plat = sales['PremiumOverride']
                     credit = sales['RegularOverride']
                     is_show = sales['ShowInMarket']
+                    if ('HideFromMarket' in sales):
+                        is_show = is_show and sales['HideFromMarket']
                     support = sales['SupporterPack'] if ('SupporterPack' in sales) else False
                     show_with_recommended = sales['ShowWithRecommended'] if ('ShowWithRecommended' in sales) else False
 

@@ -74,6 +74,7 @@ ALERT_INFO = {
     "/Lotus/Language/Alerts/SpeedRun": {"it": "Sfida a Tempo", "en": "Speed Run"},
     "CONQUERA": {"it": "Conquera", "en": "Conquera"},
     "Infested Infiltration": {"it": "Infested Infiltration", "en": "Infested Infiltration"},
+    "/Lotus/Language/Alerts/TennoUnitedAlert": {"it": "Tenno United", "en": "Tenno United"},
 }
 
 ALERT_WEAPON_RESTRICTION = {
