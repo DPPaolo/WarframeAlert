@@ -108,7 +108,9 @@ def create_alert(alert: AlertMissionInfo, alert_id: str) -> Alert | SpecialAlert
         item = parse_reward(alert['missionReward'])
         if ('maxWaveNum' in alert):
             wave = str(alert['maxWaveNum'])
-            if (alert['missionType'] == "MT_SURVIVAL"):
+            if (alert['missionType'] == "MT_EXTERMINATION"):
+                wave += " " + translate("specialAlert", "enemies")
+            elif (alert['missionType'] == "MT_SURVIVAL"):
                 wave += " " + translate("specialAlert", "minutes")
             elif (alert['missionType'] == "MT_DEFENSE"):
                 wave += " " + translate("specialAlert", "waves")

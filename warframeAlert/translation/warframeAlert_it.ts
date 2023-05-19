@@ -438,16 +438,6 @@
         <source>en</source>
         <translation>Inglese</translation>
     </message>
-    <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="50"/>
-        <source>theme</source>
-        <translation>Tema</translation>
-    </message>
-    <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="51"/>
-        <source>themeTooltip</source>
-        <translation>Tema dell&apos;app. Alcune schermate potrebbero non vedersi in modo ottimale. Selezionare &amp;quot;Standard&amp;quot; e riavviare per rimuovere il tema selezionato</translation>
-    </message>
 </context>
 <context>
     <name>configTabWidget</name>
@@ -887,42 +877,42 @@
 <context>
     <name>fissureWidgetTab</name>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="72"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="71"/>
         <source>viewRelics</source>
         <translation>Visualizza Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="94"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="93"/>
         <source>errorRelics</source>
         <translation>Errore nel parsing delle fratture</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="35"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="34"/>
         <source>NoFissure</source>
         <translation>Nessuna Frattura Void Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="36"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="35"/>
         <source>NoHardFissure</source>
         <translation>Nessuna Frattura del Percorso d&apos;Acciaio Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="37"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="36"/>
         <source>NoVoidStorms</source>
         <translation>Nessuna Tempesta Void Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="67"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="66"/>
         <source>NormalFissure</source>
         <translation>Fratture</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="68"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="67"/>
         <source>HardFissure</source>
         <translation>Fratture Percorso d&apos;Acciaio</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="69"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="68"/>
         <source>VoidStorm</source>
         <translation>Tempeste Void</translation>
     </message>
@@ -1148,27 +1138,27 @@
         <translation>Tempo per il Giorno</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="114"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="115"/>
         <source>tier1</source>
         <translation>Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="116"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="117"/>
         <source>tier2</source>
         <translation>Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="118"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="119"/>
         <source>tier3</source>
         <translation>Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="120"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="121"/>
         <source>tier4</source>
         <translation>Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="122"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="123"/>
         <source>tier5</source>
         <translation>Clan Luna</translation>
     </message>
@@ -1178,77 +1168,77 @@
         <translation>senza alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="124"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="125"/>
         <source>tier1Id</source>
         <translation>ID Clan Fantasma</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="138"/>
         <source>guildAllianceId</source>
         <translation>ID Alleanza</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="127"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="128"/>
         <source>tier2Id</source>
         <translation>ID Clan Ombra</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="130"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="131"/>
         <source>tier3Id</source>
         <translation>ID Clan Tempesta</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="133"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="134"/>
         <source>tier4Id</source>
         <translation>ID Clan Montagna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="136"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="137"/>
         <source>tier5Id</source>
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="147"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="149"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="154"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="157"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="160"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="160"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="161"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="161"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="162"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="162"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="163"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
@@ -1258,7 +1248,7 @@
         <translation>Obbligo di Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
         <source>comingSoon</source>
         <translation>Prossimamente</translation>
     </message>
@@ -2130,7 +2120,7 @@
         <translation>Info Reliquie</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="200"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="255"/>
         <source>unknownRelicTier</source>
         <translation>Grado Reliquia Sconosciuto</translation>
     </message>
@@ -2365,37 +2355,37 @@
 <context>
     <name>specialAlert</name>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <location filename="../components/common/SpecialAlert.py" line="114"/>
         <source>minutes</source>
         <translation>Minuti</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="114"/>
+        <location filename="../components/common/SpecialAlert.py" line="116"/>
         <source>waves</source>
         <translation>Ondate</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="117"/>
+        <location filename="../components/common/SpecialAlert.py" line="119"/>
         <source>terminal</source>
         <translation>Terminale</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="119"/>
+        <location filename="../components/common/SpecialAlert.py" line="121"/>
         <source>terminals</source>
         <translation>Terminali</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="121"/>
+        <location filename="../components/common/SpecialAlert.py" line="123"/>
         <source>rounds</source>
         <translation>Round</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="125"/>
+        <location filename="../components/common/SpecialAlert.py" line="127"/>
         <source>pipe</source>
         <translation>Condutture</translation>
     </message>
     <message>
-        <location filename="../components/common/SpecialAlert.py" line="127"/>
+        <location filename="../components/common/SpecialAlert.py" line="129"/>
         <source>unknownWaveType</source>
         <translation>maxWaveNum non trovato per la missione</translation>
     </message>
@@ -2443,6 +2433,11 @@
         <location filename="../components/common/SpecialAlert.py" line="80"/>
         <source>fx</source>
         <translation>FX missione</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SpecialAlert.py" line="112"/>
+        <source>enemies</source>
+        <translation>nemici</translation>
     </message>
 </context>
 <context>

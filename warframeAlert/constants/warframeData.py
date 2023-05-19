@@ -398,6 +398,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/MiscItems/WaterFightBucks": "Perle Nakak",
     "/Lotus/Types/Items/RailJackMiscItems/TitaniumRailJackItem": "Titanium",
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Resources/Necraloids/NecraloidStandingRareItem": "Matrice Animus Orokin",
+    "/Lotus/Types/Gameplay/Duviri/Resource/DuviriFractalItem": "Midollo Runico",
     "/Lotus/Types/Items/MiscItems/NoraWolfCreds": "Wolf Cred",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFourCreds": "Cred Nora's Choice",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFiveCreds": "Cred Mix di Nora Vol. 1",
@@ -478,6 +479,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Weapons/Tenno/Archwing/Primary/ArchwingHeavyPistols/Prisma/PrismaArchHeavyPistols":
         "Prisma Dual Decurion",
     "/Lotus/StoreItems/Weapons/Grineer/Melee/GunBlade/GrnGunBlade/GrnGunblade": "Vastilok",
+    "/Lotus/StoreItems/Weapons/Corpus/Bow/Longbow/PrismaLenz/PrismaLenzWeapon": "Prisma Lenz",
 
 
     # Mods
@@ -637,6 +639,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/FusionTreasures/OroFusexJ": "Statua Ayatan Hemakara",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2021EmblemItem": "Emblema Bue Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2022EmblemItem": "Emblema Tigre Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2023EmblemItem": "Emblema Coniglio Rinnovo Lunare",
 
 
     # Sigils
@@ -853,6 +856,11 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeC": "Pettoria Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeL": "Gambali Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodNovaEngineer": "Cappuccio Tuta Equipaggio Masker's Theodelite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Sleeves/SleevesNovaEngineer":
+        "Maniche Tuta Equipaggio Masker's Theodelite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/BodySuits/BodySuitNovaEngineer": "Tuta Equipaggio Masker's Theodelite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Leggings/LeggingsNovaEngineer": "Pantaloni Equipaggio Masker's "
+                                                                               "Theodelite",
 
 
 
@@ -861,6 +869,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Effects/BaroEphemeraA": "Ephemera Ki'Teer",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/FootstepsMaple": "Ephemera Fae Path",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/LotusFlowers": "Lotus Ephemera",
+    "/Lotus/StoreItems/Upgrades/Skins/Effects/AvatarSmokeA": "Smoke Ephemera",
 
 
     # Decorations
@@ -889,6 +898,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/RelayHydroidBobbleHead": "Statuetta Noggle Hydroid Reprise",
     "/Lotus/StoreItems/Types/Items/ShipDecos/EmberBobbleHead": "Statuetta Noggle Ember",
     "/Lotus/StoreItems/Types/Items/ShipDecos/UmbraPedestal": "Piedistallo Umbra",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/BaroPedestal": "Piedistallo Ki'Teer Lux",
     "/Lotus/StoreItems/Types/Items/ShipDecos/TarotCardTennoConA": "Prex: Deimos Fass",
     "/Lotus/StoreItems/Types/Items/ShipDecos/TarotCardTennoConB": "Prex: Deimos Scissus",
     "/Lotus/StoreItems/Types/Items/ShipDecos/TarotCardTennoConC": "Prex: Deimos Velocipod",
@@ -922,7 +932,11 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/DomsFinalDrink": "Claret Invecchiato di DeNas",
     "/Lotus/StoreItems/Types/Items/ShipDecos/OstronHeadStatue": "Danza della Morte Telamon",
     "/Lotus/StoreItems/Types/Items/ShipDecos/BekranZaftBucketBroom": "Equipaggiamento di Bekran Zaft",
-
+    "/Lotus/StoreItems/Types/Items/ShipDecos/BaroPlanter": "Fioriera Clatharc",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/GaussTowerOfAltraDeco": "Fabbrica di Grav Lifter",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/NezhaEtchingsTablets": "Tavoletta del Bambino di Reshantur",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/GrendelOrokinDishSet": "Stoviglie di Karishh",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Vignettes/Warframes/ArchwingAFItem": "Archwing Articula",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",
@@ -955,11 +969,13 @@ ITEM_NAME_IT = {
 
     # Color Pickers
     "/Lotus/StoreItems/Types/StoreItems/SuitCustomizations/ColourPickerKiteerItemA": "Paletta Colori Ki'Teer",
+    "/Lotus/StoreItems/Types/StoreItems/SuitCustomizations/ColourPickerKiteerItemB": "Paletta Colori Mercante Void",
     "/Lotus/StoreItems/Types/StoreItems/SuitCustomizations/ColourPickerTwitchBItemA": "Eminence",
 
 
     # Stencil and Diorama
     "/Lotus/StoreItems/Types/Game/QuartersWallpapers/BaroWallpaper": "Ki'Teer Stencil",
     "/Lotus/StoreItems/Types/Game/ActionFigureDioramas/EmpyreanRegionADiorama": "Vignetta Empyrean",
+    "/Lotus/StoreItems/Types/Game/QuartersWallpapers/LavosAlchemistWallpaper" : "Scarabocchi di Javi",
 
 }

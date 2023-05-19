@@ -12,12 +12,6 @@ LANGUAGE_TYPE = {
     1: "en"
 }
 
-THEME = {
-    0: "standard",
-    1: "light",
-    2: "dark"
-}
-
 
 class ConfigOtherWidget():
     ConfigOtherWidget = None
@@ -47,18 +41,7 @@ class ConfigOtherWidget():
         self.ComboBoxLangage.setCurrentIndex(find_language_index())
         self.ComboBoxLangage.currentIndexChanged.connect(update_language_app)
 
-        self.ComboBoxThemeLabel = QtWidgets.QLabel(translate("configOtherWidget", "theme"))
-        self.ComboBoxThemeLabel.setToolTip(translate("configOtherWidget", "themeTooltip"))
-
         self.ComboBoxTheme = QtWidgets.QComboBox(self.ConfigOtherWidget)
-
-        self.ComboBoxTheme.addItem("Standard")
-        self.ComboBoxTheme.addItem("Light")
-        self.ComboBoxTheme.addItem("Dark")
-
-        current_theme = OptionsHandler.get_option("Theme")
-        self.ComboBoxTheme.setCurrentIndex(current_theme)
-        self.ComboBoxTheme.currentIndexChanged.connect(apply_stylesheet)
 
         self.gridOtherConfig.addWidget(self.ConfifOtherLabel, 0, 0)
         self.gridOtherConfig.addWidget(self.WarningConfigLabel, 1, 0, 1, 2)
@@ -67,9 +50,7 @@ class ConfigOtherWidget():
         self.gridOtherConfig.addWidget(self.InitConfig, 3, 1)
         self.gridOtherConfig.addWidget(self.TrayConfig, 4, 0, 1, 2)
         self.gridOtherConfig.addWidget(self.ComboBoxLangageLabel, 5, 0)
-        self.gridOtherConfig.addWidget(self.ComboBoxThemeLabel, 5, 1)
         self.gridOtherConfig.addWidget(self.ComboBoxLangage, 6, 0)
-        self.gridOtherConfig.addWidget(self.ComboBoxTheme, 6, 1)
 
         self.ConfigOtherWidget.setLayout(self.gridOtherConfig)
         self.gridOtherConfig.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
@@ -85,8 +66,6 @@ class ConfigOtherWidget():
         self.TrayConfig.clicked.connect(
             lambda: OptionsHandler.set_option("TrayIcon", bool_to_int(self.TrayConfig.isChecked())))
 
-        apply_stylesheet(current_theme)
-
     def get_widget(self) -> QtWidgets.QWidget:
         return self.ConfigOtherWidget
 
@@ -100,15 +79,3 @@ def find_language_index() -> int:
 
 def update_language_app(language_index: int) -> None:
     OptionsHandler.set_option("Language", LANGUAGE_TYPE[language_index])
-
-
-# https://stackoverflow.com/questions/48256772/dark-theme-for-qt-widgets
-def apply_stylesheet(index: int) -> None:
-    OptionsHandler.set_option("Theme", index)
-    if (index != 0):
-        path = "assets/theme/" + THEME[index] + "/stylesheet.qss"
-        app = QApplication.instance()
-        file = QFile(path)
-        file.open(QFile.OpenModeFlag.ReadOnly | QFile.OpenModeFlag.Text)
-        stream = QTextStream(file)
-        app.setStyleSheet(stream.readAll())

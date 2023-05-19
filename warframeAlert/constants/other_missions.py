@@ -367,5 +367,7 @@ SEASON_CHALLENGE = {
         "L'Unione Fa la Forza", "Converti 10 Schegge Riven in un Riven Mod", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFallenAngel": (
         "Angelo Caduto", "Sconfiggi 5 Angeli del Void nella Zariman", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteArchonHunt": (
+        "Cacciatore Archon", "Completa una Caccia Archon", 7000),
 
 }

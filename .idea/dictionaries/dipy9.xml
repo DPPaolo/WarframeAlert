@@ -15,6 +15,7 @@
       <w>archgun</w>
       <w>archsword</w>
       <w>archwing</w>
+      <w>articula</w>
       <w>asra</w>
       <w>asterite</w>
       <w>aucrux</w>
@@ -24,6 +25,7 @@
       <w>ballas</w>
       <w>balor</w>
       <w>baro</w>
+      <w>bekran</w>
       <w>brokk</w>
       <w>burston</w>
       <w>cambion</w>
@@ -35,6 +37,7 @@
       <w>cephalon</w>
       <w>cerere</w>
       <w>charc</w>
+      <w>clatharc</w>
       <w>coccyst</w>
       <w>condrod</w>
       <w>conquera</w>
@@ -54,6 +57,7 @@
       <w>detron</w>
       <w>devar</w>
       <w>diag</w>
+      <w>doms</w>
       <w>droni</w>
       <w>dtls</w>
       <w>dvad</w>
@@ -127,6 +131,7 @@
       <w>kahl</w>
       <w>kamas</w>
       <w>karak</w>
+      <w>karishh</w>
       <w>kavat</w>
       <w>kela</w>
       <w>khora</w>
@@ -207,6 +212,7 @@
       <w>odonata</w>
       <w>offworlder</w>
       <w>opticor</w>
+      <w>ordis</w>
       <w>orokin</w>
       <w>orphid</w>
       <w>orphix</w>
@@ -227,6 +233,7 @@
       <w>plastids</w>
       <w>plushies</w>
       <w>polearm</w>
+      <w>povis</w>
       <w>powersuits</w>
       <w>prereq</w>
       <w>puspa</w>
@@ -288,10 +295,13 @@
       <w>tannukai</w>
       <w>teer</w>
       <w>tekelu</w>
+      <w>telamon</w>
       <w>tennocon</w>
+      <w>tenshin</w>
       <w>teroglobe</w>
       <w>teshin</w>
       <w>thaym</w>
+      <w>theodelite</w>
       <w>thermia</w>
       <w>thermite</w>
       <w>thetra</w>
@@ -313,10 +323,12 @@
       <w>ventkids</w>
       <w>veridos</w>
       <w>veritux</w>
+      <w>veso</w>
       <w>voidgel</w>
       <w>vome</w>
       <w>vulkar</w>
       <w>warfan</w>
+      <w>warframes</w>
       <w>wetwork</w>
       <w>whozit</w>
       <w>wintercrest</w>
@@ -325,6 +337,7 @@
       <w>xiphos</w>
       <w>yamako</w>
       <w>yogwun</w>
+      <w>zaft</w>
       <w>zanuka</w>
       <w>zariman</w>
       <w>zenurik</w>
