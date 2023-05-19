@@ -1,7 +1,5 @@
 # coding=utf-8
 from PyQt6 import QtWidgets, QtCore
-from PyQt6.QtCore import QFile, QTextStream
-from PyQt6.QtWidgets import QApplication
 
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -30,16 +28,16 @@ class ConfigOtherWidget():
         self.InitConfig = QtWidgets.QCheckBox(translate("configOtherWidget", "firstInstallation"))
         self.TrayConfig = QtWidgets.QCheckBox(translate("configOtherWidget", "minimizeOnClose"))
 
-        self.ComboBoxLangageLabel = QtWidgets.QLabel(translate("configOtherWidget", "language"))
-        self.ComboBoxLangageLabel.setToolTip(translate("configOtherWidget", "languageTooltip"))
+        self.ComboBoxLanguageLabel = QtWidgets.QLabel(translate("configOtherWidget", "language"))
+        self.ComboBoxLanguageLabel.setToolTip(translate("configOtherWidget", "languageTooltip"))
 
-        self.ComboBoxLangage = QtWidgets.QComboBox(self.ConfigOtherWidget)
+        self.ComboBoxLanguage = QtWidgets.QComboBox(self.ConfigOtherWidget)
 
-        self.ComboBoxLangage.addItem(translate("configOtherWidget", "it"))
-        self.ComboBoxLangage.addItem(translate("configOtherWidget", "en"))
+        self.ComboBoxLanguage.addItem(translate("configOtherWidget", "it"))
+        self.ComboBoxLanguage.addItem(translate("configOtherWidget", "en"))
 
-        self.ComboBoxLangage.setCurrentIndex(find_language_index())
-        self.ComboBoxLangage.currentIndexChanged.connect(update_language_app)
+        self.ComboBoxLanguage.setCurrentIndex(find_language_index())
+        self.ComboBoxLanguage.currentIndexChanged.connect(update_language_app)
 
         self.ComboBoxTheme = QtWidgets.QComboBox(self.ConfigOtherWidget)
 
@@ -49,8 +47,8 @@ class ConfigOtherWidget():
         self.gridOtherConfig.addWidget(self.DebugConfig, 3, 0)
         self.gridOtherConfig.addWidget(self.InitConfig, 3, 1)
         self.gridOtherConfig.addWidget(self.TrayConfig, 4, 0, 1, 2)
-        self.gridOtherConfig.addWidget(self.ComboBoxLangageLabel, 5, 0)
-        self.gridOtherConfig.addWidget(self.ComboBoxLangage, 6, 0)
+        self.gridOtherConfig.addWidget(self.ComboBoxLanguageLabel, 5, 0)
+        self.gridOtherConfig.addWidget(self.ComboBoxLanguage, 6, 0)
 
         self.ConfigOtherWidget.setLayout(self.gridOtherConfig)
         self.gridOtherConfig.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)

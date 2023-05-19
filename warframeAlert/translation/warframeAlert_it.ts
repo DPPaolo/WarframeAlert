@@ -389,52 +389,52 @@
 <context>
     <name>configOtherWidget</name>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="30"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="22"/>
         <source>extraOptions</source>
         <translation>Opzioni Extra</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="31"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="23"/>
         <source>debugOptions</source>
         <translation>Opzioni di Debug</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="32"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="24"/>
         <source>alertPt1</source>
         <translation>Le modifiche di queste opzioni richiedono</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="32"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="24"/>
         <source>alertPt2</source>
         <translation>un riavvio dell&apos;app per essere effettive</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="36"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="28"/>
         <source>firstInstallation</source>
         <translation>Prima Installazione</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="37"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="29"/>
         <source>minimizeOnClose</source>
         <translation>Minimizza ad icona alla chiusura</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="39"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="31"/>
         <source>language</source>
         <translation>Lingua App</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="40"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="32"/>
         <source>languageTooltip</source>
         <translation>Alcuni testi potrebbero non essere tradotti</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="44"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="36"/>
         <source>it</source>
         <translation>Italiano</translation>
     </message>
     <message>
-        <location filename="../components/widget/ConfigOtherWidget.py" line="45"/>
+        <location filename="../components/widget/ConfigOtherWidget.py" line="37"/>
         <source>en</source>
         <translation>Inglese</translation>
     </message>
@@ -1198,47 +1198,47 @@
         <translation>ID Clan Luna</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="148"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="151"/>
         <source>primeState1</source>
         <translation>Femmina</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="150"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="153"/>
         <source>primeState2</source>
         <translation>Maschio</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
         <source>primeStateUnknown</source>
         <translation>Stato Prime sconosciuto</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="158"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="161"/>
         <source>morePrimeVault</source>
         <translation>Ci sono piu&apos; Prime Vault</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="159"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="162"/>
         <source>vault0</source>
         <translation>Vault Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="160"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="163"/>
         <source>vault1</source>
         <translation>Vault Frost e Ember</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="161"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="164"/>
         <source>vault2</source>
         <translation>Vault Rhino e Mag Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="162"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="165"/>
         <source>vault3</source>
         <translation>Vault Ember, Frost e Loki Prime</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="163"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="166"/>
         <source>vault4</source>
         <translation>Vault Nyx e Rhino Prime</translation>
     </message>
@@ -1248,7 +1248,7 @@
         <translation>Obbligo di Logout</translation>
     </message>
     <message>
-        <location filename="../components/widget/GeneralInfoWidget.py" line="152"/>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="155"/>
         <source>comingSoon</source>
         <translation>Prossimamente</translation>
     </message>
@@ -1261,6 +1261,11 @@
         <location filename="../components/widget/GeneralInfoWidget.py" line="89"/>
         <source>sentienAnomalies</source>
         <translation>Anomalia Sentient</translation>
+    </message>
+    <message>
+        <location filename="../components/widget/GeneralInfoWidget.py" line="140"/>
+        <source>hasEmblem</source>
+        <translation>ha emblema</translation>
     </message>
 </context>
 <context>

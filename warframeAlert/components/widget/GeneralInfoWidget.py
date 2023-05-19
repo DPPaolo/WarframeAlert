@@ -99,42 +99,43 @@ class GeneralInfoWidget():
         if (data):
             for dojo in data:
                 dojo_id = dojo['_id']['$oid']
-                try:
+                alliance_id = None
+                if ('AllianceId' in dojo):
                     alliance_id = dojo['AllianceId']['$oid']
-                except KeyError:
-                    alliance_id = dojo_id + " (" + translate("generalWidget", "noAlliance") + ")"
                 tier = int(dojo['Tier'])
                 name = dojo['Name']
-                guild[tier - 1] = (name, dojo_id, alliance_id)
+                emblem_active = dojo['Emblem']
+                guild[tier - 1] = (name, dojo_id, alliance_id, emblem_active)
             self.set_featured_dojo(guild)
 
-    def set_featured_dojo(self, dojo:  list[str | tuple[str, str, str]]) -> None:
+    def set_featured_dojo(self, dojo:  list[tuple[str, str, str, bool]]) -> None:
         data = tooltip = ""
+
         if (dojo[0] != ''):
             data += translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"
+            tooltip += translate("generalWidget", "tier1Id") + ": " + dojo[0][1]
+            tooltip += build_dojo_tooltip_line(dojo[0][1], dojo[0][2], dojo[0][3])
+
         if (dojo[1] != ''):
             data += translate("generalWidget", "tier2") + ": " + dojo[1][0] + "\n"
+            tooltip += translate("generalWidget", "tier2Id") + ": " + dojo[1][1]
+            tooltip += build_dojo_tooltip_line(dojo[1][1], dojo[1][2], dojo[1][3])
+
         if (dojo[2] != ''):
             data += translate("generalWidget", "tier3") + ": " + dojo[2][0] + "\n"
+            tooltip += translate("generalWidget", "tier3Id") + ": " + dojo[2][1]
+            tooltip += build_dojo_tooltip_line(dojo[2][1], dojo[2][2], dojo[2][3])
+
         if (dojo[3] != ''):
             data += translate("generalWidget", "tier4") + ": " + dojo[3][0] + "\n"
+            tooltip += translate("generalWidget", "tier4Id") + ": " + dojo[3][1]
+            tooltip += build_dojo_tooltip_line(dojo[3][1], dojo[3][2], dojo[3][3])
+
         if (dojo[4] != ''):
             data += translate("generalWidget", "tier5") + ": " + dojo[4][0]
-        if (dojo[0] != ''):
-            tooltip += translate("generalWidget", "tier1Id") + ": " + dojo[0][1]
-            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[0][2] + ")\n"
-        if (dojo[1] != ''):
-            tooltip += translate("generalWidget", "tier2Id") + ": " + dojo[1][1]
-            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[1][2] + ")\n"
-        if (dojo[2] != ''):
-            tooltip += translate("generalWidget", "tier3Id") + ": " + dojo[2][1]
-            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[2][2] + ")\n"
-        if (dojo[3] != ''):
-            tooltip += translate("generalWidget", "tier4Id") + ": " + dojo[3][1]
-            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[3][2] + ")\n"
-        if (dojo[4] != ''):
             tooltip += translate("generalWidget", "tier5Id") + ": " + dojo[4][1]
-            tooltip += " (" + translate("generalWidget", "guildAllianceId") + " " + dojo[4][2] + ")"
+            tooltip += build_dojo_tooltip_line(dojo[4][1], dojo[4][2], dojo[4][3])
+
         self.FeaturedDojo.setText(data)
         self.FeaturedDojo.setToolTip(tooltip)
 
@@ -166,3 +167,13 @@ class GeneralInfoWidget():
     def reset_prime_access(self) -> None:
         self.PrimeAccess.setText("N/D")
         self.PrimeVault.setText("N/D")
+
+
+def build_dojo_tooltip_line(dojo_id: str, alliance_id: str, has_emblem: bool) -> str:
+    tooltip = " ("
+    if (alliance_id is not None):
+        tooltip = " (" + translate("generalWidget", "guildAllianceId") + " " + alliance_id + ", "
+    else:
+        tooltip += dojo_id + " " + translate("generalWidget", "noAlliance") + ", "
+    tooltip += translate("generalWidget", "hasEmblem") + ": " + bool_to_yes_no(has_emblem) + ")\n"
+    return tooltip
