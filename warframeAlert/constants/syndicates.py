@@ -439,7 +439,7 @@ BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Descripti
                       "en": "A squad of Grineer soldiers stranded on Deimos have activated their SOS beacon. Track "
                             "them down and see what you can do to help."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty": {
-                      "it": "Cerca prezioni campioni di nucleo geologici su Deimos",
+                      "it": "Cerca preziosi campioni di nucleo geologici su Deimos",
                       "en": "Search Deimos for valuable geological core samples."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessExcavateBounty": {
                       "it": "Ci sono risorse che aspettano solo di essere raccolte appena sotto la \"pelle\" "
@@ -473,7 +473,7 @@ BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Descripti
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AssassinateBountyAss": {
                        "it": "I Narmer sono su di giri. Hanno appena promosso un seguace al grado di comandante. Vai "
                              "e degradalo a morto",
-                       "en": "Narmer are all fired up. They just promoted a cultis to Commander rank. Go and demote "
+                       "en": "Narmer are all fired up. They just promoted a cultist to Commander rank. Go and demote "
                              "him to death."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AttritionBountyLib": {
                        "it": "I Narmer stanno reclutando con la forza. Hanno preso uno dei nostri e stanno "

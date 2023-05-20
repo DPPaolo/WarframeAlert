@@ -175,7 +175,9 @@ class FissureWidgetTab():
     def add_hard_fissure(self, n_fis: int) -> None:
         for i in range(n_fis, len(self.alerts['HardActiveMissions'])):
             if (not self.alerts['HardActiveMissions'][i].is_expired()):
-                self.gridHardFissure.addLayout(self.alerts['HardActiveMissions'][i].FisBox, self.gridHardFissure.count(), 0)
+                self.gridHardFissure.addLayout(self.alerts['HardActiveMissions'][i].FisBox,
+                                               self.gridHardFissure.count(),
+                                               0)
                 NotificationService.send_notification(
                     self.alerts['HardActiveMissions'][i].get_title(),
                     self.alerts['HardActiveMissions'][i].to_string(),

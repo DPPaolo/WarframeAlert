@@ -19,6 +19,7 @@ from warframeAlert.components.tab.PvPWidgetTab import PvPWidgetTab
 from warframeAlert.components.tab.SalesWidgetTab import SalesWidgetTab
 from warframeAlert.components.tab.SortieWidgetTab import SortieWidgetTab
 from warframeAlert.components.tab.SyndicateWidgetTab import SyndicateWidgetTab
+from warframeAlert.components.tab.WeeklyWidgetTab import WeeklyWidgetTab
 from warframeAlert.constants.warframeTypes import JsonData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -40,6 +41,7 @@ class TabService(QtCore.QObject):
         self.bounty_tab: BountyWidgetTab = BountyWidgetTab()
         self.invasion_tab: InvasionWidgetTab = InvasionWidgetTab()
         self.sortie_tab: SortieWidgetTab = SortieWidgetTab()
+        self.weekly_tab: WeeklyWidgetTab = WeeklyWidgetTab()
         self.syndicate_tab: SyndicateWidgetTab = SyndicateWidgetTab()
         self.fissure_tab: FissureWidgetTab = FissureWidgetTab()
         self.baro_tab: BaroWidgetTab = BaroWidgetTab()
@@ -57,12 +59,13 @@ class TabService(QtCore.QObject):
         self.mainTabber.insertTab(4, self.bounty_tab.get_widget(), translate("tabService", "bounty"))
         self.mainTabber.insertTab(5, self.invasion_tab.get_widget(), translate("tabService", "invasion"))
         self.mainTabber.insertTab(6, self.sortie_tab.get_widget(), translate("tabService", "sortie"))
-        self.mainTabber.insertTab(7, self.syndicate_tab.get_widget(), translate("tabService", "syndicate"))
-        self.mainTabber.insertTab(8, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
-        self.mainTabber.insertTab(9, self.baro_tab.get_widget(), translate("tabService", "baro"))
-        self.mainTabber.insertTab(10, self.sales_tab.get_widget(), translate("tabService", "sales"))
-        self.mainTabber.insertTab(11, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
-        self.mainTabber.insertTab(12, self.other_tab.get_widget(), translate("tabService", "other"))
+        self.mainTabber.insertTab(7, self.weekly_tab.get_widget(), translate("tabService", "weekly"))
+        self.mainTabber.insertTab(8, self.syndicate_tab.get_widget(), translate("tabService", "syndicate"))
+        self.mainTabber.insertTab(9, self.fissure_tab.get_widget(), translate("tabService", "fissure"))
+        self.mainTabber.insertTab(10, self.baro_tab.get_widget(), translate("tabService", "baro"))
+        self.mainTabber.insertTab(11, self.sales_tab.get_widget(), translate("tabService", "sales"))
+        self.mainTabber.insertTab(12, self.pvp_tab.get_widget(), translate("tabService", "pvp"))
+        self.mainTabber.insertTab(13, self.other_tab.get_widget(), translate("tabService", "other"))
 
         n_event: int = self.event_tab.get_length()
         n_acc: int = self.acolyte_tab.get_length()
@@ -81,6 +84,8 @@ class TabService(QtCore.QObject):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.invasion_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Sortie") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.sortie_tab.get_widget()))
+        if (not OptionsHandler.get_option("Tab/Weekly") == 1):
+            self.mainTabber.removeTab(self.mainTabber.indexOf(self.weekly_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Syndicate") == 1):
             self.mainTabber.removeTab(self.mainTabber.indexOf(self.syndicate_tab.get_widget()))
         if (not OptionsHandler.get_option("Tab/Fissure") == 1):
@@ -145,6 +150,7 @@ class TabService(QtCore.QObject):
         self.other_tab.update_hub_event(json_data['HubEvents'])
         self.invasion_tab.update_invasion(json_data['Invasions'])
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
+        self.weekly_tab.update_lite_sortie(json_data['LiteSorties'])
         self.other_tab.update_relay_station(json_data['NodeOverrides'])
         self.invasion_tab.update_node_override(json_data['NodeOverrides'])
         self.pvp_tab.update_pvp_tournament(json_data['PVPActiveTournaments'])

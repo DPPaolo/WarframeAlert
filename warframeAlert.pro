@@ -42,6 +42,7 @@ SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/tab/SalesWidgetTab.py \
                warframeAlert/components/tab/SortieWidgetTab.py \
                warframeAlert/components/tab/SyndicateWidgetTab.py \
+               warframeAlert/components/tab/WeeklyWidgetTab.py \
                warframeAlert/components/widget/AlertWidget.py \
                warframeAlert/components/widget/BountyWidget.py \
                warframeAlert/components/widget/ConfigOtherWidget.py \

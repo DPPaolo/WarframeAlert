@@ -26,7 +26,7 @@ class GeneralInfoWidget():
         self.MobVersion = QtWidgets.QLabel(translate("generalWidget", "mobileFileVersion") + ": N/D")
         self.ForceLogoutVersion = QtWidgets.QLabel(translate("generalWidget", "forceLogoutVersion") + ": N/D")
         self.DTLDSActivated = QtWidgets.QLabel(translate("generalWidget", "DTLSActivated") + ": N/D")
-        self.SentientAnomalies = QtWidgets.QLabel(translate("generalWidget", "sentienAnomalies") + ": N/D")
+        self.SentientAnomalies = QtWidgets.QLabel(translate("generalWidget", "sentientAnomalies") + ": N/D")
         self.WorldSeedLab = QtWidgets.QLabel(translate("generalWidget", "worldSeed") + ": ")
         self.WorldSeed = QtWidgets.QLabel("N/D")
         self.PrimeAccessLab = QtWidgets.QLabel(translate("generalWidget", "primeAccessState") + ": ")
@@ -86,7 +86,7 @@ class GeneralInfoWidget():
             sentient_anomalies_node = "CrewBattleNode" + sentient_anomalies.split(":")[1].split("}")[0]
         else:
             sentient_anomalies_node = "/Lotus/Types/Keys/SortieBossKeyPhorid"
-        anomalies_text = translate("generalWidget", "sentienAnomalies") + ": " + get_node(sentient_anomalies_node)[0]
+        anomalies_text = translate("generalWidget", "sentientAnomalies") + ": " + get_node(sentient_anomalies_node)[0]
         self.Version.setText(version_text)
         self.MobVersion.setText(mobile_version_text)
         self.ForceLogoutVersion.setText(force_logout_text)

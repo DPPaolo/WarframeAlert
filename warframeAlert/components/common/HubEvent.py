@@ -67,14 +67,14 @@ class HubEvent():
         self.HubEnd.TimeOut.connect(self.hide)
 
     def set_hub_event_data(self, init: str, end: int, tag: str, node: tuple[str, str],
-                           cinematic: str, interval: int, cycle: int, trasmission: str) -> None:
+                           cinematic: str, interval: int, cycle: int, transmission: str) -> None:
         self.HubInit.setText(init)
         self.HubName.setText(tag)
         self.HubNode.setText(node[0] + " " + node[1])
         self.HubCinematic.setText(cinematic)
         self.HubRepeatCycle.setText(str(interval) + " " + translate("hubEvent", "seconds"))
         self.HubCycle.setText(str(cycle) + " " + translate("hubEvent", "seconds"))
-        self.HubTransmission.setText(trasmission)
+        self.HubTransmission.setText(transmission)
 
         self.HubEnd.set_countdown(end[:10])
         self.HubEnd.start()

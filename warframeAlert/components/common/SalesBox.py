@@ -73,7 +73,7 @@ class SalesBox():
         is_show_tooltip = translate("salesBox", "featured") + ": " + bool_to_yes_no(featured) + "\n"
         is_show_tooltip += translate("salesBox", "popular") + ": " + bool_to_yes_no(popular) + "\n"
         is_show_tooltip += translate("salesBox", "showWithRecommended") + ": " + bool_to_yes_no(show_with_recommended)
-        is_show_tooltip += translate("salesBox", "isSupporterPack") + ": " + bool_to_yes_no(is_supporter_pack)
+        is_show_tooltip += " " + translate("salesBox", "isSupporterPack") + ": " + bool_to_yes_no(is_supporter_pack)
         self.SaleIsShow.setToolTip(is_show_tooltip)
 
     def get_item_name(self) -> str:

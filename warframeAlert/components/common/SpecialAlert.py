@@ -47,18 +47,18 @@ class SpecialAlert(Alert):
         if (desc != ""):
             self.extra_data_text += desc.upper() + ""
 
-    def set_alert_info(self, reqitem: str, consume_item: str, weapon: str) -> None:
+    def set_alert_info(self, req_item: str, consume_item: str, weapon: str) -> None:
         add_bracket_end = False
-        info = reqitem or consume_item or weapon
+        info = req_item or consume_item or weapon
         if (info and self.extra_data_text != ""):
             self.extra_data_text += " ("
             add_bracket_end = True
         if (weapon != ""):
             self.extra_data_text += translate("specialAlert", "restriction") + ": " + str(weapon)
-        if (reqitem != ""):
+        if (req_item != ""):
             if (weapon != ""):
                 self.extra_data_text += "\t"
-            self.extra_data_text += translate("specialAlert", "requiredItem") + ": " + str(reqitem)
+            self.extra_data_text += translate("specialAlert", "requiredItem") + ": " + str(req_item)
             if (consume_item != ""):
                 if (consume_item == translate("commonUtils", "yes")):
                     self.extra_data_text += " (" + translate("specialAlert", "itemConsumed") + ")"

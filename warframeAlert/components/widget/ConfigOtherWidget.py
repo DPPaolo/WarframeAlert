@@ -19,7 +19,7 @@ class ConfigOtherWidget():
 
         self.gridOtherConfig = QtWidgets.QGridLayout(self.ConfigOtherWidget)
 
-        self.ConfifOtherLabel = QtWidgets.QLabel(translate("configOtherWidget", "extraOptions"))
+        self.ConfigOtherLabel = QtWidgets.QLabel(translate("configOtherWidget", "extraOptions"))
         self.DebugConfigLabel = QtWidgets.QLabel(translate("configOtherWidget", "debugOptions"))
         self.WarningConfigLabel = QtWidgets.QLabel(translate("configOtherWidget", "alertPt1") + "\n" +
                                                    translate("configOtherWidget", "alertPt2"))
@@ -41,7 +41,7 @@ class ConfigOtherWidget():
 
         self.ComboBoxTheme = QtWidgets.QComboBox(self.ConfigOtherWidget)
 
-        self.gridOtherConfig.addWidget(self.ConfifOtherLabel, 0, 0)
+        self.gridOtherConfig.addWidget(self.ConfigOtherLabel, 0, 0)
         self.gridOtherConfig.addWidget(self.WarningConfigLabel, 1, 0, 1, 2)
         self.gridOtherConfig.addWidget(self.DebugConfigLabel, 2, 0)
         self.gridOtherConfig.addWidget(self.DebugConfig, 3, 0)

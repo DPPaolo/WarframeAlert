@@ -17,7 +17,7 @@ class SortieWidgetTab():
 
         self.SortieWidget = QtWidgets.QWidget()
 
-        self.SortieBox = SortieBox()
+        self.SortieBox = SortieBox(False)
 
         self.gridSortie = QtWidgets.QGridLayout(self.SortieWidget)
         self.gridSortie.addLayout(self.SortieBox.SortieBox, 0, 0)

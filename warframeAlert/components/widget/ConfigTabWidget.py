@@ -22,10 +22,11 @@ class ConfigTabWidget():
         self.BountyConfig = QtWidgets.QCheckBox(translate("tabService", "bounty"))
         self.InvasionConfig = QtWidgets.QCheckBox(translate("tabService", "invasion"))
         self.SortieConfig = QtWidgets.QCheckBox(translate("tabService", "sortie"))
+        self.WeeklyConfig = QtWidgets.QCheckBox(translate("tabService", "weekly"))
         self.SyndicateConfig = QtWidgets.QCheckBox(translate("tabService", "syndicate"))
         self.FissureConfig = QtWidgets.QCheckBox(translate("tabService", "fissure"))
-        self.BaroConfif = QtWidgets.QCheckBox(translate("tabService", "baro"))
-        self.SalesConfif = QtWidgets.QCheckBox(translate("tabService", "sales"))
+        self.BaroConfig = QtWidgets.QCheckBox(translate("tabService", "baro"))
+        self.SalesConfig = QtWidgets.QCheckBox(translate("tabService", "sales"))
         self.PVPConfig = QtWidgets.QCheckBox(translate("tabService", "pvp"))
         self.OtherConfig = QtWidgets.QCheckBox(translate("tabService", "other"))
 
@@ -37,12 +38,13 @@ class ConfigTabWidget():
         self.gridConfTab.addWidget(self.BountyConfig, 3, 0)
         self.gridConfTab.addWidget(self.InvasionConfig, 3, 1)
         self.gridConfTab.addWidget(self.SortieConfig, 4, 0)
-        self.gridConfTab.addWidget(self.SyndicateConfig, 4, 1)
-        self.gridConfTab.addWidget(self.FissureConfig, 5, 0)
-        self.gridConfTab.addWidget(self.BaroConfif, 5, 1)
-        self.gridConfTab.addWidget(self.SalesConfif, 6, 0)
-        self.gridConfTab.addWidget(self.PVPConfig, 6, 1)
-        self.gridConfTab.addWidget(self.OtherConfig, 7, 0)
+        self.gridConfTab.addWidget(self.WeeklyConfig, 4, 1)
+        self.gridConfTab.addWidget(self.SyndicateConfig, 5, 0)
+        self.gridConfTab.addWidget(self.FissureConfig, 5, 1)
+        self.gridConfTab.addWidget(self.BaroConfig, 6, 0)
+        self.gridConfTab.addWidget(self.SalesConfig, 6, 1)
+        self.gridConfTab.addWidget(self.PVPConfig, 7, 0)
+        self.gridConfTab.addWidget(self.OtherConfig, 7, 1)
 
         self.ConfigTabWidget.setLayout(self.gridConfTab)
         self.gridConfTab.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
@@ -54,10 +56,11 @@ class ConfigTabWidget():
         self.BountyConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Cetus")))
         self.InvasionConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Invasion")))
         self.SortieConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Sortie")))
+        self.WeeklyConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Weekly")))
         self.SyndicateConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Syndicate")))
         self.FissureConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Fissure")))
-        self.BaroConfif.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Baro")))
-        self.SalesConfif.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Market")))
+        self.BaroConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Baro")))
+        self.SalesConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Market")))
         self.PVPConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/PVP")))
         self.OtherConfig.setChecked(int_to_bool(OptionsHandler.get_option("Tab/Other")))
 
@@ -75,14 +78,16 @@ class ConfigTabWidget():
             lambda: option_service.update_config_tab("Tab/Invasion", bool_to_int(self.InvasionConfig.isChecked())))
         self.SortieConfig.clicked.connect(
             lambda: option_service.update_config_tab("Tab/Sortie", bool_to_int(self.SortieConfig.isChecked())))
+        self.WeeklyConfig.clicked.connect(
+            lambda: option_service.update_config_tab("Tab/Weekly", bool_to_int(self.WeeklyConfig.isChecked())))
         self.SyndicateConfig.clicked.connect(
             lambda: option_service.update_config_tab("Tab/Syndicate", bool_to_int(self.SyndicateConfig.isChecked())))
         self.FissureConfig.clicked.connect(
             lambda: option_service.update_config_tab("Tab/Fissure", bool_to_int(self.FissureConfig.isChecked())))
-        self.BaroConfif.clicked.connect(
-            lambda: option_service.update_config_tab("Tab/Baro", bool_to_int(self.BaroConfif.isChecked())))
-        self.SalesConfif.clicked.connect(
-            lambda: option_service.update_config_tab("Tab/Market", bool_to_int(self.SalesConfif.isChecked())))
+        self.BaroConfig.clicked.connect(
+            lambda: option_service.update_config_tab("Tab/Baro", bool_to_int(self.BaroConfig.isChecked())))
+        self.SalesConfig.clicked.connect(
+            lambda: option_service.update_config_tab("Tab/Market", bool_to_int(self.SalesConfig.isChecked())))
         self.PVPConfig.clicked.connect(
             lambda: option_service.update_config_tab("Tab/PVP", bool_to_int(self.PVPConfig.isChecked())))
         self.OtherConfig.clicked.connect(

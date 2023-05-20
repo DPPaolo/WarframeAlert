@@ -13,17 +13,17 @@ class OptionsHandler(QtCore.QObject):
         "Language": "it",       # App Language
         "Version": "13",        # Program Main Version
         "SubVersion": "6",      # Program Sub Version
-        "Theme": 0,             # Theme
         "FirstInit": 0,         # First Installation
         "TrayIcon": 0,          # Tray Icon Disable
         "Debug": 0,             # Debug Messages Disabled
         # All Tabs are active by default
         "Tab/News": 1,
         "Tab/TactAll": 1,
-        "Tab/Acolyte": 1,
+        "Tab/Acolyte": 0,
         "Tab/Cetus": 1,
         "Tab/Invasion": 1,
         "Tab/Sortie": 1,
+        "Tab/Weekly": 1,
         "Tab/Syndicate": 1,
         "Tab/Fissure": 1,
         "Tab/Baro": 1,

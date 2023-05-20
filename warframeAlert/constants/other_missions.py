@@ -34,6 +34,7 @@ SORTIE_BOSS = {
     "SORTIE_BOSS_LEPHANTIS": {"it": "Lephantis", "en": "Lephantis"},
     "SORTIE_BOSS_INFALAD": {"it": "Mutualist Alad V", "en": "Mutualist Alad V"},
     "SORTIE_BOSS_CORRUPTED_VOR": {"it": "Corrupted Vor", "en": "Corrupted Vor"},
+    "SORTIE_BOSS_NIRA": {"it": "Archon Nira", "en": "Archon Nira"},
 }
 
 SORTIE_MODIFIER = {"SORTIE_MODIFIER_LOW_ENERGY": {"it": "Riduzione Energia", "en": "Energy Reduction"},

@@ -98,13 +98,15 @@ class SalesWidgetTab():
                 if (found == 0):
                     if ('ExperimentFeatured' in sales):
                         index = sales['ExperimentFeatured'][0]['FeaturedIndex']
-                    else:  # temporary item
+                    elif ('BannerIndex' in sales):  # temporary item
                         index = sales['BannerIndex']
+                    else:
+                        index = str(timeUtils.get_local_time())
                     bogobuy = sales['BogoBuy']
                     bogoget = sales['BogoGet']
                     discount = sales['Discount']
-                    featured = sales['Featured']
-                    popular = sales['Popular']
+                    featured = sales['Featured'] if 'Featured' in sales else False
+                    popular = sales['Popular'] if 'Popular' in sales else False
                     plat = sales['PremiumOverride']
                     credit = sales['RegularOverride']
                     is_show = sales['ShowInMarket']

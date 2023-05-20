@@ -25,7 +25,7 @@ class Spoiler(QtWidgets.QWidget):
 
         # content area of the spoiler
         self.contentArea = QtWidgets.QScrollArea()
-        self.contentArea.setStyleSheet("QScrollArea { background-color: white; border: none; }")
+        self.contentArea.setStyleSheet("QScrollArea { border: none; }")
         self.contentArea.setSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Fixed)
         self.contentArea.setWidgetResizable(True)
         # start auto collapsed

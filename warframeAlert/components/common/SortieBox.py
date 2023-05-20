@@ -17,7 +17,8 @@ from warframeAlert.utils.warframeUtils import get_reward_from_sortie
 
 
 class SortieBox():
-    def __init__(self) -> None:
+    def __init__(self, is_archon) -> None:
+        self.is_archon = is_archon
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
@@ -51,7 +52,8 @@ class SortieBox():
 
         self.SortieReward = SortieMissionDropView()
 
-        self.spoiler = Spoiler(translate("sortieBox", "reward"))
+        archon_rewards = translate("sortieBox", "archonReward") if (is_archon) else translate("sortieBox", "reward")
+        self.spoiler = Spoiler(archon_rewards)
 
         sortie_reward = get_reward_from_sortie()
         self.SortieReward.set_drop(sortie_reward)
@@ -65,7 +67,8 @@ class SortieBox():
         self.SortieInit.setText(translate("sortieBox", "init") + ": " + timeUtils.get_time(init))
         self.SortieEnd.set_countdown(end)
         self.SortieEnd.start()
-        if (reward != "/Lotus/Types/Game/MissionDecks/SortieRewards"):
+        if (reward not in ("/Lotus/Types/Game/MissionDecks/SortieRewards",
+                           "/Lotus/Types/Game/MissionDecks/ArchonSortieRewards")):
             LogHandler.debug(translate("sortieBox", "newSortieRewards"))
             LogHandler.debug("/Lotus/Types/Game/MissionDecks/SortieRewards -> " + reward)
         if (len(extra_reward) > 0):

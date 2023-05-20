@@ -752,7 +752,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Archwing/GrendelArchwingSkin": "Skin Archwing Exo-Sac",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/JaviExecutionHood": "Cappuccio Operatore Trasmutatore",
     "/Lotus/StoreItems/Upgrades/Skins/Wisp/WispAlternateSkin": "Skin Wisp Immortal",
-    "/Lotus/StoreItems/Upgrades/Skins/Pacifist/BaruukImmortalSkin": "Skin Baruk Immortal",
+    "/Lotus/StoreItems/Upgrades/Skins/Pacifist/BaruukImmortalSkin": "Skin Baruuk Immortal",
 
 
     # Sugatra
@@ -853,7 +853,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Armor/TnShinaiArmor/TnShinaiArmorC": "Pettorina Tannukai",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/TnShinaiArmor/TnShinaiArmorL": "Gambali Tannukai",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeA": "Spallacci Ki'Teer Greth",
-    "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeC": "Pettoria Ki'Teer Greth",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeC": "Pettorina Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Armor/BaroArmourThree/BaroArmourThreeL": "Gambali Ki'Teer Greth",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodNovaEngineer": "Cappuccio Tuta Equipaggio Masker's Theodelite",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Sleeves/SleevesNovaEngineer":
@@ -976,6 +976,6 @@ ITEM_NAME_IT = {
     # Stencil and Diorama
     "/Lotus/StoreItems/Types/Game/QuartersWallpapers/BaroWallpaper": "Ki'Teer Stencil",
     "/Lotus/StoreItems/Types/Game/ActionFigureDioramas/EmpyreanRegionADiorama": "Vignetta Empyrean",
-    "/Lotus/StoreItems/Types/Game/QuartersWallpapers/LavosAlchemistWallpaper" : "Scarabocchi di Javi",
+    "/Lotus/StoreItems/Types/Game/QuartersWallpapers/LavosAlchemistWallpaper": "Scarabocchi di Javi",
 
 }

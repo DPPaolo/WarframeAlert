@@ -26,14 +26,14 @@ class PvPMissionBox():
         self.PvPMissionName.setFont(self.Font)
         self.PvPMissionType.setFont(self.Font)
 
-        self.PvPMissionbox = QtWidgets.QHBoxLayout()
+        self.PvPMissionBox = QtWidgets.QHBoxLayout()
         self.PvPMissionBox = QtWidgets.QVBoxLayout()
 
-        self.PvPMissionbox.addWidget(self.PvPMissionName)
-        self.PvPMissionbox.addWidget(self.PvPMissionPoint)
-        self.PvPMissionbox.addWidget(self.PvPMissionType)
+        self.PvPMissionBox.addWidget(self.PvPMissionName)
+        self.PvPMissionBox.addWidget(self.PvPMissionPoint)
+        self.PvPMissionBox.addWidget(self.PvPMissionType)
 
-        self.PvPMissionBox.addLayout(self.PvPMissionbox)
+        self.PvPMissionBox.addLayout(self.PvPMissionBox)
         self.PvPMissionBox.addWidget(self.PvPMissionDesc)
 
     def set_pvp_data(self, name: str, desc: str, mission: str, diff: int, time: int, sub_challenge: List[str]) -> None:
@@ -54,7 +54,7 @@ class PvPMissionBox():
         self.PvPTime.start()
 
         if (sub_challenge != []):
-            print(translate("pvpMissionBox", "subChallengPresents") + ": " + str(sub_challenge))
+            print(translate("pvpMissionBox", "subChallengePresents") + ": " + str(sub_challenge))
 
     def get_pvp_id(self) -> str:
         return self.pvp_id
