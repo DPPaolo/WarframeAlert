@@ -2,6 +2,7 @@
 from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.SortieBox import SortieBox
+from warframeAlert.components.common.WeeklyMission import WeeklyMission, WeeklyMissionType
 from warframeAlert.constants.warframeTypes import LiteSorties
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
@@ -89,10 +90,15 @@ class WeeklyWidgetTab():
                     tile_set = ""
                     self.arcon_box.set_mission_data(num, mission, modifier, node, planet, tile_set)
 
-                self.alerts['Sorties'] = actual_archon_id
+                self.alerts['LiteSorties'] = actual_archon_id
 
         else:
             self.arcon_box.SortieBox.sortie_not_available()
 
     def parse_other_weekly(self) -> None:
-        pass
+        if (self.gridOther.count() == 0):
+            maroo_mission = WeeklyMission(WeeklyMissionType.MAROO)
+            clem_mission = WeeklyMission(WeeklyMissionType.CLEM)
+
+            self.gridOther.addLayout(maroo_mission.MissionBox, self.gridOther.count(), 0)
+            self.gridOther.addLayout(clem_mission.MissionBox, self.gridOther.count(), 0)

@@ -327,9 +327,11 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/MiscItems/RivenIdentifier": "Cipher Riven Non Identificato",
     "/Lotus/StoreItems/Types/Game/KubrowPet/Eggs/KubrowEgg": "Uovo Kubrow",
     "/Lotus/Types/Game/CatbrowPet/CatbrowGeneticSignature": "Codice Genetico Kavat",
+    "/Lotus/StoreItems/Types/Game/CatbrowPet/CatbrowGeneticSignature": "Codice Genetico Kavat",
     "/Lotus/Types/StoreItems/Packages/OrokinReactorAndCatalystBundle": "Pacchetto Potenziamento Orokin",
     "/Lotus/StoreItems/Types/BoosterPacks/UncommonArtifactPack": "Pacchetto Mod Falcone",
     "/Lotus/StoreItems/Types/BoosterPacks/PremiumRareArtifactPack": "Pacchetto Mod Drago",
+    "/Lotus/StoreItems/Types/StoreItems/SlotItems/TwoSentinelSlotItem": "2 Slot Sentinelle",
 
 
     # Consumables
@@ -660,6 +662,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearOxSigil": "Sigillo Bue Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearFreeTigerSigil": "Sigillo Tigre Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/EnergySigilA": "Sigillo Rift",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/ThraxSigil": "Sigillo Prisma Thrax",
 
 
     # Glyphs
@@ -749,6 +752,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Glass/GaraAlternateSkin": "Skin Gara Immortal",
     "/Lotus/StoreItems/Upgrades/Skins/Leverian/NezhaLeverian/NezhaLeverianPolearm": "Skin Lancia Reshantur Cult",
     "/Lotus/StoreItems/Upgrades/Skins/Rhino/RhinoDexSkin": "Skin Dex Rhino",
+    "/Lotus/StoreItems/Upgrades/Skins/Wisp/DexWispSkin": "Skin Dex Wisp",
     "/Lotus/StoreItems/Upgrades/Skins/Archwing/GrendelArchwingSkin": "Skin Archwing Exo-Sac",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/JaviExecutionHood": "Cappuccio Operatore Trasmutatore",
     "/Lotus/StoreItems/Upgrades/Skins/Wisp/WispAlternateSkin": "Skin Wisp Immortal",

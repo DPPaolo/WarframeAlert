@@ -104,7 +104,7 @@ class GeneralInfoWidget():
                     alliance_id = dojo['AllianceId']['$oid']
                 tier = int(dojo['Tier'])
                 name = dojo['Name']
-                emblem_active = dojo['Emblem']
+                emblem_active = dojo['Emblem'] if 'Emblem' in dojo else False
                 guild[tier - 1] = (name, dojo_id, alliance_id, emblem_active)
             self.set_featured_dojo(guild)
 

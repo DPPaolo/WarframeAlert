@@ -29,6 +29,7 @@ SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/common/TwitchBox.py \
                warframeAlert/components/common/VaultItemBox.py \
                warframeAlert/components/common/VaultScheduleBox.py \
+               warframeAlert/components/common/WeeklyMission.py \
                warframeAlert/components/tab/AcolyteWidgetTab.py \
                warframeAlert/components/tab/BaroWidgetTab.py \
                warframeAlert/components/tab/BountyWidgetTab.py \

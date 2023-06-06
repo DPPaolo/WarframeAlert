@@ -8,7 +8,7 @@ from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON
 from warframeAlert.constants.events import ACCOLYTE_NAME, TASK_TYPE, UPGRADE_TYPE
 from warframeAlert.constants.maps import NODE_NAME_IT, FACTION, REGION_MAP, MISSION_TYPE
 from warframeAlert.constants.other_missions import SIMARIS_TARGET, SEASON_CHALLENGE, SORTIE_BOSS, SORTIE_MODIFIER, \
-    INVASION_LOCTAG
+    INVASION_LOCTAG, WEEKLY_MISSION_DESC
 from warframeAlert.constants.pvp import PVP_MISSION_TYPE, PVP_CHALLENGE_TYPE, PVP_CHALLENGE_DESC, PVP_ALT_DESC
 from warframeAlert.constants.syndicates import SYNDICATE_NAME, BOUNTY_JOB_NAME, BOUNTY_JOB_DESC, BOUNTY_STAGE, \
     SYNDICATE_RANK_NAME
@@ -410,3 +410,12 @@ def get_pvp_alt_desc(name: str) -> str:
         print(translate("gameTranslation", "unknownPvPAlternativeDesc") + ": " + name)
         LogHandler.err(translate("gameTranslation", "unknownPvPAlternativeDesc") + ": " + name)
         return get_last_item_with_backslash(name)
+
+
+def get_weekly_mission_desc(mission_type: str) -> Tuple[str, str, str]:
+    if (mission_type in WEEKLY_MISSION_DESC):
+        return WEEKLY_MISSION_DESC[mission_type][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknownWeeklyMissionDesc") + ": " + mission_type)
+        LogHandler.err(translate("gameTranslation", "unknownWeeklyMissionDesc") + ": " + mission_type)
+        return (mission_type, "????", "????")

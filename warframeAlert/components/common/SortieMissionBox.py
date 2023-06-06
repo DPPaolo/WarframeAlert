@@ -32,7 +32,11 @@ class SortieMissionBox():
         self.SortieMissionBox.addLayout(self.SortieBoxData)
 
     def to_string(self) -> str:
-        return self.SortieMission.text() + " (" + self.SortieModifier.text() + ")"
+        sortie_modifier: str = self.SortieModifier.text()
+        message = self.SortieMission.text()
+        if (sortie_modifier != ""):
+            message += " (" + self.SortieModifier.text() + ")"
+        return message
 
     def set_mission_data(self, mission: str, modifier: str, node: str, planet: str, tileset: str) -> None:
         self.SortieMission.setText(mission)

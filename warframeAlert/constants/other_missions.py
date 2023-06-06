@@ -34,6 +34,8 @@ SORTIE_BOSS = {
     "SORTIE_BOSS_LEPHANTIS": {"it": "Lephantis", "en": "Lephantis"},
     "SORTIE_BOSS_INFALAD": {"it": "Mutualist Alad V", "en": "Mutualist Alad V"},
     "SORTIE_BOSS_CORRUPTED_VOR": {"it": "Corrupted Vor", "en": "Corrupted Vor"},
+    "SORTIE_BOSS_BOREAL": {"it": "Archon Boreal", "en": "Archon Boreal"},
+    "SORTIE_BOSS_AMAR": {"it": "Archon Amar", "en": "Archon Amar"},
     "SORTIE_BOSS_NIRA": {"it": "Archon Nira", "en": "Archon Nira"},
 }
 
@@ -371,4 +373,15 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteArchonHunt": (
         "Cacciatore Archon", "Completa una Caccia Archon", 7000),
 
+}
+
+WEEKLY_MISSION_DESC = {
+    "MAROO": {
+        "it": ("Caccia Al Tesoro Ayatan", "TradeHUB1", "Statua Ayatan casuale"),
+        "en": ("Ayatan Treasure Hunt", "TradeHUB1", "Random Ayatan Statue"),
+    },
+    "CLEM": {
+        "it": ("Aiuta Clem", "EarthHUB", "Clone Clem (Schema)"),
+        "en": ("Help Clem", "EarthHUB", "Clem Clone Blueprint")
+    }
 }
