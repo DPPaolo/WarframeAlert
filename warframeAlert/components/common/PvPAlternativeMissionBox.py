@@ -86,11 +86,11 @@ class PvPAlternativeMissionBox():
 
         self.PvPAltBox.addLayout(self.PvPAltBox0)
         self.PvPAltBox.addWidget(self.PvPAltDesc)
-        self.PvPAltBox.addWidget(EmptySpace().SpaceBox)
+        self.PvPAltBox.addLayout(EmptySpace().SpaceBox)
         self.PvPAltBox.addLayout(self.PvPAltBox1)
         self.PvPAltBox.addLayout(self.PvPAltBox2)
         self.PvPAltBox.addLayout(self.PvPAltBox3)
-        self.PvPAltBox.addWidget(EmptySpace().SpaceBox)
+        self.PvPAltBox.addLayout(EmptySpace().SpaceBox)
         self.PvPAltBox.addLayout(self.PvPAltBox4)
         self.PvPAltBox.addLayout(self.PvPAltBox5)
         self.PvPAltBox.addLayout(self.PvPAltBox6)

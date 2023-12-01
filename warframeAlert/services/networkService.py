@@ -58,7 +58,7 @@ def retrieve_text_file(file_name: str, default_value: str = "") -> str:
 
 
 def clean_update_program() -> None:
-    fp = open("PostUpdate.txt", "r")
+    fp = open("PostUpdate.txt")
     line = fp.readlines()
     pid = str(line[0]).replace("\n", "")
     ver = str(line[1]).replace("\n", "")

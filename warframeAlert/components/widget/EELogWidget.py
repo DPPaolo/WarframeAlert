@@ -106,7 +106,7 @@ class EELogWidget():
     def view_eelog(self, path: str, choice: int) -> None:
         self.textEditEE.clear()
         try:
-            fp = open(path, "r", encoding='utf-8')
+            fp = open(path, encoding='utf-8')
         except Exception as er:
             MessageBox(translate("eelogWidget", "errorTitle"),
                        translate("eelogWidget", "errorFileNotFound") + ".\n" +

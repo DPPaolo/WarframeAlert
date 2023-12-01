@@ -665,7 +665,7 @@ def translate_weapon_parts(item: str) -> str:
 
     j = 0
     k = weapon_name_parts_index
-    while(k < len(item_parts)):
+    while (k < len(item_parts)):
         if (item_parts[k] not in warframeData.ITEM_PARTS):
             print(translate("warframeUtils", "primeNotFound") + ": " + item)
             LogHandler.err(translate("warframeUtils", "primeNotFound") + ": " + item)

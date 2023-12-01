@@ -628,4 +628,5 @@ NODE_NAME_IT = {
     "CrewBattleNode558": ("Confronta la tua Sorella", "Nettuno Proxima"),
 
     "/Lotus/Types/Keys/SortieBossKeyPhorid": ("???", "Mercurio"),
+    "/Lotus/Types/Keys/SyndicateCacheHuntBaseKeyItem_Key": ("Zona Abissale", "Cerere"),
 }

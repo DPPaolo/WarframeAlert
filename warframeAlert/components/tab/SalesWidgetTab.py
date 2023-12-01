@@ -108,7 +108,7 @@ class SalesWidgetTab():
                     featured = sales['Featured'] if 'Featured' in sales else False
                     popular = sales['Popular'] if 'Popular' in sales else False
                     plat = sales['PremiumOverride']
-                    credit = sales['RegularOverride']
+                    credit = sales['RegularOverride'] if ('RegularOverride' in sales) else 0
                     is_show = sales['ShowInMarket']
                     if ('HideFromMarket' in sales):
                         is_show = is_show and sales['HideFromMarket']

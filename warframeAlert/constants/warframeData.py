@@ -482,6 +482,8 @@ ITEM_NAME_IT = {
         "Prisma Dual Decurion",
     "/Lotus/StoreItems/Weapons/Grineer/Melee/GunBlade/GrnGunBlade/GrnGunblade": "Vastilok",
     "/Lotus/StoreItems/Weapons/Corpus/Bow/Longbow/PrismaLenz/PrismaLenzWeapon": "Prisma Lenz",
+    "/Lotus/StoreItems/Weapons/Corpus/Melee/CrpTonfa/CrpPrismaTonfa": "Prisma Ohma",
+    "/Lotus/StoreItems/Weapons/Grineer/LongGuns/GrnOrokinRifle/GrnOrokinRifleWeapon": "Gotva Prime",
 
 
     # Mods
@@ -663,6 +665,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/WeGameNewYearFreeTigerSigil": "Sigillo Tigre Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/EnergySigilA": "Sigillo Rift",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/ThraxSigil": "Sigillo Prisma Thrax",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/EventSigilScarletSpear": "Sigillo Condrix",
 
 
     # Glyphs
@@ -757,6 +760,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/JaviExecutionHood": "Cappuccio Operatore Trasmutatore",
     "/Lotus/StoreItems/Upgrades/Skins/Wisp/WispAlternateSkin": "Skin Wisp Immortal",
     "/Lotus/StoreItems/Upgrades/Skins/Pacifist/BaruukImmortalSkin": "Skin Baruuk Immortal",
+    "/Lotus/StoreItems/Upgrades/Skins/Promo/Warframe/PromoParis": "Skin Paris Abra",
+    "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/ElixisNikana": "Skin Nikana Elixis",
 
 
     # Sugatra
@@ -865,12 +870,18 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Operator/BodySuits/BodySuitNovaEngineer": "Tuta Equipaggio Masker's Theodelite",
     "/Lotus/StoreItems/Upgrades/Skins/Operator/Leggings/LeggingsNovaEngineer": "Pantaloni Equipaggio Masker's "
                                                                                "Theodelite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Accessories/AshLevarianTiara": "Diadema Scoria",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodDuviriOperator": "Cappuccio dello Sconosciuto (operatore)",
+    "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Masks/GaussSentinelMask": "Maschera Sentinella Altra",
+    "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Tails/GaussSentinelTail": "Coda Sentinella Altra",
+    "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Wings/GaussSentinelWings": "Ali Sentinella Altra",
 
 
 
     # Ephemera
     "/Lotus/StoreItems/Upgrades/Skins/Effects/BatsEphemera": "Ephemera Naberus",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/BaroEphemeraA": "Ephemera Ki'Teer",
+    "/Lotus/StoreItems/Upgrades/Skins/Effects/BaroEphemeraB": "Ephemera Ki'Teer Reverence",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/FootstepsMaple": "Ephemera Fae Path",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/LotusFlowers": "Lotus Ephemera",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/AvatarSmokeA": "Smoke Ephemera",
@@ -898,6 +909,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/BaroKiTeerDecorationH": "Ornamento Vez Luxxum",
     "/Lotus/StoreItems/Types/Items/ShipDecos/ParazonPoster": "Poster Parazon",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCleaningDroneBaro": "Drone Karo Ki'Teer",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCleaningDroneDuviri": "Drone Domestico Dais",
     "/Lotus/StoreItems/Types/Items/ShipDecos/ExcaliburDexBobbleHead": "Excalibur Dex Noggle",
     "/Lotus/StoreItems/Types/Items/ShipDecos/RelayHydroidBobbleHead": "Statuetta Noggle Hydroid Reprise",
     "/Lotus/StoreItems/Types/Items/ShipDecos/EmberBobbleHead": "Statuetta Noggle Ember",
@@ -941,6 +953,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/NezhaEtchingsTablets": "Tavoletta del Bambino di Reshantur",
     "/Lotus/StoreItems/Types/Items/ShipDecos/GrendelOrokinDishSet": "Stoviglie di Karishh",
     "/Lotus/StoreItems/Types/Items/ShipDecos/Vignettes/Warframes/ArchwingAFItem": "Archwing Articula",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterA": "Javi Evolution Scrawling",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",

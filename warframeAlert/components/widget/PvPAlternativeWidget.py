@@ -74,14 +74,21 @@ class PvPAlternativeWidget():
                         min_players = "Standard"
                     mode = get_pvp_mission_type(pvp['TargetMode'])
                     weapon = []
-                    for loadout in pvp['ForcedLoadouts'][0]['WeaponOverrides']:
+                    for loadout in pvp['WeaponOverrides']:
                         if (bool(loadout['Override'])):
-                            if (loadout['Resource'] == ''):
+                            if (len(loadout['Resources']) == 0):
                                 weapon.append(translate("pvpAlternativeWidget", "none").upper())
                             else:
-                                weapon.append(loadout['Resource'])
+                                weapon.append(loadout['Resources'][0])
                         else:
                             weapon.append(translate("pvpAlternativeWidget", "any").upper())
+
+                    if ('MeleeWeaponOverride' in pvp):
+                        if (bool(pvp['MeleeWeaponOverride']['Override'])):
+                            if (len(pvp['MeleeWeaponOverride']['Resources']) == 0):
+                                weapon.append(translate("pvpAlternativeWidget", "none").upper())
+                            else:
+                                weapon.append(pvp['MeleeWeaponOverride']['Resources'][0])
 
                     temp = PvPAlternativeMissionBox(name)
                     temp.set_pvp_data_match(time, player, max_team, min_players, mode, desc)

@@ -82,8 +82,8 @@ class GeneralInfoWidget():
         mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
         dtls_active_text = translate("generalWidget", "DTLSActivated") + ": " + bool_to_yes_no(dtls)
-        if (len(sentient_anomalies) > 2):
-            sentient_anomalies_node = "CrewBattleNode" + sentient_anomalies.split(":")[1].split("}")[0]
+        if (len(sentient_anomalies) > 2 and "sfn" in sentient_anomalies):
+            sentient_anomalies_node = "CrewBattleNode" + sentient_anomalies.split("sfn\":")[1].split("}")[0]
         else:
             sentient_anomalies_node = "/Lotus/Types/Keys/SortieBossKeyPhorid"
         anomalies_text = translate("generalWidget", "sentientAnomalies") + ": " + get_node(sentient_anomalies_node)[0]

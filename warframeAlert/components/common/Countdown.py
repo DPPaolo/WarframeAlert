@@ -30,7 +30,7 @@ class Countdown(QtCore.QThread):
             pass
 
     def run(self) -> None:
-        while(not self.deleted):
+        while (not self.deleted):
             if not self.stop:
                 end_time = int(self.time) - int(timeUtils.get_local_time())
                 self.stop = 0

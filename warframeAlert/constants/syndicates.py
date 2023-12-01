@@ -37,6 +37,8 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                                                         "en": "Nightwawe - Nora's Mix Volume 3"},
                   "RadioLegionIntermission8Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 4",
                                                         "en": "Nightwawe - Nora's Mix Volume 4"},
+                  "RadioLegionIntermission9Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 5",
+                                                        "en": "Nightwawe - Nora's Mix Volume 5"},
                   "KahlSyndicate": {"it": "Kahl", "en": "Kahl"},
                   }
 
@@ -241,7 +243,9 @@ BOUNTY_JOB_NAME = {
     "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyCap": "Cattura l'Agente Grineer",
     "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache": "Trova l'Artefatto Nascosto",
     "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyTheft": "Riprendi l'Artefatto Rubato",
-    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBounty": "Stella della Piaga",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBounty": "Plague Star",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountyAdvanced": "Plague Star - Avanzato",
+    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountySteelPath": "Plague Star (Percorso d'Acciaio)",
     "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyRes": "Salva i Disertori Ghoul",
     "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyHunt": "Epura un grande sito di inumazione Ghoul",
     "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyExt": "Distruggi delle terre di inumazione Ghoul",
@@ -338,6 +342,16 @@ BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Descripti
                             "centro delle piane.",
                       "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
                             "the center of the plains."},
+                   "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountyAdvanced": {
+                      "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
+                            "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
+                      "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
+                            "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
+                   "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountySteelPath": {
+                      "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
+                            "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
+                      "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
+                            "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyRes": {
                       "it": "Steel Meridian ha identificato un potenziale disertore Ghoul, salvali da morte certa.",
                       "en": "Steel Meridian has identified a potential Ghoul defector, save them from certain death."},
@@ -520,6 +534,8 @@ BOUNTY_RANK_LEVEL = {"EidolonJobMissionRewards/TierATableA": "Level 5 - 15 Cetus
                      "EidolonJobMissionRewards/GhoulBountyTableA": "Level 15 - 25 Ghoul Bounty",
                      "EidolonJobMissionRewards/GhoulBountyTableB": "Level 40 - 50 Ghoul Bounty",
                      "EidolonJobMissionRewards/PlagueStarTable": "Level 15 - 25 Plague Star",
+                     "EidolonJobMissionRewards/PlagueStarTableAdvanced": "Level 55 - 65 Plague Star",
+                     "EidolonJobMissionRewards/PlagueStarTableSteelPath": "Level 100 - 110 Plague Star (Steel Path)",
                      "EidolonJobMissionRewards/NarmerTableA": "Level 50 - 70 Cetus Bounty",
                      "EidolonJobMissionRewards/NarmerTableB": "Level 50 - 70 Cetus Bounty",
                      "EidolonJobMissionRewards/NarmerTableC": "Level 50 - 70 Cetus Bounty",
@@ -609,6 +625,9 @@ BOUNTY_STAGE = {
     "Level 15 - 25 Ghoul Bounty": {"it": "Ghoul 15-25", "en": "Ghoul 15-25"},
     "Level 40 - 50 Ghoul Bounty": {"it": "Ghoul 40-50", "en": "Ghoul 40-50"},
     "Level 15 - 25 Plague Star": {"it": "Plague Star 15-25", "en": "Plague Star 15-25"},
+    "Level 55 - 65 Plague Star": {"it": "Plague Star 55-65", "en": "Plague Star 55-65"},
+    "Level 100 - 110 Plague Star (Steel Path)": {"it": "Plague Star 100-110 (Steel Path)",
+                                                 "en": "Plague Star 100-110 (Steel Path)"},
     "Level 5 - 15 Orb Vallis Bounty": {"it": "Orb Vallis 5-15", "en": "Orb Vallis 5-15"},
     "Level 10 - 30 Orb Vallis Bounty": {"it": "Orb Vallis 10-30", "en": "Orb Vallis 10-30"},
     "Level 20 - 40 Orb Vallis Bounty": {"it": "Orb Vallis 20-40", "en": "Orb Vallis 20-40"},
