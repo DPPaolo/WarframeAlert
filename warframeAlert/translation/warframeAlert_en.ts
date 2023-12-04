@@ -125,7 +125,7 @@
         <translation>Type of extra enemies that you encounter</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="188"/>
+        <location filename="../components/common/WeeklyMission.py" line="74"/>
         <source>alertImgNotFound</source>
         <translation>Alert Image not Found</translation>
     </message>
@@ -1079,6 +1079,11 @@
         <source>unknownSortieModifier</source>
         <translation>Unknown Sortie Modifier</translation>
     </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="420"/>
+        <source>unknownWeeklyMissionDesc</source>
+        <translation>Unknown Weekly Mission</translation>
+    </message>
 </context>
 <context>
     <name>generalWidget</name>
@@ -1724,17 +1729,17 @@
         <translation>expires in</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
         <source>season</source>
         <translation>Season</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
         <source>phase</source>
         <translation>Episode</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="129"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="130"/>
         <source>parameters</source>
         <translation>Parameters</translation>
     </message>
@@ -1754,12 +1759,12 @@
         <translation>Error during parsing nightwave data</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="160"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="161"/>
         <source>noSeasonActive</source>
         <translation>No active season</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="125"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
@@ -1954,7 +1959,7 @@
         <translation>No Alternative PvP Missions Available</translation>
     </message>
     <message>
-        <location filename="../components/widget/PvPAlternativeWidget.py" line="80"/>
+        <location filename="../components/widget/PvPAlternativeWidget.py" line="89"/>
         <source>none</source>
         <translation>None</translation>
     </message>
@@ -2288,6 +2293,11 @@
         <location filename="../components/common/SeasonBox.py" line="56"/>
         <source>init</source>
         <translation>Started at</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SeasonBox.py" line="73"/>
+        <source>permanent</source>
+        <translation>Permanent</translation>
     </message>
 </context>
 <context>
@@ -3014,17 +3024,17 @@
 <context>
     <name>weeklyWidget</name>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="40"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="41"/>
         <source>archon</source>
         <translation>Archon</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="41"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="42"/>
         <source>other</source>
         <translation>Other missions</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="61"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="62"/>
         <source>archonError</source>
         <translation>Error during parsing sorties</translation>
     </message>

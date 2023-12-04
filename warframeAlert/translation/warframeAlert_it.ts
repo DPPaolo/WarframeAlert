@@ -125,7 +125,7 @@
         <translation>Tipo di Nemici extra che si incontrano</translation>
     </message>
     <message>
-        <location filename="../components/common/Alert.py" line="188"/>
+        <location filename="../components/common/WeeklyMission.py" line="74"/>
         <source>alertImgNotFound</source>
         <translation>Immagine Allerta non trovata</translation>
     </message>
@@ -1079,6 +1079,11 @@
         <source>unknownSortieModifier</source>
         <translation>Modificatore Incursioni Sconosciuto</translation>
     </message>
+    <message>
+        <location filename="../utils/gameTranslationUtils.py" line="420"/>
+        <source>unknownWeeklyMissionDesc</source>
+        <translation>Missione Settimanale Sconosciuta</translation>
+    </message>
 </context>
 <context>
     <name>generalWidget</name>
@@ -1724,17 +1729,17 @@
         <translation>termina tra</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
         <source>season</source>
         <translation>Stagione</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
         <source>phase</source>
         <translation>Episodio</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="129"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="130"/>
         <source>parameters</source>
         <translation>Parametri</translation>
     </message>
@@ -1754,12 +1759,12 @@
         <translation>Errore nel parsing delle Nightwave</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="160"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="161"/>
         <source>noSeasonActive</source>
         <translation>Nessuna Stagione attiva</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="125"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
         <source>init</source>
         <translation>Iniziata il</translation>
     </message>
@@ -1954,7 +1959,7 @@
         <translation>Nessuna Missione PvP Alternativa Disponibile</translation>
     </message>
     <message>
-        <location filename="../components/widget/PvPAlternativeWidget.py" line="80"/>
+        <location filename="../components/widget/PvPAlternativeWidget.py" line="89"/>
         <source>none</source>
         <translation>Nessuna</translation>
     </message>
@@ -2288,6 +2293,11 @@
         <location filename="../components/common/SeasonBox.py" line="56"/>
         <source>init</source>
         <translation>Apparsa il</translation>
+    </message>
+    <message>
+        <location filename="../components/common/SeasonBox.py" line="73"/>
+        <source>permanent</source>
+        <translation>Permanente</translation>
     </message>
 </context>
 <context>
@@ -3014,17 +3024,17 @@
 <context>
     <name>weeklyWidget</name>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="40"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="41"/>
         <source>archon</source>
         <translation>Archon</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="41"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="42"/>
         <source>other</source>
         <translation>Altre missioni</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="61"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="62"/>
         <source>archonError</source>
         <translation>Errore nelle missioni archon</translation>
     </message>

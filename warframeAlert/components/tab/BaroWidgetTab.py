@@ -91,7 +91,7 @@ class BaroWidgetTab():
         n_baro = len(self.alerts['VoidTraders'])
         manifest_empty = 0
         for baro in data:
-            baro_id = baro['_id']['$oid']
+            baro_id = baro['_id']['$oid'] if ('_id') in baro else baro['Id']
             init = timeUtils.get_time(baro['Activation']['$date']['$numberLong'])
             start = baro['Activation']['$date']['$numberLong']
             end = baro['Expiry']['$date']['$numberLong']

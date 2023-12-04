@@ -11,6 +11,7 @@ def check_json_data(json_data: JsonData) -> None:
     validate_alerts(json_data['Alerts'])
     validate_construction_projects(json_data['ConstructionProjects'])
     validate_daily_deals(json_data['DailyDeals'])
+    validate_endless_xp_items(json_data['EndlessXpChoices'])
     validate_events(json_data['Events'])
     validate_experiment_recommended(json_data['ExperimentRecommended'])
     validate_featured_guilds(json_data['FeaturedGuilds'])
@@ -61,6 +62,10 @@ def validate_construction_projects(json_data: ConstructionProjects) -> None:
 
 def validate_daily_deals(json_data: DailyDealsData) -> None:
     validate(instance={'DailyDeals': json_data}, schema=daily_deals_schema)
+
+
+def validate_endless_xp_items(json_data: List[EndlessXpChoicesData]) -> None:
+    validate(instance={'EndlessXpChoices': json_data}, schema=endless_xp_item)
 
 
 def validate_events(json_data: Events) -> None:

@@ -102,6 +102,7 @@ class NightwaveWidgetTab():
                 if (trovato == 0):
                     init = challenge['Activation']['$date']['$numberLong']
                     end = challenge['Expiry']['$date']['$numberLong']
+                    permanent = challenge['Permanent'] if ('Permanent' in challenge) else False
 
                     nightwave_challenge = get_nightwave_challenge(challenge['Challenge'])
                     if ('Daily' in challenge):
@@ -110,7 +111,7 @@ class NightwaveWidgetTab():
                         daily = False
 
                     temp = SeasonBox(challenge_id)
-                    temp.set_data(init, end, nightwave_challenge, daily)
+                    temp.set_data(init, end, nightwave_challenge, daily, permanent)
                     self.alerts['SeasonInfo'].append(temp)
 
                     del temp

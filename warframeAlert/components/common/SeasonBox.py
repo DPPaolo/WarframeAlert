@@ -51,7 +51,7 @@ class SeasonBox():
     def to_string(self) -> str:
         return self.ChallengeDesc.text()
 
-    def set_data(self, init: int, end: int, challenge: tuple[str, str, int], daily) -> None:
+    def set_data(self, init: int, end: int, challenge: tuple[str, str, int], daily: bool, permanent: bool) -> None:
         challenge_start = timeUtils.get_time(init)
         self.ChallengeTitle.setToolTip(translate("seasonBox", "init") + " " + challenge_start)
         self.ChallengeEnd.set_countdown(end[:10])
@@ -69,6 +69,8 @@ class SeasonBox():
             temp = translate("seasonBox", "weeklyElite").upper()
         else:
             temp = translate("seasonBox", "unknown").upper()
+        if (permanent):
+            temp += " " + translate("seasonBox", "permanent").upper()
         self.ChallengeType.setText(temp)
 
     def hide(self) -> None:

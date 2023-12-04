@@ -14,6 +14,7 @@ all_json_schema = {
                 "ConstructionProjects": {"type": "array"},
                 "DTLS": {"type": "number", "enum": [0]},
                 "DailyDeals": {"type": "array"},
+                "EndlessXpChoices": {"type": "array"},
                 "Events": {"type": "array"},
                 "ExperimentRecommended": {"type": "array"},
                 "FeaturedGuilds": {"type": "array"},
@@ -54,9 +55,30 @@ all_json_schema = {
                          "NodeOverrides", "PVPActiveTournaments", "PVPAlternativeModes", "PVPChallengeInstances",
                          "PersistentEnemies", "PrimeAccessAvailability", "PrimeVaultAvailabilities", "ProjectPct",
                          "Sorties", "SyndicateMissions", "Time", "Tmp", "TwitchPromos", "Version", "VoidTraders",
-                         "WorldSeed"]
+                         "WorldSeed", "EndlessXpChoices"]
         },
     },
+}
+
+endless_xp_item = {
+    "type": "object",
+    "properties": {
+        "EndlessXpChoices": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/endlessXpChoices"},
+        }
+    },
+    "definitions": {
+        "endlessXpChoices": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Category": {"type": "string"},
+                "Choices": {"type": "array",
+                            "items": {"type": "string"}}
+            }
+        }
+    }
 }
 
 game_market_schema = {
@@ -88,6 +110,7 @@ game_market_schema = {
             "properties": {
                 "CategoryName": {"type": "string"},
                 "Icon": {"type": "string"},
+                "AddToMenu": {"type": "boolean"},
                 "Name": {"type": "string"},
                 "Items": {"type": "array",
                           "items": {"type": "string"}}
@@ -228,6 +251,32 @@ prime_vault_traders = {
                                      "ItemType": {"type": "string"},
                                      "RegularPrice": {"type": "integer"},
                                      "PrimePrice": {"type": "integer"},
+"StartDate": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "EndDate": {
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                }
                                  }
                              }},
                 "EvergreenManifest": {"type": "array",
@@ -322,21 +371,40 @@ pvp_alternative_schema = {
                 "DisableEnergySurge": {"type": "boolean"},
                 "DisableWeaponHud": {"type": "boolean"},
                 "DisableWeaponSwitching": {"type": "boolean"},
+                "ForceChangeLoadoutOnDeath": {"type": "boolean"},
+                "EnergyCapOverride": {"type": "number"},
                 "MatchTimeOverride": {"type": "number"},
                 "MaxPlayersOverride": {"type": "number"},
                 "MaxTeamCountDifferenceOverride": {"type": "number"},
                 "MinPlayersPerTeamOverride": {"type": "number"},
                 "TargetMode": {"type": "string"},
-                "ForcedLoadouts": {"type": "array",
-                                   "items": {
-                                       "type": "object",
-                                       "additionalProperties": False,
-                                       "properties": {
-                                       }
-                                   }},
+                "WeaponOverrides": {"type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "Override": {"type": "boolean"},
+                                            "UseFirstAsDefault": {"type": "boolean"},
+                                            "Resources": {"type": "array"},
+                                            "OriginalVersions": {"type": "array"}
+                                        }}
+                                    },
+                "MeleeWeaponOverride": {
+                                        "type": "object",
+                                        "additionalProperties": False,
+                                        "properties": {
+                                            "Override": {"type": "boolean"},
+                                            "UseFirstAsDefault": {"type": "boolean"},
+                                            "Resources": {"type": "array"},
+                                            "OriginalVersions": {"type": "array"},
+                                            "IsModularMeleeWeapon": {"type": "boolean"},
+                                            "BalancesPool": {"type": "array"},
+                                            "HandlesPool": {"type": "array"},
+                                            "TipsPool": {"type": "array"}
+                                        }},
             },
             "required": ["TitleLoc", "DescriptionLoc", "DisableAmmoPickups", "DisableEnergyPickups",
-                         "DisableEnergySurge", "DisableWeaponHud", "ForcedLoadouts",
+                         "DisableEnergySurge", "DisableWeaponHud", "WeaponOverrides", "MeleeWeaponOverride",
                          "DisableWeaponSwitching", "MatchTimeOverride", "MaxPlayersOverride",
                          "MaxTeamCountDifferenceOverride", "MinPlayersPerTeamOverride"],
         }
@@ -623,10 +691,10 @@ flash_sales_schema = {
                 "VoidEclipse": {"type": "boolean"},
                 "Popular": {"type": "boolean"},
                 "TypeName": {"type": "string"},
+                "UrlOverride": {"type": "string"},
             },
-            "required": ["StartDate", "EndDate", "BannerIndex", "BogoBuy", "BogoGet", "Discount", "PremiumOverride",
-                         "RegularOverride", "ShowInMarket",
-                         "Featured", "Popular", "TypeName"],
+            "required": ["StartDate", "EndDate", "BogoBuy", "BogoGet", "Discount", "PremiumOverride",
+                         "ShowInMarket", "TypeName"],
         }
     }
 }
@@ -744,6 +812,7 @@ void_traders_schema = {
                         "$oid": {"type": "string"}
                     }
                 },
+                "Id": {"type": "string"},
                 "Node": {"type": "string"},
                 "Character": {"type": "string"},
                 "Manifest": {"type": "array",
@@ -787,7 +856,8 @@ syndicate_schema = {
                              "RadioLegion3Syndicate", "RadioLegionIntermission3Syndicate", "EntratiSyndicate",
                              "NecraloidSyndicate", "RadioLegionIntermission4Syndicate", "ZarimanSyndicate",
                              "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
-                             "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate"]
+                             "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
+                             "RadioLegionIntermission9Syndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -916,6 +986,7 @@ season_info_schema = {
                                              },
                                              "Challenge": {"type": "string"},
                                              "Daily": {"type": "boolean"},
+                                             "Permanent": {"type": "boolean"},
                                          },
                                          "required": ["_id", "Activation", "Expiry", "Challenge"],
                                      }
@@ -1936,6 +2007,9 @@ featured_guilds_schema = {
                 },
                 "Emblem": {
                     "type": "boolean"
+                },
+                "OriginalPlatform": {
+                    "type": "integer"
                 },
                 "_id": {
                     "type": "object",

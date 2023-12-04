@@ -158,11 +158,17 @@ class FeaturedGuild(TypedDict, total=False):
     Name: str
     Tier: int
     Emblem: bool
+    OriginalPlatform: int
     _id: IdType
     AllianceId: IdType
 
 
 FeaturedGuilds = List[FeaturedGuild]
+
+
+class EndlessXpChoicesData(TypedDict):
+    Category: str
+    Choices: List[str]
 
 
 class ExperimentFeatured(TypedDict):
@@ -189,6 +195,7 @@ class FlashSale(TypedDict, total=False):
     Featured: bool
     Popular: bool
     TypeName: str
+    UrlOverride: str
 
 
 FlashSales = List[FlashSale]
@@ -214,6 +221,7 @@ class InGameMarketLandingPageCategory(TypedDict, total=False):
     CategoryName: str
     Icon: str
     Name: str
+    AddToMenu: bool
     Items: List[str]
 
 
@@ -380,13 +388,22 @@ class PVPActiveTournament(TypedDict, total=False):
 PVPActiveTournaments = List[PVPActiveTournament]
 
 
-class PvPAlternativeWeaponOverride(TypedDict):
-    Override: bool
-    Resource: str
-
-
 class PvPAlternativeLoadouts(TypedDict):
-    WeaponOverrides: List[PvPAlternativeWeaponOverride]
+    Override: bool
+    UseFirstAsDefault: bool
+    Resources: List[str]
+    OriginalVersions: List[str]
+
+
+class PvPAlternativeMeleeLoadouts(TypedDict):
+    Override: bool
+    UseFirstAsDefault: bool
+    Resources: List[str]
+    OriginalVersions: List[str]
+    IsModularMeleeWeapon: bool
+    BalancesPool: List[str]
+    HandlesPool: List[str]
+    TipsPool: List[str]
 
 
 class PVPAlternativeMode(TypedDict, total=False):
@@ -397,12 +414,15 @@ class PVPAlternativeMode(TypedDict, total=False):
     DisableEnergySurge: bool
     DisableWeaponHud: bool
     DisableWeaponSwitching: bool
+    ForceChangeLoadoutOnDeath: bool
+    EnergyCapOverride: int
     MatchTimeOverride: int
     MaxPlayersOverride: int
     MaxTeamCountDifferenceOverride: int
     MinPlayersPerTeamOverride: int
     TargetMode: str
-    ForcedLoadouts: List[PvPAlternativeLoadouts]
+    WeaponOverrides: List[PvPAlternativeLoadouts]
+    MeleeWeaponOverride: PvPAlternativeMeleeLoadouts
 
 
 PVPAlternativeModes = List[PVPAlternativeMode]
@@ -459,6 +479,8 @@ class PrimeVaultManifestInfo(TypedDict, total=False):
     ItemType: str
     RegularPrice: int
     PrimePrice: int
+    StartDate: DateType
+    EndDate: DateType
 
 
 class PrimeVaultScheduleInfo(TypedDict, total=False):
@@ -490,6 +512,7 @@ class NightwaweChallenge(TypedDict):
     Expiry: DateType
     Challenge: str
     Daily: bool
+    Permanent: bool
 
 
 class SeasonInfo(TypedDict, total=False):
@@ -570,6 +593,7 @@ class VoidTraderItem(TypedDict):
 
 class VoidTrader(TypedDict, total=False):
     _id: IdType
+    Id: str
     Activation: DateType
     Expiry: DateType
     Node: str
@@ -587,6 +611,7 @@ class JsonData(TypedDict, total=False):
     ConstructionProjects: ConstructionProjects
     DTLS: int
     DailyDeals: DailyDealsData
+    EndlessXpChoices: List[EndlessXpChoicesData]
     Events: Events
     ExperimentRecommended: ExperimentRecommended
     FeaturedGuilds: FeaturedGuilds
