@@ -18,6 +18,7 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                   "EntratiSyndicate": {"it": "Entrati", "en": "Entrati"},
                   "NecraloidSyndicate": {"it": "Necraloid", "en": "Necraloid"},
                   "ZarimanSyndicate": {"it": "Holdfast", "en": "Holdfast"},
+                  "EntratiLabSyndicate": {"it": "Cavia", "en": "Cavia"},
                   "RadioLegionSyndicate": {"it": "Nightwave - Wolf", "en": "Nightwave - The Wolf"},
                   "RadioLegion2Syndicate": {"it": "Nightwave - L'emissario", "en": "Nightwave - The Emissary"},
                   "RadioLegion3Syndicate": {"it": "Nightwave - Il Vetraio", "en": "Nightwave - The Glassmaker"},
@@ -38,6 +39,7 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                   "RadioLegionIntermission8Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 4",
                                                         "en": "Nightwawe - Nora's Mix Volume 4"},
                   "RadioLegionIntermission9Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 5",
+                                                        "en": "Nightwawe - Nora's Mix Volume 5"},"RadioLegionIntermission9Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 5",
                                                         "en": "Nightwawe - Nora's Mix Volume 5"},
                   "KahlSyndicate": {"it": "Kahl", "en": "Kahl"},
                   }

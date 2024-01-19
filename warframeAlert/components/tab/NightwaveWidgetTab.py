@@ -102,9 +102,15 @@ class NightwaveWidgetTab():
                 if (trovato == 0):
                     init = challenge['Activation']['$date']['$numberLong']
                     end = challenge['Expiry']['$date']['$numberLong']
-                    permanent = challenge['Permanent'] if ('Permanent' in challenge) else False
+                    if ('Permanent' in challenge):
+                        permanent = challenge['Permanent']
+                    else:
+                        permanent = 'Permanent' in challenge['Challenge']
 
-                    nightwave_challenge = get_nightwave_challenge(challenge['Challenge'])
+                    if (not permanent):
+                        nightwave_challenge = get_nightwave_challenge(challenge['Challenge'])
+                    else:
+                        nightwave_challenge = get_nightwave_challenge(challenge['Challenge'][:-1])
                     if ('Daily' in challenge):
                         daily = challenge['Daily']
                     else:

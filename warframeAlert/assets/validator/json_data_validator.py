@@ -857,7 +857,7 @@ syndicate_schema = {
                              "NecraloidSyndicate", "RadioLegionIntermission4Syndicate", "ZarimanSyndicate",
                              "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
-                             "RadioLegionIntermission9Syndicate"]
+                             "RadioLegionIntermission9Syndicate", "EntratiLabSyndicate"]
                 },
                 "Activation": {
                     "type": "object",
