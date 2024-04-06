@@ -251,32 +251,32 @@ prime_vault_traders = {
                                      "ItemType": {"type": "string"},
                                      "RegularPrice": {"type": "integer"},
                                      "PrimePrice": {"type": "integer"},
-"StartDate": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "properties": {
-                        "$date": {"type": "object"},
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "$numberLong": {"type": "integer"}
-                            }
-                        }
-                    }
-                },
-                "EndDate": {
-                    "type": "object",
-                    "additionalProperties": False,
-                    "properties": {
-                        "$date": {"type": "object"},
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "$numberLong": {"type": "integer"}
-                            }
-                        }
-                    }
-                }
+                                     "StartDate": {
+                                         "type": "object",
+                                         "additionalProperties": False,
+                                         "properties": {
+                                             "$date": {"type": "object"},
+                                             "items": {
+                                                 "type": "object",
+                                                 "properties": {
+                                                     "$numberLong": {"type": "integer"}
+                                                 }
+                                             }
+                                         }
+                                     },
+                                     "EndDate": {
+                                         "type": "object",
+                                         "additionalProperties": False,
+                                         "properties": {
+                                             "$date": {"type": "object"},
+                                             "items": {
+                                                 "type": "object",
+                                                 "properties": {
+                                                     "$numberLong": {"type": "integer"}
+                                                 }
+                                             }
+                                         }
+                                     }
                                  }
                              }},
                 "EvergreenManifest": {"type": "array",
@@ -324,7 +324,7 @@ prime_vault_traders = {
                                      }
                                  }},
             },
-            "required": ["_id", "Activation", "Expiry", "InitialStartDate", "Completed", "Node",
+            "required": ["_id", "Activation", "Expiry", "InitialStartDate", "Node",
                          "Manifest", "ScheduleInfo"],
         }
     }
@@ -390,18 +390,18 @@ pvp_alternative_schema = {
                                         }}
                                     },
                 "MeleeWeaponOverride": {
-                                        "type": "object",
-                                        "additionalProperties": False,
-                                        "properties": {
-                                            "Override": {"type": "boolean"},
-                                            "UseFirstAsDefault": {"type": "boolean"},
-                                            "Resources": {"type": "array"},
-                                            "OriginalVersions": {"type": "array"},
-                                            "IsModularMeleeWeapon": {"type": "boolean"},
-                                            "BalancesPool": {"type": "array"},
-                                            "HandlesPool": {"type": "array"},
-                                            "TipsPool": {"type": "array"}
-                                        }},
+                    "type": "object",
+                    "additionalProperties": False,
+                    "properties": {
+                        "Override": {"type": "boolean"},
+                        "UseFirstAsDefault": {"type": "boolean"},
+                        "Resources": {"type": "array"},
+                        "OriginalVersions": {"type": "array"},
+                        "IsModularMeleeWeapon": {"type": "boolean"},
+                        "BalancesPool": {"type": "array"},
+                        "HandlesPool": {"type": "array"},
+                        "TipsPool": {"type": "array"}
+                    }},
             },
             "required": ["TitleLoc", "DescriptionLoc", "DisableAmmoPickups", "DisableEnergyPickups",
                          "DisableEnergySurge", "DisableWeaponHud", "WeaponOverrides", "MeleeWeaponOverride",
@@ -1679,6 +1679,7 @@ events_schema = {
                         }
                     }
                 },
+                "GameOnly": {"type": "boolean"},
                 "EventStartDate": {
                     "type": "object",
                     "additionalProperties": False,

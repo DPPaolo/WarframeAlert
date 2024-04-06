@@ -89,9 +89,9 @@ SEASON_CHALLENGE = {
     # DAILY
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployGlyph": ("Graffiti", "Piazza un Glifo", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCodexScan": (
-        "Ricercatore", "Scannerizza 25 Nemici o Obiettivi", 1000),
+        "Ricercatore", "Scannerizza 15 Nemici o Obiettivi", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySlideKills": (
-        "Acceleratore", "Uccidi 20 nemici durante la scivolata", 1000),
+        "Acceleratore", "Uccidi 10 nemici durante la scivolata", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpMods": ("Luccicante", "Raccogli 8 Mod", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFire": (
         "Incendiario", "Uccidi 150 Nemici con Danno Fuoco", "1000"),
@@ -108,7 +108,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithGas": (
         "Rischio Biologico", "Uccidi 150 Nemici con Danno Gas", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyAimGlide": (
-        "Planatore", "Uccidi 20 Nemici durante durante la planata", 1000),
+        "Planatore", "Uccidi 15 Nemici durante durante la planata", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWithFinishers": (
         "Esecutore", "Uccidi 10 Nemici con le Esecuzioni", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyOpenLockers": ("Cleptomane", "Apri 20 Armadietti", 1000),
@@ -140,7 +140,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPickUpEnergy": (
         "Energizzante", "Raccogli 20 sfere di Energia", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyTransmuteMods": (
-        "Tutto ciò che è vecchio è rinato", "Completa 3 Trasmutazioni", 1000),
+        "Tutto ciò che è vecchio è rinato", "Completa 1 Trasmutazioni", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyInteractWithPet": (
         "Fedeltà", "Interagisci con il tuo Kubrow o Kavat", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyDeployAirSupport": (
@@ -152,6 +152,8 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPlayMinigame": (
         "Bambino nel Cuore", "Gioca una partita a Frame Fighter, Happy Zephyr o Wyrmius", 1000),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHijackCrewship": (
+        "Confiscato", "Dirotta un Trasporto Armato nemico", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyHijackCrewship": (
         "Confiscato", "Dirotta un Trasporto Armato nemico", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyCompleteMissionPrimary": (
         "Mani Piene", "Completa una missione solamente con un'arma primaria equipaggiata", 1000),
@@ -177,12 +179,12 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyRequiemTotem": (
         "Obelisco Antico", "Attiva un Obelisco Requiem su Cambion Drift", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyKillEnemiesWhileOnKDrive": (
-        "In Pista!", "Uccidi 20 nemici mentre sei a bordo di un K-Drive", 1000),
+        "In Pista!", "Uccidi 20 nemici mentre sei a bordo di un K-Drive, Kaithe, Velocipod o Merulina", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyPilotFallenMech": (
         "Rianimatore", "Trova e pilota un Necramech abbattuto su Deimos", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyMedic": ("Medico", "Rianima un Tenno on un compagno", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyThePersonalTouch": (
-        "Tocco Personale", "Posiziona 1 decorazione nel tuo Orbiter", 1000),
+        "Tocco Personale", "Posiziona 1 decorazione nel tuo Orbiter o Dormizone", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyLiquidation": (
         "Liquidazione", "Vendi qualsiasi oggetto nel tuo inventario per Crediti", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyStayOnTop": (
@@ -204,13 +206,13 @@ SEASON_CHALLENGE = {
 
     # WEEKLY
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions": (
-        "Invasore", "Completa 9 Missioni di invasione qualsiasi", 4500),
+        "Invasore", "Completa 6 Missioni di invasione qualsiasi", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteTreasures": (
-        "Animatore", "Riempi 3 Sculture Ayatan", 4500),
+        "Animatore", "Recupera una Statua Ayatan da Maroo", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPlainsBounties": (
-        "Cacciatore di Taglie sulla Terra", "Completa 5 Taglie differenti nelle Piane di Eidolon", 4500),
+        "Cacciatore di Taglie sulla Terra", "Completa 3 Taglie differenti nelle Piane di Eidolon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySimarisScan": (
-        "Ricercatore del Santuario", "Completa 5 Scannerizzazioni per Cephalon Simaris", 4500),
+        "Ricercatore del Santuario", "Completa 3 Scannerizzazioni per Cephalon Simaris", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySanctuaryOnslaught": (
         "Soggetto di Prova", "Completa 8 Zone della Carneficina al Santuario", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteCapture": (
@@ -218,10 +220,10 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemies": (
         "Non un Colpo d'Avvertimento", "Uccidi 500 Nemici", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSyndicateMissions": (
-        "Sostenitore", "Completa 10 missioni Associazione", 4500),
+        "Sostenitore", "Completa 5 missioni Associazione", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockRelics": ("Sblocca Reliquie", "Sblocca 3 Reliquie", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPerfectAnimalCapture": (
-        "Ambientalista", "Completa 6 Catture Animali Perfette", 4500),
+        "Ambientalista", "Completa 3 Catture Animali Perfette", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEximus": (
         "Eliminatore di Eximus", "Uccidi 30 Eximus", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteAssassination": (
@@ -230,15 +232,15 @@ SEASON_CHALLENGE = {
         "Specialista Incursioni", "Completa una Incursione", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPickUpRareMods": ("Rafforzare!", "Raccogli 8 Mod Rari", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRarePlainsResources": (
-        "Minatore Terra", "Estrai 6 Gemme Rare sulle Piane di Eidolon", 4500),
+        "Minatore Terra", "Estrai 3 Gemme Rare sulle Piane di Eidolon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMineRareVenusResources": (
-        "Minatore Venere", "Estrai 6 Gemme Rare su Orb Vallis", 4500),
+        "Minatore Venere", "Estrai 3 Gemme Rare su Orb Vallis", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyVenusBounties": (
-        "Cacciatore di Taglie su Venere", "Completa 8 Taglie su Orb Vallis", 4500),
+        "Cacciatore di Taglie su Venere", "Completa 3 Taglie su Orb Vallis", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteClemMission": (
         "Buon Amico", "Aiuta Clem con la sua missione settimanale", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRareVenusFish": (
-        "Pescatore Venus", "Pesca 6 Servofish Rari su Orb Vallis", 4500),
+        "Pescatore Venus", "Pesca 3 Servofish Rari su Orb Vallis", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSabotage": (
         "Sabotatore", "Completa 3 missioni sabotaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUnlockDragonVaults": (
@@ -246,7 +248,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteSpy": (
         "Operativo", "Completa 3 missioni spionaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCatchRarePlainsFish": (
-        "Pescatore Terra", "Pesca 6 Pesci Rari sulle Piane di Eidolon", 4500),
+        "Pescatore Terra", "Pesca 3 Pesci Rari sulle Piane di Eidolon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRescue": (
         "Salvatore", "Completa 3 missioni salvataggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyUseForma": (
@@ -257,7 +259,7 @@ SEASON_CHALLENGE = {
         "Protettore", "Completa 3 missioni Difesa Mobile", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyGildModular": ("Dorata", "Dora 1 Oggetto Modulare", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySabotageCaches": (
-        "Cacciatore di Casse", "Trova tutte le casse in 3 missioni sabotaggio", 4500),
+        "Cacciatore di Casse", "Trova 6 casse in missioni sabotaggio", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteNightmareMissions": (
         "Dormiglione", "Completa 3 missioni Nightmare di ogni tipo", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteDisruptionConduits": (
@@ -267,7 +269,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillThumper": (
         "Tusk Martellanti", "Uccidi un Tusk Thumper nelle Piane di Eidolon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteVenusRace": (
-        "Imbarco", "Completa 3 corse con il K-Drive differenti nelle Orb Vallis", 4500),
+        "Imbarco", "Completa 3 corse con il K-Drive differenti nelle Orb Vallis o su Deimos", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillArchgunEnemies": (
         "Armamento Pesante", "Uccidi 500 nemici con un Archgun", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBoardingPartyNoDamage": (
@@ -291,11 +293,11 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyNightAndDay": (
         "Fedeltà", "Ottieni un totale di 5000 Reputazione con qualsiasi Associazione", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyLoyalty": (
-        "Notte e Giorno", "Raccogli 15 Residui Vome o Fass su Cambion Drift", 4500),
+        "Notte e Giorno", "Raccogli 10 Residui Vome o Fass su Cambion Drift", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyMadLab": (
       "Scienziato Pazzo", "Saccheggia uno dei laboratori segreti di Alad V su Giove", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyEternalGuardian": (
-      "Guardiano Eterno", "Completa 3 missioni Void Armageddon", 4500),    
+      "Guardiano Eterno", "Completa 2 missioni Void Armageddon", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHighGround": (
       "In Alto", "Completa 3 missioni Marea Void", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyZarimanBountyHunter": (
@@ -310,7 +312,7 @@ SEASON_CHALLENGE = {
         "Soggetto di Prova Elite", "Completa 8 Zone della Carneficina al Santuario Elite", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKuvaSurvivalNoCapsules": (
         "Trattieni il Respiro",
-        "Sopravvivi per 30 minuti nella Sopravvivenza Kuva",
+        "Sopravvivi per 20 minuti nella Sopravvivenza Kuva",
         7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardExterminateNoAlarm": (
         "Eliminatore Silenzioso", "Completa una missione Sterminio con nemici di livello 30+ senza farti scoprire",
@@ -326,7 +328,7 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardUnlockRelics": (
         "Apri Reliquie", "Apri 10 Reliquie", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteNightmareMissions": (
-        "Terrore Notturno", "Completa 10 missioni Nightmare di ogni tipo", 7000),
+        "Terrore Notturno", "Completa 5 missioni Nightmare di ogni tipo", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillSilverGroveSpecters": (
         "Guardiano del Bosco", "Uccidi 1 Spettro del Bosco d'Argento", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardIndexWinStreak": (
@@ -367,11 +369,31 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardThePriceOfFreedom": (
        "Il Prezzo della Libertà", "Libera un Solaris Catturato utilizzando una Corona Granum", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardTheManyMadeWhole": (
-        "L'Unione Fa la Forza", "Converti 10 Schegge Riven in un Riven Mod", 7000),
+        "L'Unione Fa la Forza", "Scambia 10 Schegge Riven per un Riven Mod", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFallenAngel": (
         "Angelo Caduto", "Sconfiggi 5 Angeli del Void nella Zariman", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteArchonHunt": (
         "Cacciatore Archon", "Completa una Caccia Archon", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardFriendsMirrorDefense": (
+        "Cristallino", "Completa 3 ondate di Difesa Speculare", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardVitalArbiter": (
+        "Arbitro Vitale", "Completa un'Allerta Arbitrato", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardPerplexed": (
+        "Perplesso", "Completa 3 Enigmi a Duviri", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardEliteBeastSlayer": (
+        "Sterminatore Elite di Bestie", "Sconfiggi l'Orowyrm nel Percorso d'Acciaio", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCeremonialEvolution": (
+        "Evoluzione Cerimoniale", "Attiva la Forma Incarnon di qualsiasi arma Incarnon in missione 5 volte", 7000),
+
+
+    # WEEKLY PERMANENT
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentCompleteMissions": (
+        "Missione Completata", "Completa 15 missioni qualsiasi", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEximus": (
+        "Eliminatore Eximus", "Uccidi 30 Eximus", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyPermanentKillEnemies": (
+        "Non un Colpo d'Avvertimento", "Uccidi 500 nemici", 4500),
+
 
 }
 

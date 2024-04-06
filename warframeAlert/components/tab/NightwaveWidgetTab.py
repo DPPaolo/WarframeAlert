@@ -1,4 +1,6 @@
 # coding=utf-8
+import string
+
 from PyQt6 import QtWidgets, QtCore
 
 from warframeAlert.components.common.Countdown import Countdown
@@ -94,12 +96,12 @@ class NightwaveWidgetTab():
 
             for challenge in data['ActiveChallenges']:
                 challenge_id = challenge['_id']['$oid']
-                trovato = 0
+                found = 0
                 for mission in self.alerts['SeasonInfo']:
                     if (mission.get_challenge_id() == challenge_id):
-                        trovato = 1
+                        found = 1
 
-                if (trovato == 0):
+                if (found == 0):
                     init = challenge['Activation']['$date']['$numberLong']
                     end = challenge['Expiry']['$date']['$numberLong']
                     if ('Permanent' in challenge):
@@ -110,7 +112,7 @@ class NightwaveWidgetTab():
                     if (not permanent):
                         nightwave_challenge = get_nightwave_challenge(challenge['Challenge'])
                     else:
-                        nightwave_challenge = get_nightwave_challenge(challenge['Challenge'][:-1])
+                        nightwave_challenge = get_nightwave_challenge(challenge['Challenge'].rstrip(string.digits))
                     if ('Daily' in challenge):
                         daily = challenge['Daily']
                     else:

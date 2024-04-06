@@ -556,7 +556,7 @@ def create_prime_vault_trader(event_id: str, event: PrimeVaultTradersData) -> Ev
     init = timeUtils.get_time(event['Activation']['$date']['$numberLong'])
     end = event['Expiry']['$date']['$numberLong']
     initial_init = timeUtils.get_time(event['InitialStartDate']['$date']['$numberLong'])
-    completed = bool_to_yes_no(event['Completed'])
+    completed = bool_to_yes_no(event['Completed'] if ('Completed' in event) else "False")
     node = get_node(event['Node'])
     params = event['Params'] if ('Params' in event) else ""
     phase = event['Phase'] if ('Phase' in event) else 0

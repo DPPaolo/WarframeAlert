@@ -130,6 +130,7 @@ class NewsLinksMessage(TypedDict):
 class Event(TypedDict, total=False):
     _id: IdType
     Date: DateType
+    GameOnly: bool
     EventStartDate: DateType
     EventEndDate: DateType
     EventLiveUrl: str

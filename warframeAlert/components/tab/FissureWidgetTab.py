@@ -252,6 +252,8 @@ def get_relic_tier(tier: str) -> Tuple[int, str]:
             return 4, "T4 Axi"
         case "5":
             return 5, "T5 Requiem"
+        case "6":
+            return 6, "T6 Omnia"
         case _:
             print(translate("relicWidget", "unknownRelicTier") + ": " + tier)
             LogHandler.err(translate("relicWidget", "unknownRelicTier") + ": " + tier)

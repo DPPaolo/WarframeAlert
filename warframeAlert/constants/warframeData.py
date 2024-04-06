@@ -324,6 +324,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/MiscItems/UtilityUnlocker": "Adattatore Exilus",
     "/Lotus/StoreItems/Types/Recipes/Components/WeaponUtilityUnlockerBlueprint": "Adattatore Exilus Arma (Schema)",
     "/Lotus/Types/Items/MiscItems/WeaponUtilityUnlocker": "Adattatore Exilus Arma",
+    "/Lotus/StoreItems/Types/Items/MiscItems/WeaponUtilityUnlocker": "Adattatore Exilus Arma",
     "/Lotus/Types/Items/MiscItems/RivenIdentifier": "Cipher Riven Non Identificato",
     "/Lotus/StoreItems/Types/Game/KubrowPet/Eggs/KubrowEgg": "Uovo Kubrow",
     "/Lotus/Types/Game/CatbrowPet/CatbrowGeneticSignature": "Codice Genetico Kavat",
@@ -621,6 +622,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponClipMaxModExpert": "Primed Magazine Warp",
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponClipMaxModExpert": "Primed Ammo Stock",
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert": "Primed Sniper Ammo Mutation",
+    "/Lotus/StoreItems/Upgrades/Mods/Warframe/Expert/AvatarShieldMaxModExpert": "Primed Redirection",
+    "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/PrimedWeaponElectricityDamageMod": "Primed Convulsion",
 
 
     # Emblems
@@ -644,6 +647,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2021EmblemItem": "Emblema Bue Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2022EmblemItem": "Emblema Tigre Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2023EmblemItem": "Emblema Coniglio Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/Dragon2024BadgeItem": "Emblema Drago Rinnovo Lunare",
 
 
     # Sigils
@@ -690,6 +694,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/TwinSnakesGlyph": "Glifo Vome-Fass",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageHarrowAction": "Glifo Harrow in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageOctaviaAction": "Glifo Octavia in Azione",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageIvaraAction": "Glifo Ivara in Azione",
 
 
     # Skins
@@ -762,6 +767,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Pacifist/BaruukImmortalSkin": "Skin Baruuk Immortal",
     "/Lotus/StoreItems/Upgrades/Skins/Promo/Warframe/PromoParis": "Skin Paris Abra",
     "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/ElixisNikana": "Skin Nikana Elixis",
+    "/Lotus/StoreItems/Upgrades/Skins/Events/InfQuantaInfestedAladV": "Skin Paracyst Zebra",
 
 
     # Sugatra
@@ -788,6 +794,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/SolsticeNelumboCape": "Syandana Wintercrest",
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/NezhaLeverianCape": "Syandana Reshantur Cult",
     "/Lotus/StoreItems/Upgrades/Skins/Scarves/BaroCape3Scarf": "Syandana Ki'Teer Straed",
+    "/Lotus/StoreItems/Upgrades/Skins/Scarves/HornSkullScarf": "Syandana Rakta",
 
 
     # Armour Cosmetics
@@ -953,7 +960,10 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/NezhaEtchingsTablets": "Tavoletta del Bambino di Reshantur",
     "/Lotus/StoreItems/Types/Items/ShipDecos/GrendelOrokinDishSet": "Stoviglie di Karishh",
     "/Lotus/StoreItems/Types/Items/ShipDecos/Vignettes/Warframes/ArchwingAFItem": "Archwing Articula",
-    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterA": "Javi Evolution Scrawling",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterA": "Scarabocchio Javi - Evoluzione",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterB": "Scarabocchio Javi - Ofiuco",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterC": "Scarabocchio Javi - Luminosità",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterD": "Scarabocchio Javi - Genoma",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",
