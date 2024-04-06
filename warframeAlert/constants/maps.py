@@ -8,7 +8,8 @@ FACTION = {"FC_GRINEER": "Grineer",
            "FC_OROKIN": "Orokin",
            "FC_SENTIENT": "Sentient",
            "FC_RED_VEIL": "Red Veil",
-           "FC_NARMER": "Narmer"
+           "FC_NARMER": "Narmer",
+           "FC_MITW": "Murmur"
            }
 
 REGION_MAP = {
@@ -66,6 +67,7 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_JUNCTION": {"it": "Raccordo", "en": "Junction"},
                 "MT_PVP": {"it": "Conclave", "en": "Conclave"},
                 "MT_GENERIC": {"it": "Quest", "en": "Quest"},
+                "MT_ANY": {"it": "Quest", "en": "Quest"},
                 "MT_LANDSCAPE": {"it": "Esplorazione", "en": "Free Roam"},
                 "MT_ENDLESS_EXTERMINATION": {"it": "Carneficina al Santuario", "en": "Sanctuary Onslaught"},
                 "MT_RAILJACK": {"it": "Schermaglia (Railjack)", "en": "Skirmish  (Railjack)"},
@@ -76,6 +78,8 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_ARMAGEDDON": {"it": "Armageddon Void", "en": "Void Armageddon"},
                 "MT_VOID_CASCADE": {"it": "Cascata Void", "en": "Void Cascade"},
                 "MT_CORRUPTION": {"it": "Marea Void", "en": "Void Flood"},
+                "MT_ALCHEMY": {"it": "Alchimia", "en": "Alchemy"},
+                "MT_VAULTS": {"it": "Netracelle", "en": "Netracels"},
                 }
 
 NODE_NAME_IT = {
@@ -324,6 +328,8 @@ NODE_NAME_IT = {
     "SolNode306": ("Pavlov", "Luna"),
     "SolNode307": ("Zeipel", "Luna"),
     "SolNode308": ("Apollo", "Luna"),
+    "SolNode309": ("Yuvarium", "Luna"),
+    "SolNode310": ("Circulus", "Luna"),
 
     "SolNode400": ("Teshub", "Void"),
     "SolNode401": ("Hepit", "Void"),
@@ -352,6 +358,14 @@ NODE_NAME_IT = {
     "SolNode711": ("Terrorem", "Deimos"),
     "SolNode712": ("Magnacidium", "Deimos"),
     "SolNode713": ("Exequias", "Deimos"),
+    "SolNode714": ("Sanctum Anatomica", "Deimos"),
+    "SolNode715": ("Effervo", "Deimos"),
+    "SolNode716": ("Nex", "Deimos"),
+    "SolNode717": ("Persto", "Deimos"),
+    "SolNode718": ("Cambire", "Deimos"),
+    "SolNode719": ("Munio", "Deimos"),
+    "SolNode720": ("Testudo", "Deimos"),
+    "SolNode721": ("Testudo", "Armatus"),
 
     "SolNode740": ("Ropalolyst", "Giove"),
     "SolNode741": ("Koro", "Fortezza Kuva"),
@@ -566,6 +580,8 @@ NODE_NAME_IT = {
     "ScenarioEventHub5": ("Scarlet Spear", "Terra"),
 
     "ZarimanHub_HUB": ("ChrysaLith", "Zariman"),
+
+    "EntratiLabHub_HUB": ("Sanctum Anatomica", "Deimos"),
 
     "DojoHub_HUB": ("Dojo", "Sistema Solare"),
 

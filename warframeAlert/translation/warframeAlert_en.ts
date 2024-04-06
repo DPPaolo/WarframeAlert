@@ -331,6 +331,19 @@
     </message>
 </context>
 <context>
+    <name>circuitBox</name>
+    <message>
+        <location filename="../components/common/CircuitBox.py" line="14"/>
+        <source>circuitTitle</source>
+        <translation>Warframes offered on the Circuit</translation>
+    </message>
+    <message>
+        <location filename="../components/common/CircuitBox.py" line="15"/>
+        <source>steelPathCircuitTitle</source>
+        <translation>Incarnons offered on the Steel Path Circuit</translation>
+    </message>
+</context>
+<context>
     <name>clanEvent</name>
     <message>
         <location filename="../components/common/ClanEvent.py" line="18"/>
@@ -1724,47 +1737,47 @@
 <context>
     <name>nightwaveWidgetTab</name>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="24"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="26"/>
         <source>end</source>
         <translation>expires in</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="135"/>
         <source>season</source>
         <translation>Season</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="127"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="135"/>
         <source>phase</source>
         <translation>Episode</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="130"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="138"/>
         <source>parameters</source>
         <translation>Parameters</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="37"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="39"/>
         <source>noNightwave</source>
         <translation>No available missions</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="51"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="53"/>
         <source>missionAvailable</source>
         <translation>Missions</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="73"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="75"/>
         <source>nightwaveParsingError</source>
         <translation>Error during parsing nightwave data</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="161"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="169"/>
         <source>noSeasonActive</source>
         <translation>No active season</translation>
     </message>
     <message>
-        <location filename="../components/tab/NightwaveWidgetTab.py" line="126"/>
+        <location filename="../components/tab/NightwaveWidgetTab.py" line="134"/>
         <source>init</source>
         <translation>Started at</translation>
     </message>
@@ -2130,7 +2143,7 @@
         <translation>Relics Info</translation>
     </message>
     <message>
-        <location filename="../components/tab/FissureWidgetTab.py" line="257"/>
+        <location filename="../components/tab/FissureWidgetTab.py" line="259"/>
         <source>unknownRelicTier</source>
         <translation>Unkown Relic Tier</translation>
     </message>
@@ -3024,19 +3037,29 @@
 <context>
     <name>weeklyWidget</name>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="41"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="49"/>
         <source>archon</source>
         <translation>Archon</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="42"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="51"/>
         <source>other</source>
         <translation>Other missions</translation>
     </message>
     <message>
-        <location filename="../components/tab/WeeklyWidgetTab.py" line="62"/>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="72"/>
         <source>archonError</source>
         <translation>Error during parsing sorties</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="50"/>
+        <source>circuit</source>
+        <translation>Circuit</translation>
+    </message>
+    <message>
+        <location filename="../components/tab/WeeklyWidgetTab.py" line="122"/>
+        <source>circuitError</source>
+        <translation>Errore on the rewards of the circuit</translation>
     </message>
 </context>
 </TS>

@@ -141,6 +141,7 @@ class TabService(QtCore.QObject):
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
+        self.weekly_tab.update_endless_xp_choices(json_data['EndlessXpChoices'])
         self.other_tab.update_experiment_recommended(json_data['ExperimentRecommended'])
         self.news_tab.update_news(json_data['Events'])
         self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])

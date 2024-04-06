@@ -1,9 +1,12 @@
 # coding=utf-8
+from typing import List
+
 from PyQt6 import QtWidgets, QtCore, QtGui
 
+from warframeAlert.components.common.CircuitBox import CircuitBox
 from warframeAlert.components.common.SortieBox import SortieBox
 from warframeAlert.components.common.WeeklyMission import WeeklyMission, WeeklyMissionType
-from warframeAlert.constants.warframeTypes import LiteSorties
+from warframeAlert.constants.warframeTypes import LiteSorties, EndlessXpChoicesData
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -19,10 +22,14 @@ class WeeklyWidgetTab():
         self.alerts: dict[str, tuple[str, int]] = {'LiteSorties': ("", 0)}
 
         self.arcon_box = SortieBox(True)
+        self.circuit_box = CircuitBox()
+
         self.ArchonWidget = QtWidgets.QWidget()
+        self.CircuitWidget = QtWidgets.QWidget()
         self.OtherWidget = QtWidgets.QWidget()
 
         self.gridArchon = QtWidgets.QGridLayout()
+        self.gridCircuit = QtWidgets.QGridLayout()
         self.gridOther = QtWidgets.QGridLayout()
 
         self.WeeklyTabber = QtWidgets.QTabWidget()
@@ -34,17 +41,20 @@ class WeeklyWidgetTab():
         self.OtherScrollBar.setBackgroundRole(QtGui.QPalette.ColorRole.NoRole)
 
         self.ArchonWidget.setLayout(self.arcon_box.SortieBox)
+        self.CircuitWidget.setLayout(self.circuit_box.CircuitGrid)
         self.OtherWidget.setLayout(self.gridOther)
 
         self.OtherScrollBar.setWidget(self.OtherWidget)
 
         self.WeeklyTabber.insertTab(0, self.ArchonWidget, translate("weeklyWidget", "archon"))
-        self.WeeklyTabber.insertTab(1, self.OtherScrollBar, translate("weeklyWidget", "other"))
+        self.WeeklyTabber.insertTab(1, self.CircuitWidget, translate("weeklyWidget", "circuit"))
+        self.WeeklyTabber.insertTab(2, self.OtherScrollBar, translate("weeklyWidget", "other"))
 
         self.gridWeekly = QtWidgets.QGridLayout(self.WeeklyWidget)
         self.gridWeekly.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.gridArchon.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridCircuit.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.gridOther.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.WeeklyWidget.setLayout(self.gridWeekly)
@@ -102,3 +112,18 @@ class WeeklyWidgetTab():
 
             self.gridOther.addLayout(maroo_mission.MissionBox, self.gridOther.count(), 0)
             self.gridOther.addLayout(clem_mission.MissionBox, self.gridOther.count(), 0)
+
+    def update_endless_xp_choices(self, data: List[EndlessXpChoicesData]):
+        if (OptionsHandler.get_option("Tab/Weekly") == 1):
+            try:
+                self.parse_endless_xp_choices(data)
+            except Exception as er:
+                LogHandler.err(translate("weeklyWidget", "circuitError") + ": " + str(er))
+                print_traceback(translate("weeklyWidget", "circuitError") + ": " + str(er))
+                self.circuit_box.circuit_not_available()
+        else:
+            self.circuit_box.circuit_not_available()
+
+    def parse_endless_xp_choices(self, data: List[EndlessXpChoicesData]):
+        for element in data:
+            self.circuit_box.set_circuit_data(element)
