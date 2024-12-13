@@ -75,6 +75,8 @@ ALERT_INFO = {
     "CONQUERA": {"it": "Conquera", "en": "Conquera"},
     "Infested Infiltration": {"it": "Infested Infiltration", "en": "Infested Infiltration"},
     "/Lotus/Language/Alerts/TennoUnitedAlert": {"it": "Tenno United", "en": "Tenno United"},
+    "/Lotus/Language/Alerts/SolarEclipseMode": {"it": "Eclissi Totale", "en": "Totality"},
+    "/Lotus/Language/JadeShadows/EventAlertTitle": {"it": "Belly of the Beast", "en": "Belly of the Beast"}
 }
 
 ALERT_WEAPON_RESTRICTION = {
@@ -91,6 +93,7 @@ ALERT_WEAPON_RESTRICTION = {
 ALERT_FX = {
     "LightningStorm": {"it": "Fulmini", "en": "Lightning Storm"},
     "DarkFog": {"it": "Nebbia Fitta", "en": "Dark Fog"},
+    "LightsOut": {"it": "Eclissi", "en": "Eclipse"}
 }
 
 ALERT_ENEMY = {
@@ -172,6 +175,8 @@ ALERT_VIP_AGENT = {
     "/Lotus/Types/Enemies/Quests/SacrificeQuest/UmbraChaseAgent": {"it": "Umbra", "en": "Umbra"},
     "/Lotus/Types/Friendly/Agents/CoreDefenseAgent": {"it": "Nucleo Energetico Orokin",
                                                       "en": "Orokin Energy Core"},
+    "/Lotus/Types/Enemies/CorpusChampions/JohnProdman/JohnProdmanAnniversaryAgent":
+        {"it": "John Prodman", "en": "John Prodman"},
 }
 
 ALERT_LEVEL_AURA = {

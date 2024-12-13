@@ -58,7 +58,7 @@ class ClanEvent(Event):
 
         self.set_req_node(req_node)
 
-    def set_clan_score(self, rank: List[str]):
+    def set_clan_score(self, rank: List[int]):
         self.TAVRank0.setText(str(rank[0]))
         self.TAVRank1.setText(str(rank[1]))
         self.TAVRank2.setText(str(rank[2]))

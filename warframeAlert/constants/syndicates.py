@@ -39,8 +39,11 @@ SYNDICATE_NAME = {"ArbitersSyndicate": {"it": "Arbiter of Hexis", "en": "Arbiter
                   "RadioLegionIntermission8Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 4",
                                                         "en": "Nightwawe - Nora's Mix Volume 4"},
                   "RadioLegionIntermission9Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 5",
-                                                        "en": "Nightwawe - Nora's Mix Volume 5"},"RadioLegionIntermission9Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 5",
                                                         "en": "Nightwawe - Nora's Mix Volume 5"},
+                  "RadioLegionIntermission10Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 6",
+                                                         "en": "Nightwawe - Nora's Mix Volume 6"},
+                  "RadioLegionIntermission11Syndicate": {"it": "Nightwawe - Mix di Nora Vol. 7",
+                                                         "en": "Nightwawe - Nora's Mix Volume 7"},
                   "KahlSyndicate": {"it": "Kahl", "en": "Kahl"},
                   }
 
@@ -294,200 +297,200 @@ BOUNTY_JOB_NAME = {
 
 BOUNTY_JOB_DESC = {"": {"it": "Descrizione non Disponibile", "en": "No Description Available"},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountySab": {
-                      "it": "Tronca la linea di rifornimento Grineer.",
-                      "en": "Cut off the Grineer supply line."},
+                       "it": "Tronca la linea di rifornimento Grineer.",
+                       "en": "Cut off the Grineer supply line."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapTwo": {
-                      "it": "C'è una spia Grineer a Cetus. Fai pressione sui Grineer e stana la spia.",
-                      "en": "There is a Grineer spy in Cetus. Put pressure on the Grineers and keep the spy out."},
+                       "it": "C'è una spia Grineer a Cetus. Fai pressione sui Grineer e stana la spia.",
+                       "en": "There is a Grineer spy in Cetus. Put pressure on the Grineers and keep the spy out."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyCap": {
-                      "it": "Un nuovo comandante Grineer non finisce di darci problemi. Catturalo.",
-                      "en": "A new Grineer commander doesn't stop giving us trouble. Catch it."},
+                       "it": "Un nuovo comandante Grineer non finisce di darci problemi. Catturalo.",
+                       "en": "A new Grineer commander doesn't stop giving us trouble. Catch it."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCap": {
-                      "it": "Un oggetto di grande importanza per i Quill è stato preso dai Grineer. Localizza "
-                            "l'agente che lo ha rubato e portalo qui.",
-                      "en": "An object of great importance to the Quills was taken by the Grineers. Locate the agent "
-                            "who stole it and bring it here."},
+                       "it": "Un oggetto di grande importanza per i Quill è stato preso dai Grineer. Localizza "
+                             "l'agente che lo ha rubato e portalo qui.",
+                       "en": "An object of great importance to the Quills was taken by the Grineers. Locate the agent "
+                             "who stole it and bring it here."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/CaptureBountyCapOne": {
-                      "it": "Un Grineer di alto rango è atterrato nelle piane. Portalo alla Lotus.",
-                      "en": "A high-ranking Grineer landed on the plains. Take it to Lotus."},
+                       "it": "Un Grineer di alto rango è atterrato nelle piane. Portalo alla Lotus.",
+                       "en": "A high-ranking Grineer landed on the plains. Take it to Lotus."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/RescueBountyResc": {
-                      "it": "Un Ostron è sparito nelle piane. Trovalo e riportalo a casa.",
-                      "en": "An Ostron has disappeared on the plains. Find it and bring it home."},
+                       "it": "Un Ostron è sparito nelle piane. Trovalo e riportalo a casa.",
+                       "en": "An Ostron has disappeared on the plains. Find it and bring it home."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/SabotageBountySab": {
-                      "it": "Un prototipo di nuove tecnologie è stato consegnato ai Grineer. Cerca tra le piane fino "
-                            "a trovarlo!",
-                      "en": "A prototype of new technologies was delivered to the Grineers. Search the plains until "
-                            "you find it!"},
+                       "it": "Un prototipo di nuove tecnologie è stato consegnato ai Grineer. Cerca tra le piane fino "
+                             "a trovarlo!",
+                       "en": "A prototype of new technologies was delivered to the Grineers. Search the plains until "
+                             "you find it!"},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AssassinateBountyAss": {
-                      "it": "Un leader Grineer si farà vedere solo se interrompiamo le operazioni Grineer su più "
-                            "fronti.",
-                      "en": "A Grineer leader will only show up if we stop Grineer operations on multiple fronts."},
+                       "it": "Un leader Grineer si farà vedere solo se interrompiamo le operazioni Grineer su più "
+                             "fronti.",
+                       "en": "A Grineer leader will only show up if we stop Grineer operations on multiple fronts."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyExt": {
-                      "it": "I Grineer crescono di numero. Indeboliscili.",
-                      "en": "The Grineers grow in number. Weaken them."},
+                       "it": "I Grineer crescono di numero. Indeboliscili.",
+                       "en": "The Grineers grow in number. Weaken them."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyLib": {
-                      "it": "Espelli i Grineer dal loro avamposto nelle Piane.",
-                      "en": "Expel the Grineers from their outpost in the Plains."},
+                       "it": "Espelli i Grineer dal loro avamposto nelle Piane.",
+                       "en": "Expel the Grineers from their outpost in the Plains."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/AttritionBountyCap": {
-                      "it": "Un oggetto di grande importanza per i Quill è stato preso dai Grineer. Localizza "
-                            "l'agente che lo ha rubato e portalo qui.",
-                      "en": "An object of great importance to the Quills was taken by the Grineers. Locate the agent "
-                            "who stole it and bring it here."},
+                       "it": "Un oggetto di grande importanza per i Quill è stato preso dai Grineer. Localizza "
+                             "l'agente che lo ha rubato e portalo qui.",
+                       "en": "An object of great importance to the Quills was taken by the Grineers. Locate the agent "
+                             "who stole it and bring it here."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyCache": {
-                      "it": "I Grineer hanno preso un artefatto Orokin. Trova dove lo hanno immagazzinato.",
-                      "en": "The Grineers took an Orokin artifact. Find where they stored it."},
+                       "it": "I Grineer hanno preso un artefatto Orokin. Trova dove lo hanno immagazzinato.",
+                       "en": "The Grineers took an Orokin artifact. Find where they stored it."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/ReclamationBountyTheft": {
-                      "it": "I Quill dicono che i Grineer hanno rubato un prezioso artefatto Orokin. Riprendilo.",
-                      "en": "The Quills say the Grineers stole a precious Orokin artifact. Take it back."},
+                       "it": "I Quill dicono che i Grineer hanno rubato un prezioso artefatto Orokin. Riprendilo.",
+                       "en": "The Quills say the Grineers stole a precious Orokin artifact. Take it back."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBounty": {
-                      "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
-                            "centro delle piane.",
-                      "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
-                            "the center of the plains."},
+                       "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
+                             "centro delle piane.",
+                       "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
+                             "the center of the plains."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountyAdvanced": {
-                      "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
-                            "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
-                      "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
-                            "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
+                       "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
+                             "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
+                       "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
+                             "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/InfestedPlainsBountySteelPath": {
-                      "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
-                            "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
-                      "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
-                            "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
+                       "it": "Ruba a Vay Hek la Tossina Thrax, mescolala e avvelena la bolla Infested che cresce al "
+                             "centro delle piane. Sono necessari un Antidoto Eidolon e un Catalizzatore Infested.",
+                       "en": "Steal the Thrax Toxin from Vay Hek, mix it and poison the Infested bubble that grows in "
+                             "the center of the plains. An Eidolon Phylaxis and an Infested Catalyst is required."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyRes": {
-                      "it": "Steel Meridian ha identificato un potenziale disertore Ghoul, salvali da morte certa.",
-                      "en": "Steel Meridian has identified a potential Ghoul defector, save them from certain death."},
+                       "it": "Steel Meridian ha identificato un potenziale disertore Ghoul, salvali da morte certa.",
+                       "en": "Steel Meridian has identified a potential Ghoul defector, save them from certain death."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyHunt": {
-                      "it": "Trova e distruggi un sito di inumazione Ghoul prima che si sveglino.",
-                      "en": "Find and destroy a Ghoul burial site before they wake up."},
+                       "it": "Trova e distruggi un sito di inumazione Ghoul prima che si sveglino.",
+                       "en": "Find and destroy a Ghoul burial site before they wake up."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyExt": {
-                      "it": "Lancia un assalto alle terre di inumazione Ghoul e manda un messaggio a Vay Hek.",
-                      "en": "Launch an assault on Ghoul Burial Lands and send a message to Vay Hek."},
+                       "it": "Lancia un assalto alle terre di inumazione Ghoul e manda un messaggio a Vay Hek.",
+                       "en": "Launch an assault on Ghoul Burial Lands and send a message to Vay Hek."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Events/GhoulAlertBountyAss": {
-                      "it": "Uccidi un Ghoul Alpha e indebolisci la loro presenza nelle piane.",
-                      "en": "Kill an Alpha Ghoul and weaken their presence on the plains."},
+                       "it": "Uccidi un Ghoul Alpha e indebolisci la loro presenza nelle piane.",
+                       "en": "Kill an Alpha Ghoul and weaken their presence on the plains."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobAssassinate": {
-                      "it": "Stana e uccidi un famoso criminale di guerra Corpus",
-                      "en": "Drive out and kill a famous Corpus war criminal"},
+                       "it": "Stana e uccidi un famoso criminale di guerra Corpus",
+                       "en": "Drive out and kill a famous Corpus war criminal"},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobSpy": {
-                      "it": "Un pilota sta aspettando in orbita con una nave piena di rifornimenti. Gli serve un "
-                            "permesso d'atterraggio. Falsificane uno.",
-                      "en": "A pilot is waiting in orbit with a ship full of supplies. He needs a landing permit. "
-                            "Falsify one."},
+                       "it": "Un pilota sta aspettando in orbita con una nave piena di rifornimenti. Gli serve un "
+                             "permesso d'atterraggio. Falsificane uno.",
+                       "en": "A pilot is waiting in orbit with a ship full of supplies. He needs a landing permit. "
+                             "Falsify one."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobSpy": {
-                      "it": "Individua e cancella i principali registri di debito prima che le squadre di Nef addette "
-                            "al pignoramento possano spazzare via un hub nel mirino.",
-                      "en": "Identify and clear major debt registers before Nef foreclosure teams can wipe out a hub "
-                            "in their sights."},
+                       "it": "Individua e cancella i principali registri di debito prima che le squadre di Nef addette "
+                             "al pignoramento possano spazzare via un hub nel mirino.",
+                       "en": "Identify and clear major debt registers before Nef foreclosure teams can wipe out a hub "
+                             "in their sights."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobRecovery": {
-                      "it": "Abbiamo perso il contatto con una squadra che spiava l'unità delle operazioni speciali "
-                            "di Nef. Trovali e scopri cosa hanno appreso.",
-                      "en": "We lost contact with a team that spied on Nef's special operations unit. Find them and "
-                            "find out what they learned."},
+                       "it": "Abbiamo perso il contatto con una squadra che spiava l'unità delle operazioni speciali "
+                             "di Nef. Trovali e scopri cosa hanno appreso.",
+                       "en": "We lost contact with a team that spied on Nef's special operations unit. Find them and "
+                             "find out what they learned."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobAmbush": {
-                      "it": "I Corpus hanno ritrovato un Artefatto Orokin. Intercetta il corriere e rubalo.",
-                      "en": "Corpus have found an Orokin Artifact. Intercept the courier and steal it."},
+                       "it": "I Corpus hanno ritrovato un Artefatto Orokin. Intercetta il corriere e rubalo.",
+                       "en": "Corpus have found an Orokin Artifact. Intercept the courier and steal it."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobDefense": {
-                      "it": "Pattuglia Vallis. Riporta ogni anomalia.",
-                      "en": "Patrol Vallis. Report any anomaly."},
+                       "it": "Pattuglia Vallis. Riporta ogni anomalia.",
+                       "en": "Patrol Vallis. Report any anomaly."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobRecovery": {
-                      "it": "Libera i cittadini di Solaris rapiti dalle unità interrogatorie di Nef.",
-                      "en": "Free the Solaris citizens kidnapped by Nef's interrogation units."},
+                       "it": "Libera i cittadini di Solaris rapiti dalle unità interrogatorie di Nef.",
+                       "en": "Free the Solaris citizens kidnapped by Nef's interrogation units."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobAssassinate": {
-                      "it": "Porta allo scoperto un famoso Supervisore Corpus prendendo di mira i suoi beni. Poi "
-                            "uccidilo.",
-                      "en": "Uncover a famous Corpus Supervisor by targeting his assets. Then kill him."},
+                       "it": "Porta allo scoperto un famoso Supervisore Corpus prendendo di mira i suoi beni. Poi "
+                             "uccidilo.",
+                       "en": "Uncover a famous Corpus Supervisor by targeting his assets. Then kill him."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobAmbush": {
-                      "it": "I coildrive assegnati ai picchetti caricano regolarmente dei dati.Violane uno per "
-                            "caricare un virus spia.",
-                      "en": "The coildrives assigned to the stakes regularly upload data. Violane one to load a spy "
-                            "virus."},
+                       "it": "I coildrive assegnati ai picchetti caricano regolarmente dei dati.Violane uno per "
+                             "caricare un virus spia.",
+                       "en": "The coildrives assigned to the stakes regularly upload data. Violane one to load a spy "
+                             "virus."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobResource": {
-                      "it": "Riporta indietro le nostre tasse.",
-                      "en": "Bring back our taxes."},
+                       "it": "Riporta indietro le nostre tasse.",
+                       "en": "Bring back our taxes."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobExterminate": {
-                      "it": "I corpus hanno allestito un campo per allenare le truppe. Porta morte e distruzione.",
-                      "en": "The corpus have set up a field to train troops. Brings death and destruction."},
+                       "it": "I corpus hanno allestito un campo per allenare le truppe. Porta morte e distruzione.",
+                       "en": "The corpus have set up a field to train troops. Brings death and destruction."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobCaches": {
-                      "it": "Ai Ventkid servono parti per costruire dei K-Drive. Vuoi aiutarli?",
-                      "en": "Ventkids need parts to build K-Drives. Do you want to help them?"},
+                       "it": "Ai Ventkid servono parti per costruire dei K-Drive. Vuoi aiutarli?",
+                       "en": "Ventkids need parts to build K-Drives. Do you want to help them?"},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusIntelJobResource": {
-                      "it": "Si dice che i corpus stiano preparando diverse operazioni. Ci servono informazioni su "
-                            "osa esse comportano.",
-                      "en": "The corpus are said to be preparing several operations. We need information on what they "
-                            "entail."},
+                       "it": "Si dice che i corpus stiano preparando diverse operazioni. Ci servono informazioni su "
+                             "osa esse comportano.",
+                       "en": "The corpus are said to be preparing several operations. We need information on what they "
+                             "entail."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusTheftJobExcavation": {
-                      "it": "Le unità di scavo Corpus hanno identificato una miniera. Ci servono questi materiali. "
-                            "Prendine possesso.",
-                      "en": "Corpus excavation units have identified a mine. We need these materials. Take possession "
-                            "of it."},
+                       "it": "Le unità di scavo Corpus hanno identificato una miniera. Ci servono questi materiali. "
+                             "Prendine possesso.",
+                       "en": "Corpus excavation units have identified a mine. We need these materials. Take possession "
+                             "of it."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusSpyJobSpy": {
-                      "it": "Un agente di SU è scomparso. Scopri cosa è successo e ferma i piani di Nef.",
-                      "en": "A SU agent has disappeared. Find out what happened and stop Nef's plans."},
+                       "it": "Un agente di SU è scomparso. Scopri cosa è successo e ferma i piani di Nef.",
+                       "en": "A SU agent has disappeared. Find out what happened and stop Nef's plans."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobAssassinate": {
-                      "it": "Distruggi la rete di controllo dei lavoratori, poi uccidi il Supervisore.",
-                      "en": "Destroy the workers' control network, then kill the Supervisor."},
+                       "it": "Distruggi la rete di controllo dei lavoratori, poi uccidi il Supervisore.",
+                       "en": "Destroy the workers' control network, then kill the Supervisor."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusChaosJobExcavation": {
-                      "it": "Dobbiamo dirottare alcune scavatrici. Mentre vengono preparate e lanciate, Eudico ha "
-                            "altri lavori per te.",
-                      "en": "We need to hijack some diggers. As they are being prepared and launched, Eudicus has "
-                            "other jobs for you."},
+                       "it": "Dobbiamo dirottare alcune scavatrici. Mentre vengono preparate e lanciate, Eudico ha "
+                             "altri lavori per te.",
+                       "en": "We need to hijack some diggers. As they are being prepared and launched, Eudicus has "
+                             "other jobs for you."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobExcavation": {
-                      "it": "Localizza e recupera le reliquie da un sito di scavo prima dei Corpus di Nef.",
-                      "en": "Locate and recover relics from an excavation site before Nef's Corpus."},
+                       "it": "Localizza e recupera le reliquie da un sito di scavo prima dei Corpus di Nef.",
+                       "en": "Locate and recover relics from an excavation site before Nef's Corpus."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusPreservationJobResource": {
-                      "it": "Taglia i rifornimenti alla Divisione Ricerca e Alimentazione Corpus.",
-                      "en": "Cut supplies to the Corpus Research and Food Division."},
+                       "it": "Taglia i rifornimenti alla Divisione Ricerca e Alimentazione Corpus.",
+                       "en": "Cut supplies to the Corpus Research and Food Division."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusHelpingJobResource": {
-                      "it": "Ricatta un investigatore Corpus. Tienilo lontano dalla nostra gente.",
-                      "en": "Blackmail a Corpus investigator. Keep it away from our people."},
+                       "it": "Ricatta un investigatore Corpus. Tienilo lontano dalla nostra gente.",
+                       "en": "Blackmail a Corpus investigator. Keep it away from our people."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusArtifactJobRecovery": {
-                      "it": "I piloti stranieri hanno violato la proprietà di Nef sulla rovine Orokin. Salvali da "
-                            "loro stessi.",
-                      "en": "Foreign pilots violated Nef's property on the Orokin ruins. Save them from themselves."},
+                       "it": "I piloti stranieri hanno violato la proprietà di Nef sulla rovine Orokin. Salvali da "
+                             "loro stessi.",
+                       "en": "Foreign pilots violated Nef's property on the Orokin ruins. Save them from themselves."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusCullJobResource": {
-                      "it": "Allontana la sicurezza Corpus, poi ruba le loro riserve di minerali.",
-                      "en": "Take Corpus security away, then steal their mineral reserves."},
+                       "it": "Allontana la sicurezza Corpus, poi ruba le loro riserve di minerali.",
+                       "en": "Take Corpus security away, then steal their mineral reserves."},
                    "/Lotus/Types/Gameplay/Venus/Jobs/VenusWetworkJobSpy": {
-                      "it": "Distruggi lo shuttle di un bersaglio Corpus di alto valore.",
-                      "en": "Destroy the shuttle of a high-value Corpus target."},
+                       "it": "Distruggi lo shuttle di un bersaglio Corpus di alto valore.",
+                       "en": "Destroy the shuttle of a high-value Corpus target."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosGrnSurvivorBounty": {
-                      "it": "Una squadra Grineer arenata su Deimos ha attivato il segnale di soccorso. Rintracciali e "
-                            "vedi cosa puoi fare per aiutarli",
-                      "en": "A squad of Grineer soldiers stranded on Deimos have activated their SOS beacon. Track "
-                            "them down and see what you can do to help."},
+                       "it": "Una squadra Grineer arenata su Deimos ha attivato il segnale di soccorso. Rintracciali e "
+                             "vedi cosa puoi fare per aiutarli",
+                       "en": "A squad of Grineer soldiers stranded on Deimos have activated their SOS beacon. Track "
+                             "them down and see what you can do to help."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosExcavateBounty": {
-                      "it": "Cerca preziosi campioni di nucleo geologici su Deimos",
-                      "en": "Search Deimos for valuable geological core samples."},
+                       "it": "Cerca preziosi campioni di nucleo geologici su Deimos",
+                       "en": "Search Deimos for valuable geological core samples."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessExcavateBounty": {
-                      "it": "Ci sono risorse che aspettano solo di essere raccolte appena sotto la \"pelle\" "
-                            "d'Infestazione che copre Deimos. Scava verso la vittoria!",
-                      "en": "There are resources for the taking just beneath \"skin\" of the infestation covering "
-                            "Deimos. Dig for Victory! "},
+                       "it": "Ci sono risorse che aspettano solo di essere raccolte appena sotto la \"pelle\" "
+                             "d'Infestazione che copre Deimos. Scava verso la vittoria!",
+                       "en": "There are resources for the taking just beneath \"skin\" of the infestation covering "
+                             "Deimos. Dig for Victory! "},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAssassinateBounty": {
-                      "it": "Una potente entità Infested sta terrorizzando le squadre su Deimos. Trovala e affrontala.",
-                      "en": "A powerful Infested entity has been terrorizing teams out  in Deimos. Find it and deal "
-                            "with it."},
+                       "it": "Una potente entità Infested sta terrorizzando le squadre su Deimos. Trovala e affrontala.",
+                       "en": "A powerful Infested entity has been terrorizing teams out  in Deimos. Find it and deal "
+                             "with it."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosCrpSurvivorBounty": {
-                      "it": "Aiuta un agente Corpus bloccato con la sua missione che consiste nel portare campioni "
-                            "Infested agli Entrati per la scienza!... o per Profitto?",
-                      "en": "Help a stranded Corpus agent with his mission to bring Infested samples to Entrati for "
-                            "science!... or Profit?"},
+                       "it": "Aiuta un agente Corpus bloccato con la sua missione che consiste nel portare campioni "
+                             "Infested agli Entrati per la scienza!... o per Profitto?",
+                       "en": "Help a stranded Corpus agent with his mission to bring Infested samples to Entrati for "
+                             "science!... or Profit?"},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosPurifyBounty": {
-                      "it": "Dai la caccia a esemplari anomali dentro il bioma di Deimos.",
-                      "en": "Hunt down anomalous samples in the Deimos biome"},
+                       "it": "Dai la caccia a esemplari anomali dentro il bioma di Deimos.",
+                       "en": "Hunt down anomalous samples in the Deimos biome"},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosKeyPiecesBounty": {
-                      "it": "Molte casse di risorse giacciono abbandonate e non rivendicate su Deimos, trovale e "
-                            "impossessatene.",
-                      "en": "Many resource caches lie abandoned and unclaimed on Deimos, find them and they are yours"},
+                       "it": "Molte casse di risorse giacciono abbandonate e non rivendicate su Deimos, trovale e "
+                             "impossessatene.",
+                       "en": "Many resource caches lie abandoned and unclaimed on Deimos, find them and they are yours"},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosAreaDefenseBounty": {
-                      "it": "Stiamo cercando di rafforzare la nostra posizione su Deimos. Ci sono vecchie basi perse "
-                            "a causa dell'Infestazione che dobbiamo recuperare.",
-                      "en": "We are trying to regain a foothold out in Deimos. There are old bases lost to "
-                            "Infestation that we need to reclaim."},
+                       "it": "Stiamo cercando di rafforzare la nostra posizione su Deimos. Ci sono vecchie basi perse "
+                             "a causa dell'Infestazione che dobbiamo recuperare.",
+                       "en": "We are trying to regain a foothold out in Deimos. There are old bases lost to "
+                             "Infestation that we need to reclaim."},
                    "/Lotus/Types/Gameplay/InfestedMicroplanet/Jobs/DeimosEndlessPurifyBounty": {
-                      "it": "I manufatti di Deimos hanno una domanda molto alta. Recuperane più che puoi.",
-                      "en": "Deimos artifacts are always in demand. Bring back as many as you can."},
+                       "it": "I manufatti di Deimos hanno una domanda molto alta. Recuperane più che puoi.",
+                       "en": "Deimos artifacts are always in demand. Bring back as many as you can."},
                    "/Lotus/Types/Gameplay/Eidolon/Jobs/Narmer/AssassinateBountyAss": {
                        "it": "I Narmer sono su di giri. Hanno appena promosso un seguace al grado di comandante. Vai "
                              "e degradalo a morto",

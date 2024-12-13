@@ -203,6 +203,15 @@ SEASON_CHALLENGE = {
         "Potenziamento", "Installa un Mod Potenziamento sul tuo Warframe", 1000),
     "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyToppingOffTheTank": (
         "Serbatoio Pieno", "Difendi con successo una Scavatrice evitando che esaurisca l'energia", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyHelpingHand": (
+        "Mano Amica", "Salva un animale su Duviri", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailySalutations": (
+        "Saluti", "Fai visita ad Acrithis su Duviri", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyYourMove": (
+        "Tocca a Te", "Termina una partita di Komi su Duviri", 1000),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonDailyFeedMeMore": (
+        "Nutrimi di Più", "Alimenta il Maw a Duviri", 1000),
+
 
     # WEEKLY
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteInvasionMissions": (
@@ -302,6 +311,37 @@ SEASON_CHALLENGE = {
       "In Alto", "Completa 3 missioni Marea Void", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyZarimanBountyHunter": (
       "Cacciatore di Taglie Zariman", "Completa 4 Taglie differenti sulla Zariman", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRailjackHijackDestroyThree": (
+        "Fuoco Amico", "Distruggi 3 caccia nemici mentre piloti un trasporto armato dirottato", 4500),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonWeeklyRequiemTotem": (
+        "Obelisco Antico", "Attiva 3 Obelischi Requiem su Cambion Drift", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyRequiemTotem": (
+        "Obelisco Antico", "Attiva 3 Obelischi Requiem su Cambion Drift", 4500),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonWeeklySolveCiphers": ("Hacker", "Hackera 10 console", 4500),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonWeeklyOpenLockers": ("Cleptomane", "Apri 30 Armadietti", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyOpenLockers": ("Cleptomane", "Apri 30 Armadietti", 4500),
+    "/Lotus/Types/Challenges/Seasons/Daily/SeasonWeeklyCollectHundredResources": (
+        "Collezionista", "Raccogli 4000 Risorse", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySolveCiphers": ("Hacker", "Hackera 10 console", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyKillEnemiesWithHeadshots":
+        ("Non un Colpo d'Avvertimento", "Uccidi 100 nemici con un colpo alla testa", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyFinelyTuned":
+        ("Musica Maestro", "Suona 3 canzoni Shawzin differenti su Duviri", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyBeastSlayer":
+        ("Sterminatore di Bestie", "Sconfiggi l'Orowyrm", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklySkeletonsInTheCloset":
+        ("Scheletri nell'Armadio", "Uccidi 50 nemici Dax su Duviri", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyHorsingAround":
+        ("Prendere il Volo", "Vola con il tuo Kathe per 1500 metri", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollector":
+        ("Collezionista", "Raccogli 4.000 risorse", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollectHundredResources":
+        ("Collezionista", "Raccogli 100 risorse su Duviri", 4500),
+
+#WEEKLY:
+#I Decree: Collect 10 Decrees in Duviri
+#Collector: Collect 100 resources from Duviri
+
 
     # WEEKLY ELITE
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus": (

@@ -2,7 +2,8 @@
 from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
-from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAvailability, PrimeVaultAvailabilities
+from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAvailability, PrimeVaultAvailabilities, \
+    HiddenPlatformsType
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import bool_to_yes_no
@@ -83,7 +84,8 @@ class GeneralInfoWidget():
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
         dtls_active_text = translate("generalWidget", "DTLSActivated") + ": " + bool_to_yes_no(dtls)
         if (len(sentient_anomalies) > 2 and "sfn" in sentient_anomalies):
-            sentient_anomalies_node = "CrewBattleNode" + sentient_anomalies.split("sfn\":")[1].split("}")[0]
+            partial_node = sentient_anomalies.split("sfn\":")[1]
+            sentient_anomalies_node = "CrewBattleNode" + partial_node.split(",")[0]
         else:
             sentient_anomalies_node = "/Lotus/Types/Keys/SortieBossKeyPhorid"
         anomalies_text = translate("generalWidget", "sentientAnomalies") + ": " + get_node(sentient_anomalies_node)[0]
@@ -95,7 +97,7 @@ class GeneralInfoWidget():
         self.SentientAnomalies.setText(anomalies_text)
 
     def parse_featured_dojo(self, data: FeaturedGuilds) -> None:
-        guild = ["", "", "", "", ""]
+        guild = []
         if (data):
             for dojo in data:
                 dojo_id = dojo['_id']['$oid']
@@ -105,36 +107,40 @@ class GeneralInfoWidget():
                 tier = int(dojo['Tier'])
                 name = dojo['Name']
                 emblem_active = dojo['Emblem'] if 'Emblem' in dojo else False
-                guild[tier - 1] = (name, dojo_id, alliance_id, emblem_active)
+                hidden_platform = dojo['HiddenPlatforms'] if 'HiddenPlatforms' in dojo else None
+                guild.append((name, dojo_id, alliance_id, emblem_active, tier, hidden_platform))
             self.set_featured_dojo(guild)
 
-    def set_featured_dojo(self, dojo:  list[tuple[str, str, str, bool]]) -> None:
+    def set_featured_dojo(self, dojo:  list[tuple[str, str, str, bool, int, HiddenPlatformsType]]) -> None:
         data = tooltip = ""
 
-        if (dojo[0] != ''):
-            data += translate("generalWidget", "tier1") + ": " + dojo[0][0] + "\n"
-            tooltip += translate("generalWidget", "tier1Id") + ": " + dojo[0][1]
-            tooltip += build_dojo_tooltip_line(dojo[0][1], dojo[0][2], dojo[0][3])
+        for elem in dojo:
+            tier = elem[4] % 5
 
-        if (dojo[1] != ''):
-            data += translate("generalWidget", "tier2") + ": " + dojo[1][0] + "\n"
-            tooltip += translate("generalWidget", "tier2Id") + ": " + dojo[1][1]
-            tooltip += build_dojo_tooltip_line(dojo[1][1], dojo[1][2], dojo[1][3])
+            if (tier == 0):
+                data += translate("generalWidget", "tier1") + ": " + elem[0] + "\n"
+                tooltip += translate("generalWidget", "tier1Id") + ": " + elem[1]
+                tooltip += build_dojo_tooltip_line(elem[1], elem[2], elem[3], elem[5])
 
-        if (dojo[2] != ''):
-            data += translate("generalWidget", "tier3") + ": " + dojo[2][0] + "\n"
-            tooltip += translate("generalWidget", "tier3Id") + ": " + dojo[2][1]
-            tooltip += build_dojo_tooltip_line(dojo[2][1], dojo[2][2], dojo[2][3])
+            if (tier == 1):
+                data += translate("generalWidget", "tier2") + ": " + elem[0] + "\n"
+                tooltip += translate("generalWidget", "tier2Id") + ": " + elem[1]
+                tooltip += build_dojo_tooltip_line(elem[1], elem[2], elem[3], elem[5])
 
-        if (dojo[3] != ''):
-            data += translate("generalWidget", "tier4") + ": " + dojo[3][0] + "\n"
-            tooltip += translate("generalWidget", "tier4Id") + ": " + dojo[3][1]
-            tooltip += build_dojo_tooltip_line(dojo[3][1], dojo[3][2], dojo[3][3])
+            if (tier == 2):
+                data += translate("generalWidget", "tier3") + ": " + elem[0] + "\n"
+                tooltip += translate("generalWidget", "tier3Id") + ": " + elem[1]
+                tooltip += build_dojo_tooltip_line(elem[1], elem[2], elem[3], elem[5])
 
-        if (dojo[4] != ''):
-            data += translate("generalWidget", "tier5") + ": " + dojo[4][0]
-            tooltip += translate("generalWidget", "tier5Id") + ": " + dojo[4][1]
-            tooltip += build_dojo_tooltip_line(dojo[4][1], dojo[4][2], dojo[4][3])
+            if (tier == 3):
+                data += translate("generalWidget", "tier4") + ": " + elem[0] + "\n"
+                tooltip += translate("generalWidget", "tier4Id") + ": " + elem[1]
+                tooltip += build_dojo_tooltip_line(elem[1], elem[2], elem[3], elem[5])
+
+            if (tier == 4):
+                data += translate("generalWidget", "tier5") + ": " + elem[0] + "\n"
+                tooltip += translate("generalWidget", "tier5Id") + ": " + elem[1]
+                tooltip += build_dojo_tooltip_line(elem[1], elem[2], elem[3], elem[5])
 
         self.FeaturedDojo.setText(data)
         self.FeaturedDojo.setToolTip(tooltip)
@@ -161,7 +167,6 @@ class GeneralInfoWidget():
         data += translate("generalWidget", "vault2") + ": " + str(vault_available[2]) + "\n"
         data += translate("generalWidget", "vault3") + ": " + str(vault_available[3]) + "\n"
         data += translate("generalWidget", "vault4") + ": " + str(vault_available[4])
-        # data += translate("generalWidget", "vault5") + ": " + str(vault_available[5]) # Vault Nova e Mag Prime
         self.PrimeVault.setText(data)
 
     def reset_prime_access(self) -> None:
@@ -169,11 +174,20 @@ class GeneralInfoWidget():
         self.PrimeVault.setText("N/D")
 
 
-def build_dojo_tooltip_line(dojo_id: str, alliance_id: str, has_emblem: bool) -> str:
+def build_dojo_tooltip_line(dojo_id: str, alliance_id: str, has_emblem: bool, platform: HiddenPlatformsType) -> str:
     tooltip = " ("
     if (alliance_id is not None):
         tooltip = " (" + translate("generalWidget", "guildAllianceId") + " " + alliance_id + ", "
     else:
         tooltip += dojo_id + " " + translate("generalWidget", "noAlliance") + ", "
-    tooltip += translate("generalWidget", "hasEmblem") + ": " + bool_to_yes_no(has_emblem) + ")\n"
+    tooltip += translate("generalWidget", "hasEmblem") + ": " + bool_to_yes_no(has_emblem)
+    if (platform is not None):
+        tooltip += ","
+        cross_platform = False if ('PLATFORM_CROSS_PLATFORM' not in platform) else platform['PLATFORM_CROSS_PLATFORM']
+        ios = False if ('PLATFORM_IOS' not in platform) else platform['PLATFORM_IOS']
+        switch = False if ('PLATFORM_SWITCH' not in platform) else platform['PLATFORM_SWITCH']
+        tooltip += translate("generalWidget", "crossPlatform") + ": " + bool_to_yes_no(cross_platform)
+        tooltip += ", " + translate("generalWidget", "ios") + ": " + bool_to_yes_no(ios)
+        tooltip += ", " + translate("generalWidget", "switch") + ": " + bool_to_yes_no(switch)
+    tooltip += ")\n"
     return tooltip

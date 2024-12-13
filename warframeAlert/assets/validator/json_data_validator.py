@@ -857,7 +857,9 @@ syndicate_schema = {
                              "NecraloidSyndicate", "RadioLegionIntermission4Syndicate", "ZarimanSyndicate",
                              "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
-                             "RadioLegionIntermission9Syndicate", "EntratiLabSyndicate"]
+                             "RadioLegionIntermission9Syndicate", "RadioLegionIntermission10Syndicate",
+                             "RadioLegionIntermission11Syndicate",
+                             "EntratiLabSyndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -1093,6 +1095,7 @@ goals_schema = {
                 "ClampNodeScores": {"type": "boolean"},
                 "Bounty": {"type": "boolean"},
                 "ToolTip": {"type": "string"},
+                "ItemType": {"type": "string"},
                 "ScoreLocTag": {"type": "string"},
                 "ScoreMaxTag": {"type": "string"},
                 "ScoreVar": {"type": "string"},
@@ -1116,7 +1119,7 @@ goals_schema = {
                 "ScoreTagBlocksGuildTierChanges": {"type": "boolean"},
                 "RewardNode": {"type": "string"},
                 "ClanGoal": {"type": "array",
-                             "items": {"type": "string"}},
+                             "items": {"type": "integer"}},
                 "VictimNode": {"type": "string"},
                 "Transmission": {"type": "string"},
                 "OptionalInMission": {"type": "boolean"},
@@ -1504,6 +1507,7 @@ alerts_schema = {
                         }
                     }
                 },
+                "Icon": {"type": "string"},
                 "Tag": {"type": "string"},
                 "ForceUnlock": {"type": "boolean"},
                 "MissionInfo": {
@@ -1521,6 +1525,8 @@ alerts_schema = {
                         "maxWaveNum": {"type": "integer"},
                         "nightmare": {"type": "boolean"},
                         "difficulty": {"type": "integer"},
+                        "seed": {"type": "integer"},
+                        "questReq": {"type": "string"},
                         "missionReward": {
                             "type": "object",
                             "properties": {
@@ -1555,6 +1561,10 @@ alerts_schema = {
                                     "items": {"type": "string"}
                                 }
                             },
+                        },
+                        "customAdvancedSpawners": {
+                                    "type": "array",
+                                    "items": {"type": "string"}
                         },
                         "descText": {"type": "string"},
                         "extraEnemySpec": {"type": "string"},
@@ -2016,6 +2026,14 @@ featured_guilds_schema = {
                     "type": "object",
                     "properties": {
                         "$oid": {"type": "string"},
+                    },
+                },
+                "HiddenPlatforms": {
+                    "type": "object",
+                    "properties": {
+                        "PLATFORM_CROSS_PLATFORM": {"type": "boolean"},
+                        "PLATFORM_IOS": {"type": "boolean"},
+                        "PLATFORM_SWITCH": {"type": "boolean"},
                     },
                 },
                 "AllianceId": {

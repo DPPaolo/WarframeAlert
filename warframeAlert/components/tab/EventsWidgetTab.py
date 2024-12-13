@@ -380,7 +380,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
 
     # Clan Event Data
     req_node: Tuple[str, str] = ("", "")
-    clan_goal: List[str] = []
+    clan_goal: List[int] = []
     if ('ClanGoal' in event):
         clan_goal = event['ClanGoal']
     if ('RewardNode' in event):

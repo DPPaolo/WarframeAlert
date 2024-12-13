@@ -9,7 +9,8 @@ FACTION = {"FC_GRINEER": "Grineer",
            "FC_SENTIENT": "Sentient",
            "FC_RED_VEIL": "Red Veil",
            "FC_NARMER": "Narmer",
-           "FC_MITW": "Murmur"
+           "FC_MITW": "Murmur",
+           "FC_SCALDRA": "Scaldra"
            }
 
 REGION_MAP = {
@@ -59,6 +60,7 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_PURSUIT": {"it": "Inseguimento", "en": "Pursuit"},
                 "MT_RACE": {"it": "Corsa", "en": "Rush"},
                 "MT_ASSAULT": {"it": "Assalto", "en": "Assault"},
+                "MT_ASCENSION": {"it": "Ascensione", "en": "Ascension"},
                 "MT_PURIFY": {"it": "Recupero Infested", "en": "Infested Salvage"},
                 "MT_RAID": {"it": "Raid", "en": "Raid"},
                 "MT_SALVAGE": {"it": "Recupero", "en": "Recovery"},
@@ -367,6 +369,8 @@ NODE_NAME_IT = {
     "SolNode720": ("Testudo", "Deimos"),
     "SolNode721": ("Testudo", "Armatus"),
 
+    "SolNode723": ("Brutus", "Urano"),
+
     "SolNode740": ("Ropalolyst", "Giove"),
     "SolNode741": ("Koro", "Fortezza Kuva"),
     "SolNode742": ("Nabuk", "Fortezza Kuva"),
@@ -572,7 +576,16 @@ NODE_NAME_IT = {
 
     "TennoConHUB1": ("Stazione TennoCon", "Terra"),
     "TennoConHUB2": ("Stazione TennoCon", "Terra"),
-    "TennoConBHUB6": ("Stazione TennoLive 2020", "Terra"),
+    "TennoConHUB3": ("Stazione TennoCon", "Terra"),
+    "TennoConHUB4": ("Stazione TennoCon", "Terra"),
+    "TennoConHUB5": ("Stazione TennoCon", "Terra"),
+    "TennoConBHUB1": ("Stazione TennoCon di Baro", "Terra"),
+    "TennoConBHUB2": ("Stazione TennoCon di Baro", "Terra"),
+    "TennoConBHUB3": ("Stazione TennoCon di Baro", "Terra"),
+    "TennoConBHUB4": ("Stazione TennoLive", "Terra"),
+    "TennoConBHUB5": ("Stazione TennoLive", "Terra"),
+    "TennoConBHUB6": ("Stazione TennoLive", "Terra"),
+
     "DevStreamHUB7": ("Stazione Dev Stream", "Terra"),
 
     "IronwakeHUB": ("Iron Wake", "Terra"),

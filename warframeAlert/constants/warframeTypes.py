@@ -70,6 +70,7 @@ class AlertMissionInfo(TypedDict):
     exclusiveWeapon: str
     leadersAlwaysAllowed: bool
     advancedSpawners: List[str]
+    customAdvancedSpawners: List[str]
     requiredItems: List[str]
     requiredItemsCounts: int
     consumeRequiredItems: bool
@@ -77,12 +78,15 @@ class AlertMissionInfo(TypedDict):
     vipAgent: str
     fxLayer: str
     icon: str
+    questReq: str
+    seed: int
 
 
 class AlertData(TypedDict, total=False):
     _id: IdType
     Activation: DateType
     Expiry: DateType
+    Icon: str
     Tag: str
     ForceUnlock: bool
     MissionInfo: AlertMissionInfo
@@ -155,12 +159,19 @@ class Experiment(TypedDict, total=False):
 ExperimentRecommended = List[Experiment]
 
 
+class HiddenPlatformsType(TypedDict, total=False):
+    PLATFORM_CROSS_PLATFORM: bool
+    PLATFORM_IOS: bool
+    PLATFORM_SWITCH: bool
+
+
 class FeaturedGuild(TypedDict, total=False):
     Name: str
     Tier: int
     Emblem: bool
     OriginalPlatform: int
     _id: IdType
+    HiddenPlatforms: HiddenPlatformsType
     AllianceId: IdType
 
 
@@ -265,6 +276,7 @@ class Goal(TypedDict, total=False):
     ScoreLocTag: str
     ScoreMaxTag: str
     ScoreVar: str
+    ItemType: str
     MissionKeyRotation: List[str]
     MissionKeyName: str
     MissionKeyRotationInterval: int
@@ -280,7 +292,7 @@ class Goal(TypedDict, total=False):
     Best: bool
     ScoreTagBlocksGuildTierChanges: bool
     RewardNode: str
-    ClanGoal: List[str]
+    ClanGoal: List[int]
     RelayReconstruction: int
     VictimNode: str
     Transmission: str

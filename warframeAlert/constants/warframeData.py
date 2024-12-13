@@ -333,6 +333,10 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/BoosterPacks/UncommonArtifactPack": "Pacchetto Mod Falcone",
     "/Lotus/StoreItems/Types/BoosterPacks/PremiumRareArtifactPack": "Pacchetto Mod Drago",
     "/Lotus/StoreItems/Types/StoreItems/SlotItems/TwoSentinelSlotItem": "2 Slot Sentinelle",
+    "/Lotus/StoreItems/Upgrades/Mods/Randomized/RawPistolRandomMod": "Riven Mod Pistola",
+    "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalBoreal": "Archon Shard Azzurro",
+    "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalAmar": "Archon Shard Cremisi",
+    "/Lotus/Types/Gameplay/NarmerSorties/ArchonCrystalNira": "Archon Shard Ambra",
 
 
     # Consumables
@@ -402,6 +406,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/RailJackMiscItems/TitaniumRailJackItem": "Titanium",
     "/Lotus/Types/Gameplay/InfestedMicroplanet/Resources/Necraloids/NecraloidStandingRareItem": "Matrice Animus Orokin",
     "/Lotus/Types/Gameplay/Duviri/Resource/DuviriFractalItem": "Midollo Runico",
+    "/Lotus/Types/Gameplay/JadeShadows/Resources/AscensionEventResourceItem": "Particelle Volatili",
     "/Lotus/Types/Items/MiscItems/NoraWolfCreds": "Wolf Cred",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFourCreds": "Cred Nora's Choice",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFiveCreds": "Cred Mix di Nora Vol. 1",
@@ -624,6 +629,8 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/WeaponSnipersConvertAmmoModExpert": "Primed Sniper Ammo Mutation",
     "/Lotus/StoreItems/Upgrades/Mods/Warframe/Expert/AvatarShieldMaxModExpert": "Primed Redirection",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/PrimedWeaponElectricityDamageMod": "Primed Convulsion",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/PrimedArchwingRifleFireIterationsMod": "Primed Dual Rounds",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/PrimedArchwingDamageOnReloadMod": "Primed Deadly Efficiency",
 
 
     # Emblems
@@ -648,6 +655,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2022EmblemItem": "Emblema Tigre Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2023EmblemItem": "Emblema Coniglio Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/Dragon2024BadgeItem": "Emblema Drago Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/BaroStalkerBadgeItem": "Emblema Despair",
 
 
     # Sigils
@@ -670,6 +678,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/EnergySigilA": "Sigillo Rift",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/ThraxSigil": "Sigillo Prisma Thrax",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/EventSigilScarletSpear": "Sigillo Condrix",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusVinesSigil": "Sigillo Prisma Lotus Bloom",
 
 
     # Glyphs
@@ -695,6 +704,11 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageHarrowAction": "Glifo Harrow in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageOctaviaAction": "Glifo Octavia in Azione",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageIvaraAction": "Glifo Ivara in Azione",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageExcaliburActionProto":
+        "Glifo Excalibur Proto-Armor in Azione",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageBaruukDoanStyle": "Glifo Baruuk Doan - Silhouette",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/TennoCon2024GlyphAlt": "Glifo TennoCon Crt",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageVoidAngelBaro": "Glifo Void Angel",
 
 
     # Skins
@@ -768,6 +782,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Promo/Warframe/PromoParis": "Skin Paris Abra",
     "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/ElixisNikana": "Skin Nikana Elixis",
     "/Lotus/StoreItems/Upgrades/Skins/Events/InfQuantaInfestedAladV": "Skin Paracyst Zebra",
+    "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Skins/GaussSentinelSkin": "Skin Sentinella Altra",
 
 
     # Sugatra
@@ -952,6 +967,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/TNWVesoBobbleHead": "Statuetta Noggle: La Nuova Guerra - Veso-R",
     "/Lotus/StoreItems/Types/Items/ShipDecos/OwlOrdisStatue": "Statua Ordis Reificato",
     "/Lotus/StoreItems/Types/Items/ShipDecos/ErraBobbleHead": "Statuetta Noggle: Erra",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/OctaviaBobbleHead": "Statuetta Noggle: Octavia",
     "/Lotus/StoreItems/Types/Items/ShipDecos/DomsFinalDrink": "Claret Invecchiato di DeNas",
     "/Lotus/StoreItems/Types/Items/ShipDecos/OstronHeadStatue": "Danza della Morte Telamon",
     "/Lotus/StoreItems/Types/Items/ShipDecos/BekranZaftBucketBroom": "Equipaggiamento di Bekran Zaft",
@@ -964,6 +980,9 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterB": "Scarabocchio Javi - Ofiuco",
     "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterC": "Scarabocchio Javi - Luminosità",
     "/Lotus/StoreItems/Types/Items/ShipDecos/JavisExperimentsPosterD": "Scarabocchio Javi - Genoma",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/SummerGameFestPoster": "Display - Protea Dog Days",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/RathuumEventPoster": "Display - Rathuum",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCleaningDroneBeachcomber": "Drone Domestico Beachcomber",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",
@@ -982,10 +1001,12 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Game/Projections/T2VoidProjectionAlertSarynPrimeBronze": "Reliquia Meso S9",
     "/Lotus/Types/Game/Projections/T3VoidProjectionAlertSarynPrimeBronze": "Reliquia Neo S10",
     "/Lotus/Types/Game/Projections/T4VoidProjectionAlertSarynPrimeBronze": "Reliquia Axi N6",
+    "/Lotus/StoreItems/Types/Game/Projections/T4VoidProjectionBaroAkmagnusPrimeBronze": "Reliquia Axi M5",
 
 
     # Emoticons
     "/Lotus/StoreItems/Types/Items/Emotes/BaroEmote": "Positura Ki'Teer",
+    "/Lotus/StoreItems/Types/Items/Emotes/Tennocon2024EmoteAlt": "Emote TennoCon Crt",
 
 
     # Captura
@@ -1004,5 +1025,10 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Game/QuartersWallpapers/BaroWallpaper": "Ki'Teer Stencil",
     "/Lotus/StoreItems/Types/Game/ActionFigureDioramas/EmpyreanRegionADiorama": "Vignetta Empyrean",
     "/Lotus/StoreItems/Types/Game/QuartersWallpapers/LavosAlchemistWallpaper": "Scarabocchi di Javi",
+
+    # Others
+    "/Lotus/StoreItems/Types/Items/SongItems/LotusEatersSongItem": "Musica Divoratori di Lotus",
+    "/Lotus/StoreItems/Types/Items/SongItems/AbyssofDagathSongItem": "Musica Abisso di Dagath",
+    "/Lotus/StoreItems/Types/Items/SongItems/EmpyreanSongItem": "Musica Empyrean"
 
 }
