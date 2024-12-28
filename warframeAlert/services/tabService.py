@@ -149,6 +149,7 @@ class TabService(QtCore.QObject):
         self.news_tab.update_global_upgrades(json_data['GlobalUpgrades'])
         self.event_tab.update_events(json_data['Goals'], json_data['ConstructionProjects'])
         self.other_tab.update_hub_event(json_data['HubEvents'])
+        self.weekly_tab.update_calendar_season(json_data['KnownCalendarSeasons'])
         self.invasion_tab.update_invasion(json_data['Invasions'])
         self.other_tab.update_simaris_target(json_data['LibraryInfo'])
         self.weekly_tab.update_lite_sortie(json_data['LiteSorties'])

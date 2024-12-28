@@ -1,6 +1,8 @@
 SOURCES      = warframeAlert/components/common/Acolyte.py \
                warframeAlert/components/common/Alert.py \
                warframeAlert/components/common/BountyBox.py \
+               warframeAlert/components/common/CalendarSeasonBox.py \
+               warframeAlert/components/common/CalendarDayBox.py \
                warframeAlert/components/common/CircuitBox.py \
                warframeAlert/components/common/ClanEvent.py \
                warframeAlert/components/common/Countdown.py \

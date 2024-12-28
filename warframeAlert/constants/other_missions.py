@@ -447,3 +447,71 @@ WEEKLY_MISSION_DESC = {
         "en": ("Help Clem", "EarthHUB", "Clem Clone Blueprint")
     }
 }
+
+SEASON_1999 = {
+    "CST_WINTER": {"it": "Inverno", "en": "Winter"},
+    "CST_SPRING": {"it": "Primavera", "en": "Spring"},
+    "CST_SUMMER": {"it": "Estate", "en": "Summer"},
+    "CST_AUTUMN": {"it": "Autunno", "en": "Autumn"},
+}
+
+SEASON_1999_TYPE = {
+    "CET_CHALLENGE": {"it": "Cose da Fare", "en": "To Do"},
+    "CET_UPGRADE": {"it": "Modificatore", "en": "Overrides"},
+    "CET_REWARD": {"it": "Grande Premio", "en": "Big Rewards"},
+    "CET_PLOT": {"it": "Compleanno", "en": "Birthday"},
+}
+
+SEASON_1999_TODO = {
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesEasy": {
+        "it": "Uccidi 250 Truppe Scaldra", "en": "Kill 250 Scaldra Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesEasy": {
+        "it": "Uccidi 250 Techrot", "en": "Kill 250 Techrot Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithMeleeMedium": {
+        "it": "Uccidi 300 Techrot con armi Corpo a Corpo",
+        "en": "Kill 300 Techrot Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithAbilitiesMedium": {
+        "it": "Uccidi 300 nemici con le abilità",
+        "en": "Kill 300 enemies with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithAbilitiesHard": {
+        "it": "Uccidi 500 Truppe Scaldra con le abilità",
+        "en": "Kill 500 Scaldra Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsHard": {
+        "it": "Distruggi 300 Contenitori",
+        "en": "Destroy 300 containers"},
+}
+
+SEASON_1999_UPGRADE = {
+    "/Lotus/Upgrades/Calendar/EnergyOrbToAbilityRange": {
+        "it": "Al raccoglimento dell'energia: Portata Abilità +10% per 10 secondi",
+        "en": "On Energy Pickup increase Ability Range by 10% for 10s"},
+    "/Lotus/Upgrades/Calendar/ElectricStatusDamageAndChance": {
+        "it": "+25% Danno Effetto e Probabilità Effetto Elettricità a tutte le armi",
+        "en": "Add 25% Status Damage and Electricity Status Chance to all weapons"},
+    "/Lotus/Upgrades/Calendar/EnergyRestoration": {
+        "it": "Aumenta la rigenerazione dell'energia di 2/s",
+        "en": "Increase energy restoration by 2/s"},
+    "/Lotus/Upgrades/Calendar/BlastEveryXShots": {
+        "it": "Ogni 10° colpo aggiunge 10 cariche esplosione al colpo",
+        "en": "Every 10th shot adds 10 Blast stacks on hit"},
+    "/Lotus/Upgrades/Calendar/MagnitizeWithinRangeEveryXCasts": {
+        "it": "Ogni 5° abilità applica Effetto Magnetico ad un nemico di fronte a te entro 50 metri",
+        "en": "Every 5th ability cast applies a Magnetic Status Effect to an enemy in front of you within 50m"},
+    "/Lotus/Upgrades/Calendar/GenerateOmniOrbsOnWeakKill": {
+        "it": "Le uccisioni nei punti deboli hanno il 25% di probabilità di generare una sfera Universale",
+        "en": "Weakpoint kills have a 25% chance to generate a Universal Orb"},
+    "/Lotus/Upgrades/Calendar/GasChanceToPrimaryAndSecondary": {
+        "it": "Aggiunge 25% probabilità effetto Gas alle armi primarie e secondarie",
+        "en": "Add 25% Gas Status Chance to Primary and Secondary Weapons"},
+    "/Lotus/Upgrades/Calendar/AbilityStrength": {
+        "it": "Aumenta la Potenza Abilità +25%",
+        "en": "Increase Ability Strength +25%"},
+    "/Lotus/Upgrades/Calendar/MeleeCritChance": {
+        "it": "+20% Probabilità Critico Corpo a Corpo (x2 per Attacchi Pesanti)",
+        "en": "+20% Melee Critical Chance (x2 for Heavy Attacks)"},
+}
+
+SEASON_1999_DIALOG_BIRTHDAY = {
+    "AmirBirthdayConvo": "Amir"
+}
+

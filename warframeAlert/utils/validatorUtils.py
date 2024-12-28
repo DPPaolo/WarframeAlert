@@ -19,6 +19,7 @@ def check_json_data(json_data: JsonData) -> None:
     validate_global_upgrades(json_data['GlobalUpgrades'])
     validate_goals(json_data['Goals'])
     validate_hub_events(json_data['HubEvents'])
+    validate_known_calendar_season(json_data['KnownCalendarSeasons'])
     validate_in_game_market(json_data['InGameMarket'])
     validate_invasions(json_data['Invasions'])
     validate_library_info(json_data['LibraryInfo'])
@@ -102,6 +103,10 @@ def validate_in_game_market(json_data: InGameMarket) -> None:
 
 def validate_invasions(json_data: Invasions) -> None:
     validate(instance={'Invasions': json_data}, schema=invasion_schema)
+
+
+def validate_known_calendar_season(json_data: CalendarSeasons) -> None:
+    validate(instance={'KnownCalendarSeasons': json_data}, schema=known_calendar_season)
 
 
 def validate_library_info(json_data: LibraryInfo) -> None:

@@ -8,7 +8,8 @@ from warframeAlert.constants.alerts import ALERT_ENEMY, ALERT_INFO, ALERT_WEAPON
 from warframeAlert.constants.events import ACCOLYTE_NAME, TASK_TYPE, UPGRADE_TYPE
 from warframeAlert.constants.maps import NODE_NAME_IT, FACTION, REGION_MAP, MISSION_TYPE
 from warframeAlert.constants.other_missions import SIMARIS_TARGET, SEASON_CHALLENGE, SORTIE_BOSS, SORTIE_MODIFIER, \
-    INVASION_LOCTAG, WEEKLY_MISSION_DESC
+    INVASION_LOCTAG, WEEKLY_MISSION_DESC, SEASON_1999, SEASON_1999_TYPE, SEASON_1999_TODO, SEASON_1999_UPGRADE, \
+    SEASON_1999_DIALOG_BIRTHDAY
 from warframeAlert.constants.pvp import PVP_MISSION_TYPE, PVP_CHALLENGE_TYPE, PVP_CHALLENGE_DESC, PVP_ALT_DESC
 from warframeAlert.constants.syndicates import SYNDICATE_NAME, BOUNTY_JOB_NAME, BOUNTY_JOB_DESC, BOUNTY_STAGE, \
     SYNDICATE_RANK_NAME
@@ -419,3 +420,49 @@ def get_weekly_mission_desc(mission_type: str) -> Tuple[str, str, str]:
         print(translate("gameTranslation", "unknownWeeklyMissionDesc") + ": " + mission_type)
         LogHandler.err(translate("gameTranslation", "unknownWeeklyMissionDesc") + ": " + mission_type)
         return (mission_type, "????", "????")
+
+
+def get_1999_season(season: str) -> str:
+    season = season.replace("\n", "")
+    if (season in SEASON_1999):
+        return SEASON_1999[season][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknown1999Season") + ": " + season)
+        LogHandler.err(translate("gameTranslation", "unknown1999Season") + ": " + season)
+        return season
+
+def get_1999_day_event_type(event: str) -> str:
+    event = event.replace("\n", "")
+    if (event in SEASON_1999_TYPE):
+        return SEASON_1999_TYPE[event][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknown1999DayEvent") + ": " + event)
+        LogHandler.err(translate("gameTranslation", "unknown1999DayEvent") + ": " + event)
+        return event
+
+def get_1999_day_todo(todo: str) -> str:
+    todo = todo.replace("\n", "")
+    if (todo in SEASON_1999_TODO):
+        return SEASON_1999_TODO[todo][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknown1999DayToDo") + ": " + todo)
+        LogHandler.err(translate("gameTranslation", "unknown1999DayToDo") + ": " + todo)
+        return todo
+
+def get_1999_day_upgrade(upgrade: str) -> str:
+    upgrade = upgrade.replace("\n", "")
+    if (upgrade in SEASON_1999_UPGRADE):
+        return SEASON_1999_UPGRADE[upgrade][OptionsHandler.get_option("Language", str)]
+    else:
+        print(translate("gameTranslation", "unknown1999DayUpgrade") + ": " + upgrade)
+        LogHandler.err(translate("gameTranslation", "unknown1999DayUpgrade") + ": " + upgrade)
+        return upgrade
+
+def get_1999_day_birthday(dialog: str) -> str:
+    dialog = dialog.replace("\n", "")
+    if (dialog in SEASON_1999_DIALOG_BIRTHDAY):
+        return SEASON_1999_DIALOG_BIRTHDAY[dialog]
+    else:
+        print(translate("gameTranslation", "unknown1999DayDialog") + ": " + dialog)
+        LogHandler.err(translate("gameTranslation", "unknown1999DayDialog") + ": " + dialog)
+        return dialog

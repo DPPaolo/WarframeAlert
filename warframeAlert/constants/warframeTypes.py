@@ -355,6 +355,29 @@ class Invasion(TypedDict, total=False):
 
 Invasions = List[Invasion]
 
+class CalendarSeasonDayEvent(TypedDict, total=False):
+    reward: str
+    type: str
+    upgrade: str
+    dialogueName: str
+    dialogueConvo: str
+    challenge: str
+
+class CalendarSeasonDay(TypedDict, total=False):
+    day: int
+    events: List[CalendarSeasonDayEvent]
+
+class CalendarSeason(TypedDict, total=False):
+    Activation: DateType
+    Expiry: DateType
+    Days: List[CalendarSeasonDay]
+    Season: str
+    UpgradeAvaliabilityRequirements: List[str]
+    Version: int
+    YearIteration: int
+
+CalendarSeasons = List[CalendarSeason]
+
 
 class LiteSortieMission(TypedDict, total=False):
     missionType: str
@@ -573,6 +596,33 @@ class SyndicateMission(TypedDict, total=False):
 SyndicateMissions = List[SyndicateMission]
 
 
+class TempPgrData(TypedDict, total=False):
+    ts: int
+    en: str
+    fr: str
+    it: str
+    de: str
+    es: str
+    pt: str
+    ru: str
+    pl: str
+    uk: str
+    tr: str
+    ja: str
+    zh: str
+    ko: str
+    tc: str
+    th: str
+
+class TempData(TypedDict, total=False):
+    cavabegin: int
+    PurchasePlatformLockEnabled: bool
+    tcsn: bool
+    pgr: TempPgrData
+    ennnd: bool
+    mbrt: bool
+    sfn: int
+
 class TwitchPromo(TypedDict, total=False):
     startDate: DateType
     endDate: DateType
@@ -635,6 +685,7 @@ class JsonData(TypedDict, total=False):
     HubEvents: HubEvents
     InGameMarket: InGameMarket
     Invasions: Invasions
+    KnownCalendarSeasons: CalendarSeasons
     LibraryInfo: LibraryInfo
     LiteSorties: LiteSorties
     MobileVersion: str
@@ -652,7 +703,7 @@ class JsonData(TypedDict, total=False):
     Sorties: Sorties
     SyndicateMissions: SyndicateMissions
     Time: int
-    Tmp: str
+    Tmp: TempData
     TwitchPromos: TwitchPromos
     Version: int
     VoidStorms: VoidStorms

@@ -25,6 +25,7 @@ all_json_schema = {
                 "HubEvents": {"type": "array"},
                 "InGameMarket": {"type": "object"},
                 "Invasions": {"type": "array"},
+                "KnownCalendarSeasons": {"type": "array"},
                 "LibraryInfo": {"type": "object"},
                 "LiteSorties": {"type": "array"},
                 "MobileVersion": {"type": "string"},
@@ -59,6 +60,74 @@ all_json_schema = {
         },
     },
 }
+
+known_calendar_season = {
+    "type": "object",
+    "properties": {
+        "KnownCalendarSeasons": {
+            "type": "array",
+            "items": {"$ref": "#/definitions/knownCalendarSeason"},
+        }
+    },
+    "definitions": {
+        "knownCalendarSeason": {
+            "type": "object",
+            "additionalProperties": False,
+            "properties": {
+                "Activation": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Expiry": {
+                    "type": "object",
+                    "properties": {
+                        "$date": {"type": "object"},
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "$numberLong": {"type": "integer"}
+                            }
+                        }
+                    }
+                },
+                "Season": {"type": "string"},
+                "UpgradeAvaliabilityRequirements": {"type": "array",
+                            "items": {"type": "string"}},
+                "Version": {"type": "integer"},
+                "YearIteration": {"type": "integer"},
+                "Days": {"type": "array",
+                            "items": {"type": "object",
+                            "properties": {
+                                "day": {"type": "number"},
+                                "events": {"type": "array",
+                                            "items": {"type": "object",
+                                                        "additionalProperties": False,
+                                                       "properties": {
+                                                            "type": {"type": "string"},
+                                                            "upgrade": {"type": "string"},
+                                                            "challenge": {"type": "string"},
+                                                            "reward": {"type": "string"},
+                                                            "dialogueName": {"type": "string"},
+                                                            "dialogueConvo": {"type": "string"},
+                                                        }
+                                                      }
+                                           }
+                            }
+                          }
+                }
+            }
+        }
+    }
+}
+
 
 endless_xp_item = {
     "type": "object",
@@ -858,7 +927,7 @@ syndicate_schema = {
                              "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
                              "RadioLegionIntermission9Syndicate", "RadioLegionIntermission10Syndicate",
-                             "RadioLegionIntermission11Syndicate",
+                             "RadioLegionIntermission11Syndicate", "HexSyndicate",
                              "EntratiLabSyndicate"]
                 },
                 "Activation": {

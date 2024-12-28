@@ -3,10 +3,11 @@ from typing import List
 
 from PyQt6 import QtWidgets, QtCore, QtGui
 
+from warframeAlert.components.common.CalendarSeasonBox import CalendarSeasonBox
 from warframeAlert.components.common.CircuitBox import CircuitBox
 from warframeAlert.components.common.SortieBox import SortieBox
 from warframeAlert.components.common.WeeklyMission import WeeklyMission, WeeklyMissionType
-from warframeAlert.constants.warframeTypes import LiteSorties, EndlessXpChoicesData
+from warframeAlert.constants.warframeTypes import LiteSorties, EndlessXpChoicesData, CalendarSeasons
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -23,13 +24,16 @@ class WeeklyWidgetTab():
 
         self.arcon_box = SortieBox(True)
         self.circuit_box = CircuitBox()
+        self.calendar_box = CalendarSeasonBox()
 
         self.ArchonWidget = QtWidgets.QWidget()
         self.CircuitWidget = QtWidgets.QWidget()
+        self.CalendarWidget = QtWidgets.QWidget()
         self.OtherWidget = QtWidgets.QWidget()
 
         self.gridArchon = QtWidgets.QGridLayout()
         self.gridCircuit = QtWidgets.QGridLayout()
+        self.gridCalendar = QtWidgets.QGridLayout()
         self.gridOther = QtWidgets.QGridLayout()
 
         self.WeeklyTabber = QtWidgets.QTabWidget()
@@ -42,19 +46,22 @@ class WeeklyWidgetTab():
 
         self.ArchonWidget.setLayout(self.arcon_box.SortieBox)
         self.CircuitWidget.setLayout(self.circuit_box.CircuitGrid)
+        self.CalendarWidget.setLayout(self.calendar_box.CalendarGrid)
         self.OtherWidget.setLayout(self.gridOther)
 
         self.OtherScrollBar.setWidget(self.OtherWidget)
 
         self.WeeklyTabber.insertTab(0, self.ArchonWidget, translate("weeklyWidget", "archon"))
         self.WeeklyTabber.insertTab(1, self.CircuitWidget, translate("weeklyWidget", "circuit"))
-        self.WeeklyTabber.insertTab(2, self.OtherScrollBar, translate("weeklyWidget", "other"))
+        self.WeeklyTabber.insertTab(2, self.CalendarWidget, translate("weeklyWidget", "calendarSeason"))
+        self.WeeklyTabber.insertTab(3, self.OtherScrollBar, translate("weeklyWidget", "other"))
 
         self.gridWeekly = QtWidgets.QGridLayout(self.WeeklyWidget)
         self.gridWeekly.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.gridArchon.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.gridCircuit.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
+        self.gridCalendar.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
         self.gridOther.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
         self.WeeklyWidget.setLayout(self.gridWeekly)
@@ -104,6 +111,36 @@ class WeeklyWidgetTab():
 
         else:
             self.arcon_box.SortieBox.sortie_not_available()
+
+    def update_calendar_season(self, data: CalendarSeasons) -> None:
+        if (OptionsHandler.get_option("Tab/Weekly") == 1):
+            try:
+                self.parse_calendar_season(data)
+            except Exception as er:
+                LogHandler.err(translate("weeklyWidget", "calendarSeasonError") + ": " + str(er))
+                print_traceback(translate("weeklyWidget", "calendarSeasonError") + ": " + str(er))
+                self.calendar_box.calendar_not_available()
+        else:
+            self.calendar_box.calendar_not_available()
+
+    def parse_calendar_season(self, data: CalendarSeasons) -> None:
+        if (data):
+            self.calendar_box.reset_calendar_days()
+            for calendar_season in data:
+                init = calendar_season['Activation']['$date']['$numberLong']
+                end = calendar_season['Expiry']['$date']['$numberLong']
+                season = calendar_season['Season']
+                year_iteration = calendar_season['YearIteration']
+                version = calendar_season['Version']
+                upgrade_requirements = calendar_season['UpgradeAvaliabilityRequirements']
+                days = calendar_season["Days"]
+                self.calendar_box.set_data(init, end[:10], season, year_iteration, version, upgrade_requirements)
+                for day in days:
+                    day_number = day['day']
+                    events = day['events']
+                    self.calendar_box.add_calendar_day(day_number, events)
+        else:
+            self.calendar_box.calendar_not_available()
 
     def parse_other_weekly(self) -> None:
         if (self.gridOther.count() == 0):

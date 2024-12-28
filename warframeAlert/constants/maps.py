@@ -10,7 +10,8 @@ FACTION = {"FC_GRINEER": "Grineer",
            "FC_RED_VEIL": "Red Veil",
            "FC_NARMER": "Narmer",
            "FC_MITW": "Murmur",
-           "FC_SCALDRA": "Scaldra"
+           "FC_SCALDRA": "Scaldra",
+           "FC_TECHROT": "Techrot"
            }
 
 REGION_MAP = {
@@ -82,6 +83,8 @@ MISSION_TYPE = {"MT_SURVIVAL": {"it": "Sopravvivenza", "en": "Survival"},
                 "MT_CORRUPTION": {"it": "Marea Void", "en": "Void Flood"},
                 "MT_ALCHEMY": {"it": "Alchimia", "en": "Alchemy"},
                 "MT_VAULTS": {"it": "Netracelle", "en": "Netracels"},
+                "MT_PVPVE": {"it": "Confronto", "en": "Netracels"},
+                "MT_ENDLESS_CAPTURE": {"it": "Raccolta del Legacyte", "en": "Legacyte Harvest"},
                 }
 
 NODE_NAME_IT = {
@@ -388,6 +391,15 @@ NODE_NAME_IT = {
 
     "SolNode802": ("Carneficina al Santuario", "Sistema Solare"),
 
+    "SolNode850": ("Köbinn West", "Höllvania"),
+    "SolNode851": ("Mischta Ramparts", "Höllvania"),
+    "SolNode852": ("Old Konderuk", "Höllvania"),
+    "SolNode853": ("Mausoleum East", "Höllvania"),
+    "SolNode854": ("Rhu Manor", "Höllvania"),
+    "SolNode855": ("Lower Vehrvod", "Höllvania"),
+    "SolNode856": ("Victory Plaza", "Höllvania"),
+    "SolNode857": ("Vehrvod District", "Höllvania"),
+
     "SolNode901": ("Caduceus", "Mercurio"),
     "SolNode902": ("Montes", "Venere"),
     "SolNode903": ("Erpo", "Terra"),
@@ -593,6 +605,8 @@ NODE_NAME_IT = {
     "ScenarioEventHub5": ("Scarlet Spear", "Terra"),
 
     "ZarimanHub_HUB": ("ChrysaLith", "Zariman"),
+
+    "1999Hub": ("Centro Commerciale Höllvania", "Höllvania"),
 
     "EntratiLabHub_HUB": ("Sanctum Anatomica", "Deimos"),
 
