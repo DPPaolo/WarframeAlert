@@ -6,7 +6,7 @@ from warframeAlert.components.widget.HubWidget import HubWidget
 from warframeAlert.components.widget.RelayStationWidget import RelayStationWidget
 from warframeAlert.components.widget.TwitchPromoWidget import TwitchPromoWidget
 from warframeAlert.constants.warframeTypes import TwitchPromos, PrimeVaultAvailabilities, PrimeAccessAvailability, \
-    NodeOverrides, LibraryInfo, HubEvents, FeaturedGuilds, ExperimentRecommended, DailyDealsData
+    NodeOverrides, LibraryInfo, HubEvents, FeaturedGuilds, ExperimentRecommended, DailyDealsData, TempData
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import commonUtils
 from warframeAlert.utils.logUtils import LogHandler
@@ -48,9 +48,9 @@ class OtherWidgetTab():
             self.OtherTabber.removeTab(self.OtherTabber.indexOf(self.twitchPromoWidget.get_widget()))
 
     def set_other_datas(self, version: int, mob_version: str, world_seed: str,
-                        force_logout_version: int, dtls: bool, sentient_anomalies: str) -> None:
+                        force_logout_version: int, dtls: bool, temp_data: TempData) -> None:
         self.generalWidget.set_other_datas(version, mob_version, world_seed,
-                                           force_logout_version, dtls, sentient_anomalies)
+                                           force_logout_version, dtls, temp_data)
 
     def update_prime_access(self, prime_access: PrimeAccessAvailability,
                             prime_available: PrimeVaultAvailabilities) -> None:

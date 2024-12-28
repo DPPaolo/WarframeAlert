@@ -311,6 +311,7 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Recipes/Components/FormaBlueprint": "Forma (Schema)",
     "/Lotus/StoreItems/Types/Recipes/Components/FormaBlueprint": "Forma (Schema)",
     "/Lotus/Types/Items/MiscItems/Forma": "Forma",
+    "/Lotus/StoreItems/Types/Items/MiscItems/Forma": "Forma",
     "/Lotus/Types/Items/MiscItems/FormaAura": "Forma Aura",
     "/Lotus/StoreItems/Types/Items/MiscItems/FormaAura": "Forma Aura",
     "/Lotus/StoreItems/Types/Recipes/Components/FormaAuraBlueprint": "Forma Aura (Schema)",
@@ -679,6 +680,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/ThraxSigil": "Sigillo Prisma Thrax",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/EventSigilScarletSpear": "Sigillo Condrix",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusVinesSigil": "Sigillo Prisma Lotus Bloom",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusFlamesSigil": "Sigillo Prisma Lotus Flame",
 
 
     # Glyphs
@@ -983,6 +985,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/SummerGameFestPoster": "Display - Protea Dog Days",
     "/Lotus/StoreItems/Types/Items/ShipDecos/RathuumEventPoster": "Display - Rathuum",
     "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCleaningDroneBeachcomber": "Drone Domestico Beachcomber",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/ItzalArchwingBobbleHead": "Statuetta Noggle - Mag con Itzal",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",
@@ -1029,6 +1032,7 @@ ITEM_NAME_IT = {
     # Others
     "/Lotus/StoreItems/Types/Items/SongItems/LotusEatersSongItem": "Musica Divoratori di Lotus",
     "/Lotus/StoreItems/Types/Items/SongItems/AbyssofDagathSongItem": "Musica Abisso di Dagath",
-    "/Lotus/StoreItems/Types/Items/SongItems/EmpyreanSongItem": "Musica Empyrean"
+    "/Lotus/StoreItems/Types/Items/SongItems/WhispersInTheWallLoginSongItem": "Musica Sussurri nelle Mura",
+    "/Lotus/StoreItems/Types/Items/SongItems/ZarimanLoginSongItem": "Musica Angeli della Zarimam",
 
 }

@@ -3,7 +3,7 @@ from PyQt6 import QtWidgets, QtCore, QtGui
 
 from warframeAlert.components.common.Countdown import Countdown
 from warframeAlert.constants.warframeTypes import FeaturedGuilds, PrimeAccessAvailability, PrimeVaultAvailabilities, \
-    HiddenPlatformsType
+    HiddenPlatformsType, TempData
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
 from warframeAlert.utils.commonUtils import bool_to_yes_no
@@ -78,14 +78,14 @@ class GeneralInfoWidget():
         self.EarthTime.start()
 
     def set_other_datas(self, version: int, mob_version: str, world_seed: str,
-                        force_logout: int, dtls: bool, sentient_anomalies: str) -> None:
+                        force_logout: int, dtls: bool, temp_data: TempData) -> None:
         version_text = translate("generalWidget", "fileVersion") + ": " + str(version)
         mobile_version_text = translate("generalWidget", "mobileFileVersion") + ": " + str(mob_version)
         force_logout_text = translate("generalWidget", "forceLogoutVersion") + ": " + bool_to_yes_no(force_logout)
         dtls_active_text = translate("generalWidget", "DTLSActivated") + ": " + bool_to_yes_no(dtls)
-        if (len(sentient_anomalies) > 2 and "sfn" in sentient_anomalies):
-            partial_node = sentient_anomalies.split("sfn\":")[1]
-            sentient_anomalies_node = "CrewBattleNode" + partial_node.split(",")[0]
+
+        if ("sfn" in temp_data):
+            sentient_anomalies_node = "CrewBattleNode" + str(temp_data["sfn"])
         else:
             sentient_anomalies_node = "/Lotus/Types/Keys/SortieBossKeyPhorid"
         anomalies_text = translate("generalWidget", "sentientAnomalies") + ": " + get_node(sentient_anomalies_node)[0]
