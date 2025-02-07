@@ -18,6 +18,8 @@ class CalendarSeasonBox():
         self.Font = QtGui.QFont()
         self.Font.setBold(True)
 
+        self.alerts: dict[str, list[CalendarDayBox]] = {'CalendarsDays': []}
+
         self.SeasonEndTime = Countdown(translate("calendarSeasonBox", "end"))
         self.SeasonLabel = QtWidgets.QLabel("N/D")
 
@@ -76,8 +78,7 @@ class CalendarSeasonBox():
 
     def add_calendar_day(self, day_number: int, events: List[CalendarSeasonDayEvent]) -> None:
         day_box = CalendarDayBox(day_number)
-        self.gridCalendarDays.addLayout(day_box.DayBox,
-                                        self.gridCalendarDays.count(), 0)
+        self.gridCalendarDays.addLayout(day_box.DayBox, self.gridCalendarDays.count(), 0)
 
         first_event = events[0]
         event_type = first_event["type"]
@@ -109,10 +110,13 @@ class CalendarSeasonBox():
             dialogue_convo = third_event['dialogueConvo'] if ('dialogueConvo') in third_event else ""
             day_box.add_third_event(challenge, upgrade, reward, dialogue_name, dialogue_convo)
 
-        self.gridCalendarDays.addLayout(day_box.DayBox,
-                                         self.gridCalendarDays.count(), 0)
+        self.alerts['CalendarsDays'].append(day_box)
 
 
     def reset_calendar_days(self) -> None:
-        for i in range(0, self.gridCalendarDays.count()):
-            remove_widget((self.gridCalendarDays.itemAt(i)).DayBox)
+        i = len(self.alerts['CalendarsDays'])
+        while i > 0:
+            self.alerts['CalendarsDays'][i - 1].hide_events()
+            remove_widget(self.alerts['CalendarsDays'][i - 1].DayBox)
+            del self.alerts['CalendarsDays'][i - 1]
+            i -= 1

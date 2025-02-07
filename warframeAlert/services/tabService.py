@@ -135,7 +135,7 @@ class TabService(QtCore.QObject):
         build_label: str = json_data['BuildLabel']
         game_time: int = json_data['Time']
 
-        # TODO: (if possible) try to parallelize
+        # TODO: (if possible) try to parallelize (import multiprocess)
 
         self.fissure_tab.update_fissure(json_data['ActiveMissions'], json_data['VoidStorms'])
         self.event_tab.update_alert_mission(json_data['Alerts'])

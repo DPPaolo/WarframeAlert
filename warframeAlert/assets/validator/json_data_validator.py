@@ -927,7 +927,7 @@ syndicate_schema = {
                              "RadioLegionIntermission5Syndicate", "RadioLegionIntermission6Syndicate", "KahlSyndicate",
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
                              "RadioLegionIntermission9Syndicate", "RadioLegionIntermission10Syndicate",
-                             "RadioLegionIntermission11Syndicate", "HexSyndicate",
+                             "RadioLegionIntermission11Syndicate", "RadioLegionIntermission12Syndicate", "HexSyndicate",
                              "EntratiLabSyndicate"]
                 },
                 "Activation": {

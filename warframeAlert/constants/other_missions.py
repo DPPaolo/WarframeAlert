@@ -337,6 +337,8 @@ SEASON_CHALLENGE = {
         ("Collezionista", "Raccogli 4.000 risorse", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCollectHundredResources":
         ("Collezionista", "Raccogli 100 risorse su Duviri", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIDecree":
+        ("Decreto", "Colleziona 15 Decreti in una singola sessione di Duviri o Circuito", 4500),
 
 #WEEKLY:
 #I Decree: Collect 10 Decrees in Duviri
@@ -452,7 +454,7 @@ SEASON_1999 = {
     "CST_WINTER": {"it": "Inverno", "en": "Winter"},
     "CST_SPRING": {"it": "Primavera", "en": "Spring"},
     "CST_SUMMER": {"it": "Estate", "en": "Summer"},
-    "CST_AUTUMN": {"it": "Autunno", "en": "Autumn"},
+    "CST_FALL": {"it": "Autunno", "en": "Autumn"},
 }
 
 SEASON_1999_TYPE = {
@@ -463,22 +465,97 @@ SEASON_1999_TYPE = {
 }
 
 SEASON_1999_TODO = {
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesEasy": {
+        "it": "Uccidi 250 Nemici", "en": "Kill 250 Enemies"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesMedium": {
+        "it": "Uccidi 500 Nemici", "en": "Kill 500 Enemies"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesHard": {
+        "it": "Uccidi 1000 Nemici", "en": "Kill 1000 Enemies"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesEasy": {
-        "it": "Uccidi 250 Truppe Scaldra", "en": "Kill 250 Scaldra Units"},
+        "it": "Uccidi 150 Truppe Scaldra", "en": "Kill 150 Scaldra Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesMedium": {
+        "it": "Uccidi 300 Truppe Scaldra", "en": "Kill 300 Scaldra Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesHard": {
+        "it": "Uccidi 500 Truppe Scaldra", "en": "Kill 500 Scaldra Units"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesEasy": {
         "it": "Uccidi 250 Techrot", "en": "Kill 250 Techrot Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesMedium": {
+        "it": "Uccidi 500 Techrot", "en": "Kill 500 Techrot Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesHard": {
+        "it": "Uccidi 750 Techrot", "en": "Kill 750 Techrot Units"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeEasy": {
+        "it": "Uccidi 150 Nemici con armi Corpo a Corpo", "en": "Kill 150 Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeMedium": {
+        "it": "Uccidi 300 Nemici con armi Corpo a Corpo", "en": "Kill 300 Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithMeleeHard": {
+        "it": "Uccidi 500 Nemici con armi Corpo a Corpo", "en": "Kill 500 Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithMeleeEasy": {
+        "it": "Uccidi 150 Techrot con armi Corpo a Corpo",
+        "en": "Kill 150 Techrot Units with Melee Weapons"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithMeleeMedium": {
         "it": "Uccidi 300 Techrot con armi Corpo a Corpo",
         "en": "Kill 300 Techrot Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithMeleeHard": {
+        "it": "Uccidi 500 Techrot con armi Corpo a Corpo",
+        "en": "Kill 500 Techrot Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithMeleeEasy": {
+        "it": "Uccidi 150 Truppe Scaldra con armi Corpo a Corpo",
+        "en": "Kill 150 Scaldra Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithMeleeMedium": {
+        "it": "Uccidi 300 Truppe Scaldra con armi Corpo a Corpo",
+        "en": "Kill 300 Scaldra Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithMeleeHard": {
+        "it": "Uccidi 500 Truppe Scaldra con armi Corpo a Corpo",
+        "en": "Kill 500 Scaldra Units with Melee Weapons"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithAbilitiesEasy": {
+        "it": "Uccidi 300 nemici con le abilità",
+        "en": "Kill 300 enemies with abilities"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithAbilitiesMedium": {
         "it": "Uccidi 300 nemici con le abilità",
         "en": "Kill 300 enemies with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEnemiesWithAbilitiesHard": {
+        "it": "Uccidi 500 nemici con le abilità",
+        "en": "Kill 500 enemies with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithAbilitiesEasy": {
+        "it": "Uccidi 150 Techrot con le abilità",
+        "en": "Kill 150 Techrot Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithAbilitiesMedium": {
+        "it": "Uccidi 300 Techrot con le abilità",
+        "en": "Kill 300 Techrot Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTechrotEnemiesWithAbilitiesHard": {
+        "it": "Uccidi 500 Techrot con le abilità",
+        "en": "Kill 500 Techrot Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithAbilitiesEasy": {
+        "it": "Uccidi 150 Truppe Scaldra con le abilità",
+        "en": "Kill 150 Scaldra Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithAbilitiesMedium": {
+        "it": "Uccidi 300 Truppe Scaldra con le abilità",
+        "en": "Kill 300 Scaldra Units with abilities"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarKillScaldraEnemiesWithAbilitiesHard": {
         "it": "Uccidi 500 Truppe Scaldra con le abilità",
         "en": "Kill 500 Scaldra Units with abilities"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsEasy": {
+        "it": "Distruggi 75 Contenitori",
+        "en": "Destroy 75 containers"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsMedium": {
+        "it": "Distruggi 150 Contenitori",
+        "en": "Destroy 150 containers"},
     "/Lotus/Types/Challenges/Calendar1999/CalendarDestroyPropsHard": {
         "it": "Distruggi 300 Contenitori",
         "en": "Destroy 300 containers"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillTankHard": {
+        "it": "Distruggi 1 Serbatoio",
+        "en": "Destroy 1 tanks"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEximusEasy": {
+        "it": "Uccidi 10 Eximus",
+        "en": "Kill 10 Eximus"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEximusMedium": {
+        "it": "Uccidi 20 Eximus",
+        "en": "Kill 20 Eximus"},
+    "/Lotus/Types/Challenges/Calendar1999/CalendarKillEximusHard": {
+        "it": "Uccidi 30 Eximus",
+        "en": "Kill 30 Eximus"},
+
 }
 
 SEASON_1999_UPGRADE = {
@@ -506,12 +583,90 @@ SEASON_1999_UPGRADE = {
     "/Lotus/Upgrades/Calendar/AbilityStrength": {
         "it": "Aumenta la Potenza Abilità +25%",
         "en": "Increase Ability Strength +25%"},
+    "/Lotus/Upgrades/Calendar/Armor": {
+        "it": "Ottieni +250 Armatura",
+        "en": "Gain +250 Armor"},
+    "/Lotus/Upgrades/Calendar/MagazineCapacity": {
+        "it": "Incrementa la Capienza Caricatore del 25%",
+        "en": "Increase magazine capacity by 25%"},
     "/Lotus/Upgrades/Calendar/MeleeCritChance": {
         "it": "+20% Probabilità Critico Corpo a Corpo (x2 per Attacchi Pesanti)",
         "en": "+20% Melee Critical Chance (x2 for Heavy Attacks)"},
+    "/Lotus/Upgrades/Calendar/MeleeAttackSpeed": {
+        "it": "+25% velocità d'Attacco Corpo a Corpo",
+        "en": "+25% Melee Attack Speed"},
+    "/Lotus/Upgrades/Calendar/CompanionDamage": {
+        "it": "Spettri e compagni guadagnano +250% Danno",
+        "en": "Specters and Companions gain +250% damage"},
+    "/Lotus/Upgrades/Calendar/RadialJavelinOnHeavy": {
+        "it": "Gli attacchi corpo a corpo pesanti attivano un radial javelin con una portata di 3m e\nun danno di " +
+              "1000 che aumentano entrambi con il moltiplicatore combo",
+        "en": "Heavy melee attacks trigger Radial Javelin with 3m range and 1000 damage" +
+              "scaling both with combo multiplier"},
+    "/Lotus/Upgrades/Calendar/SharedFreeAbilityEveryXCasts": {
+        "it": "Ogni 10 abilità usate la successiva non avrà costo in energia per te e i tuoi alleati",
+        "en": "Every 10th ability cast makes the next one free for yourself and allies"},
+    "/Lotus/Upgrades/Calendar/CompanionsRadiationChance": {
+        "it": "Gli attacchi degli spettri e compagni hanno il 25% di probabilità di infliggere status Radiazione",
+        "en": "Attacks from Specters or Companions have a 25% chance to cause Radiation Status"},
+    "/Lotus/Upgrades/Calendar/PunchToPrimary": {
+        "it": "Aggiunge 1,5m di attraversamento alle arme primarie",
+        "en": "Add +1.5m Punch Through to primary weapons"},
+    "/Lotus/Upgrades/Calendar/OvershieldCap": {
+        "it": "Aumenta la capacità sovrascudi del 50%. Le uccisioni conferiscono 50 scudi",
+        "en": "Increase Overshield cap by 50%. Kills grant 50 shields"},
+    "/Lotus/Upgrades/Calendar/PowerStrengthAndEfficiencyPerEnergySpent": {
+        "it": "Utilizzare le abilità ne aumenta la Potenza del 2% e l'efficienza del -1%" +
+              "per unità di energia consumata, per 5 secondi",
+        "en": "Casting abilities increases ability strength by 2% and efficiency by -1%" +
+              "per unit of energy used by ability, for 5s."},
+    "/Lotus/Upgrades/Calendar/ElectricalDamageOnBulletJump": {
+        "it": "All'atterraggio dopo un Bullet Jump ottieni 50% Danno Elettrico per 5s.",
+        "en": "On landing from a bullet jump gain 50% Electricity Damage for 5s."},
+    "/Lotus/Upgrades/Calendar/MeleeSlideFowardMomentumOnEnemyHit": {
+        "it": "Gli attacchi Corpo a Corpo in scivolata aumentano la probabilità Critica dell'attacco\nin scivolata"
+              + "del 5%, la velocità di scivolata del 20% e riducono l'attrito della scivolata\ndel 10%"
+              + "per 10 secondi con ogni attacco corpo a corpo in scivolata. Massimo 10 cariche.",
+        "en": "Melee slide attacks increase slide attack Critical Chance by 5%, slide speed by 20%\n" +
+              "and reduce slide friction by 10% for 10 seconds with each slide melee attack. Max 10 stacks."},
+    "/Lotus/Upgrades/Calendar/RadiationProcOnTakeDamage": {
+        "it": "Dopo aver subito danni, 10% di probabilità di innescare una esplosione che infligge\n"
+              + "250 Danni Radiazione entro 5m quando subisci danno.",
+        "en": "On Damaged 10% chance to set off a 250 damage, 5m radius blast of Radiation on taking damage."},
+    "/Lotus/Upgrades/Calendar/MagnetStatusPull": {
+        "it": "Gli effetti magnetici attirano anche i nemici entro 1m per carica",
+        "en": "Magnetic Status Effects also pull in enemies within 1m per stack"},
+    "/Lotus/Upgrades/Calendar/OrbsDuplicateOnPickup": {
+        "it": "Spara alle sfere salute per raccoglierle. Le sfere salute adesso hanno il 25% \ndi possibilità" +
+              "di duplicarsi quando vengono raccolte.",
+        "en": "Shoot at health orb to pick up. The health orbs now have 25% probability of\nduplicating when picked up"},
+    "/Lotus/Upgrades/Calendar/StatusChancePerAmmoSpent": {
+        "it": "1% probabilità effetto per colpo fino alla ricarica",
+        "en": "+1% Status Chance per shot until reload"},
+    "/Lotus/Upgrades/Calendar/ElectricDamagePerDistance": {
+        "it": "Ogni metro percorso conferisce 1 danno Elettrico. Attaccare consuma il 10% della carica.",
+        "en": "Every 1 meter, gain 1 Electricity damage. Attack consumes 10% of the charge"},
+    "/Lotus/Upgrades/Calendar/EnergyOrbsGrantShield": {
+        "it": "Le Sfere d Energia conferiscono anche +100 Scudi e Sovrascudi.",
+        "en": "Energy Orb grant +100 Shield and Overshield"},
+    "/Lotus/Upgrades/Calendar/SpeedBuffsWhenAirborne": {
+        "it": "La velocità di ricarica, attivazione abilità, d'attacco Corpo a Corpo e\nCadenza di Tiro " +
+              "aumentano del 100% mentre si è in volo",
+        "en": "Reload speed, ability activation speed, Melee attack speed and Fire Rate\nare increased " +
+              "by 100% while airborne."},
+    "/Lotus/Upgrades/Calendar/FinisherChancePerComboMultiplier": {
+        "it": "Il moltiplicatore combo aumenta la probabilità che i nemici siano vulnerabili\nalle esecuzioni" +
+              " dopo un colpo Corpo a Corpo. 5% per moltiplicatore,\n65% massimo con Venka Prime.",
+        "en": "Combo Multiplier increases the chance of enemies being susceptible to finishers\nafter a melee hit." +
+              "5% per multiplier.\nMax 65% with Venka Prime"},
 }
 
 SEASON_1999_DIALOG_BIRTHDAY = {
-    "AmirBirthdayConvo": "Amir"
+    "AmirBirthdayConvo": "Amir",
+    "AoiBirthdayConvo": "Aoi",
+    "EleanorBirthdayConvo": "Eleanor",
+    "ArthurBirthdayConvo": "Arthur",
+    "QuincyBirthdayConvo": "Quincy",
+    "LettieBirthdayConvo": "Lettie"
 }
 

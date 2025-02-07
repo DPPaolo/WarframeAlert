@@ -655,6 +655,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2021EmblemItem": "Emblema Bue Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2022EmblemItem": "Emblema Tigre Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2023EmblemItem": "Emblema Coniglio Rinnovo Lunare",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2025SnakeEmblem": "Emblema Serpente Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/Dragon2024BadgeItem": "Emblema Drago Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/BaroStalkerBadgeItem": "Emblema Despair",
 
@@ -785,6 +786,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/ElixisNikana": "Skin Nikana Elixis",
     "/Lotus/StoreItems/Upgrades/Skins/Events/InfQuantaInfestedAladV": "Skin Paracyst Zebra",
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Skins/GaussSentinelSkin": "Skin Sentinella Altra",
+    "/Lotus/StoreItems/Upgrades/Skins/Weapons/Rapier/CrpRapierSkin": "Skin Rapier Tributakar",
 
 
     # Sugatra
@@ -1034,5 +1036,6 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/SongItems/AbyssofDagathSongItem": "Musica Abisso di Dagath",
     "/Lotus/StoreItems/Types/Items/SongItems/WhispersInTheWallLoginSongItem": "Musica Sussurri nelle Mura",
     "/Lotus/StoreItems/Types/Items/SongItems/ZarimanLoginSongItem": "Musica Angeli della Zarimam",
+    "/Lotus/StoreItems/Types/Items/SongItems/CorpusRailjackLoginSongItem": "Musica Retrofit Railjack",
 
 }
