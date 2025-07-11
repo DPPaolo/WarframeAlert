@@ -21,8 +21,6 @@ class GeneralInfoWidget():
         font = QtGui.QFont()
         font.setBold(True)
 
-        self.EarthTime = Countdown()
-        self.EarthStatus = QtWidgets.QLabel(translate("generalWidget", "earthTime") + ": N/D")
         self.Version = QtWidgets.QLabel(translate("generalWidget", "fileVersion") + ": N/D")
         self.MobVersion = QtWidgets.QLabel(translate("generalWidget", "mobileFileVersion") + ": N/D")
         self.ForceLogoutVersion = QtWidgets.QLabel(translate("generalWidget", "forceLogoutVersion") + ": N/D")
@@ -37,45 +35,27 @@ class GeneralInfoWidget():
         self.FeaturedDojoLab = QtWidgets.QLabel(translate("generalWidget", "featuredDojo") + ": ")
         self.FeaturedDojo = QtWidgets.QLabel("N/D")
 
-        self.EarthTime.TimeOut.connect(self.calculate_earth_time)
-
-        self.EarthTime.TimeLab.setFont(font)
         self.gridOther = QtWidgets.QGridLayout(self.generalInfoWidget)
 
-        self.gridOther.addWidget(self.EarthStatus, 0, 0)
-        self.gridOther.addWidget(self.EarthTime.TimeLab, 0, 1)
-        self.gridOther.addWidget(self.Version, 1, 0)
-        self.gridOther.addWidget(self.MobVersion, 1, 1)
-        self.gridOther.addWidget(self.ForceLogoutVersion, 2, 0)
-        self.gridOther.addWidget(self.DTLDSActivated, 2, 1)
-        self.gridOther.addWidget(self.SentientAnomalies, 3, 0)
-        self.gridOther.addWidget(self.WorldSeedLab, 4, 0)
-        self.gridOther.addWidget(self.WorldSeed, 5, 0, 1, 2)
-        self.gridOther.addWidget(self.PrimeAccessLab, 6, 0)
-        self.gridOther.addWidget(self.PrimeAccess, 6, 1)
-        self.gridOther.addWidget(self.PrimeVaultLab, 7, 0)
-        self.gridOther.addWidget(self.PrimeVault, 7, 1)
-        self.gridOther.addWidget(self.FeaturedDojoLab, 8, 0)
-        self.gridOther.addWidget(self.FeaturedDojo, 8, 1)
+        self.gridOther.addWidget(self.Version, 0, 0)
+        self.gridOther.addWidget(self.MobVersion, 0, 1)
+        self.gridOther.addWidget(self.ForceLogoutVersion, 1, 0)
+        self.gridOther.addWidget(self.DTLDSActivated, 1, 1)
+        self.gridOther.addWidget(self.SentientAnomalies, 2, 0)
+        self.gridOther.addWidget(self.WorldSeedLab, 3, 0)
+        self.gridOther.addWidget(self.WorldSeed, 4, 0, 1, 2)
+        self.gridOther.addWidget(self.PrimeAccessLab, 5, 0)
+        self.gridOther.addWidget(self.PrimeAccess, 5, 1)
+        self.gridOther.addWidget(self.PrimeVaultLab, 6, 0)
+        self.gridOther.addWidget(self.PrimeVault, 6, 1)
+        self.gridOther.addWidget(self.FeaturedDojoLab, 7, 0)
+        self.gridOther.addWidget(self.FeaturedDojo, 7, 1)
 
         self.generalInfoWidget.setLayout(self.gridOther)
         self.gridOther.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
-        self.calculate_earth_time()
 
     def get_widget(self) -> QtWidgets.QWidget:
         return self.generalInfoWidget
-
-    def calculate_earth_time(self) -> None:
-        earth_time, day = timeUtils.get_earth_time()
-        if (day):
-            self.EarthStatus.setText(translate("generalWidget", "earthTimeDay"))
-            self.EarthTime.set_name(translate("generalWidget", "timeToNight") + ": ")
-        else:
-            self.EarthStatus.setText(translate("generalWidget", "earthTimeNight"))
-            self.EarthTime.set_name(translate("generalWidget", "timeToDay") + ": ")
-
-        self.EarthTime.set_countdown(int(timeUtils.get_local_time()) + earth_time)
-        self.EarthTime.start()
 
     def set_other_datas(self, version: int, mob_version: str, world_seed: str,
                         force_logout: int, dtls: bool, temp_data: TempData) -> None:

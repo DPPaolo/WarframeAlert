@@ -755,6 +755,7 @@ flash_sales_schema = {
                 "ShowInMarket": {"type": "boolean"},
                 "HideFromMarket": {"type": "boolean"},
                 "SupporterPack": {"type": "boolean"},
+                "DailySaleGenerated": {"type": "boolean"},
                 "ShowWithRecommended": {"type": "boolean"},
                 "Featured": {"type": "boolean"},
                 "VoidEclipse": {"type": "boolean"},
@@ -892,6 +893,7 @@ void_traders_schema = {
                                      "ItemType": {"type": "string"},
                                      "PrimePrice": {"type": "integer"},
                                      "RegularPrice": {"type": "integer"},
+                                     "Limit": {"type": "integer"},
                                  },
                                  "required": ["ItemType", "PrimePrice", "RegularPrice"],
                              }}
@@ -928,7 +930,7 @@ syndicate_schema = {
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
                              "RadioLegionIntermission9Syndicate", "RadioLegionIntermission10Syndicate",
                              "RadioLegionIntermission11Syndicate", "RadioLegionIntermission12Syndicate", "HexSyndicate",
-                             "EntratiLabSyndicate"]
+                             "RadioLegionIntermission13Syndicate", "EntratiLabSyndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -1814,7 +1816,7 @@ events_schema = {
                     }
                 }
             },
-            "required": ["_id", "Date", "Prop", "Priority", "MobileOnly", "Messages"],
+            "required": ["_id", "Prop", "Priority", "MobileOnly", "Messages"],
         }
     }
 }
@@ -2083,6 +2085,12 @@ featured_guilds_schema = {
                     "type": "string"
                 },
                 "Tier": {
+                    "type": "integer"
+                },
+                "Icon": {
+                    "type": "integer"
+                },
+                "IconOverride": {
                     "type": "integer"
                 },
                 "Emblem": {

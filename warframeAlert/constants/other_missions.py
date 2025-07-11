@@ -340,10 +340,6 @@ SEASON_CHALLENGE = {
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIDecree":
         ("Decreto", "Colleziona 15 Decreti in una singola sessione di Duviri o Circuito", 4500),
 
-#WEEKLY:
-#I Decree: Collect 10 Decrees in Duviri
-#Collector: Collect 100 resources from Duviri
-
 
     # WEEKLY ELITE
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillEximus": (
@@ -426,6 +422,8 @@ SEASON_CHALLENGE = {
         "Sterminatore Elite di Bestie", "Sconfiggi l'Orowyrm nel Percorso d'Acciaio", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCeremonialEvolution": (
         "Evoluzione Cerimoniale", "Attiva la Forma Incarnon di qualsiasi arma Incarnon in missione 5 volte", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteConquest": (
+        "Soggetto di Prova", "Completa un'Archimedea Profonda o Archimedea Temporale", 7000),
 
 
     # WEEKLY PERMANENT
@@ -659,6 +657,40 @@ SEASON_1999_UPGRADE = {
               " dopo un colpo Corpo a Corpo. 5% per moltiplicatore,\n65% massimo con Venka Prime.",
         "en": "Combo Multiplier increases the chance of enemies being susceptible to finishers\nafter a melee hit." +
               "5% per multiplier.\nMax 65% with Venka Prime"},
+    "/Lotus/Upgrades/Calendar/GuidingMissilesChance": {
+        "it": "I colpi hanno il 1% d possibilità di sparare un proiettile a ricerca per ogni colpo andato " +
+              "a segno. Sparare con le armi riduce la possibilità del 5%",
+        "en": "Shots have a 1% chance to fire a homing projectile for each successful hit. " +
+              "Firing weapons reduces the chance by 5%"},
+    "/Lotus/Upgrades/Calendar/EnergyWavesOnCombo": {
+        "it": "Dopo aver raggiunto il 7x di Moltiplicatore Combo, tutti gli attacchi corpo a corpo " +
+              "sprigionano onde di energia.",
+        "en": "After reaching 7x Combo Multiplier, all melee attacks release energy waves."},
+    "/Lotus/Upgrades/Calendar/HealingEffects": {
+        "it": "Tutti gli effetti di ripristino forniti dalle Sfere raccolte sono aumentate del 25%",
+        "en": "All recovery effects provided by collected Spheres are increased by 25%"},
+    "/Lotus/Upgrades/Calendar/ReviveEnemyAsSpectreOnKill": {
+        "it": "I nemici uccisi hanno una probabilità di rianimarsi come spettri alleati con l'1% di probabilità" +
+              "per carica di effetto. Dura 30 sec.",
+        "en": "Killed enemies have a chance of reviving as allied specters at 1% chance per status stack." 
+              "Lasts 30 seconds"},
+    "/Lotus/Upgrades/Calendar/RefundBulletOnStatusProc": {
+        "it": "L'attivazione di un effetto ha il 10% di probabilità di ricaricare nel caricatore il proiettile" +
+              " che l'ha attivato.",
+        "en": "Triggering a status proc has a 10% chance to reload the triggering bullet into the clip."},
+    "/Lotus/Upgrades/Calendar/CloneActiveCompanionForEnergySpent": {
+        "it": "Crea un clone spettrale di uno spettro o di un compagno casuale attualmente attivo ogni 125 energia" +
+              " spesa.",
+        "en": "Create a spectral clone of a random currently active spector or companion every 125 energy spent."},
+    "/Lotus/Upgrades/Calendar/AttackAndMovementSpeedOnCritMelee": {
+        "it": "I colp critici corpo a corpo hanno una probabilità di aumentare la velocità di attacco e di" +
+              " movimento del 5% per 10 secondi.",
+        "en": "Critical melee hits have a chance to increase attack and movement speed by 5% for 10s."},
+    "/Lotus/Upgrades/Calendar/CompanionsBuffNearbyPlayer": {
+        "it": "Tutti gli alleati non Tenno entro 20m ottengono +5% velocità di attacco Corpo a Corpo e +20% " +
+              "Cadenza di Tiro ciascuno",
+        "en": "Non-Tenno Allies within 20m all gain +5% Melee Attack Speed and +20% Fire Rate for each one in range"}
+
 }
 
 SEASON_1999_DIALOG_BIRTHDAY = {

@@ -512,7 +512,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     if ('Reward' in event):
         rew.append(parse_reward(event['Reward']))
     if ('BonusReward' in event):
-        rew.append(parse_reward(event['Reward']))
+        rew.append(parse_reward(event['BonusReward']))
 
     if ('ConcurrentNodeReqs' in event):
         for temp_req in event['ConcurrentNodeReqs']:

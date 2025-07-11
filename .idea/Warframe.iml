@@ -10,8 +10,9 @@
       <excludeFolder url="file://$MODULE_DIR$/test/data" />
       <excludeFolder url="file://$MODULE_DIR$/test/images" />
       <excludeFolder url="file://$MODULE_DIR$/test/.pytest_cache" />
+      <excludeFolder url="file://$MODULE_DIR$/.venv" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 3.12 (WarframeAlert)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.13 (WarframeAlert)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="PackageRequirementsSettings">

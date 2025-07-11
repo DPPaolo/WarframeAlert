@@ -138,7 +138,8 @@ class WeeklyWidgetTab():
                 for day in days:
                     day_number = day['day']
                     events = day['events']
-                    self.calendar_box.add_calendar_day(day_number, events)
+                    if (len(events) > 0):
+                        self.calendar_box.add_calendar_day(day_number, events)
         else:
             self.calendar_box.calendar_not_available()
 

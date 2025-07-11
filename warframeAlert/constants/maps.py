@@ -323,6 +323,7 @@ NODE_NAME_IT = {
     "SolNode232": ("Tuvul Commons", "Zariman"),
     "SolNode234": ("Dormizon", "Zariman"),
     "SolNode235": ("The Greenway", "Zariman"),
+    "SolNode236": ("Tessitrice di Isole", "Duviri"),
 
     "SolNode300": ("Plato", "Luna"),
     "SolNode301": ("Grimaldi", "Luna"),
@@ -557,6 +558,9 @@ NODE_NAME_IT = {
     "EventNode35": ("Dog Days (Nodo Evento)", "Terra"),
     "EventNode36": ("Doni Rubati (Nodo Evento)", "Terra"),
     "EventNode37": ("Doni Rubati (Nodo Evento)", "Marte"),
+    "EventNode38": ("Doni Rubati (Nodo Evento)", "Void"),
+    "EventNode39": ("Caccia a Wolf", "Saturno"),
+    "EventNode40": ("Caccia a Wolf", "Saturno"),
 
     "EventNode761": ("The Index (Nodo Evento)", "Nettuno"),
     "EventNode762": ("The Index (Nodo Evento)", "Nettuno"),

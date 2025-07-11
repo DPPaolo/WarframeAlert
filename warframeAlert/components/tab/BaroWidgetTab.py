@@ -121,8 +121,9 @@ class BaroWidgetTab():
                     if (found == 0):
                         platinum_price = baro_item['PrimePrice']
                         credit_price = baro_item['RegularPrice']
+                        limit = baro_item['Limit'] if ('Limit' in baro_item) else -1
                         temp = BaroItemBox()
-                        temp.set_baro_item(item, platinum_price, credit_price)
+                        temp.set_baro_item(item, platinum_price, credit_price, limit)
                         temp.set_baro_image(baro_item['ItemType'])
                         self.alerts['VoidTraders'].append(temp)
                         del temp

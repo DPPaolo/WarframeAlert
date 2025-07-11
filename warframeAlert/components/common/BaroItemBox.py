@@ -23,6 +23,8 @@ class BaroItemBox():
         credit_image = "assets" + get_separator() + "icon" + get_separator() + "credit.png"
         self.BaroCredit = CommonLabelWithImage(credit_image, "???")
 
+        self.BaroLimit = QtWidgets.QLabel("")
+
         self.BaroName.setFont(self.Font)
         self.BaroName.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
@@ -34,6 +36,8 @@ class BaroItemBox():
         self.BaroImageBox.addWidget(self.BaroImage.image)
         self.BaroImageBox.addStretch(1)
 
+        self.BaroHBox.addWidget(self.BaroLimit)
+        self.BaroHBox.addStretch(1)
         self.BaroHBox.addLayout(self.BaroDucat.LabelWithImage)
         self.BaroHBox.addStretch(1)
         self.BaroHBox.addLayout(self.BaroCredit.LabelWithImage)
@@ -45,7 +49,7 @@ class BaroItemBox():
     def get_item_name(self) -> str:
         return self.BaroName.text()
 
-    def set_baro_item(self, item: str, ducat: int, credit: int) -> None:
+    def set_baro_item(self, item: str, ducat: int, credit: int, limit: int) -> None:
         self.BaroName.setText(item)
         if (ducat == 0):
             self.BaroDucat.hide()
@@ -55,6 +59,10 @@ class BaroItemBox():
             self.BaroCredit.hide()
         else:
             self.BaroCredit.set_before_text(str(credit))
+        if (limit < 1):
+            self.BaroLimit.hide()
+        else:
+            self.BaroLimit.setText(str(limit))
 
     def set_baro_image(self, url_image: str) -> None:
         image_name = get_last_item_with_backslash(url_image)
