@@ -600,7 +600,7 @@ NODE_NAME_IT = {
     "TennoConBHUB3": ("Stazione TennoCon di Baro", "Terra"),
     "TennoConBHUB4": ("Stazione TennoLive", "Terra"),
     "TennoConBHUB5": ("Stazione TennoLive", "Terra"),
-    "TennoConBHUB6": ("Stazione TennoLive", "Terra"),
+    "TennoConBHUB6": ("Stazione TennoLive", "Sol"),
 
     "DevStreamHUB7": ("Stazione Dev Stream", "Terra"),
 

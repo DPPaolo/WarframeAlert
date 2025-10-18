@@ -339,6 +339,8 @@ SEASON_CHALLENGE = {
         ("Collezionista", "Raccogli 100 risorse su Duviri", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyIDecree":
         ("Decreto", "Colleziona 15 Decreti in una singola sessione di Duviri o Circuito", 4500),
+    "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRace":
+        ("Ollie Oop!", "Gioca a Ollie's Crash Course e completa una gara", 4500),
 
 
     # WEEKLY ELITE
@@ -689,7 +691,11 @@ SEASON_1999_UPGRADE = {
     "/Lotus/Upgrades/Calendar/CompanionsBuffNearbyPlayer": {
         "it": "Tutti gli alleati non Tenno entro 20m ottengono +5% velocità di attacco Corpo a Corpo e +20% " +
               "Cadenza di Tiro ciascuno",
-        "en": "Non-Tenno Allies within 20m all gain +5% Melee Attack Speed and +20% Fire Rate for each one in range"}
+        "en": "Non-Tenno Allies within 20m all gain +5% Melee Attack Speed and +20% Fire Rate for each one in range"},
+    "/Lotus/Upgrades/Calendar/ExplodingHealthOrbs": {
+        "it": "Le sfere di salute creano una esplosione di 10m di larghezza quando vengono raccolte, danneggiando i nemici. " +
+                "Ottieni +50 armatura per ogni nemico colpito per 30s",
+        "en": "Health Orbs create a 10m wide explosion on pickup, damaging enemies. Gain +50 Armor for each enemy hit, for 30 seconds."}
 
 }
 

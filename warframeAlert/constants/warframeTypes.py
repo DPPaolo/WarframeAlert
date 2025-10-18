@@ -33,6 +33,8 @@ class SyndicateJobs(TypedDict):
     minEnemyLevel: int
     maxEnemyLevel: int
     xpAmounts: List[int]
+    requiredItems: List[str]
+    useRequiredItemsAsMiscItemFee: bool
 
 
 class ActiveMission(TypedDict, total=False):
@@ -80,6 +82,8 @@ class AlertMissionInfo(TypedDict):
     icon: str
     questReq: str
     seed: int
+    forceAllyFaction: bool
+    invasionAllyFactio: str
 
 
 class AlertData(TypedDict, total=False):
@@ -168,6 +172,8 @@ class HiddenPlatformsType(TypedDict, total=False):
 class FeaturedGuild(TypedDict, total=False):
     Name: str
     Tier: int
+    Icon: int
+    IconOverride: int
     Emblem: bool
     OriginalPlatform: int
     _id: IdType
@@ -204,6 +210,7 @@ class FlashSale(TypedDict, total=False):
     ShowWithRecommended: bool
     VoidEclipse: bool
     SupporterPack: bool
+    DailySaleGenerated: bool
     Featured: bool
     Popular: bool
     TypeName: str
@@ -324,6 +331,7 @@ class Goal(TypedDict, total=False):
     BonusGoal: int
     InterimGoals: List[int]
     Reward: MissionReward
+    BonusReward: MissionReward
     InterimRewards: List[MissionReward]
 
 
@@ -652,6 +660,7 @@ class VoidTraderItem(TypedDict):
     ItemType: str
     PrimePrice: int
     RegularPrice: int
+    Limit: int
 
 
 class VoidTrader(TypedDict, total=False):

@@ -3,8 +3,9 @@ from typing import List
 
 from PyQt6 import QtWidgets, QtCore
 
+from warframeAlert.components.common.InGameMarketBox import InGameMarketBox
 from warframeAlert.components.common.SalesBox import SalesBox
-from warframeAlert.constants.warframeTypes import FlashSales
+from warframeAlert.constants.warframeTypes import FlashSales, InGameMarket, InGameMarketLandingPage
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils import timeUtils
@@ -16,7 +17,7 @@ from warframeAlert.utils.logUtils import LogHandler
 class SalesWidgetTab():
 
     def __init__(self) -> None:
-        self.alerts = {'FlashSales': {}}
+        self.alerts = {'FlashSales': {}, 'InGameMarket': []}
         self.alerts['FlashSales']['Featured']: List[SalesBox] = []  # Featured Items
         self.alerts['FlashSales']['Discount']: List[SalesBox] = []  # Discounted Items
 
@@ -24,11 +25,13 @@ class SalesWidgetTab():
 
         self.FeaturedWidget = QtWidgets.QWidget()
         self.DiscountedWidget = QtWidgets.QWidget()
+        self.InGameMarketWidget = QtWidgets.QWidget()
 
         self.salesTabber = QtWidgets.QTabWidget()
 
         self.gridFeaturedSales = QtWidgets.QGridLayout(self.FeaturedWidget)
         self.gridDiscountedSales = QtWidgets.QGridLayout(self.DiscountedWidget)
+        self.gridInGameItems = QtWidgets.QGridLayout(self.InGameMarketWidget)
 
         self.FeaturedSalesScrollBar = QtWidgets.QScrollArea()
         self.FeaturedSalesScrollBar.setWidgetResizable(True)
@@ -38,14 +41,21 @@ class SalesWidgetTab():
         self.DiscountedSalesScrollBar.setWidgetResizable(True)
         self.DiscountedSalesScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
 
+        self.InGameItemsScrollBar = QtWidgets.QScrollArea()
+        self.InGameItemsScrollBar.setWidgetResizable(True)
+        self.InGameItemsScrollBar.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+
         self.FeaturedWidget.setLayout(self.gridFeaturedSales)
         self.DiscountedWidget.setLayout(self.gridDiscountedSales)
+        self.InGameMarketWidget.setLayout(self.gridInGameItems)
 
         self.FeaturedSalesScrollBar.setWidget(self.FeaturedWidget)
         self.DiscountedSalesScrollBar.setWidget(self.DiscountedWidget)
+        self.InGameItemsScrollBar.setWidget(self.InGameMarketWidget)
 
         self.salesTabber.insertTab(0, self.FeaturedSalesScrollBar, translate("salesWidgetTab", "featuredItems"))
         self.salesTabber.insertTab(1, self.DiscountedSalesScrollBar, translate("salesWidgetTab", "discountedItems"))
+        self.salesTabber.insertTab(2, self.InGameItemsScrollBar, translate("salesWidgetTab", "inGameItems"))
 
         self.gridSales = QtWidgets.QGridLayout(self.SalesWidget)
         self.gridSales.addWidget(self.salesTabber, 0, 0)
@@ -158,4 +168,55 @@ class SalesWidgetTab():
             self.alerts['FlashSales']['Discount'][cancelled[i - 1]].hide()
             remove_widget(self.alerts['FlashSales']['Discount'][cancelled[i - 1]].MerBox)
             del self.alerts['FlashSales']['Discount'][cancelled[i - 1]]
+            i -= 1
+
+    def update_in_game_market(self, data: InGameMarket):
+        if (OptionsHandler.get_option("Tab/Market") == 1):
+            try:
+                self.parse_in_game_market(data)
+            except Exception as er:
+                LogHandler.err(translate("salesWidgetTab", "inGameMarketError") + ": " + str(er))
+                print_traceback(translate("salesWidgetTab", "inGameMarketError") + ": " + str(er))
+                self.reset_in_game_market()
+                return
+        else:
+            self.reset_in_game_market()
+
+
+    def parse_in_game_market(self, data: InGameMarket) -> None:
+        self.reset_in_game_market()
+        n_in_game_market = len(self.alerts['InGameMarket'])
+        for sales in data:
+            if ("LandingPage" in sales):
+                landing_page: InGameMarketLandingPage = InGameMarket["LandingPage"]
+                if ("Categories" in landing_page):
+                    for category in landing_page["Categories"]:
+                        category_name = category["CategoryName"]
+                        name = category["Name"]
+                        icon = category["Icon"]
+                        add_to_menu = category["AddToMenu"] if ("AddToMenu" in category) else False
+                        items = category["Items"]
+
+                        temp = InGameMarketBox()
+                        temp.set_in_game_data(category_name, name, icon, add_to_menu, items)
+                        self.alerts['InGameMarket'].add(temp)
+
+        self.add_in_game_market(n_in_game_market)
+
+    def add_in_game_market(self, n_in_game_market: int) -> None:
+        for i in range(n_in_game_market, len(self.alerts['InGameMarket'])):
+            if (not self.alerts['InGameMarket'][i].is_expired()):
+                self.gridInGameItems.addLayout(self.alerts['InGameMarket'][i].MerBox,
+                                                 self.gridInGameItems.count(), 0)
+
+
+    def reset_in_game_market(self) -> None:
+        cancelled = []
+        for i in range(0, len(self.alerts['InGameMarket'])):
+            cancelled.append(i)
+        i = len(cancelled)
+        while i > 0:
+            self.alerts['InGameMarket'][cancelled[i - 1]].hide()
+            remove_widget(self.alerts['InGameMarket'][cancelled[i - 1]].MerBox)
+            del self.alerts['InGameMarket'][cancelled[i - 1]]
             i -= 1

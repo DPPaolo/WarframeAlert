@@ -76,7 +76,8 @@ ALERT_INFO = {
     "Infested Infiltration": {"it": "Infested Infiltration", "en": "Infested Infiltration"},
     "/Lotus/Language/Alerts/TennoUnitedAlert": {"it": "Tenno United", "en": "Tenno United"},
     "/Lotus/Language/Alerts/SolarEclipseMode": {"it": "Eclissi Totale", "en": "Totality"},
-    "/Lotus/Language/JadeShadows/EventAlertTitle": {"it": "Belly of the Beast", "en": "Belly of the Beast"}
+    "/Lotus/Language/JadeShadows/EventAlertTitle": {"it": "Belly of the Beast", "en": "Belly of the Beast"},
+    "/Lotus/Language/Alerts/WaterFightAlertMissionDesc": {"it": "Floaty of Fury", "en": "Floaty of Fury"}
 }
 
 ALERT_WEAPON_RESTRICTION = {
