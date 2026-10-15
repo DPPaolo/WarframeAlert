@@ -1,7 +1,7 @@
 # coding=utf-8
 from PyQt6 import QtGui, QtWidgets, QtCore
 
-from warframeAlert.constants.warframeTypes import EndlessXpChoicesData
+from warframeAlert.constants.warframeTypes import EndlessXpScheduleData
 from warframeAlert.services.translationService import translate
 
 
@@ -41,19 +41,20 @@ class CircuitBox():
 
         self.CircuitGrid.setAlignment(QtCore.Qt.AlignmentFlag.AlignTop)
 
-    def set_circuit_data(self, data: EndlessXpChoicesData) -> None:
-        category = data['Category']
-        choices = data['Choices']
-        if (category == "EXC_NORMAL"):
-            self.WarframeChoice1.setText(choices[0])
-            self.WarframeChoice2.setText(choices[1])
-            self.WarframeChoice3.setText(choices[2])
-        elif (category == "EXC_HARD"):
-            self.WeaponChoice1.setText(choices[0])
-            self.WeaponChoice2.setText(choices[1])
-            self.WeaponChoice3.setText(choices[2])
-            self.WeaponChoice4.setText(choices[3])
-            self.WeaponChoice5.setText(choices[4])
+    def set_circuit_data(self, data: EndlessXpScheduleData) -> None:
+        for elem in data['CategoryChoices']:
+            category = elem['Category']
+            choices = elem['Choices']
+            if (category == "EXC_NORMAL"):
+                self.WarframeChoice1.setText(choices[0])
+                self.WarframeChoice2.setText(choices[1])
+                self.WarframeChoice3.setText(choices[2])
+            elif (category == "EXC_HARD"):
+                self.WeaponChoice1.setText(choices[0])
+                self.WeaponChoice2.setText(choices[1])
+                self.WeaponChoice3.setText(choices[2])
+                self.WeaponChoice4.setText(choices[3])
+                self.WeaponChoice5.setText(choices[4])
 
     def circuit_not_available(self) -> None:
         self.WarframeChoice1.setText("N/D")

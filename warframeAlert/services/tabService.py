@@ -141,7 +141,7 @@ class TabService(QtCore.QObject):
         self.event_tab.update_alert_mission(json_data['Alerts'])
         self.news_tab.update_news_info(build_label, game_time)
         self.other_tab.update_daily_deals(json_data['DailyDeals'])
-        self.weekly_tab.update_endless_xp_choices(json_data['EndlessXpChoices'])
+        self.weekly_tab.update_endless_xp_choices(json_data['EndlessXpSchedule'])
         self.other_tab.update_experiment_recommended(json_data['ExperimentRecommended'])
         self.news_tab.update_news(json_data['Events'])
         self.other_tab.update_featured_dojo(json_data['FeaturedGuilds'])
@@ -160,10 +160,10 @@ class TabService(QtCore.QObject):
         self.pvp_tab.update_pvp_alternative_mission(json_data['PVPAlternativeModes'])
         self.pvp_tab.update_pvp_mission(json_data['PVPChallengeInstances'])
         self.acolyte_tab.update_acolyte(json_data['PersistentEnemies'])
-        if ('PrimeTokenAvailability' in json_data and json_data['PrimeTokenAvailability']):
+        if 'PrimeTokenAvailability' in json_data and json_data['PrimeTokenAvailability']:
             self.event_tab.parse_prime_vault_traders(json_data['PrimeVaultTraders'])
 
-        self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'])
+        self.other_tab.update_prime_access(json_data['PrimeAccessAvailability'], json_data['PrimeVaultAvailabilities'] if 'PrimeVaultAvailabilities' in json_data else [])
         self.invasion_tab.update_invasion_project(json_data['ProjectPct'])
         if ('SeasonInfo' in json_data):
             self.nightwave_tab.update_nightwave_season(json_data['SeasonInfo'])

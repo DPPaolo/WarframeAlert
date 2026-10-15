@@ -77,7 +77,8 @@ ALERT_INFO = {
     "/Lotus/Language/Alerts/TennoUnitedAlert": {"it": "Tenno United", "en": "Tenno United"},
     "/Lotus/Language/Alerts/SolarEclipseMode": {"it": "Eclissi Totale", "en": "Totality"},
     "/Lotus/Language/JadeShadows/EventAlertTitle": {"it": "Belly of the Beast", "en": "Belly of the Beast"},
-    "/Lotus/Language/Alerts/WaterFightAlertMissionDesc": {"it": "Floaty of Fury", "en": "Floaty of Fury"}
+    "/Lotus/Language/Alerts/WaterFightAlertMissionDesc": {"it": "Floaty of Fury", "en": "Floaty of Fury"},
+    "/Lotus/Language/TauPrologue/EventAlertTitle": {"it": "Rilevato Locus Carne Lunare", "en": "Found Moonflesh Locus "},
 }
 
 ALERT_WEAPON_RESTRICTION = {

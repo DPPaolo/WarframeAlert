@@ -183,10 +183,15 @@ class FeaturedGuild(TypedDict, total=False):
 
 FeaturedGuilds = List[FeaturedGuild]
 
-
-class EndlessXpChoicesData(TypedDict):
+class EndlessXpScheduleChoice(TypedDict):
     Category: str
     Choices: List[str]
+
+
+class EndlessXpScheduleData(TypedDict):
+    Activation: DateType
+    Expiry: DateType
+    CategoryChoices: List[EndlessXpScheduleChoice]
 
 
 class ExperimentFeatured(TypedDict):
@@ -683,7 +688,7 @@ class JsonData(TypedDict, total=False):
     ConstructionProjects: ConstructionProjects
     DTLS: int
     DailyDeals: DailyDealsData
-    EndlessXpChoices: List[EndlessXpChoicesData]
+    EndlessXpSchedule: List[EndlessXpScheduleData]
     Events: Events
     ExperimentRecommended: ExperimentRecommended
     FeaturedGuilds: FeaturedGuilds

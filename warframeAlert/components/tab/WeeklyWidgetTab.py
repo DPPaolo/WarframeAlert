@@ -7,7 +7,7 @@ from warframeAlert.components.common.CalendarSeasonBox import CalendarSeasonBox
 from warframeAlert.components.common.CircuitBox import CircuitBox
 from warframeAlert.components.common.SortieBox import SortieBox
 from warframeAlert.components.common.WeeklyMission import WeeklyMission, WeeklyMissionType
-from warframeAlert.constants.warframeTypes import LiteSorties, EndlessXpChoicesData, CalendarSeasons
+from warframeAlert.constants.warframeTypes import LiteSorties, EndlessXpScheduleData, CalendarSeasons
 from warframeAlert.services.optionHandlerService import OptionsHandler
 from warframeAlert.services.translationService import translate
 from warframeAlert.utils.commonUtils import print_traceback
@@ -151,7 +151,7 @@ class WeeklyWidgetTab():
             self.gridOther.addLayout(maroo_mission.MissionBox, self.gridOther.count(), 0)
             self.gridOther.addLayout(clem_mission.MissionBox, self.gridOther.count(), 0)
 
-    def update_endless_xp_choices(self, data: List[EndlessXpChoicesData]):
+    def update_endless_xp_choices(self, data: List[EndlessXpScheduleData]):
         if (OptionsHandler.get_option("Tab/Weekly") == 1):
             try:
                 self.parse_endless_xp_choices(data)
@@ -162,6 +162,6 @@ class WeeklyWidgetTab():
         else:
             self.circuit_box.circuit_not_available()
 
-    def parse_endless_xp_choices(self, data: List[EndlessXpChoicesData]):
+    def parse_endless_xp_choices(self, data: List[EndlessXpScheduleData]):
         for element in data:
             self.circuit_box.set_circuit_data(element)

@@ -341,6 +341,8 @@ SEASON_CHALLENGE = {
         ("Decreto", "Colleziona 15 Decreti in una singola sessione di Duviri o Circuito", 4500),
     "/Lotus/Types/Challenges/Seasons/Weekly/SeasonWeeklyCompleteRace":
         ("Ollie Oop!", "Gioca a Ollie's Crash Course e completa una gara", 4500),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardSpiderHunt":
+        ("Caccia al ragno", "Completa una missone Tesstrice di Isolle di Duviri", 4500),
 
 
     # WEEKLY ELITE
@@ -426,6 +428,8 @@ SEASON_CHALLENGE = {
         "Evoluzione Cerimoniale", "Attiva la Forma Incarnon di qualsiasi arma Incarnon in missione 5 volte", 7000),
     "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardCompleteConquest": (
         "Soggetto di Prova", "Completa un'Archimedea Profonda o Archimedea Temporale", 7000),
+    "/Lotus/Types/Challenges/Seasons/WeeklyHard/SeasonWeeklyHardKillTank": (
+        "Blindato", "Sconfiggi un carro armato Effervon H-09", 7000),
 
 
     # WEEKLY PERMANENT

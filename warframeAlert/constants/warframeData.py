@@ -416,6 +416,8 @@ ITEM_NAME_IT = {
     "/Lotus/Types/Items/MiscItems/NoraWolfCreds": "Wolf Cred",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFourCreds": "Cred Nora's Choice",
     "/Lotus/Types/Items/MiscItems/NoraIntermissionFiveCreds": "Cred Mix di Nora Vol. 1",
+    "/Lotus/Types/Gameplay/Events/RoadToTauEvent/RoadToTauEventPickup": "Carne Lunare",
+    "/Lotus/Types/Gameplay/Events/RoadToTauEvent/RoadToTauEventResource": "Carne Lunare",
 
 
     # Weapon Parts
@@ -585,6 +587,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Melee/WeaponGlaiveSecondaryHeadshotKillMod": "Combo Killer",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/WeaponGlaiveOnSixKillsBuffSecondary": "Mark of the Beast",
     "/Lotus/StoreItems/Upgrades/CosmeticEnhancers/Peculiars/EvilSpiritMod": "Peculiar Audience",
+    "/Lotus/StoreItems/Upgrades/CosmeticEnhancers/Peculiars/DissolveEnemyMod": "Peculiar End",
 
     # Primed Mods
     "/Lotus/StoreItems/Upgrades/Mods/Warframe/Expert/AvatarAbilityDurationModExpert": "Primed Continuity",
@@ -648,8 +651,14 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponRecoilReductionModExpert": "Primed Counterbalance",
     "/Lotus/StoreItems/Upgrades/Mods/Melee/Expert/WeaponMeleeFactionDamageMurmursExpert": "Primed Smite The Murmur",
     "/Lotus/StoreItems/Upgrades/Mods/Pistol/Expert/WeaponPistolFactionDamageMurmursExpert": "Primed Expel The Murmur",
-    "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageMurmursExpert": "Primed Cleanse The Murmur",
+    "/Lotus/StoreItems/Upgrades/Mods/Shotgun/Expert/WeaponShotgunFactionDamageMurmursExpert":
+        "Primed Cleanse The Murmur",
     "/Lotus/StoreItems/Upgrades/Mods/Rifle/Expert/PrimedWeaponFactionDamageMurmurs": "Primed Smite The Murmur",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/Expert/ArchwingWeaponToxinDamageModExpert": "Primed Venomous Clip",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/Expert/ArchwingWeaponFireDamageModExpert":
+        "Primed Combustion Rounds",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/Expert/ArchwingRifleAmmoMaxModExpert": "Primed Ammo Chain",
+    "/Lotus/StoreItems/Upgrades/Mods/Archwing/Rifle/Expert/ArchwingWeaponFreezeDamageModExpert": "Primed Polar Magazine",
 
     # Emblems
     "/Lotus/StoreItems/Upgrades/Skins/Clan/BountyHunterBadgeItem": "Emblema Stratos",
@@ -675,6 +684,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Clan/CNY2025SnakeEmblem": "Emblema Serpente Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/Dragon2024BadgeItem": "Emblema Drago Rinnovo Lunare",
     "/Lotus/StoreItems/Upgrades/Skins/Clan/BaroStalkerBadgeItem": "Emblema Despair",
+    "/Lotus/StoreItems/Upgrades/Skins/Clan/Horse2026BadgeItem": "Emblema Cavallo Rinnovo Lunare",
 
 
     # Sigils
@@ -700,6 +710,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusVinesSigil": "Sigillo Prisma Lotus Bloom",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/PrismaLotusFlamesSigil": "Sigillo Prisma Lotus Flame",
     "/Lotus/StoreItems/Upgrades/Skins/Sigils/1999DrippySigil": "Sigillo Drippy",
+    "/Lotus/StoreItems/Upgrades/Skins/Sigils/EvilBaroNecraloidSigil": "Sigillo Necraloid Eskhatos",
 
 
     # Glyphs
@@ -743,6 +754,15 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageDogDaysNovaGlyph": "Glifo Nova Dog Days della Comunità",
     "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageDogDaysValkyrGlyph":
         "Glifo Valkyr Dog Days della Comunità",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/Factions/GlyphFactionKuva": "Glifo Kuva",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/Warframes/KoumeiDiceGlyph": "Glifo Dadi di Koumei",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/Factions/GlyphFactionMurmur": "Glifo Murmur",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageDrippy": "Glifo Drippy 1993",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/Factions/GlyphFactionGrineer": "Glifo Grineer",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/AvatarImageSingingLotusGlyph":
+        "Glifo Lotus Cantante della Comunità",
+    "/Lotus/StoreItems/Types/StoreItems/AvatarImages/TenYearAnniversaryWeek4Glyph": "Glifo Revocazone Jack o'Naut",
+
 
 
     # Skins
@@ -819,6 +839,12 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Skins/GaussSentinelSkin": "Skin Sentinella Altra",
     "/Lotus/StoreItems/Upgrades/Skins/Weapons/Rapier/CrpRapierSkin": "Skin Rapier Tributakar",
     "/Lotus/StoreItems/Upgrades/Skins/Events/OgrisOldSchool": "Skin Oris Volatile",
+    "/Lotus/StoreItems/Upgrades/Skins/Choir/JadeImmortalSkin": "Skin Jade Immortal",
+    "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/VTBoarExilis": "Skin Boar Elixis",
+    "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Skins/ExilisHelios": "Skin Helios Elixis",
+    "/Lotus/StoreItems/Upgrades/Skins/Dagath/DagathImmortalSkin": "Skin Dagath Immortal",
+    "/Lotus/Types/StoreItems/Packages/OperatorDrifterDexBundle": "Tuta Dex per Operatore e Drifter",
+    "/Lotus/StoreItems/Upgrades/Skins/Weapons/Pistols/ZylokExilisSkin":"Skin Zylok Elixis",
 
 
     # Sugatra
@@ -827,7 +853,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/InfestedMeleeDangle": "Coccyst Sugatra",
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/BaroMeleeDangle": "Ki'Teer Sugatra",
     "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/MoonWarfanSugatraMeleeDangle": "Sugatra Renayla",
-    "/Lotus/Types/StoreItems/Packages/OperatorDrifterDexBundle": "Tuta Dex per Operatore e Drifter",
+    "/Lotus/StoreItems/Upgrades/Skins/MeleeDangles/PumpkinMeleeDangle": "Sugatra Portachiavi Jack o'Naut",
 
 
     # Syandanas
@@ -867,6 +893,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Tails/KavatPetTail": "Coda Sentinella Kavat",
     "/Lotus/StoreItems/Types/Game/KubrowPet/Patterns/KubrowPetPatternPrimeTraderA": "Pattern Pelo Nexus",
     "/Lotus/Types/StoreItems/Packages/KavatColorPackNexus": "Kit Genetico-Estetico Nexus",
+    "/Lotus/Types/StoreItems/Packages/KubrowColorPackDiamond": "Kit Genetico-Estetico Atrox",
     "/Lotus/StoreItems/Upgrades/Skins/Kubrows/Armor/KubrowArmorBaro": "Armatura Kubrow Ki'Teer",
     "/Lotus/StoreItems/Upgrades/Skins/Catbrows/Armor/CatbrowArmorVoidTraderA": "Armatura Kavat Ki'Teer",
     "/Lotus/StoreItems/Upgrades/Skins/Catbrows/Armor/CatbrowArmorHalloweenA": "Armatura Kavat Giorno dei Morti",
@@ -934,7 +961,22 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Masks/GaussSentinelMask": "Maschera Sentinella Altra",
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Tails/GaussSentinelTail": "Coda Sentinella Altra",
     "/Lotus/StoreItems/Upgrades/Skins/Sentinels/Wings/GaussSentinelWings": "Ali Sentinella Altra",
-
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/CrpHighArmor/EvilBaroArcaArmorA": "Spallacci Ki'Teer Eskhatos",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/CrpHighArmor/EvilBaroArcaArmorC": "Pettorina Ki'Teer Eskhatos",
+    "/Lotus/StoreItems/Upgrades/Skins/Armor/CrpHighArmor/EvilBaroArcaArmorL": "Ginocchiere Ki'Teer Eskhatos",
+    "/Lotus/StoreItems/Upgrades/Skins/Weapons/Grimoire/GrimoireEvilBaroSkin": "Skin Grimoire Eskhatos",
+    "/Lotus/StoreItems/Upgrades/Skins/VoidTrader/EvilBaroSilvaAndAegis": "Skin Silva & Aegis Eskhatos",
+    "/Lotus/StoreItems/Upgrades/Skins/Motorcycle/MotorcyclePrismaSkin": "Livrea Prisma",
+    "/Lotus/StoreItems/Upgrades/Skins/Weapons/Glaives/XorisExilisSkin": "Skil Xoris Elixis",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodDuviriAdultOperator": "Cappucco dello Sconosciuto",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/BodySuits/BodySuitAdultNovaEngineer":
+        "Tuta Equipaggiamento Masker's Theodolite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Hoods/HoodAdultNovaEngineer":
+        "Cappuccio Tuta Equipaggio Masker's Theodolite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Sleeves/SleevesAdultNovaEngineer":
+        "Maniche Tuta Equipaggiamento Masker's Theodolite",
+    "/Lotus/StoreItems/Upgrades/Skins/Operator/Leggings/LeggingsAdultNovaEngineer":
+        "Pantaloni Tuta Equipaggiamento Masker's Theodolite",
 
 
     # Ephemera
@@ -944,6 +986,7 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Upgrades/Skins/Effects/FootstepsMaple": "Ephemera Fae Path",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/LotusFlowers": "Lotus Ephemera",
     "/Lotus/StoreItems/Upgrades/Skins/Effects/AvatarSmokeA": "Smoke Ephemera",
+    "/Lotus/StoreItems/Upgrades/Skins/Effects/BaroEvilEphemera": "Ephemera Ki'Teer Eskhatos",
 
 
     # Decorations
@@ -1027,6 +1070,19 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyInaros": "Floof Inaros",
     "/Lotus/StoreItems/Types/Items/ShipDecos/TennoconConcert2025Display": "Display - Poster Flare Varlleon & Lizzie",
     "/Lotus/StoreItems/Types/Items/ShipDecos/ZealoidPrelateBobbleHead": "Statuetta Noggle - Zealoid Prelate",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/TauGrineerLancerBobbleHead": "Statuetta Noggle - Grineer Prime",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Props/EvilBaroFloatingCandlesShipDeco": "Candele Sospese Naberus",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/DogDays2024LisetPropCleaningDroneBeachcomber": "Drone Domestico Hellshell",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyLoid": "Floof Loid",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyNecraLoid": "Floof Necraloid",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Tennocon2026CosplayDisplay": "Display Comunità Cosplay Verminia",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/ExplorationPoster": "Poster Esplorazione",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/TeshinBobbleHead": "Statuetta Noggle - Teshin",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/LisetPropCleaningDroneGrineer": "Drone Domestico Soag",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/MacheteManicBobbleHead": "Statuetta Noggle - Maniac",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/Plushy2021QTCC": "Floof Kuaka Conquera",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/Plushy2022QTCC": "Floof Sawgaw Conquera",
+    "/Lotus/StoreItems/Types/Items/ShipDecos/Plushies/PlushyVirminkQTCC": "Floof Virmink Conquera",
 
     # Sentinels
     "/Lotus/StoreItems/Types/Sentinels/SentinelPowersuits/PrismaShadePowerSuit": "Prisma Shade",
@@ -1084,5 +1140,9 @@ ITEM_NAME_IT = {
     "/Lotus/StoreItems/Types/Items/SongItems/JadeShadowsLoginSongItem": "Musica Ombre di Jade",
     "/Lotus/StoreItems/Types/Items/SongItems/TheNewWarLoginSongItem": "Musica La Nuova Guerra",
     "/Lotus/StoreItems/Types/Items/SongItems/DuviriKullervoLoginSongItem": "Musica I Sette Crimini di Kullervo",
+    "/Lotus/StoreItems/Types/Items/SongItems/VoidEclipseLoginSongItem": "Musica Preda di Lua",
+    "/Lotus/StoreItems/Types/Items/SongItems/TheSacrificeLoginSongItem": "Musica Il Sacrificio",
+    "/Lotus/StoreItems/Types/Items/SongItems/VeilbreakerLoginSongItem": "Musica Veilbreaker",
+    "/Lotus/StoreItems/Types/Items/SongItems/CorpusLichLoginSongItem": "Musica Sorelle di Parvos"
 
 }

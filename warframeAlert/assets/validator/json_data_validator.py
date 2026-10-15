@@ -12,9 +12,11 @@ all_json_schema = {
                 "Alerts": {"type": "array"},
                 "BuildLabel": {"type": "string"},
                 "ConstructionProjects": {"type": "array"},
+                "Conquests": {"type": "array"},
+                "Descents": {"type": "array"},
                 "DTLS": {"type": "number", "enum": [0]},
                 "DailyDeals": {"type": "array"},
-                "EndlessXpChoices": {"type": "array"},
+                "EndlessXpSchedule": {"type": "array"},
                 "Events": {"type": "array"},
                 "ExperimentRecommended": {"type": "array"},
                 "FeaturedGuilds": {"type": "array"},
@@ -40,6 +42,7 @@ all_json_schema = {
                 "PrimeVaultTraders": {"type": "array"},
                 "ProjectPct": {"type": "array"},
                 "SeasonInfo": {"type": "object"},
+                "SkuSales": {"type": "array"},
                 "Sorties": {"type": "array"},
                 "SyndicateMissions": {"type": "array"},
                 "Time": {"type": "integer"},
@@ -56,7 +59,7 @@ all_json_schema = {
                          "NodeOverrides", "PVPActiveTournaments", "PVPAlternativeModes", "PVPChallengeInstances",
                          "PersistentEnemies", "PrimeAccessAvailability", "PrimeVaultAvailabilities", "ProjectPct",
                          "Sorties", "SyndicateMissions", "Time", "Tmp", "TwitchPromos", "Version", "VoidTraders",
-                         "WorldSeed", "EndlessXpChoices"]
+                         "WorldSeed", "EndlessXpSchedule"]
         },
     },
 }
@@ -100,45 +103,44 @@ known_calendar_season = {
                 },
                 "Season": {"type": "string"},
                 "UpgradeAvaliabilityRequirements": {"type": "array",
-                            "items": {"type": "string"}},
+                                                    "items": {"type": "string"}},
                 "Version": {"type": "integer"},
                 "YearIteration": {"type": "integer"},
                 "Days": {"type": "array",
-                            "items": {"type": "object",
-                            "properties": {
-                                "day": {"type": "number"},
-                                "events": {"type": "array",
-                                            "items": {"type": "object",
-                                                        "additionalProperties": False,
-                                                       "properties": {
-                                                            "type": {"type": "string"},
-                                                            "upgrade": {"type": "string"},
-                                                            "challenge": {"type": "string"},
-                                                            "reward": {"type": "string"},
-                                                            "dialogueName": {"type": "string"},
-                                                            "dialogueConvo": {"type": "string"},
-                                                        }
-                                                      }
-                                           }
-                            }
-                          }
-                }
+                         "items": {"type": "object",
+                                   "properties": {
+                                       "day": {"type": "number"},
+                                       "events": {"type": "array",
+                                                  "items": {"type": "object",
+                                                            "additionalProperties": False,
+                                                            "properties": {
+                                                                "type": {"type": "string"},
+                                                                "upgrade": {"type": "string"},
+                                                                "challenge": {"type": "string"},
+                                                                "reward": {"type": "string"},
+                                                                "dialogueName": {"type": "string"},
+                                                                "dialogueConvo": {"type": "string"},
+                                                            }
+                                                            }
+                                                  }
+                                   }
+                                   }
+                         }
             }
         }
     }
 }
 
-
 endless_xp_item = {
     "type": "object",
     "properties": {
-        "EndlessXpChoices": {
+        "EndlessXpSchedule": {
             "type": "array",
-            "items": {"$ref": "#/definitions/endlessXpChoices"},
+            "items": {"$ref": "#/definitions/endlessXpSchedule"},
         }
     },
     "definitions": {
-        "endlessXpChoices": {
+        "endlessXpSchedule": {
             "type": "object",
             "additionalProperties": False,
             "properties": {
@@ -763,8 +765,7 @@ flash_sales_schema = {
                 "TypeName": {"type": "string"},
                 "UrlOverride": {"type": "string"},
             },
-            "required": ["StartDate", "EndDate", "BogoBuy", "BogoGet", "Discount", "PremiumOverride",
-                         "ShowInMarket", "TypeName"],
+            "required": ["StartDate", "EndDate", "TypeName"],
         }
     }
 }
@@ -930,7 +931,9 @@ syndicate_schema = {
                              "RadioLegionIntermission7Syndicate", "RadioLegionIntermission8Syndicate",
                              "RadioLegionIntermission9Syndicate", "RadioLegionIntermission10Syndicate",
                              "RadioLegionIntermission11Syndicate", "RadioLegionIntermission12Syndicate", "HexSyndicate",
-                             "RadioLegionIntermission13Syndicate", "EntratiLabSyndicate"]
+                             "RadioLegionIntermission13Syndicate", "EntratiLabSyndicate",
+                             "RadioLegionIntermission14Syndicate", "NightcapJournalSyndicate",
+                             "RadioLegionIntermission15Syndicate", "RadioLegionIntermission16Syndicate"]
                 },
                 "Activation": {
                     "type": "object",
@@ -977,6 +980,8 @@ syndicate_schema = {
                                  "minEnemyLevel": {"type": "integer"},
                                  "maxEnemyLevel": {"type": "integer"},
                                  "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                                 "requiredItems": {"type": "array", "items": {"type": "string"}},
+                                 "useRequiredItemsAsMiscItemFee": {"type": "boolean"},
                              }
                          }},
             },
@@ -1233,6 +1238,8 @@ goals_schema = {
                                  "minEnemyLevel": {"type": "integer"},
                                  "maxEnemyLevel": {"type": "integer"},
                                  "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                                 "requiredItems": {"type": "array", "items": {"type": "string"}},
+                                 "useRequiredItemsAsMiscItemFee": {"type": "boolean"},
                              }
                          }},
                 'PreviousJobs': {"type": "array",
@@ -1245,6 +1252,8 @@ goals_schema = {
                                          "minEnemyLevel": {"type": "integer"},
                                          "maxEnemyLevel": {"type": "integer"},
                                          "xpAmounts": {"type": "array", "items": {"type": "integer"}},
+                                         "requiredItems": {"type": "array", "items": {"type": "string"}},
+                                         "useRequiredItemsAsMiscItemFee": {"type": "boolean"},
                                      }
                                  }},
 
@@ -1597,7 +1606,8 @@ alerts_schema = {
                         "nightmare": {"type": "boolean"},
                         "difficulty": {"type": "integer"},
                         "seed": {"type": "integer"},
-                        "questReq": {"type": "string"},
+                        "forceAllyFaction": {"type": "boolean"},
+                        "invasionAllyFactio": {"type": "string"},
                         "missionReward": {
                             "type": "object",
                             "properties": {
@@ -1634,8 +1644,8 @@ alerts_schema = {
                             },
                         },
                         "customAdvancedSpawners": {
-                                    "type": "array",
-                                    "items": {"type": "string"}
+                            "type": "array",
+                            "items": {"type": "string"}
                         },
                         "descText": {"type": "string"},
                         "extraEnemySpec": {"type": "string"},

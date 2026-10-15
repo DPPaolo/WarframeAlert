@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
 
-FACTION = {"FC_GRINEER": "Grineer",
+FACTION = {"FC_TENNO": "Sconosciuta",
+           "FC_GRINEER": "Grineer",
            "FC_CORPUS": "Corpus",
            "FC_INFESTATION": "Infested",
            "FC_CORRUPTED": "Corrupted",
@@ -324,6 +325,15 @@ NODE_NAME_IT = {
     "SolNode234": ("Dormizon", "Zariman"),
     "SolNode235": ("The Greenway", "Zariman"),
     "SolNode236": ("Tessitrice di Isole", "Duviri"),
+    "SolNode237": ("Esperienza Duviri", "Duviri"),
+    "SolNode238": ("Il Circuito", "Duviri"),
+    "SolNode239": ("Caccia di Follie", "Venere"),
+
+    "SolNode250": ("Ricoda: Hunhullus", "Refrattario Oscuro"),
+    "SolNode251": ("Ricoda: Dactolyst", "Refrattario Oscuro"),
+    "SolNode252": ("Ricoda: Avanguardia", "Refrattario Oscuro"),
+    "SolNode253": ("Descendia", "Refrattario Oscuro"),
+    "SolNode257": ("Il Colpevole", "Refrattario Oscuro"),
 
     "SolNode300": ("Plato", "Luna"),
     "SolNode301": ("Grimaldi", "Luna"),
@@ -390,6 +400,7 @@ NODE_NAME_IT = {
     "SolNode763": ("The Index", "Nettuno"),
     "SolNode764": ("The Index", "Nettuno"),
 
+    "SolNode801": ("Carneficina al Santuario", "Sistema Solare"),
     "SolNode802": ("Carneficina al Santuario", "Sistema Solare"),
 
     "SolNode850": ("Köbinn West", "Höllvania"),
@@ -613,6 +624,10 @@ NODE_NAME_IT = {
     "1999Hub": ("Centro Commerciale Höllvania", "Höllvania"),
 
     "EntratiLabHub_HUB": ("Sanctum Anatomica", "Deimos"),
+
+    "JadeShadows2HUB": ("Torre Pontis", "Urano"),
+
+    "PraghasaHUB_HUB": ("Praghasa", "Eris"),
 
     "DojoHub_HUB": ("Dojo", "Sistema Solare"),
 

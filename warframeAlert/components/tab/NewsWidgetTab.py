@@ -112,7 +112,7 @@ class NewsWidgetTab():
         for news in data:
             text = ""
             news_id = news['_id']['$oid']
-            forum_url = news['Prop']
+            forum_url = news['Prop'] if 'Prop' in news else ""
             community = news['Community'] if ('Community' in news) else None
             message_it = message_en = 0
             for i in range(0, len(news['Messages'])):
@@ -194,8 +194,8 @@ class NewsWidgetTab():
                     text += translate("newsWidgetTab", "eventEnd") + " " + date + "\n"
                 if ('EventLiveUrl' in news):
                     text += translate("newsWidgetTab", "newsSite") + ": " + news['EventLiveUrl']
-                priority = bool_to_yes_no(news['Priority'])
-                mobile = bool_to_yes_no(news['MobileOnly'])
+                priority = bool_to_yes_no(news['Priority'] if "Priority" in news else False)
+                mobile = bool_to_yes_no(news['MobileOnly'] if "MobileOnly" in news else False)
                 text += translate("newsWidgetTab", "priority") + ": " + priority + "\n"
                 text += translate("newsWidgetTab", "onlyMobile") + ": " + mobile
 
@@ -219,16 +219,7 @@ class NewsWidgetTab():
 
     def update_news_info(self, build_label: str, game_time: int) -> None:
         translated_time = timeUtils.get_time(str(game_time * 1000))
-        if (OptionsHandler.get_option("Update/Console") == 0):
-            console = "PC"
-        elif (OptionsHandler.get_option("Update/Console") == 1):
-            console = "PS4"
-        elif (OptionsHandler.get_option("Update/Console") == 2):
-            console = "Xbox One"
-        elif (OptionsHandler.get_option("Update/Console") == 3):
-            console = "Nintendo Switch"
-        else:
-            console = "PC"
+        console = "PC"
 
         news_text = translate("newsWidgetTab", "version") + " " + console + "\t"
         news_text += translate("newsWidgetTab", "build") + ": " + build_label + "\t"

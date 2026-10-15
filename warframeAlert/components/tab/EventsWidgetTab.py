@@ -376,7 +376,7 @@ def create_event(event_id: str, event: Goal, relay: ConstructionProjects) \
     if ('Best' in event):
         best = bool_to_yes_no(event['Best'])
     if ('ScoreTagBlocksGuildTierChanges' in event):
-        score_block_guilds = bool_to_yes_no(event['Best'])
+        score_block_guilds = bool_to_yes_no(event['Best'] if 'Best' in event else False)
 
     # Clan Event Data
     req_node: Tuple[str, str] = ("", "")

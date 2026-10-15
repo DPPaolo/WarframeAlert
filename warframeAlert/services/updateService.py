@@ -37,18 +37,7 @@ class UpdateService(QtCore.QObject):
         self.update_timer.deleteLater()
 
     def download_alert_file(self, download_only: bool = False) -> None:
-        console_option: int = OptionsHandler.get_option("Update/Console")
-        match console_option:
-            case 0:
-                url: str = DATA_SITE["PC"]
-            case 1:
-                url: str = DATA_SITE["PS4"]
-            case 2:
-                url: str = DATA_SITE["XBOX"]
-            case 3:
-                url: str = DATA_SITE["SWITCH"]
-            case _:
-                url: str = DATA_SITE["PC"]
+        url: str = DATA_SITE["PC"]
 
         try:
             path = "data" + get_separator() + "allerte.json"

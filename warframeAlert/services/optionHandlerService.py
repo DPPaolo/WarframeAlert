@@ -32,7 +32,6 @@ class OptionsHandler(QtCore.QObject):
         "Tab/Nightwave": 1,
         "Tab/Other": 1,
         "Update/Cycle": 300,        # Update Cycle
-        "Update/Console": 0,        # 0 PC, 1 PS4, 2 Xbox One, 3 Nintendo Switch
         "Update/AutoUpdate": 1,     # Automatic Update
         "Update/AutoUpdateAll": str(time.mktime(time.localtime()))[0:-2],   # Update All Files Timer
         "Update/Notify": 1          # Notification

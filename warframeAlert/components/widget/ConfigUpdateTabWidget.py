@@ -34,9 +34,6 @@ class ConfigUpdateTabWidget():
         self.CycleComboBox.addItem("900")
 
         self.PlatformComboBox.addItem("PC")
-        self.PlatformComboBox.addItem("PS4")
-        self.PlatformComboBox.addItem("Xbox One")
-        self.PlatformComboBox.addItem("Nintendo Switch")
 
         self.gridUpdateConfig.addWidget(self.ConfigUpdateLabel, 0, 0)
         self.gridUpdateConfig.addWidget(self.CycleConfigLabel, 1, 0)
@@ -55,7 +52,7 @@ class ConfigUpdateTabWidget():
             cycle_index = 0
         self.CycleComboBox.setCurrentIndex(cycle_index)
 
-        self.PlatformComboBox.setCurrentIndex(OptionsHandler.get_option("Update/Console"))
+        self.PlatformComboBox.setCurrentIndex(0)
 
         self.AutoUpConfig.setChecked(int_to_bool(OptionsHandler.get_option("Update/AutoUpdate")))
         self.NotificationConfig.setChecked(int_to_bool(OptionsHandler.get_option("Update/Notify")))

@@ -10,10 +10,7 @@ UPDATE_SITE = "http://deathmt2.altervista.org/warframe/"
 
 
 DATA_SITE = {
-    "PC": "http://content.warframe.com/dynamic/worldState.php",
-    "PS4": "http://content.ps4.warframe.com/dynamic/worldState.php",
-    "XBOX": "http://content.xb1.warframe.com/dynamic/worldState.php",
-    "SWITCH": "http://content.swi.warframe.com/dynamic/worldState.php"
+    "PC": "https://api.warframe.com/cdn/worldState.php"
 }
 
 OTHER_FILE_SITE = (

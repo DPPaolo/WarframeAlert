@@ -142,12 +142,13 @@ class GeneralInfoWidget():
         self.PrimeAccess.setText(state)
         if (len(vault_available) > 5):
             LogHandler.debug(translate("generalWidget", "morePrimeVault"))
-        data = translate("generalWidget", "vault0") + ": " + str(vault_available[0]) + "\n"
-        data += translate("generalWidget", "vault1") + ": " + str(vault_available[1]) + "\n"
-        data += translate("generalWidget", "vault2") + ": " + str(vault_available[2]) + "\n"
-        data += translate("generalWidget", "vault3") + ": " + str(vault_available[3]) + "\n"
-        data += translate("generalWidget", "vault4") + ": " + str(vault_available[4])
-        self.PrimeVault.setText(data)
+        if (len(vault_available) == 5):
+            data = translate("generalWidget", "vault0") + ": " + str(vault_available[0]) + "\n"
+            data += translate("generalWidget", "vault1") + ": " + str(vault_available[1]) + "\n"
+            data += translate("generalWidget", "vault2") + ": " + str(vault_available[2]) + "\n"
+            data += translate("generalWidget", "vault3") + ": " + str(vault_available[3]) + "\n"
+            data += translate("generalWidget", "vault4") + ": " + str(vault_available[4])
+            self.PrimeVault.setText(data)
 
     def reset_prime_access(self) -> None:
         self.PrimeAccess.setText("N/D")

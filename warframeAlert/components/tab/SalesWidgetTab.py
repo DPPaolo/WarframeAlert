@@ -112,14 +112,14 @@ class SalesWidgetTab():
                         index = sales['BannerIndex']
                     else:
                         index = str(timeUtils.get_local_time())
-                    bogobuy = sales['BogoBuy']
-                    bogoget = sales['BogoGet']
-                    discount = sales['Discount']
+                    bogobuy = sales['BogoBuy'] if 'BogoBuy' in sales else 0
+                    bogoget = sales['BogoGet'] if 'BogoGet' in sales else 0
+                    discount = sales['Discount'] if 'Discount' in sales else 0
                     featured = sales['Featured'] if 'Featured' in sales else False
                     popular = sales['Popular'] if 'Popular' in sales else False
-                    plat = sales['PremiumOverride']
+                    plat = sales['PremiumOverride'] if 'PremiumOverride' in sales else 0
                     credit = sales['RegularOverride'] if ('RegularOverride' in sales) else 0
-                    is_show = sales['ShowInMarket']
+                    is_show = sales['ShowInMarket'] if 'ShowInMarket' in sales else False
                     if ('HideFromMarket' in sales):
                         is_show = is_show and sales['HideFromMarket']
                     support = sales['SupporterPack'] if ('SupporterPack' in sales) else False
